@@ -96,9 +96,17 @@ While reflecting the standards expected at Level 5 in **Web Application Developm
 ## Purpose of the Website
 [⬆ Back to Table of contents](#table-of-contents)
 
-As part of my **User-Centric Frontend Development – Milestone Project 1**, a requirement for the Level 5 Diploma in Web Application Development, I have created this personal portfolio website.
+I have developed the **Holiday Destination Finder** website, which forms a core component of the **Level 5 Diploma in Web Application Development** and constitutes my **Interactive Front-End Development – Milestone Project 2**.
 
-The intended outcome of this project is to build a **responsive**, **accessible**, and **professionally presented** web application that serves a real-world purpose and incorporates user-centric design principles. Specifically, the website is designed as a professional platform showcasing my work as a private tutor and a Computer Science and Mathematics teacher/lecturer.
+This project demonstrates advanced JavaScript functionality and practical real-world application, aiming to deliver a dynamic, user-oriented front-end web solution. The website functions as an interactive travel platform where users can explore destinations, view attractions, restaurants, cafés, and hotels, and access trusted booking links for complete travel packages, activities, flights, and accommodation.
+
+For users planning and organising their holidays, the website provides an intuitive and engaging experience by integrating location-based technologies with user-centred design principles. Through the incorporation of the **Google Maps JavaScript API**, **Google Places API (New)**, and **Google Geocoding API**, users are able to visually explore destinations and interact with dynamic map markers that display relevant, real-time information.
+
+To strengthen the connection between discovery and travel planning, additional interactivity is achieved through booking integrations with reputable travel providers such as **Expedia**, **Booking.com**, and **GetYourGuide**.
+
+From a development standpoint, this project employs **responsive web design**, **semantic HTML**, and **modular JavaScript** to demonstrate strong technical competence and adherence to professional front-end development standards.
+
+The final deliverable is a visually engaging and accessible web application that aligns with current industry practices in front-end development and showcases the ability to translate user requirements into a fully functional and user-friendly solution.
 
 ## Target Audiences
 [⬆ Back to Table of contents](#table-of-contents)
