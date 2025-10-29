@@ -39,7 +39,7 @@ In alignment with the expectations of **modern front-end development**, this pro
 ## Project Goals
 [⬆ Back to Table of contents](#table-of-contents)
 
-The primary objective of the **Holiday Destination Finder** project is to allow users to explore, research, and plan holiday destinations through the design and development of a user-centred front-end web application that is both dynamic and fully operational.
+The primary objective of the **Holiday Destination Finder** project is to allow users to explore, research, and plan holiday destinations through the design and development of a **user-centred interactive front-end web application** that is both dynamic and fully operational.
 
 By incorporating **API-based interactivity**, **responsive interface design**, and **accessible navigation structures**, the project aims to satisfy all requirements outlined within the **Code Institute Interactive Front-End Development – Milestone Project 2** specification (Code Institute, 2025).
 
