@@ -47,7 +47,7 @@ By incorporating **API-based interactivity**, **responsive interface design**, a
    
    Without dependence on external frameworks, all interactivity and DOM manipulation are achieved through the development of a fully interactive website utilising **custom HTML5**, **CSS3**, and **JavaScript**.
    
-   Real-time, location-specific data such as hotels, restaurants, attractions, cafés, and other points of interest are dynamically rendered through the integration of the **Google Maps JavaScript API**, **Maps JavaScript API**, and **Geocoding API** (Google Developers, 2024).
+   Real-time, location-specific data such as hotels, restaurants, attractions, cafés, and other points of interest are dynamically rendered through the integration of the **Google Maps JavaScript API**, **Google Places API (New)**, and **Google Geocoding API** (Google Developers, 2024).
 
 2. **Responsive User Experience**
    
