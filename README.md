@@ -74,8 +74,9 @@ By incorporating **API-based interactivity**, **responsive interface design**, a
 
 ### Outcome
 
-By accomplishing these objectives, the project demonstrates advanced proficiency in front-end web development, effective utilisation of **JavaScript for dynamic interactivity**, and an in-depth understanding of **practical, user-oriented web design**.  
-The final deliverable reflects both **technical capability** and **professional quality**, aligning with the standards expected at Level 5 within **Web Application Development** (Code Institute, 2025).
+By accomplishing these objectives, the project demonstrates advanced proficiency in front-end web development, effective utilisation of **JavaScript for dynamic interactivity**, and an in-depth understanding of **practical, user-oriented web design**.
+
+While reflecting the standards expected at Level 5 in **Web Application Development**, the final product showcases both **technical competence** and **professional presentation**,  (Code Institute, 2025).
 
 ## Purpose of the Website
 [⬆ Back to Table of contents](#table-of-contents)
