@@ -111,25 +111,25 @@ The final deliverable is a visually engaging and accessible web application that
 ## Target Audiences
 [⬆ Back to Table of contents](#table-of-contents)
 
-By utilising this interactive and informative platform, several interconnected user groups with a shared interest in exploring, researching, and planning holidays will recognise that the **Holiday Destination Finder** website has been specifically developed to meet their needs. Each audience benefits from tailored functionality and a user experience that emphasises accessibility, engagement, and operational efficiency.
+By utilising this interactive and informative platform, several interconnected user groups with a shared interest in exploring, researching, and planning holidays will recognise that the **Holiday Destination Finder** website has been specifically developed to meet their needs. Each audience benefits from tailored functionality and a user experience that emphasises accessibility, engagement, and operational efficiency (W3C, 2023; Interaction Design Foundation, 2023).
 
 **1. Travellers and Holiday Planners:**
 
 The platform enables users to research destinations, view attractions, and explore nearby restaurants, cafés, and hotels, making it particularly suitable for individuals seeking inspiration for upcoming holidays.
 
-Users are supported in making informed travel decisions and organising their trips through visual interaction with locations, dynamic map markers, and search filtering, facilitated by the integration of the **Google Maps JavaScript API**, **Google Places API (New)**, and **Google Geocoding API**.
+Users are supported in making informed travel decisions and organising their trips through visual interaction with locations, dynamic map markers, and search filtering, facilitated by the integration of the **Google Maps JavaScript API**, **Google Places API (New)**, and **Google Geocoding API** (Google Developers, 2024).
 
-**2. Travel Enthusiasts and Explorers:**  
+**2. Travel Enthusiasts and Explorers:**
 
-By navigating interactive destination information and real-time data, users can discover new locations and cultural experiences. Their sense of exploration and discovery is enhanced through visual engagement with detailed points of interest and the integration of location-based content.
+By navigating interactive destination information and real-time data, users can discover new locations and cultural experiences. Their sense of exploration and discovery is enhanced through visual engagement with detailed points of interest and the integration of location-based content (Mozilla Developer Network, 2024).
 
-**3. Group Travellers and Families:**
+**3. Group Travellers and Families:**  
 
-Through trusted travel partners such as **Booking.com**, **Expedia**, and **GetYourGuide**, families and group travellers can access reliable booking integrations. This secure and user-friendly environment, offering practical travel solutions, provides functionality that streamlines the planning process and strengthens the connection between users and their travel arrangements.
+Through trusted travel partners such as **Booking.com**, **Expedia**, and **GetYourGuide**, families and group travellers can access reliable booking integrations. This secure and user-friendly environment, offering practical travel solutions, provides functionality that streamlines the planning process and strengthens the connection between users and their travel arrangements (Booking.com, 2024; Expedia Group, 2024; GetYourGuide, 2024).
 
-**4. Travel Service Providers and Industry Professionals:**
+**4. Travel Service Providers and Industry Professionals:**  
 
-The website demonstrates effective **API integration** and **responsive front-end development**, resulting in enhanced user engagement within the travel and tourism industry. It can also serve as a valuable reference resource for industry collaboration or educational demonstration, enabling professionals to gain insight into the website’s front-end interactivity, accessibility functionality, and design principles.
+The website demonstrates effective **API integration** and **responsive front-end development**, resulting in enhanced user engagement within the travel and tourism industry. It can also serve as a valuable reference resource for industry collaboration or educational demonstration, enabling professionals to gain insight into the website’s front-end interactivity, accessibility functionality, and design principles (Code Institute, 2025; Mozilla Developer Network, 2024).
 
 ---
 
@@ -151,7 +151,8 @@ This project reflects my ability to apply modern web development techniques in a
 # References
 [⬆ Back to Table of contents](#table-of-contents)
 
-- **Code Institute.** (2025) *Interactive Front-End Development – Milestone Project 2 Specification.* Dublin: Code Institute.
+- **Code Institute.** (2025) *Interactive Front-End Development – Milestone Project 2 Specification.*
+  Dublin: Code Institute.
 
 - **Google Developers.** (2024) *Google Maps JavaScript API Documentation.*  
   Available at: [https://developers.google.com/maps/documentation/javascript](https://developers.google.com/maps/documentation/javascript)  
@@ -162,8 +163,26 @@ This project reflects my ability to apply modern web development techniques in a
   (Accessed: 29 October 2025).
 
 - **W3C.** (2023) *Web Accessibility Initiative (WAI) Guidelines.*  
-  Available at: [https://www.w3.org/WAI/](https://www.w3.org/WAI/)  
+  Available at: [https://www.w3.org/WAI/](https://www.w3.org/WAI/)
   (Accessed: 29 October 2025).
+
+- **Booking.com. (2024)** *Accommodation and Travel Services Platform.*
+  Available at: [https://www.booking.com/](https://www.booking.com/)
+  (Accessed: 29 October 2025).
+    
+- **Expedia Group. (2024)** *Expedia Travel Platform – Flights, Hotels and Holidays.*
+  Available at: [https://www.expedia.co.uk/](https://www.expedia.co.uk/)
+  (Accessed: 29 October 2025).
+  
+- **GetYourGuide. (2024)** *Tours and Activities Booking Platform.*
+  Available at: [https://www.getyourguide.com/](https://www.getyourguide.com/)
+  (Accessed: 29 October 2025).
+
+- **Interaction Design Foundation. (2023)** *User-Centred Design: Process and Principles.*
+  Available at: [https://www.interaction-design.org/literature/topics/user-centered-design](https://www.interaction-design.org/literature/topics/user-centered-design)
+  (Accessed: 29 October 2025).  
+
+
 
  
 
