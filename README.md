@@ -8,7 +8,7 @@
 ## Table of contents
 
 - [Milestone Project 2](#milestone-project-2)
-- [Personal Portfolio Website](#personal-portfolio-website)
+- [Holiday Destination Finder](#holiday-destination-finder)
   - [Project Overview](#project-overview)
   - [Project Goals](#project-goals)
   - [Purpose of the Website](#purpose-of-the-website)
