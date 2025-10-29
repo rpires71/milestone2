@@ -69,7 +69,7 @@ By incorporating **API-based interactivity**, **responsive interface design**, a
 
 5. **Integration with External Services**
    
-   Collaborating with trusted third-party platforms such as **Booking.com**, **Expedia**, and **GetYourGuide** to incorporate **external booking integrations** for flights, accommodation, leisure activities, and comprehensive travel packages.
+   Collaborating with trusted third-party platforms such as **Booking.com**, **Google Flights**, **Expedia**, and **GetYourGuide** to incorporate **external booking integrations** for flights, accommodation, leisure activities, and comprehensive travel packages.
    
    To ensure that these integrations enhance the overall user experience without compromising accessibility, functionality, or usability.
 
