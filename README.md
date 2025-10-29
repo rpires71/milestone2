@@ -26,8 +26,6 @@ Development Milestone Project 2 - Interactive Front-End Development
 ## Project Overview
 [⬆ Back to Table of contents](#table-of-contents)
 
-# Project Overview
-
 I have chosen to personally develop a **Holiday Destination Finder** website, which forms part of the **Interactive Front-End Development – Milestone Project 2** for the **Level 5 Diploma in Web Application Development** (Code Institute, 2025). The website integrates a **Google Maps interface** and provides users with access to booking links for **activities, accommodation, flights, and travel packages**, while also offering an interactive platform for researching travel destinations and viewing **attractions, restaurants, and hotels**.
 
 Across all devices, the website delivers an **intuitive and engaging user experience**, ensuring that it is **fully responsive and accessible**, with a design that adheres to **user-centric development principles** (W3C, 2023). To facilitate straightforward navigation and interaction, the site employs **semantic HTML** and a **meaningful visual hierarchy**, with the user interface structured around a **clear and consistent layout** (Mozilla Developer Network, 2024).
