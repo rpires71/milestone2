@@ -111,16 +111,29 @@ The final deliverable is a visually engaging and accessible web application that
 ## Target Audiences
 [⬆ Back to Table of contents](#table-of-contents)
 
-This website serves multiple related audiences:
+By utilising this interactive and informative platform, several interconnected user groups with a shared interest in exploring, researching, and planning holidays will recognise that the **Holiday Destination Finder** website has been specifically developed to meet their needs. Each audience benefits from tailored functionality and a user experience that emphasises accessibility, engagement, and operational efficiency.
 
-- **Students:**  
-  Explore resources, view examples of my work, and understand how I deliver learning experiences in Computer Science and Mathematics.
+**1. Travellers and Holiday Planners:**
 
-- **Education Providers and Employers:**  
-  Learn about my teaching experience, qualifications, subject specialisms, and download a copy of my CV.
+The platform enables users to research destinations, view attractions, and explore nearby restaurants, cafés, and hotels, making it particularly suitable for individuals seeking inspiration for upcoming holidays.
 
-- **Parents and Guardians:**  
-  Read student feedback, get in touch via the contact form, and evaluate my approach to teaching and tutoring.
+Users are supported in making informed travel decisions and organising their trips through visual interaction with locations, dynamic map markers, and search filtering, facilitated by the integration of the **Google Maps JavaScript API**, **Google Places API (New)**, and **Google Geocoding API**.
+
+**2. Travel Enthusiasts and Explorers:**  
+
+By navigating interactive destination information and real-time data, users can discover new locations and cultural experiences. Their sense of exploration and discovery is enhanced through visual engagement with detailed points of interest and the integration of location-based content.
+
+**3. Group Travellers and Families:**
+
+Through trusted travel partners such as **Booking.com**, **Expedia**, and **GetYourGuide**, families and group travellers can access reliable booking integrations. This secure and user-friendly environment, offering practical travel solutions, provides functionality that streamlines the planning process and strengthens the connection between users and their travel arrangements.
+
+**4. Travel Service Providers and Industry Professionals:**
+
+The website demonstrates effective **API integration** and **responsive front-end development**, resulting in enhanced user engagement within the travel and tourism industry. It can also serve as a valuable reference resource for industry collaboration or educational demonstration, enabling professionals to gain insight into the website’s front-end interactivity, accessibility functionality, and design principles.
+
+---
+
+Supported by contemporary front-end technologies and user-centred design principles, the **Holiday Destination Finder** provides a clear, accessible, and interactive web experience. Whether researching destinations or booking a trip, it ensures that every user within these distinct audiences is effectively accommodated.
 
 ## Key Features and Skills Demonstrated
 [⬆ Back to Table of contents](#table-of-contents)
