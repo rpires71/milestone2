@@ -39,14 +39,43 @@ In alignment with the expectations of **modern front-end development**, this pro
 ## Project Goals
 [⬆ Back to Table of contents](#table-of-contents)
 
-- Develop a fully functional, responsive web application optimised for desktop, tablet, and mobile devices.  
-- Adhere to best practices in semantic HTML5 and usability to create an accessible and user-friendly experience.  
-- Showcase my professional profile, including teaching and lecturing experience, subject specialisms, and academic qualifications.  
-- Provide an interactive environment that encourages students to engage with learning materials and explore available resources.  
-- Support communication and professional engagement by incorporating interactive elements such as a contact form and downloadable CV.  
-- Highlight technical competencies, including custom styling within a clean, intuitive layout, and the use of HTML5, CSS3, and Bootstrap.  
-- Demonstrate current web development practices with a strong focus on user needs and practical, real-world functionality.
+The primary objective of the **Holiday Destination Finder** project is to allow users to explore, research, and plan holiday destinations through the design and development of a user-centred front-end web application that is both dynamic and fully operational.  
+By incorporating **API-based interactivity**, **responsive interface design**, and **accessible navigation structures**, the project aims to satisfy all requirements outlined within the **Code Institute Interactive Front-End Development – Milestone Project 2** specification (Code Institute, 2025).
 
+1. **Dynamic Front-End Functionality**  
+   Without dependence on external frameworks, all interactivity and DOM manipulation are achieved through the development of a fully interactive website utilising **custom HTML5**, **CSS3**, and **JavaScript**.  
+   Real-time, location-specific data such as hotels, restaurants, attractions, cafés, and other points of interest are dynamically rendered through the integration of the **Google Maps JavaScript API**, **Maps JavaScript API**, and **Geocoding API** (Google Developers, 2024).
+
+2. **Responsive User Experience**  
+   To deliver a seamless and consistent user experience by ensuring that the interface is **fully responsive across contemporary devices and varying screen resolutions**.  
+   To adhere to the **Web Accessibility Initiative (WAI)** guidelines when applying **user-focused design principles** to enhance accessibility, navigation, and usability (W3C, 2023).
+
+3. **User Interaction and Feedback**  
+   To provide adaptive responses to user interactions, including destination searches, booking button actions, and filtering functionality through the implementation of **JavaScript-driven interactivity**.  
+   To enhance usability and engagement by incorporating **visual indicators and animations** during searches, filter operations, and map interactions (Mozilla Developer Network, 2024).
+
+4. **Information Architecture and Navigation**  
+   To establish a coherent structure by implementing a consistent section hierarchy and a clear primary navigation menu through the design of a **well-organised and logical layout**.  
+   To support accessibility, search engine optimisation (SEO), and maintainable front-end development standards through the application of **semantic HTML** (Mozilla Developer Network, 2024).
+
+5. **Integration with External Services**  
+   Collaborating with trusted third-party platforms such as **Booking.com**, **Expedia**, and **GetYourGuide** to incorporate **external booking integrations** for flights, accommodation, leisure activities, and comprehensive travel packages.  
+   To ensure that these integrations enhance the overall user experience without compromising accessibility, functionality, or usability.
+
+6. **Version Control and Deployment**  
+   Throughout the project lifecycle, **Git and GitHub** are utilised to facilitate continuous version control, monitor development progress, and uphold transparency within the development process.  
+   To comply with contemporary web deployment standards and guarantee public accessibility, the final iteration of the project is deployed to **GitHub Pages** (Code Institute, 2025).
+
+7. **Documentation and Attribution**  
+   To compile detailed project documentation outlining the purpose, functionality, and technical scope within a comprehensive `README.md` file.  
+   To credit all external resources, libraries, or tutorials in line with **Code Institute’s attribution and academic integrity policy** (Code Institute, 2025).
+
+---
+
+### Outcome
+
+By accomplishing these objectives, the project demonstrates advanced proficiency in front-end web development, effective utilisation of **JavaScript for dynamic interactivity**, and an in-depth understanding of **practical, user-oriented web design**.  
+The final deliverable reflects both **technical capability** and **professional quality**, aligning with the standards expected at Level 5 within **Web Application Development** (Code Institute, 2025).
 
 ## Purpose of the Website
 [⬆ Back to Table of contents](#table-of-contents)
