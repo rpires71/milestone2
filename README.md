@@ -13,6 +13,7 @@
   - [Project Goals](#project-goals)
   - [Purpose of the Website](#purpose-of-the-website)
   - [Target Audiences](#target-audiences)
+  - [Key Features and Skills Demonstrated ](#key-features-and-skills-demonstrated)
 - [References](#references)
  
 
@@ -138,15 +139,41 @@ Supported by contemporary front-end technologies and user-centred design princip
 ## Key Features and Skills Demonstrated
 [⬆ Back to Table of contents](#table-of-contents)
 
-The website highlights my experience as an educator while also showcasing my technical skills in front-end web development, including:
+The development of this interactive, user-focused front-end web application, **Holiday Destination Finder**, demonstrates an advanced level of technical competence and design capability. Modern web technologies, user experience principles, and accessibility standards have been applied to deliver a dynamic and engaging travel platform.
 
-- Responsive design using CSS media queries and/or Bootstrap  
-- Semantic, accessible HTML5 structure  
-- Custom CSS styling  
-- Clean, professional layout and intuitive navigation  
-- Interactive elements such as a contact form and downloadable resources  
+- **API Integration and Dynamic Content Rendering**
+  
+To deliver real-time, location-based data and interactive mapping features, the **Google Maps JavaScript API**, **Google Places API (New)**, and **Google Geocoding API** were implemented (Google Developers, 2024). These integrations enable users to explore destinations interactively through the use of dynamic map markers, responsive search functionality, and category-based filtering for attractions, hotels, restaurants, and cafés.
 
-This project reflects my ability to apply modern web development techniques in a user-focused context, while presenting my professional identity as an educator.
+- **Responsive and Accessible Interface Design**
+  
+To achieve seamless performance across various devices and screen sizes, **responsive web design methodologies** incorporating **CSS Grid**, **Flexbox**, and **media queries** were applied (Mozilla Developer Network, 2024). The **Web Accessibility Initiative (WAI)** guidelines from the **World Wide Web Consortium (W3C, 2023)** were followed to ensure inclusivity and usability through semantic HTML and a meaningful visual hierarchy within the interface.
+
+- **Advanced JavaScript Interactivity**
+  
+Custom JavaScript logic was developed to manage asynchronous processes, dynamic DOM manipulation, and real-time user interactions such as destination searches, loading indicators, and animated transitions. These advanced front-end programming techniques, implemented without reliance on external frameworks, demonstrate a strong understanding of event-driven architecture (Mozilla Developer Network, 2024).
+
+- **User-Centred Design and Visual Experience**
+  
+An intuitive and visually cohesive interface was designed, prioritising accessibility, engagement, and efficient navigation. Consistent typography, colour hierarchy, and motion design were applied to create a visually balanced and user-friendly experience that aligns with user-centred design principles (Interaction Design Foundation, 2023).
+
+- **Integration with Trusted Travel Partners**
+  
+To connect users with real-world travel solutions, secure external booking integrations with **Expedia**, **Booking.com**, and **GetYourGuide** were embedded. These trusted third-party platforms extend the application’s purpose beyond destination exploration to support practical trip planning and seamless user interaction (Expedia Group, 2024; Booking.com, 2024; GetYourGuide, 2024).
+
+- **Version Control and Deployment**
+
+**Git** was utilised for iterative version control and continuous development tracking throughout the project lifecycle (Code Institute, 2025). To ensure public accessibility, stability, and compliance with modern deployment standards, the completed web application was deployed using **GitHub Pages**.
+
+- **Professional Documentation and Code Clarity**
+  
+A comprehensive `README.md` file was created to document project objectives, features, and technologies. The source code adheres to modular, maintainable, and well-documented conventions, incorporating inline commentary and external attributions in alignment with professional front-end development standards (Code Institute, 2025).
+
+---
+
+This project demonstrates the ability to combine **user-centred design**, **responsive interface development**, and **advanced JavaScript interactivity** to produce a functional, accessible, and professionally structured web application. It evidences both technical mastery and professional presentation, reflecting strong competence in front-end development at **Level 5 ** standard.
+
+--
 
 # References
 [⬆ Back to Table of contents](#table-of-contents)
