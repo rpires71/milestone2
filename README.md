@@ -173,7 +173,7 @@ A comprehensive `README.md` file was created to document project objectives, fea
 
 This project demonstrates the ability to combine **user-centred design**, **responsive interface development**, and **advanced JavaScript interactivity** to produce a functional, accessible, and professionally structured web application. It evidences both technical mastery and professional presentation, reflecting strong competence in front-end development at **Level 5 ** standard.
 
---
+---
 
 # References
 [⬆ Back to Table of contents](#table-of-contents)
