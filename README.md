@@ -15,6 +15,7 @@
   - [Target Audiences](#target-audiences)
   - [Key Features and Skills Demonstrated ](#key-features-and-skills-demonstrated)
   - [Features](#features)
+  - [Future Features](#future-features)
 - [References](#references)
  
 
@@ -187,6 +188,29 @@ With a mobile-first CSS Grid structure (MDN Web Docs, 2024) and adaptable compon
 
 ---
 
+## Future Features
+[⬆ Back to Table of contents](#table-of-contents)
+
+Saved searches will allow returning visitors to track their favourite destinations and enable personalised travel wishlists, with both features to be incorporated within a secure user authentication environment as part of the planned enhancements.  
+Accessing genuine feedback and shared experiences from other users will be made possible for travellers through the implementation of an integrated ratings and user review system.  
+Distance controls for more accurate searches, cuisine categories for restaurants, star ratings for hotels, and price range sliders are among the advanced filtering options planned for implementation.  
+
+To assist users in selecting the most suitable travel periods, each destination will feature seasonal recommendations and real-time climate data delivered through the integration of **Weather APIs** (OpenWeather, 2024).  
+Organising activities by date, saving multiple destinations, and creating multi-day itineraries are functionalities that will be available to users through the proposed **trip planning tool**.  
+Based on the user’s home currency, budget projections and local pricing will be shown through the **currency conversion feature** (Google Developers, 2024).  
+
+To ensure users obtain the most competitive deals from multiple providers, **side-by-side pricing** with comparison functionality will be displayed, and additional booking partners will be incorporated into the enhanced version of the website application (Expedia Group, 2024; Booking.com, 2024; GetYourGuide, 2024).  
+**Social media platforms** will enable users to share their travel plans and favourite destinations directly through the website’s new **social sharing functionality** (Meta for Developers, 2024; X Developers, 2024).  
+**Insider suggestions**, **packing checklists**, and **destination guides** are provided within a dedicated **travel tips section**.
+
+All **high-contrast mode settings** and **interactive components** will incorporate **ARIA labels** for screen readers and improved **keyboard navigation**, which are the planned accessibility enhancements (W3C, 2023).  
+**Automatic language detection** based on browser settings, designed to accommodate international users, will form part of the implemented **multilingual support**.  
+For users with slower internet connections, **enhanced load times** will be achieved through **lazy loading** of map markers and images combined with **performance optimisation** (Mozilla Developer Network, 2024).  
+To improve overall user experience and engagement, users will be able to access selected features offline by installing the application on their devices via the **Progressive Web App (PWA)** functionality (Google Developers, 2024).
+
+---
+
+
 # References
 [⬆ Back to Table of contents](#table-of-contents)
 
@@ -217,9 +241,13 @@ With a mobile-first CSS Grid structure (MDN Web Docs, 2024) and adaptable compon
   Available at: https://developers.google.com/maps/documentation/javascript/advanced-markers/overview
   (Accessed: 1 November 2025).
 
-- **Mozilla Developer Network (MDN).** (2024) *HTML5, CSS3 and JavaScript – Web Technology References.*  
+- **Mozilla Developer Network (MDN). (2024)** *HTML5, CSS3 and JavaScript – Web Technology References.*  
   Available at: [https://developer.mozilla.org/](https://developer.mozilla.org/)  
   (Accessed: 29 October 2025).
+
+- **Mozilla Developer Network (MDN). (2024)** *Web Performance Optimisation and Lazy Loading Techniques.*
+  Available at: [https://developer.mozilla.org](https://developer.mozilla.org)
+  (Accessed: 30 October 2025).  
 
 - **W3C. (2023)** *Web Accessibility Initiative (WAI) Guidelines.*  
   Available at: [https://www.w3.org/WAI/](https://www.w3.org/WAI/)
@@ -228,14 +256,26 @@ With a mobile-first CSS Grid structure (MDN Web Docs, 2024) and adaptable compon
 - **Booking.com. (2024)** *Accommodation and Travel Services Platform.*
   Available at: [https://www.booking.com/](https://www.booking.com/)
   (Accessed: 29 October 2025).
+
+- **Booking.com. (2024)** *Booking.com Affiliate Partner Programme Documentation.*
+  Available at: [https://www.booking.com](https://www.booking.com)
+  (Accessed: 30 October 2025).  
     
 - **Expedia Group. (2024)** *Expedia Travel Platform – Flights, Hotels and Holidays.*
   Available at: [https://www.expedia.co.uk/](https://www.expedia.co.uk/)
   (Accessed: 29 October 2025).
+
+- **Expedia Group. (2024)** *Expedia Affiliate Network Developer Resources.* 
+  Available at: [https://developers.expediagroup.com](https://developers.expediagroup.com)
+  (Accessed: 30 October 2025).  
   
 - **GetYourGuide. (2024)** *Tours and Activities Booking Platform.*
   Available at: [https://www.getyourguide.com/](https://www.getyourguide.com/)
   (Accessed: 29 October 2025).
+
+- **GetYourGuide. (2024)** *GetYourGuide Partner API Documentation.*
+  Available at: [https://partner.getyourguide.com](https://partner.getyourguide.com)
+  (Accessed: 30 October 2025). 
 
 - **Interaction Design Foundation. (2023)** *User-Centred Design: Process and Principles.*
   Available at: [https://www.interaction-design.org/literature/topics/user-centered-design](https://www.interaction-design.org/literature/topics/user-centered-design)
@@ -245,5 +285,14 @@ With a mobile-first CSS Grid structure (MDN Web Docs, 2024) and adaptable compon
   Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
   (Accessed: 1 November 2025).
 
- 
-
+- **Meta for Developers. (2024)** *Facebook Sharing and Graph API Documentation.*
+  Available at: [https://developers.facebook.com](https://developers.facebook.com)
+  (Accessed: 30 October 2025).
+    
+- **OpenWeather. (2024)** *OpenWeather API Documentation.*
+  Available at: [https://openweathermap.org/api](https://openweathermap.org/api)
+  (Accessed: 30 October 2025).
+    
+- **X Developers. (2024)** *Twitter/X API Documentation.*
+  Available at: [https://developer.x.com](https://developer.x.com)
+  (Accessed: 30 October 2025).  
