@@ -191,7 +191,7 @@ The strategy I intend to implement will be divided into three parts:
 
 I will be following an approach that adheres to user-centred design principles to ensure the website meets the expectations and needs of my target audiences (Interaction Design Foundation, 2023). The UX strategy will remain focused on accessibility, clarity, responsiveness, interactivity, and ease of use (W3C, 2023).
 
-### Researching and Planning
+### Research and Planning
 [⬆ Back to Table of contents](#table-of-contents)
 
 This stage will focus on identifying key user groups such as holidaymakers, business travellers, families planning vacations, and solo adventurers. I will also examine user needs, expectations, and goals by developing personas and using scenario planning techniques (Nielsen Norman Group, 2023). The decision-making process in travel planning, destination discovery behaviours, and understanding booking preferences constitute the principal research areas (Google Developers, 2024).
