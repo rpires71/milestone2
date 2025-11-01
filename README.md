@@ -14,6 +14,7 @@
   - [Purpose of the Website](#purpose-of-the-website)
   - [Target Audiences](#target-audiences)
   - [Key Features and Skills Demonstrated ](#key-features-and-skills-demonstrated)
+  - [Features](#features)
 - [References](#references)
  
 
@@ -175,21 +176,52 @@ This project demonstrates the ability to combine **user-centred design**, **resp
 
 ---
 
+## Features
+[⬆ Back to Table of contents](#table-of-contents)
+
+By utilising the Google Maps JavaScript API within a fully interactive web application is one of the key features of The Holiday Destination Finder (Google, 2025a). Booking and discovering ideal holiday destinations is what users are supported with through the use of the website, which incorporates technological APIs such as the Geocoding API (Google, 2025b) and the latest version of the Places API (Google, 2025c). The website also accurately identifies global destinations through integrated geocoding while utilising real-time search functionality features. Within a 5km radius, shopping centres, cafés, hotels, restaurants, and attractions are presented as users navigate interactive maps featuring custom-designed markers. To provide a seamless browsing experience that enables users to alternate between various place categories without reloading the page, the website incorporates dynamic filtering buttons. 
+
+Direct access to reputable travel partners — including GetYourGuide (GetYourGuide, 2025) for local activities, Expedia UK (Expedia, 2025) for complete holiday packages, Google Flights (Google, 2025d) for air travel, and Booking.com (Booking.com, 2025) for accommodation — is the experience provided to users through the website's integrated booking system. Travel dates, guest numbers, and automatically pre-filled values with logical defaults — such as today's date and seven days in advance — are managed through the website's comprehensive booking form. Hover animations on interactive components and fade-in effects for search results are among the features incorporated into the website's smooth animation and transition functionality.
+
+With a mobile-first CSS Grid structure (MDN Web Docs, 2024) and adaptable components across desktop, laptop, tablet, and mobile devices, optimal display and usability are ensured through the website's responsive design. To align with the website's visual identity, custom purple-themed pins created using Google's AdvancedMarkerElement API (Google, 2025e) are implemented as interactive map markers. Ratings, addresses, and place names are incorporated and presented within detailed information windows when markers are selected. To enable users to explore trending locations instantly, the website incorporates popular destination quick-search cards for Barcelona, New York City, Tokyo, and Paris. Throughout the user journey on this website, a refined and professional appearance is consistently maintained, while user-friendly alerts are provided through error handling when required information is missing or invalid searches are performed.
+
+---
+
 # References
 [⬆ Back to Table of contents](#table-of-contents)
 
-- **Code Institute.** (2025) *Interactive Front-End Development – Milestone Project 2 Specification.*
+- **Code Institute (2025).**  *Interactive Front-End Development – Milestone Project 2 Specification.*
   Dublin: Code Institute.
 
-- **Google Developers.** (2024) *Google Maps JavaScript API Documentation.*  
+- **Google Developers (2024).** *Google Maps JavaScript API Documentation.*  
   Available at: [https://developers.google.com/maps/documentation/javascript](https://developers.google.com/maps/documentation/javascript)  
   (Accessed: 29 October 2025).
+
+- **Google (2025a)** *Maps JavaScript API*, Google Developers.
+  Available at: https://developers.google.com/maps/documentation/javascript
+  (Accessed: 1 November 2025).
+
+- **Google (2025b)** *Geocoding API*, Google Developers.
+  Available at: https://developers.google.com/maps/documentation/geocoding
+  (Accessed: 1 November 2025).
+
+- **Google (2025c)** *Places API (New)*, Google Developers.
+  Available at: https://developers.google.com/maps/documentation/places/web-service/overview
+  (Accessed: 1 November 2025).
+
+- **Google (2025d)** *Google Flights*.
+  Available at: https://www.google.com/travel/flights
+  (Accessed: 1 November 2025).
+
+- **Google (2025e)** *Advanced Markers*, Google Developers.
+  Available at: https://developers.google.com/maps/documentation/javascript/advanced-markers/overview
+  (Accessed: 1 November 2025).
 
 - **Mozilla Developer Network (MDN).** (2024) *HTML5, CSS3 and JavaScript – Web Technology References.*  
   Available at: [https://developer.mozilla.org/](https://developer.mozilla.org/)  
   (Accessed: 29 October 2025).
 
-- **W3C.** (2023) *Web Accessibility Initiative (WAI) Guidelines.*  
+- **W3C. (2023)** *Web Accessibility Initiative (WAI) Guidelines.*  
   Available at: [https://www.w3.org/WAI/](https://www.w3.org/WAI/)
   (Accessed: 29 October 2025).
 
@@ -209,7 +241,9 @@ This project demonstrates the ability to combine **user-centred design**, **resp
   Available at: [https://www.interaction-design.org/literature/topics/user-centered-design](https://www.interaction-design.org/literature/topics/user-centered-design)
   (Accessed: 29 October 2025).  
 
-
+- **MDN Web Docs (2024)** *CSS Grid Layout*, Mozilla.
+  Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
+  (Accessed: 1 November 2025).
 
  
 
