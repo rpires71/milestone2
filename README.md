@@ -184,45 +184,46 @@ This project demonstrates the ability to combine **user-centred design**, **resp
 ## UX Strategy
 [⬆ Back to Table of contents](#table-of-contents)
 
-The strategy I intend to implement will be divided into three parts:  
+The strategy I intend to implement will be divided into three parts:
+
 - Research and Planning  
 - Design Principles  
 - Testing and Feedback
 
-I will be following an approach that adheres to user-centred design principles to ensure the website meets the expectations and needs of my target audiences (Interaction Design Foundation, 2023). The UX strategy will remain focused on accessibility, clarity, responsiveness, interactivity, and ease of use (W3C, 2023).
+I will be following an approach that adheres to **user-centred design** principles to ensure the website meets the expectations and needs of my target audiences (Interaction Design Foundation, 2023). The **UX strategy** will remain focused on **accessibility**, **clarity**, **responsiveness**, **interactivity**, and **ease of use** (W3C, 2023).
 
 ### Research and Planning
 [⬆ Back to Table of contents](#table-of-contents)
 
-This stage will focus on identifying key user groups such as holidaymakers, business travellers, families planning vacations, and solo adventurers. I will also examine user needs, expectations, and goals by developing personas and using scenario planning techniques (Nielsen Norman Group, 2023). The decision-making process in travel planning, destination discovery behaviours, and understanding booking preferences constitute the principal research areas (Google Developers, 2024).
+This stage will focus on identifying **key user groups** such as **holidaymakers**, **business travellers**, **families planning holidays**, and **solo adventurers**. I will also examine **user needs**, **expectations**, and **goals** by **developing personas** and using scenario planning techniques (Nielsen Norman Group, 2022). The decision-making process in **travel planning**, **destination discovery behaviours**, and understanding **booking preferences** constitute the principal research areas (Google Developers, 2024).
 
-In addition, I will prioritise content and features according to their relevance and significance for each user group, ensuring that user engagement is maximised by effectively presenting destination information, booking integration, and interactive map functionality (Code Institute, 2025).
+In addition, I will prioritise content and features according to their relevance and significance for each user group, ensuring that user engagement is maximised by effectively presenting **destination information**, **booking integration**, and **interactive map functionality** (Code Institute, 2025).
 
 ### Design Principles
 [⬆ Back to Table of contents](#table-of-contents)
 
-- **Accessibility:** I will employ semantic HTML5, relevant ARIA labels for interactive map components, and a coherent heading structure. High colour contrast will be implemented to promote inclusive accessibility, particularly for booking buttons and map markers. Screen reader users will be provided with clear communication for alerts and error notifications (W3C, 2023).
-- **Responsiveness:** I will develop mobile-first layouts utilising CSS Grid, media queries, and Bootstrap to ensure consistent performance across all devices (Mozilla Developer Network, 2024). For mobile users, touch-optimised controls within the interactive map will adapt seamlessly between desktop, laptop, tablet, and mobile viewports.
-- **Navigation:** I will implement a clear and consistent navigation framework that enables users to move through the site intuitively. To optimise user flow, quick-access destination cards, smooth scrolling between sections, and prominent search functionality will be incorporated (Interaction Design Foundation, 2023).
-- **Visual Hierarchy:** I will maintain consistent styling, spacing, and typography to guide users’ attention towards key content areas. When interacting with map markers and search results, the strategic use of white space will reduce cognitive overload, and a cohesive colour gradient theme will enhance visual harmony (Mozilla Developer Network, 2024).
-- **Interactivity:** User-friendly elements such as dynamic filtering controls, interactive map markers with informative pop-up windows, real-time search functionality, and integrated booking forms will be incorporated to encourage engagement (Google Developers, 2024). From destination exploration to booking completion, users will be guided through clear and purposeful calls to action.
+- **Accessibility:** I will employ **semantic HTML5**, relevant **ARIA labels** for interactive map components, and a coherent heading structure. High colour contrast will be implemented to promote inclusive accessibility, particularly for booking buttons and map markers. Screen reader users will be provided with clear communication for alerts and error notifications (W3C, 2023).
+- **Responsiveness:** I will develop mobile-first layouts utilising **CSS Grid**, **media queries**, and **Bootstrap** to ensure consistent performance across all devices (Mozilla Developer Network, 2024). For mobile users, touch-optimised controls within the interactive map will adapt seamlessly between desktop, laptop, tablet, and mobile viewports.
+- **Navigation:** I will implement a clear and consistent navigation framework that enables users to move through the site intuitively. To optimise **user flow**, **quick-access destination cards**, **smooth scrolling** between sections, and prominent search functionality will be incorporated (Interaction Design Foundation, 2023).
+- **Visual Hierarchy:** I will maintain consistent **styling**, **spacing**, and **typography** to guide users’ attention towards key content areas. When interacting with map markers and search results, the strategic use of white space will reduce **cognitive overload**, and a cohesive colour gradient theme will enhance **visual harmony** (Mozilla Developer Network, 2024).
+- **Interactivity:** User-friendly elements such as **dynamic filtering controls**, **interactive map markers** with **informative pop-up windows**, **real-time search functionality**, and **integrated booking forms** will be incorporated to encourage engagement (Google Developers, 2024). From destination exploration to booking completion, users will be guided through clear and purposeful calls to action.
 - **Performance:** To guarantee rapid response times, efficient loading strategies will be applied, and API calls will be optimised. Smooth animations will be used for progressively displaying search results, and the map will load asynchronously to prevent blocking page rendering (Google Developers, 2024).
-- **Error Handling:** When searches yield no results or required information is missing, users will be supported through comprehensive validation and user-friendly error messages. Alternative actions will be presented, and API failures will be handled gracefully by the website application (Mozilla Developer Network, 2024).
+- **Error Handling:** When searches yield no results or required information is missing, users will be supported through **comprehensive validation** and **user-friendly error messages**. Alternative actions will be presented, and API failures will be handled gracefully by the website application (Mozilla Developer Network, 2024).
 
 ### Testing and Feedback
 [⬆ Back to Table of contents](#table-of-contents)
 
-I intend to conduct manual usability testing across various devices, including desktop computers, tablets, and mobile phones, with a particular emphasis on touch interactions and interactive map functionality. I will validate the HTML, CSS, and JavaScript using W3C validation tools and JSHint to ensure code integrity, standards compliance, and adherence to best practices (W3C, 2023; JSHint, 2024). Across multiple browsers and network environments, booking partner redirects and Google Maps and Places API integrations will be tested to confirm that all components operate as intended (Google Developers, 2024).
+I intend to conduct manual usability testing across various devices, including **desktop computers**, **tablets**, and **mobile phones**, with a particular emphasis on **touch interactions** and **interactive map functionality**. I will validate the **HTML**, **CSS**, and **JavaScript** using **W3C validation tools** and **JSHint** to ensure code integrity, standards compliance, and adherence to best practices (W3C, 2023; JSHint, 2024). Across multiple browsers and network environments, booking partner redirects and **Google Maps** and **Places API integrations** will be tested to confirm that all components operate as intended (Google Developers, 2024).
 
-Date selection logic, booking form validation, filter button responsiveness, marker placement, and verification of search accuracy form integral components of the functionality testing. To ensure comprehensive error handling, I will test scenarios including incomplete booking form submissions, missing API responses, and invalid city name entries. To detect and address any rendering or functionality issues, cross-browser compatibility testing will be conducted using Chrome, Firefox, Safari, and Edge browsers (Mozilla Developer Network, 2024).
+**Date selection logic**, **booking form validation**, **filter button responsiveness**, **marker placement**, and verification of search accuracy form integral components of the **functionality testing**. To ensure comprehensive **error handling**, I will test scenarios including **incomplete booking form submissions**, **missing API** responses, and **invalid city name entries**. To detect and address any rendering or functionality issues, **cross-browser compatibility** testing will be conducted using **Chrome**, **Firefox**, **Safari**, and **Edge** browsers (Mozilla Developer Network, 2024).
 
-Tools such as Google Lighthouse and browser developer tools will be utilised to monitor performance testing, including overall page load efficiency, map rendering speeds, and API response times (Google Developers, 2024). To ensure all interactive components are accessible to users with disabilities, accessibility testing will be conducted using keyboard-only navigation and screen readers such as NVDA and JAWS (WebAIM, 2023).
+Tools such as **Google Lighthouse** and browser developer tools will be utilised to monitor performance testing, including overall **page load efficiency**, **map rendering speeds**, and **API response times** (Google Developers, 2024). To ensure all interactive components are accessible to **users with disabilities**, **accessibility testing** will be conducted using **keyboard-only navigation** and **screen readers** such as **NVDA** and **JAWS** (WebAIM, 2023).
 
-Finally, to enhance interactivity, accessibility, clarity, and overall usability, I will refine testing feedback, user flow, and functionality. Particular emphasis will be placed on the booking journey to ensure users can navigate seamlessly from destination discovery to booking completion.
+Finally, to enhance **interactivity**, **accessibility**, **clarity**, and **overall usability**, I will refine testing feedback, user flow, and functionality. Particular emphasis will be placed on the booking journey to ensure users can navigate seamlessly from destination discovery to booking completion.
 
 ---
 
-This UX strategy will ensure a user-friendly, interactive, and professional experience for all visitors, while also reflecting best practices in modern interactive front-end web development and API integration. 
+This **UX strategy** will ensure a **user-friendly**, **interactive**, and **professional experience** for all visitors, while also reflecting best practices in **modern interactive front-end web development** and **API integration**. 
 
 ## Features
 [⬆ Back to Table of contents](#table-of-contents)
@@ -351,4 +352,7 @@ All **high-contrast mode settings** and **interactive components** will incorpor
   Available at: https://webaim.org/
   (Accessed: 31 October 2025).
 
+- **Nielsen Norman Group. (2022)** *Personas: Study Guide.*
+  Available at: https://www.nngroup.com/articles/personas-study-guide/)
+  (Accessed: 31 October 2025).
   
