@@ -325,6 +325,20 @@ In summary, within the **Holiday Destination Finder** website, the core engine o
 
 ---
 
+## jQuery
+
+Within the **Holiday Destination Finder** website, processes such as asynchronous operations, event management, and intricate DOM manipulation were streamlined through the adoption of the lightweight **jQuery** JavaScript framework. Achieving enhanced interactivity and responsiveness, while ensuring code clarity and maintainability, is accomplished in this project through the utilisation of concise syntax.
+
+With enhanced efficiency and reduced code redundancy, dynamic behaviours such as responsive user feedback, animated transitions, and smooth scrolling were implemented through the use of **jQuery selectors** and **event methods**. Both the clarity of the user interface and overall performance benefit from avoiding excessive reliance on vanilla JavaScript, through the capability to dynamically manipulate elements and efficiently manage multiple event listeners.
+
+Without requiring page reloads when booking components and updating map results to improve user experience, to streamline real-time data exchange between the client and server, **the jQuery AJAX (Asynchronous JavaScript and XML)** functionality was applied (jQuery Foundation, 2024). By prioritising performance and usability, a user-focused and fully interactive platform is delivered, which represents the approach that reinforces the project’s primary objective.
+
+Furthermore, to minimise potential rendering inconsistencies, consistent functionality across browsers such as Edge, Safari, Firefox, and Chrome is ensured through jQuery’s **cross-browser compatibility** (Mozilla Developer Network, 2024). Allowing seamless access to essential functionality for users on lower-end devices, **progressive** enhancement principles are integrated and aligned with the front-end architecture.
+
+In summary, while accessibility principles and modern front-end standards align with improving code maintainability and reducing development time, jQuery serves as an essential tool in enhancing the project’s interactivity.
+
+---
+
 ### GitHub
 
 A cloud-based system which includes capabilities such as collaborative development using Git and offers a version control framework.
@@ -573,9 +587,13 @@ Using both these browsers throughout the project ensured that the website was th
   Available at: https://developer.mozilla.org/
   (Accessed: 31 October 2025).
   
-- **Mozilla Developer Network (MDN). (2024)** *CSS Grid Layout*, Mozilla.
+- **Mozilla Developer Network (MDN). (2024)** *CSS Grid Layout, Mozilla.*
   Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
   (Accessed: 1 November 2025).
+
+- **Mozilla Developer Network (MDN). (2024)** *jQuery and Cross-Browser Compatibility Guide.*
+  Available at: https://developer.mozilla.org
+  (Accessed: 03 November 2025).
   
 - **W3C. (2023)** *Web Accessibility Initiative (WAI) Guidelines.*  
   Available at: [https://www.w3.org/WAI/](https://www.w3.org/WAI/)
@@ -640,5 +658,9 @@ Using both these browsers throughout the project ensured that the website was th
 - **Nielsen Norman Group. (2022)** *Personas: Study Guide.*
   Available at: https://www.nngroup.com/articles/personas-study-guide/)
   (Accessed: 31 October 2025).
+
+- **jQuery Foundation. (2024)** *jQuery API Documentation.*
+  Available at: https://api.jquery.com
+  (Accessed: 03 November 2025).
 
 
