@@ -309,7 +309,7 @@ In the broader context, CSS3 plays a vital role in delivering a visually attract
 
 ---
 
-## JavaScript (ES6+)
+### JavaScript (ES6+)
 
 The **Holiday Destination Finder** website's interactive and dynamic functionality is achieved through the implementation of the latest evolution of the **JavaScript** programming language, developed in accordance with **ECMAScript 6 (ES6)** and subsequent standards. Responding to user interactions and obtaining real-time data from external services is what the website achieves, being transformed from a static travel information platform into a fully interactive web application through the use of **JavaScript** as its core scripting language.
 
@@ -325,7 +325,7 @@ In summary, within the **Holiday Destination Finder** website, the core engine o
 
 ---
 
-## jQuery
+### jQuery
 
 Within the **Holiday Destination Finder** website, processes such as asynchronous operations, event management, and intricate DOM manipulation were streamlined through the adoption of the lightweight **jQuery** JavaScript framework. Achieving enhanced interactivity and responsiveness, while ensuring code clarity and maintainability, is accomplished in this project through the utilisation of concise syntax.
 
@@ -336,6 +336,19 @@ Without requiring page reloads when booking components and updating map results 
 Furthermore, to minimise potential rendering inconsistencies, consistent functionality across browsers such as Edge, Safari, Firefox, and Chrome is ensured through jQuery’s **cross-browser compatibility** (Mozilla Developer Network, 2024). Allowing seamless access to essential functionality for users on lower-end devices, **progressive** enhancement principles are integrated and aligned with the front-end architecture.
 
 In summary, while accessibility principles and modern front-end standards align with improving code maintainability and reducing development time, jQuery serves as an essential tool in enhancing the project’s interactivity.
+
+---
+### Jest
+
+**Functional validation** and **unit testing** utilise the **Jest** testing framework, which ensures the accuracy and dependability of the JavaScript logic implemented within the **Holiday Destination Finder** website. Across a range of scenarios operating as intended — including data filtering, input validation, and API response handling — is ensured through the structured and automated testing environment provided by Jest (Meta Open Source, 2024).
+
+Without depending on live data, to confirm consistent system behaviour, simulated asynchronous operations such as mock user interactions and API requests are implemented through the use of Jest’s **mock functions** and **testing suites**. At an early stage in the development process, runtime or logical errors are detected through the strengthened application facilitated by this approach (Mozilla Developer Network, 2024).
+
+Following code modifications, stable visual and interactive components are maintained, and to preserve UI consistency, Jest’s **snapshot testing** functionality was utilised. Within a production-ready web application, maintaining expected usability standards along with a refined and professional appearance is particularly essential.
+
+Preventing regressions and preserving code integrity are achieved through automated testing enabled by **continuous integration (CI)** principles, with the integration of Jest into the project workflow. A high level of professional software assurance is strengthened by the valuable insights into code coverage and system performance provided by Jest through its structured and descriptive testing reports (Meta Open Source, 2024).
+
+User-friendly functionality, along with predictable and stable execution of JavaScript components, is ensured through the project’s foundation of **maintainable development practices**, **code reliability**, and **quality assurance** — a commitment reinforced by the utilisation of Jest within this project.
 
 ---
 
@@ -594,6 +607,10 @@ Using both these browsers throughout the project ensured that the website was th
 - **Mozilla Developer Network (MDN). (2024)** *jQuery and Cross-Browser Compatibility Guide.*
   Available at: https://developer.mozilla.org
   (Accessed: 03 November 2025).
+
+- **Mozilla Developer Network (MDN). (2024)** *Testing JavaScript Applications – Unit Testing and Mocking Concepts.*
+  Available at: https://developer.mozilla.org/
+ (Accessed: 03 November 2025).
   
 - **W3C. (2023)** *Web Accessibility Initiative (WAI) Guidelines.*  
   Available at: [https://www.w3.org/WAI/](https://www.w3.org/WAI/)
@@ -662,5 +679,10 @@ Using both these browsers throughout the project ensured that the website was th
 - **jQuery Foundation. (2024)** *jQuery API Documentation.*
   Available at: https://api.jquery.com
   (Accessed: 03 November 2025).
+
+- **Meta Open Source. (2024)** *Jest – Delightful JavaScript Testing.*
+  Available at: https://jestjs.io/
+  (Accessed: 03 November 2025).
+
 
 
