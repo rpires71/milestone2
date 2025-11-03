@@ -21,6 +21,8 @@
   - [Features](#features)
   - [Future Features](#future-features)
   - [Technologies Used](#technologies-used)
+  - [Wireframes](#wireframes)
+  - [Portfolio Wireframes](#portfolio-wireframes)
 - [References](#references)
  
 
@@ -567,6 +569,168 @@ Layout inconsistencies, scripting errors, and accessibility issues can therefore
 Furthermore, these browsers enhance the development workflow through seamless integration with modern frameworks, version control tools, and support for developer extensions.
 
 Using these browsers throughout the project ensured that the website was thoroughly tested and optimised for a diverse range of target users, delivering a consistent and reliable cross-device user experience.
+
+---
+
+## Wireframes
+[⬆ Back to Table of contents](#table-of-contents)
+
+Before the stage of focusing on design details or styling, a **wireframe** is a stripped-down visual representation of a digital interface, web page, or app that concentrates primarily on the structural layout.
+
+Wireframes are regarded as the **project blueprint**, outlining the placement of key elements, content hierarchy, and navigation flow. Visual representations are typically in grayscale or black and white to maintain focus on usability and user experience (UX) without the distractions of colours, typography, or imagery.
+
+To enable stakeholders to reach consensus on functionality and structure before the stage of refined design and implementation, wireframes represent an essential step in the **pre-production phase** of design and development.
+
+Showcasing wireframes in my portfolio project is a recognised professional practice which emphasises a systematic, user-focused process. Wireframes serve as the initial conceptual blueprint stage of the project before coding and visual styling begin. During the design and development phase of a project, wireframes are a crucial element which fulfils several significant functions such as:
+
+### Design Rationale and Planning
+
+The following wireframes illustrate strategic usability, content hierarchy, and layout. This evidence helps me break down my project into logical steps so I can plan effectively and make decisions that place user needs and objectives as the priority. The presentation of these wireframes highlights the thought process behind the work rather than the final outcome, which reflects an understanding of the importance of planning through an iterative design approach.
+
+
+### UX Awareness
+
+The importance of demonstrating an understanding of user experience (UX) principles ensures clarity for employers and clients. Wireframes prioritise flow and functionality before the final visual product, which means I can collaborate effectively with stakeholders at the conceptual stage to refine ideas and minimise time-consuming revisions. This reinforces my commitment to creating a technically robust, intuitive, and user-friendly solution for this project.
+
+---
+
+## Portfolio Wireframes
+[⬆ Back to Table of contents](#table-of-contents)
+
+The wireframes presented here correspond to the seven pages planned for inclusion in this portfolio website. Each page is shown in three versions: desktop, tablet, and mobile.
+
+---
+
+### Homepage
+
+This page is intended to provide a welcoming introduction to the website, establishing my professional brand as a Computer Science and IT educator. It will feature my name, tagline, and an overview of what is available on the site. The goal is to create a strong initial impression and guide visitors to explore further via the main menu.
+
+<details>
+<summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
+
+**Desktop**  
+<img width="900" alt="homePage" src="https://github.com/user-attachments/assets/fa5a6469-5740-4270-96b1-3f5dda8f50a3" />
+
+**Tablet**  
+<img width="500" alt="homePageTablet" src="https://github.com/user-attachments/assets/cfd26469-153a-4324-bc2c-0cb9adbf034e" />
+
+**Mobile**  
+<img width="320" alt="homePageMobile" src="https://github.com/user-attachments/assets/b8f4f895-1a5f-491b-8460-06ded232aedd" />
+</details>
+
+---
+
+### About Me
+
+The About Me page’s purpose is to present a design that remains approachable and professional while conveying personality and expertise. It will showcase my professional biography, my lifelong dedication to learning, and a summary of my skills. This page will also provide visitors with an understanding of who I am, my background, and my ethos as an educator and IT professional.
+
+<details>
+<summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
+
+**Desktop**  
+<img width="900" alt="aboutMe" src="https://github.com/user-attachments/assets/17ddbb58-0498-4fad-a72c-12a42bda6982"/>
+
+**Tablet**  
+<img width="500" alt="aboutMeTablet" src="https://github.com/user-attachments/assets/792fa813-ead5-4dd9-badc-bd103e01adac"/>
+
+**Mobile**  
+<img width="320" alt="aboutMeMobile" src="https://github.com/user-attachments/assets/80fa7638-f599-401e-9b2f-4f930befcfdc" />
+</details>
+
+---
+
+### Work Experience
+
+By using an easy-to-digest tile layout, this page will showcase my career history. Each section highlights my roles, achievements, and responsibilities across development, IT support, tutoring, and teaching. It also demonstrates my versatility and experience in different contexts.
+
+<details>
+<summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
+
+**Desktop**  
+<img width="900" alt="workExperience" src="https://github.com/user-attachments/assets/429419fd-383c-4550-bfeb-a27d4856e901" />
+
+**Tablet**  
+<img width="500" alt="workExperienceTablet" src="https://github.com/user-attachments/assets/40b7b675-4217-417e-8553-46203f6ecad3" />
+
+**Mobile**  
+<img width="320" alt="workExperienceMobile" src="https://github.com/user-attachments/assets/b8b11d77-95aa-4be8-a26b-ce38238b3d4b" />
+</details>
+
+---
+
+### Skills
+
+This page presents the grouping of key competencies into distinct categories such as teaching, coding and development, languages, project management, and IT support. Again, I have chosen to use a tile-based layout to enable viewers to quickly identify my areas of expertise and the value I can offer.
+
+<details>
+<summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
+
+**Desktop**  
+<img width="900" alt="skills" src="https://github.com/user-attachments/assets/9ef80c5a-ebd1-4207-b296-bbc1fea70540" />
+
+**Tablet**  
+<img width="500" alt="skillsTablet" src="https://github.com/user-attachments/assets/7b561670-97a4-4c76-86f2-7e60fe793a7d" />
+
+**Mobile**  
+<img width="320" alt="skillsMobile" src="https://github.com/user-attachments/assets/c5ef9662-28a2-40cd-b2a0-75bd53540334" />
+</details>
+
+---
+
+### Conferences and Workshops
+
+This page highlights my commitment to professional development by showcasing relevant workshops, conferences, and training I have attended. It demonstrates my engagement with industry best practices and continuous improvement, reinforcing my professional credibility.
+
+<details>
+<summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
+
+**Desktop**  
+<img width="900" alt="conferencesWorkshops" src="https://github.com/user-attachments/assets/b37dcd81-53c8-406f-a26a-baa36a82dab4" />
+
+**Tablet**  
+<img width="500" alt="conferencesWorkshopsTablet" src="https://github.com/user-attachments/assets/00e20a5d-0f4f-44e2-a68e-ae2b23dc9577" />
+
+**Mobile**  
+<img width="320" alt="conferencesWorkshopsMobile" src="https://github.com/user-attachments/assets/66b16a6f-e6c1-4ff2-ad12-c8a45b2495a1" />
+</details>
+
+---
+
+### Certifications
+
+This page lists my formal qualifications and certifications, including CompTIA credentials, PGCE, Graphic Design, and others. The certifications are presented visually in tiles with concise descriptions, highlighting my technical and teaching expertise in a structured manner.
+
+<details>
+<summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
+
+**Desktop**  
+<img width="900" alt="certifications" src="https://github.com/user-attachments/assets/b0ff0989-ced8-4b0f-8aa5-47a1e668a309" />
+
+**Tablet**  
+<img width="500" alt="certificationsTablet" src="https://github.com/user-attachments/assets/5b272e5c-97ca-4cf8-a6ed-b53d157099ff" />
+
+**Mobile**  
+<img width="320" alt="certificationsMobile" src="https://github.com/user-attachments/assets/236c0fcf-3aeb-42e1-86ac-1edba94ee369" />
+</details>
+
+---
+
+### Bookings
+
+The Bookings page enables potential clients, schools, or students to contact me and request my services. It includes a clean, straightforward form for inquiries and provides an accessible and professional way for visitors to engage with me directly.
+
+<details>
+<summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
+
+**Desktop**  
+<img width="900" alt="bookings" src="https://github.com/user-attachments/assets/0aa11cfb-e2df-41fe-940e-fccd6dcc4736" />
+
+**Tablet**  
+<img width="500" alt="bookingsTablet" src="https://github.com/user-attachments/assets/91373128-3a92-4208-b693-a25aee503b74" />
+
+**Mobile**  
+<img width="320" alt="bookingsMobile" src="https://github.com/user-attachments/assets/fc1c2b56-1ebc-403b-9dd6-6b19b4b186b1" />
+</details>
 
 ---
 
