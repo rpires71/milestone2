@@ -404,6 +404,22 @@ To apply best practices throughout the development of this portfolio website, su
 
 ---
 
+### JSHint
+
+The static analysis tool employed within the Holiday Destination Finder website is **JSHint**, ensuring the maintainability, reliability, and overall quality of the implemented JavaScript code (JSHint, 2024).
+
+Throughout development, a professional and well-structured codebase was upheld, and JSHint was utilised to identify deviations from **ECMAScript 6 (ES6+)** standards, potential defects, and syntax inconsistencies (ECMA International, 2024).
+
+Inconsistent indentation, unused functions, and undeclared variables are among the real-time issues detected by **JSHint** when analysing files directly within **Visual Studio Code** (Microsoft, 2024). Before deployment, common runtime errors were prevented by ensuring that all JavaScript logic adhered to best practices through a proactive validation process (JSHint, 2024).
+
+Code structure, equality operators, and variable scope rules were enforced, and the project’s coding conventions were aligned through the application of custom configuration settings defined within the **.jshintrc file**. Search filtering, booking forms, and interactive maps are features driven by asynchronous functions, DOM manipulation scripts, and API integrations, where these configurations proved valuable in maintaining their functionality (ECMA International, 2024).
+
+Additionally, frameworks such as **Jest** are tested and further developed to support a stable and maintainable foundation, while throughout all revisions, high coding standards are upheld within this project through version control workflow checks enabled by **JSHint integration** (JSHint, 2024).
+
+In summary, the project’s overall readability and robustness are enhanced, syntax-related issues are minimised, and code quality assurance—guided by modern JavaScript standards—is strengthened through the crucial role played by **JSHint** (ECMA International, 2024).
+
+---
+
 ### Bootstrap
 
 While developing responsive and mobile-first websites, the use of Bootstrap, which is a widely used, open-source front-end framework, simplifies this process.
@@ -560,8 +576,8 @@ Using both these browsers throughout the project ensured that the website was th
 - **Code Institute (2025).**  *Interactive Front-End Development – Milestone Project 2 Specification.*
   Dublin: Code Institute.
 
-- **Google Developers (2024).** *Google Maps JavaScript API Documentation.*  
-  Available at: [https://developers.google.com/maps/documentation/javascript](https://developers.google.com/maps/documentation/javascript)  
+- **Google Developers (2024).** *Google Maps JavaScript API Documentation.*
+  Available at: [https://developers.google.com/maps/documentation/javascript](https://developers.google.com/maps/documentation/javascript)
   (Accessed: 29 October 2025).
 
 - **Google (2025a)** *Maps JavaScript API*, Google Developers.
@@ -584,8 +600,8 @@ Using both these browsers throughout the project ensured that the website was th
   Available at: https://developers.google.com/maps/documentation/javascript/advanced-markers/overview
   (Accessed: 1 November 2025).
 
-- **Mozilla Developer Network (MDN). (2024)** *HTML5, CSS3 and JavaScript – Web Technology References.*  
-  Available at: [https://developer.mozilla.org/](https://developer.mozilla.org/)  
+- **Mozilla Developer Network (MDN). (2024)** *HTML5, CSS3 and JavaScript – Web Technology References.*
+  Available at: [https://developer.mozilla.org/](https://developer.mozilla.org/)
   (Accessed: 29 October 2025).
 
 - **Mozilla Developer Network (MDN). (2024)** *Web Performance Optimisation and Lazy Loading Techniques.*
@@ -610,9 +626,9 @@ Using both these browsers throughout the project ensured that the website was th
 
 - **Mozilla Developer Network (MDN). (2024)** *Testing JavaScript Applications – Unit Testing and Mocking Concepts.*
   Available at: https://developer.mozilla.org/
- (Accessed: 03 November 2025).
+  (Accessed: 03 November 2025).
   
-- **W3C. (2023)** *Web Accessibility Initiative (WAI) Guidelines.*  
+- **W3C. (2023)** *Web Accessibility Initiative (WAI) Guidelines.*
   Available at: [https://www.w3.org/WAI/](https://www.w3.org/WAI/)
   (Accessed: 29 October 2025).
 
@@ -632,7 +648,7 @@ Using both these browsers throughout the project ensured that the website was th
   Available at: [https://www.expedia.co.uk/](https://www.expedia.co.uk/)
   (Accessed: 29 October 2025).
 
-- **Expedia Group. (2024)** *Expedia Affiliate Network Developer Resources.* 
+- **Expedia Group. (2024)** *Expedia Affiliate Network Developer Resources.*
   Available at: [https://developers.expediagroup.com](https://developers.expediagroup.com)
   (Accessed: 30 October 2025).  
   
@@ -684,5 +700,10 @@ Using both these browsers throughout the project ensured that the website was th
   Available at: https://jestjs.io/
   (Accessed: 03 November 2025).
 
+- **ECMA International. (2024)** *ECMAScript® 2023 Language Specification (12th Edition).*
+  Available at: https://tc39.es/ecma262/
+  (Accessed: 03 November 2025).
 
-
+- **Microsoft. (2024)** *Visual Studio Code Documentation.*
+  Available at: https://code.visualstudio.com/docs
+  (Accessed: 03 November 2025).
