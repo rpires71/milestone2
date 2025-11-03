@@ -542,9 +542,9 @@ Additionally, Balsamiq Wireframes contributed to a comprehensive workflow that e
 
 Conversational support across a wide range of topics, including programming and web development, is what I primarily used ChatGPT, the advanced OpenAI language model, for.
 
-Throughout the course and this project, it has assisted me by providing suggestions to enhance code quality and efficiency, explain concepts, and serve as an invaluable resource for debugging code.
+Throughout the course and projects, it has assisted me by providing suggestions to enhance code quality and efficiency, explain concepts, and serve as an invaluable resource for debugging code.
 
-ChatGPT has the capability to review my HTML and CSS code, where at times it identifies optimisation opportunities, logical errors, and syntax mistakes.
+ChatGPT has the capability to review my HTML, CSS and JavaScript code, where at times it identifies optimisation opportunities, logical errors, and syntax mistakes.
 
 Additionally, it assists with generating design ideas and clarifying technical documentation.
 
@@ -554,19 +554,19 @@ Throughout the project lifecycle, it has proved to be a valuable productivity to
 
 ---
 
-### Microsoft Edge and Google Chrome
+### Microsoft Edge, Mozilla Firefox and Google Chrome
 
-Renowned for their speed, stability, and comprehensive developer tools, Google Chrome and Microsoft Edge are modern, widely used web browsers.
+Renowned for their speed, stability, and comprehensive developer tools, Google Chrome, Mozilla Firefox and Microsoft Edge are modern, widely used web browsers.
 
-For ensuring a crucial responsive design, both these browsers provide features for previewing and testing websites with various device resolutions and screen dimensions, which in the context of this project served the purpose of checking performance across mobile, tablet, and desktop devices.
+For ensuring responsive design, all three browsers include features that allow developers to preview and test websites across a range of device resolutions and screen sizes. In the context of this project, these capabilities were used to evaluate performance across mobile, tablet, and desktop devices.
 
-Both browsers offer developer tools that deliver functionality such as advanced debugging, including live editing of HTML and CSS, accessibility evaluation, performance analysis, and network inspection.
+Each of these browsers offers developer tools that provide advanced debugging functionality, including live editing of HTML, CSS, and JavaScript, as well as accessibility evaluation, performance analysis, and network inspection.
 
-Layout issues, scripting faults, and accessibility problems can be detected and addressed efficiently.
+Layout inconsistencies, scripting errors, and accessibility issues can therefore be efficiently detected and resolved.
 
-Furthermore, both browsers enhance the development workflow through integrations and support for extensions.
+Furthermore, these browsers enhance the development workflow through seamless integration with modern frameworks, version control tools, and support for developer extensions.
 
-Using both these browsers throughout the project ensured that the website was thoroughly tested and optimised for a broad range of target users, delivering a consistent cross-device user experience.
+Using these browsers throughout the project ensured that the website was thoroughly tested and optimised for a diverse range of target users, delivering a consistent and reliable cross-device user experience.
 
 ---
 
