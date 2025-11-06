@@ -650,15 +650,12 @@ By using the trusted travel partners provided, users can easily book all aspects
 <summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
 
 **Desktop**  
-<img width="900" alt="workExperience" src="https://github.com/user-attachments/assets/429419fd-383c-4550-bfeb-a27d4856e901" />
 <img width="1506" height="1479" alt="Packages-Contact-Desktop-Laptop" src="https://github.com/user-attachments/assets/b3e5c25b-bc54-45ff-8744-09787ad5d062" />
 
 **Tablet**  
-<img width="500" alt="workExperienceTablet" src="https://github.com/user-attachments/assets/40b7b675-4217-417e-8553-46203f6ecad3" />
 <img width="880" height="2130" alt="Packages-Contact-Tablet" src="https://github.com/user-attachments/assets/a29591e6-94e3-4529-9696-ea29d822988a" />
 
 **Mobile**  
-<img width="320" alt="workExperienceMobile" src="https://github.com/user-attachments/assets/b8b11d77-95aa-4be8-a26b-ce38238b3d4b" />
 <img width="435" height="3787" alt="Packages-Contact-Mobile" src="https://github.com/user-attachments/assets/6c7679f4-5bb3-4229-9bcb-5f792945a1be" />
 
 </details>
