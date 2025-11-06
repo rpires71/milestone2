@@ -22,7 +22,7 @@
   - [Future Features](#future-features)
   - [Technologies Used](#technologies-used)
   - [Wireframes](#wireframes)
-  - [Portfolio Wireframes](#portfolio-wireframes)
+  - [Holiday Destination Finder Wireframes](#holiday-destination-finder-wireframes)
 - [References](#references)
  
 
@@ -581,7 +581,7 @@ Wireframes are regarded as the **project blueprint**, outlining the placement of
 
 To enable stakeholders to reach consensus on functionality and structure before the stage of refined design and implementation, wireframes represent an essential step in the **pre-production phase** of design and development.
 
-Showcasing wireframes in my portfolio project is a recognised professional practice which emphasises a systematic, user-focused process. Wireframes serve as the initial conceptual blueprint stage of the project before coding and visual styling begin. During the design and development phase of a project, wireframes are a crucial element which fulfils several significant functions such as:
+Showcasing wireframes in my milestone 2 project - **Holiday Destination Finder** - is a recognised professional practice which emphasises a systematic, user-focused process. Wireframes serve as the initial conceptual blueprint stage of the project before coding and visual styling begin. During the design and development phase of a project, wireframes are a crucial element which fulfils several significant functions such as:
 
 ### Design Rationale and Planning
 
@@ -590,146 +590,77 @@ The following wireframes illustrate strategic usability, content hierarchy, and 
 
 ### UX Awareness
 
-The importance of demonstrating an understanding of user experience (UX) principles ensures clarity for employers and clients. Wireframes prioritise flow and functionality before the final visual product, which means I can collaborate effectively with stakeholders at the conceptual stage to refine ideas and minimise time-consuming revisions. This reinforces my commitment to creating a technically robust, intuitive, and user-friendly solution for this project.
+The importance of demonstrating an understanding of user experience (UX) principles ensures clarity for the target audeience. Wireframes prioritise flow and functionality before the final visual product, which means I can collaborate effectively with stakeholders at the conceptual stage to refine ideas and minimise time-consuming revisions. This reinforces my commitment to creating a technically robust, intuitive, and user-friendly solution for this project.
 
 ---
 
-## Portfolio Wireframes
+## Holiday Destination Finder Wireframes
 [⬆ Back to Table of contents](#table-of-contents)
 
-The wireframes presented here correspond to the seven pages planned for inclusion in this portfolio website. Each page is shown in three versions: desktop, tablet, and mobile.
+The wireframes presented here correspond to the three pages planned for inclusion in this holiday destination finder website. Each page is shown in three versions: desktop, tablet, and mobile.
 
 ---
 
-### Homepage
+### About Us
 
-This page is intended to provide a welcoming introduction to the website, establishing my professional brand as a Computer Science and IT educator. It will feature my name, tagline, and an overview of what is available on the site. The goal is to create a strong initial impression and guide visitors to explore further via the main menu.
+The functionality of destination filters and interactive map features used to explore, compare, and plan travel experiences through this website platform will be outlined. This page is intended to introduce visitors to the dominate vision and purpose of the Holiday Destination Finder website, establishing its role as an intuitive and user-focused travel planning resource. Enabling all users to experience trip planning in an accessible, enjoyable, and straightforward manner is the site’s primary aim in presenting its content. The project’s focus is on implementing modern web functionality and enhancing user experience, while also establishing trust, providing clear information, and maintaining a friendly and approachable tone. Overall, visitors will gain an understanding of how the site can assist them in finding their ideal holiday destination and the purpose behind its development. 
 
 <details>
 <summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
 
 **Desktop**  
-<img width="900" alt="homePage" src="https://github.com/user-attachments/assets/fa5a6469-5740-4270-96b1-3f5dda8f50a3" />
+<img width="1073" height="1034" alt="AboutUs-Contact-Desktop-Laptop" src="https://github.com/user-attachments/assets/608a464c-e2e4-4b01-a181-a002ea02b779" />
 
 **Tablet**  
-<img width="500" alt="homePageTablet" src="https://github.com/user-attachments/assets/cfd26469-153a-4324-bc2c-0cb9adbf034e" />
+<img width="880" height="1607" alt="AboutUs-Tablet" src="https://github.com/user-attachments/assets/1e523319-5af0-462a-a265-e77d46c4d120" />
 
 **Mobile**  
-<img width="320" alt="homePageMobile" src="https://github.com/user-attachments/assets/b8f4f895-1a5f-491b-8460-06ded232aedd" />
+<img width="435" height="1976" alt="AboutUs-Mobile" src="https://github.com/user-attachments/assets/540b1f89-58e1-4849-b53c-9acaffdb33a2" />
+
 </details>
 
 ---
 
-### About Me
+### Destination Search
 
-The About Me page’s purpose is to present a design that remains approachable and professional while conveying personality and expertise. It will showcase my professional biography, my lifelong dedication to learning, and a summary of my skills. This page will also provide visitors with an understanding of who I am, my background, and my ethos as an educator and IT professional.
+Using the Google Maps API, users can search for holiday destinations, providing an informative and interactive experience, which is the main focus of this page. Attractions, shopping areas, cafés, restaurants, and hotels are the main points of interest displayed on the interactive map when visitors enter the name of a city into the search box and click on the **Search Destination** button. Visualising their options geographically is what users are enabled to do through pins on the map representing each location. A quick overview for comparison is provided, with a list of the top 20 ranked results for each category displayed in a dynamic side panel along the left side of the map. Interactive web technologies and the project's integration of real-world data are showcased, enabling users to explore destinations efficiently and creating an intuitive and engaging search experience, which is the main goal of this page.  
 
 <details>
 <summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
 
 **Desktop**  
-<img width="900" alt="aboutMe" src="https://github.com/user-attachments/assets/17ddbb58-0498-4fad-a72c-12a42bda6982"/>
+<img width="1477" height="1412" alt="Home-Search-PopularDestinations-Contact-Desktop-Laptop" src="https://github.com/user-attachments/assets/6a646295-b704-456e-adb1-642e1e9efd03" />
+
 
 **Tablet**  
-<img width="500" alt="aboutMeTablet" src="https://github.com/user-attachments/assets/792fa813-ead5-4dd9-badc-bd103e01adac"/>
+<img width="880" height="2552" alt="Home-Search-PopularDestinations-Contact-Tablet" src="https://github.com/user-attachments/assets/f75e542b-8d6e-465e-8366-2793f3035988" />
 
 **Mobile**  
-<img width="320" alt="aboutMeMobile" src="https://github.com/user-attachments/assets/80fa7638-f599-401e-9b2f-4f930befcfdc" />
+<img width="435" height="3787" alt="Home-Search-PopularDestinations-Contact-Mobile" src="https://github.com/user-attachments/assets/a01c3aab-96f3-4fd9-92a7-bf2d001c6386" />
+
 </details>
 
 ---
 
-### Work Experience
+### Book Hotels, Flights, Packages or Guides with Partner Sites
 
-By using an easy-to-digest tile layout, this page will showcase my career history. Each section highlights my roles, achievements, and responsibilities across development, IT support, tutoring, and teaching. It also demonstrates my versatility and experience in different contexts.
+By using the trusted travel partners provided, users can easily book all aspects of their holiday, which is the main purpose of this page. External booking platforms such as GetYourGuide, Expedia.co.uk Packages, Google Flights, and Booking.com are displayed as results when visitors click on the clearly labelled link buttons after entering the name of a city in the search box and providing both the check-in and check-out dates. Activities, local guides, package deals, flight, or hotel results are viewed in real time by users, with each button opening the selected partner site. The seamless transition from destination research to booking is what users experience, with the creation of a convenient bridge between the Holiday Destination Finder and leading travel providers being the main purpose of this page. Responsive layout principles and effective use of external API integration are demonstrated, with a focus on supporting a smooth user experience, ease of navigation, reliability, and clarity within the design. 
 
 <details>
 <summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
 
 **Desktop**  
 <img width="900" alt="workExperience" src="https://github.com/user-attachments/assets/429419fd-383c-4550-bfeb-a27d4856e901" />
+<img width="1506" height="1479" alt="Packages-Contact-Desktop-Laptop" src="https://github.com/user-attachments/assets/b3e5c25b-bc54-45ff-8744-09787ad5d062" />
 
 **Tablet**  
 <img width="500" alt="workExperienceTablet" src="https://github.com/user-attachments/assets/40b7b675-4217-417e-8553-46203f6ecad3" />
+<img width="880" height="2130" alt="Packages-Contact-Tablet" src="https://github.com/user-attachments/assets/a29591e6-94e3-4529-9696-ea29d822988a" />
 
 **Mobile**  
 <img width="320" alt="workExperienceMobile" src="https://github.com/user-attachments/assets/b8b11d77-95aa-4be8-a26b-ce38238b3d4b" />
-</details>
+<img width="435" height="3787" alt="Packages-Contact-Mobile" src="https://github.com/user-attachments/assets/6c7679f4-5bb3-4229-9bcb-5f792945a1be" />
 
----
-
-### Skills
-
-This page presents the grouping of key competencies into distinct categories such as teaching, coding and development, languages, project management, and IT support. Again, I have chosen to use a tile-based layout to enable viewers to quickly identify my areas of expertise and the value I can offer.
-
-<details>
-<summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
-
-**Desktop**  
-<img width="900" alt="skills" src="https://github.com/user-attachments/assets/9ef80c5a-ebd1-4207-b296-bbc1fea70540" />
-
-**Tablet**  
-<img width="500" alt="skillsTablet" src="https://github.com/user-attachments/assets/7b561670-97a4-4c76-86f2-7e60fe793a7d" />
-
-**Mobile**  
-<img width="320" alt="skillsMobile" src="https://github.com/user-attachments/assets/c5ef9662-28a2-40cd-b2a0-75bd53540334" />
-</details>
-
----
-
-### Conferences and Workshops
-
-This page highlights my commitment to professional development by showcasing relevant workshops, conferences, and training I have attended. It demonstrates my engagement with industry best practices and continuous improvement, reinforcing my professional credibility.
-
-<details>
-<summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
-
-**Desktop**  
-<img width="900" alt="conferencesWorkshops" src="https://github.com/user-attachments/assets/b37dcd81-53c8-406f-a26a-baa36a82dab4" />
-
-**Tablet**  
-<img width="500" alt="conferencesWorkshopsTablet" src="https://github.com/user-attachments/assets/00e20a5d-0f4f-44e2-a68e-ae2b23dc9577" />
-
-**Mobile**  
-<img width="320" alt="conferencesWorkshopsMobile" src="https://github.com/user-attachments/assets/66b16a6f-e6c1-4ff2-ad12-c8a45b2495a1" />
-</details>
-
----
-
-### Certifications
-
-This page lists my formal qualifications and certifications, including CompTIA credentials, PGCE, Graphic Design, and others. The certifications are presented visually in tiles with concise descriptions, highlighting my technical and teaching expertise in a structured manner.
-
-<details>
-<summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
-
-**Desktop**  
-<img width="900" alt="certifications" src="https://github.com/user-attachments/assets/b0ff0989-ced8-4b0f-8aa5-47a1e668a309" />
-
-**Tablet**  
-<img width="500" alt="certificationsTablet" src="https://github.com/user-attachments/assets/5b272e5c-97ca-4cf8-a6ed-b53d157099ff" />
-
-**Mobile**  
-<img width="320" alt="certificationsMobile" src="https://github.com/user-attachments/assets/236c0fcf-3aeb-42e1-86ac-1edba94ee369" />
-</details>
-
----
-
-### Bookings
-
-The Bookings page enables potential clients, schools, or students to contact me and request my services. It includes a clean, straightforward form for inquiries and provides an accessible and professional way for visitors to engage with me directly.
-
-<details>
-<summary><strong>View wireframes (Desktop / Tablet / Mobile)</strong></summary>
-
-**Desktop**  
-<img width="900" alt="bookings" src="https://github.com/user-attachments/assets/0aa11cfb-e2df-41fe-940e-fccd6dcc4736" />
-
-**Tablet**  
-<img width="500" alt="bookingsTablet" src="https://github.com/user-attachments/assets/91373128-3a92-4208-b693-a25aee503b74" />
-
-**Mobile**  
-<img width="320" alt="bookingsMobile" src="https://github.com/user-attachments/assets/fc1c2b56-1ebc-403b-9dd6-6b19b4b186b1" />
 </details>
 
 ---
