@@ -673,100 +673,106 @@ By using the trusted travel partners provided, users can easily book all aspects
 ### 1. Roberto Pires – Website Developer (Site Owner)
 
 **User Story**  
-As the website developer, I want the homepage to deliver a clear, professional first impression and guide visitors smoothly to other sections so that they engage meaningfully with my content. (must-have)
+As the site owner, I want users to start exploring and appreciate the value of the site, which serves as a guide to search or browse destinations, and the main purpose of the homepage – About Us page is to clearly introduce the Holiday Destination Finder. (must-have)
 
 **Description**  
-The homepage should reflect my personal brand and present my key strengths across teaching, tutoring, and IT services. It should introduce the site, establish credibility, and invite further exploration.
+To explain the purpose of the platform (discovering and researching holiday destinations), the Homepage/About Us page will act as a welcoming entry point. Core actions such as making enquiries or bookings, exploring recommended places, and searching for destinations will be clearly signposted. 
 
 **Acceptance Criteria**
-- [x] My full name and professional tagline are visible.
-- [x] The site is responsive across desktop, tablet, and mobile.
-- [x] A clear introduction summarises who I am and what I offer.
-- [x] There is an intuitive navigation menu linking to all main pages.
-- [x] A visible call-to-action (e.g. “Download CV” or “Book a Session”) is included.
+- [] The purpose of the website will be conveyed in one or two concise sentences within a clear and engaging hero section. 
+- [] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations and Contact Us) are visible.
+- [] At least one call-to-action (e.g. “Start Exploring” / “Find Your Next Trip”) is shown.
+- [] The homepage layout is responsive and accessible on desktop, tablet, and mobile.
 
 **Tasks**
-- [x] Design hero section with name, tagline, and introductory message.
-- [x] Implement responsive navigation using HTML/CSS or Bootstrap.
-- [x] Add call-to-action button(s).
-- [x] Link to key sections to other pages.
-- [x] Style homepage with a clean, professional layout.
+- [] Design hero section with title, short tagline and introductory message.
+- [] Implement responsive navigation using HTML/CSS or Bootstrap.
+- [] Add call-to-action button(s).
+- [] Add a short “How it works” summary or icons explaining steps (Search → Explore → Enquire/Book).
+- [] Link to key sections to other pages.
+- [] Style Homepage/About Us page with a clean, professional layout.
 
 
-### 2. Potential Tutees / Parents (Tutoring Clients)
+### 2. Travellers and Holiday Planners
 
 **User Story**  
-As a student or parent, they want to understand quickly who I am and what subjects I tutor so that I can decide whether to book a session.
+As a traveller, to discover suitable locations for my next planned holiday, I want to begin searching for destinations and explore what the website provides.
 
 **Description**  
-The homepage should briefly explain the tutoring services offered (Computer Science and Mathematics at various levels) and present myself as a qualified, friendly, and experienced educator.
+The Homepage/About Us page enables users to navigate directly into browsing or searching, helping them to appreciate the advantages of the site. The experience should be practical, reassuring, and straightforward.
 
 **Acceptance Criteria**
-- [x] A short summary explains tutoring subjects (KS3 to A-level).
-- [x] A call-to-action guides users to the Bookings page.
-- [x] My teaching background is clearly introduced.
-- [x] Navigation is easy to use for non-technical users.
-- [x] The site is responsive across desktop, tablet, and mobile.
+- [] A call-to-action button will be provided to initiate destination searches.
+- [] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations, and Contact Us) will be clearly visible.
+- [] Users will be able to reach the booking or enquiry page within one or two clicks.
+- [] The design will remain clear, intuitive, and accessible for non-technical users.
+- [] The site will be fully responsive across desktop, tablet, and mobile devices.
 
 **Tasks**
-- [x] Write brief paragraph outlining tutoring subjects and levels.
-- [x] Add visual cues or icons (e.g. book, graduation cap).
-- [x] Include button or link: “Book a Tutoring Session”.
-- [x] Ensure menu links to other pages.
-- [x] Implement responsive navigation using HTML/CSS or Bootstrap.
+- [] A concise and informative paragraph will be written to explain what travellers can do on the site.
+- [] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations, and Contact Us) will be prominently displayed.
+- [] Responsive navigation will be implemented using HTML/CSS or Bootstrap.
+- [] A secondary call-to-action, such as “Plan a Trip”, will be included.
+- [] Menus and buttons will use clear and easily understood language.
+- [] Menu links will direct users to the appropriate pages.
+- [] Responsiveness and overall usability will be tested across a range of screen sizes. 
 
-### 3. Education Employers (e.g. headteachers, department leads)
+### 3. Travel Enthusiasts and Explorers
 
 **User Story**  
-As an education employer, they want to understand my background and qualifications immediately so that they can decide whether to explore my CV and experience further.
+To feel inspired about discovering new places, featured destinations, and travel ideas is what I want as a travel enthusiast; therefore, it is important that the Homepage/About Us page clearly informs me of the options available. 
 
 **Description**  
-The homepage should present myself as a professional with a long-standing teaching career, offering quick access to credentials, work history, and downloadable CV.
+Rather than arriving with a fixed plan, the page should appeal to users who enjoy browsing featured cities and expect the Homepage/About Us page to include visually captivating content such as hero images.
 
 **Acceptance Criteria**
-- [x] My teaching title and years of experience are stated clearly.
-- [x] Links to other pages are easily accessible.
-- [x] Option to download CV is visible.
-- [x] The layout reflects professionalism and clarity.
-- [x] The site is responsive across desktop, tablet, and mobile.
+- [] A minimum of 3–6 featured destinations will be presented with accompanying images within a carousel image slider.
+- [] Layout remains visually appealing and responsive on all devices.
+- [] The purpose of the website are stated clearly.
+- [] Links to other pages are easily accessible.
+- [] At least one call-to-action (e.g. “Start Exploring” / “Find Your Next Trip”) is shown.
+- [] The layout reflects professionalism and clarity.
+- [] The site is responsive across desktop, laptop tablet, and mobile.
 
 **Tasks**
-- [x] Add brief statement like: “Over 20 years of teaching experience across schools and colleges.”
-- [x] Include a CV download button or link.
-- [x] Feature quick-access links to other pages.
-- [x] Style homepage in line with education sector expectations.
-- [x] Implement responsive navigation using HTML/CSS or Bootstrap.
+- [] Add a brief statement such as: “Discover your next getaway.”
+- [] Include a secondary call-to-action, such as “Plan a Trip”.
+- [] Feature quick-access links to other pages.
+- [] Style Homepage/About Us page in line with travel sector expectations.
+- [] Implement responsive navigation using HTML/CSS or Bootstrap.
 
-### 4. IT Support / Web Employers (Recruiters / Hiring Managers)
+### 4. Group Travellers and Families
 
 **User Story**  
-As an IT employer or recruiter, they want want to immediately assess my technical profile and view my skills or projects so that I can determine whether I fit a technical or support role.
+As a group traveller or family, finding destinations suitable for groups or families is my priority, and I am keen to quickly see whether the site can help me and know that it is worth using for our trip.
 
 **Description**  
-The homepage should reference my IT certifications, web development training, and technical competencies with a link to explore my skills or recent projects.
+Filters tailored to this target audience’s needs, or references to family-friendly destinations and group activities, are clearly indicated by the Homepage/About Us page in support of family and group travel.
 
 **Acceptance Criteria**
-- [x] Technical certifications (e.g. CompTIA A+, ITF+, CCNA) are mentioned.
-- [x] Link to other pages is visible.
-- [x] My IT background is summarised in the introduction.
-- [x] Navigation and layout are mobile/tablet-friendly and accessible.
-- [x] The site is responsive across desktop, tablet, and mobile.
+- [] The homepage mentions families or groups as supported user types.
+- [] Links to other pages is visible.
+- [] The purpose of the Holiday Destination Finder are summarised in the introduction.
+- [] Any text aimed at families is written in clear, reassuring language.
+- [] Navigation and layout are mobile/tablet-friendly and accessible.
+- [] Users can reach relevant search results or guides within two clicks.
+- [] The site is responsive across desktop, laptop, tablet, and mobile.
 
 **Tasks:**
-- [x] Add bullet or tagline: “Certified in CompTIA A+, ITF+, CCNA – Full Stack Developer in training.”
-- [x] Include links or buttons.
-- [x] Ensure homepage loads quickly and looks clean on all devices.
-- [x] Place technical content where it's easy to notice but not overwhelming.
-- [x] Implement responsive navigation using HTML/CSS or Bootstrap.
+- [] Add a short line in the hero/subheading referencing group and family travel.
+- [] Include links or buttons to other features of the website.
+- [] Ensure Homepage/About Us page loads quickly and looks clean on all devices.
+- [] Place travel content where it's easy to notice but not overwhelming.
+- [] Implement responsive navigation using HTML/CSS or Bootstrap.
 
 ### Summary
 
 | **Stakeholder**       | **User Goal**                                                    | **Key Action/Outcome**                                         |
 |-----------------------|------------------------------------------------------------------|----------------------------------------------------------------|
-| Developer (Me)       | Present a clean, responsive and professional entry point to the site | Clear layout, call-to-action, easy navigation                  |
-| Students/Parents      | Understand my tutoring subjects and teaching approach         | Subject summary, CTA to Bookings, approachable design          |
-| Education Employers   | See my experience and qualifications at a glance              | Quick access to CV, experience and certification pages         |
-| IT Employers          | Assess my technical background and see projects/skills        | Mention certifications, link to Skills and Projects pages      |
+| Owner/Developer (Me)       | Introduce platform and direct users to search | Hero section, clear navigation                  |
+| Travellers & Holiday Planners      | Quickly understand purpose and start searching         | Content summary, CTA to Searches, approachable design          |
+| Travel Enthusiasts & Explorers   | Browse inspiring ideas             | Quick access to Featured destinations, images, Searches and Bookings         |
+| Group Travellers & Families          | See family/group suitability        | Family/group-friendly entry point      |
 
 ---
 
