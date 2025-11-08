@@ -23,7 +23,7 @@
   - [Technologies Used](#technologies-used)
   - [Wireframes](#wireframes)
   - [Holiday Destination Finder Wireframes](#holiday-destination-finder-wireframes)
-  - [User Stories for Homepage/About Us Page](#user-stories-for-homepage-aboutus)
+  - [User Stories for Homepage/About Us Page](#user-stories-for-homepageabout-us)
   - [User Stories for Destination Search Page](#user-stories-for-destination-search-page)
   - [User Stories for Book Your Holiday Page](#user-stories-for-book-your-holiday-page)
 - [References](#references)
