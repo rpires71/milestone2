@@ -679,18 +679,18 @@ As the site owner, I want users to start exploring and appreciate the value of t
 To explain the purpose of the platform (discovering and researching holiday destinations), the Homepage/About Us page will act as a welcoming entry point. Core actions such as making enquiries or bookings, exploring recommended places, and searching for destinations will be clearly signposted. 
 
 **Acceptance Criteria**
-- [] The purpose of the website will be conveyed in one or two concise sentences within a clear and engaging hero section. 
-- [] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations and Contact Us) are visible.
-- [] At least one call-to-action (e.g. “Start Exploring” / “Find Your Next Trip”) is shown.
-- [] The homepage layout is responsive and accessible on desktop, tablet, and mobile.
+- [ ] The purpose of the website will be conveyed in one or two concise sentences within a clear and engaging hero section. 
+- [ ] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations and Contact Us) are visible.
+- [ ] At least one call-to-action (e.g. “Start Exploring” / “Find Your Next Trip”) is shown.
+- [ ] The homepage layout is responsive and accessible on desktop, tablet, and mobile.
 
 **Tasks**
-- [] Design hero section with title, short tagline and introductory message.
-- [] Implement responsive navigation using HTML/CSS or Bootstrap.
-- [] Add call-to-action button(s).
-- [] Add a short “How it works” summary or icons explaining steps (Search → Explore → Enquire/Book).
-- [] Link to key sections to other pages.
-- [] Style Homepage/About Us page with a clean, professional layout.
+- [ ] Design hero section with title, short tagline and introductory message.
+- [ ] Implement responsive navigation using HTML/CSS or Bootstrap.
+- [ ] Add call-to-action button(s).
+- [ ] Add a short “How it works” summary or icons explaining steps (Search → Explore → Enquire/Book).
+- [ ] Link to key sections to other pages.
+- [ ] Style Homepage/About Us page with a clean, professional layout.
 
 
 ### 2. Travellers and Holiday Planners
@@ -702,20 +702,20 @@ As a traveller, to discover suitable locations for my next planned holiday, I wa
 The Homepage/About Us page enables users to navigate directly into browsing or searching, helping them to appreciate the advantages of the site. The experience should be practical, reassuring, and straightforward.
 
 **Acceptance Criteria**
-- [] A call-to-action button will be provided to initiate destination searches.
-- [] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations, and Contact Us) will be clearly visible.
-- [] Users will be able to reach the booking or enquiry page within one or two clicks.
-- [] The design will remain clear, intuitive, and accessible for non-technical users.
-- [] The site will be fully responsive across desktop, tablet, and mobile devices.
+- [ ] A call-to-action button will be provided to initiate destination searches.
+- [ ] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations, and Contact Us) will be clearly visible.
+- [ ] Users will be able to reach the booking or enquiry page within one or two clicks.
+- [ ] The design will remain clear, intuitive, and accessible for non-technical users.
+- [ ] The site will be fully responsive across desktop, tablet, and mobile devices.
 
 **Tasks**
-- [] A concise and informative paragraph will be written to explain what travellers can do on the site.
-- [] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations, and Contact Us) will be prominently displayed.
-- [] Responsive navigation will be implemented using HTML/CSS or Bootstrap.
-- [] A secondary call-to-action, such as “Plan a Trip”, will be included.
-- [] Menus and buttons will use clear and easily understood language.
-- [] Menu links will direct users to the appropriate pages.
-- [] Responsiveness and overall usability will be tested across a range of screen sizes. 
+- [ ] A concise and informative paragraph will be written to explain what travellers can do on the site.
+- [ ] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations, and Contact Us) will be prominently displayed.
+- [ ] Responsive navigation will be implemented using HTML/CSS or Bootstrap.
+- [ ] A secondary call-to-action, such as “Plan a Trip”, will be included.
+- [ ] Menus and buttons will use clear and easily understood language.
+- [ ] Menu links will direct users to the appropriate pages.
+- [ ] Responsiveness and overall usability will be tested across a range of screen sizes. 
 
 ### 3. Travel Enthusiasts and Explorers
 
@@ -726,20 +726,20 @@ To feel inspired about discovering new places, featured destinations, and travel
 Rather than arriving with a fixed plan, the page should appeal to users who enjoy browsing featured cities and expect the Homepage/About Us page to include visually captivating content such as hero images.
 
 **Acceptance Criteria**
-- [] A minimum of 3–6 featured destinations will be presented with accompanying images within a carousel image slider.
-- [] Layout remains visually appealing and responsive on all devices.
-- [] The purpose of the website are stated clearly.
-- [] Links to other pages are easily accessible.
-- [] At least one call-to-action (e.g. “Start Exploring” / “Find Your Next Trip”) is shown.
-- [] The layout reflects professionalism and clarity.
-- [] The site is responsive across desktop, laptop tablet, and mobile.
+- [ ] A minimum of 3–6 featured destinations will be presented with accompanying images within a carousel image slider.
+- [ ] Layout remains visually appealing and responsive on all devices.
+- [ ] The purpose of the website are stated clearly.
+- [ ] Links to other pages are easily accessible.
+- [ ] At least one call-to-action (e.g. “Start Exploring” / “Find Your Next Trip”) is shown.
+- [ ] The layout reflects professionalism and clarity.
+- [ ] The site is responsive across desktop, laptop tablet, and mobile.
 
 **Tasks**
-- [] Add a brief statement such as: “Discover your next getaway.”
-- [] Include a secondary call-to-action, such as “Plan a Trip”.
-- [] Feature quick-access links to other pages.
-- [] Style Homepage/About Us page in line with travel sector expectations.
-- [] Implement responsive navigation using HTML/CSS or Bootstrap.
+- [ ] Add a brief statement such as: “Discover your next getaway.”
+- [ ] Include a secondary call-to-action, such as “Plan a Trip”.
+- [ ] Feature quick-access links to other pages.
+- [ ] Style Homepage/About Us page in line with travel sector expectations.
+- [ ] Implement responsive navigation using HTML/CSS or Bootstrap.
 
 ### 4. Group Travellers and Families
 
@@ -750,20 +750,20 @@ As a group traveller or family, finding destinations suitable for groups or fami
 Filters tailored to this target audience’s needs, or references to family-friendly destinations and group activities, are clearly indicated by the Homepage/About Us page in support of family and group travel.
 
 **Acceptance Criteria**
-- [] The homepage mentions families or groups as supported user types.
-- [] Links to other pages is visible.
-- [] The purpose of the Holiday Destination Finder are summarised in the introduction.
-- [] Any text aimed at families is written in clear, reassuring language.
-- [] Navigation and layout are mobile/tablet-friendly and accessible.
-- [] Users can reach relevant search results or guides within two clicks.
-- [] The site is responsive across desktop, laptop, tablet, and mobile.
+- [ ] The homepage mentions families or groups as supported user types.
+- [ ] Links to other pages is visible.
+- [ ] The purpose of the Holiday Destination Finder are summarised in the introduction.
+- [ ] Any text aimed at families is written in clear, reassuring language.
+- [ ] Navigation and layout are mobile/tablet-friendly and accessible.
+- [ ] Users can reach relevant search results or guides within two clicks.
+- [ ] The site is responsive across desktop, laptop, tablet, and mobile.
 
 **Tasks:**
-- [] Add a short line in the hero/subheading referencing group and family travel.
-- [] Include links or buttons to other features of the website.
-- [] Ensure Homepage/About Us page loads quickly and looks clean on all devices.
-- [] Place travel content where it's easy to notice but not overwhelming.
-- [] Implement responsive navigation using HTML/CSS or Bootstrap.
+- [ ] Add a short line in the hero/subheading referencing group and family travel.
+- [ ] Include links or buttons to other features of the website.
+- [ ] Ensure Homepage/About Us page loads quickly and looks clean on all devices.
+- [ ] Place travel content where it's easy to notice but not overwhelming.
+- [ ] Implement responsive navigation using HTML/CSS or Bootstrap.
 
 ### Summary
 
