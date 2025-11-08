@@ -23,6 +23,9 @@
   - [Technologies Used](#technologies-used)
   - [Wireframes](#wireframes)
   - [Holiday Destination Finder Wireframes](#holiday-destination-finder-wireframes)
+  - [User Stories for Homepage/About Us Page](#user-stories-for-homepage-aboutus)
+  - [User Stories for Destination Search Page](#user-stories-for-destination-search-page)
+  - [User Stories for Book Your Holiday Page](#user-stories-for-book-your-holiday-page)
 - [References](#references)
  
 
@@ -662,6 +665,341 @@ By using the trusted travel partners provided, users can easily book all aspects
 
 ---
 
+## User Stories for Homepage/About Us
+[⬆ Back to Table of contents](#table-of-contents)
+
+**(must-have)**
+
+### 1. Roberto Pires – Website Developer (Site Owner)
+
+**User Story**  
+As the website developer, I want the homepage to deliver a clear, professional first impression and guide visitors smoothly to other sections so that they engage meaningfully with my content. (must-have)
+
+**Description**  
+The homepage should reflect my personal brand and present my key strengths across teaching, tutoring, and IT services. It should introduce the site, establish credibility, and invite further exploration.
+
+**Acceptance Criteria**
+- [x] My full name and professional tagline are visible.
+- [x] The site is responsive across desktop, tablet, and mobile.
+- [x] A clear introduction summarises who I am and what I offer.
+- [x] There is an intuitive navigation menu linking to all main pages.
+- [x] A visible call-to-action (e.g. “Download CV” or “Book a Session”) is included.
+
+**Tasks**
+- [x] Design hero section with name, tagline, and introductory message.
+- [x] Implement responsive navigation using HTML/CSS or Bootstrap.
+- [x] Add call-to-action button(s).
+- [x] Link to key sections to other pages.
+- [x] Style homepage with a clean, professional layout.
+
+
+### 2. Potential Tutees / Parents (Tutoring Clients)
+
+**User Story**  
+As a student or parent, they want to understand quickly who I am and what subjects I tutor so that I can decide whether to book a session.
+
+**Description**  
+The homepage should briefly explain the tutoring services offered (Computer Science and Mathematics at various levels) and present myself as a qualified, friendly, and experienced educator.
+
+**Acceptance Criteria**
+- [x] A short summary explains tutoring subjects (KS3 to A-level).
+- [x] A call-to-action guides users to the Bookings page.
+- [x] My teaching background is clearly introduced.
+- [x] Navigation is easy to use for non-technical users.
+- [x] The site is responsive across desktop, tablet, and mobile.
+
+**Tasks**
+- [x] Write brief paragraph outlining tutoring subjects and levels.
+- [x] Add visual cues or icons (e.g. book, graduation cap).
+- [x] Include button or link: “Book a Tutoring Session”.
+- [x] Ensure menu links to other pages.
+- [x] Implement responsive navigation using HTML/CSS or Bootstrap.
+
+### 3. Education Employers (e.g. headteachers, department leads)
+
+**User Story**  
+As an education employer, they want to understand my background and qualifications immediately so that they can decide whether to explore my CV and experience further.
+
+**Description**  
+The homepage should present myself as a professional with a long-standing teaching career, offering quick access to credentials, work history, and downloadable CV.
+
+**Acceptance Criteria**
+- [x] My teaching title and years of experience are stated clearly.
+- [x] Links to other pages are easily accessible.
+- [x] Option to download CV is visible.
+- [x] The layout reflects professionalism and clarity.
+- [x] The site is responsive across desktop, tablet, and mobile.
+
+**Tasks**
+- [x] Add brief statement like: “Over 20 years of teaching experience across schools and colleges.”
+- [x] Include a CV download button or link.
+- [x] Feature quick-access links to other pages.
+- [x] Style homepage in line with education sector expectations.
+- [x] Implement responsive navigation using HTML/CSS or Bootstrap.
+
+### 4. IT Support / Web Employers (Recruiters / Hiring Managers)
+
+**User Story**  
+As an IT employer or recruiter, they want want to immediately assess my technical profile and view my skills or projects so that I can determine whether I fit a technical or support role.
+
+**Description**  
+The homepage should reference my IT certifications, web development training, and technical competencies with a link to explore my skills or recent projects.
+
+**Acceptance Criteria**
+- [x] Technical certifications (e.g. CompTIA A+, ITF+, CCNA) are mentioned.
+- [x] Link to other pages is visible.
+- [x] My IT background is summarised in the introduction.
+- [x] Navigation and layout are mobile/tablet-friendly and accessible.
+- [x] The site is responsive across desktop, tablet, and mobile.
+
+**Tasks:**
+- [x] Add bullet or tagline: “Certified in CompTIA A+, ITF+, CCNA – Full Stack Developer in training.”
+- [x] Include links or buttons.
+- [x] Ensure homepage loads quickly and looks clean on all devices.
+- [x] Place technical content where it's easy to notice but not overwhelming.
+- [x] Implement responsive navigation using HTML/CSS or Bootstrap.
+
+### Summary
+
+| **Stakeholder**       | **User Goal**                                                    | **Key Action/Outcome**                                         |
+|-----------------------|------------------------------------------------------------------|----------------------------------------------------------------|
+| Developer (Me)       | Present a clean, responsive and professional entry point to the site | Clear layout, call-to-action, easy navigation                  |
+| Students/Parents      | Understand my tutoring subjects and teaching approach         | Subject summary, CTA to Bookings, approachable design          |
+| Education Employers   | See my experience and qualifications at a glance              | Quick access to CV, experience and certification pages         |
+| IT Employers          | Assess my technical background and see projects/skills        | Mention certifications, link to Skills and Projects pages      |
+
+---
+
+## User Stories for Destination Search Page
+[⬆ Back to Table of contents](#table-of-contents)
+
+**(must-have)**
+
+### 1. Roberto Pires – Website Developer (Site Owner)
+
+**User Goal**  
+As the developer, I want the About Me page to reflect my personality, professionalism, and background so that users can understand who I am and what I offer.
+
+**Description**  
+This page should humanise the portfolio, going beyond qualifications to show my career journey, commitment to education and IT, and enthusiasm for learning. It acts as a narrative that builds trust and connection with all visitors.
+
+**Acceptance Criteria**
+- [x] The page includes a personal introduction written in a warm, professional tone.  
+- [x] A profile photo is clearly displayed.  
+- [x] My teaching, tutoring, and IT experience are summarised.  
+- [x] There are clear links to the other pages.  
+- [x] The site is responsive and accessible across desktop, tablet, and mobile.
+
+**Tasks**
+- [x] Write a 2–3 paragraph bio including background, values, and current training.  
+- [x] Insert a professional headshot with alt text.  
+- [x] Include menu links to other pages.  
+- [x] Style the page with clear headings and appropriate spacing.  
+- [x] Test readability and responsiveness across desktop, tablet, and mobile.  
+
+### 2. Potential Tutees / Parents
+
+**User Goal**  
+As a student or parent, they want to understand who I am as a tutor so that they feel confident I am approachable, qualified, and able to support learning needs.
+
+**Description**  
+The page should show my human side — my passion for education, patience, communication style, and ability to support learners of different ages and abilities.
+
+**Acceptance Criteria**
+- [x] The tone is clear, supportive, and easy to understand.
+- [x] Reassures users of my experience and personal approach.  
+- [x] A call-to-action or link to Bookings and other pages is visible.  
+- [x] The site is responsive and accessible across desktop, tablet, and mobile.
+
+**Tasks**
+- [x] Mention my my mission is to empower learners and professionals alike through meaningful technology education and solutions.  
+- [x] Include a contact information.  
+- [x] Add “Book a Tutoring Session” button/link to Bookings and other pages.  
+- [x] Test readability and responsiveness across desktop, tablet, and mobile.  
+
+
+### 3. Education Employers (e.g. Headteachers, Curriculum Leads)
+
+**User Goal**  
+As an education employer, they want to get a sense of my ethos and background in teaching so that they can assess my cultural fit and motivation.
+
+**Description**  
+The About Me page should convey my philosophy on education, lifelong learning, curriculum delivery, and adaptability. It should reinforce my credibility as a professional educator.
+
+**Acceptance Criteria**
+- [x] Includes teaching experience and subject specialisms.  
+- [x] Shows commitment to CPD and learning.  
+- [x] Links to other relevant pages are available.  
+- [x] The site is responsive and accessible across desktop, tablet, and mobile.
+
+**Tasks**
+- [x] Write about experience as educator.  
+- [x] Reference lifelong learning and skills.  
+- [x] Add links to other pages.  
+- [x] Ensure tone is professional yet personal.  
+- [x] Test readability and responsiveness across desktop, tablet, and mobile.  
+
+
+### 4. IT Support / Web Employers (Recruiters / Hiring Managers)
+
+**User Goal**  
+As an IT employer, they want to understand my journey into IT and web development so that they can assess my technical potential and transferable skills.
+
+**Description**
+This page should summarise my technical training, certifications, and motivation for entering IT. It should highlight my transition from teaching into full-stack development and technical support.
+
+**Acceptance Criteria**
+- [x] Reference lifelong learning and skills.  
+- [x] Notes current training: Level 5 Full Stack Development.  
+- [x] Indicates transferable skills (support, problem-solving).  
+- [x] Links to other relevant pages are available.  
+- [x] The site is responsive and accessible across desktop, tablet, and mobile.
+
+
+**Tasks**
+- [x] Add paragraph like: "Alongside my teaching career, I eveloped strong skills in programming, web development, hardware, CAD, networking. I’m currently completing a Level 5 Full Stack Development diploma."  
+- [x] Emphasise adaptability, support and innovate.  
+- [x] Add buttons or links: “See My Technical Skills” / “View Projects”.  
+- [x] Maintain a clean, modern layout.  
+- [x] Add links to other pages.  
+- [x] Test readability and responsiveness across desktop, tablet, and mobile.  
+
+
+### Summary of About Me Page Coverage
+
+| Stakeholder         | Focus                                            | Link/CTA                           |
+|---------------------|--------------------------------------------------|------------------------------------|
+| Developer (You)     | Communicate identity, values, and professionalism | Skills, Work Experience            |
+| Students/Parents    | Reassure about dedication and learning engagement       | Bookings                           |
+| Education Employers | Highlight teaching ethos and CPD | CV, Certifications, Experience     |
+| IT/Web Employers    | Showcase IT skills and pedagogy | Skills, Certifications            |
+
+---
+
+## User Stories for Book Your Holiday Page
+[⬆ Back to Table of contents](#table-of-contents)
+
+**(must-have)**
+
+### 1. Roberto Pires – Website Developer (Site Owner)
+
+**User Goal** 
+
+As the developer, I want to present my work history in a structured, engaging format so that all users can understand the breadth of my teaching and technical experience.
+
+**Description** 
+
+The page should summarise over 20 years of professional experience across teaching, tutoring, IT support, and web development. Information should be easy to navigate, skimmable, and grouped where appropriate.
+
+**Acceptance Criteria**
+
+- [x] Shows job roles  grouped by sector.  
+- [x] Each role includes institution name, job title, and brief description.  
+- [x] Includes responsibilities or contributions.  
+- [x] Layout is responsive and suitable for all screen sizes.  
+- [x] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [x] Extract roles from CV and organise (e.g. Education, IT Support).  
+- [x] Write descriptions and achievements.  
+- [x] Choose appropriate layout (e.g. tile-based).  
+- [x] Add internal menu links to other pages e.g. Certifications, Projects, or Skills.  
+- [x] Test mobile/tablet responsiveness and accessibility. 
+
+### 2. Potential Tutees / Parents
+
+**User Goal**  
+
+As a student or parent, they want to see my teaching and tutoring background so that they feel confident in my ability to support learning in Computer Science and Mathematics.
+
+**Description**  
+
+This page should show that I have taught in secondary schools and colleges, and have experience with learners of all abilities. It should reassure families that I am qualified, experienced, and trustworthy.
+
+**Acceptance Criteria**
+
+- [x] Clearly lists teaching positions and subjects taught.  
+- [x] Highlights experience with KS3, GCSE, and A-level.  
+- [x] Uses clear, friendly language to explain roles.  
+- [x] Includes a call-to-action to view Bookings page and access to other pages.  
+- [x] Layout is responsive and suitable for all screen sizes.  
+- [x] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [x] Highlight relevant tutoring experience or private support work.  
+- [x] Mention curriculum types supported (OCR, AQA, BTEC).  
+- [x] Use bold headings or icons.  
+- [x] Add button or link: “Bookings”.  
+- [x] Add internal menu links to other pages.  
+- [x] Test mobile/tablet responsiveness and accessibility.
+
+### 3. Education Employers (e.g. Headteachers, Recruitment Officers)
+
+**User Goal**  
+
+As an education employer, they want to verify my experience in teaching various key stages and subjects so that they can assess my suitability for current or future vacancies.
+
+**Description**  
+
+The Work Experience page should provide evidence of subject knowledge, experience in different institutions, and responsibilities undertaken in each role. It should show progression, adaptability, and professionalism.
+
+**Acceptance Criteria**
+
+- [x] Clearly lists roles, responsibilities, and curriculum areas.  
+- [x] Identifies subject specialisms (e.g. Computer Science, Creative iMedia, Maths).  
+- [x] Mentions environments (e.g. FE College, Secondary School, International).  
+- [x] Option to view/download full CV is available.  
+- [x] Includes access to other pages.  
+- [x] Layout is responsive and suitable for all screen sizes.  
+- [x] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [x] Present information in tiles to show scope and impact.  
+- [x] Write in a concise, professional tone.  
+- [x] Add a link to downloadable CV or Certifications page.  
+- [x] Add internal menu links to other pages.  
+- [x] Test mobile/tablet responsiveness and accessibility.  
+
+### 4. IT Support / Web Employers
+
+**User Goal**  
+
+As an IT employer or recruiter, they want to identify any relevant IT support or web development experience so that they can consider me for technical or hybrid roles.
+
+**Description**  
+
+This page should briefly showcase my experience in IT systems, technical troubleshooting, and ongoing development in web technologies. It should connect transferable teaching skills to IT-related competencies.
+
+**Acceptance Criteria**
+
+- [x] Lists any IT support, admin, or technical roles.  
+- [x] References key certifications (A+, ITF+, CCNA) in context.  
+- [x] Shows current or recent web dev training or projects.  
+- [x] Includes access to other pages.  
+- [x] Layout is responsive and suitable for all screen sizes.  
+- [x] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [x] Identify and write up any IT-related responsibilities from previous roles (e.g. managing school systems, supporting tech integration).  
+- [x] Include sentence noting current Level 5 Full Stack Development training.  
+- [x] Add internal menu links to other pages e.g. "View My Technical Skills".  
+- [x] Use a clear visual separation between teaching and technical roles.  
+- [x] Test mobile/tablet responsiveness and accessibility.  
+
+### Summary of Stakeholder Goals on Work Experience Page
+
+| Stakeholder         | Goal                                                    | Key Feature/Action                               |
+|---------------------|----------------------------------------------------------|--------------------------------------------------|
+| Developer (Myself)     | Showcase structured, responsive experience history      | Grouped layout, clear descriptions               |
+| Students/Parents    | Understand my teaching experience and subject coverage| Highlight KS3–A-level support, link to Bookings  |
+| Education Employers | Assess my teaching background, subject areas, and institutions | Bullet points, chronological layout, link to CV |
+| IT/Web Employers    | Identify relevant IT support and technical roles         | Mention certifications, link to Skills  |
+
+---
 # References
 [⬆ Back to Table of contents](#table-of-contents)
 
