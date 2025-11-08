@@ -751,7 +751,7 @@ Filters tailored to this target audience’s needs, or references to family-frie
 
 **Acceptance Criteria**
 - [ ] The homepage mentions families or groups as supported user types.
-- [ ] Links to other pages is visible.
+- [ ] Links to other pages are visible.
 - [ ] The purpose of the Holiday Destination Finder are summarised in the introduction.
 - [ ] Any text aimed at families is written in clear, reassuring language.
 - [ ] Navigation and layout are mobile/tablet-friendly and accessible.
@@ -779,106 +779,123 @@ Filters tailored to this target audience’s needs, or references to family-frie
 ## User Stories for Destination Search Page
 [⬆ Back to Table of contents](#table-of-contents)
 
-**(must-have)**
+**(must-have core Google Maps & filtering feature)**
 
 ### 1. Roberto Pires – Website Developer (Site Owner)
 
 **User Goal**  
-As the developer, I want the About Me page to reflect my personality, professionalism, and background so that users can understand who I am and what I offer.
+As the site owner, I want users to filter by interests (attractions, hotels, restaurants, cafés, and shopping), view them on an interactive map, and discover destinations through a central search and map page.
 
 **Description**  
-This page should humanise the portfolio, going beyond qualifications to show my career journey, commitment to education and IT, and enthusiasm for learning. It acts as a narrative that builds trust and connection with all visitors.
+This page serves as the functional core of the application. It should display points of interest such as restaurants, accommodation, shops, cafés, and attractions through available filters, support text-based searches, and integrate the map using the Google Maps API, Places API (New), and Geocoding API.
 
 **Acceptance Criteria**
-- [x] The page includes a personal introduction written in a warm, professional tone.  
-- [x] A profile photo is clearly displayed.  
-- [x] My teaching, tutoring, and IT experience are summarised.  
-- [x] There are clear links to the other pages.  
-- [x] The site is responsive and accessible across desktop, tablet, and mobile.
+- [ ] Destination name or keyword can be searched by users. 
+- [ ] The search area is displayed through the updated map.  
+- [ ] Attractions, cafés, hotels, restaurants, and shopping centres are provided using the available filters.
+- [ ] There are clear links to the other pages.
+- [ ] Include menu links to other pages.
+- [ ] Links to detailed views and basic information are displayed when selecting markers.
+- [ ] Responsive layout: the map and filters operate effectively on desktop, laptop, tablet, and mobile devices.
 
 **Tasks**
-- [x] Write a 2–3 paragraph bio including background, values, and current training.  
-- [x] Insert a professional headshot with alt text.  
-- [x] Include menu links to other pages.  
-- [x] Style the page with clear headings and appropriate spacing.  
-- [x] Test readability and responsiveness across desktop, tablet, and mobile.  
+- [ ] Integrate Google Maps API, Places API(New) and Geocoding API into the main search page. 
+- [ ] Implement a search input and wire it to map search.
+- [ ] Add filter controls (buttons) for places of interest.
+- [ ] Display markers on the map with info windows.
+- [ ] Feature quick-access links to other pages. 
+- [ ] Style the page with clear headings and appropriate spacing.
+- [ ] Create a responsive layout (e.g. map and sidebar/cards/panel).
+- [ ] Test readability and responsiveness across desktop, tablet, and mobile.  
 
-### 2. Potential Tutees / Parents
+### 2. Travellers and Holiday Planners
 
 **User Goal**  
-As a student or parent, they want to understand who I am as a tutor so that they feel confident I am approachable, qualified, and able to support learning needs.
+As a holiday planner, I want to determine whether it suits my trip when I search for a destination and view key information such as attractions, cafés, hotels, restaurants, and shopping centres.
 
 **Description**  
-The page should show my human side — my passion for education, patience, communication style, and ability to support learners of different ages and abilities.
+Typing a city or region, browsing relevant places of interest, and viewing them on the map is what users should be able to do. To concentrate on the aspects that matter most for planning, they should be able to refine what they see.
 
 **Acceptance Criteria**
-- [x] The tone is clear, supportive, and easy to understand.
-- [x] Reassures users of my experience and personal approach.  
-- [x] A call-to-action or link to Bookings and other pages is visible.  
-- [x] The site is responsive and accessible across desktop, tablet, and mobile.
+- [ ] The tone is clear, supportive, and easy to understand.
+- [ ] Results are displayed clearly, and the search input accepts city or region names. 
+- [ ] The selected destination is centred on the map.  
+- [ ] A call-to-action or link to Bookings and other pages is visible.
+- [ ] Essential information (such as name and rating) is displayed for each location.
+- [ ] Links to other pages are visible.
+- [ ] The Booking/Enquiry page or a more detailed view is accessible through map features and links.   
+- [ ] The site is responsive and accessible across desktop, laptop, tablet, and mobile.
 
 **Tasks**
-- [x] Mention my my mission is to empower learners and professionals alike through meaningful technology education and solutions.  
-- [x] Include a contact information.  
-- [x] Add “Book a Tutoring Session” button/link to Bookings and other pages.  
-- [x] Test readability and responsiveness across desktop, tablet, and mobile.  
+- [ ] Manage basic error states (e.g. “No results found”) and validate the search input.  
+- [ ] Include a contact information.
+- [ ] When filter buttons are adjusted, map markers are updated according to the implemented filter logic.
+- [ ] Feature quick-access links to other pages.
+- [ ] In addition to the map (optional but beneficial), a summary panel or list view of places is displayed.
+- [ ] Test readability and responsiveness across desktop, laptop, tablet, and mobile.  
 
 
-### 3. Education Employers (e.g. Headteachers, Curriculum Leads)
+### 3. Travel Enthusiasts and Explorers
 
 **User Goal**  
-As an education employer, they want to get a sense of my ethos and background in teaching so that they can assess my cultural fit and motivation.
+As a travel enthusiast, I want to discover intriguing places I may not have previously considered by exploring destinations on a map and filtering by type of experience.
 
 **Description**  
-The About Me page should convey my philosophy on education, lifelong learning, curriculum delivery, and adaptability. It should reinforce my credibility as a professional educator.
+To explore a variety of experiences and attractions, the page should support exploratory behaviour such as switching filters, panning, zooming, and navigating the map.
 
 **Acceptance Criteria**
-- [x] Includes teaching experience and subject specialisms.  
-- [x] Shows commitment to CPD and learning.  
-- [x] Links to other relevant pages are available.  
-- [x] The site is responsive and accessible across desktop, tablet, and mobile.
+- [ ] Users can pan and zoom the map.
+- [ ] Main category filter buttons such as “Attractions”, “Restaurants”, “Hotels”, “Cafés”, and “Shopping” are provided.
+- [ ] Ratings, names, and addresses are displayed when markers are selected.
+- [ ] When filter buttons are selected, a side panel beside the map lists the top 20 corresponding locations (e.g. attractions, restaurants, cafés, shopping venues, and hotels).
+- [ ] Links to other relevant pages are available.  
+- [ ] The site is responsive and accessible across desktop, laptop, tablet, and mobile.
 
 **Tasks**
-- [x] Write about experience as educator.  
-- [x] Reference lifelong learning and skills.  
-- [x] Add links to other pages.  
-- [x] Ensure tone is professional yet personal.  
-- [x] Test readability and responsiveness across desktop, tablet, and mobile.  
+- [ ] Ensure smooth panning and zooming interactions through appropriate map configuration.  
+- [ ] Configure map settings to provide seamless navigation and zoom functionality. 
+- [ ] Add links to other pages.  
+- [ ] Implement and verify that the side panel beside the map, displays the top 20 corresponding locations, is visible and presenting the expected results. 
+- [ ] Test readability and responsiveness across desktop, laptop, tablet, and mobile.  
 
 
-### 4. IT Support / Web Employers (Recruiters / Hiring Managers)
+### 4. Group Travellers and Families
 
 **User Goal**  
-As an IT employer, they want to understand my journey into IT and web development so that they can assess my technical potential and transferable skills.
+As a family or group traveller, I want to determine whether a destination suits everyone by filtering destinations that offer family-friendly or group-friendly amenities.
 
 **Description**
-This page should summarise my technical training, certifications, and motivation for entering IT. It should highlight my transition from teaching into full-stack development and technical support.
+This page should display accommodation types suitable for groups, and relevant attractions (e.g. parks, family venues, group tours) will be highlighted to help families and groups find appropriate locations more easily.
 
 **Acceptance Criteria**
-- [x] Reference lifelong learning and skills.  
-- [x] Notes current training: Level 5 Full Stack Development.  
-- [x] Indicates transferable skills (support, problem-solving).  
-- [x] Links to other relevant pages are available.  
-- [x] The site is responsive and accessible across desktop, tablet, and mobile.
+- [ ] To approximate suitability, keyword searches (e.g. “family”, “kids”, “group tours”) and relevant Google place types (e.g. parks, hotels, attractions) are used to provide “Family-friendly” and “Group-friendly” filter options.
+- [ ] Locations more suitable for families and groups, based on place type or keyword relevance, are clearly highlighted in the list panel view or on the map.
+- [ ] Clear and easy-to-understand information, such as distance from the centre or nearby clustered areas, is displayed.
+- [ ] Users can quickly switch between different locations without losing their current position.
+- [ ] Links to other relevant pages are available.  
+- [ ] The site is responsive and accessible across desktop, laptop, tablet, and mobile.
 
 
 **Tasks**
-- [x] Add paragraph like: "Alongside my teaching career, I eveloped strong skills in programming, web development, hardware, CAD, networking. I’m currently completing a Level 5 Full Stack Development diploma."  
-- [x] Emphasise adaptability, support and innovate.  
-- [x] Add buttons or links: “See My Technical Skills” / “View Projects”.  
-- [x] Maintain a clean, modern layout.  
-- [x] Add links to other pages.  
-- [x] Test readability and responsiveness across desktop, tablet, and mobile.  
+- [ ] Implement filter buttons within the search interface labelled “Family-friendly” and “Group-friendly.”
+- [ ] Include keyword parameters (e.g. “family”, “kids”, “group tours”) and relevant place types (e.g. park, lodging, tourist_attraction, amusement_park, museum) in the configuration of Google Places API requests.  
+- [ ] Display concise, easy-to-read information for each location.
+- [ ] Maintain the user’s current view and position when switching filters or selecting new categories through an integrated map feature.
+- [ ] Ensure that results in the list panel update dynamically without requiring a full map reload.
+- [ ] Validate keyword and place-type combinations to ensure realistic and relevant search results for family and group travellers.  
+- [ ] Maintain a clean, modern layout.  
+- [ ] Add links to other pages.  
+- [ ] Test readability and responsiveness across desktop, tablet, and mobile.  
 
 
-### Summary of About Me Page Coverage
+### Summary of Destination Search Page Coverage
 
-| Stakeholder         | Focus                                            | Link/CTA                           |
+| Stakeholder         | User Goal                                           | Key Action/Outcome                           |
 |---------------------|--------------------------------------------------|------------------------------------|
-| Developer (You)     | Communicate identity, values, and professionalism | Skills, Work Experience            |
-| Students/Parents    | Reassure about dedication and learning engagement       | Bookings                           |
-| Education Employers | Highlight teaching ethos and CPD | CV, Certifications, Experience     |
-| IT/Web Employers    | Showcase IT skills and pedagogy | Skills, Certifications            |
+| Roberto Pires – Website Developer (Site Owner)     | Through an interactive Google Map, results are displayed by applying selected filters (attractions, cafés, hotels, restaurants, shopping) when users search for destinations. | Navigating seamlessly across devices and exploring destinations is enabled for users through a responsive search interface that integrates the Google Geocoding, Maps JavaScript, and Places (New) APIs.            |
+| Travellers and Holiday Planners    | Search for destinations, assess whether a location meets their travel needs, and view key location details (e.g. attractions, hotels, restaurants, cafés, and shops).       | Users can effortlessly navigate to detailed pages or booking enquiries, access key information such as names and ratings, and input a city or region.                           |
+| Travel Enthusiasts and Explorers | Browsing by personal interests or types of experiences filters locations to help discover lesser-known and new destinations. | A side panel with clear links to other pages is provided to help uncover top locations by allowing users to engage with smooth map navigation (panning and zooming) and apply filters when interacting with an exploratory map interface.    |
+| Group Travellers and Families    | Filtering activities and relevant amenities for families or groups when identifying suitable destinations. | Responsive, dynamic map updates with clear, easy-to-read information are provided through “Family-friendly” and “Group-friendly” filter buttons that highlight suitable locations (e.g. parks, hotels, attractions).            |
 
 ---
 
