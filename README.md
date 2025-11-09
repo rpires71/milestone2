@@ -1002,11 +1002,11 @@ Multi-person travel support should be clearly visible on the interface. Family-f
 
 **Acceptance Criteria**
 
-- [x] The choice for the number of travellers in a dropdown list or numeric input must be included within the form.  
-- [x] Reassuring and inclusive language (e.g. “Plan your next family adventure”) is incorporated into the design.  
-- [x] Includes access to other pages.  
-- [x] Layout is responsive and suitable for all screen sizes.  
-- [x] Visual design is consistent with rest of the site.  
+- [ ] The choice for the number of travellers in a dropdown list or numeric input must be included within the form.  
+- [ ] Reassuring and inclusive language (e.g. “Plan your next family adventure”) is incorporated into the design.  
+- [ ] Includes access to other pages.  
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.  
 
 **Tasks**
 
@@ -1026,6 +1026,128 @@ Multi-person travel support should be clearly visible on the interface. Family-f
 | Group Travellers and Families    | Plan activities and suitable accommodation provided through trusted partners for family holidays and group travel.         | Smooth external navigation and a clear design provide reassurance to families and multiple travellers through supportive form functionality.  |
 
 ---
+
+## User Stories for Saved Trips / Favourites Page
+[⬆ Back to Table of contents](#table-of-contents)
+
+**(should-have)**
+
+### 1. Roberto Pires – Website Developer (Site Owner)
+
+**User Goal** 
+As the site owner, so that users can return to destinations or attractions later and continue planning their trips, I want users to have the ability to save them as favourites.
+
+**Description** 
+By enabling visitors to bookmark destinations or attractions of interest, user engagement is enhanced through this feature. The inclusion of client-side data persistence using local storage demonstrates practical JavaScript skills.  
+
+**Acceptance Criteria**
+
+- [ ] A visible “Save” or “♥” icon will be included on each destination card or marker.  
+- [ ] A separate “Saved Trips” or “Favourites” page will be displayed where saved items will appear.
+- [ ] Saved destinations can be removed by users.
+- [ ] Across desktop, laptop, tablet, and mobile devices, the layout will remain responsive.
+- [ ] Navigation links to other main pages will be visible.
+- [ ] Other internal pages are visible and accessible through the site’s navigational links.  
+- [ ] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [ ] Using JavaScript localStorage, “Save” and “Remove” button functionality will be implemented.
+- [ ] Saved items (title, image, location link) will be displayed on the created “Saved Trips” page.
+- [ ] All saved destinations will be removable through the inclusion of a “Clear All” button.
+- [ ] Alt text and descriptive icons will be used to ensure accessibility.
+- [ ] Add alt text and ARIA labels to ensure accessibility.
+- [ ] Add internal menu links to other pages.
+- [ ] Layout consistency and responsiveness testing will be conducted across multiple devices.
+
+### 2. Travellers and Holiday Planners
+
+**User Goal**  
+As a traveller, I am interested in revisiting my favourite places and comparing options later by saving destinations that capture my interest. 
+
+**Description**  
+While exploring the website, a feature will be available for travellers to save destinations that appeal to them. Managing multiple travel ideas efficiently is made possible without the need to repeat searches. Before proceeding to bookings or enquiries, informed decisions are supported by reviewing and comparing locations when users return to the “Saved Trips” page. Confirmation messages for saving or removing items make this functionality feel seamless and user-friendly.
+
+**Acceptance Criteria**
+
+- [ ] Removing and saving destinations can be performed effortlessly. 
+- [ ] While browsing, a saved list remains accessible.
+- [ ] Map or detailed views of the destination are linked from the saved items.
+- [ ] Mobile-friendly and intuitive design is maintained. 
+- [ ] Includes access to other pages and sections.
+- [ ] The layout and buttons are mobile-friendly, intuitive, and clearly presented.
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [ ] When saving or removing items, confirmation feedback is provided.
+- [ ] During browsing sessions, ensure that saved data is retained.
+- [ ] Add internal menu links to other pages.  
+
+### 3. Travel Enthusiasts and Explorers
+
+**User Goal**  
+As a travel enthusiast, I want to keep a record of my travel ideas and organise future trips from a curated personal wishlist of destinations. 
+
+**Description**  
+For those who enjoy keeping a record of places they wish to visit and discovering new destinations, this feature caters to more exploratory users. By managing and storing locations that inspire travellers, a personalised list takes the form of the “Wishlist”. Across all device types, easily removing, reordering, or modifying saved items are features available to users through accessible controls and visually appealing design, which in turn encourages engagement. 
+
+**Acceptance Criteria**
+
+- [ ] A card-based layout is displayed for the saved items.
+- [ ] Guides or external resources are accessible via a link within each saved location.
+- [ ] Saved items that are removed or reordered can be managed by users. 
+- [ ] Includes access to other pages.  
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.
+- [ ] Consistency across all device types is maintained, and motivational exploration is largely encouraged through the visual design. 
+
+**Tasks**
+
+- [ ] A “Wishlist” heading and corresponding icons are added.
+- [ ] “Reorder” and “Remove” functionality is implemented.
+- [ ] Layout consistency is tested across all devices. 
+- [ ] Add internal menu links to other pages.
+- [ ] Screen sizes, layout consistency and browser functionality are to be verified across devices. 
+- [ ] Test mobile/tablet/laptop/desktop responsiveness and accessibility.  
+
+### 4. Group Travellers and Families
+
+**User Goal**  
+As a family or group planner, to review saved destinations that are suitable for everyone later on together.
+
+**Description**  
+To meet the collective needs of family or group travellers, they should be able to collaboratively save and select destinations. For future bookings or discussions, suitable options gathered in one place are enabled through the “Saved Trips” feature. Printing for offline review or optionally allowing the sharing of recognisable “Family-Friendly” or “Group-Friendly” labels should be included. When navigating on desktops, laptops, tablets, and mobiles, the interface should remain simple, accessible, and clear. 
+
+**Acceptance Criteria**
+
+- [ ] When saving, “Family-Friendly” and “Group-Friendly” labels are preserved.
+- [ ] The saved list can be printed or shared (optional).
+- [ ] The page remains accessible and visually clean.  
+- [ ] Includes access to other pages.  
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [ ] Saved cards include “Family-Friendly” badges.
+- [ ] For an optional enhancement, “Print / Share” functionality is added.
+- [ ] For users with assistive technologies, accessibility testing should be carried out.  
+- [ ] For readability on desktops, laptops, tablets, and mobiles, layouts are tested.  
+- [ ] Test desktop/laptop/tablet/mobile responsiveness and accessibility.  
+
+### Summary of Stakeholder Goals on Saved Trips / Favourites Page
+
+| Stakeholder         | Goal                                                    | Key Feature/Action                               |
+|---------------------|----------------------------------------------------------|--------------------------------------------------|
+| Roberto Pires – Website Developer (Site Owner)     | By enabling users to save and manage destinations that appeal to them, JavaScript functionality is demonstrated and engagement is enhanced.      | Users can review and remove saved items on a responsive and dynamic “Saved Trips” page through an implemented “Save” or “♥” button connected to localStorage.                 |
+| Travellers and Holiday Planners    | Without the need to repeat searches, interesting destinations can be revisited, compared, and saved.| Links to booking pages or detailed destinations, browsing session data saved persistently, and confirmation feedback are included within destination cards featuring the “Save” button.  |
+| Travel Enthusiasts and Explorers | For future trips, favourite destinations are managed, and a personal wishlist of travel ideas is curated. | The ability to remove or reorder saved items, access links to guides, and view cards with imagery are presented in a visually appealing “Wishlist”. |
+| Group Travellers and Families    | In one easily accessible list, family or group needs are fulfilled by collecting and reviewing destinations together.         | For group viewing in a clean, tablet-friendly layout, print/share functionality and “Family-Friendly” or “Group-Friendly” labels are included within the saved list.  |
+
+---
+
 # References
 [⬆ Back to Table of contents](#table-of-contents)
 
