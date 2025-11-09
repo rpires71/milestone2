@@ -27,6 +27,7 @@
   - [User Stories for Destination Search Page](#user-stories-for-destination-search-page)
   - [User Stories for Trip Planning and External Booking Integration Page](#user-stories-for-trip-planning-and-external-booking-integration-page)
   - [User Stories for Saved Trips/Favourites Page](#user-stories-for-saved-tripsfavourites-page)
+  - [User Stories for Travel Guides and Articles Page](#user-stories-for-travel-guides-and-articles-page)
 - [References](#references)
  
 
@@ -1107,7 +1108,7 @@ For those who enjoy keeping a record of places they wish to visit and discoverin
 **Tasks**
 
 - [ ] A “Wishlist” heading and corresponding icons are added.
-- [ ] “Reorder” and “Remove” functionality is implemented.
+- [ ] “Reorder” and “Remove” functionalities are implemented.
 - [ ] Layout consistency is tested across all devices. 
 - [ ] Add internal menu links to other pages.
 - [ ] Screen sizes, layout consistency and browser functionality are to be verified across devices. 
@@ -1146,6 +1147,127 @@ To meet the collective needs of family or group travellers, they should be able 
 | Travellers and Holiday Planners    | Without the need to repeat searches, interesting destinations can be revisited, compared, and saved.| Links to booking pages or detailed destinations, browsing session data saved persistently, and confirmation feedback are included within destination cards featuring the “Save” button.  |
 | Travel Enthusiasts and Explorers | For future trips, favourite destinations are managed, and a personal wishlist of travel ideas is curated. | The ability to remove or reorder saved items, access links to guides, and view cards with imagery are presented in a visually appealing “Wishlist”. |
 | Group Travellers and Families    | In one easily accessible list, family or group needs are fulfilled by collecting and reviewing destinations together.         | For group viewing in a clean, tablet-friendly layout, print/share functionality and “Family-Friendly” or “Group-Friendly” labels are included within the saved list.  |
+
+---
+
+## User Stories for Travel Guides and Articles Page
+[⬆ Back to Table of contents](#table-of-contents)
+
+**(should-have)**
+
+### 1. Roberto Pires – Website Developer (Site Owner)
+
+**User Goal** 
+As the site owner, I want users to feel inspired to explore destinations and engage with valuable content such as themed articles and concise travel guides that will be published.
+
+**Description** 
+Internal linking between guides and destinations, layout management, and content organisation will be demonstrated in this section. By including “Read More” links within a grid format, 3–5 travel guides should be displayed.
+
+**Acceptance Criteria**
+
+- [ ] Summary, title, and image are displayed like cards for these guides.
+- [ ] A full article page is linked from each card.
+- [ ] Related destination linked internally (at least one) is contained within each article.
+- [ ] Across desktop, laptop, tablet, and mobile devices, the layout will remain responsive.
+- [ ] Navigation links to other main pages will be visible.
+- [ ] Other internal pages are visible and accessible through the site’s navigational links.  
+- [ ] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [ ] Short guides are written (e.g. “Top 5 Beach Escapes”, “Cultural City Breaks”).
+- [ ] Responsive grids within the grid layout are created.
+- [ ] Related destination searches are linked to relevant keywords.
+- [ ] Alt text and descriptive icons will be used to ensure accessibility.
+- [ ] Add alt text and ARIA labels to ensure accessibility.
+- [ ] Add internal menu links to other pages.
+- [ ] Layout consistency, readability and responsiveness testing will be conducted across multiple devices.
+
+### 2. Travellers and Holiday Planners
+
+**User Goal**  
+As a traveller, when selecting destinations, I can make informed choices by reading recommendations and concise travel guides.
+
+**Description**  
+When planning a trip, to support travellers in their decision-making, reliable and practical information is provided in this section. Search pages and relevant booking links are included, while local attractions and essential advice are highlighted and summarised within the travel guides. Without excessive detail, for those users who prefer straightforward recommendations, accessible language, friendly tone, and clearly written articles are provided. Making bookings or viewing destinations can be directly accessed, and quick reading and easy navigation are ensured through the layout.   
+
+**Acceptance Criteria**
+
+- [ ] Travel tips are current and useful which are included within the guides. 
+- [ ] Booking pages or related searches are the result of navigating through the “Read More” links.
+- [ ] Non-technical and straightforward language content is written.
+- [ ] Mobile-friendly and intuitive design is maintained. 
+- [ ] Includes access to other pages and sections.
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [ ] Descriptions are written clearly and briefly.
+- [ ] Booking pages or main search have links included.
+- [ ] Usability and precision of links are tested. 
+- [ ] Add internal menu links to other pages.  
+
+### 3. Travel Enthusiasts and Explorers
+
+**User Goal**  
+As a travel enthusiast, I want to explore distinctive travel experiences by accessing appealing visuals and motivating articles.
+
+**Description**  
+Beyond typical tourist destinations that are sought for inspiration, and for those who are passionate about travel, is what this feature is designed to achieve. Relaxation, Culture, and Adventure themed categories, captivating introductions, and engaging visuals are included within the articles. Visually rich imagery, unique experiences, and lesser-known destinations are presented through content that promotes exploration.   
+
+**Acceptance Criteria**
+
+- [ ] Thematic categories (Adventure, Culture, Relaxation) and hero images are included.
+- [ ] Short introductions and striking visuals are featured within the guides.
+- [ ] Lightweight and responsive design is characteristic of the page. 
+- [ ] Includes access to other pages.  
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.
+
+**Tasks**
+
+- [ ] Category filter buttons are implemented.
+- [ ] Responsiveness and performance are achieved through optimised imagery. 
+- [ ] Layout consistency is tested across all devices. 
+- [ ] Add internal menu links to other pages.
+- [ ] Screen sizes, layout consistency and browser functionality are to be verified across devices. 
+- [ ] Test mobile/tablet/laptop/desktop responsiveness and accessibility.  
+
+### 4. Group Travellers and Families
+
+**User Goal**  
+As a family traveller, I can identify appropriate options by reading about family-friendly destinations featured within the focused travel guides.
+
+**Description**  
+Appropriate destinations and practical guidance required by families and group travellers are provided within this section of the website. To meet various group needs, family-friendly activities, accommodations, and attractions are emphasised within these guides. With relatable examples, an inclusive tone, and a clear structure, the written content is made reassuring. Booking pages or relevant searches are linked with clear and visible calls to action, remaining approachable through this design. For easy trip planning, ready-made suggestions are provided to further assist this audience when using the “Best Family Destinations” guide or a similar feature.  
+
+**Acceptance Criteria**
+
+- [ ] Family or group travel is featured in at least one guide or article.
+- [ ] Relevant booking pages or searches are linked through CTAs.
+- [ ] Easy to read and approachable presentation is maintained in the layout. 
+- [ ] The page remains accessible and visually clean.  
+- [ ] Includes access to other pages.  
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [ ] Guide created about “Top Family Destinations”.
+- [ ] “View on Map” or “Book Now” buttons included. 
+- [ ] For users with assistive technologies, accessibility testing should be carried out.  
+- [ ] For readability on desktops, laptops, tablets, and mobiles, layouts are tested.  
+- [ ] Test desktop/laptop/tablet/mobile responsiveness and accessibility.  
+
+### Summary of Stakeholder Goals on Travel Guides & Articles Page
+
+| Stakeholder         | Goal                                                    | Key Feature/Action                               |
+|---------------------|----------------------------------------------------------|--------------------------------------------------|
+| Roberto Pires – Website Developer (Site Owner)     | Layout capabilities and the site’s content management are demonstrated and enhanced user engagement through the publication of short travel guides and themed articles.      | Related destinations and full content are accessed through “Read More” links, summaries, and images within cards that display guides from a developed responsive articles page.                 |
+| Travellers and Holiday Planners    | Planning trips and selecting destinations are supported by reading concise and informative travel guides.  | For quick action, relevant booking pages or destination searches are accessed through links that are provided within well-structured and accessible content.  |
+| Travel Enthusiasts and Explorers | Unique and new destinations are presented within themed travel content that is visually inspiring to explore.  | Engagement and discovery are supported through the inclusion of category filters (Adventure, Culture, Relaxation), hero banners, and striking images.  |
+| Group Travellers and Families    | Group-oriented and family-friendly destinations are the primary recommendations featured in the articles.         |  Booking features or relevant searches are directed through visible “View on the Map” or “Book Now” CTAs, which form part of the inclusive and clearly presented guides. |
 
 ---
 
