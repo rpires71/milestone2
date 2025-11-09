@@ -1028,7 +1028,7 @@ Multi-person travel support should be clearly visible on the interface. Family-f
 
 ---
 
-## User Stories for Saved Trips / Favourites Page
+## User Stories for Saved Trips/Favourites Page
 [⬆ Back to Table of contents](#table-of-contents)
 
 **(should-have)**
