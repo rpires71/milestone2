@@ -992,41 +992,38 @@ Exploring packages and enjoying the comparison of options by independent and inq
 - [ ] Screen sizes and browser functionality are to be verified. 
 - [ ] Test mobile/tablet/laptop/desktop responsiveness and accessibility.  
 
-### 4. IT Support / Web Employers
+### 4. Group Travellers and Families
 
 **User Goal**  
-
-As an IT employer or recruiter, they want to identify any relevant IT support or web development experience so that they can consider me for technical or hybrid roles.
+As a family or group traveller, I want to easily organise suitable group activities, flights, and accommodation for everyone through trusted booking platforms accessed using our entered travel details (city, dates, number of travellers).
 
 **Description**  
-
-This page should briefly showcase my experience in IT systems, technical troubleshooting, and ongoing development in web technologies. It should connect transferable teaching skills to IT-related competencies.
+Multi-person travel support should be clearly visible on the interface. Family-friendly options linked to reputable partners should be available, and the system should accommodate larger groups so that group travellers feel confident.
 
 **Acceptance Criteria**
 
-- [x] Lists any IT support, admin, or technical roles.  
-- [x] References key certifications (A+, ITF+, CCNA) in context.  
-- [x] Shows current or recent web dev training or projects.  
+- [x] The choice for the number of travellers in a dropdown list or numeric input must be included within the form.  
+- [x] Reassuring and inclusive language (e.g. “Plan your next family adventure”) is incorporated into the design.  
 - [x] Includes access to other pages.  
 - [x] Layout is responsive and suitable for all screen sizes.  
 - [x] Visual design is consistent with rest of the site.  
 
 **Tasks**
 
-- [x] Identify and write up any IT-related responsibilities from previous roles (e.g. managing school systems, supporting tech integration).  
-- [x] Include sentence noting current Level 5 Full Stack Development training.  
-- [x] Add internal menu links to other pages e.g. "View My Technical Skills".  
-- [x] Use a clear visual separation between teaching and technical roles.  
-- [x] Test mobile/tablet responsiveness and accessibility.  
+- [ ] Data privacy and partner reliability descriptive subtext should be included. 
+- [ ] For mobile users, easy-to-tap buttons should be implemented. 
+- [ ] For users with assistive technologies, accessibility testing should be carried out.  
+- [ ] Across all devices (desktop, laptop, tablet, and mobile), redirection functionality should be verified. 
+- [ ] Test mobile/tablet responsiveness and accessibility.  
 
 ### Summary of Stakeholder Goals on Work Experience Page
 
 | Stakeholder         | Goal                                                    | Key Feature/Action                               |
 |---------------------|----------------------------------------------------------|--------------------------------------------------|
-| Developer (Myself)     | Showcase structured, responsive experience history      | Grouped layout, clear descriptions               |
-| Students/Parents    | Understand my teaching experience and subject coverage| Highlight KS3–A-level support, link to Bookings  |
-| Education Employers | Assess my teaching background, subject areas, and institutions | Bullet points, chronological layout, link to CV |
-| IT/Web Employers    | Identify relevant IT support and technical roles         | Mention certifications, link to Skills  |
+| Roberto Pires – Website Developer (Site Owner)     | To connect seamlessly with trusted external partners, input of trip details (destination, dates, number of travellers) is enabled for users.      | Providing a seamless planning experience and demonstrating technical proficiency through the use of static redirects integrated with booking APIs.                |
+| Travellers and Holiday Planners    | Quickly, from a single form, the key elements of a trip (accommodation, flights, packages, activities) are planned and booked.| Enhancing user experience and minimising search time by redirecting users to appropriate external partners when they input their details.  |
+| Travel Enthusiasts and Explorers | Explore adaptable travel options across platforms and compare alternatives. | Experience searches, rapid switching between flights and hotels, and exploration encouraged through the interface. |
+| Group Travellers and Families    | Plan activities and suitable accommodation provided through trusted partners for family holidays and group travel.         | Smooth external navigation and a clear design provide reassurance to families and multiple travellers through supportive form functionality.  |
 
 ---
 # References
