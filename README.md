@@ -25,7 +25,7 @@
   - [Holiday Destination Finder Wireframes](#holiday-destination-finder-wireframes)
   - [User Stories for Homepage/About Us Page](#user-stories-for-homepageabout-us)
   - [User Stories for Destination Search Page](#user-stories-for-destination-search-page)
-  - [User Stories for Book Your Holiday Page](#user-stories-for-book-your-holiday-page)
+  - [User Stories for Trip Planning and External Booking Integration Page](#user-stories-for-trip-planning and-external-booking-integration-page)
 - [References](#references)
  
 
@@ -899,7 +899,7 @@ This page should display accommodation types suitable for groups, and relevant a
 
 ---
 
-## User Stories for Book Your Holiday Page
+## User Stories for Trip Planning and External Booking Integration Page
 [⬆ Back to Table of contents](#table-of-contents)
 
 **(must-have)**
@@ -907,84 +907,90 @@ This page should display accommodation types suitable for groups, and relevant a
 ### 1. Roberto Pires – Website Developer (Site Owner)
 
 **User Goal** 
-
-As the developer, I want to present my work history in a structured, engaging format so that all users can understand the breadth of my teaching and technical experience.
+As the site owner, I want users to be accurately directed to trusted partner platforms (Booking.com, Google Flights, Expedia, and GetYourGuide) for bookings after entering the number of travellers, travel dates, and selected city.
 
 **Description** 
-
-The page should summarise over 20 years of professional experience across teaching, tutoring, IT support, and web development. Information should be easy to navigate, skimmable, and grouped where appropriate.
+This page will enable users to enter group size, travel dates, and destination details, serving as the gateway for trip planning. The type of booking users wish to make (accommodation, flights, full packages, or activities) can be selected upon submission. Based on the user’s search query, which is transmitted through predefined URLs or parameters, each button will open the corresponding external website. Between the main website and external travel providers, a seamless user flow and effective integration is demonstrated.   
 
 **Acceptance Criteria**
 
-- [x] Shows job roles  grouped by sector.  
-- [x] Each role includes institution name, job title, and brief description.  
-- [x] Includes responsibilities or contributions.  
-- [x] Layout is responsive and suitable for all screen sizes.  
-- [x] Visual design is consistent with rest of the site.  
+- [ ] Destination (city), check-in, and check-out dates are included within the form.  
+- [ ] A dropdown list or numeric input is provided in the form to specify the number of travellers.
+- [ ] Action buttons for Search Hotels, Search Flights, Complete Packages, and Book Activities are available.
+- [ ] Each button redirects correctly to the relevant external site (Booking.com, Google Flights, Expedia, GetYourGuide).
+- [ ] Destination, travel dates, and number of travellers are validated before proceeding.
+- [ ] The layout remains responsive and fully functional across desktop, laptop, tablet, and mobile devices.
+- [ ] Other internal pages are visible and accessible through the site’s navigational links.  
+- [ ] Visual design is consistent with rest of the site.  
 
 **Tasks**
 
-- [x] Extract roles from CV and organise (e.g. Education, IT Support).  
-- [x] Write descriptions and achievements.  
-- [x] Choose appropriate layout (e.g. tile-based).  
-- [x] Add internal menu links to other pages e.g. Certifications, Projects, or Skills.  
-- [x] Test mobile/tablet responsiveness and accessibility. 
+- [ ] Design and develop a responsive form including destination, dates, and number of travellers.
+- [ ] Configure redirected URLs for each platform using the appropriate parameters.
+- [ ] Implement clear error messages and input validation.
+- [ ] Choose appropriate layout.
+- [ ] Add alt text and ARIA labels to ensure accessibility.
+- [ ] Add internal menu links to other pages.
+- [ ] Style the form and buttons consistently in accordance with the site’s design system.
+- [ ] Test responsiveness and redirection functionality across multiple devices. 
 
-### 2. Potential Tutees / Parents
+### 2. Travellers and Holiday Planners
 
 **User Goal**  
-
-As a student or parent, they want to see my teaching and tutoring background so that they feel confident in my ability to support learning in Computer Science and Mathematics.
+As a traveller planning a holiday, to conveniently organise my trip with the site’s trusted partners, I should enter my travel dates and destination, and select from the available booking options (accommodation, flights, packages, or activities).
 
 **Description**  
-
-This page should show that I have taught in secondary schools and colleges, and have experience with learners of all abilities. It should reassure families that I am qualified, experienced, and trustworthy.
+For essential bookings, a single interface is provided, allowing the page to simplify the travel planning process. By accessing reputable travel providers to finalise their arrangements, travellers can input their group size, travel dates, and chosen city. The tone should convey trustworthiness, support, and simplicity.
 
 **Acceptance Criteria**
 
-- [x] Clearly lists teaching positions and subjects taught.  
-- [x] Highlights experience with KS3, GCSE, and A-level.  
-- [x] Uses clear, friendly language to explain roles.  
-- [x] Includes a call-to-action to view Bookings page and access to other pages.  
-- [x] Layout is responsive and suitable for all screen sizes.  
-- [x] Visual design is consistent with rest of the site.  
+- [ ] The user can type in a destination or city using the form.  
+- [ ] In addition to manual entry, date pickers are provided for easy selection of check-in and check-out dates.
+- [ ] A dropdown list allows users to select the number of travellers.
+- [ ] Four clear call-to-action buttons are available: Hotels, Flights, Packages, and Activities.
+- [ ] Includes access to other pages and sections.
+- [ ] Action buttons redirect users to the corresponding external partner websites.
+- [ ] Validation messages are displayed when required fields are incomplete.
+- [ ] The layout and buttons are mobile-friendly, intuitive, and clearly presented.
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.  
 
 **Tasks**
 
-- [x] Highlight relevant tutoring experience or private support work.  
-- [x] Mention curriculum types supported (OCR, AQA, BTEC).  
-- [x] Use bold headings or icons.  
-- [x] Add button or link: “Bookings”.  
-- [x] Add internal menu links to other pages.  
-- [x] Test mobile/tablet responsiveness and accessibility.
+- [ ] Placeholder examples (e.g. “Lisbon, Portugal”) should be created inside the form fields.
+- [ ] All browser compatibility with the integrated date pickers should be ensured.
+- [ ] External sites should be accessed through the appropriate search URLs from the link action buttons.
+- [ ] From desktop, laptop, tablet, and mobile devices, navigation and redirection should be tested. 
+- [ ] Add internal menu links to other pages.  
 
-### 3. Education Employers (e.g. Headteachers, Recruitment Officers)
+### 3. Travel Enthusiasts and Explorers
 
 **User Goal**  
-
-As an education employer, they want to verify my experience in teaching various key stages and subjects so that they can assess my suitability for current or future vacancies.
+As a travel enthusiast, based on my interests, I want to personalise my travel experience through various booking services, compare travel options, and explore destinations using a single straightforward form.
 
 **Description**  
-
-The Work Experience page should provide evidence of subject knowledge, experience in different institutions, and responsibilities undertaken in each role. It should show progression, adaptability, and professionalism.
+Exploring packages and enjoying the comparison of options by independent and inquisitive travellers are supported by this page. Without immediately committing to a single provider, this page enables a more flexible travel experience. Quick to use, practical, and visually inspiring is how this page should feel.  
 
 **Acceptance Criteria**
 
-- [x] Clearly lists roles, responsibilities, and curriculum areas.  
-- [x] Identifies subject specialisms (e.g. Computer Science, Creative iMedia, Maths).  
-- [x] Mentions environments (e.g. FE College, Secondary School, International).  
-- [x] Option to view/download full CV is available.  
-- [x] Includes access to other pages.  
-- [x] Layout is responsive and suitable for all screen sizes.  
-- [x] Visual design is consistent with rest of the site.  
+- [ ] The form supports flexible input fields (destination, optional dates, group size).
+- [ ] By clicking the different booking buttons, users are able to explore multiple options.
+- [ ] For convenience, new tabs are opened from the corresponding external links linked to the action buttons.
+- [ ] Each platform’s services are clearly communicated to the user through indicative icons and brief instructions.
+- [ ] Includes access to other pages.  
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.
+- [ ] Consistency across all device types is maintained, and motivational exploration is largely encouraged through the visual design. 
 
 **Tasks**
 
-- [x] Present information in tiles to show scope and impact.  
-- [x] Write in a concise, professional tone.  
-- [x] Add a link to downloadable CV or Certifications page.  
-- [x] Add internal menu links to other pages.  
-- [x] Test mobile/tablet responsiveness and accessibility.  
+- [ ] Each button’s function should include short text or icons to explain its purpose. 
+- [ ] New tab (target="_blank") opening through external links should be ensured. 
+- [ ] Short motivational heading (“Plan your adventure your way”) should be added. 
+- [ ] Add internal menu links to other pages.
+- [ ] For visual variety, icons or distinct colours should be used to style buttons.
+- [ ] Screen sizes and browser functionality are to be verified. 
+- [ ] Test mobile/tablet/laptop/desktop responsiveness and accessibility.  
 
 ### 4. IT Support / Web Employers
 
