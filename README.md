@@ -26,7 +26,7 @@
   - [User Stories for Homepage/About Us Page](#user-stories-for-homepageabout-us)
   - [User Stories for Destination Search Page](#user-stories-for-destination-search-page)
   - [User Stories for Trip Planning and External Booking Integration Page](#user-stories-for-trip-planning-and-external-booking-integration-page)
-  - [User Stories for Saved Trips / Favourites Page](#user-stories-for-saved-tripsfavourites-page)
+  - [User Stories for Saved Trips/Favourites Page](#user-stories-for-saved-tripsfavourites-page)
 - [References](#references)
  
 
