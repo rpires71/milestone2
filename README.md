@@ -1388,8 +1388,7 @@ Tailored offers suited to group holidays and relevant updates are provided to gr
 | Roberto Pires – Website Developer (Site Owner)     | Third-party services such as Mailchimp or Formspree integration, validation, and form handling are demonstrated, and user email subscriptions are collected.      |  Consistent design and full accessibility are ensured through the inclusion of a confirmation message, consent checkbox, and email input field within a developed responsive newsletter form.                |
 | Travellers and Holiday Planners    | Future holiday planning is supported through offers, travel deals, and destination updates included in the subscription.   | Upon sign-up, an instant confirmation message and concise language are used on the page, providing a clearly visible newsletter form.   |
 | Travel Enthusiasts and Explorers | Inspired new travel experiences from curated and interest-based newsletters are delivered.  | Match the site’s aesthetic through the use of visuals and typography.  |
-| Group Travellers and Families    | Safety and data privacy reassurance are included within the received group holiday offers and family-focused travel ideas.         |    
-Ensure privacy information and a clear unsubscribe option are displayed, and use a reassuring, warm tone while including references to family and group travel within the form.   |
+| Group Travellers and Families    | Safety and data privacy reassurance are included within the received group holiday offers and family-focused travel ideas.         | Ensure privacy information and a clear unsubscribe option are displayed, and use a reassuring, warm tone while including references to family and group travel within the form.|
 
 ---
 
