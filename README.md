@@ -29,7 +29,7 @@
   - [User Stories for Saved Trips/Favourites Page](#user-stories-for-saved-tripsfavourites-page)
   - [User Stories for Travel Guides and Articles Page](#user-stories-for-travel-guides-and-articles-page)
   - [User Stories for Newsletter Page](#user-stories-for-newsletter-page)
-  - [Colour Palette Justification for Holiday Destination Finder Website](#colour-palette-justification-for-portfolio-website)
+  - [Colour Palette Justification for Holiday Destination Finder Website](#colour-palette-justification-for-holiday-destination-finder-website)
 - [References](#references)
  
 
