@@ -1359,37 +1359,37 @@ New ideas for their next adventure are provided for travellers who seek ongoing 
 ### 4. Group Travellers and Families
 
 **User Goal**  
-
+As a family or group traveller, group offers and family-friendly ideas are what should be included in the newsletters that I wish to receive. 
 
 **Description**  
-
+Tailored offers suited to group holidays and relevant updates are provided to group travellers and families through this supported feature. Privacy and safe data handling are assured, and group travellers and families receive content clearly tailored to them through the sign-up form and email. Group organisers and parents subscribe with confidence through content that is encouraging, trustworthy, and inclusive. Both contextually relevant and visible placement is ensured for group-friendly destinations or travel guides by positioning the newsletter form near family-related content.   
 
 **Acceptance Criteria**
 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ]  
+- [ ] Family and group travel are referenced within the sign-up form.
+- [ ] A reassuring tone regarding safe data usage is maintained.
+- [ ] Information on how to unsubscribe is presented clearly.
 - [ ] Includes access to other pages.  
 - [ ] Layout is responsive and suitable for all screen sizes.  
 - [ ] Visual design is consistent with rest of the site.  
 
 **Tasks**
 
-- [ ] 
-- [ ] 
+- [ ] Parent-friendly copy is written.
+- [ ] The newsletter form is positioned near family travel content.
 - [ ] For users with assistive technologies, accessibility testing should be carried out.  
 - [ ] For readability on desktops, laptops, tablets, and mobiles, layouts are tested.  
 - [ ] Test desktop/laptop/tablet/mobile responsiveness and accessibility.  
 
-### Summary of Stakeholder Goals on Travel Guides & Articles Page
+### Summary of Stakeholder Goals on Newsletter Sign-Up Page
 
 | Stakeholder         | Goal                                                    | Key Feature/Action                               |
 |---------------------|----------------------------------------------------------|--------------------------------------------------|
-| Roberto Pires – Website Developer (Site Owner)     |       |                  |
-| Travellers and Holiday Planners    |   |   |
-| Travel Enthusiasts and Explorers |   |   |
-| Group Travellers and Families    |          |   |
+| Roberto Pires – Website Developer (Site Owner)     | Third-party services such as Mailchimp or Formspree integration, validation, and form handling are demonstrated, and user email subscriptions are collected.      |  Consistent design and full accessibility are ensured through the inclusion of a confirmation message, consent checkbox, and email input field within a developed responsive newsletter form.                |
+| Travellers and Holiday Planners    | Future holiday planning is supported through offers, travel deals, and destination updates included in the subscription.   | Upon sign-up, an instant confirmation message and concise language are used on the page, providing a clearly visible newsletter form.   |
+| Travel Enthusiasts and Explorers | Inspired new travel experiences from curated and interest-based newsletters are delivered.  | Match the site’s aesthetic through the use of visuals and typography.  |
+| Group Travellers and Families    | Safety and data privacy reassurance are included within the received group holiday offers and family-focused travel ideas.         |    
+Ensure privacy information and a clear unsubscribe option are displayed, and use a reassuring, warm tone while including references to family and group travel within the form.   |
 
 ---
 
