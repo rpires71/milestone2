@@ -29,6 +29,7 @@
   - [User Stories for Saved Trips/Favourites Page](#user-stories-for-saved-tripsfavourites-page)
   - [User Stories for Travel Guides and Articles Page](#user-stories-for-travel-guides-and-articles-page)
   - [User Stories for Newsletter Page](#user-stories-for-newsletter-page)
+  - [Colour Palette Justification for Holiday Destionation Finder Website](#colour-palette-justification-for-portfolio-website)
 - [References](#references)
  
 
@@ -1392,6 +1393,87 @@ Tailored offers suited to group holidays and relevant updates are provided to gr
 
 ---
 
+## Colour Palette Justification for Holiday Destination Finder Website
+[⬆ Back to Table of contents](#table-of-contents)
+
+### Chosen Colour Palette
+
+| Colour Name              | Hex Code   | Usage                                 |
+|--------------------------|------------|----------------------------------------|
+| Ocean Blue              | `#0077B6`  | Primary brand colour; navigation bar, hero section, and key highlights               |
+| Sky Blue               | `#90E0EF`  | Secondary tone; background gradients, hover states, and section dividers    |
+| Coral Orange     | `#FF6B35`  | Call-to-action buttons, icons, and key interaction points           |
+| Sand Beige | `#FAF3E0`  | Main background colour providing a neutral and warm base                   |
+| Charcoal Grey | `#2F3E46`  | Text for headings and paragraphs; footer background  |
+| White Smoke               | `#F5F5F5`  | Card backgrounds and form fields to provide contrast and hierarchy                 |
+
+### Overview and Rationale
+
+To reflect both the emotional experience of planning a trip and contemporary digital design, relaxation, exploration, and travel are the sensations evoked through the colour palette for the Holiday Destination Finder website (Agrawal, 2025; Baradell, 2023; DesigningIt, 2024). With interactive features such as “Search” or “Book,” user engagement is encouraged, while the coral accent adds energy (Agrawal, 2025), and blues and neutrals convey openness, clarity, and trust (Baradell, 2023; DesigningIt, 2024).
+
+### Justification
+
+**Travel-Inspired Blue Palette for Trust and Calmness**
+
+For a travel planning platform, essential qualities such as reliability, calmness, and trust are associated with the universally recognised colour blue (Baradell, 2023; DesigningIt, 2024). A sense of adventure when browsing destinations and feelings of clarity help users experience these emotions – the sky and the sea – reflected through the colour combination of Ocean Blue (#0077B6) and Sky Blue (#90E0EF).
+
+**Warm Accents to Encourage Interaction**
+
+For calls to action such as “Search Hotels” or “Book Activities,” attention is drawn through the use of Coral Orange (#FF6B35), which serves as a contrasting accent (Agrawal, 2025; DesigningIt, 2024). Without overwhelming the design, this energetic yet balanced hue stimulates curiosity and introduces vitality and warmth to the interface (Agrawal, 2025).
+
+**Neutral Foundation for Readability and Accessibility**
+
+Buttons, maps, and images are allowed to stand out clearly through the use of a calm, minimalist background featuring Sand Beige (#FAF3E0) and White Smoke (#F5F5F5) (DesigningIt, 2024). While maintaining a clean and professional aesthetic, this colour contrast ensures visual comfort across all devices (Baradell, 2023; DesigningIt, 2024).
+
+**Professionalism and Clarity through Charcoal Grey Typography**
+
+For all users, including those with visual impairments, legibility is enhanced through supported long-form reading that uses accessible text colours such as Charcoal Grey (#2F3E46), providing strong contrast (W3C, 2023). Warmer coral accents and cooler blues complement one another, conveying a sense of professionalism (Agrawal, 2025; Baradell, 2023).
+
+**Consistent Branding and Hierarchical Balance**
+
+A unified visual hierarchy is maintained through interactive components, forms, icons, and navigation, ensured by the defined six-colour scheme (DesigningIt, 2024). Accessibility and visual stability are achieved through the use of darker and neutral tones, while brand identity is reinforced within interactive elements and navigation by the strategic use of Ocean Blue and Coral Orange (Agrawal, 2025; Baradell, 2023). 
+
+### Applied Colour Theory Principles
+
+**1. Analogous Harmony**
+
+Sky-themed or coastal aesthetics, which are characteristic of travel design, are reflected and naturally harmonised through the palette combination of neutral beige and analogous shades of blue (Baradell, 2023; DesigningIt, 2024).
+
+**2. Complementary Contrasty**
+
+Guiding user attention effectively towards interactive elements and enhancing visual appeal, the dominant blues are complemented by the contrasting Coral Orange (Baradell, 2023; Agrawal, 2025). 
+
+**3. Psychological Impact**
+
+Coral Orange conveys excitement, optimism, and a sense of adventure, while blue supports trust, professionalism, and calm within key interface areas (Agrawal, 2025; Baradell, 2023). Neutral tones such as Beige and White Smoke help maintain balance and visual clarity in line with modern web colour trends (DesigningIt, 2024).
+
+**4. Accessibility and Readability**
+
+For headings and body text, WCAG contrast guidelines are satisfied with this colour palette. Lighting conditions and screen resolution ensure that key information remains legible, with light backgrounds supporting dark typography, and vice versa (W3C, 2023; DesigningIt, 2024).
+
+**5. Visual Consistency and Brand Recognition**
+
+To maintain brand cohesion across cards, filters, forms, and navigation bars, all page elements follow the same defined colour palette. The site’s responsive design framework (Bootstrap 5 combined with custom CSS) ensures a consistent tone that creates a professional and memorable user experience (Bootstrap, 2024; DesigningIt, 2024).
+
+### Strategic Use of Colour
+
+- **Emphasis**: Calls to action such as “Book” or “Explore” and interactive elements utilise Coral Orange (#FF6B35) (Agrawal, 2025; DesigningIt, 2024).
+- **Hierarchy**: For body text, Charcoal Grey (#2F3E46) is applied; for navigation and main headings, Ocean Blue (#0077B6) is used (99designs, 2024; DesigningIt, 2024). 
+- **Consistency**: To strengthen visual identity, the established colour palette is consistently applied across all cards, menus, and icons (DesigningIt, 2024; Interaction Design Foundation, 2023).
+- **Balance**: Maintaining a sense of openness, fluidity, and lightness across sections is achieved through the use of Sky Blue (#90E0EF) (99designs, 2024; DesigningIt, 2024).
+- **Contrast**: Provided a strong contrast against darker typography by using the colours Sand Beige (#FAF3E0) and White Smoke (#F5F5F5) (W3C, 2023; DesigningIt, 2024).
+
+
+### Summary
+
+To appear engaging, trustworthy, and professional, an interface has been created that combines travel-oriented emotional design with modern usability principles through the selected colour palette (Interaction Design Foundation, 2023; DesigningIt, 2024). 
+
+Aligned with its brand purpose, a sense of adventure, accessibility, and visual harmony is achieved in the Holiday Destination Finder website by combining calm, balanced neutral tones and oceanic blues with energising coral accents (Agrawal, 2025; 99designs, 2024). 
+
+By planning and booking their next journey with confidence, users are encouraged to explore, and a fully responsive, aesthetically balanced, and inclusive experience is ensured through the site’s considered use of colour (Interaction Design Foundation, 2023; DesigningIt, 2024). 
+
+---
+
 # References
 [⬆ Back to Table of contents](#table-of-contents)
 
@@ -1402,23 +1484,23 @@ Tailored offers suited to group holidays and relevant updates are provided to gr
   Available at: [https://developers.google.com/maps/documentation/javascript](https://developers.google.com/maps/documentation/javascript)
   (Accessed: 29 October 2025).
 
-- **Google (2025a)** *Maps JavaScript API*, Google Developers.
+- **Google (2025a)** *Maps JavaScript API, Google Developers.*
   Available at: https://developers.google.com/maps/documentation/javascript
   (Accessed: 1 November 2025).
 
-- **Google (2025b)** *Geocoding API*, Google Developers.
+- **Google (2025b)** *Geocoding API, Google Developers.*
   Available at: https://developers.google.com/maps/documentation/geocoding
   (Accessed: 1 November 2025).
 
-- **Google (2025c)** *Places API (New)*, Google Developers.
+- **Google (2025c)** *Places API (New), Google Developers.*
   Available at: https://developers.google.com/maps/documentation/places/web-service/overview
   (Accessed: 1 November 2025).
 
-- **Google (2025d)** *Google Flights*.
+- **Google (2025d)** *Google Flights.*
   Available at: https://www.google.com/travel/flights
   (Accessed: 1 November 2025).
 
-- **Google (2025e)** *Advanced Markers*, Google Developers.
+- **Google (2025e)** *Advanced Markers, Google Developers.*
   Available at: https://developers.google.com/maps/documentation/javascript/advanced-markers/overview
   (Accessed: 1 November 2025).
 
@@ -1458,6 +1540,14 @@ Tailored offers suited to group holidays and relevant updates are provided to gr
   Available at: https://www.w3.org/
   (Accessed: 31 October 2025).
 
+- **W3C. (2023)** *Web Content Accessibility Guidelines (WCAG) 2.2. World Wide Web Consortium (W3C).*
+  Available at: https://www.w3.org/TR/WCAG22/
+ (Accessed: 10 November 2025).
+
+- **W3C. (2023)** *Web Content Accessibility Guidelines (WCAG) 2.2 – Colour Contrast Requirements.*
+  Available at: https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html
+ (Accessed: 10 November 2025).
+
 - **Booking.com. (2024)** *Accommodation and Travel Services Platform.*
   Available at: [https://www.booking.com/](https://www.booking.com/)
   (Accessed: 29 October 2025).
@@ -1489,6 +1579,18 @@ Tailored offers suited to group holidays and relevant updates are provided to gr
 - **Interaction Design Foundation (IDF). (2023)** *User Experience (UX) Design Fundamentals.*
   Available at: https://www.interaction-design.org/
   (Accessed: 29 October 2025).
+
+- **Interaction Design Foundation (IxDF). (2023)** *Visual Design and Consistency in User Interfaces.*
+  Available at: https://www.interaction-design.org/literature/topics/visual-design
+  (Accessed: 10 November 2025).
+
+- **Interaction Design Foundation (IxDF). (2023)** *Emotional Design: How Aesthetics Influence User Experience.*
+  Available at: https://www.interaction-design.org/literature/topics/emotional-design
+  (Accessed: 10 November 2025).
+
+- **Interaction Design Foundation (IxDF). (2023)** *Colour and Accessibility in UX Design.*
+  Available at: https://www.interaction-design.org/literature/topics/color-in-ux-design
+  (Accessed: 10 November 2025).
 
 - **Meta for Developers. (2024)** *Facebook Sharing and Graph API Documentation.*
   Available at: [https://developers.facebook.com](https://developers.facebook.com)
@@ -1529,3 +1631,29 @@ Tailored offers suited to group holidays and relevant updates are provided to gr
 - **Microsoft. (2024)** *Visual Studio Code Documentation.*
   Available at: https://code.visualstudio.com/docs
   (Accessed: 03 November 2025).
+
+- **Baradell, S.. (2023)** *True-Blue Trust: Why the Colors Your Brand Uses Matter. Idea Grove.*
+  Available at: https://www.trustsignals.com/blog/color-psychology-and-trust-why-the-colors-your-brand-uses-matters
+  (Accessed: 10 November 2025).
+
+- **Agrawal, S.. (2025)** *Coral Colour Meaning, Psychology, And Importance. Octet Design.*
+  Available at: https://octet.design/journal/coral-color-meaning/
+  (Accessed: 10 November 2025).
+
+- **DesigningIt. (2024)** *2025 Web Design Colour Trends.*
+  Available at: https://www.designingit.com/blog/2025-web-design-color-trends/
+  (Accessed: 10 November 2025).
+
+- **Bootstrap. (2024)** *Introduction to Bootstrap 5.*
+  Available at: https://getbootstrap.com/docs/5.0/getting-started/introduction/
+  (Accessed: 10 November 2025).
+
+- **99designs. (2024)** *Colour Theory for Designers: The Meaning of Blue, Grey and Other Shades.*
+  Available at: https://99designs.co.uk/blog/tips/color-meanings/
+  (Accessed: 10 November 2025).
+
+- **99designs. (2024)** *Colour Psychology in Design: What Different Colours Communicate.*
+  Available at: https://99designs.co.uk/blog/tips/color-meanings/
+  (Accessed: 10 November 2025).
+
+  
