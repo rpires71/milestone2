@@ -28,6 +28,7 @@
   - [User Stories for Trip Planning and External Booking Integration Page](#user-stories-for-trip-planning-and-external-booking-integration-page)
   - [User Stories for Saved Trips/Favourites Page](#user-stories-for-saved-tripsfavourites-page)
   - [User Stories for Travel Guides and Articles Page](#user-stories-for-travel-guides-and-articles-page)
+  - [User Stories for Newsletter Page](#user-stories-for-newsletter-page)
 - [References](#references)
  
 
@@ -1268,6 +1269,127 @@ Appropriate destinations and practical guidance required by families and group t
 | Travellers and Holiday Planners    | Planning trips and selecting destinations are supported by reading concise and informative travel guides.  | For quick action, relevant booking pages or destination searches are accessed through links that are provided within well-structured and accessible content.  |
 | Travel Enthusiasts and Explorers | Unique and new destinations are presented within themed travel content that is visually inspiring to explore.  | Engagement and discovery are supported through the inclusion of category filters (Adventure, Culture, Relaxation), hero banners, and striking images.  |
 | Group Travellers and Families    | Group-oriented and family-friendly destinations are the primary recommendations featured in the articles.         |  Booking features or relevant searches are directed through visible “View on the Map” or “Book Now” CTAs, which form part of the inclusive and clearly presented guides. |
+
+---
+
+## User Stories for Newsletter Page
+[⬆ Back to Table of contents](#table-of-contents)
+
+**(could-have)**
+
+### 1. Roberto Pires – Website Developer (Site Owner)
+
+**User Goal** 
+As the site owner, I can share travel ideas, new guides, and updates by email through a newsletter sign-up form to collect user email addresses.
+
+**Description** 
+IFor travel-related updates, visitors are provided with a simple way to subscribe and enhance engagement through this feature. Using third-party email services such as Formspree or Mailchimp, integration, validation, and form handling are demonstrated.
+
+**Acceptance Criteria**
+
+- [ ] Included in the form are a consent checkbox and an email input field.
+- [ ] An error message or success notification is displayed upon submission.
+- [ ] A secure email list management service is integrated within the form. 
+- [ ] Across desktop, laptop, tablet, and mobile devices, the layout will remain responsive.
+- [ ] Navigation links to other main pages will be visible.
+- [ ] Other internal pages are visible and accessible through the site’s navigational links.  
+- [ ] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [ ] Input validation will be implemented within a built HTML sign-up form.
+- [ ] GDPR-compliant consent text is included.
+- [ ] Connection to Formspree or Mailchimp is established.
+- [ ] Integrate with Mailchimp or Formspree. 
+- [ ] Alt text and descriptive icons will be used to ensure accessibility.
+- [ ] Add alt text and ARIA labels to ensure accessibility.
+- [ ] Add internal menu links to other pages.
+- [ ] Layout consistency, readability and responsiveness testing will be conducted across multiple devices.
+
+### 2. Travellers and Holiday Planners
+
+**User Goal**  
+As a traveller, I can remain informed about offers and destinations through subscribed updates or promotions. 
+
+**Description**  
+Destination highlights, seasonal offers, and updates provided through the website’s subscription feature will allow travellers to stay connected. Directly via email, sharing valuable travel information enhances user loyalty and encourages return visits, which is the intended goal. To encourage users to subscribe, friendly and concise language is used on key pages such as the Booking page and Homepage/About Us page, where the newsletter form is visible. Reassuring users that their sign-up has been successful by displaying a thank-you note or a clear confirmation message. 
+
+**Acceptance Criteria**
+
+- [ ] The form is visible.
+- [ ] Language is clear and welcoming.
+- [ ] After sign-up, a confirmation message is displayed. 
+- [ ] Non-technical and straightforward language content is written.
+- [ ] Mobile-friendly and intuitive design is maintained. 
+- [ ] Includes access to other pages and sections.
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [ ] Call-to-action areas should include a subscribe button nearby.
+- [ ] Submission testing should be carried out on desktop, laptop, tablet, and mobile devices.
+- [ ] Add internal menu links to other pages.  
+
+### 3. Travel Enthusiasts and Explorers
+
+**User Goal**  
+As a travel enthusiast, to discover new travel inspiration, I want to receive curated destination updates.
+
+**Description**  
+New ideas for their next adventure are provided for travellers who seek ongoing inspiration, which this feature caters to. Hidden destinations, cultural events, and themed travel ideas are presented in curated content through a newsletter that feels personalised. The website’s design and typography are reflected in a tone that should be visually appealing and engaging while maintaining a responsive and professional layout.  
+
+**Acceptance Criteria**
+
+- [ ] Engaging tone and visuals.
+- [ ] Lightweight and responsive design is characteristic of the page. 
+- [ ] Includes access to other pages.  
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.
+
+**Tasks**
+
+- [ ] Selection options with interest to add.
+- [ ] Site typography is matched through styled form.
+- [ ] Layout consistency is tested across all devices. 
+- [ ] Add internal menu links to other pages.
+- [ ] Screen sizes, layout consistency and browser functionality are to be verified across devices. 
+- [ ] Test mobile/tablet/laptop/desktop responsiveness and accessibility.  
+
+### 4. Group Travellers and Families
+
+**User Goal**  
+
+
+**Description**  
+
+
+**Acceptance Criteria**
+
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ]  
+- [ ] Includes access to other pages.  
+- [ ] Layout is responsive and suitable for all screen sizes.  
+- [ ] Visual design is consistent with rest of the site.  
+
+**Tasks**
+
+- [ ] 
+- [ ] 
+- [ ] For users with assistive technologies, accessibility testing should be carried out.  
+- [ ] For readability on desktops, laptops, tablets, and mobiles, layouts are tested.  
+- [ ] Test desktop/laptop/tablet/mobile responsiveness and accessibility.  
+
+### Summary of Stakeholder Goals on Travel Guides & Articles Page
+
+| Stakeholder         | Goal                                                    | Key Feature/Action                               |
+|---------------------|----------------------------------------------------------|--------------------------------------------------|
+| Roberto Pires – Website Developer (Site Owner)     |       |                  |
+| Travellers and Holiday Planners    |   |   |
+| Travel Enthusiasts and Explorers |   |   |
+| Group Travellers and Families    |          |   |
 
 ---
 
