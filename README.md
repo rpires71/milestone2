@@ -1480,85 +1480,95 @@ By planning and booking their next journey with confidence, users are encouraged
 
 ### Overview
 
-To ensure professionalism, clarity, and accessibility across a range of devices and target audiences, the typography for this portfolio website has been thoughtfully selected.
+For the Holiday Destination Finder website, the typography has been thoughtfully chosen to cater for a wide range of travellers, ensuring a user-friendly, trustworthy, and engaging experience (99designs, 2024; Google Fonts, 2024; DesigningIt, 2024).
 
-The target audience includes IT/web recruiters, education employers, students, and parents. After researching effective approaches that align with industry standards and also support a strong visual hierarchy, the chosen combination is **Montserrat** for headings and **Open Sans** for body text.
+In addition to families and groups, the target audience also includes travel enthusiasts, holiday planners, and individual travellers (99designs, 2024). The selected combination—Lato for body text and Montserrat for headings—was determined after reviewing common patterns across modern travel websites, taking into account emotional tone, accessibility, and readability (Google Fonts, 2024; DesigningIt, 2024). 
+
+While maintaining approachability and legibility across all devices, this pairing represents a modern and contemporary digital design (99designs, 2024; DesigningIt, 2024).
 
 ### Typography Goals
 
 The above combination of typefaces was chosen due to being:
 
-- Easy to read and accessible  
-- Professional and trustworthy  
-- Modern yet friendly  
-- Fully responsive and readable on all screen sizes  
+- Easy to read and accessible 
+- Professional and trustworthy for partner brands and providers  
+- Modern, friendly, and suitable for travel contet  
+- Fully responsive and readable on all screen sizes
+- Longer guides, forms, cards, and maps are provided with sufficient flexibility to ensure consistent support across all design components (Interaction Design Foundation, 2023; Google Fonts, 2024; DesigningIt, 2024).  
 
 ### Primary Typeface – Montserrat (Headings)
 
-A widely used educational and tech-based web interface is the geometric, sans-serif typeface **Montserrat**. For section titles, headings and navigation items, its wide character spacing and structured design is ideal.
+A widely used educational and tech-based web interface is the geometric, sans-serif typeface **Montserrat**. For section titles, all major headings, key labels, feature titles, and navigation items, its wide character spacing and structured design is ideal.
 
 **Justification:**  
-The Montserrat typeface conveys professionalism and clarity. It also supports visual hierarchy for fast content scanning. Furthermore, it performs consistently across desktop and mobile platforms and is well-suited to education and technology contexts.
+A strong visual hierarchy, achieved through structured headings, is effectively conveyed using the Montserrat font. Users are supported when scanning call-to-action labels such as “Search Destinations” or “Plan Your Trip,” section titles, and destination names, as the modern travel interface responds well to its balanced proportions and geometric forms. To maintain both a professional and cohesive aesthetic, this typeface also renders consistently across devices (Google Fonts, 2024; 99designs, 2024; DesigningIt, 2024).
 
-### Secondary Typeface – Open Sans (Body Text)
+### Secondary Typeface – Lato (Body Text)
 
-For optimal reading comfort, **Open Sans**, a sans-serif typeface, is effective. Owing to its open structure and high x-height, it performs well for body text, CV content, project summaries, and extended written material.
+The humanist sans-serif typeface Lato is applied for body content, destination descriptions, articles, and supporting text (Google Fonts, 2024; 99designs, 2024; Interaction Design Foundation, 2023).
 
 **Justification:**  
-The Open Sans typeface is optimised for on-screen legibility at smaller sizes. Moreover, it offers a neutral and friendly tone, appropriate for both academic and professional contexts. It is also highly accessible for users with dyslexia or visual processing difficulties, and helps to minimise eye strain and improve long-form readability.
+Form labels, booking assistance text, explanatory copy, and travel guides benefit greatly from Lato’s slightly softer and more welcoming character compared with strictly geometric fonts. When users scan details such as opening times, addresses, and ratings, or when reading on mobile devices, legibility at smaller sizes is maintained through the typeface’s open shapes and generous letter spacing. To reassure and support travellers—one of the primary aims of the site—the overall tone remains user-focused, approachable, and warm (Google Fonts, 2024; 99designs, 2024; Interaction Design Foundation, 2023).
 
 ### Implementation
 
-Two typeface fonts will be used across the website to ensure consistency and performance.
+Two typeface fonts will be used across the website to ensure consistency and performance:
+
+- Montserrat – for key labels, CTAs, headings and navigation
+- Lato - for longer content(guides, tips, FAQs), paragraphs and body text
 
 ### Typography specifications:
 
-- Body text minimum size: `16px` (in line with accessibility standards)  
-- Font weights: `400` for body content, `600–700` for headings  
-- System fallback: `'Arial', sans-serif`  
+- Body text minimum size: `16px` (in line with readability and accessibility standards)  
+- Font weights: `400` for body content, `600–700` for headings and call-to-action buttons  
+- System fallback stack: `'Arial', sans-serif`  
 
 
 ### Accessibility and Compatibility
 
 - Both **Montserrat** and **Open Sans** comply with **WCAG 2.1** guidelines for typographic contrast and legibility.  
 - Fully supported across all major browsers: Chrome, Firefox, Edge, Safari, and mobile platforms.  
-- Delivered via the **Google Fonts CDN** for speed and reliability.  
-- Option available to self-host for offline scenarios.  
+- Delivered via the **Google Fonts CDN** for fast loading and reliable rendering.  
+- Option available to self-host for offline scenarios.
+- Including users with visual impairments, the site’s colour palette, combined with the font scale and weights, ensures sufficient contrast to maintain a clear hierarchy and readability for all users (W3C, 2023; Interaction Design Foundation, 2023; DesigningIt, 2024).
 
 
 ### Alignment with Stakeholders
 
 | **Stakeholder**         | **Typographic Benefit**                                                                 |
 |-------------------------|------------------------------------------------------------------------------------------|
-| Students / Parents       | Open Sans provides clarity and a welcoming tone, fostering trust and readability.        |
-| Education Employers      | Montserrat presents professionalism and structure, assisting in credential review.       |
-| IT/Web Employers         | The modern sans-serif pairing demonstrates digital fluency and technical awareness.      |
-| Developer (Site Owner)   | Straightforward to apply and maintain; supports responsive layouts on all devices.       |
+| Travellers & Holiday Planners       | On all device sizes, instructions and legible trip details are clearly presented using the Lato font.        |
+| Travel Enthusiasts & Explorers      | In a modern and bold manner, guides and destinations are emphasised and enhanced through the use of Montserrat headings.       |
+| Group Travellers & Families         | Information is easy to follow, making it reassuring for families and group travellers through the friendly and approachable tone of the body text.     |
+| Developer (Site Owner)   | By integrating seamlessly with responsive layouts, this straightforward two-font system is simple to maintain.        |
 
 ### Summary
 
-The combination of **Montserrat** and **Open Sans** forms a strong typographic system that:
+The combination of **Montserrat** and **Lato** forms a strong typographic system for mthe Holiday Destination Finder that:
 
 - Improves readability, clarity, and user accessibility.  
-- Projects a modern, confident, and professional visual tone.  
-- Meets the needs of educational and technology-oriented audiences.  
-- Supports consistent branding and responsive web design.  
+- Enhances readability for longer guiudes, filters, cards and maps.
+- Projects a travel-appropriate visual, trustoworthy and modern tone.
+- Works effectively across for all key user groups
+- Supports clear hierarchy, consistent branding and responsive web design throughout the site.  
 
-This typography approach meets both the aesthetic goals and functional requirements for my portfolio website. It also contributes to a visually cohesive, inclusive, and engaging user experience.
+This typography approach meets both the aesthetic goals and functional requirements for a travel planning tool. It also contributes to a supporting, inclusive, inviting and exploratory experience for users.
 
 ### HTML and CSS Integration
 
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
 ```
 
 ```css
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, nav, .btn, .cta {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
 ```
 
@@ -1593,6 +1603,14 @@ h1, h2, h3 {
 - **Google (2025e)** *Advanced Markers, Google Developers.*
   Available at: https://developers.google.com/maps/documentation/javascript/advanced-markers/overview
   (Accessed: 1 November 2025).
+
+- **Google Fonts. (2024)** *Lato and Montserrat Typefaces Overview.*
+  Available at: https://fonts.google.com/specimen/Montserrat
+  (Accessed: 10 November 2025).
+
+- **Google Fonts. (2024)** *Lato Typeface Overview.*
+  Available at: https://fonts.google.com/specimen/Lato
+  (Accessed: 10 November 2025).
 
 - **Mozilla Developer Network (MDN). (2024)** *HTML5, CSS3 and JavaScript – Web Technology References.*
   Available at: [https://developer.mozilla.org/](https://developer.mozilla.org/)
@@ -1682,6 +1700,18 @@ h1, h2, h3 {
   Available at: https://www.interaction-design.org/literature/topics/color-in-ux-design
   (Accessed: 10 November 2025).
 
+- **Interaction Design Foundation (IxDF). (2023)** *Responsive Design and Layout Flexibility in User Interfaces.*
+  Available at: https://www.interaction-design.org/literature/topics/responsive-design
+  (Accessed: 10 November 2025).
+
+- **Interaction Design Foundation (IxDF). (2023)** *Readable Typography for Digital Interfaces.*
+  Available at: https://www.interaction-design.org/literature/topics/typography
+  (Accessed: 10 November 2025).
+
+- **Interaction Design Foundation (IxDF). (2023)** *Accessible Typography and Colour in User Experience Design.*
+  Available at: https://www.interaction-design.org/literature/topics/accessibility
+  (Accessed: 10 November 2025).
+
 - **Meta for Developers. (2024)** *Facebook Sharing and Graph API Documentation.*
   Available at: [https://developers.facebook.com](https://developers.facebook.com)
   (Accessed: 30 October 2025).
@@ -1734,6 +1764,14 @@ h1, h2, h3 {
   Available at: https://www.designingit.com/blog/2025-web-design-color-trends/
   (Accessed: 10 November 2025).
 
+- **DesigningIt. (2024)** *2025 Web Design Trends and Typography Choices.*
+  Available at: https://www.designingit.com/blog/2025-web-design-color-trends/
+  (Accessed: 10 November 2025).
+
+- **DesigningIt. (2024)** *2025 Web Design Trends and Accessibility Practices.*
+  Available at: https://www.designingit.com/blog/2025-web-design-color-trends/
+  (Accessed: 10 November 2025).
+  
 - **Bootstrap. (2024)** *Introduction to Bootstrap 5.*
   Available at: https://getbootstrap.com/docs/5.0/getting-started/introduction/
   (Accessed: 10 November 2025).
@@ -1746,4 +1784,8 @@ h1, h2, h3 {
   Available at: https://99designs.co.uk/blog/tips/color-meanings/
   (Accessed: 10 November 2025).
 
-  
+- **99designs. (2024)** *Typography in Web Design: Best Practices and Font Pairings.*
+  Available at: https://99designs.co.uk/blog/tips/best-fonts-for-web-design/
+  (Accessed: 10 November 2025).
+
+
