@@ -179,10 +179,11 @@ html {
     padding: 2rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
-    height: 600x;
+    height: 600px;
     border-left: 5px solid var(--ocean-blue);
     overflow-y: auto; /* Fix: Enable vertical scrolling if content overflows */
     overflow-x: hidden;/* Fix: Enable vertical scrolling if content overflows */
+    
 }
 
 .about-content h2 {
