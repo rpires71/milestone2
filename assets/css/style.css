@@ -80,7 +80,7 @@ html {
 }
 
 .logo-icon {
-  background-color: #0077B6;  /* Ocean Blue background */
+  background-color: var(--ocean-blue);  /* Ocean Blue background */
   padding: 6px;               /* Optional – adds breathing space */
   border-radius: 8px;         /* Optional – smooth corners */
   height: 40px;
@@ -111,7 +111,7 @@ html {
 }
 
 .nav-link.active {
-    color: white !important;
+    color: var(--white-smoke) !important;
     background-color: var(--ocean-blue);
 }
 
@@ -130,7 +130,7 @@ html {
 }
 
 .btn-primary:hover {
-    background-color: #e55a2b;
+    background-color: var(--coral-orange);
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
 }
@@ -179,10 +179,10 @@ html {
     padding: 2rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
-    height: 580x;
+    height: 600x;
     border-left: 5px solid var(--ocean-blue);
     overflow-y: auto; /* Fix: Enable vertical scrolling if content overflows */
-    overflow-x: hidden;
+    overflow-x: hidden;/* Fix: Enable vertical scrolling if content overflows */
 }
 
 .about-content h2 {
@@ -209,7 +209,7 @@ html {
 /* Key Features Checkmarks - Coral Orange */
 .features-list .bi-check-circle-fill,
 .features-list i {
-    color: #FF6B35 !important;
+    color: var(--coral-orange) !important;
 }
 
 /* ========================================
@@ -255,7 +255,7 @@ html {
 }
 
 .carousel-caption p {
-    color: white;
+    color: var(--white-smoke);
 }
 
 .carousel-control-prev-icon,
@@ -302,7 +302,7 @@ html {
    ======================================== */
 .footer-section {
     background-color: var(--charcoal-grey) !important;
-    color: white;
+    color: var(--white-smoke);
     margin-top: 0;
 }
 
@@ -326,11 +326,11 @@ html {
 .contact-tile h5 {
     font-family: var(--font-heading);
     font-weight: 600;
-    color: white;
+    color: var(--white-smoke);
 }
 
 .contact-tile p {
-    color: white;
+    color: var(--white-smoke);
 }
 
 .contact-tile a {
@@ -360,7 +360,7 @@ html {
     background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--sky-blue) 100%);
     border-radius: var(--radius-lg);
     padding: 2rem;
-    color: white;
+    color: var(--white-smoke);
     text-align: center;
     transition: all 0.3s ease;
     height: 100%;
@@ -380,23 +380,23 @@ html {
 .destination-card .card-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: white;
+    color: var(--white-smoke);
 }
 
 .destination-card .card-description {
     margin-bottom: 1.5rem;
-    color: white;
+    color: var(--white-smoke);
 }
 
 .destination-card .btn-light {
     background-color: var(--coral-orange);
-    color: white;
+    color: var(--white-smoke);
     border: none;
     font-weight: 600;
 }
 
 .destination-card .btn-light:hover {
-    background-color: white;
+    background-color: var(--white-smoke);
     color: var(--coral-orange);
     transform: scale(1.05);
 }
@@ -412,7 +412,7 @@ html {
 }
 
 .form-control:focus {
-    background-color: white;
+    background-color: var(--white-smoke);
     border-color: var(--ocean-blue);
     box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
     color: var(--charcoal-grey);
