@@ -153,9 +153,9 @@ html {
     color: var(--charcoal-grey);
 }
 
-.logo-main-icon {
+/*.logo-main-icon {
     animation: rotate 20s linear infinite;
-}
+}*/
 
 @keyframes rotate {
     from {
@@ -432,6 +432,37 @@ html {
     background: linear-gradient(to right, var(--ocean-blue), var(--sky-blue));
     border: none;
     margin: 2rem 0;
+}
+
+/* ========================================
+   Results Panel Scrollbar - Search.html
+   ======================================== */
+.results-list {
+  max-height: 500px;            /* Match the map height */
+  overflow-y: auto;             /* Vertical scrollbar if content overflows */
+  overflow-x: hidden;           /* No horizontal scrolling */
+  scrollbar-width: thin;        /* Firefox */
+  scrollbar-color: var(--sky-blue) var(--white-smoke); /* Custom scrollbar colours */
+}
+
+/* For WebKit browsers (Chrome, Edge, Safari) */
+.results-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.results-list::-webkit-scrollbar-track {
+  background: var(--white-smoke);
+  border-radius: 10px;
+}
+
+.results-list::-webkit-scrollbar-thumb {
+  background-color: var(--sky-blue);
+  border-radius: 10px;
+  border: 2px solid var(--white-smoke);
+}
+
+.results-list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--ocean-blue);
 }
 
 /* ========================================

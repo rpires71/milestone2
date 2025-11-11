@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Holiday Destination Finder - Search Destinations">
+  <meta name="keywords" content="holiday, travel, destination, booking, vacation, search">
+  <meta name="author" content="Roberto Pires">
+  <title>Search - Holiday Destination Finder</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <!-- ========================================
+         PART 1: Bootstrap Navigation Menu
+         ======================================== -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/logo-blue-bg.webp" alt="Holiday Finder Logo" class="logo-icon me-2"
+          style="max-height: 40px; width: auto;">
+        <span class="logo-text">Holiday Destination Finder</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="search.html">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#popular">Popular Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="packages.html">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================
+         PART 2: Header Section
+         ======================================== -->
+  <header class="hero-header py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Globe Icon - Left Side -->
+        <div class="col-lg-3 text-center mb-4 mb-lg-0">
+          <img src="assets/images/logo-main.webp" alt="Official Logo Icon" class="logo-main-icon img-fluid"
+            style="max-width: 200px;">
+        </div>
+
+        <!-- Title and Subtitle - Right Side -->
+        <div class="col-lg-9 text-center">
+          <h1 class="display-5 fw-bold mb-3">Search Your Dream Destination</h1>
+          <p class="lead fs-4 text-muted">Find attractions, restaurants, hotels, and more in cities around the world</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================
+         PART 3: Main Section - Search & Results
+         ======================================== -->
+  <main class="main-section py-5">
+    <div class="container">
+      
+      <!-- Section 1: Search Box & Action Buttons -->
+      <div class="search-section mb-5">
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="search-container p-4 bg-white rounded-4 shadow-md">
+              <!-- Search Input & Button -->
+              <div class="row g-3 mb-4">
+                <div class="col-md-8">
+                  <input type="text" class="form-control form-control-lg" id="citySearch" 
+                    placeholder="Enter a city name e.g. Paris, New York City, Tokyo">
+                </div>
+                <div class="col-md-4">
+                  <button class="btn btn-primary btn-lg w-100" id="searchBtn" onclick="handleSearch()"">
+                    <i class="bi bi-search me-2"></i>Search Destination
+                  </button>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="action-buttons">
+                <h5 class="mb-3 text-ocean-blue">What are you looking for?</h5>
+                <div class="row g-3">
+                  <div class="col-6 col-md-4 col-lg">
+                    <button class="btn btn-action w-100 active" data-type="tourist_attraction" onclick="filterPlaces('tourist_attraction', this)">
+                      <i class="bi bi-geo-alt-fill d-block fs-3 mb-2"></i>
+                      <span>Attractions</span>
+                    </button>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg">
+                    <button class="btn btn-action w-100" data-type="restaurant" onclick="filterPlaces('restaurant', this)">
+                      <i class="bi bi-cup-hot-fill d-block fs-3 mb-2"></i>
+                      <span>Restaurants</span>
+                    </button>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg">
+                    <button class="btn btn-action w-100" data-type="lodging" onclick="filterPlaces('lodging', this)">
+                      <i class="bi bi-building-fill d-block fs-3 mb-2"></i>
+                      <span>Hotels</span>
+                    </button>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg">
+                    <button class="btn btn-action w-100" data-type="cafe" onclick="filterPlaces('cafe', this)">
+                      <i class="bi bi-cup-straw d-block fs-3 mb-2"></i>
+                      <span>Cafes</span>
+                    </button>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg">
+                    <button class="btn btn-action w-100" data-type="shopping_mall" onclick="filterPlaces('shopping_mall', this)">
+                      <i class="bi bi-bag-fill d-block fs-3 mb-2"></i>
+                      <span>Shopping</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Results Panel & Google Maps -->
+      <div class="results-section mb-5" id="resultsSection" style="display: none;">
+        <div class="row g-4">
+          <!-- Results Panel - Left 2/5 -->
+          <div class="col-lg-5">
+            <div class="results-panel bg-white rounded-4 shadow-md p-4">
+              <h3 class="mb-4 text-ocean-blue">
+                <i class="bi bi-list-ul me-2"></i>Top 20 Results
+              </h3>
+              <div class="results-list" id="resultsList">
+                <!-- Results will be dynamically inserted here -->
+                <div class="text-center text-muted py-5">
+                  <i class="bi bi-search fs-1 mb-3 d-block"></i>
+                  <p>Search for a destination to see results</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Maps - Right 3/5 -->
+          <div class="col-lg-7">
+            <div class="map-container bg-white rounded-4 shadow-md overflow-hidden">
+              <div id="map" style="height: 600px; width: 100%;">
+                <!-- Google Maps will be initialized here -->
+                <div class="d-flex align-items-center justify-content-center h-100 text-muted">
+                  <div class="text-center">
+                    <i class="bi bi-map fs-1 mb-3 d-block"></i>
+                    <p>Map will appear here after search</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Popular Destinations -->
+      <section id="popular" class="popular-destinations-section">
+        <div class="text-center mb-5">
+          <h2 class="display-6 fw-bold text-ocean-blue mb-3">Popular Destinations</h2>
+          <p class="lead text-muted">Explore our most searched travel destinations</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- New York City -->
+          <div class="col-md-6 col-lg-3">
+            <div class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100">
+              <div class="destination-image">
+                <img src="assets/images/img-nyc.webp" alt="New York City" class="w-100" style="height: 200px; object-fit: cover;">
+              </div>
+              <div class="destination-content p-4">
+                <h4 class="text-ocean-blue mb-3">New York City</h4>
+                <p class="text-muted mb-3">
+                  The city that never sleeps. Experience world-class museums, iconic skyscrapers, 
+                  Broadway shows, and diverse culinary scenes.
+                </p>
+                <button class="btn btn-primary w-100" onclick="searchCity('New York City')">
+                  <i class="bi bi-search me-2"></i>Explore NYC
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barcelona -->
+          <div class="col-md-6 col-lg-3">
+            <div class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100">
+              <div class="destination-image">
+                <img src="assets/images/img-barcelona.webp" alt="Barcelona" class="w-100" style="height: 200px; object-fit: cover;">
+              </div>
+              <div class="destination-content p-4">
+                <h4 class="text-ocean-blue mb-3">Barcelona</h4>
+                <p class="text-muted mb-3">
+                  Discover Gaudí's architectural masterpieces, beautiful beaches, Gothic Quarter, 
+                  and vibrant street life in this Mediterranean gem.
+                </p>
+                <button class="btn btn-primary w-100" onclick="searchCity('Barcelona')">
+                  <i class="bi bi-search me-2"></i>Explore Barcelona
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paris -->
+          <div class="col-md-6 col-lg-3">
+            <div class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100">
+              <div class="destination-image">
+                <img src="assets/images/img-paris.webp" alt="Paris" class="w-100" style="height: 200px; object-fit: cover;">
+              </div>
+              <div class="destination-content p-4">
+                <h4 class="text-ocean-blue mb-3">Paris</h4>
+                <p class="text-muted mb-3">
+                  The City of Light. Fall in love with the Eiffel Tower, Louvre Museum, 
+                  charming cafés, and romantic Seine River walks.
+                </p>
+                <button class="btn btn-primary w-100" onclick="searchCity('Paris')">
+                  <i class="bi bi-search me-2"></i>Explore Paris
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tokyo -->
+          <div class="col-md-6 col-lg-3">
+            <div class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100">
+              <div class="destination-image">
+                <img src="assets/images/img-tokyo.webp" alt="Tokyo" class="w-100" style="height: 200px; object-fit: cover;">
+              </div>
+              <div class="destination-content p-4">
+                <h4 class="text-ocean-blue mb-3">Tokyo</h4>
+                <p class="text-muted mb-3">
+                  A perfect blend of ancient tradition and cutting-edge technology. 
+                  Explore temples, neon-lit streets, and incredible cuisine.
+                </p>
+                <button class="btn btn-primary w-100" onclick="searchCity('Tokyo')">
+                  <i class="bi bi-search me-2"></i>Explore Tokyo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========================================
+         PART 4: Footer Section
+         ======================================== -->
+  <footer class="footer-section bg-dark text-white py-5 mt-5" id="contact">
+    <div class="container">
+      <!-- Contact Information Tiles - 4 Columns -->
+      <div class="row g-4 mb-4">
+        <!-- Address Column -->
+        <div class="col-md-6 col-lg-3">
+          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
+            <i class="bi bi-geo-alt-fill fs-1 mb-3 text-primary"></i>
+            <h5 class="mb-3">Address</h5>
+            <p class="mb-0">
+              Holiday Destination Finder<br>
+              123 Travel Street<br>
+              London, UK<br>
+              SW1A 1AA
+            </p>
+          </div>
+        </div>
+
+        <!-- Phone Column -->
+        <div class="col-md-6 col-lg-3">
+          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
+            <i class="bi bi-telephone-fill fs-1 mb-3 text-primary"></i>
+            <h5 class="mb-3">Phone</h5>
+            <p class="mb-1">
+              <a href="tel:+441234567890" class="text-white text-decoration-none">
+                +44 (0) 123 456 7890
+              </a>
+            </p>
+            <p class="mb-0">
+              <a href="tel:+441234567891" class="text-white text-decoration-none">
+                +44 (0) 123 456 7891
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- SMS Column -->
+        <div class="col-md-6 col-lg-3">
+          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
+            <i class="bi bi-chat-dots-fill fs-1 mb-3 text-primary"></i>
+            <h5 class="mb-3">SMS</h5>
+            <p class="mb-1">
+              <a href="sms:+441234567890" class="text-white text-decoration-none">
+                +44 (0) 123 456 7890
+              </a>
+            </p>
+            <p class="mb-0 small">Available 24/7</p>
+          </div>
+        </div>
+
+        <!-- Email Column -->
+        <div class="col-md-6 col-lg-3">
+          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
+            <i class="bi bi-envelope-fill fs-1 mb-3 text-primary"></i>
+            <h5 class="mb-3">Email</h5>
+            <p class="mb-1">
+              <a href="mailto:info@holidayfinder.com" class="text-white text-decoration-none">
+                info@holidayfinder.com
+              </a>
+            </p>
+            <p class="mb-0">
+              <a href="mailto:support@holidayfinder.com" class="text-white text-decoration-none">
+                support@holidayfinder.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="my-4 bg-secondary">
+
+      <!-- Copyright -->
+      <div class="copyright text-center">
+        <p class="mb-1">&copy; 2025 Holiday Destination Finder. All Rights Reserved.</p>
+        <p class="mb-0">Developed by Roberto Pires | Milestone Project 2 - Interactive Front-End Development</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Google Maps API (You'll need to add your API key) -->
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzUmu_XAClMDi5q8nzJSOu_5ZWAfzNjfs&libraries=places&callback=initMap&loading=async"
+      async
+      defer
+    ></script>
+  <!-- Custom JavaScript -->
+  <script src="assets/js/search.js"></script>
+</body>
+
+</html>
