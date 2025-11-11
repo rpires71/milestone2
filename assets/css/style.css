@@ -135,6 +135,10 @@ html {
     box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
 }
 
+.btn-action i {
+    color: var(--coral-orange) !important;  /* Coral orange icons */
+}
+
 /* ========================================
    Hero Header Section
    ======================================== */
@@ -400,6 +404,10 @@ html {
     background-color: var(--white-smoke);
     color: var(--coral-orange);
     transform: scale(1.05);
+}
+
+.destination-tile h4 {
+    text-align: center;  /* Centers the city names */
 }
 
 /* ========================================
