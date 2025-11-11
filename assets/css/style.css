@@ -1,0 +1,504 @@
+/* ========================================
+   CSS Variables - Colour Palette
+   ======================================== */
+:root {
+    /* Primary Colours */
+    --ocean-blue: #0077B6;
+    --sky-blue: #90E0EF;
+    --coral-orange: #FF6B35;
+    --sand-beige: #FAF3E0;
+    --charcoal-grey: #2F3E46;
+    --white-smoke: #F5F5F5;
+    
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Lato', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Border Radius */
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-lg: 15px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   Global Styles
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--charcoal-grey);
+    background-color: var(--sand-beige);
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--charcoal-grey);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================
+   Navigation Bar
+   ======================================== */
+.navbar {
+    padding: 1rem 2rem;
+    background-color: var(--ocean-blue) !important;
+}
+
+.navbar-brand {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ocean-blue) !important;
+}
+
+.logo-text {
+    color: var(--sky-blue);
+}
+
+.logo-icon {
+  background-color: #0077B6;  /* Ocean Blue background */
+  padding: 6px;               /* Optional – adds breathing space */
+  border-radius: 8px;         /* Optional – smooth corners */
+  height: 40px;
+  width: auto;
+}
+
+
+.navbar-logo {
+    max-height: 40px;
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-link {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--sky-blue) !important;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--ocean-blue) !important;
+    background-color: var(--sky-blue);
+}
+
+.nav-link.active {
+    color: white !important;
+    background-color: var(--ocean-blue);
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+.btn-primary {
+    background-color: var(--coral-orange);
+    border: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+    color: var(--white-smoke);
+}
+
+.btn-primary:hover {
+    background-color: #e55a2b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* ========================================
+   Hero Header Section
+   ======================================== */
+.hero-header {
+    background: linear-gradient(135deg, var(--sky-blue) 0%, rgba(0, 119, 182, 0.2) 100%);
+    padding: 3rem 0;
+}
+
+.hero-header h1 {
+    color: var(--ocean-blue);
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.hero-header .lead {
+    color: var(--charcoal-grey);
+}
+
+.logo-main-icon {
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   Main Section
+   ======================================== */
+.main-section {
+    background-color: var(--sand-beige);
+    padding: 3rem 0;
+}
+
+.about-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    height: 100%;
+    border-left: 5px solid var(--ocean-blue);
+}
+
+.about-content h2 {
+    color: var(--ocean-blue);
+    font-family: var(--font-heading);
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    line-height: 1.8;
+    color: var(--charcoal-grey);
+}
+
+.about-content h5 {
+    color: var(--ocean-blue);
+    font-family: var(--font-heading);
+}
+
+.features-list ul li {
+    font-size: 1rem;
+    color: var(--charcoal-grey);
+}
+
+/* Key Features Checkmarks - Coral Orange */
+.features-list .bi-check-circle-fill,
+.features-list i {
+    color: #FF6B35 !important;
+}
+
+/* ========================================
+   Carousel Styling
+   ======================================== */
+.carousel {
+    border: 3px solid var(--ocean-blue);
+}
+
+.carousel-inner {
+    height: 600px;
+    border-radius: var(--radius-lg);
+}
+
+.carousel-item {
+    height: 600px;
+}
+
+.carousel-item img {
+    height: 600px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(47, 62, 70, 0.8);
+    padding: 1rem 2rem;
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(5px);
+}
+
+.carousel-caption h5 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--sky-blue);
+}
+
+.carousel-caption p {
+    color: white;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--ocean-blue);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.carousel-indicators button {
+    background-color: var(--ocean-blue);
+}
+
+.carousel-indicators button.active {
+    background-color: var(--coral-orange);
+}
+
+/* ========================================
+   Cards & Sections
+   ======================================== */
+.card {
+    background-color: var(--white-smoke);
+    border: none;
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-title {
+    color: var(--ocean-blue);
+    font-family: var(--font-heading);
+}
+
+.card-text {
+    color: var(--charcoal-grey);
+}
+
+/* ========================================
+   Footer Section
+   ======================================== */
+.footer-section {
+    background-color: var(--charcoal-grey) !important;
+    color: white;
+    margin-top: 0;
+}
+
+.contact-tile {
+    background-color: rgba(144, 224, 239, 0.1) !important;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: var(--radius-md);
+}
+
+.contact-tile:hover {
+    transform: translateY(-5px);
+    border-color: var(--sky-blue);
+    background-color: rgba(144, 224, 239, 0.2) !important;
+}
+
+.contact-tile i {
+    color: var(--coral-orange) !important;
+}
+
+.contact-tile h5 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: white;
+}
+
+.contact-tile p {
+    color: white;
+}
+
+.contact-tile a {
+    color: var(--sky-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-tile a:hover {
+    color: var(--coral-orange);
+}
+
+.copyright {
+    font-size: 0.95rem;
+    color: var(--white-smoke);
+}
+
+.footer-section hr {
+    border-color: var(--sky-blue);
+    opacity: 0.3;
+}
+
+/* ========================================
+   Destination Cards (for other pages)
+   ======================================== */
+.destination-card {
+    background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--sky-blue) 100%);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: var(--shadow-md);
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.destination-card .card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.destination-card .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.destination-card .card-description {
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.destination-card .btn-light {
+    background-color: var(--coral-orange);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+.destination-card .btn-light:hover {
+    background-color: white;
+    color: var(--coral-orange);
+    transform: scale(1.05);
+}
+
+/* ========================================
+   Forms
+   ======================================== */
+.form-control {
+    background-color: var(--white-smoke);
+    border: 2px solid var(--sky-blue);
+    color: var(--charcoal-grey);
+    border-radius: var(--radius-sm);
+}
+
+.form-control:focus {
+    background-color: white;
+    border-color: var(--ocean-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
+    color: var(--charcoal-grey);
+}
+
+.form-label {
+    color: var(--charcoal-grey);
+    font-weight: 500;
+}
+
+/* ========================================
+   Section Dividers
+   ======================================== */
+.section-divider {
+    height: 3px;
+    background: linear-gradient(to right, var(--ocean-blue), var(--sky-blue));
+    border: none;
+    margin: 2rem 0;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media (max-width: 992px) {
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
+        height: 400px;
+    }
+    
+    .hero-header h1 {
+        font-size: 2rem;
+    }
+    
+    .logo-main-icon {
+        max-width: 150px !important;
+    }
+    
+    .navbar-logo {
+        max-height: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .about-content {
+        margin-bottom: 2rem;
+    }
+    
+    .contact-tile {
+        margin-bottom: 1rem;
+    }
+    
+    .navbar-logo {
+        max-height: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .navbar-logo {
+        max-height: 30px;
+        height: 30px;
+    }
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+.text-ocean-blue {
+    color: var(--ocean-blue);
+}
+
+.text-coral-orange {
+    color: var(--coral-orange);
+}
+
+.bg-sand-beige {
+    background-color: var(--sand-beige);
+}
+
+.bg-sky-blue {
+    background-color: var(--sky-blue);
+}
+
+.border-ocean-blue {
+    border-color: var(--ocean-blue);
+}
