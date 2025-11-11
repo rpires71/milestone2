@@ -187,3 +187,185 @@ function initMap() {
     console.log('Map initialised successfully');
 }
 
+// ========================================
+// Search Nearby Places - NEW PLACES API
+// ========================================
+async function searchNearbyPlacesNew(location) {
+    console.log('Searching nearby places with NEW API for type:', currentSearchType);
+
+    // Clear existing markers
+    clearMarkers();
+
+    // Clear existing results
+    const resultsList = document.getElementById('resultsList');
+    resultsList.innerHTML = '<div class="text-center text-muted py-3"><i class="bi bi-hourglass-split"></i> Loading results...</div>';
+
+    try {
+        // Convert type to includedTypes format
+        const includedTypes = [currentSearchType];
+
+        console.log('Search parameters:', {
+            location: { lat: location.lat(), lng: location.lng() },
+            radius: 5000,
+            includedTypes: includedTypes
+        });
+
+        // NEW API: Use searchNearby
+        const { places } = await google.maps.places.Place.searchNearby({
+            locationRestriction: {           // Different parameter name
+                center: {                    // Plain object
+                    lat: location.lat(),     // Call methods to get numbers
+                    lng: location.lng()
+                },
+                radius: 5000                 // Radius goes inside
+            },
+            includedTypes: includedTypes,
+            maxResultCount: 20,
+            fields: ['displayName', 'location', 'rating', 'formattedAddress', 'regularOpeningHours']
+        });
+
+        console.log('Places found:', places ? places.length : 0);
+
+        if (places && places.length > 0) {
+            // Display results
+            displayResultsNew(places);
+
+            // Add markers to map
+            places.forEach((place, index) => {
+                createMarkerNew(place, index);
+            });
+        } else {
+            resultsList.innerHTML = '<div class="alert alert-info">No results found for this location and category. Try a different filter or city.</div>';
+        }
+
+    } catch (error) {
+        console.error('Error searching places:', error);
+
+        let errorMessage = 'Error searching places. ';
+
+        if (error.message.includes('API key')) {
+            errorMessage += 'Check that your API key is valid and has Places API (New) enabled.';
+        } else if (error.message.includes('billing')) {
+            errorMessage += 'Billing must be enabled in Google Cloud Console.';
+        } else {
+            errorMessage += error.message;
+        }
+
+        resultsList.innerHTML = `<div class="alert alert-danger">${errorMessage}</div>`;
+    }
+}
+
+// ========================================
+// Display Results in Panel - NEW API FORMAT
+// ========================================
+function displayResultsNew(places) {
+    const resultsList = document.getElementById('resultsList');
+    resultsList.innerHTML = '';
+
+    places.forEach((place, index) => {
+        const resultItem = document.createElement('div');
+        resultItem.className = 'result-item';
+        resultItem.setAttribute('data-index', index);
+
+        // Get place details
+        const name = place.displayName || 'Unknown Place';
+        const address = place.formattedAddress || 'Address not available';
+        const rating = place.rating || null;
+        const isOpen = place.regularOpeningHours?.openNow;
+
+        // Build rating stars
+        let ratingHTML = '';
+        if (rating) {
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 >= 0.5;
+
+            for (let i = 0; i < fullStars; i++) {
+                ratingHTML += '<i class="bi bi-star-fill"></i>';
+            }
+            if (hasHalfStar) {
+                ratingHTML += '<i class="bi bi-star-half"></i>';
+            }
+            ratingHTML += ` <span>${rating.toFixed(1)}</span>`;
+        }
+
+        resultItem.innerHTML = `
+            <h5><i class="bi bi-geo-alt-fill me-2 text-primary"></i>${name}</h5>
+            <p><i class="bi bi-pin-map me-2"></i>${address}</p>
+            ${rating ? `<p class="rating">${ratingHTML}</p>` : ''}
+            ${isOpen !== undefined ? `<p><i class="bi bi-clock me-2"></i>${isOpen ? '<span class="text-success">Open Now</span>' : '<span class="text-danger">Closed</span>'}</p>` : ''}
+        `;
+
+        // Add click event to center map on this location
+        resultItem.addEventListener('click', function () {
+            if (place.location) {
+                map.setCenter(place.location);
+                map.setZoom(16);
+
+                // Bounce the corresponding marker
+                if (markers[index]) {
+                    // For standard markers, use animation
+                    if (markers[index].setAnimation) {
+                        markers[index].setAnimation(google.maps.Animation.BOUNCE);
+                        setTimeout(() => {
+                            markers[index].setAnimation(null);
+                        }, 1400);
+                    }
+                }
+            }
+        });
+
+        resultsList.appendChild(resultItem);
+    });
+}
+
+// ========================================
+// Create Map Markers - Using Standard Markers
+// ========================================
+function createMarkerNew(place, index) {
+    if (!place.location) {
+        console.warn('Place has no location:', place);
+        return;
+    }
+
+    // Use standard Marker (works with all maps)
+    const marker = new google.maps.Marker({
+        map: map,
+        position: place.location,
+        title: place.displayName || 'Unknown Place',
+        label: {
+            text: (index + 1).toString(),
+            color: 'white',
+            fontWeight: 'bold'
+        },
+        icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            fillColor: '#0077B6', // Ocean Blue
+            fillOpacity: 1,
+            strokeColor: '#FF6B35', // Coral Orange
+            strokeWeight: 3,
+            scale: 15
+        }
+    });
+
+    // Add info window
+    const infowindow = new google.maps.InfoWindow({
+        content: `
+            <div style="padding: 10px; max-width: 200px;">
+                <h6 style="margin: 0 0 5px 0; color: #0077B6; font-weight: bold;">${place.displayName || 'Unknown Place'}</h6>
+                <p style="margin: 0; font-size: 0.9rem; color: #2F3E46;">${place.formattedAddress || ''}</p>
+                ${place.rating ? `<p style="margin: 5px 0 0 0; color: #FF6B35; font-weight: bold;">⭐ ${place.rating.toFixed(1)}</p>` : ''}
+            </div>
+        `
+    });
+
+    marker.addListener('click', function () {
+        // Close all other info windows
+        infoWindows.forEach(iw => iw.close());
+
+        infowindow.open(map, marker);
+    });
+
+    infoWindows.push(infowindow);
+    markers.push(marker);
+}
+
