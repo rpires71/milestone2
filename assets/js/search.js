@@ -369,3 +369,27 @@ function createMarkerNew(place, index) {
     markers.push(marker);
 }
 
+// ========================================
+// Clear Markers
+// ========================================
+function clearMarkers() {
+    markers.forEach(marker => {
+        if (marker.setMap) {
+            marker.setMap(null);
+        }
+    });
+    markers = [];
+
+    // Close all info windows
+    infoWindows.forEach(iw => iw.close());
+    infoWindows = [];
+}
+
+// ========================================
+// Search City Function (for Popular Destinations buttons)
+// ========================================
+function searchCity(cityName) {
+    console.log('searchCity called with:', cityName);
+    document.getElementById('citySearch').value = cityName;
+    performSearch(cityName);
+}
