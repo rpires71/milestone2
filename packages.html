@@ -110,76 +110,43 @@
                   </button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Section 2: Action Buttons -->
+      <div class="search-section mb-5">
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="search-container p-4 bg-white rounded-4 shadow-md">
               <!-- Action Buttons -->
               <div class="action-buttons">
                 <h5 class="mb-3 text-ocean-blue">What are you looking for?</h5>
                 <div class="row g-3">
                   <div class="col-6 col-md-4 col-lg">
                     <button class="btn btn-action w-100 active" data-type="tourist_attraction" onclick="filterPlaces('tourist_attraction', this)">
-                      <i class="bi bi-geo-alt-fill d-block fs-3 mb-2"></i>
-                      <span>Attractions</span>
+                      <i class="bi bi-house-door d-block fs-3 mb-2"></i>
+                      <span>Search Hotels</span>
                     </button>
                   </div>
                   <div class="col-6 col-md-4 col-lg">
                     <button class="btn btn-action w-100" data-type="restaurant" onclick="filterPlaces('restaurant', this)">
-                      <i class="bi bi-cup-hot-fill d-block fs-3 mb-2"></i>
-                      <span>Restaurants</span>
+                      <i class="bi bi bi-airplane d-block fs-3 mb-2"></i>
+                      <span>Search Flights</span>
                     </button>
                   </div>
                   <div class="col-6 col-md-4 col-lg">
                     <button class="btn btn-action w-100" data-type="lodging" onclick="filterPlaces('lodging', this)">
-                      <i class="bi bi-building-fill d-block fs-3 mb-2"></i>
-                      <span>Hotels</span>
+                      <i class="bi bi-card-checklist d-block fs-3 mb-2"></i>
+                      <span>Complete Package</span>
                     </button>
                   </div>
                   <div class="col-6 col-md-4 col-lg">
                     <button class="btn btn-action w-100" data-type="cafe" onclick="filterPlaces('cafe', this)">
-                      <i class="bi bi-cup-straw d-block fs-3 mb-2"></i>
-                      <span>Cafes</span>
+                      <i class="bi bi bi-binoculars d-block fs-3 mb-2"></i>
+                      <span>Book Activities</span>
                     </button>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg">
-                    <button class="btn btn-action w-100" data-type="shopping_mall" onclick="filterPlaces('shopping_mall', this)">
-                      <i class="bi bi-bag-fill d-block fs-3 mb-2"></i>
-                      <span>Shopping</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 2: Results Panel & Google Maps -->
-      <div class="results-section mb-5" id="resultsSection" style="display: none;">
-        <div class="row g-4">
-          <!-- Results Panel - Left 2/5 -->
-          <div class="col-lg-5">
-            <div class="results-panel bg-white rounded-4 shadow-md p-4">
-              <h3 class="mb-4 text-ocean-blue">
-                <i class="bi bi-list-ul me-2"></i>Top 20 Results
-              </h3>
-              <div class="results-list" id="resultsList">
-                <!-- Results will be dynamically inserted here -->
-                <div class="text-center text-muted py-5">
-                  <i class="bi bi-search fs-1 mb-3 d-block"></i>
-                  <p>Search for a destination to see results</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Google Maps - Right 3/5 -->
-          <div class="col-lg-7">
-            <div class="map-container bg-white rounded-4 shadow-md overflow-hidden">
-              <div id="map" style="height: 600px; width: 100%;">
-                <!-- Google Maps will be initialized here -->
-                <div class="d-flex align-items-center justify-content-center h-100 text-muted">
-                  <div class="text-center">
-                    <i class="bi bi-map fs-1 mb-3 d-block"></i>
-                    <p>Map will appear here after search</p>
                   </div>
                 </div>
               </div>
