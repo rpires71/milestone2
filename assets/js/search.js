@@ -74,7 +74,7 @@ function filterPlaces(placeType, button) {
 // ========================================
 // Search Button
 // ========================================
-function initialiseSearchButton() {
+function initializeSearchButton() {
     const searchBtn = document.getElementById('searchBtn');
     const cityInput = document.getElementById('citySearch');
 

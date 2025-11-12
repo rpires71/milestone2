@@ -551,3 +551,200 @@ html {
 .border-ocean-blue {
     border-color: var(--ocean-blue);
 }
+/* ========================================
+   Search Page - Action Buttons Full Styling
+   ======================================== */
+
+.btn-action {
+    background-color: var(--white-smoke);
+    border: 2px solid var(--sky-blue);
+    color: var(--ocean-blue);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.btn-action:hover {
+    background-color: var(--sky-blue);
+    border-color: var(--ocean-blue);
+    color: var(--ocean-blue);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-action:hover i {
+    color: var(--coral-orange) !important;
+}
+
+.btn-action.active {
+    background-color: var(--ocean-blue);
+    border-color: var(--ocean-blue);
+    color: var(--white-smoke);
+}
+
+.btn-action.active i {
+    color: var(--coral-orange) !important;
+}
+
+/* Search Page - Destination Tiles */
+.destination-tile {
+    background-color: var(--white-smoke);
+    border: 2px solid var(--sky-blue);
+    transition: all 0.3s ease;
+}
+
+.destination-tile:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--ocean-blue);
+}
+
+.destination-tile .destination-content {
+    background-color: var(--white-smoke);
+}
+
+.destination-tile .btn-primary {
+    font-size: 0.95rem;
+}
+
+/* Search Container */
+.search-container {
+    background-color: var(--white-smoke);
+    border: 2px solid var(--sky-blue);
+}
+
+.search-container input.form-control {
+    background-color: var(--white-smoke);
+    border: 2px solid var(--sky-blue);
+    color: var(--charcoal-grey);
+}
+
+.search-container input.form-control:focus {
+    background-color: var(--white-smoke);
+    border-color: var(--ocean-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
+}
+
+.search-container input.form-control::placeholder {
+    color: var(--charcoal-grey);
+    opacity: 0.5;
+}
+
+/* Results Panel */
+.results-panel {
+    background-color: var(--white-smoke);
+    height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 2px solid var(--sky-blue);
+}
+
+.results-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.results-panel::-webkit-scrollbar-track {
+    background: var(--sand-beige);
+    border-radius: 10px;
+}
+
+.results-panel::-webkit-scrollbar-thumb {
+    background: var(--ocean-blue);
+    border-radius: 10px;
+}
+
+.results-panel::-webkit-scrollbar-thumb:hover {
+    background: var(--coral-orange);
+}
+
+.result-item {
+    background-color: var(--white-smoke);
+    border: 2px solid var(--sky-blue);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.result-item:hover {
+    background-color: var(--sky-blue);
+    border-color: var(--ocean-blue);
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.result-item h5 {
+    color: var(--ocean-blue);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.result-item p {
+    color: var(--charcoal-grey);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.result-item .rating {
+    color: var(--coral-orange);
+}
+
+/* Map Container */
+.map-container {
+    border: 3px solid var(--ocean-blue);
+}
+
+#map {
+    background-color: var(--sand-beige);
+}
+
+/* Search Page Responsive */
+@media (max-width: 992px) {
+    .results-panel {
+        height: 400px;
+        margin-bottom: 2rem;
+    }
+    
+    #map {
+        height: 400px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-action {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-action i {
+        font-size: 1.5rem !important;
+    }
+    
+    .results-panel {
+        height: 300px;
+    }
+    
+    #map {
+        height: 300px !important;
+    }
+    
+    .destination-tile .destination-image img {
+        height: 150px !important;
+    }
+}
+
+/* ========================================
+   Scroll Offset Fix for Sticky Navbar
+   ======================================== */
+html {
+    scroll-padding-top: 100px; /* Offset for sticky navbar height */
+}
+
+/* Alternative: Add margin to section with ID */
+#popular {
+    scroll-margin-top: 100px; /* Space above when scrolled to */
+}
