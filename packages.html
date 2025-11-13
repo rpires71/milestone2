@@ -136,25 +136,23 @@
               </div>
 
               <!-- Trip Details -->
-              <form id="package-filters" class="row g-3 g-md-4 align-items-end justify-content-center mb-4">
+              <form id="package-filters" class="row g-3 g-md-4 justify-content-center mb-4">
                 <!-- Check-in -->
                 <div class="col-12 col-md-4 col-lg-3">
-                  <label for="checkin" class="form-label mb-1">Check-in</label>
-                  <input type="date" class="form-control" id="checkin" name="checkin" required>
+                  <input type="date" class="form-control" id="checkin" name="checkin" placeholder="Check-in">
                 </div>
 
                 <!-- Check-out -->
                 <div class="col-12 col-md-4 col-lg-3">
-                  <label for="checkout" class="form-label mb-1">Check-out</label>
-                  <input type="date" class="form-control" id="checkout" name="checkout" required>
+                  <input type="date" class="form-control" id="checkout" name="checkout" placeholder="Check-out">
                 </div>
 
                 <!-- Guests -->
                 <div class="col-12 col-md-4 col-lg-2">
-                  <label for="guests" class="form-label mb-1">Guests</label>
-                  <select class="form-select" id="guests" name="guests" aria-label="Number of guests">
+                  <select class="form-select" id="guests" name="guests">
+                    <option value="" disabled selected hidden>Guests</option>
                     <option value="1">1 guest</option>
-                    <option value="2" selected>2 guests</option>
+                    <option value="2">2 guests</option>
                     <option value="3">3 guests</option>
                     <option value="4">4 guests</option>
                     <option value="5">5 guests</option>
@@ -165,28 +163,28 @@
 
               <!-- Action Buttons -->
               <div class="action-buttons">
-                <div class="row g-3">
-                  <div class="col-6 col-md-4 col-lg">
-                    <button class="btn btn-action w-100 active" data-type="tourist_attraction"
-                      onclick="filterPlaces('tourist_attraction', this)">
+                <div class="row g-3 justify-content-center"">
+                  <div class="col-6 col-md-3 col-lg-2">
+                    <button class="btn btn-action w-100 active" data-type="hotels"
+                      onclick="filterPlaces('hotels', this)">
                       <i class="bi bi-house-door d-block fs-3 mb-2"></i>
                       <span>Search Hotels</span>
                     </button>
                   </div>
-                  <div class="col-6 col-md-4 col-lg">
+                  <div class="col-6 col-md-3 col-lg-2">
                     <button class="btn btn-action w-100" data-type="restaurant"
                       onclick="filterPlaces('restaurant', this)">
                       <i class="bi bi bi-airplane d-block fs-3 mb-2"></i>
                       <span>Search Flights</span>
                     </button>
                   </div>
-                  <div class="col-6 col-md-4 col-lg">
+                  <div class="col-6 col-md-3 col-lg-2">
                     <button class="btn btn-action w-100" data-type="lodging" onclick="filterPlaces('lodging', this)">
                       <i class="bi bi-card-checklist d-block fs-3 mb-2"></i>
                       <span>Complete Package</span>
                     </button>
                   </div>
-                  <div class="col-6 col-md-4 col-lg">
+                  <div class="col-6 col-md-3 col-lg-2">
                     <button class="btn btn-action w-100" data-type="cafe" onclick="filterPlaces('cafe', this)">
                       <i class="bi bi bi-binoculars d-block fs-3 mb-2"></i>
                       <span>Book Activities</span>

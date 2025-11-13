@@ -702,6 +702,31 @@ html {
     background-color: var(--sand-beige);
 }
 
+/* ========================================
+   Package.html - Dropdown/Select Styling
+   ======================================== */
+/* Match dropdown/select styling to other form inputs */
+.form-select {
+    background-color: var(--white-smoke); /* Match form inputs */
+    border: 2px solid var(--sky-blue); /* Match border color */
+    color: var(--charcoal-grey); /* Match text color */
+    border-radius: var(--radius-sm); /* Match border radius */
+}
+
+.form-select:focus {
+    background-color: var(--white-smoke);
+    border-color: var(--ocean-blue); /* Match focus state */
+    box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25); /* Match focus shadow */
+    color: var(--charcoal-grey);
+    outline: none;
+}
+
+/* Style the placeholder option */
+.form-select option[disabled] {
+    color: var(--charcoal-grey);
+    opacity: 0.5;
+}
+
 /* Search Page Responsive */
 @media (max-width: 992px) {
     .results-panel {
