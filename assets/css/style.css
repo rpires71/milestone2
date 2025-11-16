@@ -157,9 +157,6 @@ html {
     color: var(--charcoal-grey);
 }
 
-/*.logo-main-icon {
-    animation: rotate 20s linear infinite;
-}*/
 
 @keyframes rotate {
     from {
@@ -760,6 +757,126 @@ html {
     .destination-tile .destination-image img {
         height: 150px !important;
     }
+}
+
+
+/* ========================================
+   Floating Labels - IMPROVED
+   ======================================== */
+.form-floating {
+    position: relative;
+}
+
+.form-floating > label {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.75rem;
+    font-size: 0.7rem;
+    color: var(--charcoal-grey);
+    opacity: 0.6;
+    font-weight: 500;
+    padding: 0;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 2;
+    transition: all 0.2s ease;
+}
+
+/* Form control base styling */
+.form-floating > .form-control {
+    height: calc(3.5rem + 2px);
+    padding-top: 1.25rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    background-color: var(--white-smoke);
+    border: 2px solid var(--sky-blue);
+    color: var(--charcoal-grey);
+    border-radius: var(--radius-sm);
+}
+
+.form-floating > .form-control:focus {
+    background-color: var(--white-smoke);
+    border-color: var(--ocean-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
+    outline: none;
+}
+
+.form-floating > .form-control:focus ~ label {
+    color: var(--ocean-blue);
+    opacity: 0.8;
+}
+
+/* Placeholder handling */
+.form-floating > .form-control::placeholder {
+    color: var(--charcoal-grey);
+    opacity: 0.5;
+}
+
+/* Large form controls (search box) */
+.form-floating > .form-control-lg {
+    height: calc(3.5rem + 2px);
+    padding-top: 1.25rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+}
+
+.form-floating > .form-control-lg ~ label {
+    top: 0.4rem;
+    left: 1rem;
+    font-size: 0.75rem;
+}
+
+/* Select dropdown */
+.form-floating > .form-select {
+    height: calc(3.5rem + 2px);
+    padding-top: 1.25rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 2rem;
+    background-color: var(--white-smoke);
+    border: 2px solid var(--sky-blue);
+    color: var(--charcoal-grey);
+    border-radius: var(--radius-sm);
+}
+
+.form-floating > .form-select:focus {
+    background-color: var(--white-smoke);
+    border-color: var(--ocean-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
+    outline: none;
+}
+
+.form-floating > .form-select:focus ~ label {
+    color: var(--ocean-blue);
+    opacity: 0.8;
+}
+
+/* Date input specific */
+.form-floating > input[type="date"] {
+    padding-top: 1.25rem;
+}
+
+.form-floating > input[type="date"]::-webkit-datetime-edit {
+    padding-top: 0;
+}
+
+.form-floating > input[type="date"]::-webkit-calendar-picker-indicator {
+    margin-top: 0.25rem;
+}
+
+/* Hide invalid date state */
+.form-floating > input[type="date"]:not(:focus):not(:valid) {
+    color: var(--charcoal-grey);
+    opacity: 0.5;
+}
+
+/* Extra fix for any remaining label backgrounds */
+.form-floating > label::before,
+.form-floating > label::after {
+    display: none !important;
 }
 
 

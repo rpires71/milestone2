@@ -1,395 +1,144 @@
-// ========================================
-// Holiday Destination Finder - Search Page JavaScript
-// Using NEW Google Places API (google.maps.places.Place)
-// ========================================
-
-let map;
-let markers = [];
-let currentSearchType = 'tourist_attraction';
-let infoWindows = [];
-
-// Initialize the page
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('Page loaded - initializing...');
-    initializeActionButtons();
-    initializeSearchButton();
-
-    // Note: Google Maps will be initialized when a search is performed
-});
-
-// ========================================
-// Action Buttons (Attractions, Restaurants, etc.)
-// ========================================
-function initializeActionButtons() {
-    const actionButtons = document.querySelectorAll('.btn-action');
-
-    actionButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            // Remove active class from all buttons
-            actionButtons.forEach(btn => btn.classList.remove('active'));
-
-            // Add active class to clicked button
-            this.classList.add('active');
-
-            // Store the selected type
-            currentSearchType = this.getAttribute('data-type');
-
-            // If a search has already been performed, re-search with new type
-            const cityInput = document.getElementById('citySearch');
-            if (cityInput.value.trim() !== '') {
-                performSearch(cityInput.value.trim());
-            }
-        });
-    });
+// Helper: get a usable city name (fallback to search input if needed)
+function getCityNameForUrls() {
+    let name = (typeof currentCityName !== 'undefined' && currentCityName) ? currentCityName : '';
+    if (!name) {
+        const input = document.getElementById('citySearch');
+        if (input && input.value.trim()) name = input.value.trim();
+    }
+    // final fallback
+    return name || '';
 }
 
-// ========================================
-// Filter Places Function (for onclick handlers)
-// ========================================
-function filterPlaces(placeType, button) {
-    console.log('filterPlaces called with type:', placeType);
+// Update setActiveBookingButton to accept the clicked element safely
+function setActiveBookingButton(clickedButton) {
+    // Remove booking-btn-primary from all and add secondary if you use these classes
+    document.querySelectorAll('.btn-action').forEach(btn => {
+        btn.classList.remove('booking-btn-primary');
+        btn.classList.add('booking-btn-secondary');
+        btn.classList.remove('active'); // also remove existing active
+    });
+    // Add active style to clicked
+    if (clickedButton) {
+        clickedButton.classList.add('booking-btn-primary');
+        clickedButton.classList.add('active');
+    }
+}
 
-    // Remove active class from all buttons
-    const actionButtons = document.querySelectorAll('.btn-action');
-    actionButtons.forEach(btn => btn.classList.remove('active'));
+/** Book hotels - redirects to Booking.com */
+function bookHotel(ev) {
+    const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
+    setActiveBookingButton(btn);
 
-    // Add active class to clicked button
-    button.classList.add('active');
+    const checkIn = document.getElementById('checkin').value;
+    const checkOut = document.getElementById('checkout').value;
+    const guests = document.getElementById('guests').value || 2;
 
-    // Store the selected type
-    currentSearchType = placeType;
-    console.log('Current search type set to:', currentSearchType);
+    if (!checkIn || !checkOut) {
+        alert('Please select check-in and check-out dates');
+        return;
+    }
 
-    // If a search has already been performed, re-search with new type
-    const cityInput = document.getElementById('citySearch');
-    if (cityInput.value.trim() !== '') {
-        console.log('Re-searching with new type for city:', cityInput.value.trim());
-        performSearch(cityInput.value.trim());
+    const cityName = getCityNameForUrls();
+    const searchParam = encodeURIComponent(cityName);
+
+    // Booking expects these params: ss (search string) & checkin/check_out in YYYY-MM-DD
+    const bookingUrl = `https://www.booking.com/searchresults.html?ss=${searchParam}&checkin=${encodeURIComponent(checkIn)}&checkout=${encodeURIComponent(checkOut)}&group_adults=${encodeURIComponent(guests)}&no_rooms=1`;
+
+    window.open(bookingUrl, '_blank');
+}
+
+/** Book flights - always departing from London (all airports - LON) */
+function bookFlights(ev) {
+    const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
+    setActiveBookingButton(btn);
+
+    const checkIn = document.getElementById('checkin').value;
+    const checkOut = document.getElementById('checkout').value;
+
+    if (!checkIn) {
+        alert('Please select a departure (check-in) date');
+        return;
+    }
+
+    // Always depart from London (all airports)
+    const origin = "London (LON)";
+
+    // Destination from user search
+    const dest = getCityNameForUrls().split(',')[0].trim() || '';
+    const departDate = checkIn;
+    const returnDate = checkOut || '';
+
+    // Build a Google Flights query that respects LON as the origin
+    let googleFlightsUrl =
+        `https://www.google.com/travel/flights?q=Flights%20from%20${encodeURIComponent(origin)}%20to%20${encodeURIComponent(dest)}`;
+
+    if (returnDate) {
+        googleFlightsUrl += `%20departing%20${encodeURIComponent(departDate)}%20returning%20${encodeURIComponent(returnDate)}`;
     } else {
-        console.log('No city entered yet - waiting for search');
+        googleFlightsUrl += `%20on%20${encodeURIComponent(departDate)}`;
     }
+
+    window.open(googleFlightsUrl, '_blank');
 }
 
+/** Book complete package - Expedia packages, from London (all airports) */
+function bookPackage(ev) {
+    const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
+    setActiveBookingButton(btn);
 
-// ========================================
-// Search Button
-// ========================================
-function initializeSearchButton() {
-    const searchBtn = document.getElementById('searchBtn');
-    const cityInput = document.getElementById('citySearch');
+    const checkIn = document.getElementById('checkin').value;
+    const checkOut = document.getElementById('checkout').value;
+    const guests = document.getElementById('guests').value || '2';
 
-    searchBtn.addEventListener('click', function () {
-        const cityName = cityInput.value.trim();
-
-        if (cityName === '') {
-            alert('Please enter a city name');
-            return;
-        }
-
-        performSearch(cityName);
-    });
-
-    // Allow Enter key to trigger search
-    cityInput.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            searchBtn.click();
-        }
-    });
-}
-
-// ========================================
-// Handle Search Function (for onclick handler)
-// ========================================
-function handleSearch() {
-    console.log('handleSearch called');
-    const cityInput = document.getElementById('citySearch');
-    const cityName = cityInput.value.trim();
-
-    console.log('City name:', cityName);
-
-    if (cityName === '') {
-        alert('Please enter a city name');
+    if (!checkIn || !checkOut) {
+        alert('Please select both check-in and check-out dates for a package search.');
         return;
     }
 
-    performSearch(cityName);
-}
-
-// ========================================
-// Perform Search
-// ========================================
-function performSearch(cityName) {
-    console.log('performSearch called for:', cityName, 'Type:', currentSearchType);
-
-    // Show results section
-    document.getElementById('resultsSection').style.display = 'block';
-
-    // Initialise map if not already initialised
-    if (!map) {
-        console.log('Initializing map...');
-        initMap();
+    // Get destination city from currentCityName or from the search box
+    let city = '';
+    if (typeof currentCityName !== 'undefined' && currentCityName) {
+        city = currentCityName;
+    } else {
+        const input = document.getElementById('citySearch');
+        if (input && input.value.trim()) {
+            city = input.value.trim();
+        }
     }
 
-    // Use Google Geocoding to find the city
-    const geocoder = new google.maps.Geocoder();
-
-    geocoder.geocode({ address: cityName }, function (results, status) {
-        console.log('Geocode status:', status);
-
-        if (status === 'OK') {
-            const location = results[0].geometry.location;
-            console.log('Location found:', location.lat(), location.lng());
-
-            // Center map on the city
-            map.setCenter(location);
-            map.setZoom(13);
-
-            // Search for places using NEW API
-            searchNearbyPlacesNew(location);
-
-            // Smooth scroll to results
-            document.getElementById('resultsSection').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        } else {
-            alert('City not found. Please try another city name.');
-            console.error('Geocode error: ' + status);
-        }
-    });
-}
-
-// ========================================
-// Initialise Google Maps
-// ========================================
-function initMap() {
-    // Default center (London)
-    const defaultLocation = { lat: 51.5074, lng: -0.1278 };
-
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: defaultLocation,
-        zoom: 13,
-        mapId: 'DEMO_MAP_ID', // Required for Advanced Markers
-        /*styles: [
-            {
-                featureType: 'water',
-                elementType: 'geometry',
-                stylers: [{ color: '#90E0EF' }]
-            },
-            {
-                featureType: 'landscape',
-                elementType: 'geometry',
-                stylers: [{ color: '#FAF3E0' }]
-            }
-        ]*/
-    });
-
-    console.log('Map initialised successfully');
-}
-
-// ========================================
-// Search Nearby Places - NEW PLACES API
-// ========================================
-async function searchNearbyPlacesNew(location) {
-    console.log('Searching nearby places with NEW API for type:', currentSearchType);
-
-    // Clear existing markers
-    clearMarkers();
-
-    // Clear existing results
-    const resultsList = document.getElementById('resultsList');
-    resultsList.innerHTML = '<div class="text-center text-muted py-3"><i class="bi bi-hourglass-split"></i> Loading results...</div>';
-
-    try {
-        // Convert type to includedTypes format
-        const includedTypes = [currentSearchType];
-
-        console.log('Search parameters:', {
-            location: { lat: location.lat(), lng: location.lng() },
-            radius: 5000,
-            includedTypes: includedTypes
-        });
-
-        // NEW API: Use searchNearby
-        const { places } = await google.maps.places.Place.searchNearby({
-            locationRestriction: {           // Different parameter name
-                center: {                    // Plain object
-                    lat: location.lat(),     // Call methods to get numbers
-                    lng: location.lng()
-                },
-                radius: 5000                 // Radius goes inside
-            },
-            includedTypes: includedTypes,
-            maxResultCount: 20,
-            fields: ['displayName', 'location', 'rating', 'formattedAddress', 'regularOpeningHours']
-        });
-
-        console.log('Places found:', places ? places.length : 0);
-
-        if (places && places.length > 0) {
-            // Display results
-            displayResultsNew(places);
-
-            // Add markers to map
-            places.forEach((place, index) => {
-                createMarkerNew(place, index);
-            });
-        } else {
-            resultsList.innerHTML = '<div class="alert alert-info">No results found for this location and category. Try a different filter or city.</div>';
-        }
-
-    } catch (error) {
-        console.error('Error searching places:', error);
-
-        let errorMessage = 'Error searching places. ';
-
-        if (error.message.includes('API key')) {
-            errorMessage += 'Check that your API key is valid and has Places API (New) enabled.';
-        } else if (error.message.includes('billing')) {
-            errorMessage += 'Billing must be enabled in Google Cloud Console.';
-        } else {
-            errorMessage += error.message;
-        }
-
-        resultsList.innerHTML = `<div class="alert alert-danger">${errorMessage}</div>`;
-    }
-}
-
-// ========================================
-// Display Results in Panel - NEW API FORMAT
-// ========================================
-function displayResultsNew(places) {
-    const resultsList = document.getElementById('resultsList');
-    resultsList.innerHTML = '';
-
-    places.forEach((place, index) => {
-        const resultItem = document.createElement('div');
-        resultItem.className = 'result-item';
-        resultItem.setAttribute('data-index', index);
-
-        // Get place details
-        const name = place.displayName || 'Unknown Place';
-        const address = place.formattedAddress || 'Address not available';
-        const rating = place.rating || null;
-        const isOpen = place.regularOpeningHours?.openNow;
-
-        // Build rating stars
-        let ratingHTML = '';
-        if (rating) {
-            const fullStars = Math.floor(rating);
-            const hasHalfStar = rating % 1 >= 0.5;
-
-            for (let i = 0; i < fullStars; i++) {
-                ratingHTML += '<i class="bi bi-star-fill"></i>';
-            }
-            if (hasHalfStar) {
-                ratingHTML += '<i class="bi bi-star-half"></i>';
-            }
-            ratingHTML += ` <span>${rating.toFixed(1)}</span>`;
-        }
-
-        resultItem.innerHTML = `
-            <h5><i class="bi bi-geo-alt-fill me-2 text-primary"></i>${name}</h5>
-            <p><i class="bi bi-pin-map me-2"></i>${address}</p>
-            ${rating ? `<p class="rating">${ratingHTML}</p>` : ''}
-            ${isOpen !== undefined ? `<p><i class="bi bi-clock me-2"></i>${isOpen ? '<span class="text-success">Open Now</span>' : '<span class="text-danger">Closed</span>'}</p>` : ''}
-        `;
-
-        // Add click event to center map on this location
-        resultItem.addEventListener('click', function () {
-            if (place.location) {
-                map.setCenter(place.location);
-                map.setZoom(16);
-
-                // Bounce the corresponding marker
-                if (markers[index]) {
-                    // For standard markers, use animation
-                    if (markers[index].setAnimation) {
-                        markers[index].setAnimation(google.maps.Animation.BOUNCE);
-                        setTimeout(() => {
-                            markers[index].setAnimation(null);
-                        }, 1400);
-                    }
-                }
-            }
-        });
-
-        resultsList.appendChild(resultItem);
-    });
-}
-
-// ========================================
-// Create Map Markers - Using Standard Markers
-// ========================================
-function createMarkerNew(place, index) {
-    if (!place.location) {
-        console.warn('Place has no location:', place);
+    if (!city) {
+        alert('Please enter a destination city.');
         return;
     }
 
-    // Use standard Marker (works with all maps)
-    const marker = new google.maps.Marker({
-        map: map,
-        position: place.location,
-        title: place.displayName || 'Unknown Place',
-        label: {
-            text: (index + 1).toString(),
-            color: 'white',
-            fontWeight: 'bold'
-        },
-        icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            fillColor: '#0077B6', // Ocean Blue
-            fillOpacity: 1,
-            strokeColor: '#FF6B35', // Coral Orange
-            strokeWeight: 3,
-            scale: 15
-        }
+    // Expedia package deeplink (Flight + Hotel):
+    // https://www.expedia.co.uk/go/package/search/FlightHotel/{FromDate}/{ToDate}
+    // then query params: FromAirport, Destination, NumRoom, NumAdult, etc.
+    const fromDate = checkIn;    // already YYYY-MM-DD
+    const toDate   = checkOut;
+
+    const baseUrl = `https://www.expedia.co.uk/go/package/search/FlightHotel/${encodeURIComponent(fromDate)}/${encodeURIComponent(toDate)}`;
+
+    const params = new URLSearchParams({
+        FromAirport: 'LON',                  // London – all airports
+        Destination: city,                   // let Expedia interpret the city text
+        NumRoom: '1',
+        NumAdult: guests                     // you’re treating "guests" as adults
+        // You could add NumChild / Child ages here later if needed
     });
 
-    // Add info window
-    const infowindow = new google.maps.InfoWindow({
-        content: `
-            <div style="padding: 10px; max-width: 200px;">
-                <h6 style="margin: 0 0 5px 0; color: #0077B6; font-weight: bold;">${place.displayName || 'Unknown Place'}</h6>
-                <p style="margin: 0; font-size: 0.9rem; color: #2F3E46;">${place.formattedAddress || ''}</p>
-                ${place.rating ? `<p style="margin: 5px 0 0 0; color: #FF6B35; font-weight: bold;">⭐ ${place.rating.toFixed(1)}</p>` : ''}
-            </div>
-        `
-    });
+    const expediaUrl = `${baseUrl}?${params.toString()}`;
 
-    marker.addListener('click', function () {
-        // Close all other info windows
-        infoWindows.forEach(iw => iw.close());
-
-        infowindow.open(map, marker);
-    });
-
-    infoWindows.push(infowindow);
-    markers.push(marker);
+    window.open(expediaUrl, '_blank');
 }
 
-// ========================================
-// Clear Markers
-// ========================================
-function clearMarkers() {
-    markers.forEach(marker => {
-        if (marker.setMap) {
-            marker.setMap(null);
-        }
-    });
-    markers = [];
+/** Book activities - redirects to GetYourGuide */
+function bookActivities(ev) {
+    const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
+    setActiveBookingButton(btn);
 
-    // Close all info windows
-    infoWindows.forEach(iw => iw.close());
-    infoWindows = [];
-}
+    const city = getCityNameForUrls().split(',')[0].trim() || '';
+    const getYourGuideUrl = `https://www.getyourguide.com/s/?q=${encodeURIComponent(city)}`;
 
-// ========================================
-// Search City Function (for Popular Destinations buttons)
-// ========================================
-function searchCity(cityName) {
-    console.log('searchCity called with:', cityName);
-    document.getElementById('citySearch').value = cityName;
-    performSearch(cityName);
+    window.open(getYourGuideUrl, '_blank');
 }

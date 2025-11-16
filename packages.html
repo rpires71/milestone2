@@ -99,30 +99,9 @@
         <div class="row mb-4">
           <div class="col-12">
             <div class="search-container p-4 bg-white rounded-4 shadow-md">
-              <!-- Search Input & Button -->
-              <div class="row g-3 mb-4">
-                <div class="col-md-8">
-                  <input type="text" class="form-control form-control-lg" id="citySearch"
-                    placeholder="Enter a city name e.g. Paris, New York City, Tokyo">
-                </div>
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-lg w-100" id="searchBtn" onclick="handleSearch()"">
-                    <i class=" bi bi-search me-2"></i>Search Destination
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 2: Action Buttons -->
-      <div class="search-section mb-5">
-        <div class="row mb-4">
-          <div class="col-12">
-            <div class="search-container p-4 bg-white rounded-4 shadow-md">
+              
               <!-- Heading with Icon -->
-              <div class="d-flex justify-content-center align-items-center mb-3">
+              <div class="d-flex justify-content-center align-items-center mb-4 py-4">
                 <img src="assets/images/package.webp" alt="Holiday Package Icon"
                   style="width: 120px; height: auto; margin-right: 40px;">
                 <div class="text-center">
@@ -135,65 +114,93 @@
                 </div>
               </div>
 
-              <!-- Trip Details -->
-              <form id="package-filters" class="row g-3 g-md-4 justify-content-center mb-4">
-                <!-- Check-in -->
-                <div class="col-12 col-md-4 col-lg-3">
-                  <input type="date" class="form-control" id="checkin" name="checkin" placeholder="Check-in">
-                </div>
-
-                <!-- Check-out -->
-                <div class="col-12 col-md-4 col-lg-3">
-                  <input type="date" class="form-control" id="checkout" name="checkout" placeholder="Check-out">
-                </div>
-
-                <!-- Guests -->
-                <div class="col-12 col-md-4 col-lg-2">
-                  <select class="form-select" id="guests" name="guests">
-                    <option value="" disabled selected hidden>Guests</option>
-                    <option value="1">1 guest</option>
-                    <option value="2">2 guests</option>
-                    <option value="3">3 guests</option>
-                    <option value="4">4 guests</option>
-                    <option value="5">5 guests</option>
-                    <option value="6">6 guests</option>
-                  </select>
-                </div>
-              </form>
-
-              <!-- Action Buttons -->
-              <div class="action-buttons">
-                <div class="row g-3 justify-content-center"">
-                  <div class="col-6 col-md-3 col-lg-2">
-                    <button class="btn btn-action w-100 active" data-type="hotels"
-                      onclick="filterPlaces('hotels', this)">
-                      <i class="bi bi-house-door d-block fs-3 mb-2"></i>
-                      <span>Search Hotels</span>
-                    </button>
-                  </div>
-                  <div class="col-6 col-md-3 col-lg-2">
-                    <button class="btn btn-action w-100" data-type="restaurant"
-                      onclick="filterPlaces('restaurant', this)">
-                      <i class="bi bi bi-airplane d-block fs-3 mb-2"></i>
-                      <span>Search Flights</span>
-                    </button>
-                  </div>
-                  <div class="col-6 col-md-3 col-lg-2">
-                    <button class="btn btn-action w-100" data-type="lodging" onclick="filterPlaces('lodging', this)">
-                      <i class="bi bi-card-checklist d-block fs-3 mb-2"></i>
-                      <span>Complete Package</span>
-                    </button>
-                  </div>
-                  <div class="col-6 col-md-3 col-lg-2">
-                    <button class="btn btn-action w-100" data-type="cafe" onclick="filterPlaces('cafe', this)">
-                      <i class="bi bi bi-binoculars d-block fs-3 mb-2"></i>
-                      <span>Book Activities</span>
-                    </button>
+              <!-- Search Input with Floating Label (Ryanair Style) -->
+              <div class="row g-3 mb-4 mt-4 justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                  <div class="form-floating">
+                    <input type="text" 
+                           class="form-control form-control-lg" 
+                           id="citySearch" 
+                           placeholder="Enter city name">
+                    <label for="citySearch" class="text-muted">Search</label>
                   </div>
                 </div>
               </div>
 
-              <!-- SEPARATOR LINE - ADD THIS -->
+              <!-- Trip Details Form -->
+              <form id="package-filters" class="row g-3 g-md-4 justify-content-center mb-4">
+                <!-- Check-in -->
+                <div class="col-12 col-md-4 col-lg-3">
+                  <div class="form-floating">
+                    <input type="date" 
+                           class="form-control" 
+                           id="checkin" 
+                           name="checkin" 
+                           placeholder="Check-in">
+                    <label for="checkin" class="text-muted">Check-in</label>
+                  </div>
+                </div>
+
+                <!-- Check-out -->
+                <div class="col-12 col-md-4 col-lg-3">
+                  <div class="form-floating">
+                    <input type="date" 
+                           class="form-control" 
+                           id="checkout" 
+                           name="checkout" 
+                           placeholder="Check-out">
+                    <label for="checkout" class="text-muted">Check-out</label>
+                  </div>
+                </div>
+
+                <!-- Guests -->
+                <div class="col-12 col-md-4 col-lg-2">
+                  <div class="form-floating">
+                    <select class="form-select" id="guests" name="guests">
+                      <option value="" disabled selected hidden>Select guests</option>
+                      <option value="1">1 guest</option>
+                      <option value="2">2 guests</option>
+                      <option value="3">3 guests</option>
+                      <option value="4">4 guests</option>
+                      <option value="5">5 guests</option>
+                      <option value="6">6 guests</option>
+                    </select>
+                    <label for="guests" class="text-muted">Guests</label>
+                  </div>
+                </div>
+              </form>
+
+<!-- Action Buttons -->
+<div class="action-buttons">
+  <div class="row g-3 justify-content-center">
+    <div class="col-6 col-md-3 col-lg-2">
+      <button type="button" class="btn btn-action w-100" onclick="bookHotel(event)">
+        <i class="bi bi-house-door d-block fs-3 mb-2"></i>
+        <span>Search Hotels</span>
+      </button>
+    </div>
+    <div class="col-6 col-md-3 col-lg-2">
+      <button type="button" class="btn btn-action w-100" onclick="bookFlights(event)">
+        <i class="bi bi-airplane d-block fs-3 mb-2"></i>
+        <span>Search Flights</span>
+      </button>
+    </div>
+    <div class="col-6 col-md-3 col-lg-2">
+      <button type="button" class="btn btn-action w-100" onclick="bookPackage(event)">
+        <i class="bi bi-card-checklist d-block fs-3 mb-2"></i>
+        <span>Complete Package</span>
+      </button>
+    </div>
+    <div class="col-6 col-md-3 col-lg-2">
+      <button type="button" class="btn btn-action w-100" onclick="bookActivities(event)">
+        <i class="bi bi-binoculars d-block fs-3 mb-2"></i>
+        <span>Book Activities</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+              <!-- Separator Line -->
               <hr class="my-4">
 
               <!-- Our Partners -->
@@ -203,31 +210,26 @@
                   <!-- Booking.com -->
                   <div class="col-6 col-md-3 col-lg-2 text-center">
                     <img src="assets/images/booking.webp" alt="Booking.com" class="img-fluid mb-2"
-                      style="max-height: 250px;">
-                    </a>
+                      style="max-height: 150px;">
                   </div>
 
                   <!-- Google Flights -->
                   <div class="col-6 col-md-3 col-lg-2 text-center">
                     <img src="assets/images/google-flights.webp" alt="Google Flights" class="img-fluid mb-2"
-                      style="max-height: 250px;">
-                    </a>
+                      style="max-height: 150px;">
                   </div>
 
                   <!-- Expedia -->
                   <div class="col-6 col-md-3 col-lg-2 text-center">
                     <img src="assets/images/expedia.webp" alt="Expedia" class="img-fluid mb-2"
-                      style="max-height: 250px;">
-                    </a>
+                      style="max-height: 150px;">
                   </div>
 
                   <!-- GetYourGuide -->
                   <div class="col-6 col-md-3 col-lg-2 text-center">
                     <img src="assets/images/get-your-guide.webp" alt="GetYourGuide" class="img-fluid mb-2"
-                      style="max-height: 250px;">
-                    </a>
+                      style="max-height: 150px;">
                   </div>
-
                 </div>
               </div>
             </div>
@@ -420,6 +422,6 @@
     async defer></script>
   <!-- Custom JavaScript -->
   <script src="assets/js/search.js"></script>
+<script src="assets/js/packages.js"></script>
 </body>
-
 </html>

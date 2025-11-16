@@ -1,81 +1,54 @@
 /**
- * Holiday Destination Finder - JavaScript
- * Stage 1: Bootstrap Navigation with Contact Section
+ *  script.js for index.html
+ * --------------------------------
+ * Practical behaviour:
+ *  - Smoothly scroll to in-page sections (e.g. #contact)
+ *  - Close the Bootstrap navbar on mobile after a link is clicked
  */
 
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Holiday Destination Finder initialized with Bootstrap');
-    
-    // Initialize destination card handlers
-    initDestinationCards();
-    
-    // Initialize contact form
-    initContactForm();
-    
-    // Initialize smooth scroll for nav links
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialise smooth scrolling for in-page links
     initSmoothScroll();
 });
 
 /**
- * Initialize destination card click handlers
- */
-function initDestinationCards() {
-    const buttons = document.querySelectorAll('[data-city]');
-    
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const cityName = this.getAttribute('data-city');
-            alert(`You selected ${cityName}! Search functionality will be added in Stage 2.`);
-        });
-    });
-}
-
-/**
- * Initialize contact form
- */
-function initContactForm() {
-    const form = document.getElementById('contactForm');
-    
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Show success message
-            alert(`Thank you ${name}! Your message has been received. We'll get back to you at ${email} soon.`);
-            
-            // Reset form
-            form.reset();
-        });
-    }
-}
-
-/**
- * Initialize smooth scroll for navigation links
+ * initSmoothScroll
+ * ----------------
+ * Enhances any anchor links whose href starts with "#"
+ * (these are same-page links like #contact).
+ *
+ * When clicked:
+ *  - Prevents the default instant jump
+ *  - Scrolls smoothly to the target section
+ *  - Closes the Bootstrap navbar if it's open (mobile view)
  */
 function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Select all links where href begins with "#"
+    const anchors = document.querySelectorAll('a[href^="#"]');
+
+    anchors.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            
-            // Only handle same-page links
+
+            // Ignore just "#" which doesn't point to a real element
             if (href !== '#' && href.startsWith('#')) {
-                const targetId = href.substring(1);
+                const targetId = href.substring(1); // remove "#"
                 const targetElement = document.getElementById(targetId);
-                
+
                 if (targetElement) {
+                    // Stop the browser "jump" behaviour
                     e.preventDefault();
+
+                    // Scroll smoothly to the element
                     targetElement.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    
-                    // Close mobile menu if open
+
+                    // If the Bootstrap navbar is open (mobile), close it
                     const navbarCollapse = document.getElementById('navbarNav');
                     if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                        // Get existing Bootstrap Collapse instance
                         const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
                         if (bsCollapse) {
                             bsCollapse.hide();
