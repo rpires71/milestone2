@@ -140,20 +140,20 @@ html {
 }
 
 /* ========================================
-   Hero Header Section
+   Header Hero Section
    ======================================== */
-.hero-header {
+.header-hero{
     background: linear-gradient(135deg, var(--sky-blue) 0%, rgba(0, 119, 182, 0.2) 100%);
     padding: 3rem 0;
 }
 
-.hero-header h1 {
+.header-hero h1 {
     color: var(--ocean-blue);
     font-family: var(--font-heading);
     font-weight: 700;
 }
 
-.hero-header .lead {
+.header-hero .lead {
     color: var(--charcoal-grey);
 }
 
@@ -480,7 +480,7 @@ html {
         height: 400px;
     }
     
-    .hero-header h1 {
+    .header-hero h1 {
         font-size: 2rem;
     }
     
@@ -516,7 +516,7 @@ html {
 }
 
 @media (max-width: 576px) {
-    .hero-header h1 {
+    .header-hero h1 {
         font-size: 1.75rem;
     }
     
