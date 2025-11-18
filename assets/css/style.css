@@ -203,14 +203,14 @@ html {
     font-family: var(--font-heading);
 }
 
-.features-list ul li {
+.list-features ul li {
     font-size: 1rem;
     color: var(--charcoal-grey);
 }
 
 /* Key Features Checkmarks - Coral Orange */
-.features-list .bi-check-circle-fill,
-.features-list i {
+.list-features .bi-check-circle-fill,
+.list-features i {
     color: var(--coral-orange) !important;
 }
 
