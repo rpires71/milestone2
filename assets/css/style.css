@@ -1,6 +1,44 @@
-/* ========================================
-   CSS Variables - Colour Palette
-   ======================================== */
+/* ======================================================================
+   CSS DESIGN SYSTEM: COLOUR PALETTE, TYPOGRAPHY & UI TOKENS (Variables)
+   ----------------------------------------------------------------------
+   Purpose:
+   This section creates a reusable visual system for the whole website by
+   defining CSS Variables (also called custom properties). These variables
+   store values for colours, fonts, spacing, border curvature, and shadows
+   so the design is consistent and easy to update across all pages.
+
+   Benefits:
+   - Promotes consistent branding across index.html, search.html, and
+     packages.html (e.g., buttons, headings, hero banners, footers).
+   - Reduces code repetition (instead of writing #0077B6 everywhere,
+     we use var(--ocean-blue)).
+   - Enables quick theme changes (changing one value updates the site).
+
+   Where Used:
+   - Navigation bar and brand colours (all pages)
+   - Buttons and interactive search/filter components
+   - Hero sections and footer styling
+   - Destination cards, search panel, booking form tiles
+   - Borders, background colours and box shadows
+
+   Project Colour Strategy:
+   This palette is based on a travel and ocean theme:
+   - --ocean-blue: Primary brand colour (large headings, navbar, borders)
+   - --sky-blue: Accent and highlight colour (hover states, buttons)
+   - --coral-orange: Call-to-action colour (primary buttons, icons on hover)
+   - --sand-beige & --white-smoke: Neutral background tones (contrast against text)
+   - --charcoal-grey: High-contrast readable text colour
+
+   Typography Strategy:
+   - Headings use Montserrat (bold, modern and readable for titles)
+   - Body text uses Lato (clean, easy to read for paragraphs)
+
+   UI Token Strategy:
+   - Spacing values avoid random margins and enforce consistency.
+   - Border-radius tokens ensure all cards/tiles/buttons look related.
+   - Shadow tokens create depth, improving visual hierarchy and usability.
+
+   ================================================================ */
 :root {
     /* Primary Colours */
     --ocean-blue: #0077B6;
@@ -32,9 +70,54 @@
     --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* ========================================
-   Global Styles
-   ======================================== */
+/* ======================================================================
+   GLOBAL STYLES (Base Reset, Typography & Page Behaviour)
+   ----------------------------------------------------------------------
+   Purpose:
+   This section defines universal rules that apply to the entire website
+   before any specific component styling is added. These global settings
+   remove browser inconsistencies, apply the chosen typography system, 
+   and control how the page behaves when scrolling.
+
+   1. CSS Reset using the universal selector (*)
+      - margin: 0 and padding: 0 remove default browser spacing around 
+        all elements (e.g., <p>, <h1>, <section>).  
+      - box-sizing: border-box ensures that padding and borders are 
+        included inside width/height calculations, preventing layout 
+        issues.  
+      - This creates a predictable foundation for responsive design.
+
+   2. Body Styling
+      - font-family: var(--font-body) applies 'Lato' to all readable text,
+        giving the site a modern, clean travel aesthetic.
+      - font-size: 16px standardises text to an accessible base size.
+      - line-height: 1.6 improves readability across long paragraphs.
+      - color: var(--charcoal-grey) ensures high text contrast against
+        the lighter sand background.
+      - background-color: var(--sand-beige) creates a warm neutral page 
+        background that matches the natural travel theme.
+      - min-height: 100vh ensures each page fills at least the viewport 
+        height, preventing small pages from looking cut off.
+
+   3. Heading Typography (h1–h6)
+      - font-family: var(--font-heading) uses 'Montserrat' for headings 
+        to visually distinguish titles from body text.
+      - font-weight: 600 makes headings bold enough to stand out.
+      - color: var(--charcoal-grey) keeps headings legible and consistent.
+
+   4. Smooth Scrolling (html)
+      - scroll-behavior: smooth enables animated scrolling when users 
+        click internal navigation links (e.g., #popular, #contact).
+      - Enhances user experience and provides visual feedback.
+
+   Where Used:
+   - index.html – About section, hero banner, footer contact details
+   - search.html – Search input headings, results list, map section
+   - packages.html – Booking headings, floating labels, partner logos
+   - These global rules ensure all text and spacing across all pages 
+     follows one consistent format based on the project's design system.
+
+   ====================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -60,9 +143,62 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ========================================
-   Navigation Bar
-   ======================================== */
+/* ======================================================================
+   NAVIGATION BAR STYLING (Brand Identity, Accessibility & UI Behaviour)
+   ----------------------------------------------------------------------
+   Purpose:
+   This section customises Bootstrap's default navbar to match the
+   project's travel-themed visual identity. The navigation bar appears
+   on every page of the website (index.html, search.html, packages.html),
+   so the colours, fonts and interactions must remain consistent.
+
+   Key Design Goals:
+   - Strengthen branding using the project's colour palette and fonts.
+   - Improve usability through responsive sizing and hover feedback.
+   - Visually differentiate active navigation links from inactive ones.
+
+   Component Breakdown:
+   1. .navbar
+      - Adds padding for comfortable touch areas and spacing.
+      - Sets a solid brand background using var(--ocean-blue).
+      - The !important override ensures the colour replaces Bootstrap's
+        default navbar theme classes (e.g., bg-light or bg-dark).
+
+   2. .navbar-brand
+      - Uses Montserrat (var(--font-heading)) as a unique brand font.
+      - Bold weight (700) and larger size (1.5rem) make the title readable.
+      - Colour set to ocean-blue (even when nested inside other containers).
+
+   3. .logo-text & .logo-icon
+      - .logo-text applies accent colour var(--sky-blue) for brand clarity.
+      - .logo-icon styles the logo <img> like a badge by adding padding,
+        rounded corners and a blue background—useful for brand recognition
+        on small screens.
+
+   4. .navbar-logo
+      - Ensures all logo images scale evenly (height = 40px).
+      - object-fit: contain prevents stretching or distortion.
+
+   5. .nav-link (link styling for Home / Search / Popular / Packages / Contact)
+      - Uses the heading font to stand out as “menu options”.
+      - var(--sky-blue) text colour contrasts well with the ocean-blue navbar.
+      - padding + border-radius create button-like clickable areas.
+      - transition enables smooth visual feedback on hover.
+
+   6. .nav-link:hover & .nav-link.active
+      - Hover swaps colours (blue background + dark text) to show where the
+        cursor is. Improves usability and accessibility.
+      - Active state shows which page the user is currently viewing using
+        white text on ocean-blue, improving navigation clarity.
+
+   Where Used:
+   - index.html – controls top navigation bar across About and Popular sections.
+   - search.html – styles Search page navigation that links back to home.
+   - packages.html – formats navigation for the holiday booking page.
+
+   ====================================================================== */
+
+
 .navbar {
     padding: 1rem 2rem;
     background-color: var(--ocean-blue) !important;
@@ -115,9 +251,63 @@ html {
     background-color: var(--ocean-blue);
 }
 
-/* ========================================
-   Buttons
-   ======================================== */
+/* ======================================================================
+   BUTTON STYLING (Primary CTA & Icon Emphasis)
+   ----------------------------------------------------------------------
+   Purpose:
+   This section customises buttons used as "all-to-actions" throughout 
+   the website. These buttons guide the user toward key interactions, such 
+   as exploring destinations, booking trips, or performing a search. The 
+   styling overrides Bootstrap's default '.btn-primary' design to align
+   with the project's brand identity and improve usability.
+
+   1. .btn-primary (Primary Call-To-Action)
+      - background-color: var(--coral-orange)  
+        Uses the project's chosen CTA colour to attract attention and 
+        encourage interaction. Coral contrasts strongly with the blue 
+        palette, signalling important actions like "Explore" or "Search".
+      - border: none  
+        Removes Bootstrap's default border to produce a cleaner, modern 
+        flat design.
+      - font-family & font-weight  
+        Applies the heading font (Montserrat) to reinforce emphasis and 
+        hierarchy. Makes CTAs visually prominent compared to body text.
+      - padding & border-radius  
+        Larger padding increases clickable/tap area (better on mobile). 
+        Radius var(--radius-md) matches the design system for consistent 
+        rounded edges across components.
+      - transition: smooth visual changes upon hover for responsiveness.
+      - color: var(--white-smoke)  
+        High contrast text colour improves readability and accessibility 
+        against the coral background.
+
+   2. .btn-primary:hover (Hover Interaction)
+      - transform: translateY(-3px)  
+        Adds a subtle lift effect, providing feedback that the element is 
+        interactive. Enhances UX and perceived affordance on both desktop 
+        and touch interfaces.
+      - box-shadow  
+        Uses a shadow tinted with coral (rgba(255, 107, 53, 0.3)) to keep 
+        colour branding consistent even in hover states.
+      - background-color intentionally remains the same  
+        Preserves the brand’s coral-orange identity without changing tone 
+        or decreasing contrast.
+
+   3. .btn-action i (Secondary Icon Buttons)
+      - Targets icons inside '.btn-action' buttons used in the booking page 
+        and search filters.  
+        Icons adopt a coral-orange colour to maintain visual hierarchy 
+        and direct attention toward clickable affordances, while keeping 
+        the backgrounds more neutral than '.btn-primary'.
+      - Supports user recognition of interactive controls at a glance.
+
+   Where Used:
+   - index.html – Hero "Start Exploring" button and Explore buttons on cards  
+   - search.html – "Search Destination" button and Explore buttons  
+   - packages.html – Secondary booking icons ("Search Flights", "Complete Package") 
+                     and CTA buttons inside the Popular Destinations section
+   ====================================================================== */
+
 .btn-primary {
     background-color: var(--coral-orange);
     border: none;
@@ -139,9 +329,56 @@ html {
     color: var(--coral-orange) !important;  /* Coral orange icons */
 }
 
-/* ========================================
-   Header Hero Section
-   ======================================== */
+/* ======================================================================
+   HEADER HERO SECTION (Visual Introduction & Brand Recognition)
+   ----------------------------------------------------------------------
+   Purpose:
+   This section styles the "hero banner" found at the top of key pages.
+   The hero visually introduces the website using strong branding, a
+   welcoming colour palette, and large typography that establishes the
+   theme of holiday travel. It uses a gradient background and typography
+   hierarchy to ensure the main headline attracts attention immediately.
+
+   1. .header-hero (Container Styling)
+      - background: linear-gradient(...)
+        Applies a diagonal gradient using var(--sky-blue) fading into a
+        transparent version of var(--ocean-blue). This reflects the
+        project's ocean–sky colour theme and creates a soft, modern
+        depth effect without heavy imagery.
+      - padding: 3rem 0
+        Increases vertical spacing to make the header feel open and
+        visually prominent. Spacious padding improves readability and
+        prevents the content from feeling crowded.
+
+   2. .header-hero h1 (Primary Page Title)
+      - color: var(--ocean-blue)
+        Uses the project's dominant brand colour to emphasise page titles
+        such as "Discover Your Perfect Holiday Destination" or 
+        "Book Your Holiday Package". Blue has strong semantic links to
+        travel and reliability.
+      - font-family & font-weight
+        Montserrat heading typeface and bold weight (700) improve
+        hierarchy by distinguishing titles from body text. This guides
+        the user's eye and supports accessible visual structure.
+
+   3. .header-hero .lead (Supporting Text/Subheading)
+      - color: var(--charcoal-grey)
+        A softer dark tone for descriptive sentences, improving legibility
+        and reducing harsh contrast compared to black. This makes long
+        subtitles more comfortable to read, especially against a gradient.
+
+   Where Used:
+   - index.html – Homepage hero block introducing the project
+   - search.html – Location search landing banner above the filters/map
+   - packages.html – Booking introduction above hotel/flight/package actions
+
+   Overall Design Impact:
+   This hero section creates an immediate visual identity, supports user 
+   orientation across pages, and reinforces the ocean-travel aesthetic 
+   through colour, typography and generous spacing.
+
+   ====================================================================== */
+
 .header-hero{
     background: linear-gradient(135deg, var(--sky-blue) 0%, rgba(0, 119, 182, 0.2) 100%);
     padding: 3rem 0;
@@ -157,6 +394,42 @@ html {
     color: var(--charcoal-grey);
 }
 
+/* ======================================================================
+   ANIMATION: ROTATIONAL MOTION FOR ICONS OR LOADING ELEMENTS
+   ----------------------------------------------------------------------
+   Purpose:
+   This animation defines a full 360 degree rotation that can be applied to any 
+   element requiring dynamic movement (such as icons, loading indicators,
+   or decorative travel-themed graphics like compasses or globes). 
+   Animations improve user engagement and provide subtle visual feedback.
+
+   Technical Explanation:
+   - @keyframes rotate
+     Defines how an element transforms over time during an animation.
+     In this case, the element rotates from 0 degrees to 360 degrees.
+   - transform: rotate()
+     Applies a 2D rotation to the selected element. This transformation 
+     does not affect document flow, meaning it rotates visually without 
+     altering surrounding layout or spacing.
+
+   Travel-Themed Design Justification:
+   Rotational motion reflects movement, direction, and global travel.
+   A rotating icon (e.g., globe, compass, airplane propeller) supports
+   the identity of the Holiday Destination Finder by communicating
+   exploration and motion in a friendly, playful way.
+
+   Where It Can Be Used in This Project:
+   - On a globe or plane icon in the hero header to attract attention  
+   - On loading icons while search results or maps load in search.html  
+   - On booking icons (e.g., 'Search Flights') in packages.html if
+     interactive hover animations are desired  
+
+   Example Usage (not required, optional):
+   .spin {
+       animation: rotate 2s linear infinite;
+   }
+
+   ====================================================================== */
 
 @keyframes rotate {
     from {
@@ -167,9 +440,75 @@ html {
     }
 }
 
-/* ========================================
-   Main Section
-   ======================================== */
+/* ======================================================================
+   MAIN SECTION & ABOUT PANEL (Content Layout, Readability & Design Identity)
+   ----------------------------------------------------------------------
+   Purpose:
+   These styles define the main content area beneath the header on multiple
+   pages. They control layout spacing, background contrast, and how text
+   content is visually organised, particularly in the About section of
+   index.html. The design focuses on comfort, readability, and brand
+   consistency, reflecting a calm travel aesthetic.
+
+   1. .main-section (Global Section Wrapper)
+      - background-color: var(--sand-beige)
+        Creates a warm, neutral backdrop supporting the travel brand
+        theme and reducing eye strain by avoiding pure white backgrounds.
+      - padding: 3rem 0
+        Adds vertical spacing that separates the hero section from
+        subsequent content, improving readability and page structure.
+      - This wrapper appears consistently on index.html, search.html,
+        and packages.html to maintain uniform spacing and tone.
+
+   2. .about-content (Informative Panel / Card Design)
+      - background-color: var(--white-smoke)
+        Provides higher contrast against sand-beige for titles and text,
+        creating a clear, card-like reading area.
+      - padding + border-radius + shadow
+        These values come from the design system variables, giving the
+        card a soft, premium feel. Rounded corners and shadows introduce
+        visual depth, helping users identify the panel as a standalone
+        block of information.
+      - height: 600px + overflow-y: auto
+        Ensures the About section is equal height to the carousel beside it
+        (index.html). Long text scrolls inside the panel without breaking
+        the page layout, improving responsiveness and preventing oversized
+        text blocks.
+      - border-left: 5px solid var(--ocean-blue)
+        Adds a visual accent that reinforces brand identity and draws the
+        eye to the information area without needing overly large headings.
+
+   3. Typography Inside .about-content
+      - h2 and h5 use var(--font-heading) and ocean-blue
+        Provides strong hierarchy and visual consistency with the site's
+        hero banners and navigation bar. It helps titles stand out against
+        longer text and matches the "travel identity" colour palette.
+      - p uses charcoal-grey and increased line-height (1.8)
+        Improves long-text readability and contrast, especially on screens
+        where users may scroll. Prevents dense, fatiguing text blocks.
+
+   4. .list-features (Feature Checklist)
+      - list text uses charcoal-grey for clear legibility
+      - icons (.bi-check-circle-fill) use coral-orange
+        This colour selectively highlights key benefits without making all
+        content visually loud. Coral is reserved for calls-to-action and
+        point highlights, guiding user attention toward advantages and
+        benefits of the platform rather than passive text.
+
+   Where Used:
+   - index.html – Main About section alongside the destination carousel
+   - search.html – Shares .main-section for spacing consistency
+   - packages.html – Reuses .main-section for booking layout below the hero
+
+   Design Outcome:
+   These styles ensure users interact with information comfortably while
+   maintaining the brand's ocean travel theme. The layout balances visual
+   hierarchy, readability, and emotional tone by combining warm neutrals
+   (backgrounds) with blue accents (identity) and coral highlights
+   (interactive emphasis).
+
+   ====================================================================== */
+
 .main-section {
     background-color: var(--sand-beige);
     padding: 3rem 0;
@@ -214,9 +553,72 @@ html {
     color: var(--coral-orange) !important;
 }
 
-/* ========================================
-   Carousel Styling
-   ======================================== */
+/* ======================================================================
+   CAROUSEL STYLING (Destination Showcase & Visual Engagement)
+   ----------------------------------------------------------------------
+   Purpose:
+   This section customises the Bootstrap carousel used on the homepage
+   (index.html) to display popular travel destinations. The design focuses
+   on high-impact visuals, strong brand colours, and readable captions
+   over imagery. By pairing photography with the brand's ocean palette,
+   the carousel works as a visual "shop window" encouraging exploration.
+
+   1. .carousel (Outer Container)
+      - border + border-radius reinforce brand identity and visually 
+        separate the carousel from the page background.
+      - overflow: hidden removes small background gaps around the images 
+        and ensures rounded corners appear correctly.
+      - background-color ensures no white flashes appear during slide 
+        transitions, especially on slow connections.
+
+   2. .carousel-inner & .carousel-item
+      - Fixed height (600px) ensures the entire carousel remains the same
+        height as the text content panel beside it (in index.html), creating
+        a balanced two-column layout.
+      - background-color prevents white gaps when images load slowly.
+
+   3. .carousel-item img
+      - object-fit: cover scales destinations correctly without distortion.
+        This crops less relevant edges while keeping focal points (e.g. 
+        landmarks, landscapes).
+      - width: 100% + display: block ensures images fill the container 
+        without unwanted inline-block whitespace.
+
+   4. .carousel-caption (Text Overlay)
+      - background: rgba(...) applies a semi-transparent dark overlay, 
+        improving text contrast without covering the entire image.
+      - backdrop-filter: blur subtly softens the image behind the text,
+        reinforcing readability and visual focus on the caption.
+      - border-radius + padding enhance readability on all screen sizes.
+
+   5. Caption Typography (h5 + p)
+      - Titles use Montserrat and brand accent colour var(--sky-blue) 
+        to visually stand out from paragraphs.
+      - Paragraphs use var(--white-smoke) for high contrast on dark tint.
+
+   6. Navigation Arrows & Indicators
+      - .carousel-control-prev-icon, .carousel-control-next-icon use the 
+        ocean-blue badge styling to match the website branding and provide 
+        clear tap targets on touch devices.
+      - Indicator buttons:
+        - default = ocean blue
+        - active = coral orange
+        This uses colour to show slide position and matches the CTA theme
+        (coral = highlight/attention).
+
+   Where Used:
+   - index.html — Right-hand carousel displaying travel destinations
+     beside the About panel.
+   - Not used in search.html or packages.html.
+
+   User Experience Impact:
+   This design prioritises emotional storytelling (through imagery) while
+   ensuring captions remain readable even on bright photos. Strong brand 
+   accents and clear navigation support accessibility, aesthetics, and 
+   engagement.
+
+   ====================================================================== */
+
 .carousel {
     border: 3px solid var(--ocean-blue);
     border-radius: var(--radius-lg);
@@ -275,9 +677,65 @@ html {
     background-color: var(--coral-orange);
 }
 
-/* ========================================
-   Cards & Sections
-   ======================================== */
+/* ======================================================================
+   CARD & SECTION STYLING (Reusable Content Blocks & Visual Hierarchy)
+   ----------------------------------------------------------------------
+   Purpose:
+   These styles define the visual behaviour of reusable "card" components
+   used throughout the website to present destination information,
+   contact details, and other structured content. The '.card' class
+   extends Bootstrap's default card layout using the project's own
+   design tokens (colours, shadows, and typography), ensuring a unified
+   look across all pages.
+
+   1. .card (Base Container)
+      - background-color: var(--white-smoke)
+        Uses a soft off-white tone to differentiate card content from the
+        sand-beige page background. Improves readability and maintains the
+        website's warm travel aesthetic.
+      - border: none
+        Removes Bootstrap's thin grey border, resulting in a cleaner,
+        more modern design. Visual depth is instead created using shadows.
+      - border-radius: var(--radius-lg)
+        Applies rounded corners consistently across components, reinforcing
+        the design system and enhancing the friendly, approachable tone of
+        the site.
+      - transition: all 0.3s ease
+        Prepares cards for smooth hover animations, improving interactivity
+        and responsive feedback.
+
+   2. .card:hover (Interactive Feedback)
+      - translateY(-5px)
+        Moves the card upward slightly when hovered. This "lift" effect
+        mimics a physical card being picked up, signalling interactivity
+        and helping users recognise clickable content.
+      - box-shadow: var(--shadow-lg)
+        Applies a deeper drop shadow on hover, increasing perceived depth
+        while maintaining consistent design language via predefined shadow
+        variables.
+
+   3. Typography Inside Cards (.card-title, .card-text)
+      - Titles use var(--ocean-blue) and var(--font-heading)
+        Ensures headings stand out clearly within cards and match the brand
+        identity colour used in page titles and navbar.
+      - Text uses var(--charcoal-grey)
+        Provides comfortable contrast against white-smoke without the
+        harshness of pure black, improving readability for descriptive
+        text.
+
+   Where Used:
+   - search.html – Destination cards in the "Popular Destinations" section
+   - packages.html – Destination preview cards beneath the booking forms
+   - index.html – While the carousel replaces cards visually, '.card' rules
+                  are still available for future expandable content areas.
+
+   Design Outcome:
+   These card styles help emphasise key travel options while maintaining
+   a consistent visual hierarchy. Light backgrounds, soft shadows and 
+   bold headings reinforce a trusted, modern and user-friendly brand.
+
+   ====================================================================== */
+
 .card {
     background-color: var(--white-smoke);
     border: none;
@@ -299,9 +757,68 @@ html {
     color: var(--charcoal-grey);
 }
 
-/* ========================================
-   Footer Section
-   ======================================== */
+/* ======================================================================
+   FOOTER SECTION (Brand Reinforcement, Contact Access & Visual Closure)
+   ----------------------------------------------------------------------
+   Purpose:
+   The footer provides users with contact options and acts as a consistent
+   visual closure at the bottom of every page. Its design reinforces brand
+   identity through colour choices, icon use, and interactive behaviour.
+   It also promotes accessibility, ensuring text remains readable on dark
+   backgrounds.
+
+   1. .footer-section (Overall Footer Styling)
+      - background-color: var(--charcoal-grey)
+        A dark neutral colour provides strong contrast against the lighter
+        content areas above, directing user focus toward key information.
+      - color: var(--white-smoke)
+        Ensures readable text and high colour contrast against the dark 
+        footer background, supporting accessibility guidelines.
+
+   2. .contact-tile (Clickable Contact Information Blocks)
+      - Semi-transparent background tint (rgba(144, 224, 239, 0.1))
+        Uses a subtle version of the brand's sky-blue to highlight tiles 
+        without overpowering the dark footer. Maintains design coherence.
+      - border-radius + transition
+        Creates a friendly card-like experience that responds to user 
+        interaction and reinforces modern UI conventions.
+      - Hover effect (translateY + border change)
+        The upward movement suggests "clickable" behaviour, while the 
+        border-switch to sky-blue visually confirms interaction.
+        This improves usability by providing interactive feedback.
+
+   3. Icon & Typography Styling
+      - .contact-tile i uses var(--coral-orange)
+        Coral is reserved for attention and action cues. Highlighting the 
+        icon helps users quickly identify contact type (email, location, etc.).
+      - Titles use the heading font with bold weight to provide hierarchy.
+
+   4. Link Behaviour (.contact-tile a)
+      - Default link colour uses var(--sky-blue) to visually stand out on 
+        dark backgrounds while remaining consistent with brand identity.
+      - Hover changes to var(--coral-orange), matching CTA colour logic
+        and reinforcing that links are actionable.
+
+   5. Divider & Copyright
+      - footer-section hr uses a faint sky-blue tint with reduced opacity.
+        This provides separation without harsh contrast, maintaining subtle 
+        visual balance.
+      - .copyright text is slightly smaller, signalling secondary content.
+
+   Where Used:
+   - index.html — Footer with "Contact Us" info below carousel and About sections
+   - search.html — Footer beneath search results and Google Maps panel
+   - packages.html — Footer following booking options and partner tiles
+
+   Design Outcome:
+   The footer completes the user journey by visually grounding the page,
+   reinforcing the travel brand palette, and delivering clear pathways for
+   communication. Gradual hover transitions and colour-coded icons support
+   both aesthetics and usability, offering a final touchpoint that feels 
+   polished and trustworthy.
+
+   ====================================================================== */
+
 .footer-section {
     background-color: var(--charcoal-grey) !important;
     color: var(--white-smoke);
@@ -355,9 +872,70 @@ html {
     opacity: 0.3;
 }
 
-/* ========================================
-   Destination Cards (for other pages)
-   ======================================== */
+/* ======================================================================
+   DESTINATION CARDS (Highlight Content Blocks for Key Locations)
+   ----------------------------------------------------------------------
+   Purpose:
+   These styles define visually impactful destination cards that appear
+   on search-related pages. The design presents specific locations or
+   featured destinations using strong colour branding, memorable imagery,
+   and interactive behaviours that encourage user engagement.
+
+   Unlike standard '.card' components, '.destination-card' uses a full
+   gradient background to create high visual contrast, making it suitable
+   for promotional or attention-focused content such as city highlights
+   or recommended travel ideas.
+
+   1. .destination-card (Promotional Feature Block)
+      - background: linear-gradient(...)
+        Applies a gradient using var(--ocean-blue) to var(--sky-blue),
+        visually evoking the travel theme (sea -> sky). Creates emotional
+        association with calmness and exploration.
+      - padding + border-radius + shadow
+        Padding adds breathing room, radius softens the design tone, and
+        shadow depth improves focus among other UI elements.
+      - text-align: center ensures consistent layout for icons, titles and
+        buttons, highlighting information in a clear vertical hierarchy.
+      - height: 100% allows equal heights in Bootstrap grid layouts,
+        improving card alignment across columns.
+
+   2. Hover Feedback (.destination-card:hover)
+      - translateY(-10px) lifts the card to signal interactivity.
+      - shadow change (shadow-lg) visually enhances depth.
+      - These behaviours mimic physical card motion, encouraging clicks.
+
+   3. Icon & Typography Hierarchy
+      - .card-icon uses large sizing (3rem) to visually represent travel
+        categories (e.g. landmarks, restaurants, flights).
+      - Titles and text remain white-smoke, maintaining contrast and
+        brand consistency against the dark-blue gradient.
+      - Font sizes (1.5rem) signal importance and readability across
+        mobile and desktop layouts.
+
+   4. Card Button Styling (.destination-card .btn-light)
+      - Uses coral-orange as a call-to-action highlight, following the
+        design system where coral signals "action or attention".
+      - Hover inverts colours (white background + coral text) and applies
+        a scale transform (1.05) to communicate click readiness.
+      - Removal of borders ensures consistency with the flat, modern brand.
+
+   5. .destination-tile h4 (Shared Title Alignment)
+      - text-align: center ensures headings in grid tiles remain visually
+        aligned above images or within card layouts, maintaining structure
+        for city names in packages.html and search.html.
+
+   Where Used:
+   - search.html – "Popular Destinations" grid beneath the search/map tools
+   - packages.html – Destination previews below holiday booking filters
+
+   Design Outcome:
+   These destination cards deliver high visual impact, clear hierarchy and
+   intuitive feedback. The gradient background reinforces the brand's travel
+   identity (sea + sky palette), while coral CTAs strategically guide user
+   decisions — encouraging exploration of specific destinations.
+
+   ====================================================================== */
+
 .destination-card {
     background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--sky-blue) 100%);
     border-radius: var(--radius-lg);
@@ -407,9 +985,63 @@ html {
     text-align: center;  /* Centers the city names */
 }
 
-/* ========================================
-   Forms
-   ======================================== */
+/* ======================================================================
+   FORM STYLING (Usability, Accessibility & Brand Consistency)
+   ----------------------------------------------------------------------
+   Purpose:
+   These styles customise Bootstrap form elements to match the project's
+   travel brand identity and improve input usability. Forms appear during
+   destination searches, booking package selections, and date/guest inputs,
+   so they must be both visually engaging and easy to interact with.
+
+   1. .form-control (Input Field Base Styling)
+      - background-color: var(--white-smoke)
+        Provides a soft, neutral background that reduces eye strain and
+        maintains contrast against darker text and blue borders.
+      - border: 2px solid var(--sky-blue)
+        Replaces Bootstrap's thin grey border with a high-contrast, clear
+        input outline that aligns with the site's ocean colour palette.
+      - color + border-radius
+        Charcoal-grey text ensures readability, while rounded corners
+        (var(--radius-sm)) align form components with other UI elements,
+        creating a friendly and polished visual style.
+
+   2. .form-control:focus (Active Interaction Feedback)
+      - border-color changes to var(--ocean-blue)
+        Provides visual confirmation that the input is active, helping
+        users locate the field they are typing in.
+      - box-shadow: rgba(0, 119, 182, 0.25)
+        Creates a subtle halo effect using the same ocean-blue hue to
+        maintain brand consistency while improving accessibility by
+        increasing focus visibility.
+      - background-color and text colour remain unchanged to prevent
+        disruptive flashing or reduced contrast when typing.
+
+   3. .form-label (Static Text and Floating Labels)
+      - colour + font-weight
+        Charcoal-grey paired with medium weight (500) provides a clear but
+        non-dominant hierarchy, ensuring labels are readable without
+        overpowering form controls.
+      - Works with Bootstrap's '.form-floating' classes used on the
+        packages.html booking page.
+
+   Where Used:
+   - search.html — Destination search box and filtering inputs  
+   - packages.html — Booking form with floating labels (city, dates, guests)  
+
+   Accessibility Impact:
+   - High-contrast colours improve readability for users with visual
+     impairments.
+   - Consistent focus indicators ensure keyboard users can navigate easily.
+   - Rounded input shapes support mobile/touch usability.
+
+   Design Outcome:
+   These rules create a consistent, user-friendly form system that blends
+   with the travel brand's calming aesthetic while improving interaction
+   clarity and accessibility.
+
+   ====================================================================== */
+
 .form-control {
     background-color: var(--white-smoke);
     border: 2px solid var(--sky-blue);
@@ -429,9 +1061,44 @@ html {
     font-weight: 500;
 }
 
-/* ========================================
-   Section Dividers
-   ======================================== */
+/* ======================================================================
+   SECTION DIVIDERS (Visual Separation & Brand Continuity)
+   ----------------------------------------------------------------------
+   Purpose:
+   This style creates horizontal divider lines used to clearly separate
+   major content areas within pages. Unlike a standard HTML '<hr>', this
+   divider is visually branded with the website's ocean colour palette.
+   It helps users understand where one content module ends and another
+   begins, improving page hierarchy and readability.
+
+   1. .section-divider (Custom Horizontal Rule)
+      - height: 3px
+        Creates a bold but minimal line that is thick enough to be visible
+        on light backgrounds (e.g., sand-beige) without becoming visually
+        heavy.
+      - background: linear-gradient(to right, var(--ocean-blue), var(--sky-blue))
+        Instead of a solid colour line, the divider uses a blue gradient
+        representing ocean -> sky, reinforcing the travel brand theme and
+        making the separation feel more "designed" rather than generic.
+      - border: none
+        Removes the default HR border style to avoid double-lined effects
+        and preserve the minimalist aesthetic.
+      - margin: 2rem 0
+        Adds vertical spacing to prevent text or cards from sitting too
+        close to the divider. This enhances readability and keeps layouts
+        clean across sections.
+
+   Where Used:
+   - packages.html — Positioned between booking tools and partner logos
+
+   Design Outcome:
+   The gradient divider maintains visual rhythm across pages by signalling
+   transitions between content sections. Its brand colours support user
+   orientation and create a polished, professional feel that contributes
+   to the site'’'s calming travel aesthetic.
+
+   ====================================================================== */
+
 .section-divider {
     height: 3px;
     background: linear-gradient(to right, var(--ocean-blue), var(--sky-blue));
@@ -439,9 +1106,60 @@ html {
     margin: 2rem 0;
 }
 
-/* ========================================
-   Results Panel Scrollbar - Search.html
-   ======================================== */
+/* ======================================================================
+   RESULTS PANEL SCROLLBAR (Scrollable List for Destination Results)
+   ----------------------------------------------------------------------
+   Purpose:
+   The '.results-list' container displays up to 20 location results when a
+   city is searched on search.html. Because results can exceed the visible
+   space beside the Google Maps embed, a scrollable panel is required.
+   This styling ensures the scrollbar is visually branded, accessible, and
+   behaves consistently across different browsers.
+
+   1. .results-list (Scrollable Container)
+      - max-height: 500px 
+        Sets the panel height to match the adjacent Google map container,
+        creating visual alignment and a balanced two-column layout.
+      - overflow-y: auto 
+        Enables vertical scrolling only when needed, preventing the list
+        from stretching down the page and pushing elements out of view.
+      - overflow-x: hidden 
+        Prevents horizontal scrolling so text remains readable without
+        awkward sideways movement.
+      - scrollbar-width + scrollbar-color (Firefox only)
+        Customises the scrollbar to match the project colour scheme, using
+        sky-blue for the thumb and white-smoke for the track.
+
+   2. WebKit-Focused Styling (Chrome, Safari, Edge)
+      - ::-webkit-scrollbar 
+        Controls scrollbar width, keeping it unobtrusive but usable.
+      - ::-webkit-scrollbar-track 
+        Uses a soft white-smoke background to fit with the site's neutral
+        colour palette and reinforce contrast with the scrollbar thumb.
+      - ::-webkit-scrollbar-thumb 
+        Uses sky-blue (brand accent) with white-smoke borders to improve
+        visibility and create a "pill-shaped" control that is easily
+        selectable on touch devices and laptops.
+      - Hover state switches to ocean-blue 
+        Provides clear interaction feedback and highlights focus, improving
+        usability for mouse users and partially sighted users.
+
+   Accessibility & UX Impact:
+   - Scrollbars remain visible and high contrast (helpful for low-vision users).
+   - Hover feedback and strong colour contrast improve interactive clarity.
+   - Users always maintain access to all search results without scrolling
+     the entire page, supporting quick decision-making.
+
+   Where Used:
+   - search.html — Within the destination results list beside the Google Map.
+
+   Design Outcome:
+   By styling scrollbars to match the brand palette and improving their
+   usability, this section transforms a normally overlooked browser feature
+   into a polished component that supports both functionality and identity.
+
+   ====================================================================== */
+
 .results-list {
   max-height: 500px;            /* Match the map height */
   overflow-y: auto;             /* Vertical scrollbar if content overflows */
@@ -470,65 +1188,56 @@ html {
   background-color: var(--ocean-blue);
 }
 
-/* ========================================
-   Responsive Design
-   ======================================== */
-@media (max-width: 992px) {
-    .carousel-inner,
-    .carousel-item,
-    .carousel-item img {
-        height: 400px;
-    }
-    
-    .header-hero h1 {
-        font-size: 2rem;
-    }
-    
-    .logo-main-icon {
-        max-width: 150px !important;
-    }
-    
-    .navbar-logo {
-        max-height: 35px;
-        height: 35px;
-    }
-}
+/* ======================================================================
+   UTILITY CLASSES (Reusable Single-Purpose Helpers)
+   ----------------------------------------------------------------------
+   Purpose:
+   Utility classes provide quick, reusable styling shortcuts that apply a
+   single visual change (e.g., colour, background, border). They prevent
+   duplication in CSS and allow developers to style elements directly in
+   HTML without creating new custom selectors for every small adjustment.
 
-@media (max-width: 768px) {
-    .carousel-inner,
-    .carousel-item,
-    .carousel-item img {
-        height: 300px;
-    }
-    
-    .about-content {
-        margin-bottom: 2rem;
-    }
-    
-    .contact-tile {
-        margin-bottom: 1rem;
-    }
-    
-    .navbar-logo {
-        max-height: 35px;
-        height: 35px;
-    }
-}
+   Benefits in This Project:
+   - Reduces CSS repetition by avoiding unnecessary new classes.
+   - Enables rapid prototyping and layout adjustments directly in HTML.
+   - Ensures consistent use of brand colours across the site.
+   - Supports responsive design by applying styles only when needed.
 
-@media (max-width: 576px) {
-    .header-hero h1 {
-        font-size: 1.75rem;
-    }
-    
-    .navbar-logo {
-        max-height: 30px;
-        height: 30px;
-    }
-}
+   1. Text Colour Utilities
+      - .text-ocean-blue and .text-coral-orange
+        Apply project-specific accent colours taken from the travel theme.
+        These utilities help highlight headings, icons, and clickable text
+        without writing new CSS. Coral-orange is often reserved for emphasis
+        or calls to action, whereas ocean-blue is used for structure and
+        identity.
 
-/* ========================================
-   Utility Classes
-   ======================================== */
+   2. Background Colour Utilities
+      - .bg-sand-beige and .bg-sky-blue
+        These are used to softly highlight sections or tiles. Sand-beige
+        supports readability as a warm neutral, whereas sky-blue reflects
+        the project's ocean–sky design identity and is applied to banners
+        or highlight areas when stronger contrast is needed.
+
+   3. Border Utility
+      - .border-ocean-blue
+        Allows targeted application of brand-coloured accents, especially
+        for cards, dividers, or form containers that need a subtle emphasis
+        without applying large background colour changes.
+
+   Where Used:
+   - index.html — Used in headings, banner sections and optional card accents  
+   - search.html — Applied to highlighted text labels and map-section titles  
+   - packages.html — Used to emphasise headings and to align booking areas 
+                     with the site's brand palette
+
+   Design Outcome:
+   Utility classes make the design system more scalable, ensuring that
+   branding remains consistent even as new UI components are added. They
+   reinforce the site's visual identity without cluttering the CSS file
+   with repetitive code, supporting clean development practices.
+
+   ====================================================================== */
+
 .text-ocean-blue {
     color: var(--ocean-blue);
 }
@@ -548,9 +1257,92 @@ html {
 .border-ocean-blue {
     border-color: var(--ocean-blue);
 }
-/* ========================================
-   Search Page - Action Buttons Full Styling
-   ======================================== */
+
+/* ======================================================================
+   SEARCH PAGE UI COMPONENTS (Interactive Filters, Tiles & Search Input)
+   ----------------------------------------------------------------------
+   Purpose:
+   These styles define the core interactive elements used on search.html,
+   including category filter buttons, destination tiles, and the main
+   search input box. The styling uses the project's travel theme colours
+   to support usability, brand recognition, and responsive interaction.
+
+   ----------------------------------------------------------------------
+   1) .btn-action (Category Filter Buttons)
+   ----------------------------------------------------------------------
+   - Used for filtering attractions, restaurants, hotels, cafés and shopping.
+   - Background: white-smoke + border sky-blue
+     Creates a neutral but branded button that stands out from surrounding
+     backgrounds, inviting interaction without dominating the UI visually.
+   - Font: Montserrat (heading font) + bold weight
+     Highlights buttons as primary interactive controls, distinguishing
+     them from body text.
+   - Hover effects (colour changes + lift transform)
+     - transform: translateY(-3px) and shadow-md show that the button is
+       clickable, improving affordance and user confidence.
+     - Coral icon colour reinforces action/emphasis only when hovered.
+   - Active State (for selected category)
+     - Ocean-blue background with white-smoke text contrasts strongly and
+       clarifies which filter is applied.
+     - Consistent coral icon colour helps quickly identify active features.
+
+   Where Used:
+   - search.html — Category filters above the results list ("What are you looking for?")
+   - packages.html — Reused for booking action buttons (with identical UI logic)
+
+   ----------------------------------------------------------------------
+   2) .destination-tile (Search Result and Popular Destination Cards)
+   ----------------------------------------------------------------------
+   - White-smoke background + sky-blue border
+     Creates a lightweight card that maintains brand colour consistency
+     with the input box and buttons above it.
+   - Hover transform + shadow-lg
+     Cards "lift" similarly to '.btn-action' hover, maintaining a unified
+     interaction language: items you can click always lift when hovered.
+   - Emphasis on border colour change (ocean-blue)
+     Strengthens the link between card content and the clickable action.
+   - .destination-content maintains a matching background to avoid colour
+     clashes with images or captions.
+   - .btn-primary font size reduction (0.95rem)
+     Fits small action buttons without overcrowding card content.
+
+   Where Used:
+   - search.html — "Popular Destinations" preview grid under the search panel
+   - packages.html — Shared tiles between booking options and destination cards
+
+   ----------------------------------------------------------------------
+   3) .search-container (Search Box Housing)
+   ----------------------------------------------------------------------
+   - Neutral white-smoke background helps the input visually "sit" above
+     the page without distracting from results.
+   - 2px solid sky-blue border ensures visible boundaries around the search 
+     tool and maintains brand consistency with filter buttons.
+   - Form-control styles (focus and placeholder)
+     - Focus border changes to ocean-blue with a soft blue shadow, aiding
+       keyboard navigation and accessibility.
+     - Muted grey placeholders reduce distraction but remain visible, 
+       guiding the user on how to search (e.g. "Enter a city name").
+   - These improvements ensure consistent readability and interaction 
+     behaviours across mobile and desktop.
+
+   Where Used:
+   - search.html — Main search bar at the top of the page
+
+   ----------------------------------------------------------------------
+   Design Outcome:
+   - Buttons, tiles, and input styling share the same layout logic and
+     interactive principles (lift, colour change, shadow). This familiar
+     behaviour improves usability, clarity, and reduces cognitive load.
+   - Consistent travel palette reinforces the website's brand identity:
+     - Ocean Blue (structure/identity)
+     - Sky Blue (neutral highlight)
+     - Coral Orange (action/emphasis)
+     - White Smoke (soft backgrounds for legibility)
+
+   These components collectively shape a cohesive, intuitive search
+   experience that encourages users to explore destinations confidently.
+
+   ====================================================================== */
 
 .btn-action {
     background-color: var(--white-smoke);
@@ -629,7 +1421,86 @@ html {
     opacity: 0.5;
 }
 
-/* Results Panel */
+/* ======================================================================
+   RESULTS PANEL & RESULT ITEMS (Search Results List Beside Google Map)
+   ----------------------------------------------------------------------
+   Purpose:
+   These styles control the visual layout and behaviour of the results
+   list shown on the left-hand side of search.html, next to the Google
+   Maps area. When the user searches for a city and selects a category
+   (e.g. attractions, restaurants, hotels), JavaScript injects individual
+   '.result-item' elements into '.results-panel'. The styling here makes
+   that list readable, scrollable and clearly interactive.
+
+   1. .results-panel (Container for the Full List)
+      - background-color: var(--white-smoke)
+        Provides a light, neutral backdrop that contrasts with the page
+        background while keeping focus on the content.
+      - height: 600px
+        Matches the height of the map container so the two columns are
+        visually aligned, creating a balanced layout.
+      - overflow-y: auto; overflow-x: hidden
+        Enables vertical scrolling when many results are returned, while
+        preventing horizontal scrollbars so text remains neatly wrapped.
+      - border: 2px solid var(--sky-blue)
+        Uses a branded border to visually separate the panel from the
+        surrounding layout and tie it into the site's colour palette.
+
+   2. Custom Scrollbar Styling (WebKit)
+      - Narrow scrollbar width (8px) keeps the UI clean.
+      - Track background uses var(--sand-beige) to echo the page's base
+        colour in a subtle way.
+      - Thumb colours:
+          - Default: ocean-blue
+          - Hover: coral-orange
+        This reuses the project's main and accent colours, making the
+        scrollbar both functional and visually consistent with the theme.
+
+   3. .result-item (Individual Clickable Result)
+      - Background: white-smoke with sky-blue border
+        Creates a card-style block for each place returned by the API,
+        making items easy to scan and distinguish.
+      - border-radius, padding, margin-bottom
+        Provide spacing and shape so each result looks like a separate
+        tappable element rather than plain text.
+      - cursor: pointer
+        Signals that each result is interactive (e.g. clicking will
+        highlight it on the map or show more information).
+      - transition: all 0.3s ease
+        Enables smooth hover animation effects for better user feedback.
+
+   4. .result-item:hover (Hover Feedback)
+      - background-color: var(--sky-blue) and border-color: var(--ocean-blue)
+        Inverts the visual priority to highlight the hovered item, helping
+        users track which result they are focusing on.
+      - transform: translateX(5px)
+        Slight horizontal movement suggests selection or "drill down".
+      - box-shadow: var(--shadow-md)
+        Adds depth to emphasise that this card is currently in focus.
+
+   5. Typography & Rating
+      - h5 styled with heading font and ocean-blue colour
+        Ensures the place name stands out as the main piece of information.
+      - p elements use charcoal-grey and smaller font for secondary details
+        such as address or type.
+      - .rating uses coral-orange
+        Draws attention to review scores or ratings using the same accent
+        colour reserved for calls-to-action and key highlights.
+
+   Where Used:
+   - search.html – Left-hand "Top 20 Results" list beneath the heading
+     inside the results panel. All '.result-item' elements are generated
+     dynamically by JavaScript when a user performs a search.
+
+   Design Outcome:
+   Together, '.results-panel' and '.result-item' turn raw location data
+   into a structured, scannable, and interactive list that visually
+   matches the map and the rest of the brand. Users can quickly identify,
+   hover and select destinations, while the branded scrollbar and hover
+   transitions provide a polished user experience.
+
+   ====================================================================== */
+
 .results-panel {
     background-color: var(--white-smoke);
     height: 600px;
@@ -690,7 +1561,51 @@ html {
     color: var(--coral-orange);
 }
 
-/* Map Container */
+/* ======================================================================
+   GOOGLE MAP CONTAINER (Visual Boundary + Layout Integration)
+   ----------------------------------------------------------------------
+   Purpose:
+   These styles define the appearance of the embedded Google Maps area on
+   search.html. The map occupies the right side of the page, displaying
+   location markers that correspond to the clickable result list on the
+   left. Because the map is generated externally by the Google Maps API,
+   this CSS provides a visual frame that integrates the map into the
+   website's branded layout.
+
+   1. .map-container (Outer Frame Around Google Map)
+      - border: 3px solid var(--ocean-blue)
+        Adds a thick, branded frame to separate the Google Map from the
+        rest of the UI. Since the map uses Google's default visual style,
+        this border prevents it from visually clashing with the site's
+        design by clearly defining its boundaries.
+        - The colour (ocean-blue) reinforces the theme shared across the
+          search buttons, tiles, and headings.
+        - The thicker border communicates that the map is a primary,
+          interactive feature rather than just a background image.
+
+   2. #map (Actual Map Display Area)
+      - background-color: var(--sand-beige)
+        This colour is only visible *before the map loads* or if a map
+        fails to initialise. Sand-beige blends with the site's natural
+        palette and avoids harsh blank spaces (like bright white or black),
+        resulting in a smoother visual load experience.
+        - Helps indicate that something is loading, rather than appearing
+          broken or empty.
+        - Reduces user confusion on slower internet connections.
+
+   Where Used:
+   - search.html — Right-hand side of the "Top 20 Results + Map" layout.
+     The border and background colour work together with JavaScript-rendered
+     markers to provide continuity between the left panel and the map.
+
+   Design Outcome:
+   This styling forms a professional visual boundary that improves layout
+   balance, reinforces brand colours against Google's default map styling,
+   and avoids abrupt empty space during load time. It also helps users
+   clearly differentiate the clickable map from static page elements.
+
+   ====================================================================== */
+
 .map-container {
     border: 3px solid var(--ocean-blue);
 }
@@ -699,10 +1614,64 @@ html {
     background-color: var(--sand-beige);
 }
 
-/* ========================================
-   Package.html - Dropdown/Select Styling
-   ======================================== */
-/* Match dropdown/select styling to other form inputs */
+/* ======================================================================
+   PACKAGE PAGE DROPDOWN SELECT (Consistent Booking Form Styling)
+   ----------------------------------------------------------------------
+   Purpose:
+   On packages.html, users can choose how many guests will travel when
+   searching for holiday packages. Bootstrap's default <select> elements
+   do not visually match standard .form-control inputs, so this styling
+   modifies the dropdown to visually align it with the project's theme and
+   maintain consistency across all booking form fields.
+
+   ----------------------------------------------------------------------
+   1) .form-select (Base Appearance of Dropdown)
+      - background-color: var(--white-smoke)
+        Matches text fields (.form-control) to create a unified form style.
+        Soft neutral background supports readability and reduces visual
+        strain on mobile users.
+      - border: 2px solid var(--sky-blue)
+        Replaces generic grey border with a branded highlight. This ensures
+        users recognise all form inputs as part of the same booking system.
+      - text colour and border radius
+        Charcoal-grey text improves legibility over light backgrounds. The
+        same border-radius used elsewhere (var(--radius-sm)) supports a
+        consistent, friendly interface on both desktop and touch devices.
+
+   ----------------------------------------------------------------------
+   2) .form-select:focus (User Interaction Feedback)
+      - border-color changes to var(--ocean-blue)
+        Indicates focus state (selected field), improving form navigation
+        for keyboard and screen-reader users. Colour continuity reinforces
+        that this is an active input.
+      - box-shadow: rgba(0, 119, 182, 0.25)
+        Adds a soft, branded glow similar to text fields on focus, helping
+        users stay oriented while completing booking details.
+      - outline: none
+        Removes the default browser outline so only the branded style is
+        visible. This must be paired with a high-contrast border to remain
+        accessible — which this design provides.
+
+   ----------------------------------------------------------------------
+   3) .form-select option[disabled] (Placeholder Option Styling)
+      - Disabled option acts as a placeholder (e.g. "Select guests").
+      - Muted charcoal-grey with 0.5 opacity visually distinguishes it
+        from selectable options. This guides users to choose a valid value
+        and prevents accidental submission without selecting a quantity.
+
+   Where Used:
+   - packages.html — Under "Trip Details Form" (Guests selection dropdown)
+     Works alongside floating date inputs and search field to create a full
+     booking query for hotels, flights, or full packages.
+
+   Design Outcome:
+   This dropdown styling eliminates UI inconsistency by aligning select
+   elements with other booking inputs. It strengthens brand identity using
+   the ocean–sky–coral palette and supports usability with clear focus
+   feedback and accessible placeholder behaviour.
+
+   ====================================================================== */
+
 .form-select {
     background-color: var(--white-smoke); /* Match form inputs */
     border: 2px solid var(--sky-blue); /* Match border color */
@@ -724,45 +1693,95 @@ html {
     opacity: 0.5;
 }
 
-/* Search Page Responsive */
-@media (max-width: 992px) {
-    .results-panel {
-        height: 400px;
-        margin-bottom: 2rem;
-    }
-    
-    #map {
-        height: 400px !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .btn-action {
-        padding: 0.75rem;
-        font-size: 0.9rem;
-    }
-    
-    .btn-action i {
-        font-size: 1.5rem !important;
-    }
-    
-    .results-panel {
-        height: 300px;
-    }
-    
-    #map {
-        height: 300px !important;
-    }
-    
-    .destination-tile .destination-image img {
-        height: 150px !important;
-    }
-}
 
 
-/* ========================================
-   Floating Labels - IMPROVED
-   ======================================== */
+/* ======================================================================
+   FLOATING LABELS (Enhanced Booking Form Inputs for packages.html)
+   ----------------------------------------------------------------------
+   Purpose:
+   Floating labels allow a form field's placeholder to become a label that
+   "floats" above the input when typing or focusing. This improves both
+   aesthetics and usability, especially on forms where space is limited or
+   several inputs appear together (such as check-in, check-out and guests
+   on packages.html). Users always see what the field represents, even
+   after typing — preventing confusion or accidental mistakes.
+
+   ----------------------------------------------------------------------
+   1) .form-floating (Container for Floating Label Behaviour)
+      - position: relative ensures that the label can be precisely placed
+        inside the input field without affecting surrounding layout.
+
+   ----------------------------------------------------------------------
+   2) Label Styling (.form-floating > label)
+      - position: absolute, positioned near the top-left corner of the input
+        so it overlays the box like a placeholder before interaction.
+      - small font size and slight opacity indicate it is supportive text,
+        not the primary data being entered.
+      - pointer-events: none prevents users from accidentally clicking the
+        label and ensures cursor behaviour is predictable.
+      - transition allows smooth animation when entering focus or text,
+        reinforcing modern UI expectations (similar to airline booking apps).
+
+   ----------------------------------------------------------------------
+   3) .form-floating > .form-control (Base Input Styling)
+      - Extra padding at the top creates space for the floating label so
+        it does not overlap typed text.
+      - Border, background and colour all match the branding rules used in
+        '.form-control' and '.form-select' for consistency across the site.
+      - border-radius standardises shape across all booking elements.
+
+   Focus State:
+      - Strong ocean-blue border and branded glow effect (box-shadow) make
+        the focused field easy to identify — supporting accessibility and
+        keyboard navigation.
+      - Focused label also changes colour to ocean-blue, reinforcing its
+        association with the active field.
+
+   ----------------------------------------------------------------------
+   4) Placeholder Handling
+      - Inputs retain a soft placeholder tone (opacity 0.5) so that users
+        still understand input expectations before clicking or typing.
+
+   ----------------------------------------------------------------------
+   5) Large Input Variation (.form-control-lg)
+      - Used on the main destination search bar at the top of booking form.
+      - Slightly larger padding and font size improve readability for key
+        actions, especially on mobile devices. The label is repositioned
+        to fit the larger field without overlapping.
+
+   ----------------------------------------------------------------------
+   6) Dropdown and Date-Specific Floating Label Adjustments
+      - .form-select maintains similar spacing and focus glow so dropdowns
+        behave like inputs.
+      - Date inputs require browser-specific fixes:
+           - WebKit padding adjustments ensure date text aligns vertically.
+           - Calendar picker icon is repositioned to avoid overlaps.
+           - Non-valid / unfocused dates are dimmed to signal placeholder
+             behaviour while still remaining readable.
+
+   ----------------------------------------------------------------------
+   7) Label Background Fix
+      - The pseudo-elements ::before and ::after are disabled to prevent any
+        default Bootstrap backgrounds from causing visual glitches behind
+        labels when text or dates are selected.
+
+   ----------------------------------------------------------------------
+   Where Used:
+   - packages.html — For the "City Search", "Check-in", "Check-out" and
+     "Guests" dropdown in the booking panel.
+   - Not used on index.html (uses hero search section instead).
+   - Not used on search.html (single non-floating search bar).
+
+   ----------------------------------------------------------------------
+   Design Outcome:
+   Floating labels reduce form errors, increase clarity and elevate the UI
+   to a level similar to commercial travel websites (Booking.com, Expedia,
+   Ryanair). They support keyboard accessibility, maintain brand identity,
+   and present professional, space-efficient forms that scale well across
+   devices.
+
+   ====================================================================== */
+
 .form-floating {
     position: relative;
 }
@@ -880,9 +1899,58 @@ html {
 }
 
 
-/* ========================================
-   Scroll Offset Fix for Sticky Navbar
-   ======================================== */
+/* ======================================================================
+   SCROLL OFFSET FIX FOR STICKY NAVBAR (Improved Anchor Navigation)
+   ----------------------------------------------------------------------
+   Purpose:
+   All pages use a sticky navigation bar that stays fixed at the top as
+   users scroll. However, sticky headers create a UX problem: when clicking
+   on internal links (e.g., "Popular Destinations"), the top of the target
+   section becomes hidden *behind* the navbar. This fix prevents content
+   from being obscured.
+
+   ----------------------------------------------------------------------
+   1) html { scroll-padding-top: 100px; }
+      - scroll-padding-top reserves extra space when the browser scrolls
+        automatically to an anchor target (e.g., links using #popular).
+      - A value of 100px roughly matches the height of the sticky navbar.
+      - This ensures section headings are fully visible and not covered by
+        the navigation bar when users jump to a section.
+
+      - Why apply to <html>?
+      Applying this globally ensures **all internal anchor link jumps**
+      across the entire site benefit from the same predictable spacing,
+      without modifying each individual section.
+
+   ----------------------------------------------------------------------
+   2) #popular { scroll-margin-top: 100px; }
+      - scroll-margin-top performs a similar function, but applies only to
+        a *specific* element — in this case, the "Popular Destinations"
+        section found on multiple pages.
+      - This ensures that if a link scrolls directly to #popular, the page
+        will add space above it so the navbar doesn't cover the heading.
+
+       Why keep both?
+      - scroll-padding-top affects browser-controlled scrolling.
+      - scroll-margin-top affects elements targeted directly by links or
+        JavaScript scrolling.
+      - Together, they prevent hidden content in all scroll scenarios.
+
+   ----------------------------------------------------------------------
+   Where Used:
+   - index.html — Links scrolling to #popular from navigation menu
+   - search.html — "Popular Destinations" quick jump from within the page
+   - packages.html — Package booking tools scroll toward popular choices
+
+   ----------------------------------------------------------------------
+   Design Outcome:
+   This fix improves usability and ensures a polished, professional feel.
+   Users can navigate between sections with confidence, without content
+   disappearing underneath a sticky header. The solution is lightweight,
+   purely CSS-based, and avoids JavaScript workarounds.
+
+   ====================================================================== */
+
 html {
     scroll-padding-top: 100px; /* Offset for sticky navbar height */
 }
@@ -890,4 +1958,139 @@ html {
 /* Alternative: Add margin to section with ID */
 #popular {
     scroll-margin-top: 100px; /* Space above when scrolled to */
+}
+
+/* ======================================================================
+   RESPONSIVE MEDIA QUERIES (Mobile-First Adaptation for Travel Website)
+   ----------------------------------------------------------------------
+   Purpose:
+   These media queries optimise layout, spacing, and element sizing across
+   different device widths. Since users may search or book holidays using
+   mobile devices, responsive design ensures:
+       - comfortable readability
+       - touch-friendly interactions
+       - efficient use of space
+       - professional visual consistency
+
+   Bootstrap breakpoints are used as reference:
+       992px -> large tablets / small laptops
+       768px -> standard tablets
+       576px -> mobile phones
+
+   ======================================================================
+    PAGE-WIDE RESPONSIVENESS (Used on index.html, search.html, packages.html)
+   ---------------------------------------------------------------------- */
+
+@media (max-width: 992px) {
+    /* Smaller carousel images allow better fit on tablets/laptop screens */
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
+        height: 400px;
+    }
+    
+    /* Headings become more compact to avoid wrapping */
+    .header-hero h1 {
+        font-size: 2rem;
+    }
+    
+    /* Logo scales down to prevent navbar overflow */
+    .logo-main-icon {
+        max-width: 150px !important;
+    }
+    
+    /* Prevents brand logo from pushing nav items off-screen */
+    .navbar-logo {
+        max-height: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Further reduce carousel height for handheld tablets */
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    /* Extra margin ensures content stacks cleanly on mobile layouts */
+    .about-content {
+        margin-bottom: 2rem;
+    }
+    
+    /* Contact tiles need breathing space when stacked vertically */
+    .contact-tile {
+        margin-bottom: 1rem;
+    }
+    
+    /* Prevent navbar logos from dominating small screens */
+    .navbar-logo {
+        max-height: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Compress hero heading further for narrow smartphones */
+    .header-hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    /* Shrink logo further to fit tighter navigation bars */
+    .navbar-logo {
+        max-height: 30px;
+        height: 30px;
+    }
+}
+
+
+/* ======================================================================
+   SEARCH PAGE RESPONSIVE ADAPTATION (Results + Map Layout)
+   ----------------------------------------------------------------------
+   Purpose:
+   On large screens, search results and maps display side-by-side. On
+   smaller screens, they must shrink or stack vertically. These queries
+   keep both elements visible, properly sized, and touch-friendly.
+   ====================================================================== */
+
+@media (max-width: 992px) {
+    /* Reduce height to keep full panel on screen when stacked */
+    .results-panel {
+        height: 400px;
+        margin-bottom: 2rem;
+    }
+    
+    /* Ensure the Google map scales to match results height */
+    #map {
+        height: 400px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Scale down buttons for compact display on mobiles */
+    .btn-action {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Scale icons to match reduced button size */
+    .btn-action i {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Reduce panel height for small screens; improves scrolling usability */
+    .results-panel {
+        height: 300px;
+    }
+    
+    /* Match the height of the map to avoid layout imbalance */
+    #map {
+        height: 300px !important;
+    }
+    
+    /* Reduce destination image height so cards stay proportionate */
+    .destination-tile .destination-image img {
+        height: 150px !important;
+    }
 }
