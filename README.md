@@ -31,6 +31,7 @@
   - [User Stories for Newsletter Page](#user-stories-for-newsletter-page)
   - [Colour Palette Justification for Holiday Destination Finder Website](#colour-palette-justification-for-holiday-destination-finder-website)
   - [Typography Justification for Holiday Destination Finder Website](#typography-justification-for-holiday-destination-finder-website)
+  - [Accessibility Implementation, User Flow and Navigation Strategies](#accessibility-implementation-user-flow-and-navigation-strategies)
 - [References](#references)
  
 
@@ -1571,6 +1572,87 @@ h1, h2, h3, nav, .btn, .cta {
   font-weight: 600;
 }
 ```
+---
+
+## Accessibility Implementation, User Flow and Navigation Strategies
+[⬆ Back to Table of contents](#table-of-contents)
+
+During the development of the **Holiday Destination Finder**, accessibility was a core requirement. All users, including those with auditory, cognitive, motor, or visual impairments, are ensured to interact independently with booking services, view search results, navigate filtering tools, and explore destinations. As previously completed in the Milestone 1 project, all decisions were guided by the **Web Content Accessibility Guidelines (WCAG) 2.1**, which align with internationally recognised standards (W3C, 2018).
+
+### Key Accessibility Features
+
+**Semantic HTML**  
+To support screen readers in interpreting and announcing page regions meaningfully, the website structure utilises `<header>`, `<main>`, `<nav>`, `<section>` and `<footer>`.  
+**Purpose in this project:** Searching for destinations, exploring popular locations, or applying travel category filters is facilitated with clear and well-defined navigation for users.  
+**Justification:** Usability, search engine visibility, and compatibility with assistive technologies are enhanced by the use of semantic HTML (W3C, 2018; Mozilla Developer Network, 2023).
+
+**Keyboard Navigation**  
+Keyboard navigation with visible focus indicators is implemented in all interactive elements (buttons, search inputs, hyperlinks).  
+**Purpose in this project:** Enables users to browse destinations, operate the search tool, and apply travel filters without relying on a mouse.  
+**Justification:** Assists users with motor impairments and aligns with WCAG 2.1 SC 2.1.1 (Keyboard Accessible) (W3C, 2018).
+
+**Colour Contrast**  
+Validated using the WebAIM contrast checker, text, icons, and interactive buttons maintain a minimum contrast ratio of 4.5:1.  
+**Purpose in this project:** Enhances the legibility of booking buttons, search filters, and destination headings.  
+**Justification:** Meets WCAG 2.1 SC 1.4.3 (Contrast Minimum) to assist users with low vision or colour perception impairments (WebAIM, 2024).
+
+**Responsive Typography**  
+Font sizes use scalable `rem` units, based on a 16px default.  
+**Purpose in this project:** Ensures clear readability when viewing search results, selecting booking options, or browsing popular destinations across different devices.  
+**Justification:** Assists users with cognitive and visual impairments by adhering to browser accessibility preferences (W3C, 2018; Nielsen Norman Group, 2020).
+
+**ARIA (Accessible Rich Internet Applications)**  
+Attributes such as `aria-label`, `role`, and `aria-describedby` are implemented where native semantics may not provide adequate clarity.  
+**Purpose in this project:** Enables screen readers to interpret interactions such as **Search Destination**, **Search Flights**, and **Book Activities**, and also supports dynamic updates within the search results panel.  
+**Justification:** ARIA enhances screen reader accuracy in circumstances where native HTML alone does not convey sufficient context (WAI-ARIA, 2017).
+
+**Alt Text and Descriptive Links**  
+Images contain meaningful `alt` descriptions, and hyperlinks use specific wording such as "Explore Tokyo" rather than ambiguous terms like "Click Here".  
+**Purpose in this project:** Allows assistive technologies to convey contextual meaning for both interactive elements and visual media.  
+**Justification:** Complies with WCAG 2.1 SC 2.4.4 (Link Purpose) and SC 1.1.1 (Non-text Content), thereby improving usability for non-visual users (W3C, 2018).
+
+**Accessible Forms and Error Messaging**  
+Form labels, `aria-describedby`, and descriptive feedback messages are implemented to make data entry errors easy to identify and correct.  
+**Purpose in this project:** Ensures clarity for users entering a destination, selecting travel dates, or choosing the number of guests.  
+**Justification:** Accessible validation assists users with cognitive, motor, or visual impairments (Nielsen Norman Group, 2020).
+
+
+## User Flow and Navigation Strategy
+[⬆ Back to Table of contents](#table-of-contents)
+
+The navigation flow of the website is designed to help users efficiently:
+
+1. **Search destinations**
+2. **Explore popular locations**
+3. **Filter travel options** (e.g., hotels, restaurants, attractions)
+4. **Book through external partners**
+
+### Logic Flow
+
+- **About Us Page** introduces the purpose of the platform with immediate access to the search feature.
+- **Search & Results Section** displays a search bar, travel filters (Attractions, Hotels, Restaurants), and the Google Maps result panel.
+- **Booking Section (Packages Page)** allows users to browse flights, hotels, packages or activities and links them to partner websites (e.g., Booking.com, Expedia, Google Flights).
+- **Popular Destinations Tiles** provide predefined travel shortcuts using a one-click search system.
+
+### Intended Enhancements
+
+- **Skip to Content** link for screen reader and keyboard users.
+- **Consistent interface patterns** to reduce cognitive load across the map view and booking pages.
+- **Mobile-first responsive grid layout** for travellers browsing on handheld devices.
+- **Clear information hierarchy** to prioritise user actions (filter -> explore map -> booking).
+
+### Summary of Justified Accessibility and Flow Features
+
+| Feature | Purpose | Standard / Justification |
+|---------|---------|--------------------------|
+| Semantic HTML | Improves screen reader structure | W3C (2018); MDN (2023) |
+| Keyboard Navigation | Inclusive non-mouse usability | WCAG 2.1 SC 2.1.1 |
+| Colour Contrast | Improves text and UI clarity | WCAG 2.1 SC 1.4.3; WebAIM (2024) |
+| Scalable Typography | Improves readability across devices | NN Group (2020) |
+| ARIA Support | Assists screen reader interpretation | WAI-ARIA (2017) |
+| Descriptive Links and Alt Text | Improves content meaning for all users | WCAG SC 2.4.4; SC 1.1.1 |
+| Accessible Forms | Improves error clarity for all users | NN Group (2020) |
+| Clear Navigation Flow | Supports intuitive system usage | User-centred design principles |
 
 ---
 
@@ -1639,6 +1721,10 @@ h1, h2, h3, nav, .btn, .cta {
 - **Mozilla Developer Network (MDN). (2024)** *Testing JavaScript Applications – Unit Testing and Mocking Concepts.*
   Available at: https://developer.mozilla.org/
   (Accessed: 03 November 2025).
+
+- **Mozilla Developer Network (MDN). (2023)** *HTML elements reference.*
+  Available at: https://developer.mozilla.org/
+  (Accessed: 23 November 2025).
   
 - **W3C. (2023)** *Web Accessibility Initiative (WAI) Guidelines.*
   Available at: [https://www.w3.org/WAI/](https://www.w3.org/WAI/)
@@ -1655,6 +1741,10 @@ h1, h2, h3, nav, .btn, .cta {
 - **W3C. (2023)** *Web Content Accessibility Guidelines (WCAG) 2.2 – Colour Contrast Requirements.*
   Available at: https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html
  (Accessed: 10 November 2025).
+
+- **W3C (2018)** *Web Content Accessibility Guidelines (WCAG) 2.1.*
+  Available at: https://www.w3.org/TR/WCAG21/
+  (Accessed: 23 November 2025).
 
 - **Booking.com. (2024)** *Accommodation and Travel Services Platform.*
   Available at: [https://www.booking.com/](https://www.booking.com/)
@@ -1732,9 +1822,17 @@ h1, h2, h3, nav, .btn, .cta {
   Available at: https://webaim.org/
   (Accessed: 31 October 2025).
 
+- **WebAIM (2024)** *Contrast Checker Tool.*
+  Available at: https://webaim.org/resources/contrastchecker/
+  (Accessed: 23 November 2025).
+
 - **Nielsen Norman Group. (2022)** *Personas: Study Guide.*
   Available at: https://www.nngroup.com/articles/personas-study-guide/)
   (Accessed: 31 October 2025).
+  
+- **Nielsen Norman Group. (2020)** *Accessibility UX Trends.*
+  Available at: https://www.nngroup.com/
+  (Accessed: 23 November 2025).
 
 - **jQuery Foundation. (2024)** *jQuery API Documentation.*
   Available at: https://api.jquery.com
@@ -1787,5 +1885,11 @@ h1, h2, h3, nav, .btn, .cta {
 - **99designs. (2024)** *Typography in Web Design: Best Practices and Font Pairings.*
   Available at: https://99designs.co.uk/blog/tips/best-fonts-for-web-design/
   (Accessed: 10 November 2025).
+
+- **WAI-ARIA (2017)** *Accessible Rich Internet Applications (WAI-ARIA) 1.1.*
+  Available at: https://www.w3.org/TR/wai-aria/
+  (Accessed: 23 November 2025).
+
+
 
 
