@@ -32,6 +32,7 @@
   - [Colour Palette Justification for Holiday Destination Finder Website](#colour-palette-justification-for-holiday-destination-finder-website)
   - [Typography Justification for Holiday Destination Finder Website](#typography-justification-for-holiday-destination-finder-website)
   - [Accessibility Implementation, User Flow and Navigation Strategies](#accessibility-implementation-user-flow-and-navigation-strategies)
+  - [Testing Javascript with JEST](#testing-javascript-with-jest)
 - [References](#references)
  
 
@@ -1654,6 +1655,106 @@ The navigation flow of the website is designed to help users efficiently:
 | Accessible Forms | Improves error clarity for all users | NN Group (2020) |
 | Clear Navigation Flow | Supports intuitive system usage | User-centred design principles |
 
+---
+
+## Testing Javascript with JEST
+[⬆ Back to Table of contents](#table-of-contents)
+
+As part of the skills-based lessons, I explored **Jest - Joint Entrance Screening Test**, a widely used JavaScript testing framework that allows developers to automatically test functions, logic, and interactive behaviour.  
+
+Jest is particularly useful because it provides a simulated browser environment (**jsdom**), which makes it possible to test functions that rely on the Document Object Model (**DOM**) without needing an actual web page.
+
+### Use of TDD (Test-Driven Development)
+
+The **Test-Driven Development (TDD)** approach was utilised during implementation. Tests are composed prior to developing the functionality itself, which is the programming philosophy behind TDD. This procedure follows this sequence:
+
+1. Write a failing test (based on the anticipated outcome).  
+2. To achieve a passing result, a minimal quantity of code is produced.  
+3. Confirming the test remains effective whilst resfactoring the code.  
+
+To fulfil a defined verification requirement as each functionality is created, dependable and intentional programming is promoted through employing this method.
+
+### Use of the RITE Principles (Readable – Isolated – Thorough – Explicit)
+
+This project applied the **RITE** principles for JavaScript evaluation alongside Jest and TDD methodologies.
+
+| Principle | Meaning | Applied Example |
+|-----------|---------|-----------------|
+| **Readable** | The tests must be easy to interpret without examining the underlying implementation code. | Clear test names such as *"returns trimmed city name from input field if no global value exists"* were utilised in Jest. |
+| **Isolated** | Each test should function independently without relying on shared state or previous results. | DOM nodes, `currentCityName`, and button states were re-created in Jest `beforeEach()` blocks to prevent interference. |
+| **Thorough** | All credible edge cases should be examined. | URL-generation functions in `packages.js` and `search.js` were tested using missing city names, empty guest values, and absent dates. |
+| **Explicit** | Tests must signify the expected behaviour clearly and without uncertainty. | Assertions such as `expect(scrollIntoView).toHaveBeenCalledWith({...})` ensure the precise arguments are defined. |
+
+#### Why RITE Was Used
+
+The use of RITE with TDD ensured that all automated tests:
+- the expected outcome is clearly stated  
+- rather than the internal implementation, behaviour is evaluated  
+- order of execution or shared data was not relied upon  
+- confirmed edge cases (e.g., invalid selectors, missing dates, empty search values)
+
+This made the codebase simpler to maintain and enhanced test dependability, particularly when refining interactive elements such as:
+
+- search filters (`filterPlaces()`)
+- booking buttons (`bookHotel()`, `bookPackage()`, etc.)
+- DOM scrolling (`initSmoothScroll()`)
+
+### Installation of Jest
+
+Jest was installed using the following commands:
+
+npm init        # Create a package with default configuration
+npm install --save-dev jest
+npm test        # Runs Jest test suites
+
+A **scripts/test** folder was created to store test files written in JavaScript. After running these commands, the files **package.json** and **package-lock.json** were automatically generated.
+- package.json keeps a record of project metadata, dependencies (such as Jest), and test scripts.
+- package-lock.json ensures consistent installation by locking the exact versions of dependencies. This guarantees that the project behaves the same way on any machine.
+
+To verify the functionality of the primary JavaScript modules used in the **Holiday Destination Finder** website through the developed test cases, Jest was successfully installed and the necessary configuration files were produced.
+
+### DOM (Document Object Model) 
+
+The webpage structure is represented by a programming interface called the **DOM (Document Object Model)**. A structured tree of objects is the result of a translated page when a browser loads an HTML file. A tree **node** represents an element of the page – such as links, images, buttons, paragraphs, and headings. To make the page interactive, these nodes can be removed, added, modified, or accessed by JavaScript.
+
+**In simpler terms:**  
+
+- In the browser, the DOM is a **dynamic representation of the webpage**.  
+- Adding search results, showing pop-ups, changing colours, or updating text are the **visible modifications** that occur when JavaScript interacts with the DOM.
+
+#### Why the DOM matters in the project
+
+The **Holiday Destination Finder** relies on the **DOM** to:
+    
+- Dynamically display search results
+- Highlight selected filter buttons
+- Load map markers when a user searches
+- Redirect users when clicking booking action buttons
+
+For example, buttons like **Search Flights**, **Search Hotels**, and **Search Destination** work because JavaScript is interacting with DOM elements by:
+
+- Reading input values (#citySearch)
+- Adding/removing .active CSS classes
+- Injecting results into the HTML (#resultsList)
+- Updating map markers inside #map
+
+#### Summary of the DOM
+
+**The DOM (Document Object Model)** is the browser's internal representation of a webpage, organised as a tree of nodes. To access and dynamically modify elements of a page, updating live map information, changing button states, and displaying search results are the interactive operations allowed.
+
+### JSDOM
+
+The real browser DOM is not directly interacted with in Jest. Instead, a library called **jsdom** provides a **simulated DOM environment**.
+
+#### What is jsdom?
+
+A web browser DOM is replicated using the JavaScript implementation from **jsdom**. Jest can evaluate DOM-related code **without launching an actual browser** by generating a **virtual webpage** inside **Node.js**.
+
+#### How Jest connects to the DOM
+
+**jsdom is automatically loaded** (unless the settings are altered) when tests are executed by Jest. Without using a browser, code can still be evaluated. Jest can run and inspect functions that update the page, such as attaching event listeners, modifying styles, and adding elements.
+
+### Testing Strategy and Evidence
 ---
 
 # References
