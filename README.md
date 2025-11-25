@@ -1870,7 +1870,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 <summary><strong>Test Case 2.1: Initialize Action Buttons</strong></summary>
 
 **File: scripts/test/script.test.js**
-<img width="949" height="879" alt="image" src="https://github.com/user-attachments/assets/c3c3120b-3cc3-4a08-a8a3-1f35c85b4739" />
+<img width="1052" height="857" alt="image" src="https://github.com/user-attachments/assets/ed53d63c-0d79-43ae-9625-616ae41d8bee" />
 
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
