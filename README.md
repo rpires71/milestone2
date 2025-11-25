@@ -1826,16 +1826,17 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 |----------|---------|------------|
 |Click listeners attached to all # anchor links|PASS - Listeners successfully attached|Console shows event listeners registered|
 </details>
-
 <details>
+<summary><strong>Test Case 1.2: Smooth Scroll Behaviour</strong></summary>
 
+**File: scripts/test/script.test.js**
+<img width="1037" height="934" alt="image" src="https://github.com/user-attachments/assets/c0c9953d-bcf8-4371-950c-ffd9e3d90a62" />
 
-
-
-
-
-
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|scrollIntoView() called with correct parameters|PASS - Smooth scroll triggered correctly|Mock function received expected arguments|
 </details>
+
 
 
 
