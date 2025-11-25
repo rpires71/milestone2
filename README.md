@@ -1836,10 +1836,32 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 |----------|---------|------------|
 |scrollIntoView() called with correct parameters|PASS - Smooth scroll triggered correctly|Mock function received expected arguments|
 </details>
+<details>
+<summary><strong>Test Case 1.3: Mobile Navbar Collapse</strong></summary>
 
+**File: scripts/test/script.test.js**
+<<img width="655" height="780" alt="image" src="https://github.com/user-attachments/assets/a97eb992-ff7f-4510-b81d-98764425d56e" />
 
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Navbar collapses after link click|FAIL - clicking anchor link closes Bootstrap navbar on mobile |TypeError: targetElement.scrollIntoView is not a function|
+**Note:** The error is because jsdom doesn't have scrollIntoView by default. I need to mock it.
+</details>
+<details>
+<summary><strong>Test Case 1.3: Mobile Navbar Collapse (Fixed)</strong></summary>
 
+**File: scripts/test/script.test.js**
+<img width="610" height="825" alt="image" src="https://github.com/user-attachments/assets/0d26f842-18c5-4ef6-8460-b9b4a1edd4ab" />
 
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Navbar collapses after link click|PASS - Bootstrap Collapse API called|Mock hide() function invoked|
+**Note:** 
+**Key changes** 
+- Element.prototype.scrollIntoView = jest.fn(); prevents the crash.
+- global.bootstrap = { ... } ensures bootstrap exists in the Jest/jsdom environment.
+- Once the handler runs fully, mockHide is called and the test passes.
+</details>
 ---
 
 # References
