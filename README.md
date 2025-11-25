@@ -1845,6 +1845,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
 |Navbar collapses after link click|FAIL - clicking anchor link closes Bootstrap navbar on mobile |TypeError: targetElement.scrollIntoView is not a function|
+
 **Note:** The error is because jsdom doesn't have scrollIntoView by default. I need to mock it.
 </details>
 <details>
@@ -1856,12 +1857,14 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
 |Navbar collapses after link click|PASS - Bootstrap Collapse API called|Mock hide() function invoked|
+
 **Note:** 
 **Key changes** 
 - Element.prototype.scrollIntoView = jest.fn(); prevents the crash.
 - global.bootstrap = { ... } ensures bootstrap exists in the Jest/jsdom environment.
 - Once the handler runs fully, mockHide is called and the test passes.
 </details>
+
 ---
 
 # References
