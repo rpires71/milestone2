@@ -1815,14 +1815,26 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 
 #### Test Cases & Evidence
 
-<details>
 **Test Suite 1: script.js - Smooth Scrolling**
-**Test Case 1.1: Attach Click Listeners to Anchor Links**
+<details>
+<summary><strong>Test Case 1.1: Attach Click Listeners to Anchor Links</strong></summary>
+
 **File: scripts/test/script.test.js**
 <img width="949" height="879" alt="image" src="https://github.com/user-attachments/assets/c3c3120b-3cc3-4a08-a8a3-1f35c85b4739" />
-**Expected Result:** Click listeners attached to all # anchor links
-**Actual Result:** PASS - Listeners successfully attached
-**Evidence:** Console shows event listeners registered
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Click listeners attached to all # anchor links|PASS - Listeners successfully attached|Console shows event listeners registered|
+</details>
+
+<details>
+
+
+
+
+
+
+
 </details>
 
 
