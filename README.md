@@ -641,7 +641,6 @@ Using the Google Maps API, users can search for holiday destinations, providing 
 **Desktop**  
 <img width="1477" height="1412" alt="Home-Search-PopularDestinations-Contact-Desktop-Laptop" src="https://github.com/user-attachments/assets/6a646295-b704-456e-adb1-642e1e9efd03" />
 
-
 **Tablet**  
 <img width="880" height="2552" alt="Home-Search-PopularDestinations-Contact-Tablet" src="https://github.com/user-attachments/assets/f75e542b-8d6e-465e-8366-2793f3035988" />
 
@@ -1796,7 +1795,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 - Focus on state management and DOM interactions
 - Button state management (active/inactive classes)
 
-### 3. `packages.js` – Booking Integration
+#### 3. `packages.js` – Booking Integration
 
 | Function | Purpose | Test Focus |
 |----------|---------|------------|
@@ -1813,6 +1812,20 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 - Date validation logic
 - For missing inputs a fallback behaviour is in place
 - window.open() mocking
+
+#### Test Cases & Evidence
+
+<details>
+**Test Suite 1: script.js - Smooth Scrolling**
+**Test Case 1.1: Attach Click Listeners to Anchor Links**
+**File: scripts/test/script.test.js**
+<img width="949" height="879" alt="image" src="https://github.com/user-attachments/assets/c3c3120b-3cc3-4a08-a8a3-1f35c85b4739" />
+**Expected Result:** Click listeners attached to all # anchor links
+**Actual Result:** PASS - Listeners successfully attached
+**Evidence:** Console shows event listeners registered
+</details>
+
+
 
 ---
 
