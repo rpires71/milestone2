@@ -1840,7 +1840,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 <summary><strong>Test Case 1.3: Mobile Navbar Collapse</strong></summary>
 
 **File: scripts/test/script.test.js**
-<<img width="655" height="780" alt="image" src="https://github.com/user-attachments/assets/a97eb992-ff7f-4510-b81d-98764425d56e" />
+<img width="655" height="780" alt="image" src="https://github.com/user-attachments/assets/a97eb992-ff7f-4510-b81d-98764425d56e" />
 
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
@@ -1865,6 +1865,37 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 - Once the handler runs fully, mockHide is called and the test passes.
 </details>
 
+**Test Suite 2: search.js - Search Functionality**
+<details>
+<summary><strong>Test Case 2.1: Initialize Action Buttons</strong></summary>
+
+**File: scripts/test/script.test.js**
+<img width="949" height="879" alt="image" src="https://github.com/user-attachments/assets/c3c3120b-3cc3-4a08-a8a3-1f35c85b4739" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Buttons become interactive with active state|FAIL - initializeActionButtons attaches click listeners to filter buttons|TypeError: Cannot read properties of null (reading 'value')|
+
+**Note:** The error is at line 78 of search.js. The code tries to read cityInput.value but cityInput is null because the test doesn't have the element when the click happens..
+</details>
+<details>
+<summary><strong>Test Case 2.1: Initialize Action Buttons (Fixed)</strong></summary>
+
+**File: scripts/test/script.test.js**
+<img width="1031" height="920" alt="image" src="https://github.com/user-attachments/assets/87f22228-7377-4d6e-bb0d-ee5ae16c6b80" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Buttons become interactive with active state|PASS - Click handlers attached, active class toggled|Button state changes correctly|
+
+**Note:**
+**Key changes:** When Jest runs the test, it creates a minimal DOM. When the button is clicked:
+- The event listener runs
+- It tries to get cityInput with getElementById('citySearch')
+- The element exists in the test DOM
+- But then the function tries to access .value before checking if the element exists
+- The fix: Check if (cityInput && cityInput.value.trim() !== '') before accessing .value on lines 78 and 127
+</details>
 ---
 
 # References
