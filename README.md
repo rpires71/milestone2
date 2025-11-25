@@ -1755,6 +1755,65 @@ A web browser DOM is replicated using the JavaScript implementation from **jsdom
 **jsdom is automatically loaded** (unless the settings are altered) when tests are executed by Jest. Without using a browser, code can still be evaluated. Jest can run and inspect functions that update the page, such as attaching event listeners, modifying styles, and adding elements.
 
 ### Testing Strategy and Evidence
+
+#### Overview
+
+While using **Test-Driven Development (TDD)** principles and **Jest** for the **Holiday Destination Finder** project, the following testing strategy outlines the automated testing approach. Across all three main JavaScript files, this strategy focuses on assessing the core JavaScript functionality.
+
+- **script.js** - Smooth scrolling and navigation 
+- **search.js** - Search functionality and Google Places API integration 
+- **packages.js** - Booking partner integration (Booking.com, Google Flights, Expedia, GetYourGuide) 
+
+#### Testing Approach
+
+**Functions Tested**
+
+#### 1. `script.js` – Navigation & Scrolling
+
+| Function | Purpose | Test Focus |
+|----------|---------|------------|
+| `initSmoothScroll()` | Enables smooth scrolling to anchor links (e.g., `#contact`) | - Attaches click listeners <br> - Calls `scrollIntoView()` <br> - Collapses mobile navbar |
+
+**Key Testing Considerations:**
+
+- Without a real browser, DOM manipulation is tested.  
+- Bootstrap Collapse API is mocked.  
+- Smooth scroll behaviour is validated.  
+
+#### 2. `search.js` – Search Functionality
+
+| Function | Purpose | Test Focus |
+|----------|---------|-------------|
+| `initializeActionButtons()` | Makes category filter buttons interactive | - Adds/removes `.active` class <br> - Updates `currentSearchType` <br> - Auto-refreshes results |
+| `filterPlaces(type, button)` | Updates search filter and re-runs search | - Updates selected category <br> - Highlights clicked button <br> - Triggers `performSearch()` if city exists |
+| `initializeSearchButton()` | Enables search button and Enter key | - Validates non-empty input <br> - Shows alert for empty search <br> - Calls `performSearch()` |
+| `searchCity(cityName)` | Quick search from Popular Destinations | - Populates input field <br> - Triggers `performSearch()` |
+| `clearMarkers()` | Removes map markers before new search | - Calls `setMap(null)` on markers <br> - Clears marker arrays <br> - Closes `InfoWindows` |
+
+**Key Testing Considerations:**
+
+- Google Maps API mocked (due to external dependency this is not tested directly )
+- Focus on state management and DOM interactions
+- Button state management (active/inactive classes)
+
+### 3. `packages.js` – Booking Integration
+
+| Function | Purpose | Test Focus |
+|----------|---------|------------|
+| `getCityNameForUrls()` | Safely retrieves city name for booking URLs | - Returns global `currentCityName` if exists <br> - Falls back to `#citySearch` input <br> - Returns empty string if nothing found |
+| `setActiveBookingButton(btn)` | Highlights selected booking button | - Removes `.active` from all buttons <br> - Adds `.active` to clicked button <br> - Updates button styling classes |
+| `bookHotel(event)` | Opens Booking.com with search parameters | - Validates date inputs <br> - Builds correct URL format <br> - Opens new window with `window.open()` |
+| `bookFlights(event)` | Opens Google Flights with search parameters | - Validates departure date <br> - Constructs Google Flights URL <br> - Handles return vs one-way trips |
+| `bookPackage(event)` | Opens Expedia with package search | - Validates both check-in/check-out <br> - Builds Expedia deeplink correctly <br> - Encodes URL parameters properly |
+| `bookActivities(event)` | Opens GetYourGuide with city search | - Retrieves city name <br> - Extracts city from `"City, Country"` format <br> - Builds GetYourGuide URL |
+
+**Key Testing Considerations:**
+
+- URL construction accuracy (query parameters, encoding)
+- Date validation logic
+- For missing inputs a fallback behaviour is in place
+- window.open() mocking
+
 ---
 
 # References
