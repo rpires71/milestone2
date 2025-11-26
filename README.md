@@ -2078,6 +2078,17 @@ searchBtn.click = jest.fn();
 |----------|---------|------------|
 |Input value used and trimmed|PASS - Fallback logic works|Whitespace removed, correct value returned|
 </details>
+<details>
+<summary><strong>Test Case 3.3: Get City Name - Empty String Fallback</strong></summary>
+  
+**File: scripts/test/packages.test.js**
+
+<img width="637" height="589" alt="image" src="https://github.com/user-attachments/assets/327ebfcb-4345-4224-bb81-b6bcc3bf1ea8" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Empty string returned (not null/undefined)|PASS - Safe fallback prevents errors|Function returned '' as expected|
+</details>
 
 ---
 
