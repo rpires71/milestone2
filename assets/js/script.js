@@ -59,3 +59,9 @@ function initSmoothScroll() {
         });
     });
 }
+
+// Export for testing (Node.js/Jest environment)
+// This allows Jest to import and test the function
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { initSmoothScroll };
+}

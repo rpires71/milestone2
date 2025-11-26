@@ -1,0 +1,23 @@
+{
+  "name": "milestone2",
+  "version": "1.0.0",
+  "description": "Holiday Destination Finder - Interactive Front-End Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpires71/milestone2.git"
+  },
+  "author": "Roberto Pires",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rpires71/milestone2/issues"
+  },
+  "homepage": "https://github.com/rpires71/milestone2#readme",
+  "devDependencies": {
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3"
+  }
+}
