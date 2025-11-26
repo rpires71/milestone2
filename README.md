@@ -2111,6 +2111,17 @@ searchBtn.click = jest.fn();
 |----------|---------|------------|
 |Alert shown, URL not opened|PASS - Validation prevents invalid bookings|Alert called, window.open not invoked|
 </details>
+<details>
+<summary><strong>Test Case 3.6: Book Hotel - URL Construction</strong></summary>
+  
+**File: scripts/test/packages.test.js**
+
+<img width="1182" height="750" alt="image" src="https://github.com/user-attachments/assets/f7150efe-e0c0-4696-9f2c-6817282309a7" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Correct URL with all parameters|PASS - URL built accurately|window.open received expected URL string|
+</details>
 
 ---
 
