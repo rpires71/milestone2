@@ -1858,8 +1858,8 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 |----------|---------|------------|
 |Navbar collapses after link click|PASS - Bootstrap Collapse API called|Mock hide() function invoked|
 
-**Note:** 
 **Key changes** 
+
 - Element.prototype.scrollIntoView = jest.fn(); prevents the crash.
 - global.bootstrap = { ... } ensures bootstrap exists in the Jest/jsdom environment.
 - Once the handler runs fully, mockHide is called and the test passes.
@@ -1888,14 +1888,45 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 |----------|---------|------------|
 |Buttons become interactive with active state|PASS - Click handlers attached, active class toggled|Button state changes correctly|
 
-**Note:**
-**Key changes:** 
+**Key changes:**
+
 When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 - The event listener runs
 - It tries to get cityInput with getElementById('citySearch')
 - The element exists in the test DOM
 - But then the function tries to access .value before checking if the element exists
 - The fix: Check if (cityInput && cityInput.value.trim() !== '') before accessing .value on lines 78 and 127
+</details>
+<details>
+<summary><strong>Test Case 2.2: Filter Places by Type</strong></summary>
+
+**File: scripts/test/script.test.js**
+<img width="1066" height="744" alt="image" src="https://github.com/user-attachments/assets/0f334ff9-9692-4d9b-9db8-ccf02838ac0e" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Filter type updated, button highlighted|FAIL - filterPlaces updates currentSearchType and highlights button|ReferenceError: filterPlaces is not defined|
+
+**Note:** The filterPlaces function isn't being destructured from the module import, so it isn't accessible in the test scope.
+</details>
+<details>
+<summary><strong>Test Case 2.2: Filter Places by Type (Fixed)</strong></summary>
+
+**File: scripts/test/script.test.js**
+<img width="841" height="965" alt="image" src="https://github.com/user-attachments/assets/60f11c5d-2d5c-4a89-93a5-4d89a793d03a" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Filter type updated, button highlighted|PASS - State and UI updated correctly|currentSearchType variable changed, CSS class applied|
+
+**Key changes:** Imported all search.js functions to search.test.js
+const { 
+    initializeActionButtons,
+    filterPlaces,
+    initializeSearchButton,
+    searchCity,
+    clearMarkers 
+} = require('../../assets/js/search.js');
 </details>
 
 ---
