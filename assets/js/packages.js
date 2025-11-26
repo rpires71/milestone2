@@ -449,6 +449,21 @@ function bookActivities(ev) {
     window.open(getYourGuideUrl, '_blank');
 }
 
+
+// Export functions for testing (Node.js/Jest environment)
+if (typeof module !== "undefined" && module.exports) {
+  
+  module.exports = {
+    getCityNameForUrls,
+    setActiveBookingButton,
+    bookHotel,
+    bookFlights,
+    bookPackage,
+    bookActivities
+  };
+}
+
+
 /* ====================================================================== 
    Overall Role in the Application:
    - packages.js acts as the "integration layer" between the internal
@@ -460,3 +475,4 @@ function bookActivities(ev) {
    - This keeps the project within an educational scope while still
      demonstrating realistic industry-style integrations.
    ====================================================================== */
+
