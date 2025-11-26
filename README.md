@@ -2089,6 +2089,17 @@ searchBtn.click = jest.fn();
 |----------|---------|------------|
 |Empty string returned (not null/undefined)|PASS - Safe fallback prevents errors|Function returned '' as expected|
 </details>
+<details>
+<summary><strong>Test Case 3.4: Set Active Booking Button</strong></summary>
+  
+**File: scripts/test/packages.test.js**
+
+<img width="653" height="734" alt="image" src="https://github.com/user-attachments/assets/ac4bbf3f-3e23-476a-add1-f9bd793c6eab" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Only clicked button has active state|PASS - Button states managed correctly|CSS classes updated as expected|
+</details>
 
 ---
 
