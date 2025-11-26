@@ -2066,8 +2066,17 @@ searchBtn.click = jest.fn();
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
 |Global variable used first|PASS - Priority order correct|Function returned global value over input|
+</details>
+<details>
+<summary><strong>Test Case 3.2: Get City Name - Input Fallback</strong></summary>
+  
+**File: scripts/test/packages.test.js**
 
-**Note:** The problem is that markers and infoWindows are private variables inside search.js. the test is setting global.markers but clearMarkers() is using the internal markers variable.
+<img width="665" height="691" alt="image" src="https://github.com/user-attachments/assets/c3635b99-36f4-490b-9265-7b2b2c2a85b6" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Input value used and trimmed|PASS - Fallback logic works|Whitespace removed, correct value returned|
 </details>
 
 ---
