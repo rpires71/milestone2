@@ -2100,6 +2100,17 @@ searchBtn.click = jest.fn();
 |----------|---------|------------|
 |Only clicked button has active state|PASS - Button states managed correctly|CSS classes updated as expected|
 </details>
+<details>
+<summary><strong>Test Case 3.5: Book Hotel - Date Validation</strong></summary>
+  
+**File: scripts/test/packages.test.js**
+
+<img width="781" height="731" alt="image" src="https://github.com/user-attachments/assets/e28a8de7-954d-425b-b61a-1ce627f5b24b" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Alert shown, URL not opened|PASS - Validation prevents invalid bookings|Alert called, window.open not invoked|
+</details>
 
 ---
 
