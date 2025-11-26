@@ -2133,6 +2133,17 @@ searchBtn.click = jest.fn();
 |----------|---------|------------|
 |Google Flights URL with dates and city|PASS - URL contains required parameters|URL string validated|
 </details>
+<details>
+<summary><strong>Test Case 3.8: Book Package - Expedia Deeplink</strong></summary>
+  
+**File: scripts/test/packages.test.js**
+
+<img width="738" height="852" alt="image" src="https://github.com/user-attachments/assets/cacc37d8-cbd6-4697-b557-ee85403b9b45" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Expedia deeplink with all parameters|PASS - Complex URL built correctly|URL format matches Expedia requirements|
+</details>
 
 ---
 
