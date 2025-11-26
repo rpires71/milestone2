@@ -1869,7 +1869,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 <details>
 <summary><strong>Test Case 2.1: Initialize Action Buttons</strong></summary>
 
-**File: scripts/test/script.test.js**
+**File: scripts/test/search.test.js**
 <img width="1052" height="857" alt="image" src="https://github.com/user-attachments/assets/ed53d63c-0d79-43ae-9625-616ae41d8bee" />
 
 | Expected Result | Actual Result | Evidence |
@@ -1881,7 +1881,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 <details>
 <summary><strong>Test Case 2.1: Initialize Action Buttons (Fixed)</strong></summary>
 
-**File: scripts/test/script.test.js**
+**File: scripts/test/search.test.js**
 <img width="1031" height="920" alt="image" src="https://github.com/user-attachments/assets/87f22228-7377-4d6e-bb0d-ee5ae16c6b80" />
 
 | Expected Result | Actual Result | Evidence |
@@ -1900,7 +1900,7 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 <details>
 <summary><strong>Test Case 2.2: Filter Places by Type</strong></summary>
 
-**File: scripts/test/script.test.js**
+**File: scripts/test/search.test.js**
 <img width="1066" height="744" alt="image" src="https://github.com/user-attachments/assets/0f334ff9-9692-4d9b-9db8-ccf02838ac0e" />
 
 | Expected Result | Actual Result | Evidence |
@@ -1912,9 +1912,8 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 <details>
 <summary><strong>Test Case 2.2: Filter Places by Type (Fixed)</strong></summary>
 
-**File: scripts/test/script.test.js**
+**File: scripts/test/search.test.js**
 <img width="816" height="954" alt="image" src="https://github.com/user-attachments/assets/fa127bb1-e296-4c79-a7c5-10fb77893e0b" />
-
 
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
@@ -1922,6 +1921,17 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 
 **Key changes:** Imported all search.js functions to search.test.js
 <img width="404" height="209" alt="image" src="https://github.com/user-attachments/assets/eee7b129-61c4-46f5-94d1-eebb016eb431" />
+</details>
+<details>
+<summary><strong>Test Case 2.3: Search Button Validation</strong></summary>
+
+**File: scripts/test/search.test.js**
+<img width="649" height="616" alt="image" src="https://github.com/user-attachments/assets/66e0e2a5-6eb8-4409-89df-8ea83f829ebf" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Alert shown for empty input|PASS - Validation prevented empty search|Alert function called with correct message|
+
 </details>
 
 ---
