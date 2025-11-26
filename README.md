@@ -2311,7 +2311,7 @@ Of the testable functions using **Jest** and **Test‑Driven Development (TDD)**
 
 Throughout development, **TDD methodology** was followed and **RITE principles (Readable, Isolated, Thorough, Explicit)** were applied within this testing strategy. Full application functionality was ensured through **comprehensive manual testing**, and in automated testing, functions requiring external APIs were excluded (Google Developers, 2024). 
 
-For future enhancements, a **maintainable test suite** was established, **regressions were prevented during development**, and code quality confidence was achieved through the use of this testing approach (Jest, 2024; Mozilla Developer Network, 2024; Kent Beck, 2003). 
+For future enhancements, a **maintainable test suite** was established, **regressions were prevented during development**, and code quality confidence was achieved through the use of this testing approach (Jest, 2024; Mozilla Developer Network, 2024). 
 
 ---
 
