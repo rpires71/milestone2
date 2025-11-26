@@ -2286,7 +2286,7 @@ searchBtn.click = jest.fn();
 - Measure and optimise load times  
 - Test with large datasets *(100+ results)*  
 
-# Test Results
+### Test Results
 
 #### Overall Test Summary
 
