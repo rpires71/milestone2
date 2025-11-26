@@ -33,6 +33,8 @@
   - [Typography Justification for Holiday Destination Finder Website](#typography-justification-for-holiday-destination-finder-website)
   - [Accessibility Implementation, User Flow and Navigation Strategies](#accessibility-implementation-user-flow-and-navigation-strategies)
   - [Testing Javascript with JEST](#testing-javascript-with-jest)
+    -  [Test Suite 1: script.js - Smooth Scrolling](#test-suite-1-scriptjs---smooth-scrolling)
+    -  [Test Suite 2: search.js - Search Functionality](#test-suite-2-searchjs---search-functionality)
 - [References](#references)
  
 
@@ -1815,7 +1817,9 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 
 #### Test Cases & Evidence
 
-**Test Suite 1: script.js - Smooth Scrolling**
+#### Test Suite 1: script.js - Smooth Scrolling
+[⬆ Back to Table of contents](#table-of-contents)
+
 <details>
 <summary><strong>Test Case 1.1: Attach Click Listeners to Anchor Links</strong></summary>
 
@@ -1865,7 +1869,9 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 - Once the handler runs fully, mockHide is called and the test passes.
 </details>
 
-**Test Suite 2: search.js - Search Functionality**
+#### Test Suite 2: search.js - Search Functionality
+[⬆ Back to Table of contents](#table-of-contents)
+
 <details>
 <summary><strong>Test Case 2.1: Initialize Action Buttons</strong></summary>
 
@@ -1924,14 +1930,13 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 </details>
 <details>
 <summary><strong>Test Case 2.3: Search Button Validation</strong></summary>
-
+  
 **File: scripts/test/search.test.js**
 <img width="649" height="616" alt="image" src="https://github.com/user-attachments/assets/66e0e2a5-6eb8-4409-89df-8ea83f829ebf" />
 
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
 |Alert shown for empty input|PASS - Validation prevented empty search|Alert function called with correct message|
-
 </details>
 
 ---
