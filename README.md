@@ -37,6 +37,7 @@
     -  [Test Suite 2: search.js - Search Functionality](#test-suite-2-searchjs---search-functionality)
     -  [Test Suite 3: packages.js - Booking Integration](#test-suite-3-packagesjs---booking-integration)
     -  [JEST Test Coverage Analysis](#jest-test-coverage-analysis)
+    -  [JEST Edge Cases Tested](#jest-edge-cases-tested)
 - [References](#references)
  
 
@@ -2173,7 +2174,7 @@ searchBtn.click = jest.fn();
 
 #### **Functions Tested vs Not Tested**
 
-#### **TESTED (19 functions)**
+#### **TESTED**
 
 | Function | File |
 |----------|------|
@@ -2206,6 +2207,34 @@ searchBtn.click = jest.fn();
 - Mocking the **entire Google Maps API** is complex and brittle
 - These functions are **integration points, not pure logic**
 - **Manual testing** was performed instead (see *Manual Testing* section)
+
+### **JEST Edge Cases Tested**
+[⬆ Back to Table of contents](#table-of-contents)
+
+#### **Empty Input Validation**
+- Empty city name triggers alert  
+- Whitespace-only input treated as empty  
+- Missing dates prevent booking URL generation  
+
+### **Fallback Behaviour**
+- Returns empty string instead of `null`/`undefined`  
+- Falls back from global variable to input field  
+- Default guest count (2) applied when not selected  
+
+### **String Manipulation**
+- City name trimmed (removes extra spaces)  
+- `"City, Country"` format split correctly  
+- URL encoding applied to special characters  
+
+### **State Management**
+- Only one button active at a time  
+- Previous markers cleared before new search  
+- Search type persists across filter changes  
+
+### **DOM Element Existence**
+- Handles missing DOM elements gracefully  
+- Checks for element existence before accessing  
+- Returns safe defaults for missing values  
 
 ---
 
