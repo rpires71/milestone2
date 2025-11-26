@@ -35,6 +35,7 @@
   - [Testing Javascript with JEST](#testing-javascript-with-jest)
     -  [Test Suite 1: script.js - Smooth Scrolling](#test-suite-1-scriptjs---smooth-scrolling)
     -  [Test Suite 2: search.js - Search Functionality](#test-suite-2-searchjs---search-functionality)
+    -  [Test Suite 3: packages.js - Booking Integration](#test-suite-3-packagesjs---booking-integration)
 - [References](#references)
  
 
@@ -2050,6 +2051,23 @@ searchBtn.click = jest.fn();
 **Solution:** Export test-helper functions (prefixed with _) that modify internal state
 
 **Result:** Tests can now verify clearMarkers() behavior with controlled data
+</details>
+
+#### Test Suite 3: packages.js - Booking Integration
+[⬆ Back to Table of contents](#table-of-contents)
+
+<details>
+<summary><strong>Test Case 3.1: Get City Name - Global Variable Priority</strong></summary>
+  
+**File: scripts/test/packages.test.js**
+
+<img width="653" height="647" alt="image" src="https://github.com/user-attachments/assets/b81c2f4c-c2bc-4fee-8345-501d7b235de6" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Global variable used first|PASS - Priority order correct|Function returned global value over input|
+
+**Note:** The problem is that markers and infoWindows are private variables inside search.js. the test is setting global.markers but clearMarkers() is using the internal markers variable.
 </details>
 
 ---
