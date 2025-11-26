@@ -2030,6 +2030,8 @@ searchBtn.click = jest.fn();
 
 <img width="681" height="887" alt="image" src="https://github.com/user-attachments/assets/921665b7-e398-4f6e-90c7-e8ef278d7461" />
 
+<img width="516" height="305" alt="image" src="https://github.com/user-attachments/assets/a3e807ae-2fab-4c6b-bca0-1a055181cc4e" />
+
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
 |All markers removed, arrays cleared|PASS - Function exists|`typeof clearMarkers` returns 'function', executes without errors|
