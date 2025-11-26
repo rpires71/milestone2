@@ -1974,9 +1974,9 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 
 **Key changes:** 
 
-**Problem:** jest.spyOn() calls the real click function which triggers performSearch(), causing errors.
-**Solution:** I used jest.fn() to replace the click method with an empty mock that doesn't execute the real function.
-**Code change:**
+- **Problem:** jest.spyOn() calls the real click function which triggers performSearch(), causing errors.
+- **Solution:** I used jest.fn() to replace the click method with an empty mock that doesn't execute the real function.
+- **Code change:**
 
 javascript// BEFORE
 const clickSpy = jest.spyOn(searchBtn, 'click');
