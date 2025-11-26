@@ -5,25 +5,28 @@ Starts this HTML file and sets the language to English.
 All tags from this webpage (head, body, content) will sit inside this <html> element.
 -->
 <html lang="en">
-<!--
+  <!--
 The head element isn't displayed on the webpage itself but contains important metadata and 
 resources that describes this webpage. It sits at the top of the HTML document.
 -->
-<head>
-  <!-- 
+  <head>
+    <!-- 
     Character encoding: UTF-8 supports most characters/symbols.
     Viewport: makes layout responsive on mobile (scales to device width). 
   -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
     Basic SEO metadata so search engines understand the page content.
     These don't affect layout but are good practice in web development.
   -->
-  <meta name="description" content="Holiday Destination Finder - About Us" />
-  <meta name="keywords" content="holiday, travel, destination, booking, vacation" />
-  <meta name="author" content="Roberto Pires" />
-  <!-- 
+    <meta name="description" content="Holiday Destination Finder - About Us" />
+    <meta
+      name="keywords"
+      content="holiday, travel, destination, booking, vacation"
+    />
+    <meta name="author" content="Roberto Pires" />
+    <!-- 
     The <title> tag in HTML defines the title of the webpage. It's placed inside the 
      <head> section and serves several important purposes:
     1- Browser tab display: The text inside <title> appears in the browser's tab or window bar.
@@ -31,64 +34,87 @@ resources that describes this webpage. It sits at the top of the HTML document.
     3- Bookmarks/favorites: When someone bookmarks a page, the title is used as the default name.
     4- Accessibility: Screen readers announce the title first, helping users understand the page context.
   -->
-  <title>About Us - Holiday Destination Finder</title>
-  <!-- 
+    <title>About Us - Holiday Destination Finder</title>
+    <!-- 
     Favicon links: small icons used in browser tabs and bookmarks.
   -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
-  <!-- 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon-16x16.png"
+    />
+    <!-- 
     Bootstrap CSS (via CDN).
     Provides the responsive grid system and many utility classes
     that I use throughout the layout (e.g. container, row, col-*, navbar, btn, etc.).
   -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- 
     Bootstrap Icons (via CDN).
     I use these for decorative and informative icons (e.g. phone, email, checkmarks).
   -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <!-- 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- 
     Google Fonts preconnect: performance optimisation for loading fonts.
     I use Montserrat for headings and Lato for body text in accordance with my design.
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;500;700&display=swap"
-    rel="stylesheet" />
-  <!-- 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 
     Custom CSS.
     This file defines my colour palette, typography, layout tweaks
     and also overrides some default Bootstrap styles (e.g. navbar colours).
   -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<!-- 
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <!-- 
     The <body> tag in HTML contains all the viewed content of the webpge aside of the title.
     This tag follows the <head> section and everything inside <body> is what users see and interact
     with in the browser.
 -->
-<body>
-  <!-- =========================================================
+  <body>
+    <!-- =========================================================
        PART 1 of the page: The Bootstrap Navigation Menu
        ========================================================= -->
-  <!-- 
+    <!-- 
     Bootstrap navbar: 
     - .navbar, .navbar-expand-lg: Collapses the menu on small screens in a responsive manner.
     - .navbar-light bg-white: Base Bootstrap theming (overridden by my CSS).
     - .sticky-top: Menu sticks to the top when when scrolling.
     - .shadow-sm: Small drop shadow for sense of elevation.
   -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-  <!-- 
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
+    >
+      <!-- 
     <div>: A generic block‑level container in HTML.
     class="container-fluid": A Bootstrap class that makes the container span the entire width 
     of the viewport.
   -->
-    <div class="container-fluid">
-      <!-- 
+      <div class="container-fluid">
+        <!-- 
         Brand area: logo + site title.
         The <a> tag in HTML is the anchor element, used to create hyperlinks. It's one of the 
             most important tags because it lets you connect your page to other pages, files, or 
@@ -98,22 +124,26 @@ resources that describes this webpage. It sits at the top of the HTML document.
          the left (or start) of the navbar.
         d-flex and align-items-center from Bootstrap align icon and text horizontally.
       -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <!-- 
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <!-- 
           Logo image: custom .logo-icon styling in CSS adds background colour 
           and rounded corners. me-2 adds right margin (Bootstrap utility).
         -->
-        <img src="assets/images/logo-blue-bg.webp" alt="Holiday Finder Logo" class="logo-icon me-2"
-          style="max-height: 40px; width: auto" />
-        <!-- 
+          <img
+            src="assets/images/logo-blue-bg.webp"
+            alt="Holiday Finder Logo"
+            class="logo-icon me-2"
+            style="max-height: 40px; width: auto"
+          />
+          <!-- 
           The <span> tag in HTML is an inline container used to group text or other inline elements 
             so you can style or manipulate them with CSS or JavaScript. Unlike <div> (which is block‑level), 
             <span> doesn't create a new line or block — it just wraps content inside the flow of text.
           Text next to logo: coloured via .logo-text in CSS.
         -->
-        <span class="logo-text">Holiday Destination Finder</span>
-      </a>
-      <!-- 
+          <span class="logo-text">Holiday Destination Finder</span>
+        </a>
+        <!-- 
         The <button> tag in HTML is used to create clickable buttons on a webpage. Unlike links (<a>), 
           buttons are typically used to trigger actions — submitting forms, running JavaScript, or 
           interacting with UI elements.
@@ -121,65 +151,76 @@ resources that describes this webpage. It sits at the top of the HTML document.
         data-bs-* attributes are used by Bootstrap's JavaScript to open/close
         the collapsible menu.
       -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- 
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- 
         Collapsible navigation links container.
         .ms-auto pushes the ul to the right.
       -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <!-- 
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <!-- 
             Each .nav-item uses .nav-link (Bootstrap) plus my custom colours.
             The current page has .active for visual feedback.
           -->
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <!-- Internal link to the "Popular Destinations" section on search.html -->
-            <a class="nav-link" href="search.html">Search</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="search.html#popular">Popular Destinations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="packages.html">Packages</a>
-          </li>
-          <li class="nav-item">
-            <!-- 
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <!-- Internal link to the "Popular Destinations" section on search.html -->
+              <a class="nav-link" href="search.html">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="search.html#popular"
+                >Popular Destinations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="packages.html">Packages</a>
+            </li>
+            <li class="nav-item">
+              <!-- 
               Same-page link to footer contact section.
               My JavaScript (script.js) enhances this with smooth scrolling.
             -->
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- ===============================================================
+    </nav>
+    <!-- ===============================================================
          PART 2 of the page: Header Section with Official Main Logo
          ============================================================= -->
 
-  <!-- 
+    <!-- 
        Header Hero: uses my custom .header-hero background gradient
        plus Bootstrap spacing utilities (py-5 = padding top+bottom).
   -->
-  <header class="header-hero py-5">
-    <!--
+    <header class="header-hero py-5">
+      <!--
         <div>: A generic block‑level container in HTML.
         class="container": A Bootstrap class that creates a fixed‑width, centered layout with 
         responsive breakpoints.
     -->
-    <div class="container">
-      <!-- 
+      <div class="container">
+        <!-- 
         Bootstrap grid: .row + .col-* splits content into 2 columns on large screens,
         stacking vertically on smaller devices (mobile-first).
       -->
-      <div class="row align-items-center">
-        <!-- 
+        <div class="row align-items-center">
+          <!-- 
           Bootstrap grid column with utility classes:
           col-lg-3 - Part of the Bootstrap grid system.
                     On large screens (≥992px), this column will take up 3 out of 12 grid columns 
@@ -201,15 +242,19 @@ resources that describes this webpage. It sits at the top of the HTML document.
           Left column: main logo.
           .text-center centres content; mb-* spacing for vertical margins. 
         -->
-        <div class="col-lg-3 text-center mb-4 mb-lg-0">
-          <!-- 
+          <div class="col-lg-3 text-center mb-4 mb-lg-0">
+            <!-- 
             img-fluid: Bootstrap class to make the image responsive.
             max-width ensures the logo doesn't grow too large on bigger screens.
           -->
-          <img src="assets/images/logo-main.webp" alt="Official Logo Icon" class="logo-main-icon img-fluid"
-            style="max-width: 250px" />
-        </div>
-        <!-- 
+            <img
+              src="assets/images/logo-main.webp"
+              alt="Official Logo Icon"
+              class="logo-main-icon img-fluid"
+              style="max-width: 250px"
+            />
+          </div>
+          <!-- 
           Right column: main heading, subtitle, and CTA button.
 
           Bootstrap grid + utility class combination:
@@ -221,8 +266,8 @@ resources that describes this webpage. It sits at the top of the HTML document.
             it will stack or adjust automatically.
             text-center = A Bootstrap utility class that centers text horizontally inside the element.
         -->
-        <div class="col-lg-9 text-center">
-          <!-- 
+          <div class="col-lg-9 text-center">
+            <!-- 
               The <h1> tag in HTML defines the main heading of a webpage. It's part of the heading tags
                 <h1> through <h6>, which represent six levels of headings, with <h1> being the most important.
               
@@ -236,10 +281,10 @@ resources that describes this webpage. It sits at the top of the HTML document.
                 b - bottom (the side of the element affected)
                 3 - the size scale (Bootstrap uses a scale from 0 to 5, sometimes extended to larger values depending on version)
           -->
-          <h1 class="display-5 fw-bold mb-3">
-            Discover Your Perfect Holiday Destination
-          </h1>
-          <!-- 
+            <h1 class="display-5 fw-bold mb-3">
+              Discover Your Perfect Holiday Destination
+            </h1>
+            <!-- 
             HTML <p> (paragraph) element represents a block of text.
 
             lead, fs-4, text-muted: Bootstrap utilities for larger, softer intro text.
@@ -257,11 +302,11 @@ resources that describes this webpage. It sits at the top of the HTML document.
                   A Bootstrap colour utility.
                   Applies a muted grey colour to the text, often used for secondary or less prominent information.
           -->
-          <p class="lead fs-4 text-muted">
-            Search for amazing places, find attractions, restaurants, and
-            accommodations all in one place
-          </p>
-          <!-- 
+            <p class="lead fs-4 text-muted">
+              Search for amazing places, find attractions, restaurants, and
+              accommodations all in one place
+            </p>
+            <!-- 
             CTA (Call to Action) button:
             - btn, btn-primary, btn-lg: Bootstrap base button and size.
             - mt-3: margin-top spacing.
@@ -282,8 +327,8 @@ resources that describes this webpage. It sits at the top of the HTML document.
                    Adds margin-top: 1rem (≈16px by default).
                    Useful for spacing the button away from elements above it.
           -->
-          <a href="search.html" class="btn btn-primary btn-lg mt-3">
-            <!-- 
+            <a href="search.html" class="btn btn-primary btn-lg mt-3">
+              <!-- 
               Icon + text: Bootstrap Icon "search" and margin-end (me-2) 
               creates space between icon and text label.
 
@@ -300,16 +345,16 @@ resources that describes this webpage. It sits at the top of the HTML document.
                      Adds margin-right: .5rem (≈8px by default).
                      Useful for spacing the icon away from text or another element.
             -->
-            <i class="bi bi-search me-2"></i>Start Exploring
-          </a>
+              <i class="bi bi-search me-2"></i>Start Exploring
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- ===========================================================
+    </header>
+    <!-- ===========================================================
          PART 3 of the page: Main Section (About Us + Carousel)
          ========================================================= -->
-  <!-- 
+    <!-- 
     .main-section: custom class that sets background colour and padding.
     HTML5 semantic element with Bootstrap utility classes applied.
 
@@ -327,14 +372,14 @@ resources that describes this webpage. It sits at the top of the HTML document.
            Adds padding-top: 3rem and padding-bottom: 3rem (≈48px by default).
            Creates generous vertical spacing around the content.
   -->
-  <main class="main-section py-5">
-    <!--
+    <main class="main-section py-5">
+      <!--
         <div>: A generic block‑level container in HTML.
         class="container": A Bootstrap class that creates a fixed‑width, centered layout with 
         responsive breakpoints.
     -->
-    <div class="container">
-      <!-- 
+      <div class="container">
+        <!-- 
         Bootstrap grid: .row + .col-* splits content into 2 columns on large screens,
         stacking vertically on smaller devices (mobile-first).
 
@@ -347,20 +392,20 @@ resources that describes this webpage. It sits at the top of the HTML document.
               4 = scale value (Bootstrap spacing scale).
               Adds 1.5rem (≈24px) of horizontal and vertical spacing between columns.
       -->
-      <div class="row g-4">
-        <!-- About Us Content - Left 2/5 -->
-        <!-- ===== Left Column: About Us Text ===== -->
-        <!-- 
+        <div class="row g-4">
+          <!-- About Us Content - Left 2/5 -->
+          <!-- ===== Left Column: About Us Text ===== -->
+          <!-- 
           col-lg-5: on large screens this takes 5/12 of the width.
           On smaller screens it spans full width (Bootstrap's mobile-first design).
         -->
-        <div class="col-lg-5">
-          <!-- 
+          <div class="col-lg-5">
+            <!-- 
             .about-content: styled in CSS as a card-like panel 
             with background, border and scrollable area for long content.
           -->
-          <div class="about-content">
-            <!--
+            <div class="about-content">
+              <!--
             <h2> - A semantic HTML heading tag.
                    Represents a second‑level heading (subheading under <h1>).
                    Important for structuring page hierarchy and accessibility.
@@ -371,25 +416,25 @@ resources that describes this webpage. It sits at the top of the HTML document.
                            Creates space below the heading so it doesn't sit too close to the next 
                            element.
             -->
-            <h2 class="mb-4">About Us</h2>
-            <p class="mb-3">
-              The <strong>Holiday Destination Finder</strong> is an
-              interactive travel platform designed to help you discover,
-              explore, and plan your perfect holiday destination.
-            </p>
-            <p class="mb-3">
-              We provide real-time information about attractions, restaurants,
-              hotels, cafes, and shopping centers around the world.
-            </p>
-            <p class="mb-3">
-              Whether you're a solo traveler, family planner, or travel
-              enthusiast, our platform connects you with trusted booking
-              partners including <strong>Booking.com</strong>,
-              <strong>Google Flights</strong>, <strong>Expedia</strong>, and
-              <strong>GetYourGuide</strong>.
-            </p>
+              <h2 class="mb-4">About Us</h2>
+              <p class="mb-3">
+                The <strong>Holiday Destination Finder</strong> is an
+                interactive travel platform designed to help you discover,
+                explore, and plan your perfect holiday destination.
+              </p>
+              <p class="mb-3">
+                We provide real-time information about attractions, restaurants,
+                hotels, cafes, and shopping centers around the world.
+              </p>
+              <p class="mb-3">
+                Whether you're a solo traveler, family planner, or travel
+                enthusiast, our platform connects you with trusted booking
+                partners including <strong>Booking.com</strong>,
+                <strong>Google Flights</strong>, <strong>Expedia</strong>, and
+                <strong>GetYourGuide</strong>.
+              </p>
 
-            <!-- Feature list with icons 
+              <!-- Feature list with icons 
               list-features - A custom class name (defined in style.css).
                             Likely used to style or organise a list of features (e.g., icons + text, 
                             bullet points, or cards).
@@ -400,8 +445,8 @@ resources that describes this webpage. It sits at the top of the HTML document.
                    Creates vertical spacing above the section so it doesn't sit too close to the 
                    element above it.
             -->
-            <div class="list-features mt-4">
-              <!--
+              <div class="list-features mt-4">
+                <!--
                 <h5> - A semantic HTML heading tag.
                        Represents a fifth‑level heading, typically used for sub‑subsections or 
                        smaller section titles.
@@ -414,11 +459,11 @@ resources that describes this webpage. It sits at the top of the HTML document.
                                Creates space below the heading so the following content doesn't sit 
                                too close.
               -->
-              <h5 class="mb-3">Key Features:</h5>
-              <!-- list-unstyled removes default bullets via Bootstrap utility -->
-              <ul class="list-unstyled">
-                <li class="mb-2">
-                  <!-- 
+                <h5 class="mb-3">Key Features:</h5>
+                <!-- list-unstyled removes default bullets via Bootstrap utility -->
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <!-- 
                     bi-check-circle-fill: Bootstrap icon for ticks.
                     text-primary + me-2: Bootstrap colour + margin utilities.
                     In CSS, I override the colour of these icons to coral-orange.
@@ -442,58 +487,84 @@ resources that describes this webpage. It sits at the top of the HTML document.
                            Adds margin-right: .5rem (≈8px by default).
                            Creates a small gap between the icon and whatever follows it (like text).
                    -->
-                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                  Interactive Google Maps integration
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                  Real-time destination search
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                  Filter by attractions, hotels, restaurants
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                  Direct booking with trusted partners
-                </li>
-              </ul>
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Interactive Google Maps integration
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Real-time destination search
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Filter by attractions, hotels, restaurants
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    Direct booking with trusted partners
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Bootstrap Carousel - Right 3/5 -->
-        <!-- ===== Right Column: Bootstrap Carousel ===== -->
-        <!-- 
+          <!-- Bootstrap Carousel - Right 3/5 -->
+          <!-- ===== Right Column: Bootstrap Carousel ===== -->
+          <!-- 
           col-lg-7 complements 5 + 7 = 12 columns.
           Carousel uses built-in Bootstrap components plus my custom styling.
         -->
-        <div class="col-lg-7">
-          <!-- 
+          <div class="col-lg-7">
+            <!-- 
             id="destinationCarousel": unique ID referenced by indicators and controls.
             .carousel, .slide, data-bs-ride="carousel": Bootstrap's JS turns this
             into an animated slideshow.
             shadow-lg, rounded-4: Bootstrap for large shadow + rounded corners.
           -->
-          <div id="destinationCarousel" class="carousel slide shadow-lg rounded-4" data-bs-ride="carousel">
-            <!-- Carousel Indicators (small dots/buttons at bottom) -->
-            <div class="carousel-indicators">
-              <!-- 
+            <div
+              id="destinationCarousel"
+              class="carousel slide shadow-lg rounded-4"
+              data-bs-ride="carousel"
+            >
+              <!-- Carousel Indicators (small dots/buttons at bottom) -->
+              <div class="carousel-indicators">
+                <!-- 
                 data-bs-target links each indicator to this carousel by ID.
                 data-bs-slide-to indexes the slides.
               -->
-              <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="4"
-                aria-label="Slide 5"></button>
-            </div>
-            <!-- 
+                <button
+                  type="button"
+                  data-bs-target="#destinationCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#destinationCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#destinationCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#destinationCarousel"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#destinationCarousel"
+                  data-bs-slide-to="4"
+                  aria-label="Slide 5"
+                ></button>
+              </div>
+              <!-- 
               .carousel-inner: wrapper for slides.
               Each .carousel-item holds one image and optional caption.
               First item has .active so it shows first.
@@ -511,81 +582,115 @@ resources that describes this webpage. It sits at the top of the HTML document.
                         - 4 = scale value -> border-radius: .5rem (≈8px by default).
                         - Gives the carousel container slightly rounded corners for a softer look.
             -->
-            <div class="carousel-inner rounded-4">
-              <div class="carousel-item active">
-                <!-- 
+              <div class="carousel-inner rounded-4">
+                <div class="carousel-item active">
+                  <!-- 
                   d-block w-100: force image to be a block-level element and
                   take full width of the carousel.
                   Height and cropping are controlled via CSS (object-fit: cover).
                 -->
-                <img src="assets/images/img-paris.webp" class="d-block w-100" alt="Paris - Eiffel Tower" />
-                <!-- 
+                  <img
+                    src="assets/images/img-paris.webp"
+                    class="d-block w-100"
+                    alt="Paris - Eiffel Tower"
+                  />
+                  <!-- 
                   .carousel-caption: overlay text on top of the image.
                   d-none d-md-block: hide captions on small screens for clarity,
                   show from md breakpoint upwards.
                 -->
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Paris, France</h5>
-                  <p>The City of Light awaits with iconic landmarks</p>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Paris, France</h5>
+                    <p>The City of Light awaits with iconic landmarks</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/images/img-tokyo.webp"
+                    class="d-block w-100"
+                    alt="Tokyo Cityscape"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Tokyo, Japan</h5>
+                    <p>Blend of tradition and ultra-modern technology</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/images/img-nyc.webp"
+                    class="d-block w-100"
+                    alt="New York City"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>New York, USA</h5>
+                    <p>The city that never sleeps</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/images/img-barcelona.webp"
+                    class="d-block w-100"
+                    alt="Barcelona"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Barcelona, Spain</h5>
+                    <p>Discover Gaudí's architectural masterpieces</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/images/img-london.webp"
+                    class="d-block w-100"
+                    alt="London"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>London, UK</h5>
+                    <p>Historic landmarks and modern culture</p>
+                  </div>
                 </div>
               </div>
-              <div class="carousel-item">
-                <img src="assets/images/img-tokyo.webp" class="d-block w-100" alt="Tokyo Cityscape" />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Tokyo, Japan</h5>
-                  <p>Blend of tradition and ultra-modern technology</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="assets/images/img-nyc.webp" class="d-block w-100" alt="New York City" />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>New York, USA</h5>
-                  <p>The city that never sleeps</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="assets/images/img-barcelona.webp" class="d-block w-100" alt="Barcelona" />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Barcelona, Spain</h5>
-                  <p>Discover Gaudí's architectural masterpieces</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="assets/images/img-london.webp" class="d-block w-100" alt="London" />
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>London, UK</h5>
-                  <p>Historic landmarks and modern culture</p>
-                </div>
-              </div>
-            </div>
-            <!-- 
+              <!-- 
               Carousel Controls: previous and next arrows.
               data-bs-target points to the carousel by ID.
             -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel"
-              data-bs-slide="prev">
-              <!-- 
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#destinationCarousel"
+                data-bs-slide="prev"
+              >
+                <!-- 
                 The actual arrow icon is provided by Bootstrap via 
                 .carousel-control-prev-icon / -next-icon.
               -->
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#destinationCarousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <!-- =========================================================
+    <!-- =========================================================
          PART 4 of the page: Footer Section with Contact Info
          ======================================================= -->
-  <!-- 
+    <!-- 
     Footer: uses custom .footer-section styling plus Bootstrap spacing 
     and grid layout for the contact tiles.
 
@@ -618,12 +723,12 @@ resources that describes this webpage. It sits at the top of the HTML document.
                    Useful for linking directly to the footer section (e.g., 
                    <a href="#contact">Contact Us</a>).
   -->
-  <footer class="footer-section bg-dark text-white py-5 mt-5" id="contact">
-    <div class="container">
-      <!-- Contact Information Tiles in 4 columns -->
-      <div class="row g-4 mb-4">
-        <!-- Each column becomes full-width on small screens and 1/4 width on large. -->
-        <!-- Address Column 
+    <footer class="footer-section bg-dark text-white py-5 mt-5" id="contact">
+      <div class="container">
+        <!-- Contact Information Tiles in 4 columns -->
+        <div class="row g-4 mb-4">
+          <!-- Each column becomes full-width on small screens and 1/4 width on large. -->
+          <!-- Address Column 
         
           col-md-6 - On medium screens and up (≥768px), the column takes up 6 out of 12 grid 
                      columns -> 50% width.
@@ -638,101 +743,124 @@ resources that describes this webpage. It sits at the top of the HTML document.
                                 On medium screens (≥768px): each column is half width (6/12).
                                 On large screens (≥992px): each column is quarter width (3/12)
         -->
-        <div class="col-md-6 col-lg-3">
-          <!-- 
+          <div class="col-md-6 col-lg-3">
+            <!-- 
             .contact-tile: custom card-style component with hover effects.
             .bg-secondary.bg-opacity-25: Bootstrap background with transparency.
           -->
-          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
-            <i class="bi bi-geo-alt-fill fs-1 mb-3 text-primary"></i>
-            <h5 class="mb-3">Address</h5>
-            <p class="mb-0">
-              Holiday Destination Finder<br />
-              123 Travel Street<br />
-              London, UK<br />
-              SW1A 1AA
-            </p>
+            <div
+              class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100"
+            >
+              <i class="bi bi-geo-alt-fill fs-1 mb-3 text-primary"></i>
+              <h5 class="mb-3">Address</h5>
+              <p class="mb-0">
+                Holiday Destination Finder<br />
+                123 Travel Street<br />
+                London, UK<br />
+                SW1A 1AA
+              </p>
+            </div>
           </div>
-        </div>
-        <!-- Phone Column -->
-        <div class="col-md-6 col-lg-3">
-          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
-            <i class="bi bi-telephone-fill fs-1 mb-3 text-primary"></i>
-            <h5 class="mb-3">Phone</h5>
-            <!-- 
+          <!-- Phone Column -->
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100"
+            >
+              <i class="bi bi-telephone-fill fs-1 mb-3 text-primary"></i>
+              <h5 class="mb-3">Phone</h5>
+              <!-- 
               tel: links allow mobile users to dial directly.
               text-white text-decoration-none: ensure links match footer styling.
             -->
-            <p class="mb-1">
-              <a href="tel:+441234567890" class="text-white text-decoration-none">
-                +44 (0) 123 456 7890
-              </a>
-            </p>
-            <p class="mb-0">
-              <a href="tel:+441234567891" class="text-white text-decoration-none">
-                +44 (0) 123 456 7891
-              </a>
-            </p>
+              <p class="mb-1">
+                <a
+                  href="tel:+441234567890"
+                  class="text-white text-decoration-none"
+                >
+                  +44 (0) 123 456 7890
+                </a>
+              </p>
+              <p class="mb-0">
+                <a
+                  href="tel:+441234567891"
+                  class="text-white text-decoration-none"
+                >
+                  +44 (0) 123 456 7891
+                </a>
+              </p>
+            </div>
+          </div>
+          <!-- SMS Column -->
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100"
+            >
+              <i class="bi bi-chat-dots-fill fs-1 mb-3 text-primary"></i>
+              <h5 class="mb-3">SMS</h5>
+              <p class="mb-1">
+                <!-- sms: link type used by some devices to open messaging apps. -->
+                <a
+                  href="sms:+441234567890"
+                  class="text-white text-decoration-none"
+                >
+                  +44 (0) 123 456 7890
+                </a>
+              </p>
+              <p class="mb-0 small">Available 24/7</p>
+            </div>
+          </div>
+          <!-- Email Column -->
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100"
+            >
+              <i class="bi bi-envelope-fill fs-1 mb-3 text-primary"></i>
+              <h5 class="mb-3">Email</h5>
+              <p class="mb-1">
+                <a
+                  href="mailto:info@holidayfinder.com"
+                  class="text-white text-decoration-none"
+                >
+                  info@holidayfinder.com
+                </a>
+              </p>
+              <p class="mb-0">
+                <!-- mailto: links open the user’s default email client. -->
+                <a
+                  href="mailto:support@holidayfinder.com"
+                  class="text-white text-decoration-none"
+                >
+                  support@holidayfinder.com
+                </a>
+              </p>
+            </div>
           </div>
         </div>
-        <!-- SMS Column -->
-        <div class="col-md-6 col-lg-3">
-          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
-            <i class="bi bi-chat-dots-fill fs-1 mb-3 text-primary"></i>
-            <h5 class="mb-3">SMS</h5>
-            <p class="mb-1">
-              <!-- sms: link type used by some devices to open messaging apps. -->
-              <a href="sms:+441234567890" class="text-white text-decoration-none">
-                +44 (0) 123 456 7890
-              </a>
-            </p>
-            <p class="mb-0 small">Available 24/7</p>
-          </div>
-        </div>
-        <!-- Email Column -->
-        <div class="col-md-6 col-lg-3">
-          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
-            <i class="bi bi-envelope-fill fs-1 mb-3 text-primary"></i>
-            <h5 class="mb-3">Email</h5>
-            <p class="mb-1">
-              <a href="mailto:info@holidayfinder.com" class="text-white text-decoration-none">
-                info@holidayfinder.com
-              </a>
-            </p>
-            <p class="mb-0">
-              <!-- mailto: links open the user’s default email client. -->
-              <a href="mailto:support@holidayfinder.com" class="text-white text-decoration-none">
-                support@holidayfinder.com
-              </a>
-            </p>
-          </div>
+        <!-- Horizontal divider line between contact tiles and copyright -->
+        <hr class="my-4 bg-secondary" />
+        <!-- Simple centred copyright text -->
+        <div class="copyright text-center">
+          <p class="mb-1">
+            &copy; 2025 Holiday Destination Finder. All Rights Reserved.
+          </p>
+          <p class="mb-0">
+            Developed by Roberto Pires | Milestone Project 2 - Interactive
+            Front-End Development
+          </p>
         </div>
       </div>
-      <!-- Horizontal divider line between contact tiles and copyright -->
-      <hr class="my-4 bg-secondary" />
-      <!-- Simple centred copyright text -->
-      <div class="copyright text-center">
-        <p class="mb-1">
-          &copy; 2025 Holiday Destination Finder. All Rights Reserved.
-        </p>
-        <p class="mb-0">
-          Developed by Roberto Pires | Milestone Project 2 - Interactive
-          Front-End Development
-        </p>
-      </div>
-    </div>
-  </footer>
-  <!-- 
+    </footer>
+    <!-- 
     Bootstrap JavaScript bundle:
     required for dynamic components such as the navbar collapse and the carousel.
     It reads data-bs-* attributes in the HTML and wires up interactions.
   -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 
     Custom JavaScript:
     - Initialises interactive behaviours (destination cards, contact form, smooth scroll).
     - Demonstrates integration of custom JS logic with Bootstrap components.
   -->
-  <script src="assets/js/script.js"></script>
-</body>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

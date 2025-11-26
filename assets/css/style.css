@@ -41,34 +41,34 @@
 
    ================================================================ */
 :root {
-    /* Primary Colours */
-    --ocean-blue: #0077B6;
-    --sky-blue: #90E0EF;
-    --coral-orange: #FF6B35;
-    --sand-beige: #FAF3E0;
-    --charcoal-grey: #2F3E46;
-    --white-smoke: #F5F5F5;
-    
-    /* Typography */
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Lato', sans-serif;
-    
-    /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    
-    /* Border Radius */
-    --radius-sm: 5px;
-    --radius-md: 10px;
-    --radius-lg: 15px;
-    
-    /* Shadows */
-    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+  /* Primary Colours */
+  --ocean-blue: #0077b6;
+  --sky-blue: #90e0ef;
+  --coral-orange: #ff6b35;
+  --sand-beige: #faf3e0;
+  --charcoal-grey: #2f3e46;
+  --white-smoke: #f5f5f5;
+
+  /* Typography */
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Lato", sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --radius-lg: 15px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* ======================================================================
@@ -120,28 +120,33 @@
 
    ====================================================================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--charcoal-grey);
-    background-color: var(--sand-beige);
-    min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--charcoal-grey);
+  background-color: var(--sand-beige);
+  min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    color: var(--charcoal-grey);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--charcoal-grey);
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* ======================================================================
@@ -199,57 +204,55 @@ html {
 
    ====================================================================== */
 
-
 .navbar {
-    padding: 1rem 2rem;
-    background-color: var(--ocean-blue) !important;
+  padding: 1rem 2rem;
+  background-color: var(--ocean-blue) !important;
 }
 
 .navbar-brand {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--ocean-blue) !important;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ocean-blue) !important;
 }
 
 .logo-text {
-    color: var(--sky-blue);
+  color: var(--sky-blue);
 }
 
 .logo-icon {
-  background-color: var(--ocean-blue);  /* Ocean Blue background */
-  padding: 6px;               /* Optional – adds breathing space */
-  border-radius: 8px;         /* Optional – smooth corners */
+  background-color: var(--ocean-blue); /* Ocean Blue background */
+  padding: 6px; /* Optional – adds breathing space */
+  border-radius: 8px; /* Optional – smooth corners */
   height: 40px;
   width: auto;
 }
 
-
 .navbar-logo {
-    max-height: 40px;
-    height: 40px;
-    width: auto;
-    object-fit: contain;
+  max-height: 40px;
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-link {
-    font-family: var(--font-heading);
-    font-weight: 500;
-    color: var(--sky-blue) !important;
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem !important;
-    border-radius: var(--radius-sm);
-    transition: all 0.3s ease;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--sky-blue) !important;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--ocean-blue) !important;
-    background-color: var(--sky-blue);
+  color: var(--ocean-blue) !important;
+  background-color: var(--sky-blue);
 }
 
 .nav-link.active {
-    color: var(--white-smoke) !important;
-    background-color: var(--ocean-blue);
+  color: var(--white-smoke) !important;
+  background-color: var(--ocean-blue);
 }
 
 /* ======================================================================
@@ -310,24 +313,24 @@ html {
    ====================================================================== */
 
 .btn-primary {
-    background-color: var(--coral-orange);
-    border: none;
-    font-family: var(--font-heading);
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    border-radius: var(--radius-md);
-    transition: all 0.3s ease;
-    color: var(--white-smoke);
+  background-color: var(--coral-orange);
+  border: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  color: var(--white-smoke);
 }
 
 .btn-primary:hover {
-    background-color: var(--coral-orange);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+  background-color: var(--coral-orange);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
 }
 
 .btn-action i {
-    color: var(--coral-orange) !important;  /* Coral orange icons */
+  color: var(--coral-orange) !important; /* Coral orange icons */
 }
 
 /* ======================================================================
@@ -380,19 +383,23 @@ html {
 
    ====================================================================== */
 
-.header-hero{
-    background: linear-gradient(135deg, var(--sky-blue) 0%, rgba(0, 119, 182, 0.2) 100%);
-    padding: 3rem 0;
+.header-hero {
+  background: linear-gradient(
+    135deg,
+    var(--sky-blue) 0%,
+    rgba(0, 119, 182, 0.2) 100%
+  );
+  padding: 3rem 0;
 }
 
 .header-hero h1 {
-    color: var(--ocean-blue);
-    font-family: var(--font-heading);
-    font-weight: 700;
+  color: var(--ocean-blue);
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 
 .header-hero .lead {
-    color: var(--charcoal-grey);
+  color: var(--charcoal-grey);
 }
 
 /* ======================================================================
@@ -433,12 +440,12 @@ html {
    ====================================================================== */
 
 @keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ======================================================================
@@ -511,47 +518,46 @@ html {
    ====================================================================== */
 
 .main-section {
-    background-color: var(--sand-beige);
-    padding: 3rem 0;
+  background-color: var(--sand-beige);
+  padding: 3rem 0;
 }
 
 .about-content {
-    background-color: var(--white-smoke);
-    padding: 2rem;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    height: 600px;
-    border-left: 5px solid var(--ocean-blue);
-    overflow-y: auto; /* Fix: Enable vertical scrolling if content overflows */
-    overflow-x: hidden;/* Fix: Enable vertical scrolling if content overflows */
-    
+  background-color: var(--white-smoke);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  height: 600px;
+  border-left: 5px solid var(--ocean-blue);
+  overflow-y: auto; /* Fix: Enable vertical scrolling if content overflows */
+  overflow-x: hidden; /* Fix: Enable vertical scrolling if content overflows */
 }
 
 .about-content h2 {
-    color: var(--ocean-blue);
-    font-family: var(--font-heading);
-    margin-bottom: 1.5rem;
+  color: var(--ocean-blue);
+  font-family: var(--font-heading);
+  margin-bottom: 1.5rem;
 }
 
 .about-content p {
-    line-height: 1.8;
-    color: var(--charcoal-grey);
+  line-height: 1.8;
+  color: var(--charcoal-grey);
 }
 
 .about-content h5 {
-    color: var(--ocean-blue);
-    font-family: var(--font-heading);
+  color: var(--ocean-blue);
+  font-family: var(--font-heading);
 }
 
 .list-features ul li {
-    font-size: 1rem;
-    color: var(--charcoal-grey);
+  font-size: 1rem;
+  color: var(--charcoal-grey);
 }
 
 /* Key Features Checkmarks - Coral Orange */
 .list-features .bi-check-circle-fill,
 .list-features i {
-    color: var(--coral-orange) !important;
+  color: var(--coral-orange) !important;
 }
 
 /* ======================================================================
@@ -621,61 +627,63 @@ html {
    ====================================================================== */
 
 .carousel {
-    border: 3px solid var(--ocean-blue);
-    border-radius: var(--radius-lg);
-    overflow: hidden !important; /* Fix to cover white background gap near the blue border. */
-    background-color: var(--ocean-blue);
+  border: 3px solid var(--ocean-blue);
+  border-radius: var(--radius-lg);
+  overflow: hidden !important; /* Fix to cover white background gap near the blue border. */
+  background-color: var(--ocean-blue);
 }
 
 .carousel-inner {
-    height: 600px;
-    border-radius: 0;
+  height: 600px;
+  border-radius: 0;
 }
 
 .carousel-item {
-    height: 600px;
-    background-color: var(--ocean-blue); /* Fix to cover white background gap near the blue border. */
+  height: 600px;
+  background-color: var(
+    --ocean-blue
+  ); /* Fix to cover white background gap near the blue border. */
 }
 
 .carousel-item img {
-    height: 600px;
-    width:100%;
-    object-fit: cover;
-    border-radius: 0 !important; /* Fix to cover white background gap near the blue border. */
-    display: block;
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 !important; /* Fix to cover white background gap near the blue border. */
+  display: block;
 }
 
 .carousel-caption {
-    background: rgba(47, 62, 70, 0.8);
-    padding: 1rem 2rem;
-    border-radius: var(--radius-md);
-    backdrop-filter: blur(5px);
+  background: rgba(47, 62, 70, 0.8);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(5px);
 }
 
 .carousel-caption h5 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--sky-blue);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--sky-blue);
 }
 
 .carousel-caption p {
-    color: var(--white-smoke);
+  color: var(--white-smoke);
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: var(--ocean-blue);
-    border-radius: 50%;
-    padding: 1rem;
+  background-color: var(--ocean-blue);
+  border-radius: 50%;
+  padding: 1rem;
 }
 
 .carousel-indicators button {
-    background-color: var(--ocean-blue);
+  background-color: var(--ocean-blue);
 }
 
 .carousel-indicators button.active {
-    background-color: var(--coral-orange);
+  background-color: var(--coral-orange);
 }
 
 /* ======================================================================
@@ -738,24 +746,24 @@ html {
    ====================================================================== */
 
 .card {
-    background-color: var(--white-smoke);
-    border: none;
-    border-radius: var(--radius-lg);
-    transition: all 0.3s ease;
+  background-color: var(--white-smoke);
+  border: none;
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .card-title {
-    color: var(--ocean-blue);
-    font-family: var(--font-heading);
+  color: var(--ocean-blue);
+  font-family: var(--font-heading);
 }
 
 .card-text {
-    color: var(--charcoal-grey);
+  color: var(--charcoal-grey);
 }
 
 /* ======================================================================
@@ -821,56 +829,56 @@ html {
    ====================================================================== */
 
 .footer-section {
-    background-color: var(--charcoal-grey) !important;
-    color: var(--white-smoke);
-    margin-top: 0;
+  background-color: var(--charcoal-grey) !important;
+  color: var(--white-smoke);
+  margin-top: 0;
 }
 
 .contact-tile {
-    background-color: rgba(144, 224, 239, 0.1) !important;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    border-radius: var(--radius-md);
+  background-color: rgba(144, 224, 239, 0.1) !important;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: var(--radius-md);
 }
 
 .contact-tile:hover {
-    transform: translateY(-5px);
-    border-color: var(--sky-blue);
-    background-color: rgba(144, 224, 239, 0.2) !important;
+  transform: translateY(-5px);
+  border-color: var(--sky-blue);
+  background-color: rgba(144, 224, 239, 0.2) !important;
 }
 
 .contact-tile i {
-    color: var(--coral-orange) !important;
+  color: var(--coral-orange) !important;
 }
 
 .contact-tile h5 {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    color: var(--white-smoke);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--white-smoke);
 }
 
 .contact-tile p {
-    color: var(--white-smoke);
+  color: var(--white-smoke);
 }
 
 .contact-tile a {
-    color: var(--sky-blue);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: var(--sky-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .contact-tile a:hover {
-    color: var(--coral-orange);
+  color: var(--coral-orange);
 }
 
 .copyright {
-    font-size: 0.95rem;
-    color: var(--white-smoke);
+  font-size: 0.95rem;
+  color: var(--white-smoke);
 }
 
 .footer-section hr {
-    border-color: var(--sky-blue);
-    opacity: 0.3;
+  border-color: var(--sky-blue);
+  opacity: 0.3;
 }
 
 /* ======================================================================
@@ -938,52 +946,56 @@ html {
    ====================================================================== */
 
 .destination-card {
-    background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--sky-blue) 100%);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    color: var(--white-smoke);
-    text-align: center;
-    transition: all 0.3s ease;
-    height: 100%;
-    box-shadow: var(--shadow-md);
+  background: linear-gradient(
+    135deg,
+    var(--ocean-blue) 0%,
+    var(--sky-blue) 100%
+  );
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  color: var(--white-smoke);
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  box-shadow: var(--shadow-md);
 }
 
 .destination-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
 }
 
 .destination-card .card-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .destination-card .card-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--white-smoke);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--white-smoke);
 }
 
 .destination-card .card-description {
-    margin-bottom: 1.5rem;
-    color: var(--white-smoke);
+  margin-bottom: 1.5rem;
+  color: var(--white-smoke);
 }
 
 .destination-card .btn-light {
-    background-color: var(--coral-orange);
-    color: var(--white-smoke);
-    border: none;
-    font-weight: 600;
+  background-color: var(--coral-orange);
+  color: var(--white-smoke);
+  border: none;
+  font-weight: 600;
 }
 
 .destination-card .btn-light:hover {
-    background-color: var(--white-smoke);
-    color: var(--coral-orange);
-    transform: scale(1.05);
+  background-color: var(--white-smoke);
+  color: var(--coral-orange);
+  transform: scale(1.05);
 }
 
 .destination-tile h4 {
-    text-align: center;  /* Centers the city names */
+  text-align: center; /* Centers the city names */
 }
 
 /* ======================================================================
@@ -1044,22 +1056,22 @@ html {
    ====================================================================== */
 
 .form-control {
-    background-color: var(--white-smoke);
-    border: 2px solid var(--sky-blue);
-    color: var(--charcoal-grey);
-    border-radius: var(--radius-sm);
+  background-color: var(--white-smoke);
+  border: 2px solid var(--sky-blue);
+  color: var(--charcoal-grey);
+  border-radius: var(--radius-sm);
 }
 
 .form-control:focus {
-    background-color: var(--white-smoke);
-    border-color: var(--ocean-blue);
-    box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
-    color: var(--charcoal-grey);
+  background-color: var(--white-smoke);
+  border-color: var(--ocean-blue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
+  color: var(--charcoal-grey);
 }
 
 .form-label {
-    color: var(--charcoal-grey);
-    font-weight: 500;
+  color: var(--charcoal-grey);
+  font-weight: 500;
 }
 
 /* ======================================================================
@@ -1101,10 +1113,10 @@ html {
    ====================================================================== */
 
 .section-divider {
-    height: 3px;
-    background: linear-gradient(to right, var(--ocean-blue), var(--sky-blue));
-    border: none;
-    margin: 2rem 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--ocean-blue), var(--sky-blue));
+  border: none;
+  margin: 2rem 0;
 }
 
 /* ======================================================================
@@ -1162,10 +1174,10 @@ html {
    ====================================================================== */
 
 .results-list {
-  max-height: 500px;            /* Match the map height */
-  overflow-y: auto;             /* Vertical scrollbar if content overflows */
-  overflow-x: hidden;           /* No horizontal scrolling */
-  scrollbar-width: thin;        /* Firefox */
+  max-height: 500px; /* Match the map height */
+  overflow-y: auto; /* Vertical scrollbar if content overflows */
+  overflow-x: hidden; /* No horizontal scrolling */
+  scrollbar-width: thin; /* Firefox */
   scrollbar-color: var(--sky-blue) var(--white-smoke); /* Custom scrollbar colours */
 }
 
@@ -1240,23 +1252,23 @@ html {
    ====================================================================== */
 
 .text-ocean-blue {
-    color: var(--ocean-blue);
+  color: var(--ocean-blue);
 }
 
 .text-coral-orange {
-    color: var(--coral-orange);
+  color: var(--coral-orange);
 }
 
 .bg-sand-beige {
-    background-color: var(--sand-beige);
+  background-color: var(--sand-beige);
 }
 
 .bg-sky-blue {
-    background-color: var(--sky-blue);
+  background-color: var(--sky-blue);
 }
 
 .border-ocean-blue {
-    border-color: var(--ocean-blue);
+  border-color: var(--ocean-blue);
 }
 
 /* ======================================================================
@@ -1346,80 +1358,80 @@ html {
    ====================================================================== */
 
 .btn-action {
-    background-color: var(--white-smoke);
-    border: 2px solid var(--sky-blue);
-    color: var(--ocean-blue);
-    padding: 1rem;
-    border-radius: var(--radius-md);
-    transition: all 0.3s ease;
-    font-family: var(--font-heading);
-    font-weight: 600;
+  background-color: var(--white-smoke);
+  border: 2px solid var(--sky-blue);
+  color: var(--ocean-blue);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  font-family: var(--font-heading);
+  font-weight: 600;
 }
 
 .btn-action:hover {
-    background-color: var(--sky-blue);
-    border-color: var(--ocean-blue);
-    color: var(--ocean-blue);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+  background-color: var(--sky-blue);
+  border-color: var(--ocean-blue);
+  color: var(--ocean-blue);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-action:hover i {
-    color: var(--coral-orange) !important;
+  color: var(--coral-orange) !important;
 }
 
 .btn-action.active {
-    background-color: var(--ocean-blue);
-    border-color: var(--ocean-blue);
-    color: var(--white-smoke);
+  background-color: var(--ocean-blue);
+  border-color: var(--ocean-blue);
+  color: var(--white-smoke);
 }
 
 .btn-action.active i {
-    color: var(--coral-orange) !important;
+  color: var(--coral-orange) !important;
 }
 
 /* Search Page - Destination Tiles */
 .destination-tile {
-    background-color: var(--white-smoke);
-    border: 2px solid var(--sky-blue);
-    transition: all 0.3s ease;
+  background-color: var(--white-smoke);
+  border: 2px solid var(--sky-blue);
+  transition: all 0.3s ease;
 }
 
 .destination-tile:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--ocean-blue);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--ocean-blue);
 }
 
 .destination-tile .destination-content {
-    background-color: var(--white-smoke);
+  background-color: var(--white-smoke);
 }
 
 .destination-tile .btn-primary {
-    font-size: 0.95rem;
+  font-size: 0.95rem;
 }
 
 /* Search Container */
 .search-container {
-    background-color: var(--white-smoke);
-    border: 2px solid var(--sky-blue);
+  background-color: var(--white-smoke);
+  border: 2px solid var(--sky-blue);
 }
 
 .search-container input.form-control {
-    background-color: var(--white-smoke);
-    border: 2px solid var(--sky-blue);
-    color: var(--charcoal-grey);
+  background-color: var(--white-smoke);
+  border: 2px solid var(--sky-blue);
+  color: var(--charcoal-grey);
 }
 
 .search-container input.form-control:focus {
-    background-color: var(--white-smoke);
-    border-color: var(--ocean-blue);
-    box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
+  background-color: var(--white-smoke);
+  border-color: var(--ocean-blue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
 }
 
 .search-container input.form-control::placeholder {
-    color: var(--charcoal-grey);
-    opacity: 0.5;
+  color: var(--charcoal-grey);
+  opacity: 0.5;
 }
 
 /* ======================================================================
@@ -1503,63 +1515,63 @@ html {
    ====================================================================== */
 
 .results-panel {
-    background-color: var(--white-smoke);
-    height: 600px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    border: 2px solid var(--sky-blue);
+  background-color: var(--white-smoke);
+  height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 2px solid var(--sky-blue);
 }
 
 .results-panel::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 .results-panel::-webkit-scrollbar-track {
-    background: var(--sand-beige);
-    border-radius: 10px;
+  background: var(--sand-beige);
+  border-radius: 10px;
 }
 
 .results-panel::-webkit-scrollbar-thumb {
-    background: var(--ocean-blue);
-    border-radius: 10px;
+  background: var(--ocean-blue);
+  border-radius: 10px;
 }
 
 .results-panel::-webkit-scrollbar-thumb:hover {
-    background: var(--coral-orange);
+  background: var(--coral-orange);
 }
 
 .result-item {
-    background-color: var(--white-smoke);
-    border: 2px solid var(--sky-blue);
-    border-radius: var(--radius-md);
-    padding: 1rem;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
+  background-color: var(--white-smoke);
+  border: 2px solid var(--sky-blue);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .result-item:hover {
-    background-color: var(--sky-blue);
-    border-color: var(--ocean-blue);
-    transform: translateX(5px);
-    box-shadow: var(--shadow-md);
+  background-color: var(--sky-blue);
+  border-color: var(--ocean-blue);
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
 }
 
 .result-item h5 {
-    color: var(--ocean-blue);
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+  color: var(--ocean-blue);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .result-item p {
-    color: var(--charcoal-grey);
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
+  color: var(--charcoal-grey);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
 }
 
 .result-item .rating {
-    color: var(--coral-orange);
+  color: var(--coral-orange);
 }
 
 /* ======================================================================
@@ -1608,11 +1620,11 @@ html {
    ====================================================================== */
 
 .map-container {
-    border: 3px solid var(--ocean-blue);
+  border: 3px solid var(--ocean-blue);
 }
 
 #map {
-    background-color: var(--sand-beige);
+  background-color: var(--sand-beige);
 }
 
 /* ======================================================================
@@ -1674,27 +1686,25 @@ html {
    ====================================================================== */
 
 .form-select {
-    background-color: var(--white-smoke); /* Match form inputs */
-    border: 2px solid var(--sky-blue); /* Match border color */
-    color: var(--charcoal-grey); /* Match text color */
-    border-radius: var(--radius-sm); /* Match border radius */
+  background-color: var(--white-smoke); /* Match form inputs */
+  border: 2px solid var(--sky-blue); /* Match border color */
+  color: var(--charcoal-grey); /* Match text color */
+  border-radius: var(--radius-sm); /* Match border radius */
 }
 
 .form-select:focus {
-    background-color: var(--white-smoke);
-    border-color: var(--ocean-blue); /* Match focus state */
-    box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25); /* Match focus shadow */
-    color: var(--charcoal-grey);
-    outline: none;
+  background-color: var(--white-smoke);
+  border-color: var(--ocean-blue); /* Match focus state */
+  box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25); /* Match focus shadow */
+  color: var(--charcoal-grey);
+  outline: none;
 }
 
 /* Style the placeholder option */
 .form-select option[disabled] {
-    color: var(--charcoal-grey);
-    opacity: 0.5;
+  color: var(--charcoal-grey);
+  opacity: 0.5;
 }
-
-
 
 /* ======================================================================
    FLOATING LABELS (Enhanced Booking Form Inputs for packages.html)
@@ -1784,121 +1794,120 @@ html {
    ====================================================================== */
 
 .form-floating {
-    position: relative;
+  position: relative;
 }
 
 .form-floating > label {
-    position: absolute;
-    top: 0.6rem;
-    left: 0.75rem;
-    font-size: 0.7rem;
-    color: var(--charcoal-grey);
-    opacity: 0.6;
-    font-weight: 500;
-    padding: 0;
-    background-color: transparent;
-    pointer-events: none;
-    z-index: 2;
-    transition: all 0.2s ease;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.75rem;
+  font-size: 0.7rem;
+  color: var(--charcoal-grey);
+  opacity: 0.6;
+  font-weight: 500;
+  padding: 0;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 2;
+  transition: all 0.2s ease;
 }
 
 /* Form control base styling */
 .form-floating > .form-control {
-    height: calc(3.5rem + 2px);
-    padding-top: 1.25rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    background-color: var(--white-smoke);
-    border: 2px solid var(--sky-blue);
-    color: var(--charcoal-grey);
-    border-radius: var(--radius-sm);
+  height: calc(3.5rem + 2px);
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: var(--white-smoke);
+  border: 2px solid var(--sky-blue);
+  color: var(--charcoal-grey);
+  border-radius: var(--radius-sm);
 }
 
 .form-floating > .form-control:focus {
-    background-color: var(--white-smoke);
-    border-color: var(--ocean-blue);
-    box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
-    outline: none;
+  background-color: var(--white-smoke);
+  border-color: var(--ocean-blue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
+  outline: none;
 }
 
 .form-floating > .form-control:focus ~ label {
-    color: var(--ocean-blue);
-    opacity: 0.8;
+  color: var(--ocean-blue);
+  opacity: 0.8;
 }
 
 /* Placeholder handling */
 .form-floating > .form-control::placeholder {
-    color: var(--charcoal-grey);
-    opacity: 0.5;
+  color: var(--charcoal-grey);
+  opacity: 0.5;
 }
 
 /* Large form controls (search box) */
 .form-floating > .form-control-lg {
-    height: calc(3.5rem + 2px);
-    padding-top: 1.25rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 1rem;
+  height: calc(3.5rem + 2px);
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
 }
 
 .form-floating > .form-control-lg ~ label {
-    top: 0.4rem;
-    left: 1rem;
-    font-size: 0.75rem;
+  top: 0.4rem;
+  left: 1rem;
+  font-size: 0.75rem;
 }
 
 /* Select dropdown */
 .form-floating > .form-select {
-    height: calc(3.5rem + 2px);
-    padding-top: 1.25rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.75rem;
-    padding-right: 2rem;
-    background-color: var(--white-smoke);
-    border: 2px solid var(--sky-blue);
-    color: var(--charcoal-grey);
-    border-radius: var(--radius-sm);
+  height: calc(3.5rem + 2px);
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 2rem;
+  background-color: var(--white-smoke);
+  border: 2px solid var(--sky-blue);
+  color: var(--charcoal-grey);
+  border-radius: var(--radius-sm);
 }
 
 .form-floating > .form-select:focus {
-    background-color: var(--white-smoke);
-    border-color: var(--ocean-blue);
-    box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
-    outline: none;
+  background-color: var(--white-smoke);
+  border-color: var(--ocean-blue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
+  outline: none;
 }
 
 .form-floating > .form-select:focus ~ label {
-    color: var(--ocean-blue);
-    opacity: 0.8;
+  color: var(--ocean-blue);
+  opacity: 0.8;
 }
 
 /* Date input specific */
 .form-floating > input[type="date"] {
-    padding-top: 1.25rem;
+  padding-top: 1.25rem;
 }
 
 .form-floating > input[type="date"]::-webkit-datetime-edit {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .form-floating > input[type="date"]::-webkit-calendar-picker-indicator {
-    margin-top: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 /* Hide invalid date state */
 .form-floating > input[type="date"]:not(:focus):not(:valid) {
-    color: var(--charcoal-grey);
-    opacity: 0.5;
+  color: var(--charcoal-grey);
+  opacity: 0.5;
 }
 
 /* Extra fix for any remaining label backgrounds */
 .form-floating > label::before,
 .form-floating > label::after {
-    display: none !important;
+  display: none !important;
 }
-
 
 /* ======================================================================
    SCROLL OFFSET FIX FOR STICKY NAVBAR (Improved Anchor Navigation)
@@ -1953,12 +1962,12 @@ html {
    ====================================================================== */
 
 html {
-    scroll-padding-top: 100px; /* Offset for sticky navbar height */
+  scroll-padding-top: 100px; /* Offset for sticky navbar height */
 }
 
 /* Alternative: Add margin to section with ID */
 #popular {
-    scroll-margin-top: 100px; /* Space above when scrolled to */
+  scroll-margin-top: 100px; /* Space above when scrolled to */
 }
 
 /* ======================================================================
@@ -1983,68 +1992,67 @@ html {
    ---------------------------------------------------------------------- */
 
 @media (max-width: 992px) {
-    /* Smaller carousel images allow better fit on tablets/laptop screens */
-    .carousel-inner,
-    .carousel-item,
-    .carousel-item img {
-        height: 400px;
-    }
-    
-    /* Headings become more compact to avoid wrapping */
-    .header-hero h1 {
-        font-size: 2rem;
-    }
-    
-    /* Logo scales down to prevent navbar overflow */
-    .logo-main-icon {
-        max-width: 150px !important;
-    }
-    
-    /* Prevents brand logo from pushing nav items off-screen */
-    .navbar-logo {
-        max-height: 35px;
-        height: 35px;
-    }
+  /* Smaller carousel images allow better fit on tablets/laptop screens */
+  .carousel-inner,
+  .carousel-item,
+  .carousel-item img {
+    height: 400px;
+  }
+
+  /* Headings become more compact to avoid wrapping */
+  .header-hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Logo scales down to prevent navbar overflow */
+  .logo-main-icon {
+    max-width: 150px !important;
+  }
+
+  /* Prevents brand logo from pushing nav items off-screen */
+  .navbar-logo {
+    max-height: 35px;
+    height: 35px;
+  }
 }
 
 @media (max-width: 768px) {
-    /* Further reduce carousel height for handheld tablets */
-    .carousel-inner,
-    .carousel-item,
-    .carousel-item img {
-        height: 300px;
-    }
-    
-    /* Extra margin ensures content stacks cleanly on mobile layouts */
-    .about-content {
-        margin-bottom: 2rem;
-    }
-    
-    /* Contact tiles need breathing space when stacked vertically */
-    .contact-tile {
-        margin-bottom: 1rem;
-    }
-    
-    /* Prevent navbar logos from dominating small screens */
-    .navbar-logo {
-        max-height: 35px;
-        height: 35px;
-    }
+  /* Further reduce carousel height for handheld tablets */
+  .carousel-inner,
+  .carousel-item,
+  .carousel-item img {
+    height: 300px;
+  }
+
+  /* Extra margin ensures content stacks cleanly on mobile layouts */
+  .about-content {
+    margin-bottom: 2rem;
+  }
+
+  /* Contact tiles need breathing space when stacked vertically */
+  .contact-tile {
+    margin-bottom: 1rem;
+  }
+
+  /* Prevent navbar logos from dominating small screens */
+  .navbar-logo {
+    max-height: 35px;
+    height: 35px;
+  }
 }
 
 @media (max-width: 576px) {
-    /* Compress hero heading further for narrow smartphones */
-    .header-hero h1 {
-        font-size: 1.75rem;
-    }
-    
-    /* Shrink logo further to fit tighter navigation bars */
-    .navbar-logo {
-        max-height: 30px;
-        height: 30px;
-    }
-}
+  /* Compress hero heading further for narrow smartphones */
+  .header-hero h1 {
+    font-size: 1.75rem;
+  }
 
+  /* Shrink logo further to fit tighter navigation bars */
+  .navbar-logo {
+    max-height: 30px;
+    height: 30px;
+  }
+}
 
 /* ======================================================================
    SEARCH PAGE RESPONSIVE ADAPTATION (Results + Map Layout)
@@ -2056,42 +2064,42 @@ html {
    ====================================================================== */
 
 @media (max-width: 992px) {
-    /* Reduce height to keep full panel on screen when stacked */
-    .results-panel {
-        height: 400px;
-        margin-bottom: 2rem;
-    }
-    
-    /* Ensure the Google map scales to match results height */
-    #map {
-        height: 400px !important;
-    }
+  /* Reduce height to keep full panel on screen when stacked */
+  .results-panel {
+    height: 400px;
+    margin-bottom: 2rem;
+  }
+
+  /* Ensure the Google map scales to match results height */
+  #map {
+    height: 400px !important;
+  }
 }
 
 @media (max-width: 768px) {
-    /* Scale down buttons for compact display on mobiles */
-    .btn-action {
-        padding: 0.75rem;
-        font-size: 0.9rem;
-    }
-    
-    /* Scale icons to match reduced button size */
-    .btn-action i {
-        font-size: 1.5rem !important;
-    }
-    
-    /* Reduce panel height for small screens; improves scrolling usability */
-    .results-panel {
-        height: 300px;
-    }
-    
-    /* Match the height of the map to avoid layout imbalance */
-    #map {
-        height: 300px !important;
-    }
-    
-    /* Reduce destination image height so cards stay proportionate */
-    .destination-tile .destination-image img {
-        height: 150px !important;
-    }
+  /* Scale down buttons for compact display on mobiles */
+  .btn-action {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  /* Scale icons to match reduced button size */
+  .btn-action i {
+    font-size: 1.5rem !important;
+  }
+
+  /* Reduce panel height for small screens; improves scrolling usability */
+  .results-panel {
+    height: 300px;
+  }
+
+  /* Match the height of the map to avoid layout imbalance */
+  #map {
+    height: 300px !important;
+  }
+
+  /* Reduce destination image height so cards stay proportionate */
+  .destination-tile .destination-image img {
+    height: 150px !important;
+  }
 }

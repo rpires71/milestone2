@@ -40,20 +40,21 @@
 ======================================================================================== */
 
 function getCityNameForUrls() {
-    // Try to use a globally stored city name if it exists.
-    // "typeof !== 'undefined'" ensures we don't error if variable doesn't exist.
-    let name = (typeof currentCityName !== 'undefined' && currentCityName) 
-        ? currentCityName 
-        : '';
-    // If no global name was found, checks the text input on packages.html.
-    if (!name) {
-        const input = document.getElementById('citySearch');
-        // Only use the input value if it exists AND is not just blank spaces.
-        if (input && input.value.trim()) name = input.value.trim();
-    }
-    // Final fallback: return an empty string instead of null/undefined.
-    // Returning '' protects other functions from breaking when building URLs.
-    return name || '';
+  // Try to use a globally stored city name if it exists.
+  // "typeof !== 'undefined'" ensures we don't error if variable doesn't exist.
+  let name =
+    typeof currentCityName !== "undefined" && currentCityName
+      ? currentCityName
+      : "";
+  // If no global name was found, checks the text input on packages.html.
+  if (!name) {
+    const input = document.getElementById("citySearch");
+    // Only use the input value if it exists AND is not just blank spaces.
+    if (input && input.value.trim()) name = input.value.trim();
+  }
+  // Final fallback: return an empty string instead of null/undefined.
+  // Returning '' protects other functions from breaking when building URLs.
+  return name || "";
 }
 
 /* =====================================================================================
@@ -73,31 +74,31 @@ function getCityNameForUrls() {
 ========================================================================================*/
 
 function setActiveBookingButton(clickedButton) {
-    // ---------------------------------------------------------
-    // STEP 1: Reset button styles
-    // Remove the primary style from every booking button and
-    // apply a secondary (non-active) style. Also ensure that
-    // no button keeps an "active" class from earlier clicks.
-    // ---------------------------------------------------------
-    document.querySelectorAll('.btn-action').forEach(btn => {
-        btn.classList.remove('booking-btn-primary'); // removes highlight
-        btn.classList.add('booking-btn-secondary'); // adds neutral style
-        btn.classList.remove('active'); // removes active state
-    });
+  // ---------------------------------------------------------
+  // STEP 1: Reset button styles
+  // Remove the primary style from every booking button and
+  // apply a secondary (non-active) style. Also ensure that
+  // no button keeps an "active" class from earlier clicks.
+  // ---------------------------------------------------------
+  document.querySelectorAll(".btn-action").forEach((btn) => {
+    btn.classList.remove("booking-btn-primary"); // removes highlight
+    btn.classList.add("booking-btn-secondary"); // adds neutral style
+    btn.classList.remove("active"); // removes active state
+  });
 
-    // ---------------------------------------------------------
-    // STEP 2: Make the clicked button look active again
-    // If a button triggered this function, highlight it by:
-    //   - Adding the primary styling class (highlighted colour)
-    //   - Adding the "active" class (for visual + logic purposes)
-    // ---------------------------------------------------------
-    if (clickedButton) {
-        clickedButton.classList.add('booking-btn-primary'); // highlight style
-        clickedButton.classList.add('active'); // marks as active
-    }
+  // ---------------------------------------------------------
+  // STEP 2: Make the clicked button look active again
+  // If a button triggered this function, highlight it by:
+  //   - Adding the primary styling class (highlighted colour)
+  //   - Adding the "active" class (for visual + logic purposes)
+  // ---------------------------------------------------------
+  if (clickedButton) {
+    clickedButton.classList.add("booking-btn-primary"); // highlight style
+    clickedButton.classList.add("active"); // marks as active
+  }
 }
 
- /* ----------------------------------------------------------------------
+/* ----------------------------------------------------------------------
         BOOKING ACTION FUNCTIONS (ONE PER PARTNER)
     ----------------------------------------------------------------------*/
 
@@ -126,67 +127,67 @@ function setActiveBookingButton(clickedButton) {
  ===================================================================================== */
 
 function bookHotel(ev) {
-    // ------------------------------------------------------------------
-    // STEP 1: Identify which button triggered the event.
-    // Some browsers pass the event with currentTarget,
-    // while fallback (ev) supports inline calls.
-    // We use a ternary to choose the correct button element.
-    // ------------------------------------------------------------------
-    const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
+  // ------------------------------------------------------------------
+  // STEP 1: Identify which button triggered the event.
+  // Some browsers pass the event with currentTarget,
+  // while fallback (ev) supports inline calls.
+  // We use a ternary to choose the correct button element.
+  // ------------------------------------------------------------------
+  const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
 
-    // Highlight this button and un-highlight others
-    setActiveBookingButton(btn);
+  // Highlight this button and un-highlight others
+  setActiveBookingButton(btn);
 
-    // ------------------------------------------------------------------
-    // STEP 2: Read user-selected trip data from form fields.
-    // The "guests" input defaults to 2 if the user doesn't choose.
-    // ------------------------------------------------------------------
-    const checkIn = document.getElementById('checkin').value;
-    const checkOut = document.getElementById('checkout').value;
-    const guests = document.getElementById('guests').value || 2;
+  // ------------------------------------------------------------------
+  // STEP 2: Read user-selected trip data from form fields.
+  // The "guests" input defaults to 2 if the user doesn't choose.
+  // ------------------------------------------------------------------
+  const checkIn = document.getElementById("checkin").value;
+  const checkOut = document.getElementById("checkout").value;
+  const guests = document.getElementById("guests").value || 2;
 
-    // ------------------------------------------------------------------
-    // STEP 3: Validate date fields before constructing a Booking URL.
-    // If either date is missing, show an alert and cancel the operation.
-    // ------------------------------------------------------------------
-    if (!checkIn || !checkOut) {
-        alert('Please select check-in and check-out dates');
-        return;
-    }
+  // ------------------------------------------------------------------
+  // STEP 3: Validate date fields before constructing a Booking URL.
+  // If either date is missing, show an alert and cancel the operation.
+  // ------------------------------------------------------------------
+  if (!checkIn || !checkOut) {
+    alert("Please select check-in and check-out dates");
+    return;
+  }
 
-    // ------------------------------------------------------------------
-    // STEP 4: Safely get the destination city name.
-    // getCityNameForUrls() ensures:
-    //   - trims spaces
-    //   - falls back to global city if available
-    //   - returns '' instead of null or undefined
-    // ------------------------------------------------------------------
-    const cityName = getCityNameForUrls();
-    const searchParam = encodeURIComponent(cityName); // URL safe text
+  // ------------------------------------------------------------------
+  // STEP 4: Safely get the destination city name.
+  // getCityNameForUrls() ensures:
+  //   - trims spaces
+  //   - falls back to global city if available
+  //   - returns '' instead of null or undefined
+  // ------------------------------------------------------------------
+  const cityName = getCityNameForUrls();
+  const searchParam = encodeURIComponent(cityName); // URL safe text
 
-    // ------------------------------------------------------------------
-    // STEP 5: Build Booking.com deep link with query parameters.
-    // Booking.com expects:
-    //   ss            → search string (city)
-    //   checkin       → YYYY-MM-DD
-    //   checkout      → YYYY-MM-DD
-    //   group_adults  → number of adults
-    //   no_rooms=1    → assumes one room (simple educational use)
-    //
-    // encodeURIComponent() ensures safe characters for URLs.
-    // ------------------------------------------------------------------
-    const bookingUrl = 
-        `https://www.booking.com/searchresults.html?ss=${searchParam}` +
-        `&checkin=${encodeURIComponent(checkIn)}` +
-        `&checkout=${encodeURIComponent(checkOut)}` +
-        `&group_adults=${encodeURIComponent(guests)}` +
-        `&no_rooms=1`;
-    
-    // ------------------------------------------------------------------
-    // STEP 6: Open the constructed Booking page in a new browser tab.
-    // "_blank" ensures the user remains on your site.
-    // ------------------------------------------------------------------
-    window.open(bookingUrl, '_blank');
+  // ------------------------------------------------------------------
+  // STEP 5: Build Booking.com deep link with query parameters.
+  // Booking.com expects:
+  //   ss            → search string (city)
+  //   checkin       → YYYY-MM-DD
+  //   checkout      → YYYY-MM-DD
+  //   group_adults  → number of adults
+  //   no_rooms=1    → assumes one room (simple educational use)
+  //
+  // encodeURIComponent() ensures safe characters for URLs.
+  // ------------------------------------------------------------------
+  const bookingUrl =
+    `https://www.booking.com/searchresults.html?ss=${searchParam}` +
+    `&checkin=${encodeURIComponent(checkIn)}` +
+    `&checkout=${encodeURIComponent(checkOut)}` +
+    `&group_adults=${encodeURIComponent(guests)}` +
+    `&no_rooms=1`;
+
+  // ------------------------------------------------------------------
+  // STEP 6: Open the constructed Booking page in a new browser tab.
+  // "_blank" ensures the user remains on your site.
+  // ------------------------------------------------------------------
+  window.open(bookingUrl, "_blank");
 }
 
 /** Book flights - always departing from London (all airports - LON) */
@@ -213,68 +214,70 @@ function bookHotel(ev) {
 ===================================================================================== */
 
 function bookFlights(ev) {
+  // ----------------------------------------------------------
+  // STEP 1: Identify the button that was clicked.
+  // Some browsers provide ev.currentTarget; others may only pass ev.
+  // This ternary ensures compatibility with inline calls.
+  // ----------------------------------------------------------
+  const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
+  setActiveBookingButton(btn);
 
-    // ----------------------------------------------------------
-    // STEP 1: Identify the button that was clicked.
-    // Some browsers provide ev.currentTarget; others may only pass ev.
-    // This ternary ensures compatibility with inline calls.
-    // ----------------------------------------------------------
-    const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
-    setActiveBookingButton(btn);
+  // ----------------------------------------------------------
+  // STEP 2: Extract travel dates from the form inputs.
+  // Only the CHECK-IN date (departure) is required to search flights.
+  // ----------------------------------------------------------
+  const checkIn = document.getElementById("checkin").value;
+  const checkOut = document.getElementById("checkout").value;
 
-    // ----------------------------------------------------------
-    // STEP 2: Extract travel dates from the form inputs.
-    // Only the CHECK-IN date (departure) is required to search flights.
-    // ----------------------------------------------------------
-    const checkIn = document.getElementById('checkin').value;
-    const checkOut = document.getElementById('checkout').value;
+  // Validate departure date
+  if (!checkIn) {
+    alert("Please select a departure (check-in) date");
+    return;
+  }
 
-    // Validate departure date
-    if (!checkIn) {
-        alert('Please select a departure (check-in) date');
-        return;
-    }
+  // ----------------------------------------------------------
+  // STEP 3: Hard-code the origin to London (LON).
+  // "LON" is a special airport code meaning **All London Airports**:
+  //  Heathrow (LHR), Gatwick (LGW), Stansted (STN), Luton (LTN), etc.
+  // This gives more flight options automatically.
+  // ----------------------------------------------------------
+  const origin = "London (LON)";
 
-    // ----------------------------------------------------------
-    // STEP 3: Hard-code the origin to London (LON).
-    // "LON" is a special airport code meaning **All London Airports**:
-    //  Heathrow (LHR), Gatwick (LGW), Stansted (STN), Luton (LTN), etc.
-    // This gives more flight options automatically.
-    // ----------------------------------------------------------
-    const origin = "London (LON)";
+  // ----------------------------------------------------------
+  // STEP 4: Extract destination city from user search.
+  // Split removes anything after a comma (e.g., "Paris, France" -> "Paris").
+  // trim() ensures no extra spaces break the search.
+  // If blank, fallback is '' instead of undefined/null.
+  // ----------------------------------------------------------
+  const dest = getCityNameForUrls().split(",")[0].trim() || "";
+  const departDate = checkIn;
+  const returnDate = checkOut || "";
 
-    // ----------------------------------------------------------
-    // STEP 4: Extract destination city from user search.
-    // Split removes anything after a comma (e.g., "Paris, France" -> "Paris").
-    // trim() ensures no extra spaces break the search.
-    // If blank, fallback is '' instead of undefined/null.
-    // ----------------------------------------------------------
-    const dest = getCityNameForUrls().split(',')[0].trim() || '';
-    const departDate = checkIn;
-    const returnDate = checkOut || '';
+  // ----------------------------------------------------------
+  // STEP 5: Build a natural-language Google Flights query.
+  // Google Flights accepts readable query strings like:
+  //   Flights from London to New York departing 2025-01-20 returning 2025-01-27
+  //
+  // encodeURIComponent() avoids broken URLs caused by spaces and symbols.
+  // ----------------------------------------------------------
+  let googleFlightsUrl = `https://www.google.com/travel/flights?q=Flights%20from%20${encodeURIComponent(
+    origin
+  )}%20to%20${encodeURIComponent(dest)}`;
 
-    // ----------------------------------------------------------
-    // STEP 5: Build a natural-language Google Flights query.
-    // Google Flights accepts readable query strings like:
-    //   Flights from London to New York departing 2025-01-20 returning 2025-01-27
-    //
-    // encodeURIComponent() avoids broken URLs caused by spaces and symbols.
-    // ----------------------------------------------------------
-    let googleFlightsUrl =
-        `https://www.google.com/travel/flights?q=Flights%20from%20${encodeURIComponent(origin)}%20to%20${encodeURIComponent(dest)}`;
+  // Add either return option or one-way date
+  if (returnDate) {
+    googleFlightsUrl += `%20departing%20${encodeURIComponent(
+      departDate
+    )}%20returning%20${encodeURIComponent(returnDate)}`;
+  } else {
+    googleFlightsUrl += `%20on%20${encodeURIComponent(departDate)}`;
+  }
 
-    // Add either return option or one-way date    
-    if (returnDate) {
-        googleFlightsUrl += `%20departing%20${encodeURIComponent(departDate)}%20returning%20${encodeURIComponent(returnDate)}`;
-    } else {
-        googleFlightsUrl += `%20on%20${encodeURIComponent(departDate)}`;
-    }
-
-    // ----------------------------------------------------------
-    // STEP 6: Open the flights page in a new tab so the user
-    // remains on your site and can return easily.
-    // ----------------------------------------------------------
-    window.open(googleFlightsUrl, '_blank');
+  // ----------------------------------------------------------
+  // STEP 6: Open the flights page in a new tab so the user
+  // remains on your site and can return easily.
+  // ----------------------------------------------------------
+  window.open(googleFlightsUrl, "_blank");
 }
 
 /** Book complete package - Expedia packages, from London (all airports) */
@@ -307,91 +310,95 @@ function bookFlights(ev) {
 ===================================================================================== */
 
 function bookPackage(ev) {
-    // ----------------------------------------------------------
-    // STEP 1: Detect which button was clicked and highlight it.
-    // The ternary handles cases where 'ev.currentTarget' exists
-    // or where only 'ev' is passed (inline event call).
-    // ----------------------------------------------------------
-    const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
-    setActiveBookingButton(btn);
+  // ----------------------------------------------------------
+  // STEP 1: Detect which button was clicked and highlight it.
+  // The ternary handles cases where 'ev.currentTarget' exists
+  // or where only 'ev' is passed (inline event call).
+  // ----------------------------------------------------------
+  const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
+  setActiveBookingButton(btn);
 
-    // ----------------------------------------------------------
-    // STEP 2: Read trip details from the form.
-    // Guests default to "2" if the user has not selected any.
-    // ----------------------------------------------------------
-    const checkIn = document.getElementById('checkin').value;
-    const checkOut = document.getElementById('checkout').value;
-    const guests = document.getElementById('guests').value || '2';
+  // ----------------------------------------------------------
+  // STEP 2: Read trip details from the form.
+  // Guests default to "2" if the user has not selected any.
+  // ----------------------------------------------------------
+  const checkIn = document.getElementById("checkin").value;
+  const checkOut = document.getElementById("checkout").value;
+  const guests = document.getElementById("guests").value || "2";
 
-    // ----------------------------------------------------------
-    // STEP 3: Validate that BOTH dates are present.
-    // A package search requires both arrival and departure dates.
-    // ----------------------------------------------------------
-    if (!checkIn || !checkOut) {
-        alert('Please select both check-in and check-out dates for a package search.');
-        return;
+  // ----------------------------------------------------------
+  // STEP 3: Validate that BOTH dates are present.
+  // A package search requires both arrival and departure dates.
+  // ----------------------------------------------------------
+  if (!checkIn || !checkOut) {
+    alert(
+      "Please select both check-in and check-out dates for a package search."
+    );
+    return;
+  }
+
+  // ----------------------------------------------------------
+  // STEP 4: Safely retrieve the destination city.
+  // Try reading the globally stored currentCityName first.
+  // If not available, fallback to the text in the search box.
+  // ----------------------------------------------------------
+  let city = "";
+  if (typeof currentCityName !== "undefined" && currentCityName) {
+    city = currentCityName;
+  } else {
+    const input = document.getElementById("citySearch");
+    if (input && input.value.trim()) {
+      city = input.value.trim();
     }
+  }
 
-    // ----------------------------------------------------------
-    // STEP 4: Safely retrieve the destination city.
-    // Try reading the globally stored currentCityName first.
-    // If not available, fallback to the text in the search box.
-    // ----------------------------------------------------------
-    let city = '';
-    if (typeof currentCityName !== 'undefined' && currentCityName) {
-        city = currentCityName;
-    } else {
-        const input = document.getElementById('citySearch');
-        if (input && input.value.trim()) {
-            city = input.value.trim();
-        }
-    }
+  // If no valid city name is found, warn the user.
+  if (!city) {
+    alert("Please enter a destination city.");
+    return;
+  }
 
-    // If no valid city name is found, warn the user.
-    if (!city) {
-        alert('Please enter a destination city.');
-        return;
-    }
+  // ----------------------------------------------------------
+  // STEP 5: Construct the Expedia package deeplink.
+  //
+  // Expedia expects:
+  //  BASE URL:
+  //    https://www.expedia.co.uk/go/package/search/FlightHotel/{FromDate}/{ToDate}
+  //
+  //  QUERY PARAMETERS:
+  //    FromAirport = "LON"  (all London airports)
+  //    Destination = raw city text (Expedia interprets it)
+  //    NumRoom     = number of rooms
+  //    NumAdult    = guest count (treated as adults)
+  //
+  // Note: encodeURIComponent() ensures valid URL characters.
+  // ----------------------------------------------------------
 
-    // ----------------------------------------------------------
-    // STEP 5: Construct the Expedia package deeplink.
-    //
-    // Expedia expects:
-    //  BASE URL:
-    //    https://www.expedia.co.uk/go/package/search/FlightHotel/{FromDate}/{ToDate}
-    //
-    //  QUERY PARAMETERS:
-    //    FromAirport = "LON"  (all London airports)
-    //    Destination = raw city text (Expedia interprets it)
-    //    NumRoom     = number of rooms
-    //    NumAdult    = guest count (treated as adults)
-    //
-    // Note: encodeURIComponent() ensures valid URL characters.
-    // ----------------------------------------------------------
+  const fromDate = checkIn; // already YYYY-MM-DD
+  const toDate = checkOut;
 
-    const fromDate = checkIn;    // already YYYY-MM-DD
-    const toDate   = checkOut;
+  // Base URL that includes the date range
+  const baseUrl = `https://www.expedia.co.uk/go/package/search/FlightHotel/${encodeURIComponent(
+    fromDate
+  )}/${encodeURIComponent(toDate)}`;
 
-    // Base URL that includes the date range
-    const baseUrl = `https://www.expedia.co.uk/go/package/search/FlightHotel/${encodeURIComponent(fromDate)}/${encodeURIComponent(toDate)}`;
+  // Build query parameters automatically with URLSearchParams
+  const params = new URLSearchParams({
+    FromAirport: "LON", // London – all airports
+    Destination: city, // let Expedia interpret the city text
+    NumRoom: "1", // Simplified project assumption
+    NumAdult: guests, // Guests treated as adults only
+    // Could add NumChild / Child ages here later if needed
+  });
 
-    // Build query parameters automatically with URLSearchParams
-    const params = new URLSearchParams({
-        FromAirport: 'LON',                  // London – all airports
-        Destination: city,                   // let Expedia interpret the city text
-        NumRoom: '1',                        // Simplified project assumption
-        NumAdult: guests                     // Guests treated as adults only
-        // Could add NumChild / Child ages here later if needed
-    });
+  // Final Expedia URL with query string
+  const expediaUrl = `${baseUrl}?${params.toString()}`;
 
-    // Final Expedia URL with query string
-    const expediaUrl = `${baseUrl}?${params.toString()}`;
-
-    // ----------------------------------------------------------
-    // STEP 6: Open Expedia in a new browser tab.
-    // "_blank" keeps the user on this website.
-    // ----------------------------------------------------------
-    window.open(expediaUrl, '_blank');
+  // ----------------------------------------------------------
+  // STEP 6: Open Expedia in a new browser tab.
+  // "_blank" keeps the user on this website.
+  // ----------------------------------------------------------
+  window.open(expediaUrl, "_blank");
 }
 
 /** Book activities - redirects to GetYourGuide */
@@ -414,55 +421,54 @@ function bookPackage(ev) {
 ===================================================================================== */
 
 function bookActivities(ev) {
-    // ----------------------------------------------------------
-    // STEP 1: Detect & visually highlight the clicked button.
-    // Uses the same cross-browser logic as other booking functions:
-    //   - ev.currentTarget when available
-    //   - otherwise fallback to ev itself
-    // ----------------------------------------------------------
-    const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
-    setActiveBookingButton(btn);
+  // ----------------------------------------------------------
+  // STEP 1: Detect & visually highlight the clicked button.
+  // Uses the same cross-browser logic as other booking functions:
+  //   - ev.currentTarget when available
+  //   - otherwise fallback to ev itself
+  // ----------------------------------------------------------
+  const btn = ev && ev.currentTarget ? ev.currentTarget : ev;
+  setActiveBookingButton(btn);
 
-    // ----------------------------------------------------------
-    // STEP 2: Safely retrieve the destination name.
-    // getCityNameForUrls():
-    //   - returns cleaned input (trimmed)
-    //   - avoids undefined/null issues
-    // Split + trim removes anything after a comma:
-    //   "Rome, Italy" -> "Rome"
-    // Falling back to '' ensures a valid (empty) search string.
-    // ----------------------------------------------------------
-    const city = getCityNameForUrls().split(',')[0].trim() || '';
-    // ----------------------------------------------------------
-    // STEP 3: Build the GetYourGuide search link.
-    // Example URL format:
-    //   https://www.getyourguide.com/s/?q=Paris
-    //   encodeURIComponent() protects special characters in city names:
-    //   "São Paulo" -> "S%C3%A3o%20Paulo"
-    // ----------------------------------------------------------
-    const getYourGuideUrl = `https://www.getyourguide.com/s/?q=${encodeURIComponent(city)}`;
+  // ----------------------------------------------------------
+  // STEP 2: Safely retrieve the destination name.
+  // getCityNameForUrls():
+  //   - returns cleaned input (trimmed)
+  //   - avoids undefined/null issues
+  // Split + trim removes anything after a comma:
+  //   "Rome, Italy" -> "Rome"
+  // Falling back to '' ensures a valid (empty) search string.
+  // ----------------------------------------------------------
+  const city = getCityNameForUrls().split(",")[0].trim() || "";
+  // ----------------------------------------------------------
+  // STEP 3: Build the GetYourGuide search link.
+  // Example URL format:
+  //   https://www.getyourguide.com/s/?q=Paris
+  //   encodeURIComponent() protects special characters in city names:
+  //   "São Paulo" -> "S%C3%A3o%20Paulo"
+  // ----------------------------------------------------------
+  const getYourGuideUrl = `https://www.getyourguide.com/s/?q=${encodeURIComponent(
+    city
+  )}`;
 
-    // ----------------------------------------------------------
-    // STEP 4: Open the activities page in a new browser tab.
-    // "_blank" ensures the user stays on your site for further actions.
-    // ----------------------------------------------------------
-    window.open(getYourGuideUrl, '_blank');
+  // ----------------------------------------------------------
+  // STEP 4: Open the activities page in a new browser tab.
+  // "_blank" ensures the user stays on your site for further actions.
+  // ----------------------------------------------------------
+  window.open(getYourGuideUrl, "_blank");
 }
-
 
 // Export functions for testing (Node.js/Jest environment)
 if (typeof module !== "undefined" && module.exports) {
-  
   module.exports = {
     getCityNameForUrls,
     setActiveBookingButton,
     bookHotel,
     bookFlights,
     bookPackage,
-    bookActivities
+    bookActivities,
   };
 }
-
 
 /* ====================================================================== 
    Overall Role in the Application:
@@ -475,4 +481,3 @@ if (typeof module !== "undefined" && module.exports) {
    - This keeps the project within an educational scope while still
      demonstrating realistic industry-style integrations.
    ====================================================================== */
-

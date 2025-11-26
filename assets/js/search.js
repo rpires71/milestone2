@@ -195,25 +195,25 @@ function performSearch(cityName) {
     "Type:",
     currentSearchType
   );
-// Store the searched city globally
-    window.currentCityName = cityName;
+  // Store the searched city globally
+  window.currentCityName = cityName;
   // -----------------------------------------------------------
   // STEP 1: Make sure the results panel becomes visible.
   // On load, this panel is hidden until a valid search happens.
   // -----------------------------------------------------------
-// Jest Test 2.5. fix
+  // Jest Test 2.5. fix
   const resultsSection = document.getElementById("resultsSection");
-if (resultsSection) {
+  if (resultsSection) {
     resultsSection.style.display = "block";
-}
+  }
 
   // -----------------------------------------------------------
   // STEP 2: Initialize the Google Map ONLY if one does not already exist.
   // This prevents reloading the whole map during every search.
   // -----------------------------------------------------------
   // Initialize map (with null check - Jest Test 2.5. fix)
-    const mapElement = document.getElementById('map');
-    if (!map && mapElement) {
+  const mapElement = document.getElementById("map");
+  if (!map && mapElement) {
     console.log("Initializing map...");
     initMap(); // Creates a map centered on a default location (London)
   }
@@ -713,7 +713,6 @@ function searchCity(cityName) {
 
 // Export functions for testing (Node.js/Jest environment)
 if (typeof module !== "undefined" && module.exports) {
-  
   module.exports = {
     initializeActionButtons,
     filterPlaces,
@@ -722,7 +721,11 @@ if (typeof module !== "undefined" && module.exports) {
     clearMarkers,
     performSearch,
     // Helpers for Jest Test 2.6.
-    _setMarkers: function(m) { markers = m; },
-    _setInfoWindows: function(iw) { infoWindows = iw; }
+    _setMarkers: function (m) {
+      markers = m;
+    },
+    _setInfoWindows: function (iw) {
+      infoWindows = iw;
+    },
   };
 }

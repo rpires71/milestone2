@@ -6,9 +6,9 @@
  *  - Close the Bootstrap navbar on mobile after a link is clicked
  */
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialise smooth scrolling for in-page links
-    initSmoothScroll();
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialise smooth scrolling for in-page links
+  initSmoothScroll();
 });
 
 /**
@@ -23,45 +23,45 @@ document.addEventListener('DOMContentLoaded', function () {
  *  - Closes the Bootstrap navbar if it's open (mobile view)
  */
 function initSmoothScroll() {
-    // Select all links where href begins with "#"
-    const anchors = document.querySelectorAll('a[href^="#"]');
+  // Select all links where href begins with "#"
+  const anchors = document.querySelectorAll('a[href^="#"]');
 
-    anchors.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
+  anchors.forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
 
-            // Ignore just "#" which doesn't point to a real element
-            if (href !== '#' && href.startsWith('#')) {
-                const targetId = href.substring(1); // remove "#"
-                const targetElement = document.getElementById(targetId);
+      // Ignore just "#" which doesn't point to a real element
+      if (href !== "#" && href.startsWith("#")) {
+        const targetId = href.substring(1); // remove "#"
+        const targetElement = document.getElementById(targetId);
 
-                if (targetElement) {
-                    // Stop the browser "jump" behaviour
-                    e.preventDefault();
+        if (targetElement) {
+          // Stop the browser "jump" behaviour
+          e.preventDefault();
 
-                    // Scroll smoothly to the element
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+          // Scroll smoothly to the element
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
 
-                    // If the Bootstrap navbar is open (mobile), close it
-                    const navbarCollapse = document.getElementById('navbarNav');
-                    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                        // Get existing Bootstrap Collapse instance
-                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-                        if (bsCollapse) {
-                            bsCollapse.hide();
-                        }
-                    }
-                }
+          // If the Bootstrap navbar is open (mobile), close it
+          const navbarCollapse = document.getElementById("navbarNav");
+          if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+            // Get existing Bootstrap Collapse instance
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+            if (bsCollapse) {
+              bsCollapse.hide();
             }
-        });
+          }
+        }
+      }
     });
+  });
 }
 
 // Export for testing (Node.js/Jest environment)
 // This allows Jest to import and test the function
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { initSmoothScroll };
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { initSmoothScroll };
 }

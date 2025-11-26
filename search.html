@@ -5,25 +5,31 @@ Starts this HTML file and sets the language to English.
 All tags from this webpage (head, body, content) will sit inside this <html> element.
 -->
 <html lang="en">
-<!--
+  <!--
 The head element isn't displayed on the webpage itself but contains important metadata and 
 resources that describes this webpage. It sits at the top of the HTML document.
 -->
-<head>
-  <!-- 
+  <head>
+    <!-- 
     Character encoding: UTF-8 supports most characters/symbols.
     Viewport: makes layout responsive on mobile (scales to device width). 
   -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
     Basic SEO metadata so search engines understand the page content.
     These don't affect layout but are good practice in web development.
   -->
-  <meta name="description" content="Holiday Destination Finder - Search Destinations">
-  <meta name="keywords" content="holiday, travel, destination, booking, vacation, search">
-  <meta name="author" content="Roberto Pires">
-  <!-- 
+    <meta
+      name="description"
+      content="Holiday Destination Finder - Search Destinations"
+    />
+    <meta
+      name="keywords"
+      content="holiday, travel, destination, booking, vacation, search"
+    />
+    <meta name="author" content="Roberto Pires" />
+    <!-- 
     The <title> tag in HTML defines the title of the webpage. It's placed inside the 
      <head> section and serves several important purposes:
     1- Browser tab display: The text inside <title> appears in the browser's tab or window bar.
@@ -31,64 +37,87 @@ resources that describes this webpage. It sits at the top of the HTML document.
     3- Bookmarks/favorites: When someone bookmarks a page, the title is used as the default name.
     4- Accessibility: Screen readers announce the title first, helping users understand the page context.
   -->
-  <title>Search - Holiday Destination Finder</title>
-  <!-- 
+    <title>Search - Holiday Destination Finder</title>
+    <!-- 
     Favicon links: small icons used in browser tabs and bookmarks.
   -->
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-  <!-- 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon-16x16.png"
+    />
+    <!-- 
     Bootstrap CSS (via CDN).
     Provides the responsive grid system and many utility classes
     that I use throughout the layout (e.g. container, row, col-*, navbar, btn, etc.).
   -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- 
     Bootstrap Icons (via CDN).
     I use these for decorative and informative icons (e.g. phone, email, checkmarks).
   -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!-- 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- 
     Google Fonts preconnect: performance optimisation for loading fonts.
     I use Montserrat for headings and Lato for body text in accordance with my design.
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;500;700&display=swap"
-    rel="stylesheet">
-  <!-- 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 
     Custom CSS.
     This file defines my colour palette, typography, layout tweaks
     and also overrides some default Bootstrap styles (e.g. navbar colours).
   -->
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<!-- 
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <!-- 
     The <body> tag in HTML contains all the viewed content of the webpge aside of the title.
     This tag follows the <head> section and everything inside <body> is what users see and interact
     with in the browser.
 -->
-<body>
-  <!-- =========================================================
+  <body>
+    <!-- =========================================================
        PART 1 of the page: The Bootstrap Navigation Menu
        ========================================================= -->
-  <!-- 
+    <!-- 
     Bootstrap navbar: 
     - .navbar, .navbar-expand-lg: Collapses the menu on small screens in a responsive manner.
     - .navbar-light bg-white: Base Bootstrap theming (overridden by my CSS).
     - .sticky-top: Menu sticks to the top when when scrolling.
     - .shadow-sm: Small drop shadow for sense of elevation.
   -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-  <!-- 
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
+    >
+      <!-- 
     <div>: A generic block‑level container in HTML.
     class="container-fluid": A Bootstrap class that makes the container span the entire width 
     of the viewport.
   -->
-    <div class="container-fluid">
-      <!-- 
+      <div class="container-fluid">
+        <!-- 
         Brand area: logo + site title.
         The <a> tag in HTML is the anchor element, used to create hyperlinks. It's one of the 
             most important tags because it lets you connect your page to other pages, files, or 
@@ -98,22 +127,26 @@ resources that describes this webpage. It sits at the top of the HTML document.
          the left (or start) of the navbar.
         d-flex and align-items-center from Bootstrap align icon and text horizontally.
       -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <!-- 
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <!-- 
           Logo image: custom .logo-icon styling in CSS adds background colour 
           and rounded corners. me-2 adds right margin (Bootstrap utility).
         -->
-        <img src="assets/images/logo-blue-bg.webp" alt="Holiday Finder Logo" class="logo-icon me-2"
-          style="max-height: 40px; width: auto;">
-        <!-- 
+          <img
+            src="assets/images/logo-blue-bg.webp"
+            alt="Holiday Finder Logo"
+            class="logo-icon me-2"
+            style="max-height: 40px; width: auto"
+          />
+          <!-- 
           The <span> tag in HTML is an inline container used to group text or other inline elements 
             so you can style or manipulate them with CSS or JavaScript. Unlike <div> (which is block‑level), 
             <span> doesn't create a new line or block — it just wraps content inside the flow of text.
           Text next to logo: coloured via .logo-text in CSS.
         -->
-        <span class="logo-text">Holiday Destination Finder</span>
-      </a>
-      <!-- 
+          <span class="logo-text">Holiday Destination Finder</span>
+        </a>
+        <!-- 
         The <button> tag in HTML is used to create clickable buttons on a webpage. Unlike links (<a>), 
           buttons are typically used to trigger actions — submitting forms, running JavaScript, or 
           interacting with UI elements.
@@ -121,64 +154,73 @@ resources that describes this webpage. It sits at the top of the HTML document.
         data-bs-* attributes are used by Bootstrap's JavaScript to open/close
         the collapsible menu.
       -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- 
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- 
         Collapsible navigation links container.
         .ms-auto pushes the ul to the right.
       -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <!-- 
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <!-- 
             Each .nav-item uses .nav-link (Bootstrap) plus my custom colours.
             The current page has .active for visual feedback.
           -->
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <!-- Internal link to the "Popular Destinations" section on search.html -->
-            <a class="nav-link active" aria-current="page" href="search.html">Search</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#popular">Popular Destinations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="packages.html">Packages</a>
-          </li>
-          <li class="nav-item">
-            <!-- 
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <!-- Internal link to the "Popular Destinations" section on search.html -->
+              <a class="nav-link active" aria-current="page" href="search.html"
+                >Search</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#popular">Popular Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="packages.html">Packages</a>
+            </li>
+            <li class="nav-item">
+              <!-- 
               Same-page link to footer contact section.
               My JavaScript (script.js) enhances this with smooth scrolling.
             -->
-            <a class="nav-link" href="search.html#contact">Contact</a>
-          </li>
-        </ul>
+              <a class="nav-link" href="search.html#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- ===============================================================
+    </nav>
+    <!-- ===============================================================
          PART 2 of the page: Header Section with Official Main Logo
          ============================================================= -->
-  <!-- 
+    <!-- 
        Header Hero: uses my custom .header-hero background gradient
        plus Bootstrap spacing utilities (py-5 = padding top+bottom).
   -->
-  <header class="header-hero py-5">
-    <!--
+    <header class="header-hero py-5">
+      <!--
         <div>: A generic block‑level container in HTML.
         class="container": A Bootstrap class that creates a fixed‑width, centered layout with 
         responsive breakpoints.
     -->
-    <div class="container">
-      <!-- 
+      <div class="container">
+        <!-- 
         Bootstrap grid: .row + .col-* splits content into 2 columns on large screens,
         stacking vertically on smaller devices (mobile-first).
       -->
-      <div class="row align-items-center">
-        <!-- 
+        <div class="row align-items-center">
+          <!-- 
           Bootstrap grid column with utility classes:
           col-lg-3 - Part of the Bootstrap grid system.
                     On large screens (≥992px), this column will take up 3 out of 12 grid columns 
@@ -200,15 +242,19 @@ resources that describes this webpage. It sits at the top of the HTML document.
           Left column: main logo.
           .text-center centres content; mb-* spacing for vertical margins. 
         -->
-        <div class="col-lg-3 text-center mb-4 mb-lg-0">
-          <!-- 
+          <div class="col-lg-3 text-center mb-4 mb-lg-0">
+            <!-- 
             img-fluid: Bootstrap class to make the image responsive.
             max-width ensures the logo doesn't grow too large on bigger screens.
           -->
-          <img src="assets/images/logo-main.webp" alt="Official Logo Icon" class="logo-main-icon img-fluid"
-            style="max-width: 250px;">
-        </div>
-        <!-- 
+            <img
+              src="assets/images/logo-main.webp"
+              alt="Official Logo Icon"
+              class="logo-main-icon img-fluid"
+              style="max-width: 250px"
+            />
+          </div>
+          <!-- 
           Right column: main heading, subtitle, and CTA button.
 
           Bootstrap grid + utility class combination:
@@ -220,8 +266,8 @@ resources that describes this webpage. It sits at the top of the HTML document.
             it will stack or adjust automatically.
             text-center = A Bootstrap utility class that centers text horizontally inside the element.
         -->
-        <div class="col-lg-9 text-center">
-          <!-- 
+          <div class="col-lg-9 text-center">
+            <!-- 
               The <h1> tag in HTML defines the main heading of a webpage. It's part of the heading tags
                 <h1> through <h6>, which represent six levels of headings, with <h1> being the most important.
               
@@ -235,8 +281,10 @@ resources that describes this webpage. It sits at the top of the HTML document.
                 b - bottom (the side of the element affected)
                 3 - the size scale (Bootstrap uses a scale from 0 to 5, sometimes extended to larger values depending on version)
           -->
-          <h1 class="display-5 fw-bold mb-3">Search Your Dream Destination</h1>
-           <!-- 
+            <h1 class="display-5 fw-bold mb-3">
+              Search Your Dream Destination
+            </h1>
+            <!-- 
             HTML <p> (paragraph) element represents a block of text.
 
             lead, fs-4, text-muted: Bootstrap utilities for larger, softer intro text.
@@ -254,15 +302,18 @@ resources that describes this webpage. It sits at the top of the HTML document.
                   A Bootstrap colour utility.
                   Applies a muted grey colour to the text, often used for secondary or less prominent information.
           -->
-          <p class="lead fs-4 text-muted">Find attractions, restaurants, hotels, and more in cities around the world</p>
+            <p class="lead fs-4 text-muted">
+              Find attractions, restaurants, hotels, and more in cities around
+              the world
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- ===========================================================
+    </header>
+    <!-- ===========================================================
          PART 3 of the page: Main Section (Search & Results)
          ========================================================= -->
-  <!-- 
+    <!-- 
     .main-section: custom class that sets background colour and padding.
     HTML5 semantic element with Bootstrap utility classes applied.
 
@@ -280,36 +331,36 @@ resources that describes this webpage. It sits at the top of the HTML document.
            Adds padding-top: 3rem and padding-bottom: 3rem (≈48px by default).
            Creates generous vertical spacing around the content.
   -->
-  <main class="main-section py-5">
-    <!--
+    <main class="main-section py-5">
+      <!--
       <div>: A generic block‑level container in HTML.
       class="container": A Bootstrap class that creates a fixed‑width, centered layout with 
       responsive breakpoints.
     -->
-    <div class="container">
-    <!-- =========================================
+      <div class="container">
+        <!-- =========================================
          Section 1: Search Box & Action Buttons
          ========================================= -->
-    <!-- 
+        <!-- 
       <div class="search-section mb-5">:
       - "search-section": Custom class for styling this whole search area.
       - "mb-5": Bootstrap spacing utility (margin-bottom) to separate it
         from the section below.
     -->
-      <div class="search-section mb-5">
-      <!-- 
+        <div class="search-section mb-5">
+          <!-- 
         <div class="row mb-4">:
         - "row": Bootstrap grid row; used to organise columns horizontally.
         - "mb-4": Adds margin-bottom between this row and the next block.
       -->
-        <div class="row mb-4">
-        <!-- 
+          <div class="row mb-4">
+            <!-- 
           <div class="col-12">:
           - "col-12": Bootstrap column class meaning the column spans all 12 grid
                       columns on extra-small screens and upwards (full width).
         -->
-          <div class="col-12">
-          <!-- 
+            <div class="col-12">
+              <!-- 
             <div class="search-container p-4 bg-white rounded-4 shadow-md">:
             - "search-container": Custom class for styling the search panel (border, colours).
             - "p-4": Bootstrap padding utility (padding on all sides).
@@ -317,24 +368,24 @@ resources that describes this webpage. It sits at the top of the HTML document.
             - "rounded-4": Bootstrap class for large rounded corners.
             - "shadow-md": Custom shadow class (defined in CSS) for medium drop-shadow.
           -->
-            <div class="search-container p-4 bg-white rounded-4 shadow-md">
-              <!-- ============================
+              <div class="search-container p-4 bg-white rounded-4 shadow-md">
+                <!-- ============================
                  Search Input & Button Row
                  ============================== -->
-              <!-- 
+                <!-- 
               <div class="row g-3 mb-4">:
               - "row": Bootstrap grid row for the input + button.
               - "g-3": Bootstrap "gutters" spacing between columns (gap size).
               - "mb-4": Margin-bottom to separate from the action buttons below.
               -->
-              <div class="row g-3 mb-4">
-                <!-- 
+                <div class="row g-3 mb-4">
+                  <!-- 
                   <div class="col-md-8">:
                   - On medium screens and above: this column takes 8/12 width.
                   - On small screens: it automatically becomes full width.
                 -->
-                <div class="col-md-8">
-                  <!-- 
+                  <div class="col-md-8">
+                    <!-- 
                     <input>: Text input for city search.
                     type="text": User can type free-form text.
                     class="form-control form-control-lg":
@@ -344,16 +395,20 @@ resources that describes this webpage. It sits at the top of the HTML document.
                                      to read the user's search term.
                     placeholder="...": Grey hint text shown when the field is empty.
                   -->
-                  <input type="text" class="form-control form-control-lg" id="citySearch" 
-                    placeholder="Enter a city name e.g. Paris, New York City, Tokyo">
-                </div>
-                <!-- 
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="citySearch"
+                      placeholder="Enter a city name e.g. Paris, New York City, Tokyo"
+                    />
+                  </div>
+                  <!-- 
                   <div class="col-md-4">:
                   - On medium screens and above: takes 4/12 width.
                   - On small screens: full width, stacking under the input.
                 -->
-                <div class="col-md-4">
-                  <!-- 
+                  <div class="col-md-4">
+                    <!-- 
                     <button>: Triggers the search.
                     class="btn btn-primary btn-lg w-100":
                       - "btn": Base Bootstrap button style.
@@ -365,52 +420,58 @@ resources that describes this webpage. It sits at the top of the HTML document.
                                 function handleSearch(), which reads the city and starts 
                                 the search + map update.
                   -->
-                  <button class="btn btn-primary btn-lg w-100" id="searchBtn" onclick="handleSearch()">
-                    <!-- 
+                    <button
+                      class="btn btn-primary btn-lg w-100"
+                      id="searchBtn"
+                      onclick="handleSearch()"
+                    >
+                      <!-- 
                       <i>: Inline icon element.
                       class="bi bi-search me-2":
                         - "bi bi-search": Bootstrap Icons class for a search icon.
                         - "me-2": Bootstrap "margin-end" utility, adds space to the right
                                   of the icon so the text does not stick to it.
                     -->
-                    <i class="bi bi-search me-2"></i>
-                    <!-- Button label text -->
-                    Search Destination
-                  </button>
+                      <i class="bi bi-search me-2"></i>
+                      <!-- Button label text -->
+                      Search Destination
+                    </button>
+                  </div>
                 </div>
-              </div>
                 <!-- =======================
                  Action Buttons (Filters)
                  ===========================
                 -->
-              <!-- 
+                <!-- 
                 <div class="action-buttons">:
                   - "action-buttons": Custom class grouping all filter buttons together.
                     May control spacing and layout in CSS.
               -->
-              <div class="action-buttons">
-                <!-- 
+                <div class="action-buttons">
+                  <!-- 
                   <h5> heading introduces the question above the filter buttons.
                   class="mb-3 text-ocean-blue":
                     - "mb-3": Margin-bottom to space heading from buttons.
                     - "text-ocean-blue": Custom text colour variable defined in CSS.
                 -->
-                <h5 class="mb-3 text-ocean-blue">What are you looking for?</h5>
-                <!-- 
+                  <h5 class="mb-3 text-ocean-blue">
+                    What are you looking for?
+                  </h5>
+                  <!-- 
                   <div class="row g-3">:
                     - "row": Bootstrap grid row for arranging buttons in columns.
                     - "g-3": Gutters (space) between columns.
                 -->
-                <div class="row g-3">
-                  <!-- 
+                  <div class="row g-3">
+                    <!-- 
                     Each button is wrapped in a column.
                     class="col-6 col-md-4 col-lg":
                       - "col-6": On extra-small screens each column takes half width (2 per row).
                       - "col-md-4": On medium screens each takes 4/12 (3 per row).
                       - "col-lg": On large screens each column automatically adjusts to fit.
                   -->
-                  <div class="col-6 col-md-4 col-lg">
-                    <!-- 
+                    <div class="col-6 col-md-4 col-lg">
+                      <!-- 
                       Attractions button:
                         class="btn btn-action w-100 active":
                           - "btn": Base Bootstrap button.
@@ -424,8 +485,12 @@ resources that describes this webpage. It sits at the top of the HTML document.
                           - Calls filterPlaces() in search.js, passing the place type and a reference
                           to the button element (this), so JS can update UI state.
                     -->
-                    <button class="btn btn-action w-100 active" data-type="tourist_attraction" onclick="filterPlaces('tourist_attraction', this)">
-                      <!-- 
+                      <button
+                        class="btn btn-action w-100 active"
+                        data-type="tourist_attraction"
+                        onclick="filterPlaces('tourist_attraction', this)"
+                      >
+                        <!-- 
                         Icon for attractions:
                         class="bi bi-geo-alt-fill d-block fs-3 mb-2":
                           - "bi bi-geo-alt-fill": Bootstrap map pin icon.
@@ -433,53 +498,69 @@ resources that describes this webpage. It sits at the top of the HTML document.
                           - "fs-3": Bootstrap font-size utility (large icon).
                           - "mb-2": Margin bottom to separate icon from label.
                       -->
-                      <i class="bi bi-geo-alt-fill d-block fs-3 mb-2"></i>
-                      <!-- 
+                        <i class="bi bi-geo-alt-fill d-block fs-3 mb-2"></i>
+                        <!-- 
                         <span>: Inline container for the button text label.
                       -->
-                      <span>Attractions</span>
-                    </button>
-                  </div>
-                  <!-- Restaurants button -->
-                  <div class="col-6 col-md-4 col-lg">
-                    <button class="btn btn-action w-100" data-type="restaurant" onclick="filterPlaces('restaurant', this)">
-                      <i class="bi bi-cup-hot-fill d-block fs-3 mb-2"></i>
-                      <span>Restaurants</span>
-                    </button>
-                  </div>
-                  <!-- Hotels button -->
-                  <div class="col-6 col-md-4 col-lg">
-                    <button class="btn btn-action w-100" data-type="lodging" onclick="filterPlaces('lodging', this)">
-                      <i class="bi bi-building-fill d-block fs-3 mb-2"></i>
-                      <span>Hotels</span>
-                    </button>
-                  </div>
-                  <!-- Cafes button -->
-                  <div class="col-6 col-md-4 col-lg">
-                    <button class="btn btn-action w-100" data-type="cafe" onclick="filterPlaces('cafe', this)">
-                      <i class="bi bi-cup-straw d-block fs-3 mb-2"></i>
-                      <span>Cafes</span>
-                    </button>
-                  </div>
-                  <!-- Shopping button -->
-                  <div class="col-6 col-md-4 col-lg">
-                    <button class="btn btn-action w-100" data-type="shopping_mall" onclick="filterPlaces('shopping_mall', this)">
-                      <i class="bi bi-bag-fill d-block fs-3 mb-2"></i>
-                      <span>Shopping</span>
-                    </button>
+                        <span>Attractions</span>
+                      </button>
+                    </div>
+                    <!-- Restaurants button -->
+                    <div class="col-6 col-md-4 col-lg">
+                      <button
+                        class="btn btn-action w-100"
+                        data-type="restaurant"
+                        onclick="filterPlaces('restaurant', this)"
+                      >
+                        <i class="bi bi-cup-hot-fill d-block fs-3 mb-2"></i>
+                        <span>Restaurants</span>
+                      </button>
+                    </div>
+                    <!-- Hotels button -->
+                    <div class="col-6 col-md-4 col-lg">
+                      <button
+                        class="btn btn-action w-100"
+                        data-type="lodging"
+                        onclick="filterPlaces('lodging', this)"
+                      >
+                        <i class="bi bi-building-fill d-block fs-3 mb-2"></i>
+                        <span>Hotels</span>
+                      </button>
+                    </div>
+                    <!-- Cafes button -->
+                    <div class="col-6 col-md-4 col-lg">
+                      <button
+                        class="btn btn-action w-100"
+                        data-type="cafe"
+                        onclick="filterPlaces('cafe', this)"
+                      >
+                        <i class="bi bi-cup-straw d-block fs-3 mb-2"></i>
+                        <span>Cafes</span>
+                      </button>
+                    </div>
+                    <!-- Shopping button -->
+                    <div class="col-6 col-md-4 col-lg">
+                      <button
+                        class="btn btn-action w-100"
+                        data-type="shopping_mall"
+                        onclick="filterPlaces('shopping_mall', this)"
+                      >
+                        <i class="bi bi-bag-fill d-block fs-3 mb-2"></i>
+                        <span>Shopping</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- =======================================
+        <!-- =======================================
          Section 2: Results Panel & Google Maps
          =========================================
       -->
-      <!-- 
+        <!-- 
         <div class="results-section mb-5" id="resultsSection" style="display: none;">:
           - "results-section": Custom class for styling this whole block.
           - "mb-5": Margin-bottom to separate from the next section.
@@ -488,21 +569,25 @@ resources that describes this webpage. It sits at the top of the HTML document.
           - style="display: none;": Inline CSS that hides the section initially.
             JS will change this to display the results after a search.
       -->
-      <div class="results-section mb-5" id="resultsSection" style="display: none;">
-        <!-- 
+        <div
+          class="results-section mb-5"
+          id="resultsSection"
+          style="display: none"
+        >
+          <!-- 
           <div class="row g-4">:
             - "row": Bootstrap grid row to arrange results panel and map side by side.
             - "g-4": Gutters spacing between the two columns.
         -->
-        <div class="row g-4">
-          <!-- ===== Results Panel - Left Side (approx 2/5 width) ===== -->
-          <!-- 
+          <div class="row g-4">
+            <!-- ===== Results Panel - Left Side (approx 2/5 width) ===== -->
+            <!-- 
             <div class="col-lg-5">:
               - On large screens, this column takes 5/12 of the width.
               - On smaller screens, it becomes full width.
           -->
-          <div class="col-lg-5">
-            <!-- 
+            <div class="col-lg-5">
+              <!-- 
               <div class="results-panel bg-white rounded-4 shadow-md p-4">:
                 - "results-panel": Custom class for scroll behaviour, borders, etc.
                 - "bg-white": White background (Bootstrap).
@@ -510,56 +595,56 @@ resources that describes this webpage. It sits at the top of the HTML document.
                 - "shadow-md": Custom shadow.
                 - "p-4": Padding on all sides.
             -->
-            <div class="results-panel bg-white rounded-4 shadow-md p-4">
-              <!-- 
+              <div class="results-panel bg-white rounded-4 shadow-md p-4">
+                <!-- 
                 <h3 class="mb-4 text-ocean-blue">:
                   - "h3": Heading level 3 for results title.
                   - "mb-4": Margin-bottom.
                   - "text-ocean-blue": Custom text colour.
               -->
-              <h3 class="mb-4 text-ocean-blue">
-                <!-- 
+                <h3 class="mb-4 text-ocean-blue">
+                  <!-- 
                   Icon before the heading:
                     "bi bi-list-ul": List icon.
                     "me-2": Margin-end for spacing.
                 -->
-                <i class="bi bi-list-ul me-2"></i>Top 20 Results
-              </h3>
-              <!-- 
+                  <i class="bi bi-list-ul me-2"></i>Top 20 Results
+                </h3>
+                <!-- 
                 <div class="results-list" id="resultsList">:
                   - "results-list": Custom class that makes this area scrollable and
                                     styles the list of places (scrollbar styling is in CSS).
                   - id="resultsList": JavaScript will insert search results here
                                       (e.g. created <div> cards for each place).
               -->
-              <div class="results-list" id="resultsList">
-                <!-- Placeholder content shown before any search is made -->
-                <div class="text-center text-muted py-5">
-                  <!-- 
+                <div class="results-list" id="resultsList">
+                  <!-- Placeholder content shown before any search is made -->
+                  <div class="text-center text-muted py-5">
+                    <!-- 
                     Large search icon:
                       "bi bi-search": Icon.
                       "fs-1": Very large font size.
                       "mb-3": Margin bottom.
                       "d-block": Display block so the icon is on its own line.
                   -->
-                  <i class="bi bi-search fs-1 mb-3 d-block"></i>
-                  <!-- 
+                    <i class="bi bi-search fs-1 mb-3 d-block"></i>
+                    <!-- 
                     <p>: Instructional text telling the user what to do.
                         "text-muted": Softer grey text colour.
                   -->
-                  <p>Search for a destination to see results</p>
+                    <p>Search for a destination to see results</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- ===== Google Maps - Right Side (approx 3/5 width) ===== -->
-          <!-- 
+            <!-- ===== Google Maps - Right Side (approx 3/5 width) ===== -->
+            <!-- 
             <div class="col-lg-7">:
               - On large screens, this takes 7/12 of width.
               - On small screens, it becomes full width and stacks under the results.
           -->
-          <div class="col-lg-7">
-            <!-- 
+            <div class="col-lg-7">
+              <!-- 
               <div class="map-container bg-white rounded-4 shadow-md overflow-hidden">:
                 - "map-container": Custom class for borders/padding around the map.
                 - "bg-white": White background.
@@ -567,15 +652,17 @@ resources that describes this webpage. It sits at the top of the HTML document.
                 - "shadow-md": Medium shadow.
                 - "overflow-hidden": Hides any content that exceeds the container's border.
             -->
-            <div class="map-container bg-white rounded-4 shadow-md overflow-hidden">
-              <!-- 
+              <div
+                class="map-container bg-white rounded-4 shadow-md overflow-hidden"
+              >
+                <!-- 
                 <div id="map" style="height: 600px; width: 100%;">:
                   - id="map": Critical ID used by Google Maps JavaScript API.
                               The initMap() function in search.js attaches a Map object to this div.
                   - Inline style sets map dimensions.
               -->
-              <div id="map" style="height: 600px; width: 100%;">
-                <!-- Placeholder content before the map is initialised -->
+                <div id="map" style="height: 600px; width: 100%">
+                  <!-- Placeholder content before the map is initialised -->
                   <!-- 
                     Inner container centred both horizontally and vertically.
                       - "d-flex": Turns this div into a flexbox container.
@@ -584,17 +671,19 @@ resources that describes this webpage. It sits at the top of the HTML document.
                       - "h-100": Full height of the parent element.
                       - "text-muted": Grey text.
                   -->
-                <div class="d-flex align-items-center justify-content-center h-100 text-muted">
-                  <div class="text-center">
-                    <i class="bi bi-map fs-1 mb-3 d-block"></i>
-                    <p>Map will appear here after search</p>
+                  <div
+                    class="d-flex align-items-center justify-content-center h-100 text-muted"
+                  >
+                    <div class="text-center">
+                      <i class="bi bi-map fs-1 mb-3 d-block"></i>
+                      <p>Map will appear here after search</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
         <!-- ===============================
           Section 3: Popular Destinations
           ==================================
@@ -605,43 +694,47 @@ resources that describes this webpage. It sits at the top of the HTML document.
             - id="popular": Target for internal links (e.g. navbar "Popular Destinations").
             - "popular-destinations-section": Custom class for styling this block.
         -->
-      <section id="popular" class="popular-destinations-section">
-        <!-- 
+        <section id="popular" class="popular-destinations-section">
+          <!-- 
           Intro text centred at top of the section.
           "text-center": Bootstrap utility to centre text.
           "mb-5": Margin-bottom to separate from the cards below.
         -->
-        <div class="text-center mb-5">
-          <!-- 
+          <div class="text-center mb-5">
+            <!-- 
             <h2 class="display-6 fw-bold text-ocean-blue mb-3">:
               - "display-6": Large Bootstrap heading style.
               - "fw-bold": Bold font weight.
               - "text-ocean-blue": Custom heading colour.
               - "mb-3": Margin-bottom.
           -->
-          <h2 class="display-6 fw-bold text-ocean-blue mb-3">Popular Destinations</h2>
+            <h2 class="display-6 fw-bold text-ocean-blue mb-3">
+              Popular Destinations
+            </h2>
             <!-- 
               <p class="lead text-muted">:
                 - "lead": Larger, slightly emphasised text style.
                 - "text-muted": Softer grey tone for description.
             -->
-          <p class="lead text-muted">Explore our most searched travel destinations</p>
-        </div>
-        <!-- 
+            <p class="lead text-muted">
+              Explore our most searched travel destinations
+            </p>
+          </div>
+          <!-- 
           <div class="row g-4">:
             - Bootstrap row with "g-4" gutters between cards.
             - Contains one column per destination (NYC, Barcelona, Paris, Tokyo).
         -->
-        <div class="row g-4">
-          <!-- ===== Destination Card: New York City ===== -->
-          <!-- 
+          <div class="row g-4">
+            <!-- ===== Destination Card: New York City ===== -->
+            <!-- 
             <div class="col-md-6 col-lg-3">:
               - On small screens: full width by default.
               - On medium screens: 6 / 12 width (2 cards per row).
               - On large screens: 3 / 12 width (4 cards per row).
           -->
-          <div class="col-md-6 col-lg-3">
-            <!-- 
+            <div class="col-md-6 col-lg-3">
+              <!-- 
               <div class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100">:
                 - "destination-tile": Custom class for card styling.
                 - "bg-white": White background.
@@ -650,10 +743,12 @@ resources that describes this webpage. It sits at the top of the HTML document.
                 - "overflow-hidden": Ensures image or content doesn't spill outside rounded corners.
                 - "h-100": Makes tile stretch to full height of its row to keep cards equal size.
             -->
-            <div class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100">
-               <!-- Image container -->
-              <div class="destination-image">
-                <!-- 
+              <div
+                class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100"
+              >
+                <!-- Image container -->
+                <div class="destination-image">
+                  <!-- 
                   <img>: Destination thumbnail.
                   src="...": Image path.
                   alt="New York City": Alternative text for accessibility.
@@ -662,25 +757,31 @@ resources that describes this webpage. It sits at the top of the HTML document.
                     - Fixed height for card consistency.
                     - "object-fit: cover" crops image nicely without distortion.
                 -->
-                <img src="assets/images/img-2-nyc.webp" alt="New York City" class="w-100" style="height: 200px; object-fit: cover;">
-              </div>
-              <!-- Content area under the image -->
-              <div class="destination-content p-4">
-                <!-- 
+                  <img
+                    src="assets/images/img-2-nyc.webp"
+                    alt="New York City"
+                    class="w-100"
+                    style="height: 200px; object-fit: cover"
+                  />
+                </div>
+                <!-- Content area under the image -->
+                <div class="destination-content p-4">
+                  <!-- 
                   <h4 class="text-ocean-blue mb-3">:
                     - Destination name styled with theme colour and margin below.
                 -->
-                <h4 class="text-ocean-blue mb-3">New York City</h4>
-                <!-- 
+                  <h4 class="text-ocean-blue mb-3">New York City</h4>
+                  <!-- 
                   <p class="text-muted mb-3">:
                     - Short description of the destination.
                     - "text-muted": Softer text colour.
                 -->
-                <p class="text-muted mb-3">
-                  The city that never sleeps. Experience world-class museums, iconic skyscrapers, 
-                  Broadway shows, and diverse culinary scenes.
-                </p>
-                <!-- 
+                  <p class="text-muted mb-3">
+                    The city that never sleeps. Experience world-class museums,
+                    iconic skyscrapers, Broadway shows, and diverse culinary
+                    scenes.
+                  </p>
+                  <!-- 
                   <button class="btn btn-primary w-100" onclick="searchCity('New York City')">:
                     - Button styled as primary (coral orange).
                     - "w-100": Full width across the card.
@@ -689,74 +790,110 @@ resources that describes this webpage. It sits at the top of the HTML document.
                         as parameter. This function triggers a search & updates the map/results
                         as if the user had typed this city into the search box.
                 -->
-                <button class="btn btn-primary w-100" onclick="searchCity('New York City')">
-                  <i class="bi bi-search me-2"></i>Explore NYC
-                </button>
+                  <button
+                    class="btn btn-primary w-100"
+                    onclick="searchCity('New York City')"
+                  >
+                    <i class="bi bi-search me-2"></i>Explore NYC
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- ===== Destination Card: Barcelona ===== -->
+            <div class="col-md-6 col-lg-3">
+              <div
+                class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100"
+              >
+                <div class="destination-image">
+                  <img
+                    src="assets/images/img-2-barcelona.webp"
+                    alt="Barcelona"
+                    class="w-100"
+                    style="height: 200px; object-fit: cover"
+                  />
+                </div>
+                <div class="destination-content p-4">
+                  <h4 class="text-ocean-blue mb-3">Barcelona</h4>
+                  <p class="text-muted mb-3">
+                    Discover Gaudí's architectural masterpieces, beautiful
+                    beaches, Gothic Quarter, and vibrant street life in this
+                    Mediterranean gem.
+                  </p>
+                  <button
+                    class="btn btn-primary w-100"
+                    onclick="searchCity('Barcelona')"
+                  >
+                    <i class="bi bi-search me-2"></i>Explore Barcelona
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- ===== Destination Card: Paris ===== -->
+            <div class="col-md-6 col-lg-3">
+              <div
+                class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100"
+              >
+                <div class="destination-image">
+                  <img
+                    src="assets/images/img-3-paris.webp"
+                    alt="Paris"
+                    class="w-100"
+                    style="height: 200px; object-fit: cover"
+                  />
+                </div>
+                <div class="destination-content p-4">
+                  <h4 class="text-ocean-blue mb-3">Paris</h4>
+                  <p class="text-muted mb-3">
+                    The City of Light. Fall in love with the Eiffel Tower,
+                    Louvre Museum, charming cafés, and romantic Seine River
+                    walks.
+                  </p>
+                  <button
+                    class="btn btn-primary w-100"
+                    onclick="searchCity('Paris')"
+                  >
+                    <i class="bi bi-search me-2"></i>Explore Paris
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- ===== Destination Card: Tokyo ===== -->
+            <div class="col-md-6 col-lg-3">
+              <div
+                class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100"
+              >
+                <div class="destination-image">
+                  <img
+                    src="assets/images/img-3-tokyo.webp"
+                    alt="Tokyo"
+                    class="w-100"
+                    style="height: 200px; object-fit: cover"
+                  />
+                </div>
+                <div class="destination-content p-4">
+                  <h4 class="text-ocean-blue mb-3">Tokyo</h4>
+                  <p class="text-muted mb-3">
+                    A perfect blend of ancient tradition and cutting-edge
+                    technology. Explore temples, neon-lit streets, and
+                    incredible cuisine.
+                  </p>
+                  <button
+                    class="btn btn-primary w-100"
+                    onclick="searchCity('Tokyo')"
+                  >
+                    <i class="bi bi-search me-2"></i>Explore Tokyo
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <!-- ===== Destination Card: Barcelona ===== -->
-          <div class="col-md-6 col-lg-3">
-            <div class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100">
-              <div class="destination-image">
-                <img src="assets/images/img-2-barcelona.webp" alt="Barcelona" class="w-100" style="height: 200px; object-fit: cover;">
-              </div>
-              <div class="destination-content p-4">
-                <h4 class="text-ocean-blue mb-3">Barcelona</h4>
-                <p class="text-muted mb-3">
-                  Discover Gaudí's architectural masterpieces, beautiful beaches, Gothic Quarter, 
-                  and vibrant street life in this Mediterranean gem.
-                </p>
-                <button class="btn btn-primary w-100" onclick="searchCity('Barcelona')">
-                  <i class="bi bi-search me-2"></i>Explore Barcelona
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- ===== Destination Card: Paris ===== -->
-          <div class="col-md-6 col-lg-3">
-            <div class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100">
-              <div class="destination-image">
-                <img src="assets/images/img-3-paris.webp" alt="Paris" class="w-100" style="height: 200px; object-fit: cover;">
-              </div>
-              <div class="destination-content p-4">
-                <h4 class="text-ocean-blue mb-3">Paris</h4>
-                <p class="text-muted mb-3">
-                  The City of Light. Fall in love with the Eiffel Tower, Louvre Museum, 
-                  charming cafés, and romantic Seine River walks.
-                </p>
-                <button class="btn btn-primary w-100" onclick="searchCity('Paris')">
-                  <i class="bi bi-search me-2"></i>Explore Paris
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- ===== Destination Card: Tokyo ===== -->
-          <div class="col-md-6 col-lg-3">
-            <div class="destination-tile bg-white rounded-4 shadow-md overflow-hidden h-100">
-              <div class="destination-image">
-                <img src="assets/images/img-3-tokyo.webp" alt="Tokyo" class="w-100" style="height: 200px; object-fit: cover;">
-              </div>
-              <div class="destination-content p-4">
-                <h4 class="text-ocean-blue mb-3">Tokyo</h4>
-                <p class="text-muted mb-3">
-                  A perfect blend of ancient tradition and cutting-edge technology. 
-                  Explore temples, neon-lit streets, and incredible cuisine.
-                </p>
-                <button class="btn btn-primary w-100" onclick="searchCity('Tokyo')">
-                  <i class="bi bi-search me-2"></i>Explore Tokyo
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
-  <!-- =========================================================
+        </section>
+      </div>
+    </main>
+    <!-- =========================================================
          PART 4 of the page: Footer Section with Contact Info
          ======================================================= -->
-  <!-- 
+    <!-- 
     Footer: uses custom .footer-section styling plus Bootstrap spacing 
     and grid layout for the contact tiles.
 
@@ -789,12 +926,12 @@ resources that describes this webpage. It sits at the top of the HTML document.
                    Useful for linking directly to the footer section (e.g., 
                    <a href="#contact">Contact Us</a>).
   -->
-  <footer class="footer-section bg-dark text-white py-5 mt-5" id="contact">
-    <div class="container">
-      <!-- Contact Information Tiles - 4 Columns -->
-      <div class="row g-4 mb-4">
-        <!-- Each column becomes full-width on small screens and 1/4 width on large. -->
-        <!-- Address Column 
+    <footer class="footer-section bg-dark text-white py-5 mt-5" id="contact">
+      <div class="container">
+        <!-- Contact Information Tiles - 4 Columns -->
+        <div class="row g-4 mb-4">
+          <!-- Each column becomes full-width on small screens and 1/4 width on large. -->
+          <!-- Address Column 
         
           col-md-6 - On medium screens and up (≥768px), the column takes up 6 out of 12 grid 
                      columns -> 50% width.
@@ -809,102 +946,130 @@ resources that describes this webpage. It sits at the top of the HTML document.
                                 On medium screens (≥768px): each column is half width (6/12).
                                 On large screens (≥992px): each column is quarter width (3/12)
         -->
-        <div class="col-md-6 col-lg-3">
-          <!-- 
+          <div class="col-md-6 col-lg-3">
+            <!-- 
             .contact-tile: custom card-style component with hover effects.
             .bg-secondary.bg-opacity-25: Bootstrap background with transparency.
           -->
-          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
-            <i class="bi bi-geo-alt-fill fs-1 mb-3 text-primary"></i>
-            <h5 class="mb-3">Address</h5>
-            <p class="mb-0">
-              Holiday Destination Finder<br>
-              123 Travel Street<br>
-              London, UK<br>
-              SW1A 1AA
-            </p>
+            <div
+              class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100"
+            >
+              <i class="bi bi-geo-alt-fill fs-1 mb-3 text-primary"></i>
+              <h5 class="mb-3">Address</h5>
+              <p class="mb-0">
+                Holiday Destination Finder<br />
+                123 Travel Street<br />
+                London, UK<br />
+                SW1A 1AA
+              </p>
+            </div>
           </div>
-        </div>
-        <!-- Phone Column -->
-        <div class="col-md-6 col-lg-3">
-          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
-            <i class="bi bi-telephone-fill fs-1 mb-3 text-primary"></i>
-            <h5 class="mb-3">Phone</h5>
-            <!-- 
+          <!-- Phone Column -->
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100"
+            >
+              <i class="bi bi-telephone-fill fs-1 mb-3 text-primary"></i>
+              <h5 class="mb-3">Phone</h5>
+              <!-- 
               tel: links allow mobile users to dial directly.
               text-white text-decoration-none: ensure links match footer styling.
             -->
-            <p class="mb-1">
-              <a href="tel:+441234567890" class="text-white text-decoration-none">
-                +44 (0) 123 456 7890
-              </a>
-            </p>
-            <p class="mb-0">
-              <a href="tel:+441234567891" class="text-white text-decoration-none">
-                +44 (0) 123 456 7891
-              </a>
-            </p>
+              <p class="mb-1">
+                <a
+                  href="tel:+441234567890"
+                  class="text-white text-decoration-none"
+                >
+                  +44 (0) 123 456 7890
+                </a>
+              </p>
+              <p class="mb-0">
+                <a
+                  href="tel:+441234567891"
+                  class="text-white text-decoration-none"
+                >
+                  +44 (0) 123 456 7891
+                </a>
+              </p>
+            </div>
+          </div>
+          <!-- SMS Column -->
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100"
+            >
+              <i class="bi bi-chat-dots-fill fs-1 mb-3 text-primary"></i>
+              <h5 class="mb-3">SMS</h5>
+              <p class="mb-1">
+                <!-- sms: link type used by some devices to open messaging apps. -->
+                <a
+                  href="sms:+441234567890"
+                  class="text-white text-decoration-none"
+                >
+                  +44 (0) 123 456 7890
+                </a>
+              </p>
+              <p class="mb-0 small">Available 24/7</p>
+            </div>
+          </div>
+          <!-- Email Column -->
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100"
+            >
+              <i class="bi bi-envelope-fill fs-1 mb-3 text-primary"></i>
+              <h5 class="mb-3">Email</h5>
+              <p class="mb-1">
+                <a
+                  href="mailto:info@holidayfinder.com"
+                  class="text-white text-decoration-none"
+                >
+                  info@holidayfinder.com
+                </a>
+              </p>
+              <p class="mb-0">
+                <!-- mailto: links open the user’s default email client. -->
+                <a
+                  href="mailto:support@holidayfinder.com"
+                  class="text-white text-decoration-none"
+                >
+                  support@holidayfinder.com
+                </a>
+              </p>
+            </div>
           </div>
         </div>
-        <!-- SMS Column -->
-        <div class="col-md-6 col-lg-3">
-          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
-            <i class="bi bi-chat-dots-fill fs-1 mb-3 text-primary"></i>
-            <h5 class="mb-3">SMS</h5>
-            <p class="mb-1">
-              <!-- sms: link type used by some devices to open messaging apps. -->
-              <a href="sms:+441234567890" class="text-white text-decoration-none">
-                +44 (0) 123 456 7890
-              </a>
-            </p>
-            <p class="mb-0 small">Available 24/7</p>
-          </div>
-        </div>
-        <!-- Email Column -->
-        <div class="col-md-6 col-lg-3">
-          <div class="contact-tile text-center p-4 bg-secondary bg-opacity-25 rounded-3 h-100">
-            <i class="bi bi-envelope-fill fs-1 mb-3 text-primary"></i>
-            <h5 class="mb-3">Email</h5>
-            <p class="mb-1">
-              <a href="mailto:info@holidayfinder.com" class="text-white text-decoration-none">
-                info@holidayfinder.com
-              </a>
-            </p>
-            <p class="mb-0">
-              <!-- mailto: links open the user’s default email client. -->
-              <a href="mailto:support@holidayfinder.com" class="text-white text-decoration-none">
-                support@holidayfinder.com
-              </a>
-            </p>
-          </div>
+        <!-- Horizontal divider line between contact tiles and copyright -->
+        <hr class="my-4 bg-secondary" />
+        <!-- Simple centred copyright text -->
+        <div class="copyright text-center">
+          <p class="mb-1">
+            &copy; 2025 Holiday Destination Finder. All Rights Reserved.
+          </p>
+          <p class="mb-0">
+            Developed by Roberto Pires | Milestone Project 2 - Interactive
+            Front-End Development
+          </p>
         </div>
       </div>
-      <!-- Horizontal divider line between contact tiles and copyright -->
-      <hr class="my-4 bg-secondary">
-      <!-- Simple centred copyright text -->
-      <div class="copyright text-center">
-        <p class="mb-1">&copy; 2025 Holiday Destination Finder. All Rights Reserved.</p>
-        <p class="mb-0">Developed by Roberto Pires | Milestone Project 2 - Interactive Front-End Development</p>
-      </div>
-    </div>
-  </footer>
-  <!-- 
+    </footer>
+    <!-- 
     Bootstrap JavaScript bundle:
     required for dynamic components such as the navbar collapse and the carousel.
     It reads data-bs-* attributes in the HTML and wires up interactions.
   -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Google Maps API (You'll need to add your API key) -->
-  <script
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Google Maps API (You'll need to add your API key) -->
+    <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzUmu_XAClMDi5q8nzJSOu_5ZWAfzNjfs&libraries=places&callback=initMap&loading=async"
       async
       defer
     ></script>
-  <!-- 
+    <!-- 
     Custom JavaScript:
     - Initialises interactive behaviours (destination cards, contact form, smooth scroll).
     - Demonstrates integration of custom JS logic with Bootstrap components.
   -->
-  <script src="assets/js/search.js"></script>
-</body>
+    <script src="assets/js/search.js"></script>
+  </body>
 </html>
