@@ -43,11 +43,11 @@
 - [References](#references)
  
 
-# Milestone Project 2
+## Milestone Project 2
 Development Milestone Project 2 - Interactive Front-End Development
 [⬆ Back to Table of contents](#table-of-contents)
 
-# Holiday Destination Finder
+## Holiday Destination Finder
 [⬆ Back to Table of contents](#table-of-contents)
 
 ## Project Overview
@@ -197,7 +197,7 @@ A comprehensive `README.md` file was created to document project objectives, fea
 
 ---
 
-This project demonstrates the ability to combine **user-centred design**, **responsive interface development**, and **advanced JavaScript interactivity** to produce a functional, accessible, and professionally structured web application. It evidences both technical mastery and professional presentation, reflecting strong competence in front-end development at **Level 5 ** standard.
+This project demonstrates the ability to combine **user-centred design**, **responsive interface development**, and **advanced JavaScript interactivity** to produce a functional, accessible, and professionally structured web application. It evidences both technical mastery and professional presentation, reflecting strong competence in front-end development at **Level 5** standard.
 
 ---
 
@@ -2044,10 +2044,10 @@ searchBtn.click = jest.fn();
 **Key changes:** 
 
 - search.js
-  -  **Change:** Added _setMarkers() and _setInfoWindows() helper functions
+  -  **Change:** Added _setMarkers() and_setInfoWindows() helper functions
   -  **Purpose:** Allows tests to populate private arrays
 - search.test.js
-  - **Change:** Import module and call _setMarkers() / _setInfoWindows() before testing
+  - **Change:** Import module and call _setMarkers() /_setInfoWindows() before testing
   - **Purpose:** Populates internal state before calling clearMarkers()
  
 **Problem:** Private variables (markers, infoWindows) not accessible from tests
@@ -2315,7 +2315,7 @@ For future enhancements, a **maintainable test suite** was established, **regres
 
 ---
 
-# References
+## References
 [⬆ Back to Table of contents](#table-of-contents)
 
 - **Code Institute (2025).**  *Interactive Front-End Development – Milestone Project 2 Specification.*

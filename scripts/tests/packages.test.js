@@ -1,3 +1,7 @@
+/* eslint-env jest */
+/**
+ * @jest-environment jsdom
+ */
 // Import functions to test
 const { 
     getCityNameForUrls,

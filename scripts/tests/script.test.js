@@ -1,3 +1,8 @@
+/* eslint-env jest */
+/**
+ * @jest-environment jsdom
+ */
+
 const { initSmoothScroll } = require('../../assets/js/script.js');
 test('initSmoothScroll attaches click listeners to anchor links', () => {
     // Setup DOM with anchor links

@@ -1,9 +1,13 @@
+/* eslint-env jest */
+/**
+ * @jest-environment jsdom
+ */
+
 // Import functions to test
 const { 
     initializeActionButtons,
     filterPlaces,
     initializeSearchButton,
-    searchCity,
     clearMarkers 
 } = require('../../assets/js/search.js');
 
