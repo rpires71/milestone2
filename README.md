@@ -1913,20 +1913,15 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 <summary><strong>Test Case 2.2: Filter Places by Type (Fixed)</strong></summary>
 
 **File: scripts/test/script.test.js**
-<img width="841" height="965" alt="image" src="https://github.com/user-attachments/assets/60f11c5d-2d5c-4a89-93a5-4d89a793d03a" />
+<img width="816" height="954" alt="image" src="https://github.com/user-attachments/assets/fa127bb1-e296-4c79-a7c5-10fb77893e0b" />
+
 
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
 |Filter type updated, button highlighted|PASS - State and UI updated correctly|currentSearchType variable changed, CSS class applied|
 
 **Key changes:** Imported all search.js functions to search.test.js
-const { 
-    initializeActionButtons,
-    filterPlaces,
-    initializeSearchButton,
-    searchCity,
-    clearMarkers 
-} = require('../../assets/js/search.js');
+<img width="404" height="209" alt="image" src="https://github.com/user-attachments/assets/eee7b129-61c4-46f5-94d1-eebb016eb431" />
 </details>
 
 ---
