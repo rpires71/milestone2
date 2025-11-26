@@ -39,6 +39,7 @@
     -  [JEST Test Coverage Analysis](#jest-test-coverage-analysis)
     -  [JEST Edge Cases Tested](#jest-edge-cases-tested)
     -  [JEST Testing Limitations and Future Improvements](#jest-testing-limitations-and-future-improvements)
+    -  [Conclusion](#conclusion)
 - [References](#references)
  
 
@@ -2285,6 +2286,33 @@ searchBtn.click = jest.fn();
 - Measure and optimise load times  
 - Test with large datasets *(100+ results)*  
 
+# Test Results
+
+#### Overall Test Summary
+
+| Test Suite   | Total Tests | Passed | Failed | Coverage |
+|--------------|-------------|--------|--------|----------|
+| script.js    | 3           | 3      | 0      | 100%     |
+| search.js    | 6           | 6      | 0      | 85%      |
+| packages.js  | 10          | 10     | 0      | 95%      |
+| **TOTAL**    | 19          | 19     | 0      | 93%      |
+
+
+### **Conclusion**
+[⬆ Back to Table of contents](#table-of-contents)
+
+Of the testable functions using **Jest** and **Test‑Driven Development (TDD)**, the Holiday Destination Finder achieved **93% test coverage**. The **19 automated tests** were successfully passed, validating:
+
+- Search filtering and functionality   
+- Booking partner integration and URL construction  
+- Smooth scrolling and navigation  
+- Input validation and error handling  
+- State management and UI updates  
+
+Throughout development, **TDD methodology** was followed and **RITE principles (Readable, Isolated, Thorough, Explicit)** were applied within this testing strategy. Full application functionality was ensured through **comprehensive manual testing**, and in automated testing, functions requiring external APIs were excluded (Google Developers, 2024). 
+
+For future enhancements, a **maintainable test suite** was established, **regressions were prevented during development**, and code quality confidence was achieved through the use of this testing approach (Jest, 2024; Mozilla Developer Network, 2024; Kent Beck, 2003). 
+
 ---
 
 # References
@@ -2325,6 +2353,10 @@ searchBtn.click = jest.fn();
   Available at: https://fonts.google.com/specimen/Lato
   (Accessed: 10 November 2025).
 
+- **Google Developers. (2024)** *Testing Best Practices*.
+  Available at: https://developers.google.com/web/fundamentals/testing
+  (Accessed: 25 November 2025).  
+
 - **Mozilla Developer Network (MDN). (2024)** *HTML5, CSS3 and JavaScript – Web Technology References.*
   Available at: [https://developer.mozilla.org/](https://developer.mozilla.org/)
   (Accessed: 29 October 2025).
@@ -2356,6 +2388,10 @@ searchBtn.click = jest.fn();
 - **Mozilla Developer Network (MDN). (2023)** *HTML elements reference.*
   Available at: https://developer.mozilla.org/
   (Accessed: 23 November 2025).
+
+- **Mozilla Developer Network (MDN). (2024)** *Testing JavaScript*.
+  Available at: https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Testing
+  (Accessed: 25 November 2025).
   
 - **W3C. (2023)** *Web Accessibility Initiative (WAI) Guidelines.*
   Available at: [https://www.w3.org/WAI/](https://www.w3.org/WAI/)
@@ -2521,6 +2557,9 @@ searchBtn.click = jest.fn();
   Available at: https://www.w3.org/TR/wai-aria/
   (Accessed: 23 November 2025).
 
-
+- **Jest. (2024)** *Jest Documentation*.
+  Available at: https://jestjs.io/docs/getting-started
+  (Accessed: 25 November 2025).
+  
 
 
