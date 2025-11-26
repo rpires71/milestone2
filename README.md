@@ -36,6 +36,7 @@
     -  [Test Suite 1: script.js - Smooth Scrolling](#test-suite-1-scriptjs---smooth-scrolling)
     -  [Test Suite 2: search.js - Search Functionality](#test-suite-2-searchjs---search-functionality)
     -  [Test Suite 3: packages.js - Booking Integration](#test-suite-3-packagesjs---booking-integration)
+    -  [JEST Test Coverage Analysis](#jest-test-coverage-analysis)
 - [References](#references)
  
 
@@ -2166,6 +2167,45 @@ searchBtn.click = jest.fn();
 |----------|---------|------------|
 |Only city name used (country removed)|PASS - String splitting works correctly|URL contains only "Barcelona"|
 </details>
+
+### **JEST Test Coverage Analysis**
+[⬆ Back to Table of contents](#table-of-contents)
+
+#### **Functions Tested vs Not Tested**
+
+#### **TESTED (19 functions)**
+
+| Function | File |
+|----------|------|
+| `initSmoothScroll()` | `script.js` |
+| `initializeActionButtons()` | `search.js` |
+| `filterPlaces()` | `search.js` |
+| `initializeSearchButton()` | `search.js` |
+| `searchCity()` | `search.js` |
+| `clearMarkers()` | `search.js` |
+| `getCityNameForUrls()` | `packages.js` |
+| `setActiveBookingButton()` | `packages.js` |
+| `bookHotel()` | `packages.js` |
+| `bookFlights()` | `packages.js` |
+| `bookPackage()` | `packages.js` |
+| `bookActivities()` | `packages.js` |
+
+#### **NOT TESTED (External Dependencies)**
+
+| Function | Reason |
+|----------|--------|
+| `performSearch()` | Requires Google Geocoding API |
+| `searchNearbyPlacesNew()` | Requires Google Places API |
+| `initMap()` | Requires Google Maps API |
+| `createMarkerNew()` | Requires Google Maps Marker API |
+| `displayResultsNew()` | Depends on API response structure |
+
+#### **Why These Were Not Tested**
+
+- External API calls require **live credentials**
+- Mocking the **entire Google Maps API** is complex and brittle
+- These functions are **integration points, not pure logic**
+- **Manual testing** was performed instead (see *Manual Testing* section)
 
 ---
 
