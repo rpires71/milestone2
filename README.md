@@ -2122,6 +2122,17 @@ searchBtn.click = jest.fn();
 |----------|---------|------------|
 |Correct URL with all parameters|PASS - URL built accurately|window.open received expected URL string|
 </details>
+<details>
+<summary><strong>Test Case 3.7: Book Flights - URL Format</strong></summary>
+  
+**File: scripts/test/packages.test.js**
+
+<img width="648" height="792" alt="image" src="https://github.com/user-attachments/assets/7973257e-e508-42b1-8c23-9867862b56fa" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Google Flights URL with dates and city|PASS - URL contains required parameters|URL string validated|
+</details>
 
 ---
 
