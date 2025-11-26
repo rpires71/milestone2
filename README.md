@@ -1824,6 +1824,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 <summary><strong>Test Case 1.1: Attach Click Listeners to Anchor Links</strong></summary>
 
 **File: scripts/test/script.test.js**
+
 <img width="949" height="879" alt="image" src="https://github.com/user-attachments/assets/c3c3120b-3cc3-4a08-a8a3-1f35c85b4739" />
 
 | Expected Result | Actual Result | Evidence |
@@ -1834,6 +1835,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 <summary><strong>Test Case 1.2: Smooth Scroll Behaviour</strong></summary>
 
 **File: scripts/test/script.test.js**
+
 <img width="1037" height="934" alt="image" src="https://github.com/user-attachments/assets/c0c9953d-bcf8-4371-950c-ffd9e3d90a62" />
 
 | Expected Result | Actual Result | Evidence |
@@ -1844,6 +1846,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 <summary><strong>Test Case 1.3: Mobile Navbar Collapse</strong></summary>
 
 **File: scripts/test/script.test.js**
+
 <img width="655" height="780" alt="image" src="https://github.com/user-attachments/assets/a97eb992-ff7f-4510-b81d-98764425d56e" />
 
 | Expected Result | Actual Result | Evidence |
@@ -1856,6 +1859,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 <summary><strong>Test Case 1.3: Mobile Navbar Collapse (Fixed)</strong></summary>
 
 **File: scripts/test/script.test.js**
+
 <img width="610" height="825" alt="image" src="https://github.com/user-attachments/assets/0d26f842-18c5-4ef6-8460-b9b4a1edd4ab" />
 
 | Expected Result | Actual Result | Evidence |
@@ -1876,6 +1880,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 <summary><strong>Test Case 2.1: Initialize Action Buttons</strong></summary>
 
 **File: scripts/test/search.test.js**
+
 <img width="1052" height="857" alt="image" src="https://github.com/user-attachments/assets/ed53d63c-0d79-43ae-9625-616ae41d8bee" />
 
 | Expected Result | Actual Result | Evidence |
@@ -1888,6 +1893,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 <summary><strong>Test Case 2.1: Initialize Action Buttons (Fixed)</strong></summary>
 
 **File: scripts/test/search.test.js**
+
 <img width="1031" height="920" alt="image" src="https://github.com/user-attachments/assets/87f22228-7377-4d6e-bb0d-ee5ae16c6b80" />
 
 | Expected Result | Actual Result | Evidence |
@@ -1907,6 +1913,7 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 <summary><strong>Test Case 2.2: Filter Places by Type</strong></summary>
 
 **File: scripts/test/search.test.js**
+
 <img width="1066" height="744" alt="image" src="https://github.com/user-attachments/assets/0f334ff9-9692-4d9b-9db8-ccf02838ac0e" />
 
 | Expected Result | Actual Result | Evidence |
@@ -1919,6 +1926,7 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 <summary><strong>Test Case 2.2: Filter Places by Type (Fixed)</strong></summary>
 
 **File: scripts/test/search.test.js**
+
 <img width="816" height="954" alt="image" src="https://github.com/user-attachments/assets/fa127bb1-e296-4c79-a7c5-10fb77893e0b" />
 
 | Expected Result | Actual Result | Evidence |
@@ -1932,6 +1940,7 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 <summary><strong>Test Case 2.3: Search Button Validation</strong></summary>
   
 **File: scripts/test/search.test.js**
+
 <img width="649" height="616" alt="image" src="https://github.com/user-attachments/assets/66e0e2a5-6eb8-4409-89df-8ea83f829ebf" />
 
 | Expected Result | Actual Result | Evidence |
