@@ -1829,7 +1829,7 @@ While using **Test-Driven Development (TDD)** principles and **Jest** for the **
 
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
-|Click listeners attached to all # anchor links|PASS - Listeners successfully attached|Console shows event listeners registered|
+|Click listeners attached to all # anchor links|PASS - Function executes successfully|Link elements verified with `toBeDefined()`, href attributes contain anchor references|
 </details>
 <details>
 <summary><strong>Test Case 1.2: Smooth Scroll Behaviour</strong></summary>
@@ -1931,7 +1931,7 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
-|Filter type updated, button highlighted|PASS - State and UI updated correctly|currentSearchType variable changed, CSS class applied|
+|Filter button highlighted, others deactivated|PASS - Button states updated correctly|Active class applied to clicked button, removed from others|
 
 **Key changes:** Imported all search.js functions to search.test.js
 
@@ -1970,7 +1970,7 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
-|Enter key triggers search function|PASS - Search initiated via keyboard|performSearch() called with city name|
+|Enter key triggers search function|PASS - Search initiated via keyboard|`searchBtn.click` mock function called|
 
 **Key changes:** 
 
