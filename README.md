@@ -2240,47 +2240,47 @@ searchBtn.click = jest.fn();
 ### **JEST Testing Limitations and Future Improvements**
 [⬆ Back to Table of contents](#table-of-contents)
 
-#### **Current Limitations**
+### **Current Limitations**
 
-**Google Maps API Not Mocked**
+#### **Google Maps API Not Mocked**
 
 - Functions requiring live API calls not tested  
 - Integration testing performed manually instead  
 
-**No Integration Tests**
+#### **No Integration Tests**
 
 - Tests focus on individual functions  
 - Full user journey not tested end-to-end  
 
-**Limited Error Handling Tests**
+#### **Limited Error Handling Tests**
 
 - Network errors not simulated  
 - API failures not tested  
 
-**No Performance Tests**
+#### **No Performance Tests**
 
 - No tests for page load speed  
 - No tests for large result sets  
 
-#### **Future Improvements**
+### **Future Improvements**
 
-**Add Integration Tests**
+#### **Add Integration Tests**
 
 - Use Cypress or Selenium for end-to-end testing  
 - Test complete user workflows *(search -> filter -> book)*  
 
-**Mock Google Maps API**
+#### **Mock Google Maps API**
 
 - Create comprehensive mock for Places API  
 - Test marker creation and InfoWindow behaviour  
 
-**Expand Edge Case Coverage**
+#### **Expand Edge Case Coverage**
 
 - Test network timeout scenarios  
 - Test API rate limiting  
 - Test invalid API responses  
 
-**Performance Testing**
+#### **Performance Testing**
 
 - Measure and optimise load times  
 - Test with large datasets *(100+ results)*  
