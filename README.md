@@ -2144,6 +2144,17 @@ searchBtn.click = jest.fn();
 |----------|---------|------------|
 |Expedia deeplink with all parameters|PASS - Complex URL built correctly|URL format matches Expedia requirements|
 </details>
+<details>
+<summary><strong>Test Case 3.9: Book Package - Date Validation</strong></summary>
+  
+**File: scripts/test/packages.test.js**
+
+<img width="979" height="738" alt="image" src="https://github.com/user-attachments/assets/79454d15-ac04-4224-8ad2-75abd80c4f9f" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Alert shown for incomplete dates|PASS - Package booking requires both dates|Validation message displayed|
+</details>
 
 ---
 
