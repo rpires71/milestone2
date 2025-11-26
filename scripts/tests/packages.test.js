@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 /* eslint-env jest */
 /**
  * @jest-environment jsdom
  */
+=======
+>>>>>>> 6068b4a4becddc8417e6bcf4fcf32a267242044c
 // Import functions to test
 const { 
     getCityNameForUrls,
