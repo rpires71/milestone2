@@ -38,6 +38,7 @@
     -  [Test Suite 3: packages.js - Booking Integration](#test-suite-3-packagesjs---booking-integration)
     -  [JEST Test Coverage Analysis](#jest-test-coverage-analysis)
     -  [JEST Edge Cases Tested](#jest-edge-cases-tested)
+    -  [JEST Testing Limitations and Future Improvements](#jest-testing-limitations-and-future-improvements)
 - [References](#references)
  
 
@@ -2216,25 +2217,73 @@ searchBtn.click = jest.fn();
 - Whitespace-only input treated as empty  
 - Missing dates prevent booking URL generation  
 
-### **Fallback Behaviour**
+#### **Fallback Behaviour**
 - Returns empty string instead of `null`/`undefined`  
 - Falls back from global variable to input field  
 - Default guest count (2) applied when not selected  
 
-### **String Manipulation**
+#### **String Manipulation**
 - City name trimmed (removes extra spaces)  
 - `"City, Country"` format split correctly  
 - URL encoding applied to special characters  
 
-### **State Management**
+#### **State Management**
 - Only one button active at a time  
 - Previous markers cleared before new search  
 - Search type persists across filter changes  
 
-### **DOM Element Existence**
+#### **DOM Element Existence**
 - Handles missing DOM elements gracefully  
 - Checks for element existence before accessing  
 - Returns safe defaults for missing values  
+
+### **JEST Testing Limitations and Future Improvements**
+[⬆ Back to Table of contents](#table-of-contents)
+
+#### **Current Limitations**
+
+**Google Maps API Not Mocked**
+
+- Functions requiring live API calls not tested  
+- Integration testing performed manually instead  
+
+**No Integration Tests**
+
+- Tests focus on individual functions  
+- Full user journey not tested end-to-end  
+
+**Limited Error Handling Tests**
+
+- Network errors not simulated  
+- API failures not tested  
+
+**No Performance Tests**
+
+- No tests for page load speed  
+- No tests for large result sets  
+
+#### **Future Improvements**
+
+**Add Integration Tests**
+
+- Use Cypress or Selenium for end-to-end testing  
+- Test complete user workflows *(search -> filter -> book)*  
+
+**Mock Google Maps API**
+
+- Create comprehensive mock for Places API  
+- Test marker creation and InfoWindow behaviour  
+
+**Expand Edge Case Coverage**
+
+- Test network timeout scenarios  
+- Test API rate limiting  
+- Test invalid API responses  
+
+**Performance Testing**
+
+- Measure and optimise load times  
+- Test with large datasets *(100+ results)*  
 
 ---
 
