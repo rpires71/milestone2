@@ -2155,6 +2155,17 @@ searchBtn.click = jest.fn();
 |----------|---------|------------|
 |Alert shown for incomplete dates|PASS - Package booking requires both dates|Validation message displayed|
 </details>
+<details>
+<summary><strong>Test Case 3.10: Book Activities - City Extraction</strong></summary>
+  
+**File: scripts/test/packages.test.js**
+
+<img width="701" height="714" alt="image" src="https://github.com/user-attachments/assets/413c8ee6-8368-451f-b854-fa6cc95e7007" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Only city name used (country removed)|PASS - String splitting works correctly|URL contains only "Barcelona"|
+</details>
 
 ---
 
