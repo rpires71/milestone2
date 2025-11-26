@@ -1934,6 +1934,7 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 |Filter type updated, button highlighted|PASS - State and UI updated correctly|currentSearchType variable changed, CSS class applied|
 
 **Key changes:** Imported all search.js functions to search.test.js
+
 <img width="404" height="209" alt="image" src="https://github.com/user-attachments/assets/eee7b129-61c4-46f5-94d1-eebb016eb431" />
 </details>
 <details>
@@ -1946,6 +1947,42 @@ When Jest runs the test, it creates a minimal DOM. When the button is clicked:
 | Expected Result | Actual Result | Evidence |
 |----------|---------|------------|
 |Alert shown for empty input|PASS - Validation prevented empty search|Alert function called with correct message|
+</details>
+<details>
+<summary><strong>Test Case 2.4: Enter Key Triggers Search</strong></summary>
+  
+**File: scripts/test/search.test.js**
+
+<img width="662" height="583" alt="image" src="https://github.com/user-attachments/assets/b05d7699-a07f-4860-94de-aa1c6f1df8c0" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Enter key triggers search function|FAIL - pressing Enter in city input triggers search|TypeError: Cannot read properties of null (reading 'style')|
+
+**Note:** The problem is that when Enter is pressed, it calls the real performSearch() function which tries to access document.getElementById("resultsSection") - but that element doesn't exist in the test.
+</details>
+<details>
+<summary><strong>Test Case 2.4: Enter Key Triggers Search (Fixed)</strong></summary>
+  
+**File: scripts/test/search.test.js**
+
+<img width="649" height="808" alt="image" src="https://github.com/user-attachments/assets/170c8634-92b5-4027-b25f-058c1dfb41b9" />
+
+| Expected Result | Actual Result | Evidence |
+|----------|---------|------------|
+|Enter key triggers search function|PASS - Search initiated via keyboard|performSearch() called with city name|
+
+**Key changes:** 
+
+**Problem:** jest.spyOn() calls the real click function which triggers performSearch(), causing errors.
+**Solution:** I used jest.fn() to replace the click method with an empty mock that doesn't execute the real function.
+**Code change:**
+
+javascript// BEFORE
+const clickSpy = jest.spyOn(searchBtn, 'click');
+
+// AFTER
+searchBtn.click = jest.fn();
 </details>
 
 ---
