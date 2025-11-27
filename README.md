@@ -44,13 +44,6 @@
     - [Overview](#overview)
     - [ESLint Configuration Evolution](#eslint-configuration-evolution)
   - [Approach for Website Test Planning](#approach-for-website-test-planning)
-    - [Test Case Planning](#test-case-planning)
-    - [Functionality and Content Accuracy Testing - Planning](#functionality-and-content-accuracy-testing---planning)
-    - [Usability and Typography Testing - Planning](#usability-and-typography-testing---planning)
-    - [Responsiveness Testing - Planning](#responsiveness-testing---planning)
-    - [Accessibility Testing - Planning](#accessibility-testing---planning)
-    - [Performance Testing - Planning](#performance-testing---planning)
-    - [Regression Testing - Planning](#regression-testing---planning)
 - [References](#references)
  
 # Milestone Project 2
