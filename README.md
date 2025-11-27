@@ -3075,7 +3075,8 @@ npm run lint
 </details>
 <details>
   <summary><strong>Tools and Commands Used</strong></summary>
-#### ESLint Commands
+
+### ESLint Commands
 ```bash
 # Run linter
 npm run lint
