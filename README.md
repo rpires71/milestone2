@@ -3080,13 +3080,13 @@ npm run lint
 # Run linter
 npm run lint
 
-# Run linter with auto-fix
+#### Run linter with auto-fix
 npm run lint -- --fix
 
-# Check ESLint version
+#### Check ESLint version
 npx eslint --version
 
-# Clear npm cache (if needed)
+#### Clear npm cache (if needed)
 npm cache clean --force
 ```
 
