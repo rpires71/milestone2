@@ -23,9 +23,9 @@
   - [Technologies Used](#technologies-used)
   - [Wireframes](#wireframes)
   - [Holiday Destination Finder Wireframes](#holiday-destination-finder-wireframes)
-  - [User Stories for Homepage/About Us Page](#user-stories-for-homepageabout-us)
-  - [User Stories for Destination Search Page](#user-stories-for-destination-search-page)
-  - [User Stories for Trip Planning and External Booking Integration Page](#user-stories-for-trip-planning-and-external-booking-integration-page)
+  - [User Stories for the About Us Page](#user-stories-for-the-about-us-page)
+  - [User Stories for the Search Page](#user-stories-for-the-search-page)
+  - [User Stories for the Packages Page](#user-stories-for-the-packages-page)
   - [User Stories for Saved Trips/Favourites Page](#user-stories-for-saved-tripsfavourites-page)
   - [User Stories for Travel Guides and Articles Page](#user-stories-for-travel-guides-and-articles-page)
   - [User Stories for Newsletter Page](#user-stories-for-newsletter-page)
@@ -703,7 +703,7 @@ By using the trusted travel partners provided, users can easily book all aspects
 
 ---
 
-## User Stories for Homepage/About Us
+## User Stories for the About Us Page
 [⬆ Back to Table of contents](#table-of-contents)
 
 **(must-have)**
@@ -714,21 +714,21 @@ By using the trusted travel partners provided, users can easily book all aspects
 As the site owner, I want users to start exploring and appreciate the value of the site, which serves as a guide to search or browse destinations, and the main purpose of the homepage – About Us page is to clearly introduce the Holiday Destination Finder. (must-have)
 
 **Description**  
-To explain the purpose of the platform (discovering and researching holiday destinations), the Homepage/About Us page will act as a welcoming entry point. Core actions such as making enquiries or bookings, exploring recommended places, and searching for destinations will be clearly signposted. 
+To explain the purpose of the platform (discovering and researching holiday destinations), the About Us page will act as a welcoming entry point. Core actions such as making bookings, exploring recommended places, and searching for destinations will be clearly signposted. 
 
 **Acceptance Criteria**
-- [ ] The purpose of the website will be conveyed in one or two concise sentences within a clear and engaging hero section. 
-- [ ] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations and Contact Us) are visible.
-- [ ] At least one call-to-action (e.g. “Start Exploring” / “Find Your Next Trip”) is shown.
-- [ ] The homepage layout is responsive and accessible on desktop, tablet, and mobile.
+- [X] The purpose of the website will be conveyed in one or two concise sentences within a clear and engaging hero section. 
+- [X] Key navigation links (About Us, Search, Packages, Popular Destinations and Contact) are visible.
+- [X] At least one call-to-action (e.g. "Start Exploring") is shown.
+- [X] The homepage layout is responsive and accessible on desktop, tablet, and mobile.
 
 **Tasks**
-- [ ] Design hero section with title, short tagline and introductory message.
-- [ ] Implement responsive navigation using HTML/CSS or Bootstrap.
-- [ ] Add call-to-action button(s).
-- [ ] Add a short “How it works” summary or icons explaining steps (Search → Explore → Enquire/Book).
-- [ ] Link to key sections to other pages.
-- [ ] Style Homepage/About Us page with a clean, professional layout.
+- [X] Design hero section with title, short tagline and introductory message.
+- [X] Implement responsive navigation using HTML/CSS or Bootstrap.
+- [X] Add call-to-action button(s).
+- [X] Add a short "Key Features" summary or icons explaining steps.
+- [X] Link to key sections to other pages.
+- [X] Style About Us page with a clean, professional layout.
 
 
 ### 2. Travellers and Holiday Planners
@@ -737,71 +737,46 @@ To explain the purpose of the platform (discovering and researching holiday dest
 As a traveller, to discover suitable locations for my next planned holiday, I want to begin searching for destinations and explore what the website provides.
 
 **Description**  
-The Homepage/About Us page enables users to navigate directly into browsing or searching, helping them to appreciate the advantages of the site. The experience should be practical, reassuring, and straightforward.
+The About Us page enables users to navigate directly into browsing or searching, helping them to appreciate the advantages of the site. The experience should be practical, reassuring, and straightforward.
 
 **Acceptance Criteria**
-- [ ] A call-to-action button will be provided to initiate destination searches.
-- [ ] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations, and Contact Us) will be clearly visible.
-- [ ] Users will be able to reach the booking or enquiry page within one or two clicks.
-- [ ] The design will remain clear, intuitive, and accessible for non-technical users.
-- [ ] The site will be fully responsive across desktop, tablet, and mobile devices.
+- [X] A call-to-action button will be provided to initiate destination searches.
+- [X] Key navigation links (About Us, Search, Packages, Popular Destinations, and Contact) will be clearly visible.
+- [X] Users will be able to reach the packages page within one or two clicks.
+- [X] The design will remain clear, intuitive, and accessible for non-technical users.
+- [X] The site will be fully responsive across desktop, laptop, tablet, and mobile devices.
 
 **Tasks**
-- [ ] A concise and informative paragraph will be written to explain what travellers can do on the site.
-- [ ] Key navigation links (About Us, Destination Search, Bookings, Popular Destinations, and Contact Us) will be prominently displayed.
-- [ ] Responsive navigation will be implemented using HTML/CSS or Bootstrap.
-- [ ] A secondary call-to-action, such as “Plan a Trip”, will be included.
-- [ ] Menus and buttons will use clear and easily understood language.
-- [ ] Menu links will direct users to the appropriate pages.
-- [ ] Responsiveness and overall usability will be tested across a range of screen sizes. 
+- [X] A concise and informative paragraph will be written to explain what travellers can do on the site.
+- [X] Key navigation links (About Us, Search, Packages, Popular Destinations, and Contact) will be prominently displayed.
+- [X] Responsive navigation will be implemented using HTML/CSS or Bootstrap.
+- [X] Menus and buttons will use clear and easily understood language.
+- [X] Menu links will direct users to the appropriate pages.
+- [X] Responsiveness and overall usability will be tested across a range of screen sizes. 
 
 ### 3. Travel Enthusiasts and Explorers
 
 **User Story**  
-To feel inspired about discovering new places, featured destinations, and travel ideas is what I want as a travel enthusiast; therefore, it is important that the Homepage/About Us page clearly informs me of the options available. 
+To feel inspired about discovering new places, featured destinations, and travel ideas is what I want as a travel enthusiast; therefore, it is important that the About Us page clearly informs me of the options available. 
 
 **Description**  
-Rather than arriving with a fixed plan, the page should appeal to users who enjoy browsing featured cities and expect the Homepage/About Us page to include visually captivating content such as hero images.
+Rather than arriving with a fixed plan, the page should appeal to users who enjoy browsing featured cities and expect the About Us page to include visually captivating content such as hero images.
 
 **Acceptance Criteria**
-- [ ] A minimum of 3–6 featured destinations will be presented with accompanying images within a carousel image slider.
-- [ ] Layout remains visually appealing and responsive on all devices.
-- [ ] The purpose of the website are stated clearly.
-- [ ] Links to other pages are easily accessible.
-- [ ] At least one call-to-action (e.g. “Start Exploring” / “Find Your Next Trip”) is shown.
-- [ ] The layout reflects professionalism and clarity.
-- [ ] The site is responsive across desktop, laptop tablet, and mobile.
+- [X] A minimum of 3–5 featured destinations will be presented with accompanying images within a carousel image slider.
+- [X] Layout remains visually appealing and responsive on all devices.
+- [X] The purpose(s) of the website is/are stated clearly.
+- [X] Links to other pages are easily accessible.
+- [X] At least one call-to-action (e.g. "Start Exploring") is shown.
+- [X] The layout reflects professionalism and clarity.
+- [X] The site is responsive across desktop, laptop, tablet, and mobile.
 
 **Tasks**
-- [ ] Add a brief statement such as: “Discover your next getaway.”
-- [ ] Include a secondary call-to-action, such as “Plan a Trip”.
-- [ ] Feature quick-access links to other pages.
-- [ ] Style Homepage/About Us page in line with travel sector expectations.
-- [ ] Implement responsive navigation using HTML/CSS or Bootstrap.
-
-### 4. Group Travellers and Families
-
-**User Story**  
-As a group traveller or family, finding destinations suitable for groups or families is my priority, and I am keen to quickly see whether the site can help me and know that it is worth using for our trip.
-
-**Description**  
-Filters tailored to this target audience’s needs, or references to family-friendly destinations and group activities, are clearly indicated by the Homepage/About Us page in support of family and group travel.
-
-**Acceptance Criteria**
-- [ ] The homepage mentions families or groups as supported user types.
-- [ ] Links to other pages are visible.
-- [ ] The purpose of the Holiday Destination Finder are summarised in the introduction.
-- [ ] Any text aimed at families is written in clear, reassuring language.
-- [ ] Navigation and layout are mobile/tablet-friendly and accessible.
-- [ ] Users can reach relevant search results or guides within two clicks.
-- [ ] The site is responsive across desktop, laptop, tablet, and mobile.
-
-**Tasks:**
-- [ ] Add a short line in the hero/subheading referencing group and family travel.
-- [ ] Include links or buttons to other features of the website.
-- [ ] Ensure Homepage/About Us page loads quickly and looks clean on all devices.
-- [ ] Place travel content where it's easy to notice but not overwhelming.
-- [ ] Implement responsive navigation using HTML/CSS or Bootstrap.
+- [X] Add a brief statement such as: "Search for amazing places, find attractions, restaurants, and accommodations all in one place."
+- [X] Include at least one call-to-action, such as "Start Exploring".
+- [X] Feature quick-access links to other pages.
+- [X] Style About Us page in line with travel sector expectations.
+- [X] Implement responsive navigation using HTML/CSS or Bootstrap.
 
 ### Summary
 
@@ -810,11 +785,10 @@ Filters tailored to this target audience’s needs, or references to family-frie
 | Owner/Developer (Me)       | Introduce platform and direct users to search | Hero section, clear navigation                  |
 | Travellers & Holiday Planners      | Quickly understand purpose and start searching         | Content summary, CTA to Searches, approachable design          |
 | Travel Enthusiasts & Explorers   | Browse inspiring ideas             | Quick access to Featured destinations, images, Searches and Bookings         |
-| Group Travellers & Families          | See family/group suitability        | Family/group-friendly entry point      |
 
 ---
 
-## User Stories for Destination Search Page
+## User Stories for the Search Page
 [⬆ Back to Table of contents](#table-of-contents)
 
 **(must-have core Google Maps & filtering feature)**
@@ -828,23 +802,22 @@ As the site owner, I want users to filter by interests (attractions, hotels, res
 This page serves as the functional core of the application. It should display points of interest such as restaurants, accommodation, shops, cafés, and attractions through available filters, support text-based searches, and integrate the map using the Google Maps API, Places API (New), and Geocoding API.
 
 **Acceptance Criteria**
-- [ ] Destination name or keyword can be searched by users. 
-- [ ] The search area is displayed through the updated map.  
-- [ ] Attractions, cafés, hotels, restaurants, and shopping centres are provided using the available filters.
-- [ ] There are clear links to the other pages.
-- [ ] Include menu links to other pages.
-- [ ] Links to detailed views and basic information are displayed when selecting markers.
-- [ ] Responsive layout: the map and filters operate effectively on desktop, laptop, tablet, and mobile devices.
+- [X] Destination name or keyword can be searched by users. 
+- [X] The search area is displayed through the updated map.  
+- [X] Attractions, cafés, hotels, restaurants, and shopping centres are provided using the available filters.
+- [X] There are clear links to the other pages.
+- [X] Include menu links to other pages.
+- [X] Links to detailed views and basic information are displayed when selecting markers.
+- [X] Responsive layout: the map and filters operate effectively on desktop, laptop, tablet, and mobile devices.
 
 **Tasks**
-- [ ] Integrate Google Maps API, Places API(New) and Geocoding API into the main search page. 
-- [ ] Implement a search input and wire it to map search.
-- [ ] Add filter controls (buttons) for places of interest.
-- [ ] Display markers on the map with info windows.
-- [ ] Feature quick-access links to other pages. 
-- [ ] Style the page with clear headings and appropriate spacing.
-- [ ] Create a responsive layout (e.g. map and sidebar/cards/panel).
-- [ ] Test readability and responsiveness across desktop, tablet, and mobile.  
+- [X] Integrate Google Maps API, Places API(New) and Geocoding API into the main search page. 
+- [X] Implement a search input and wire it to map search.
+- [X] Add filter controls (buttons) for places of interest.
+- [X] Display markers on the map with info windows.
+- [X] Style the page with clear headings and appropriate spacing.
+- [X] Create a responsive layout (e.g. map and sidebar/cards/panel).
+- [X] Test readability and responsiveness across desktop, laptop, tablet, and mobile.  
 
 ### 2. Travellers and Holiday Planners
 
@@ -855,22 +828,19 @@ As a holiday planner, I want to determine whether it suits my trip when I search
 Typing a city or region, browsing relevant places of interest, and viewing them on the map is what users should be able to do. To concentrate on the aspects that matter most for planning, they should be able to refine what they see.
 
 **Acceptance Criteria**
-- [ ] The tone is clear, supportive, and easy to understand.
-- [ ] Results are displayed clearly, and the search input accepts city or region names. 
-- [ ] The selected destination is centred on the map.  
-- [ ] A call-to-action or link to Bookings and other pages is visible.
-- [ ] Essential information (such as name and rating) is displayed for each location.
-- [ ] Links to other pages are visible.
-- [ ] The Booking/Enquiry page or a more detailed view is accessible through map features and links.   
-- [ ] The site is responsive and accessible across desktop, laptop, tablet, and mobile.
+- [X] The tone is clear, supportive, and easy to understand.
+- [X] Results are displayed clearly, and the search input accepts city or region names. 
+- [X] The selected destination is centred on the map.  
+- [X] A link to Packages and other pages is visible.
+- [X] Links to other pages are visible.
+- [X] The site is responsive and accessible across desktop, laptop, tablet, and mobile.
 
 **Tasks**
-- [ ] Manage basic error states (e.g. “No results found”) and validate the search input.  
-- [ ] Include a contact information.
-- [ ] When filter buttons are adjusted, map markers are updated according to the implemented filter logic.
-- [ ] Feature quick-access links to other pages.
-- [ ] In addition to the map (optional but beneficial), a summary panel or list view of places is displayed.
-- [ ] Test readability and responsiveness across desktop, laptop, tablet, and mobile.  
+- [X] Manage basic error states (e.g. “No results found”) and validate the search input.  
+- [X] Include a contact information.
+- [X] When filter buttons are adjusted, map markers are updated according to the implemented filter logic.
+- [X] Feature quick-access links to other pages.
+- [X] Test readability and responsiveness across desktop, laptop, tablet, and mobile.  
 
 
 ### 3. Travel Enthusiasts and Explorers
@@ -882,62 +852,31 @@ As a travel enthusiast, I want to discover intriguing places I may not have prev
 To explore a variety of experiences and attractions, the page should support exploratory behaviour such as switching filters, panning, zooming, and navigating the map.
 
 **Acceptance Criteria**
-- [ ] Users can pan and zoom the map.
-- [ ] Main category filter buttons such as “Attractions”, “Restaurants”, “Hotels”, “Cafés”, and “Shopping” are provided.
-- [ ] Ratings, names, and addresses are displayed when markers are selected.
-- [ ] When filter buttons are selected, a side panel beside the map lists the top 20 corresponding locations (e.g. attractions, restaurants, cafés, shopping venues, and hotels).
-- [ ] Links to other relevant pages are available.  
-- [ ] The site is responsive and accessible across desktop, laptop, tablet, and mobile.
+- [X] Users can pan and zoom the map.
+- [X] Main category filter buttons such as "Attractions", "Restaurants", "Hotels", "Cafés", and "Shopping" are provided.
+- [X] Ratings, names, and addresses are displayed when markers are selected.
+- [X] When filter buttons are selected, a side panel beside the map lists the top 20 corresponding locations (e.g. attractions, restaurants, cafés, shopping venues, and hotels).
+- [X] Links to other relevant pages are available.  
+- [X] The site is responsive and accessible across desktop, laptop, tablet, and mobile.
 
 **Tasks**
-- [ ] Ensure smooth panning and zooming interactions through appropriate map configuration.  
-- [ ] Configure map settings to provide seamless navigation and zoom functionality. 
-- [ ] Add links to other pages.  
-- [ ] Implement and verify that the side panel beside the map, displays the top 20 corresponding locations, is visible and presenting the expected results. 
-- [ ] Test readability and responsiveness across desktop, laptop, tablet, and mobile.  
-
-
-### 4. Group Travellers and Families
-
-**User Goal**  
-As a family or group traveller, I want to determine whether a destination suits everyone by filtering destinations that offer family-friendly or group-friendly amenities.
-
-**Description**
-This page should display accommodation types suitable for groups, and relevant attractions (e.g. parks, family venues, group tours) will be highlighted to help families and groups find appropriate locations more easily.
-
-**Acceptance Criteria**
-- [ ] To approximate suitability, keyword searches (e.g. “family”, “kids”, “group tours”) and relevant Google place types (e.g. parks, hotels, attractions) are used to provide “Family-friendly” and “Group-friendly” filter options.
-- [ ] Locations more suitable for families and groups, based on place type or keyword relevance, are clearly highlighted in the list panel view or on the map.
-- [ ] Clear and easy-to-understand information, such as distance from the centre or nearby clustered areas, is displayed.
-- [ ] Users can quickly switch between different locations without losing their current position.
-- [ ] Links to other relevant pages are available.  
-- [ ] The site is responsive and accessible across desktop, laptop, tablet, and mobile.
-
-
-**Tasks**
-- [ ] Implement filter buttons within the search interface labelled “Family-friendly” and “Group-friendly.”
-- [ ] Include keyword parameters (e.g. “family”, “kids”, “group tours”) and relevant place types (e.g. park, lodging, tourist_attraction, amusement_park, museum) in the configuration of Google Places API requests.  
-- [ ] Display concise, easy-to-read information for each location.
-- [ ] Maintain the user’s current view and position when switching filters or selecting new categories through an integrated map feature.
-- [ ] Ensure that results in the list panel update dynamically without requiring a full map reload.
-- [ ] Validate keyword and place-type combinations to ensure realistic and relevant search results for family and group travellers.  
-- [ ] Maintain a clean, modern layout.  
-- [ ] Add links to other pages.  
-- [ ] Test readability and responsiveness across desktop, tablet, and mobile.  
-
+- [X] Ensure smooth panning and zooming interactions through appropriate map configuration.  
+- [X] Configure map settings to provide seamless navigation and zoom functionality. 
+- [X] Add links to other pages.  
+- [X] Implement and verify that the side panel beside the map, displays the top 20 corresponding locations, is visible and presenting the expected results. 
+- [X] Test readability and responsiveness across desktop, laptop, tablet, and mobile.  
 
 ### Summary of Destination Search Page Coverage
 
 | Stakeholder         | User Goal                                           | Key Action/Outcome                           |
 |---------------------|--------------------------------------------------|------------------------------------|
 | Roberto Pires – Website Developer (Site Owner)     | Through an interactive Google Map, results are displayed by applying selected filters (attractions, cafés, hotels, restaurants, shopping) when users search for destinations. | Navigating seamlessly across devices and exploring destinations is enabled for users through a responsive search interface that integrates the Google Geocoding, Maps JavaScript, and Places (New) APIs.            |
-| Travellers and Holiday Planners    | Search for destinations, assess whether a location meets their travel needs, and view key location details (e.g. attractions, hotels, restaurants, cafés, and shops).       | Users can effortlessly navigate to detailed pages or booking enquiries, access key information such as names and ratings, and input a city or region.                           |
+| Travellers and Holiday Planners    | Search for destinations, assess whether a location meets their travel needs, and view key location details (e.g. attractions, hotels, restaurants, cafés, and shops).       | Users can effortlessly navigate to detailed pages or book packages, access key information such as names and ratings, and input a city or region.                           |
 | Travel Enthusiasts and Explorers | Browsing by personal interests or types of experiences filters locations to help discover lesser-known and new destinations. | A side panel with clear links to other pages is provided to help uncover top locations by allowing users to engage with smooth map navigation (panning and zooming) and apply filters when interacting with an exploratory map interface.    |
-| Group Travellers and Families    | Filtering activities and relevant amenities for families or groups when identifying suitable destinations. | Responsive, dynamic map updates with clear, easy-to-read information are provided through “Family-friendly” and “Group-friendly” filter buttons that highlight suitable locations (e.g. parks, hotels, attractions).            |
 
 ---
 
-## User Stories for Trip Planning and External Booking Integration Page
+## User Stories for the Packages Page
 [⬆ Back to Table of contents](#table-of-contents)
 
 **(must-have)**
@@ -948,58 +887,58 @@ This page should display accommodation types suitable for groups, and relevant a
 As the site owner, I want users to be accurately directed to trusted partner platforms (Booking.com, Google Flights, Expedia, and GetYourGuide) for bookings after entering the number of travellers, travel dates, and selected city.
 
 **Description** 
-This page will enable users to enter group size, travel dates, and destination details, serving as the gateway for trip planning. The type of booking users wish to make (accommodation, flights, full packages, or activities) can be selected upon submission. Based on the user’s search query, which is transmitted through predefined URLs or parameters, each button will open the corresponding external website. Between the main website and external travel providers, a seamless user flow and effective integration is demonstrated.   
+This page will enable users to enter group size, travel dates, and destination details, serving as the gateway for trip planning. The type of booking users wish to make (accommodation, flights, full packages, or activities) can be selected upon submission. Based on the user's search query, which is transmitted through predefined URLs or parameters, each button will open the corresponding external website. Between the main website and external travel providers, a seamless user flow and effective integration is demonstrated.   
 
 **Acceptance Criteria**
 
-- [ ] Destination (city), check-in, and check-out dates are included within the form.  
-- [ ] A dropdown list or numeric input is provided in the form to specify the number of travellers.
-- [ ] Action buttons for Search Hotels, Search Flights, Complete Packages, and Book Activities are available.
-- [ ] Each button redirects correctly to the relevant external site (Booking.com, Google Flights, Expedia, GetYourGuide).
-- [ ] Destination, travel dates, and number of travellers are validated before proceeding.
-- [ ] The layout remains responsive and fully functional across desktop, laptop, tablet, and mobile devices.
-- [ ] Other internal pages are visible and accessible through the site’s navigational links.  
-- [ ] Visual design is consistent with rest of the site.  
+- [X] Destination (city), check-in, and check-out dates are included within the form.  
+- [X] A dropdown list or numeric input is provided in the form to specify the number of travellers.
+- [X] Action buttons for Search Hotels, Search Flights, Complete Packages, and Book Activities are available.
+- [X] Each button redirects correctly to the relevant external site (Booking.com, Google Flights, Expedia, GetYourGuide).
+- [X] Destination, travel dates, and number of travellers are validated before proceeding.
+- [X] The layout remains responsive and fully functional across desktop, laptop, tablet, and mobile devices.
+- [X] Other internal pages are visible and accessible through the site's navigational links.  
+- [X] Visual design is consistent with rest of the site.  
 
 **Tasks**
 
-- [ ] Design and develop a responsive form including destination, dates, and number of travellers.
-- [ ] Configure redirected URLs for each platform using the appropriate parameters.
-- [ ] Implement clear error messages and input validation.
-- [ ] Choose appropriate layout.
-- [ ] Add alt text and ARIA labels to ensure accessibility.
-- [ ] Add internal menu links to other pages.
-- [ ] Style the form and buttons consistently in accordance with the site’s design system.
-- [ ] Test responsiveness and redirection functionality across multiple devices. 
+- [X] Design and develop a responsive form including destination, dates, and number of travellers.
+- [X] Configure redirected URLs for each platform using the appropriate parameters.
+- [X] Implement clear error messages and input validation.
+- [X] Choose appropriate layout.
+- [X] Add alt text and ARIA labels to ensure accessibility.
+- [X] Add internal menu links to other pages.
+- [X] Style the form and buttons consistently in accordance with the site's design system.
+- [X] Test responsiveness and redirection functionality across multiple devices. 
 
 ### 2. Travellers and Holiday Planners
 
 **User Goal**  
-As a traveller planning a holiday, to conveniently organise my trip with the site’s trusted partners, I should enter my travel dates and destination, and select from the available booking options (accommodation, flights, packages, or activities).
+As a traveller planning a holiday, to conveniently organise my trip with the site's trusted partners, I should enter my travel dates and destination, and select from the available booking options (accommodation, flights, packages, or activities).
 
 **Description**  
 For essential bookings, a single interface is provided, allowing the page to simplify the travel planning process. By accessing reputable travel providers to finalise their arrangements, travellers can input their group size, travel dates, and chosen city. The tone should convey trustworthiness, support, and simplicity.
 
 **Acceptance Criteria**
 
-- [ ] The user can type in a destination or city using the form.  
-- [ ] In addition to manual entry, date pickers are provided for easy selection of check-in and check-out dates.
-- [ ] A dropdown list allows users to select the number of travellers.
-- [ ] Four clear call-to-action buttons are available: Hotels, Flights, Packages, and Activities.
-- [ ] Includes access to other pages and sections.
-- [ ] Action buttons redirect users to the corresponding external partner websites.
-- [ ] Validation messages are displayed when required fields are incomplete.
-- [ ] The layout and buttons are mobile-friendly, intuitive, and clearly presented.
-- [ ] Layout is responsive and suitable for all screen sizes.  
-- [ ] Visual design is consistent with rest of the site.  
+- [X] The user can type in a destination or city using the form.  
+- [X] In addition to manual entry, date pickers are provided for easy selection of check-in and check-out dates.
+- [X] A dropdown list allows users to select the number of travellers.
+- [X] Four clear call-to-action buttons are available: Hotels, Flights, Packages, and Activities.
+- [X] Includes access to other pages and sections.
+- [X] Action buttons redirect users to the corresponding external partner websites.
+- [X] Validation messages are displayed when required fields are incomplete.
+- [X] The layout and buttons are mobile-friendly, intuitive, and clearly presented.
+- [X] Layout is responsive and suitable for all screen sizes.  
+- [X] Visual design is consistent with rest of the site.  
 
 **Tasks**
 
-- [ ] Placeholder examples (e.g. “Lisbon, Portugal”) should be created inside the form fields.
-- [ ] All browser compatibility with the integrated date pickers should be ensured.
-- [ ] External sites should be accessed through the appropriate search URLs from the link action buttons.
-- [ ] From desktop, laptop, tablet, and mobile devices, navigation and redirection should be tested. 
-- [ ] Add internal menu links to other pages.  
+- [X] Placeholder examples (e.g. “Lisbon, Portugal”) should be created inside the form fields.
+- [X] All browser compatibility with the integrated date pickers should be ensured.
+- [X] External sites should be accessed through the appropriate search URLs from the link action buttons.
+- [X] From desktop, laptop, tablet, and mobile devices, navigation and redirection should be tested. 
+- [X] Add internal menu links to other pages.  
 
 ### 3. Travel Enthusiasts and Explorers
 
@@ -1011,48 +950,24 @@ Exploring packages and enjoying the comparison of options by independent and inq
 
 **Acceptance Criteria**
 
-- [ ] The form supports flexible input fields (destination, optional dates, group size).
-- [ ] By clicking the different booking buttons, users are able to explore multiple options.
-- [ ] For convenience, new tabs are opened from the corresponding external links linked to the action buttons.
-- [ ] Each platform’s services are clearly communicated to the user through indicative icons and brief instructions.
-- [ ] Includes access to other pages.  
-- [ ] Layout is responsive and suitable for all screen sizes.  
-- [ ] Visual design is consistent with rest of the site.
-- [ ] Consistency across all device types is maintained, and motivational exploration is largely encouraged through the visual design. 
+- [X] The form supports flexible input fields (destination, optional dates, group size).
+- [X] By clicking the different booking buttons, users are able to explore multiple options.
+- [X] For convenience, new tabs are opened from the corresponding external links linked to the action buttons.
+- [X] Each platform's services are clearly communicated to the user through indicative icons and brief instructions.
+- [X] Includes access to other pages.  
+- [X] Layout is responsive and suitable for all screen sizes.  
+- [X] Visual design is consistent with rest of the site.
+- [X] Consistency across all device types is maintained, and motivational exploration is largely encouraged through the visual design. 
 
 **Tasks**
 
-- [ ] Each button’s function should include short text or icons to explain its purpose. 
-- [ ] New tab (target="_blank") opening through external links should be ensured. 
-- [ ] Short motivational heading (“Plan your adventure your way”) should be added. 
-- [ ] Add internal menu links to other pages.
-- [ ] For visual variety, icons or distinct colours should be used to style buttons.
-- [ ] Screen sizes and browser functionality are to be verified. 
-- [ ] Test mobile/tablet/laptop/desktop responsiveness and accessibility.  
-
-### 4. Group Travellers and Families
-
-**User Goal**  
-As a family or group traveller, I want to easily organise suitable group activities, flights, and accommodation for everyone through trusted booking platforms accessed using our entered travel details (city, dates, number of travellers).
-
-**Description**  
-Multi-person travel support should be clearly visible on the interface. Family-friendly options linked to reputable partners should be available, and the system should accommodate larger groups so that group travellers feel confident.
-
-**Acceptance Criteria**
-
-- [ ] The choice for the number of travellers in a dropdown list or numeric input must be included within the form.  
-- [ ] Reassuring and inclusive language (e.g. “Plan your next family adventure”) is incorporated into the design.  
-- [ ] Includes access to other pages.  
-- [ ] Layout is responsive and suitable for all screen sizes.  
-- [ ] Visual design is consistent with rest of the site.  
-
-**Tasks**
-
-- [ ] Data privacy and partner reliability descriptive subtext should be included. 
-- [ ] For mobile users, easy-to-tap buttons should be implemented. 
-- [ ] For users with assistive technologies, accessibility testing should be carried out.  
-- [ ] Across all devices (desktop, laptop, tablet, and mobile), redirection functionality should be verified. 
-- [ ] Test mobile/tablet responsiveness and accessibility.  
+- [X] Each button's function should include short text or icons to explain its purpose. 
+- [X] New tab (target="_blank") opening through external links should be ensured. 
+- [X] Short motivational heading ("Find hotels, compare flights, reserve holiday packages, and discover top-rated guides for activities around the world.") should be added. 
+- [X] Add internal menu links to other pages.
+- [X] For visual variety, icons or distinct colours should be used to style buttons.
+- [X] Screen sizes and browser functionality are to be verified. 
+- [X] Test mobile/tablet/laptop/desktop responsiveness and accessibility.  
 
 ### Summary of Stakeholder Goals on Work Experience Page
 
@@ -1061,7 +976,6 @@ Multi-person travel support should be clearly visible on the interface. Family-f
 | Roberto Pires – Website Developer (Site Owner)     | To connect seamlessly with trusted external partners, input of trip details (destination, dates, number of travellers) is enabled for users.      | Providing a seamless planning experience and demonstrating technical proficiency through the use of static redirects integrated with booking APIs.                |
 | Travellers and Holiday Planners    | Quickly, from a single form, the key elements of a trip (accommodation, flights, packages, activities) are planned and booked.| Enhancing user experience and minimising search time by redirecting users to appropriate external partners when they input their details.  |
 | Travel Enthusiasts and Explorers | Explore adaptable travel options across platforms and compare alternatives. | Experience searches, rapid switching between flights and hotels, and exploration encouraged through the interface. |
-| Group Travellers and Families    | Plan activities and suitable accommodation provided through trusted partners for family holidays and group travel.         | Smooth external navigation and a clear design provide reassurance to families and multiple travellers through supportive form functionality.  |
 
 ---
 
@@ -1080,19 +994,19 @@ By enabling visitors to bookmark destinations or attractions of interest, user e
 
 **Acceptance Criteria**
 
-- [ ] A visible “Save” or “♥” icon will be included on each destination card or marker.  
-- [ ] A separate “Saved Trips” or “Favourites” page will be displayed where saved items will appear.
+- [ ] A visible "Save" or "♥" icon will be included on each destination card or marker.  
+- [ ] A separate "Saved Trips" or "Favourites" page will be displayed where saved items will appear.
 - [ ] Saved destinations can be removed by users.
 - [ ] Across desktop, laptop, tablet, and mobile devices, the layout will remain responsive.
 - [ ] Navigation links to other main pages will be visible.
-- [ ] Other internal pages are visible and accessible through the site’s navigational links.  
+- [ ] Other internal pages are visible and accessible through the site's navigational links.  
 - [ ] Visual design is consistent with rest of the site.  
 
 **Tasks**
 
-- [ ] Using JavaScript localStorage, “Save” and “Remove” button functionality will be implemented.
-- [ ] Saved items (title, image, location link) will be displayed on the created “Saved Trips” page.
-- [ ] All saved destinations will be removable through the inclusion of a “Clear All” button.
+- [ ] Using JavaScript localStorage, "Save" and "Remove" button functionality will be implemented.
+- [ ] Saved items (title, image, location link) will be displayed on the created "Saved Trips" page.
+- [ ] All saved destinations will be removable through the inclusion of a "Clear All" button.
 - [ ] Alt text and descriptive icons will be used to ensure accessibility.
 - [ ] Add alt text and ARIA labels to ensure accessibility.
 - [ ] Add internal menu links to other pages.
@@ -1104,7 +1018,7 @@ By enabling visitors to bookmark destinations or attractions of interest, user e
 As a traveller, I am interested in revisiting my favourite places and comparing options later by saving destinations that capture my interest. 
 
 **Description**  
-While exploring the website, a feature will be available for travellers to save destinations that appeal to them. Managing multiple travel ideas efficiently is made possible without the need to repeat searches. Before proceeding to bookings or enquiries, informed decisions are supported by reviewing and comparing locations when users return to the “Saved Trips” page. Confirmation messages for saving or removing items make this functionality feel seamless and user-friendly.
+While exploring the website, a feature will be available for travellers to save destinations that appeal to them. Managing multiple travel ideas efficiently is made possible without the need to repeat searches. Before proceeding to bookings or enquiries, informed decisions are supported by reviewing and comparing locations when users return to the "Saved Trips" page. Confirmation messages for saving or removing items make this functionality feel seamless and user-friendly.
 
 **Acceptance Criteria**
 
@@ -1129,7 +1043,7 @@ While exploring the website, a feature will be available for travellers to save 
 As a travel enthusiast, I want to keep a record of my travel ideas and organise future trips from a curated personal wishlist of destinations. 
 
 **Description**  
-For those who enjoy keeping a record of places they wish to visit and discovering new destinations, this feature caters to more exploratory users. By managing and storing locations that inspire travellers, a personalised list takes the form of the “Wishlist”. Across all device types, easily removing, reordering, or modifying saved items are features available to users through accessible controls and visually appealing design, which in turn encourages engagement. 
+For those who enjoy keeping a record of places they wish to visit and discovering new destinations, this feature caters to more exploratory users. By managing and storing locations that inspire travellers, a personalised list takes the form of the "Wishlist". Across all device types, easily removing, reordering, or modifying saved items are features available to users through accessible controls and visually appealing design, which in turn encourages engagement. 
 
 **Acceptance Criteria**
 
@@ -1143,46 +1057,20 @@ For those who enjoy keeping a record of places they wish to visit and discoverin
 
 **Tasks**
 
-- [ ] A “Wishlist” heading and corresponding icons are added.
-- [ ] “Reorder” and “Remove” functionalities are implemented.
+- [ ] A "Wishlist" heading and corresponding icons are added.
+- [ ] "Reorder" and "Remove" functionalities are implemented.
 - [ ] Layout consistency is tested across all devices. 
 - [ ] Add internal menu links to other pages.
 - [ ] Screen sizes, layout consistency and browser functionality are to be verified across devices. 
 - [ ] Test mobile/tablet/laptop/desktop responsiveness and accessibility.  
 
-### 4. Group Travellers and Families
-
-**User Goal**  
-As a family or group planner, to review saved destinations that are suitable for everyone later on together.
-
-**Description**  
-To meet the collective needs of family or group travellers, they should be able to collaboratively save and select destinations. For future bookings or discussions, suitable options gathered in one place are enabled through the “Saved Trips” feature. Printing for offline review or optionally allowing the sharing of recognisable “Family-Friendly” or “Group-Friendly” labels should be included. When navigating on desktops, laptops, tablets, and mobiles, the interface should remain simple, accessible, and clear. 
-
-**Acceptance Criteria**
-
-- [ ] When saving, “Family-Friendly” and “Group-Friendly” labels are preserved.
-- [ ] The saved list can be printed or shared (optional).
-- [ ] The page remains accessible and visually clean.  
-- [ ] Includes access to other pages.  
-- [ ] Layout is responsive and suitable for all screen sizes.  
-- [ ] Visual design is consistent with rest of the site.  
-
-**Tasks**
-
-- [ ] Saved cards include “Family-Friendly” badges.
-- [ ] For an optional enhancement, “Print / Share” functionality is added.
-- [ ] For users with assistive technologies, accessibility testing should be carried out.  
-- [ ] For readability on desktops, laptops, tablets, and mobiles, layouts are tested.  
-- [ ] Test desktop/laptop/tablet/mobile responsiveness and accessibility.  
-
 ### Summary of Stakeholder Goals on Saved Trips / Favourites Page
 
 | Stakeholder         | Goal                                                    | Key Feature/Action                               |
 |---------------------|----------------------------------------------------------|--------------------------------------------------|
-| Roberto Pires – Website Developer (Site Owner)     | By enabling users to save and manage destinations that appeal to them, JavaScript functionality is demonstrated and engagement is enhanced.      | Users can review and remove saved items on a responsive and dynamic “Saved Trips” page through an implemented “Save” or “♥” button connected to localStorage.                 |
-| Travellers and Holiday Planners    | Without the need to repeat searches, interesting destinations can be revisited, compared, and saved.| Links to booking pages or detailed destinations, browsing session data saved persistently, and confirmation feedback are included within destination cards featuring the “Save” button.  |
-| Travel Enthusiasts and Explorers | For future trips, favourite destinations are managed, and a personal wishlist of travel ideas is curated. | The ability to remove or reorder saved items, access links to guides, and view cards with imagery are presented in a visually appealing “Wishlist”. |
-| Group Travellers and Families    | In one easily accessible list, family or group needs are fulfilled by collecting and reviewing destinations together.         | For group viewing in a clean, tablet-friendly layout, print/share functionality and “Family-Friendly” or “Group-Friendly” labels are included within the saved list.  |
+| Roberto Pires – Website Developer (Site Owner)     | By enabling users to save and manage destinations that appeal to them, JavaScript functionality is demonstrated and engagement is enhanced.      | Users can review and remove saved items on a responsive and dynamic "Saved Trips" page through an implemented "Save" or "♥" button connected to localStorage.                 |
+| Travellers and Holiday Planners    | Without the need to repeat searches, interesting destinations can be revisited, compared, and saved.| Links to booking pages or detailed destinations, browsing session data saved persistently, and confirmation feedback are included within destination cards featuring the "Save" button.  |
+| Travel Enthusiasts and Explorers | For future trips, favourite destinations are managed, and a personal wishlist of travel ideas is curated. | The ability to remove or reorder saved items, access links to guides, and view cards with imagery are presented in a visually appealing "Wishlist". |
 
 ---
 
@@ -1197,7 +1085,7 @@ To meet the collective needs of family or group travellers, they should be able 
 As the site owner, I want users to feel inspired to explore destinations and engage with valuable content such as themed articles and concise travel guides that will be published.
 
 **Description** 
-Internal linking between guides and destinations, layout management, and content organisation will be demonstrated in this section. By including “Read More” links within a grid format, 3–5 travel guides should be displayed.
+Internal linking between guides and destinations, layout management, and content organisation will be demonstrated in this section. By including "Read More" links within a grid format, 3–5 travel guides should be displayed.
 
 **Acceptance Criteria**
 
@@ -1206,12 +1094,12 @@ Internal linking between guides and destinations, layout management, and content
 - [ ] Related destination linked internally (at least one) is contained within each article.
 - [ ] Across desktop, laptop, tablet, and mobile devices, the layout will remain responsive.
 - [ ] Navigation links to other main pages will be visible.
-- [ ] Other internal pages are visible and accessible through the site’s navigational links.  
+- [ ] Other internal pages are visible and accessible through the site's navigational links.  
 - [ ] Visual design is consistent with rest of the site.  
 
 **Tasks**
 
-- [ ] Short guides are written (e.g. “Top 5 Beach Escapes”, “Cultural City Breaks”).
+- [ ] Short guides are written (e.g. "Top 5 Beach Escapes", "Cultural City Breaks").
 - [ ] Responsive grids within the grid layout are created.
 - [ ] Related destination searches are linked to relevant keywords.
 - [ ] Alt text and descriptive icons will be used to ensure accessibility.
@@ -1225,12 +1113,12 @@ Internal linking between guides and destinations, layout management, and content
 As a traveller, when selecting destinations, I can make informed choices by reading recommendations and concise travel guides.
 
 **Description**  
-When planning a trip, to support travellers in their decision-making, reliable and practical information is provided in this section. Search pages and relevant booking links are included, while local attractions and essential advice are highlighted and summarised within the travel guides. Without excessive detail, for those users who prefer straightforward recommendations, accessible language, friendly tone, and clearly written articles are provided. Making bookings or viewing destinations can be directly accessed, and quick reading and easy navigation are ensured through the layout.   
+When planning a trip, to support travellers in their decision-making, reliable and practical information is provided in this section. Search pages and relevant booking links are included, while local attractions and essential advice are highlighted and summarised within the travel guides. Without excessive detail, for those users who prefer straightforward recommendations, accessible language, friendly tone, and clearly written articles are provided. Looking for packages or viewing destinations can be directly accessed, and quick reading and easy navigation are ensured through the layout.   
 
 **Acceptance Criteria**
 
 - [ ] Travel tips are current and useful which are included within the guides. 
-- [ ] Booking pages or related searches are the result of navigating through the “Read More” links.
+- [ ] Package pages or related searches are the result of navigating through the "Read More" links.
 - [ ] Non-technical and straightforward language content is written.
 - [ ] Mobile-friendly and intuitive design is maintained. 
 - [ ] Includes access to other pages and sections.
@@ -1240,7 +1128,7 @@ When planning a trip, to support travellers in their decision-making, reliable a
 **Tasks**
 
 - [ ] Descriptions are written clearly and briefly.
-- [ ] Booking pages or main search have links included.
+- [ ] Package pages or main search have links included.
 - [ ] Usability and precision of links are tested. 
 - [ ] Add internal menu links to other pages.  
 
@@ -1270,40 +1158,14 @@ Beyond typical tourist destinations that are sought for inspiration, and for tho
 - [ ] Screen sizes, layout consistency and browser functionality are to be verified across devices. 
 - [ ] Test mobile/tablet/laptop/desktop responsiveness and accessibility.  
 
-### 4. Group Travellers and Families
-
-**User Goal**  
-As a family traveller, I can identify appropriate options by reading about family-friendly destinations featured within the focused travel guides.
-
-**Description**  
-Appropriate destinations and practical guidance required by families and group travellers are provided within this section of the website. To meet various group needs, family-friendly activities, accommodations, and attractions are emphasised within these guides. With relatable examples, an inclusive tone, and a clear structure, the written content is made reassuring. Booking pages or relevant searches are linked with clear and visible calls to action, remaining approachable through this design. For easy trip planning, ready-made suggestions are provided to further assist this audience when using the “Best Family Destinations” guide or a similar feature.  
-
-**Acceptance Criteria**
-
-- [ ] Family or group travel is featured in at least one guide or article.
-- [ ] Relevant booking pages or searches are linked through CTAs.
-- [ ] Easy to read and approachable presentation is maintained in the layout. 
-- [ ] The page remains accessible and visually clean.  
-- [ ] Includes access to other pages.  
-- [ ] Layout is responsive and suitable for all screen sizes.  
-- [ ] Visual design is consistent with rest of the site.  
-
-**Tasks**
-
-- [ ] Guide created about “Top Family Destinations”.
-- [ ] “View on Map” or “Book Now” buttons included. 
-- [ ] For users with assistive technologies, accessibility testing should be carried out.  
-- [ ] For readability on desktops, laptops, tablets, and mobiles, layouts are tested.  
-- [ ] Test desktop/laptop/tablet/mobile responsiveness and accessibility.  
 
 ### Summary of Stakeholder Goals on Travel Guides & Articles Page
 
 | Stakeholder         | Goal                                                    | Key Feature/Action                               |
 |---------------------|----------------------------------------------------------|--------------------------------------------------|
-| Roberto Pires – Website Developer (Site Owner)     | Layout capabilities and the site’s content management are demonstrated and enhanced user engagement through the publication of short travel guides and themed articles. | Related destinations and full content are accessed through “Read More” links, summaries, and images within cards that display guides from a developed responsive articles page.|
+| Roberto Pires – Website Developer (Site Owner)     | Layout capabilities and the site's content management are demonstrated and enhanced user engagement through the publication of short travel guides and themed articles. | Related destinations and full content are accessed through "Read More" links, summaries, and images within cards that display guides from a developed responsive articles page.|
 | Travellers and Holiday Planners    | Planning trips and selecting destinations are supported by reading concise and informative travel guides.  | For quick action, relevant booking pages or destination searches are accessed through links that are provided within well-structured and accessible content.|
 | Travel Enthusiasts and Explorers | Unique and new destinations are presented within themed travel content that is visually inspiring to explore.  | Engagement and discovery are supported through the inclusion of category filters (Adventure, Culture, Relaxation), hero banners, and striking images. |
-| Group Travellers and Families    | Group-oriented and family-friendly destinations are the primary recommendations featured in the articles. |  Booking features or relevant searches are directed through visible “View on the Map” or “Book Now” CTAs, which form part of the inclusive and clearly presented guides. |
 
 ---
 
@@ -1318,7 +1180,7 @@ Appropriate destinations and practical guidance required by families and group t
 As the site owner, I can share travel ideas, new guides, and updates by email through a newsletter sign-up form to collect user email addresses.
 
 **Description** 
-IFor travel-related updates, visitors are provided with a simple way to subscribe and enhance engagement through this feature. Using third-party email services such as Formspree or Mailchimp, integration, validation, and form handling are demonstrated.
+For travel-related updates, visitors are provided with a simple way to subscribe and enhance engagement through this feature. Using third-party email services such as Formspree or Mailchimp, integration, validation, and form handling are demonstrated.
 
 **Acceptance Criteria**
 
@@ -1327,7 +1189,7 @@ IFor travel-related updates, visitors are provided with a simple way to subscrib
 - [ ] A secure email list management service is integrated within the form. 
 - [ ] Across desktop, laptop, tablet, and mobile devices, the layout will remain responsive.
 - [ ] Navigation links to other main pages will be visible.
-- [ ] Other internal pages are visible and accessible through the site’s navigational links.  
+- [ ] Other internal pages are visible and accessible through the sit's navigational links.  
 - [ ] Visual design is consistent with rest of the site.  
 
 **Tasks**
@@ -1347,7 +1209,7 @@ IFor travel-related updates, visitors are provided with a simple way to subscrib
 As a traveller, I can remain informed about offers and destinations through subscribed updates or promotions. 
 
 **Description**  
-Destination highlights, seasonal offers, and updates provided through the website’s subscription feature will allow travellers to stay connected. Directly via email, sharing valuable travel information enhances user loyalty and encourages return visits, which is the intended goal. To encourage users to subscribe, friendly and concise language is used on key pages such as the Booking page and Homepage/About Us page, where the newsletter form is visible. Reassuring users that their sign-up has been successful by displaying a thank-you note or a clear confirmation message. 
+Destination highlights, seasonal offers, and updates provided through the website's subscription feature will allow travellers to stay connected. Directly via email, sharing valuable travel information enhances user loyalty and encourages return visits, which is the intended goal. To encourage users to subscribe, friendly and concise language is used on key pages such as the Packages page and the About Us page, where the newsletter form is visible. Reassuring users that their sign-up has been successful by displaying a thank-you note or a clear confirmation message. 
 
 **Acceptance Criteria**
 
@@ -1372,7 +1234,7 @@ Destination highlights, seasonal offers, and updates provided through the websit
 As a travel enthusiast, to discover new travel inspiration, I want to receive curated destination updates.
 
 **Description**  
-New ideas for their next adventure are provided for travellers who seek ongoing inspiration, which this feature caters to. Hidden destinations, cultural events, and themed travel ideas are presented in curated content through a newsletter that feels personalised. The website’s design and typography are reflected in a tone that should be visually appealing and engaging while maintaining a responsive and professional layout.  
+New ideas for their next adventure are provided for travellers who seek ongoing inspiration, which this feature caters to. Hidden destinations, cultural events, and themed travel ideas are presented in curated content through a newsletter that feels personalised. The website's design and typography are reflected in a tone that should be visually appealing and engaging while maintaining a responsive and professional layout.  
 
 **Acceptance Criteria**
 
@@ -1391,38 +1253,13 @@ New ideas for their next adventure are provided for travellers who seek ongoing 
 - [ ] Screen sizes, layout consistency and browser functionality are to be verified across devices. 
 - [ ] Test mobile/tablet/laptop/desktop responsiveness and accessibility.  
 
-### 4. Group Travellers and Families
-
-**User Goal**  
-As a family or group traveller, group offers and family-friendly ideas are what should be included in the newsletters that I wish to receive. 
-
-**Description**  
-Tailored offers suited to group holidays and relevant updates are provided to group travellers and families through this supported feature. Privacy and safe data handling are assured, and group travellers and families receive content clearly tailored to them through the sign-up form and email. Group organisers and parents subscribe with confidence through content that is encouraging, trustworthy, and inclusive. Both contextually relevant and visible placement is ensured for group-friendly destinations or travel guides by positioning the newsletter form near family-related content.   
-
-**Acceptance Criteria**
-
-- [ ] Family and group travel are referenced within the sign-up form.
-- [ ] A reassuring tone regarding safe data usage is maintained.
-- [ ] Information on how to unsubscribe is presented clearly.
-- [ ] Includes access to other pages.  
-- [ ] Layout is responsive and suitable for all screen sizes.  
-- [ ] Visual design is consistent with rest of the site.  
-
-**Tasks**
-
-- [ ] Parent-friendly copy is written.
-- [ ] The newsletter form is positioned near family travel content.
-- [ ] For users with assistive technologies, accessibility testing should be carried out.  
-- [ ] For readability on desktops, laptops, tablets, and mobiles, layouts are tested.  
-- [ ] Test desktop/laptop/tablet/mobile responsiveness and accessibility.  
-
 ### Summary of Stakeholder Goals on Newsletter Sign-Up Page
 
 | Stakeholder         | Goal                                                    | Key Feature/Action                               |
 |---------------------|----------------------------------------------------------|--------------------------------------------------|
 | Roberto Pires – Website Developer (Site Owner)     | Third-party services such as Mailchimp or Formspree integration, validation, and form handling are demonstrated, and user email subscriptions are collected.      |  Consistent design and full accessibility are ensured through the inclusion of a confirmation message, consent checkbox, and email input field within a developed responsive newsletter form.                |
 | Travellers and Holiday Planners    | Future holiday planning is supported through offers, travel deals, and destination updates included in the subscription.   | Upon sign-up, an instant confirmation message and concise language are used on the page, providing a clearly visible newsletter form.   |
-| Travel Enthusiasts and Explorers | Inspired new travel experiences from curated and interest-based newsletters are delivered.  | Match the site’s aesthetic through the use of visuals and typography.  |
+| Travel Enthusiasts and Explorers | Inspired new travel experiences from curated and interest-based newsletters are delivered.  | Match the site's aesthetic through the use of visuals and typography.  |
 | Group Travellers and Families    | Safety and data privacy reassurance are included within the received group holiday offers and family-focused travel ideas.         | Ensure privacy information and a clear unsubscribe option are displayed, and use a reassuring, warm tone while including references to family and group travel within the form.|
 
 ---
