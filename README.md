@@ -1,5 +1,5 @@
 # Milestone 2 Project - Holiday Finder Website
-<img width="1453" height="826" alt="am-i-responsive" src="https://github.com/user-attachments/assets/81a35234-a4ef-40e0-a3f3-3ed687b5e86b" />
+<img width="1453" height="826" alt="am-i-responsive" src="https://github.com/user-attachments/assets/f673de24-b44c-431a-a633-aa8bacd21631" />
 
 ## Links
 - [Link to Live Website](https://rpires71.github.io/milestone2/) 
@@ -44,6 +44,13 @@
     - [Overview](#overview)
     - [ESLint Configuration Evolution](#eslint-configuration-evolution)
   - [Approach for Website Test Planning](#approach-for-website-test-planning)
+    - [Test Case Planning](#test-case-planning)
+    - [Functionality and Content Accuracy Testing - Planning](#functionality-and-content-accuracy-testing---planning)
+    - [Usability and Typography Testing - Planning](#usability-and-typography-testing---planning)
+    - [Responsiveness Testing - Planning](#responsiveness-testing---planning)
+    - [Accessibility Testing - Planning](#accessibility-testing---planning)
+    - [Performance Testing - Planning](#performance-testing---planning)
+    - [Regression Testing - Planning](#regression-testing---planning)
 - [References](#references)
  
 # Milestone Project 2
@@ -3075,6 +3082,828 @@ I will, at the end of each test phase:
 **Justification:** Evaluating progress after each iteration demonstrates supports responsible decision-making, professional practice, and showcases the iterative design model (Nielsen Norman Group, 2020; Kent Beck, 2003).
 
 **Note:** Test cases are directly associated to user stories, JavaScript functions, and accessibility targets to demonstrate traceability and meaningful alignment between objectives and results (W3C, 2018; Mozilla Developer Network, 2024).
+
+---
+
+## Test Case Planning
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Justification:** Using test cases provides evidence of thorough and repeated testing.
+
+### Functionality and Content Accuracy Testing - Planning
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose** Ensure that all HTML, CSS and JavaScript-driven components in the Holiday Destination Finder operate as intended, including navigation links, search forms, category filters, Google Maps integration and booking buttons. Confirm that content is clear, accurate and consistent across pages.
+
+**Description** Testing covers navbar links, buttons, forms, search behaviour, the Google Maps / results panel interaction, booking redirections (Booking.com, Google Flights, Expedia, GetYourGuide), and content accuracy on index.html, search.html and packages.html.
+
+**Justification** Reliable functionality and accurate content are essential for user trust, successful task completion (finding destinations and booking options), and alignment with professional web standards and course requirements.
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC001</td>
+    <td><strong>Feature:</strong> Main navigation bar (index.html, search.html, packages.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify the navigation menu operates correctly across all pages and devices, ensuring each link directs to the appropriate page or section.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Clear navigation supports user orientation, reduces cognitive load and ensures all key features (search and booking) are discoverable.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Open index.html in Chrome, Firefox, Safari, and Edge.<br>
+2. Click each navigation link: About Us, Search, Popular Destinations, Packages and Contact.<br>
+3. Confirm that each link navigates to the correct page without errors.<br>
+4. Repeat testing on tablet (768x1024) and mobile (375x667) viewports.<br>
+5. On mobile, verify the hamburger menu appears and expands/collapses correctly.<br>
+6. Test keyboard navigation using Tab key to cycle through navigation links.<br>
+7. Verify visible focus indicators appear on each navigation item.<br>
+8. Check that clicking a nav link on mobile closes the menu automatically.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- All links function correctly and navigate to appropriate pages<br>
+- Navigation remains consistent across all pages<br>
+- Responsive hamburger menu displays correctly on mobile/tablet<br>
+- Keyboard users can navigate with visible focus outlines<br>
+- Mobile menu closes after link selection<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC002</td>
+    <td><strong>Feature:</strong> City search input and Search Destination button</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Validate the search verifies entries, accepts user submissions, fetches results via the Google Places API and presents error notifications when empty.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The primary capability of the application is the **search** function. Locating destination information efficiently is assured with a dependable search function with appropriate validation.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Navigate to search.html.<br>
+2. Leave search input empty and click "Search" button.<br>
+3. Verify alert message appears: "Please enter a city name".<br>
+4. Enter "London" and click Search.<br>
+5. Verify Google Map loads and centers on London.<br>
+6. Confirm place markers appear on map (10-20 markers).<br>
+7. Verify results panel displays place cards with name, rating, address.<br>
+8. Test Enter key triggers search (keyboard accessibility).<br>
+9. Test with various cities: Paris, Tokyo, New York, Barcelona.<br>
+10. Test with invalid input: "XYZ123" - verify graceful handling.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Empty input triggers a user-friendly alert.<br>
+- Valid city names call performSearch(cityName) and reveal the results + map area.<br>
+- Enter key functions as alternative to button click<br>
+- Invalid cities handled gracefully with appropriate message<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC003</td>
+    <td><strong>Feature:</strong> Action buttons (.btn-action) e.g. Attractions, Restaurants, Hotels, Cafes, Shopping</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Confirm that clicking each filter button updates the active state (initializeActionButtons() / filterPlaces()), changes currentSearchType, and refreshes the results accordingly after a search has been made.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Category filtering allows users to refine searches by place type, which is essential for targeted destination research. Incorrect behaviour would harm usability and trust.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. On search.html, search for "Barcelona".<br>
+2. Observe initial results (default: tourist attractions).<br>
+3. Click "Restaurants" button.<br>
+4. Verify button receives 'active' styling (highlighted).<br>
+5. Confirm previous results are cleared.<br>
+6. Verify new restaurant results appear on map and in results panel.<br>
+7. Repeat for each category: Hotels, Cafes, Shopping.<br>
+8. Check that only one button shows active state at a time.<br>
+9. Verify markers on map match the selected category.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Each category button filters results correctly<br>
+- Active button styling updates appropriately<br>
+- Map markers refresh to show filtered places<br>
+- Results panel displays places matching selected category<br>
+- Previous results cleared before new results load<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC004</td>
+    <td><strong>Feature:</strong> Results panel (.results-panel) and Google Map (#map)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that Google Maps loads correctly, displays place markers, shows info windows on marker click, and provides map controls (zoom, pan). Ensure that clicking a result in the results panel recentres the map on that location and (where implemented).</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Synchronisation between list and map is central to spatial usability and supports users who rely on visual/geographical cues.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Search for "Paris".<br>
+2. Verify map loads within 2-3 seconds.<br>
+3. Confirm map centers on Paris coordinates.<br>
+4. Check zoom level is appropriate (default: 13).<br>
+5. Verify zoom controls (+/-) appear and function.<br>
+6. Test panning/dragging the map.<br>
+7. Click a place marker on the map.<br>
+8. Verify info window opens showing place name, rating, address.<br>
+9. Click another marker - confirm previous info window closes.<br>
+10. Test on mobile - verify touch interactions work (pinch zoom, swipe).<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Map initializes quickly and centers correctly<br>
+- Zoom and pan controls function properly<br>
+- Markers clickable with info windows displaying complete information<br>
+- Only one info window open at a time<br>
+- Touch interactions work on mobile devices<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC005</td>
+    <td><strong>Feature:</strong> Booking Form Validation (packages.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the booking form validates required fields (check-in, check-out dates, city), shows alerts for missing data, and only proceeds when valid.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Form validation prevents incomplete bookings and ensures users provide necessary information before being redirected to partner booking sites.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Navigate to packages.html.<br>
+2. Click "Book Hotels" without entering any data.<br>
+3. Verify alert appears: "Please select check-in and check-out dates".<br>
+4. Enter check-in: 2025-12-15, leave check-out empty.<br>
+5. Click "Book Hotels" - verify alert still appears.<br>
+6. Enter check-in: 2025-12-15, leave check-out empty.<br>
+7. Enter check-out: 2025-12-05, guests: 2, city: "Rome".<br>
+8. Click “Book Hotels” – verify that an alert still appears indicating that the check-in date is not valid because it is later than the check-out date.<br>
+9. Enter check-in: 2025-12-15.<br>
+10. Enter check-out: 2025-12-20, guests: 2, city: "Rome".<br>
+11. Click "Book Hotels".<br>
+12. Verify new tab opens to Booking.com with correct parameters.<br>
+13. Repeat validation tests for "Book Flights" and "Book Package".<br>
+14. Test keyboard navigation through form fields.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Missing required fields trigger appropriate alert messages<br>
+- Invalid date ranges for check-in and check-out trigger appropriate alert messages<br>
+- Form only proceeds when all required data provided<br>
+- Validation messages are clear and user-friendly<br>
+- Form fields accessible via keyboard<br>
+- Successful submissions open partner sites with correct data<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC006</td>
+    <td><strong>Feature:</strong> External Partner Links (packages.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that booking buttons correctly construct URLs with search parameters and open partner sites (Booking.com, Google Flights, Expedia, GetYourGuide) in new tabs.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Partner links are monetisation features that must pass correct data to external booking platforms for proper functionality.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Fill in the form: check-in 2025-12-01, check-out 2025-12-07, guests: 2, city: "Barcelona".<br>
+2. Click "Search Hotels".<br>
+3. Verify Booking.com opens in new tab.<br>
+4. Check that the URL contains: ss=Barcelona, checkin=2025-12-01, checkout=2025-12-07, group_adults=2.<br>
+5. Return to packages.html and click "Search Flights".<br>
+6. Verify that Google Flights opens with Barcelona as the destination, the departure date is 2025-12-01, and the return date is 2025-12-07.<br>
+7. Test "Complete Package" – verify that Expedia opens with "Going to Barcelona", dates 01 Dec – 07 Dec, and Travellers: 2 adults, 1 room.<br>
+8. Test "Book Activities" – verify that GetYourGuide opens with Barcelona as the selected destination.<br>
+9. Confirm all links have target="_blank" and rel="noopener noreferrer".<br>
+10. Attempt a 404 path – verify that the user is redirected back to packages.html.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+<td colspan="2"><strong>Expected Result:</strong><br>
+
+- All booking buttons open the correct partner websites in new tabs<br>
+- URLs include accurate destination, dates, and traveller parameters<br>
+- Security attributes (`rel="noopener noreferrer"`) are present on all external links<br>
+- User remains on the original page after each link opens<br>
+- Attempting an invalid/404 path redirects the user back to <em>packages.html</em><br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC007</td>
+    <td><strong>Feature:</strong> Footer Contact Links (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that email and telephone footer links navigate correctly, external links open in relevant apps.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The footer provides secondary navigation and contact access. Consistent functionality across all pages reinforces user trust and professionalism.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Scroll to the footer on <em>index.html</em>.<br>
+2. Click the telephone link in the footer contact tile and verify that the appropriate calling application opens with the number pre-filled.<br>
+3. Click the SMS contact link and verify that the correct messaging application opens with the number pre-filled.<br>
+4. Hover over footer contact links to check visual feedback (arrow cursor changes to pointer cursor).<br>
+5. Use the keyboard Tab key to focus on all footer links and verify that they are accessible.<br>
+6. Repeat the above checks on <em>search.html</em> and <em>packages.html</em> to ensure consistency across the site.<br>
+7. Check that the footer displays correctly on mobile devices and smaller screen sizes.<br>
+</td>
+</tr>
+<tr>
+<td colspan="2"><strong>Expected Result:</strong><br>
+
+- All internal contact links navigate correctly to the footer section in the active page<br>
+- External links open using the correct associated application and/or in a secure new tab (`rel="noopener noreferrer"`)<br>
+- Hover states provide clear visual feedback using the pointer cursor<br>
+- Footer links are fully keyboard accessible and receive visible focus<br>
+- Footer displays consistently and responsively across all device sizes<br>
+
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC008</td>
+    <td><strong>Feature:</strong> Content Accuracy (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that all text content is grammatically correct, free from typos, uses consistent UK English spelling, and maintains professional tone.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Accurate, professionally presented content builds trust and enhances credibility, supporting user comprehension and meeting quality standards.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Read all headings, paragraphs, and button labels on index.html.<br>
+2. Check for grammar, spelling, and punctuation errors.<br>
+3. Verify UK spelling (e.g., "travelling" not "traveling", "colour" not "color").<br>
+4. Confirm consistency in terminology (e.g., "Holiday Packages" not mixed with "Vacation Packages").<br>
+5. Check that instructional text is clear (e.g., "Enter a city name to search").<br>
+6. Repeat for search.html and packages.html.<br>
+7. Use Grammarly or similar tool for final proofreading.<br>
+8. Verify content displays correctly on mobile without text cut-offs.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+    
+- No spelling or grammatical errors present<br>
+- Content uses consistent UK English throughout<br>
+- Terminology remains consistent across all pages<br>
+- All text displays correctly on desktop and mobile<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC009</td>
+    <td><strong>Feature:</strong> Link Descriptions and Titles</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that all links have clear, descriptive text or titles that accurately reflect their destination or function (avoiding vague phrases like "Click Here").</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Descriptive link text improves accessibility for screen readers, enhances SEO, and supports WCAG 2.1 Success Criterion 2.4.4 (Link Purpose).</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Navigate through all pages (index, search, packages).<br>
+2. Inspect every link for descriptive visible text.<br>
+3. Hover over links to review title attributes (if present).<br>
+4. Verify no links use vague phrases like "click here" or "more info" without context.<br>
+5. Check that button labels clearly describe their action (e.g., "Search Destinations" not just "Search").<br>
+6. Use screen reader (NVDA or VoiceOver) to verify links make sense when read aloud.<br>
+7. Test on mobile and desktop for consistency.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- All links use descriptive, meaningful text<br>
+- No vague terms without context<br>
+- Links are understandable by screen reader users<br>
+- Button labels clearly describe their function<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC010</td>
+    <td><strong>Feature:</strong> Start Exploring Button (index.html)</td>
+</tr>
+<tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Start Exploring" button in the hero section of <code>index.html</code> correctly navigates to the search page (<code>search.html</code>).</td>
+</tr>
+<tr>
+    <td colspan="2"><strong>Justification:</strong> This button is the primary call-to-action (CTA) on the homepage, directing users to the main functionality of the website. It must operate reliably to support the intended user journey.</td>
+</tr>
+<tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Open <code>index.html</code> in a browser.<br>
+2. Locate the "Start Exploring" button in the hero section.<br>
+3. Verify the button displays both the search icon (<code>bi-search</code>) and the text label "Start Exploring".<br>
+4. Confirm the button styling matches the primary theme (coral-orange background).<br>
+5. Hover over the button and verify that a visual change appears (e.g., elevated hover or shadow effect).<br>
+6. Click the "Start Exploring" button.<br>
+7. Confirm that navigation occurs to <code>search.html</code>.<br>
+8. Verify that the page loads correctly, displaying the search input and interactive map.<br>
+9. Test keyboard accessibility: use the <kbd>Tab</kbd> key to focus on the button, then press <kbd>Enter</kbd>.<br>
+10. Test on tablet devices (e.g., 768×1024) and verify the button remains clearly visible and touch-friendly.<br>
+11. Test on mobile devices (e.g., 375×667) and verify the button remains clearly visible and touch-friendly.<br>
+
+</td>
+</tr>
+<tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Button clearly visible with both icon and text label<br>
+- Hover state provides noticeable visual feedback<br>
+- Clicking the button navigates to <code>search.html</code> without errors<br>
+- Button fully accessible using keyboard controls (<kbd>Tab</kbd> + <kbd>Enter</kbd>)<br>
+- Button remains touch-friendly and visible on tablet and mobile devices<br>
+
+</td>
+</tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC011</td>
+    <td><strong>Feature:</strong> Popular Destinations - Explore Buttons (search.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Explore" buttons on each Popular Destination card trigger the searchCity() JavaScript function and populate search results correctly.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> These buttons provide quick-access searches for popular cities, enhancing user experience by eliminating manual typing. They must trigger searches correctly to fulfill this purpose.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Open search.html in browser.<br>
+2. Scroll down to "Popular Destinations" section.<br>
+3. Verify 4 destination cards are displayed:<br>
+   - New York City<br>
+   - Barcelona<br>
+   - Paris<br>
+   - Tokyo<br>
+4. For each destination card, verify:<br>
+   - Image loads correctly (200px height, covers container)<br>
+   - Destination name displayed (H4 heading)<br>
+   - Description text present<br>
+   - "Explore [City]" button visible with search icon<br>
+5. Test "Explore NYC" button:<br>
+   - Click button<br>
+   - Verify city search input populates with "New York City"<br>
+   - Confirm Google Map centers on New York City<br>
+   - Check that place markers appear on map<br>
+   - Verify results panel displays NYC attractions<br>
+6. Repeat test for each city:<br>
+   - Click "Explore Barcelona" -> search for Barcelona<br>
+   - Click "Explore Paris" -> search for Paris<br>
+   - Click "Explore Tokyo" -> search for Tokyo<br>
+7. Verify onclick attribute calls correct function:<br>
+   - Use DevTools to inspect button elements<br>
+   - Confirm onclick="searchCity('[City Name]')"<br>
+8. Test keyboard accessibility:<br>
+   - Tab to each Explore button<br>
+   - Press Enter to trigger search<br>
+9. Test on tablet (768x1024) and mobile (375x667) viewports:<br>
+   - Verify cards stack vertically (2 per row on tablet, 1 per row on mobile)<br>
+   - Confirm buttons are touch-friendly<br>
+   - Test touch interactions<br>
+10. Check console for JavaScript errors after clicking buttons.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- All 4 destination cards display correctly with images, text, and buttons<br>
+- Each button has appropriate label ("Explore NYC", "Explore Barcelona", etc.)<br>
+- Clicking button populates search input with correct city name<br>
+- Map automatically centers on selected city<br>
+- Search results load for the selected destination<br>
+- onclick attributes reference correct city names<br>
+- Buttons accessible via keyboard (Tab + Enter)<br>
+- Cards responsive on mobile (stacking behavior correct)<br>
+- Buttons touch-friendly (minimum 44x44px touch target)<br>
+- No JavaScript errors in console<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC012</td>
+    <td><strong>Feature:</strong> Popular Destinations - Section Navigation (Anchor Link)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Popular Destinations" navigation link in the navbar correctly scrolls to the Popular Destinations section using the #popular anchor.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The navbar provides direct navigation to the Popular Destinations section via an anchor link. This must function correctly to support efficient page navigation and user experience.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+    
+1. Open search.html in browser.<br>
+2. Ensure page is scrolled to top (or any position above Popular Destinations).<br>
+3. Locate "Popular Destinations" link in navigation menu.<br>
+4. Verify link has href="#popular" attribute (inspect with DevTools if needed).<br>
+5. Click "Popular Destinations" navigation link.<br>
+6. Verify page scrolls to Popular Destinations section (id="popular").<br>
+7. Check scroll behavior:<br>
+   - If smooth scrolling implemented (script.js), verify smooth animation<br>
+   - If not, verify instant jump to section<br>
+8. Confirm Popular Destinations heading is visible after scroll.<br>
+9. Test from different scroll positions:<br>
+   - From top of page<br>
+   - From middle of page (search section)<br>
+   - From bottom of page (footer)<br>
+10. Test keyboard accessibility:<br>
+    - Tab to "Popular Destinations" link<br>
+    - Press Enter to navigate<br>
+11. Test on mobile:<br>
+    - Open hamburger menu<br>
+    - Click "Popular Destinations"<br>
+    - Verify scroll occurs and menu closes<br>
+12. Test when opening link from external page:<br>
+    - From index.html, click navbar "Popular Destinations" (href="search.html#popular")<br>
+    - Verify navigation to search.html occurs<br>
+    - Confirm page loads scrolled to Popular Destinations section<br>
+    - From packages.html, click navbar "Popular Destinations" (href="packages.html#popular")<br>
+    - Verify navigation to packages.html occurs<br>
+    - Confirm page loads scrolled to Popular Destinations section<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Clicking navbar link scrolls page to Popular Destinations section<br>
+- Smooth scrolling animation if implemented, instant jump if not<br>
+- Section heading clearly visible after navigation<br>
+- Navigation works from any scroll position<br>
+- Keyboard navigation (Tab + Enter) functional<br>
+- Mobile: menu closes after navigation<br>
+- Cross-page navigation (index.html -> search.html#popular) works correctly<br>
+- Cross-page navigation (packages.html -> packages.html#popular) works correctly<br>
+- No console errors during navigation<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong>TC013</td>
+    <td><strong>Feature:</strong> Contact Navigation Link - Footer Scrolling (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Contact" link in the navigation menu correctly scrolls to the footer section (id="contact") on each page (index.html, search.html, packages.html).</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The Contact navbar link provides quick access to contact information in the footer. This must function correctly on all pages to support user communication and information discovery. This is a key usability feature mentioned in the HTML comments.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+<strong>Part 1: Test on index.html (Same-Page Anchor)</strong><br>
+
+1. Open index.html in browser.<br>
+2. Ensure page is scrolled to top or middle position.<br>
+3. Locate "Contact" link in navigation menu.<br>
+4. Verify href="#contact" attribute using DevTools if needed.<br>
+5. Click "Contact" navigation link.<br>
+6. Verify page scrolls to footer section (id="contact").<br>
+7. Confirm footer contact information tiles are visible.<br>
+8. Check scroll behavior (smooth if script.js implements it).<br>
+9. Test keyboard navigation:<br>
+   - Tab to Contact link<br>
+   - Press Enter<br>
+   - Verify scroll occurs<br>
+10. Test from different scroll positions (top, middle, bottom).<br>
+11. On mobile, verify hamburger menu closes after clicking Contact.<br>
+<br>
+<strong>Part 2: Test on search.html (Same-Page Anchor)</strong><br>
+
+12. Navigate to search.html.<br>
+13. Locate "Contact" link (href="search.html#contact").<br>
+14. Click Contact link.<br>
+15. Verify scroll to footer (id="contact").<br>
+16. Confirm contact tiles visible.<br>
+17. Test keyboard navigation (Tab + Enter).<br>
+18. On mobile, verify menu closes after navigation.<br>
+<br>
+<strong>Part 3: Test on packages.html (Same-Page Anchor)</strong><br>
+
+19. Navigate to packages.html.<br>
+20. Locate "Contact" link (href="packages.html#contact").<br>
+21. Click Contact link.<br>
+22. Verify scroll to footer (id="contact").<br>
+23. Confirm contact tiles visible.<br>
+24. Test keyboard navigation.<br>
+25. On mobile, verify menu closes.<br>
+<br>
+<strong>Part 4: Cross-Page Navigation Test</strong><br>
+
+26. From index.html, navigate to search.html using navbar.<br>
+27. Click Contact link on search.html.<br>
+28. Verify it scrolls to search.html footer (not index.html).<br>
+29. From search.html, navigate to packages.html.<br>
+30. Click Contact link on packages.html.<br>
+31. Verify correct footer scroll on packages.html.<br>
+<br>
+<strong>Part 5: Footer Contact Content Verification</strong><br>
+
+32. On each page footer, verify contact tiles display:<br>
+    - Address information<br>
+    - Phone number<br>
+    - Email address<br>
+    - Social media links (if present)<br>
+33. Check that footer id="contact" exists on all three pages.<br>
+34. Verify consistent footer styling across pages.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+<strong>On index.html:</strong><br>
+
+- Contact link scrolls to footer on same page<br>
+- Footer contact section (id="contact") becomes visible<br>
+- Smooth scrolling if implemented by script.js<br>
+- Keyboard navigation works (Tab + Enter)<br>
+- Mobile: hamburger menu closes after click<br>
+<br>
+<strong>On search.html:</strong><br>
+
+- Contact link scrolls to search.html footer (not index.html)<br>
+- Footer contact section visible<br>
+- Same smooth scrolling behavior<br>
+- Keyboard accessible<br>
+- Mobile menu closes<br>
+<br>
+<strong>On packages.html:</strong><br>
+
+- Contact link scrolls to packages.html footer<br>
+- Footer contact section visible<br>
+- Consistent scroll behavior<br>
+- Keyboard accessible<br>
+- Mobile menu closes<br>
+<br>
+<strong>All Pages:</strong><br>
+
+- Contact tiles display correctly (Address, Phone, Email, Social)<br>
+- Footer has id="contact" attribute<br>
+- Styling consistent across all pages<br>
+- No console errors during navigation<br>
+- Screen readers announce footer content correctly<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC014</td>
+    <td><strong>Feature:</strong> Image Carousel/Slider (index.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the Bootstrap carousel on index.html displays destination images correctly, transitions smoothly between slides, and provides accessible navigation controls.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The carousel showcases popular destinations visually and is a key engagement element on the homepage. Proper functionality ensures good first impressions and accessibility compliance.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Open index.html in browser.<br>
+2. Locate the carousel in the main section (right column, 7/12 width on large screens).<br>
+3. Verify carousel displays first image (Paris - Eiffel Tower) on page load.<br>
+4. Confirm carousel auto-plays and transitions to next slide after ~5 seconds.<br>
+5. Test manual navigation:<br>
+   - Click left arrow (previous) button<br>
+   - Click right arrow (next) button<br>
+   - Click carousel indicators (dots) at bottom<br>
+6. Verify all 5 images load correctly:<br>
+   - Paris, France<br>
+   - Tokyo, Japan<br>
+   - New York, USA<br>
+   - Barcelona, Spain<br>
+   - London, UK<br>
+7. Check that captions display on desktop (hidden on mobile via d-none d-md-block).<br>
+8. Verify smooth transitions (slide effect) between images.<br>
+9. Test keyboard navigation:<br>
+   - Tab to carousel controls<br>
+   - Press Enter to navigate slides<br>
+10. Test on on tablet (768x1024) and mobile (375x667):<br>
+    - Verify carousel responsive<br>
+    - Test swipe gestures (left/right)<br>
+    - Confirm captions hidden on small screens<br>
+11. Check accessibility:<br>
+    - Verify aria-labels on controls ("Previous", "Next", "Slide 1-5")<br>
+    - Test with screen reader (NVDA/VoiceOver)<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Carousel loads and displays Paris image by default<br>
+- Auto-play functions with smooth transitions (5-second intervals)<br>
+- Manual controls (arrows and indicators) work correctly<br>
+- All 5 images load without errors, maintaining aspect ratio<br>
+- Captions visible on tablet and desktop (≥768px), hidden on mobile<br>
+- Transitions are smooth without visual glitches<br>
+- Keyboard navigation functional<br>
+- Touch swipe gestures work on mobile<br>
+- ARIA labels present and announced by screen readers<br>
+- No console errors related to carousel<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC015</td>
+    <td><strong>Feature:</strong> About Us Content Scrollbar (index.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the About Us content section on index.html displays a vertical scrollbar when content exceeds the container height and that scrolling functions correctly.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The About Us section uses a custom scrollable container (.about-content) to maintain consistent layout heights while allowing access to all content. This must function properly for content accessibility.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Open index.html in browser.<br>
+2. Locate About Us section in main content area (left column, 5/12 width).<br>
+3. Inspect the .about-content container using browser DevTools.<br>
+4. Verify CSS properties applied:<br>
+   - max-height set (check style.css)<br>
+   - overflow-y: auto (enables vertical scrolling)<br>
+5. Check if vertical scrollbar appears on the right side of content.<br>
+6. Test scrolling functionality:<br>
+   - Use mouse wheel to scroll up/down<br>
+   - Click and drag scrollbar thumb<br>
+   - Click scrollbar track (above/below thumb)<br>
+7. Verify all content is accessible via scrolling:<br>
+   - About Us heading<br>
+   - Description paragraphs (3 paragraphs)<br>
+   - Key Features list (4 bullet points)<br>
+8. Test keyboard scrolling:<br>
+   - Click inside About Us area to focus<br>
+   - Use arrow keys (up and down) to scroll<br>
+   - Use Page Up/Page Down keys<br>
+9. Test on different screen sizes:<br>
+   - Desktop (1920x1080) - scrollbar visible if content exceeds max-height<br>
+   - Tablet (768x1024) - verify scrolling still works<br>
+   - Mobile (375x667) - check content accessibility<br>
+10. Verify scrollbar styling matches design theme.<br>
+11. Test with screen reader - ensure all content is readable even if scrolled out of view initially.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Scrollbar appears when content exceeds container max-height<br>
+- Scrollbar visually consistent with site design<br>
+- Mouse wheel scrolling works smoothly<br>
+- Scrollbar thumb draggable<br>
+- All content accessible via scrolling<br>
+- Keyboard navigation (arrow keys, Page Up/Down) functions<br>
+- Scrolling works across all device sizes<br>
+- Screen reader can access all content within scrollable area<br>
+- No horizontal scrollbar appears<br>
+- Content not cut off or hidden<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
 
 ---
 
