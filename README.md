@@ -46,7 +46,6 @@
   - [Approach for Website Test Planning](#approach-for-website-test-planning)
 - [References](#references)
  
-
 # Milestone Project 2
 Development Milestone Project 2 - Interactive Front-End Development
 [⬆ Back to Table of contents](#table-of-contents)
@@ -3169,6 +3168,79 @@ The systematic debugging and resolution of 126 ESLint errors demonstrates:
 
 ---
 
+## Approach for Website Test Planning  
+[⬆ Back to Table of contents](#table-of-contents)
+
+### Definition of Purpose and Scope
+
+**Purpose** – Browsing site content across different devices, exploring booking options, viewing interactive Google Maps results and searching destinations provides smooth interaction delivered by the **Holiday Destination Finder** website for users. Behaviours such as JavaScript, CSS styling and HTML structure, through testing, will verify that these function reliably and accessibly (Google Developers, 2024; Mozilla Developer Network, 2024).
+
+**Scope** – DOM-based interactions across pages (index.html, search.html, and packages.html), accessibility features, error handling, third-party integrations, booking URL generation, search functionality, responsive layout, and user interface constitute the core modules and interactive elements that are tested (W3C, 2018; Jest, 2024).
+
+**Justification:** Accessible and responsive web applications have validation of industry-standard requirements, functionality of JavaScript-driven features, and real user behaviour ensured testing within the defined scope (Nielsen Norman Group, 2020; W3C, 2018).
+
+### Defining Clear Objectives
+
+- Correct operation is integrated within bookings, map results, category filters, and destination searches through verification (Google Developers, 2024).  
+- Incorporating navigation through assistive technologies, with compliance to **WCAG 2.1 accessibility standards** and usability upheld, is what the platform guarantees (W3C, 2018).  
+- Consistent formatting via CSS across desktop computers, laptops, tablets and mobile phones verifies interface layout responsiveness (Mozilla Developer Network, 2024).  
+- By employing JavaScript validation, user mistakes (e.g., blank entries, omitted dates) are through the system handled appropriately (Kent Beck, 2003).  
+
+**Justification:** Across the booking and search workflow, favourable user interaction, accessibility conformity and operational dependability is secured through the above objectives, evidencing dedication to professional standards (W3C, 2018; Nielsen Norman Group, 2020).
+
+### Types of Tests to Be Implemented
+
+| **Testing Type** | **Description** |
+|------------------|-----------------|
+| **Behavioural & Functional Testing** | JavaScript features tested such as search filters, booking buttons, smooth scrolling, input validation, and map display triggers (Jest, 2024) |
+| **Usability Testing** | Logical user flow, interactive button behaviour, clarity of navigation, and booking journey experience are evaluated (Nielsen Norman Group, 2020) |
+| **Responsive Testing** | Readable typography, map resizing, card layouts, and navbar behaviour on tablet, desktop, and mobile are confirmed (Mozilla Developer Network, 2024) |
+| **Accessibility Testing** | ARIA tags, colour contrast, keyboard-only navigation, labelled inputs, and semantic HTML regions are tested (W3C, 2018) |
+| **Cross-Browser Testing** | Run tests on Chrome, Firefox, Edge using developer tools and third-party tools (Google Developers, 2024) |
+| **Performance Testing** | API response handling, lazy loading imagery, page load speed, and rendering of destination cards are inspected (Google Developers, 2024) |
+| **Security Testing** | JavaScript input handling, safe treatment of user search queries, and URL encoding for booking links are validated (Mozilla Developer Network, 2024) |
+| **Regression Testing** | Affected components after modifications to JavaScript files (`script.js`, `search.js`, `packages.js`) are re-tested (Kent Beck, 2003) |
+
+**Justification:** For the development of a business-level website that would be suitable for public release, a required varied range of testing methods demonstrates a professional approach (Nielsen Norman Group, 2020; Google Developers, 2024).
+
+### Browser Developer Tools and Testing Utilities
+
+- **Chrome Developer Tools** (Inspect, mobile preview, network performance) (Google Developers, 2024)
+- **Google Lighthouse** (Performance, accessibility, SEO) (Google Developers, 2024)
+- **WAVE Web Accessibility Evaluation Tool** (WAVE, 2024)
+- **Responsively.app** (Multi-device interactive preview) (Responsively, 2024)
+- **jsdom + Jest** (Automated JavaScript unit testing for DOM manipulation) (Jest, 2024)
+- **URL Validators / Regex Testing Tools** (for booking URL generation) (Mozilla Developer Network, 2024)
+- **ESLint** (Open-source tool for identifying and fixing problems in JavaScript code) (ESLint, 2024)
+
+**Justification:** JavaScript functional assessment, physical-device emulation, efficiency evaluation and accessibility verification are facilitated with the above utilities that endorse industry-level testing practices (Google Developers, 2024; W3C, 2018).
+
+### Justification of the Importance of Each Test
+
+Each test supports:
+
+- **User objectives** through reliable search, smooth navigation, and successful access to booking platforms (Nielsen Norman Group, 2020).  
+- **Accessibility standards**, engaging with the site autonomously is provided to users with cognitive, physical, or visual limitations (W3C, 2018).  
+- **Technical reliability**, to function without failures are ensured for external API utilisation, CSS adaptability, and JavaScript components (Google Developers, 2024).  
+- **Course requirements**, particularly JavaScript integration, responsive UI, accessibility compliance, and test-driven development (Kent Beck, 2003).  
+
+**Justification:** Planning alignment with project objectives are demonstrated with both academic standards and practical web development requirements supported with every testing method (Mozilla Developer Network, 2024; Jest, 2024).
+
+### Inclusion of Test Summary and Evaluation
+
+I will, at the end of each test phase:
+
+- Summarise pass/fail test results  
+- Reflect on any improvements/modifications made following an unsuccessful test  
+- Log outstanding issues for further development  
+- Confirm readiness prior to deployment or enhancement  
+
+**Justification:** Evaluating progress after each iteration demonstrates supports responsible decision-making, professional practice, and showcases the iterative design model (Nielsen Norman Group, 2020; Kent Beck, 2003).
+
+**Note:** Test cases are directly associated to user stories, JavaScript functions, and accessibility targets to demonstrate traceability and meaningful alignment between objectives and results (W3C, 2018; Mozilla Developer Network, 2024).
+
+---
+
 ## References
 [⬆ Back to Table of contents](#table-of-contents)
 
@@ -3211,6 +3283,10 @@ The systematic debugging and resolution of 126 ESLint errors demonstrates:
   Available at: https://developers.google.com/web/fundamentals/testing
   (Accessed: 25 November 2025).  
 
+- **Google Developers (2024)** *Web Testing and Performance Tools*. 
+  Available at: https://developers.google.com/web 
+  (Accessed: 26 November 2025).
+
 - **Mozilla Developer Network (MDN). (2024)** *HTML5, CSS3 and JavaScript – Web Technology References.*
   Available at: [https://developer.mozilla.org/](https://developer.mozilla.org/)
   (Accessed: 29 October 2025).
@@ -3247,6 +3323,10 @@ The systematic debugging and resolution of 126 ESLint errors demonstrates:
   Available at: https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Testing
   (Accessed: 25 November 2025).
   
+- **Mozilla Developer Network (2024)** *Web Documentation for Programmers*. 
+  Available at: https://developer.mozilla.org/ 
+  (Accessed: 26 November 2025).
+
 - **W3C. (2023)** *Web Accessibility Initiative (WAI) Guidelines.*
   Available at: [https://www.w3.org/WAI/](https://www.w3.org/WAI/)
   (Accessed: 29 October 2025).
@@ -3355,6 +3435,10 @@ The systematic debugging and resolution of 126 ESLint errors demonstrates:
   Available at: https://www.nngroup.com/
   (Accessed: 23 November 2025).
 
+- **Nielsen Norman Group (2020)** *Usability Guidelines and User Testing*. 
+  Available at: https://www.nngroup.com/ 
+  (Accessed: 26 November 2025).
+
 - **jQuery Foundation. (2024)** *jQuery API Documentation.*
   Available at: https://api.jquery.com
   (Accessed: 03 November 2025).
@@ -3415,5 +3499,20 @@ The systematic debugging and resolution of 126 ESLint errors demonstrates:
   Available at: https://jestjs.io/docs/getting-started
   (Accessed: 25 November 2025).
   
+- **ESLint (2024)** *ESLint Documentation*. 
+  Available at: https://eslint.org/ 
+  (Accessed: 26 November 2025).
+
+- **Responsively (2024)** *Responsively App*. 
+  Available at: https://responsively.app/ 
+  (Accessed: 26 November 2025).
+
+- **WAVE (2024)** *Web Accessibility Evaluation Tool*. 
+  Available at: https://wave.webaim.org/ 
+  (Accessed: 26 November 2025).
+
+
+
+
 
 
