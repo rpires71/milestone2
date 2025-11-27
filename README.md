@@ -41,6 +41,8 @@
     -  [JEST Testing Limitations and Future Improvements](#jest-testing-limitations-and-future-improvements)
     -  [Conclusion](#conclusion)
   - [ESLint Debugging and Validation Procedures](#eslint-debugging-and-validation-procedures)
+    - [Overview](#overview)
+    - [ESLint Configuration Evolution](#eslint-configuration-evolution)
   - [Approach for Website Test Planning](#approach-for-website-test-planning)
 - [References](#references)
  
@@ -2343,6 +2345,7 @@ For future enhancements, a **maintainable test suite** was established, **regres
 [⬆ Back to Table of contents](#table-of-contents)
 
 ### Overview
+[⬆ Back to Table of contents](#table-of-contents)
 
 Following the completion of Jest unit testing, I adopted **ESLint** in place of **JSHint**, based on recommendations from Visual Studio Code. ESLint was employed to **validate code quality** in a thorough and comprehensive manner. Upon installation and configuration, the initial run highlighted a series of errors, and this section records the **systematic debugging process** undertaken to resolve **126 linting issues**, thereby demonstrating professional debugging methodology and problem‑solving capability.
 
@@ -2368,6 +2371,7 @@ npx eslint .
 </details>
 
 ### ESLint Configuration Evolution
+[⬆ Back to Table of contents](#table-of-contents)
 
 <details>
   <summary><strong>Issue 1: Jest Globals Not Recognised (~90 errors)</strong></summary>
@@ -3165,7 +3169,7 @@ The systematic debugging and resolution of 126 ESLint errors demonstrates:
 
 ---
 
-# References
+## References
 [⬆ Back to Table of contents](#table-of-contents)
 
 - **Code Institute (2025).**  *Interactive Front-End Development – Milestone Project 2 Specification.*
