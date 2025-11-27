@@ -1,5 +1,5 @@
 # Milestone 2 Project - Holiday Finder Website
-<img width="1453" height="826" alt="am-i-responsive" src="https://github.com/user-attachments/assets/81a35234-a4ef-40e0-a3f3-3ed687b5e86b" />
+<img width="1453" height="826" alt="am-i-responsive" src="https://github.com/user-attachments/assets/f673de24-b44c-431a-a633-aa8bacd21631" />
 
 ## Links
 - [Link to Live Website](https://rpires71.github.io/milestone2/) 
