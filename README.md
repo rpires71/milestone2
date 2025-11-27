@@ -3055,6 +3055,7 @@ npm run lint
 </details>
 <details>
 <summary><strong>Best Practices Established</strong></summary>
+
 #### Configuration Management
 - Use `eslint.config.mjs` for ESLint 9.x projects
 - Centralise all global declarations in config file
