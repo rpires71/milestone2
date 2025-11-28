@@ -5243,7 +5243,7 @@ I will, at the end of each test phase:
 </td>
   </tr>
   <tr>
-    td colspan="2"><strong>Steps:</strong><br>
+    <td colspan="2"><strong>Steps:</strong><br>
 1. <strong>Open Chrome DevTools -> Network tab.</strong><br>
 2. <strong>Filter by "Img" to show only image requests.</strong><br>
 3. <strong>Load index.html and inspect carousel images:</strong><br>
