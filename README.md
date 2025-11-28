@@ -5091,6 +5091,395 @@ I will, at the end of each test phase:
   </tr>
 </table>
 
+### Performance Testing - Planning
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose:** Regardless of device or network performance, it is essential to ensure the website loads promptly and operates efficiently under standard user conditions.
+
+**Description:** Overall system resource usage, responsiveness of interface components, and assessing the loading times of web pages is what is involved when evaluating performance. Verifying the optimisation of resources such as images, style sheets, scripts, and external API calls (Google Maps, Google Fonts) to guarantee a satisfactory user experience. To carry out these evaluations, tools such as Google Lighthouse, PageSpeed Insights, or GTmetrix may be utilised.
+
+**Justification:** User satisfaction, lower bounce rates, and enhanced accessibility for users with slower internet connections can be improved with fast-loading websites. By ensuring that the Holiday Destination Finder is efficient, scalable, and suitable for deployment, performance testing also aligns with best practices in web development and search engine optimisation. For this travel planning application, attention to quality assurance and preparedness for real-world usage scenarios is demonstrated by optimising performance.
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC031</td>
+    <td><strong>Feature:</strong> Page Load Time (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Measure the time taken for index.html, search.html, and packages.html to fully load, including all visible content, interactive elements, media (carousel images, destination cards), Google Maps API, and external resources (fonts, Bootstrap).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Fast load times enhance user satisfaction and reduce bounce rates for users searching travel destinations. Ensuring these key pages load within 2–3 seconds on desktop and 3–4 seconds on mobile aligns with performance best practices and supports a smooth user experience on all devices and network conditions.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+<strong>Part 1: Desktop Performance Testing</strong><br>
+1. Open Chrome browser in Incognito mode (to avoid cache interference).<br>
+2. Open Chrome DevTools (F12) -> Network tab.<br>
+3. Ensure "Disable cache" is checked in Network tab.<br>
+4. Load index.html and observe:<br>
+   - DOMContentLoaded time (when HTML parsed)<br>
+   - Load time (when all resources loaded)<br>
+   - Number of requests<br>
+   - Total page size<br>
+5. Document specific timings:<br>
+   - Time to First Contentful Paint (FCP)<br>
+   - Time to Largest Contentful Paint (LCP)<br>
+   - Time to Interactive (TTI)<br>
+6. Repeat for search.html (note Google Maps API load time).<br>
+7. Repeat for packages.html (note form rendering time).<br>
+<br>
+<strong>Part 2: Mobile Performance Testing</strong><br>
+8. In Chrome DevTools, enable Device Mode (Ctrl+Shift+M).<br>
+9. Select "Moto G Power" or "iPhone 12 Pro" device profile.<br>
+10. Enable throttling: "Fast 3G" or "Slow 4G" from Network dropdown.<br>
+11. Repeat load time measurements for all three pages.<br>
+12. Document mobile-specific metrics.<br>
+<br>
+<strong>Part 3: Google Lighthouse Testing</strong><br>
+13. Open Chrome DevTools -> Lighthouse tab.<br>
+14. Select "Performance" category.<br>
+15. Choose "Desktop" device.<br>
+16. Click "Generate report" for index.html.<br>
+17. Record Performance score (0-100).<br>
+18. Note specific metrics:<br>
+    - First Contentful Paint<br>
+    - Largest Contentful Paint<br>
+    - Total Blocking Time<br>
+    - Cumulative Layout Shift<br>
+    - Speed Index<br>
+19. Review "Opportunities" section for improvement suggestions.<br>
+20. Repeat Lighthouse test for search.html and packages.html.<br>
+21. Generate "Mobile" report for all pages.<br>
+<br>
+<strong>Part 4: PageSpeed Insights Testing</strong><br>
+22. Visit https://pagespeed.web.dev/<br>
+23. Enter deployed website URL (if available) or test locally.<br>
+24. Analyse both Mobile and Desktop results.<br>
+25. Compare with Lighthouse results.<br>
+26. Document Core Web Vitals:<br>
+    - LCP (Largest Contentful Paint): Target < 2.5s<br>
+    - FID (First Input Delay): Target < 100ms<br>
+    - CLS (Cumulative Layout Shift): Target < 0.1<br>
+<br>
+<strong>Part 5: Identify Performance Issues</strong><br>
+27. Check for render-blocking resources:<br>
+    - Bootstrap CSS loading<br>
+    - Google Fonts loading<br>
+    - Custom CSS (style.css)<br>
+28. Check for JavaScript blocking:<br>
+    - Bootstrap JS<br>
+    - Google Maps API<br>
+    - Custom scripts (script.js, search.js, packages.js)<br>
+29. Identify largest resources by size in Network tab.<br>
+30. Document any:<br>
+    - Oversized images<br>
+    - Uncompressed files<br>
+    - Excessive HTTP requests<br>
+    - Unused CSS/JavaScript<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+<strong>Desktop Performance (1920x1080, broadband):</strong><br>
+- index.html: Full load < 2.5 seconds<br>
+- search.html: Full load < 3 seconds (includes Google Maps API)<br>
+- packages.html: Full load < 2.5 seconds<br>
+- First Contentful Paint: < 1.5 seconds<br>
+- Largest Contentful Paint: < 2.5 seconds<br>
+- Time to Interactive: < 3 seconds<br>
+- Google Lighthouse Performance score: > 85<br>
+<br>
+<strong>Mobile Performance (Fast 3G/4G):</strong><br>
+- index.html: Full load < 4 seconds<br>
+- search.html: Full load < 5 seconds (includes Maps)<br>
+- packages.html: Full load < 4 seconds<br>
+- Largest Contentful Paint: < 4 seconds<br>
+- Google Lighthouse Mobile score: > 70<br>
+<br>
+<strong>Core Web Vitals:</strong><br>
+- LCP: < 2.5 seconds (Good)<br>
+- FID: < 100ms (Good)<br>
+- CLS: < 0.1 (Good)<br>
+<br>
+<strong>Resource Optimization:</strong><br>
+- No render-blocking CSS/JS warnings<br>
+- All images WebP format, properly sized<br>
+- Total page size < 2MB for index.html<br>
+- Total page size < 3MB for search.html (with Maps)<br>
+- Minimal unused CSS/JavaScript<br>
+- HTTP requests < 30 per page<br>
+<br>
+<strong>Visual Rendering:</strong><br>
+- All elements render without delay<br>
+- No layout shift during load (CLS < 0.1)<br>
+- Carousel images load progressively<br>
+- Google Maps loads asynchronously without blocking<br>
+- No visual glitches or flashing content<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC032</td>
+    <td><strong>Feature:</strong> Optimised images
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that all images across the website are appropriately compressed and sized for fast loading without sacrificing visual quality. Confirm that WebP format is used for carousel images, destination cards, and logos, with proper dimensions and compression levels.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Optimised images reduce page load time and bandwidth usage, contributing to better performance scores and an improved user experience—especially for users researching travel destinations on slower connections or mobile devices. It also supports accessibility and SEO best practices for travel websites.
+</td>
+  </tr>
+  <tr>
+    td colspan="2"><strong>Steps:</strong><br>
+1. <strong>Open Chrome DevTools -> Network tab.</strong><br>
+2. <strong>Filter by "Img" to show only image requests.</strong><br>
+3. <strong>Load index.html and inspect carousel images:</strong><br>
+   - img-paris.webp: Check file size and dimensions<br>
+   - img-tokyo.webp: Check file size and dimensions<br>
+   - img-nyc.webp: Check file size and dimensions<br>
+   - img-barcelona.webp: Check file size and dimensions<br>
+   - img-london.webp: Check file size and dimensions<br>
+   - logo-main.webp: Check file size<br>
+   - logo-blue-bg.webp (navbar): Check file size<br>
+4. <strong>Verify image dimensions match usage:</strong><br>
+   - Check if images are scaled down from much larger originals<br>
+   - Use DevTools to compare intrinsic size vs displayed size<br>
+   - Identify any images loaded at 2000px but displayed at 500px<br>
+5. <strong>Load search.html and inspect destination card images:</strong><br>
+   - img-2-nyc.webp: Should be sized for 200px height display<br>
+   - img-2-barcelona.webp: Check appropriate sizing<br>
+   - img-3-paris.webp: Check appropriate sizing<br>
+   - img-3-tokyo.webp: Check appropriate sizing<br>
+6. <strong>Check favicon images (PNG format is acceptable):</strong><br>
+   - apple-touch-icon.png: 180x180px<br>
+   - favicon-32x32.png: 32x32px<br>
+   - favicon-16x16.png: 16x16px<br>
+7. <strong>Run Google Lighthouse audit:</strong><br>
+   - Check "Properly size images" diagnostic<br>
+   - Check "Serve images in next-gen formats" diagnostic<br>
+   - Review "Opportunities" for image optimization<br>
+8. <strong>Run PageSpeed Insights:</strong><br>
+   - Check for "Efficiently encode images" suggestion<br>
+   - Check for "Serve images in modern formats" suggestion<br>
+   - Note any specific image optimization recommendations<br>
+9. <strong>Verify image compression quality:</strong><br>
+   - View images at full size on high-resolution display<br>
+   - Check for compression artifacts or blurriness<br>
+   - Ensure images maintain visual quality<br>
+10. <strong>Test image loading on slow connection:</strong><br>
+    - Enable "Slow 3G" throttling in DevTools<br>
+    - Verify images load progressively<br>
+    - Check that page remains usable while images load<br>
+11. <strong>Check total image weight:</strong><br>
+    - Sum file sizes of all images on each page<br>
+    - index.html: Total image weight should be < 1MB<br>
+    - search.html: Total image weight should be < 800KB<br>
+12. <strong>Verify WebP format usage:</strong><br>
+    - Confirm all major images use .webp extension<br>
+    - Verify browser support fallbacks if needed<br>
+</td>
+  </tr>
+  
+  <tr>
+   <td colspan="2"><strong>Expected Result:</strong><br>
+<strong>File Size Limits:</strong><br>
+- Individual carousel images: < 200KB each (5 images total)<br>
+- Individual destination card images: < 150KB each (4 images total)<br>
+- Logo images: < 50KB each<br>
+- No single image exceeds 300KB<br>
+<br>
+<strong>Format and Compression:</strong><br>
+- All carousel images use WebP format<br>
+- All destination card images use WebP format<br>
+- Logo images use WebP format<br>
+- Favicons use PNG format (standard practice)<br>
+- Images compressed with quality 75-85% (minimal visible quality loss)<br>
+<br>
+<strong>Dimensions:</strong><br>
+- Images not significantly oversized for display use<br>
+- Carousel images max 1920px width (match desktop max viewport)<br>
+- Destination cards max 400px width (match card container)<br>
+- No images loaded at 3000px but displayed at 300px<br>
+<br>
+<strong>Performance Impact:</strong><br>
+- Total image weight on index.html: < 1MB<br>
+- Total image weight on search.html: < 800KB<br>
+- Lighthouse shows no "Properly size images" warnings<br>
+- PageSpeed Insights shows no "Efficiently encode images" warnings<br>
+- All images use next-gen formats (WebP)<br>
+<br>
+<strong>Visual Quality:</strong><br>
+- Images appear sharp at full size<br>
+- No visible compression artifacts<br>
+- No blurriness or pixelation<br>
+- Carousel images display clearly on 1920px displays<br>
+- Destination card images display clearly at 200px height<br>
+<br>
+<strong>Loading Behavior:</strong><br>
+- Images load progressively (visible placeholder → full image)<br>
+- Page remains usable while images load<br>
+- No layout shift when images load (CLS < 0.1)<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC033</td>
+    <td><strong>Feature:</strong> Code Validation (HTML & CSS)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Validate the HTML and CSS code used across all three pages of the website (index.html, search.html, packages.html, and style.css) using tools such as the W3C Markup Validation Service and CSS Validation Service to check for syntax errors, deprecated tags, semantic accuracy, and standards compliance.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Clean, valid code enhances cross-browser compatibility, improves accessibility, and supports SEO for the Holiday Destination Finder. It also reduces the likelihood of rendering issues or broken functionality across different browsers and devices, and aligns with professional standards in modern web development. Valid code is particularly important for travel websites that must work reliably across diverse user devices and browsers.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+<strong>Part 1: HTML Validation</strong><br>
+1. Open W3C Markup Validation Service (https://validator.w3.org/).<br>
+2. <strong>Validate index.html:</strong><br>
+   - Choose "Validate by Direct Input" or "Validate by File Upload"<br>
+   - Paste HTML code or upload index.html<br>
+   - Click "Check"<br>
+   - Review results for errors and warnings<br>
+3. <strong>Validate search.html:</strong><br>
+   - Repeat validation process<br>
+   - Pay special attention to Google Maps integration code<br>
+   - Check for any inline JavaScript warnings<br>
+4. <strong>Validate packages.html:</strong><br>
+   - Repeat validation process<br>
+   - Check form elements for proper structure<br>
+   - Verify input types and attributes<br>
+5. <strong>Document all errors found:</strong><br>
+   - Record line numbers<br>
+   - Note error descriptions<br>
+   - Categorize by severity (error vs warning)<br>
+6. <strong>Check for common HTML issues:</strong><br>
+   - Unclosed tags<br>
+   - Duplicate IDs<br>
+   - Deprecated attributes<br>
+   - Missing required attributes (e.g., alt on images)<br>
+   - Invalid nesting of elements<br>
+   - Incorrect use of semantic elements<br>
+<br>
+<strong>Part 2: CSS Validation</strong><br>
+7. Open W3C CSS Validation Service (https://jigsaw.w3.org/css-validator/).<br>
+8. <strong>Validate style.css:</strong><br>
+   - Choose "By direct input" or "By file upload"<br>
+   - Paste CSS code or upload style.css<br>
+   - Select "CSS level 3 + SVG" profile<br>
+   - Click "Check"<br>
+   - Review results for errors and warnings<br>
+9. <strong>Review CSS warnings:</strong><br>
+   - Vendor prefixes warnings (acceptable if intentional)<br>
+   - Unknown properties (check if modern CSS features)<br>
+   - Property value warnings<br>
+10. <strong>Check for known acceptable warnings:</strong><br>
+    - backdrop-filter (modern CSS, may show warning)<br>
+    - scrollbar-width (Firefox-specific, may show warning)<br>
+    - Modern CSS Grid/Flexbox properties<br>
+    - CSS variables (should be fully supported now)<br>
+11. <strong>Verify !important flag usage:</strong><br>
+    - Check if !important flags are intentional (e.g., Bootstrap overrides)<br>
+    - Ensure !important is not overused<br>
+    - Document justified uses in style.css comments<br>
+<br>
+<strong>Part 3: Fix and Re-test</strong><br>
+12. <strong>Address critical errors:</strong><br>
+    - Fix any HTML syntax errors<br>
+    - Correct invalid tag usage<br>
+    - Fix CSS syntax errors<br>
+13. <strong>Re-validate after fixes:</strong><br>
+    - Run validators again on all pages<br>
+    - Verify errors reduced or eliminated<br>
+    - Document remaining warnings with justification<br>
+14. <strong>Test in browsers after fixes:</strong><br>
+    - Ensure fixes didn't break functionality<br>
+    - Verify visual appearance unchanged<br>
+    - Test interactive elements still work<br>
+<br>
+<strong>Part 4: Additional Code Quality Checks</strong><br>
+15. <strong>Run ESLint (if applicable for JavaScript):</strong><br>
+    - Already completed: 0 errors, 0 warnings ✓<br>
+    - Documented in testing suite<br>
+16. <strong>Check HTML structure with DevTools:</strong><br>
+    - Verify proper semantic HTML hierarchy<br>
+    - Check for accessibility tree structure<br>
+17. <strong>Review code formatting consistency:</strong><br>
+    - Indentation consistent<br>
+    - Naming conventions followed<br>
+    - Comments present and helpful<br>
+</td>
+  </tr>
+  <tr>
+   <td colspan="2"><strong>Expected Result:</strong><br>
+<strong>HTML Validation Results:</strong><br>
+- index.html: 0 errors, 0 warnings (or documented acceptable warnings)<br>
+- search.html: 0 errors, 0 warnings (or documented acceptable warnings)<br>
+- packages.html: 0 errors, 0 warnings (or documented acceptable warnings)<br>
+- No critical errors that affect functionality<br>
+- No deprecated HTML elements used<br>
+- All images have alt attributes<br>
+- All forms properly structured with labels<br>
+- Semantic HTML used appropriately (&lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;footer&gt;)<br>
+- No duplicate IDs<br>
+- All tags properly closed<br>
+<br>
+<strong>CSS Validation Results:</strong><br>
+- style.css: 0 errors<br>
+- Acceptable warnings for modern CSS features:<br>
+  * backdrop-filter (progressive enhancement)<br>
+  * scrollbar-width (browser-specific enhancement)<br>
+  * Vendor prefixes (intentional for compatibility)<br>
+- !important flags documented and justified (e.g., Bootstrap overrides)<br>
+- No syntax errors<br>
+- No invalid property values<br>
+- CSS variables properly declared in :root<br>
+<br>
+<strong>Code Quality:</strong><br>
+- Codebase clean and well-structured<br>
+- Semantic HTML reflects best practices<br>
+- Cross-browser compatibility maintained<br>
+- No rendering issues in tested browsers<br>
+- Functionality remains intact after validation fixes<br>
+- Code follows professional web development standards<br>
+<br>
+<strong>JavaScript Validation (Already Completed):</strong><br>
+- ESLint: 0 errors, 0 warnings ✓<br>
+- 19 Jest unit tests: All passing ✓<br>
+- 93% code coverage ✓<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
 ---
 
 ## References
