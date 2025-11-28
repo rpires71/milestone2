@@ -2336,7 +2336,7 @@ rm .eslintrc.json
 ```bash
 npm run lint
 - 112 problems (112 errors, 0 warnings)
-# Improved from 126 → 112 errors
+# Improved from 126 -> 112 errors
 ```
 
 **Progress:** Eliminated ~14 errors by using correct config format
@@ -4537,6 +4537,556 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Actual Result:</strong> </td>
   </tr>
 <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+### Accessibility Testing - Planning
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose:** Fulfilling acknowledged accessibility criteria to ensure the website is usable by all users, including individuals with disabilities.
+
+**Description:** Conformance with WCAG 2.1 standards, which emphasises features such as keyboard operability, screen reader support, adequate colour contrast, meaningful HTML semantics, ARIA properties, descriptive alternative text, and inclusive form controls is validated through accessibility testing.
+
+**Justification:** In accordance with the UK Equality Act 2010 and WCAG 2.1 guidelines, ensuring accessibility is both an ethical and legal requirement. Accommodating users with visual, auditory, motor, and cognitive impairments, professionally built websites must be universally accessible. Course learning objectives related to usability, inclusiveness, and established standards in contemporary web development are fulfilled by demonstrating accessibility testing.
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC024</td>
+    <td><strong>Feature:</strong> Colour Contrast</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Ensure that all text and interface elements maintain a minimum contrast ratio of 4.5:1 for body text and 3:1 for large text (18px+ or 14px+ bold) against their background colours. This applies to headings, body text, buttons, form labels, links, and interactive elements across all three pages (index.html, search.html, packages.html).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Adequate colour contrast is essential for users with low vision or colour vision deficiency. It is a requirement of WCAG 2.1 Success Criterion 1.4.3 (Contrast – Minimum) and demonstrates inclusive design. Maintaining proper contrast enhances readability, usability, and user satisfaction across all devices and lighting environments for users planning travel destinations.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Open the website on a desktop browser.<br>
+2. Use the WebAIM Contrast Checker (https://webaim.org/resources/contrastchecker/) or Chrome DevTools -> Lighthouse -> Accessibility audit.<br>
+3. Test colour combinations from the design system:<br>
+   <strong>Body Text Combinations (Require 4.5:1):</strong><br>
+   - Charcoal Grey (#2F3E46) on White (#FFFFFF)<br>
+   - Charcoal Grey (#2F3E46) on Sand Beige (#FAF3E0)<br>
+   - Charcoal Grey (#2F3E46) on White Smoke (#F5F5F5)<br>
+   - White (#FFFFFF) on Ocean Blue (#0077B6) navbar<br>
+   <strong>Heading Combinations (Require 3:1):</strong><br>
+   - Ocean Blue (#0077B6) on white backgrounds<br>
+   - Sky Blue (#90E0EF) on appropriate backgrounds<br>
+   <strong>Button Text (Require 4.5:1):</strong><br>
+   - White (#FFFFFF) on Coral Orange (#FF6B35) primary buttons<br>
+   - Button hover states<br>
+4. Inspect specific elements across all pages:<br>
+   <strong>index.html:</strong><br>
+   - "Discover Your Perfect Holiday Destination" heading (Ocean Blue)<br>
+   - About Us body text (Charcoal Grey on white)<br>
+   - "Start Exploring" button (white on Coral Orange)<br>
+   - Carousel captions (white on image overlays)<br>
+   - Footer text (white on dark background)<br>
+   <strong>search.html:</strong><br>
+   - Search button text<br>
+   - Category filter buttons (active and inactive states)<br>
+   - Popular Destinations headings (Ocean Blue)<br>
+   - Destination card text<br>
+   - "Explore" buttons (white on Coral Orange)<br>
+   <strong>packages.html:</strong><br>
+   - Form labels (Charcoal Grey)<br>
+   - Input field text<br>
+   - Booking buttons (white on Coral Orange)<br>
+   - Section headings<br>
+5. Record any elements failing the contrast check and note suggested improvements.<br>
+6. Test with Chrome Lighthouse accessibility audit for automated detection.<br>
+7. Use WAVE tool (https://wave.webaim.org/) for additional contrast verification.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+- All body text meets 4.5:1 contrast ratio minimum<br>
+- All large text/headings meet 3:1 contrast ratio minimum<br>
+- Charcoal Grey (#2F3E46) on white backgrounds passes (≥4.5:1)<br>
+- White text on Ocean Blue (#0077B6) navbar passes (≥4.5:1)<br>
+- White text on Coral Orange (#FF6B35) buttons passes (≥4.5:1)<br>
+- Ocean Blue headings on white backgrounds pass (≥3:1 for large text)<br>
+- No critical contrast failures reported by Lighthouse<br>
+- WAVE tool shows no contrast errors<br>
+- All interactive elements (buttons, links, filters) have adequate contrast<br>
+- Hover and focus states maintain sufficient contrast<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC025</td>
+    <td><strong>Feature:</strong> Keyboard Navigation</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Ensure users can navigate through all interactive elements (navigation links, buttons, form inputs, carousel controls, category filters, Google Maps controls) using Tab, Shift+Tab, Enter, Space, and Arrow keys, without requiring a mouse.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Many users with motor impairments or those using assistive technologies rely solely on the keyboard for navigation. This test supports WCAG 2.1 Success Criterion 2.1.1 (Keyboard Accessible) and ensures that the Holiday Destination Finder is operable for a wider audience. It also demonstrates commitment to accessibility best practices for travel planning websites.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Load index.html in a desktop browser (Chrome or Firefox).<br>
+2. Without using a mouse, press Tab key to navigate through focusable elements:<br>
+   - Navigation bar links (About Us, Search, Popular Destinations, Packages, Contact)<br>
+   - "Start Exploring" button<br>
+   - Carousel controls (previous/next arrows, indicators)<br>
+   - Footer contact tiles<br>
+3. Use Shift+Tab to navigate backwards through elements.<br>
+4. Press Enter to activate:<br>
+   - Navigation links<br>
+   - "Start Exploring" button<br>
+   - Carousel navigation arrows<br>
+5. Verify focus indicator (outline or highlight) is clearly visible on each element.<br>
+6. Load search.html and navigate using keyboard:<br>
+   - City search input field (type without mouse)<br>
+   - Search button (Enter key)<br>
+   - Category filter buttons (Tab to each, Enter to activate)<br>
+   - Popular Destinations "Explore" buttons<br>
+   - Google Maps (verify can tab to map, use arrow keys if applicable)<br>
+7. Load packages.html and navigate:<br>
+   - All form input fields (check-in, check-out, guests, city)<br>
+   - Date pickers (keyboard accessible)<br>
+   - All booking buttons (Hotels, Flights, Package, Activities)<br>
+8. Test that Tab order follows logical reading order on all pages.<br>
+9. Verify no keyboard traps (can always tab away from any element).<br>
+10. Test Enter key activates buttons and links appropriately.<br>
+11. Test Space key on buttons where applicable.<br>
+12. Verify carousel can be controlled via keyboard (arrows or tab+enter).<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+- All focusable elements accessible via Tab/Shift+Tab<br>
+- Focus indicators clearly visible on all interactive elements<br>
+- Tab order follows logical reading flow (top to bottom, left to right)<br>
+- Navigation links activate with Enter key<br>
+- Buttons activate with Enter or Space key<br>
+- Form inputs can receive focus and accept typed input<br>
+- Category filter buttons accessible and activatable via keyboard<br>
+- "Explore" buttons on Popular Destinations cards keyboard accessible<br>
+- Carousel controls can be operated without mouse<br>
+- Date pickers keyboard accessible (can open and select dates)<br>
+- Google Maps can receive focus (tabbing works)<br>
+- No keyboard traps anywhere on site<br>
+- Search functionality works with Enter key in input field<br>
+- All interactive elements on all three pages keyboard operable<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC026</td>
+    <td><strong>Feature:</strong> Screen Reader Compatibility</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that all content, headings, links, forms, carousel elements, Google Maps information, image alt text, and navigation elements are correctly read aloud by popular screen readers (NVDA on Windows or VoiceOver on macOS), following a logical reading order and reflecting the intended structure of the Holiday Destination Finder.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> This ensures compliance with WCAG 2.1 accessibility guidelines, particularly Success Criterion 1.3.1 (Info and Relationships) and 4.1.2 (Name, Role, Value). It is vital for supporting users who are blind or visually impaired and rely on screen readers to research travel destinations and make bookings. Testing this also demonstrates inclusive design practice and commitment to meeting the needs of all users.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Open the website in a browser supported by the screen reader:<br>
+   - Windows: Chrome with NVDA (free, download from nvaccess.org)<br>
+   - macOS: Safari with VoiceOver (built-in, activate with Cmd+F5)<br>
+2. Activate the screen reader.<br>
+3. <strong>Test index.html:</strong><br>
+   - Navigate using H key (heading navigation)<br>
+   - Verify heading hierarchy: H1 "Discover Your Perfect Holiday Destination", H2 "About Us", H5 "Key Features"<br>
+   - Verify navigation links announced clearly ("About Us link", "Search link", etc.)<br>
+   - Test carousel: Verify images have alt text read aloud ("Paris - Eiffel Tower", etc.)<br>
+   - Verify carousel controls announced ("Previous", "Next", "Slide 1 of 5")<br>
+   - Check "Start Exploring" button announced with purpose<br>
+   - Verify footer contact tiles readable<br>
+4. <strong>Test search.html:</strong><br>
+   - Verify "Search Destinations" and "Popular Destinations" headings read in order<br>
+   - Test search input: Verify label announced ("Search for a city" or similar)<br>
+   - Test category filter buttons: Each announced with purpose ("Attractions button", "Restaurants button")<br>
+   - Verify Popular Destinations cards read logically:<br>
+     * Heading: "New York City", "Barcelona", etc.<br>
+     * Description text<br>
+     * Button: "Explore NYC button" or similar<br>
+   - Test that destination card images have meaningful alt text<br>
+   - Verify Google Maps region announced (may be "Map region" or similar)<br>
+5. <strong>Test packages.html:</strong><br>
+   - Verify form labels announced correctly:<br>
+     * "Check-in date" + input field<br>
+     * "Check-out date" + input field<br>
+     * "Number of guests" + input field<br>
+     * "Destination city" + input field<br>
+   - Verify booking buttons clearly described:<br>
+     * "Book Hotels button"<br>
+     * "Book Flights button"<br>
+     * "Book Package button"<br>
+     * "Book Activities button"<br>
+   - Test form validation: Alerts announced if dates missing<br>
+6. Navigate through entire site using:<br>
+   - H key for headings<br>
+   - Tab key for focusable elements<br>
+   - Arrow keys for line-by-line reading<br>
+7. Verify no important information missed or misread.<br>
+8. Test that dynamic content (e.g., search results loading) announces changes if applicable.<br>
+9. Verify image alt text is meaningful, not generic ("image", "photo").<br>
+10. Check that decorative images are skipped or have empty alt attributes.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+- Screen reader reads content in logical, meaningful order<br>
+- Heading hierarchy correct: H1 -> H2 -> H3 -> H4 -> H5<br>
+- Navigation links clearly described with destination<br>
+- "Start Exploring" button purpose clear<br>
+- Carousel images have descriptive alt text ("Paris - Eiffel Tower", "Tokyo Cityscape", etc.)<br>
+- Carousel controls announced with function ("Previous slide", "Next slide", "Go to slide 2")<br>
+- Search input has associated label or aria-label<br>
+- Category filter buttons announced with purpose<br>
+- Popular Destinations cards read in logical order (heading, description, button)<br>
+- Destination card images have meaningful alt text ("New York City", "Barcelona", etc.)<br>
+- Form inputs have associated labels read aloud<br>
+- Booking buttons clearly described<br>
+- Form validation messages announced when triggered<br>
+- No interface components misread or described incorrectly<br>
+- No important content skipped<br>
+- Dynamic changes announced appropriately<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC027</td>
+    <td><strong>Feature:</strong> Semantic HTML</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Check that appropriate semantic HTML5 elements such as &lt;header&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;section&gt;, and &lt;footer&gt; are used to structure the content across all three pages. Verify that content hierarchy and meaning are conveyed clearly through correct use of headings and tags, ensuring assistive technologies can properly interpret the Holiday Destination Finder's layout.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Semantic HTML enhances accessibility by helping assistive technologies understand the layout and importance of content. It also improves SEO and aligns with WCAG 2.1 Success Criterion 1.3.1 (Info and Relationships). Ensuring semantic structure supports a professional standard in modern web development and helps screen reader users navigate travel destination information effectively.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Open the browser's developer tools (Chrome DevTools: F12 or right-click -> Inspect).<br>
+2. <strong>Inspect index.html structure:</strong><br>
+   - Verify &lt;nav&gt; tag contains navigation bar<br>
+   - Verify &lt;header&gt; tag (or appropriate header section) for hero section<br>
+   - Verify &lt;main&gt; tag wraps main content (About Us + Carousel)<br>
+   - Verify &lt;section&gt; tags used appropriately within main<br>
+   - Verify &lt;footer&gt; tag contains footer content with id="contact"<br>
+3. <strong>Inspect search.html structure:</strong><br>
+   - Verify &lt;nav&gt; for navigation<br>
+   - Verify &lt;main&gt; wraps search functionality and Popular Destinations<br>
+   - Verify &lt;section id="popular"&gt; for Popular Destinations<br>
+   - Verify &lt;footer&gt; for footer content<br>
+4. <strong>Inspect packages.html structure:</strong><br>
+   - Verify &lt;nav&gt; for navigation<br>
+   - Verify &lt;main&gt; wraps booking forms<br>
+   - Verify &lt;section&gt; tags separate different booking types if applicable<br>
+   - Verify &lt;footer&gt; for footer content<br>
+5. <strong>Check heading hierarchy on each page:</strong><br>
+   <strong>index.html:</strong><br>
+   - H1: "Discover Your Perfect Holiday Destination" (only one H1)<br>
+   - H2: "About Us"<br>
+   - H5: "Key Features"<br>
+   - Verify no skipped levels (e.g., H2 -> H4 without H3)<br>
+   <strong>search.html:</strong><br>
+   - Check H1 or H2 for main "Search Destinations" heading<br>
+   - H2: "Popular Destinations"<br>
+   - H4: Destination card titles (NYC, Barcelona, Paris, Tokyo)<br>
+   - Verify logical nesting<br>
+   <strong>packages.html:</strong><br>
+   - Verify main heading (H1 or H2) for "Holiday Packages"<br>
+   - Check subheading hierarchy for package types<br>
+6. Ensure ARIA roles are NOT used to replace semantics unnecessarily:<br>
+   - Check for &lt;div role="main"&gt; when &lt;main&gt; could be used<br>
+   - Check for &lt;div role="navigation"&gt; when &lt;nav&gt; could be used<br>
+7. Validate HTML using W3C Markup Validator (https://validator.w3.org/):<br>
+   - Upload or enter URL for each page<br>
+   - Check for structural or nesting errors<br>
+   - Verify no semantic HTML errors<br>
+8. Use browser's Accessibility Tree view (Chrome DevTools -> Accessibility tab) to verify semantic structure is properly exposed.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+- All three pages use semantic HTML5 tags appropriately<br>
+- &lt;nav&gt; contains navigation on all pages<br>
+- &lt;main&gt; wraps main content on all pages (only one per page)<br>
+- &lt;section&gt; tags used for distinct content sections<br>
+- &lt;footer&gt; used for footer on all pages<br>
+- Heading hierarchy follows logical structure without skipped levels<br>
+- Single H1 per page as primary heading<br>
+- index.html: H1 -> H2 -> H5 (or appropriate nesting)<br>
+- search.html: Proper hierarchy for search section and Popular Destinations<br>
+- packages.html: Logical heading structure for forms<br>
+- No unnecessary ARIA roles duplicating semantic HTML<br>
+- W3C Validator shows no semantic HTML errors<br>
+- Accessibility Tree shows proper structure<br>
+- Screen readers can interpret page regions effectively<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC028</td>
+    <td><strong>Feature:</strong> Alt Text on Images</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Check that all meaningful images (carousel slides, destination cards, logos) include appropriate alt attributes describing their content or function. Ensure decorative images either have empty alt attributes (alt="") or are handled with appropriate ARIA attributes (aria-hidden="true").
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Providing descriptive alt text is essential for users who rely on screen readers to understand visual content about travel destinations. It ensures compliance with WCAG 2.1 Success Criterion 1.1.1 (Non-text Content) and supports accessibility for users with visual impairments. It also improves SEO and overall content quality for travel websites.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Inspect images on index.html using browser developer tools:<br>
+   - Logo image: Check for alt="Holiday Finder Logo" or similar<br>
+   - Main logo icon: Check for alt="Official Logo Icon" or similar<br>
+   - Carousel images (5 total):<br>
+     * img-paris.webp: alt="Paris - Eiffel Tower"<br>
+     * img-tokyo.webp: alt="Tokyo Cityscape"<br>
+     * img-nyc.webp: alt="New York City"<br>
+     * img-barcelona.webp: alt="Barcelona"<br>
+     * img-london.webp: alt="London"<br>
+2. Inspect images on search.html:<br>
+   - Verify Popular Destinations card images have meaningful alt text:<br>
+     * img-2-nyc.webp: alt="New York City"<br>
+     * img-2-barcelona.webp: alt="Barcelona"<br>
+     * img-3-paris.webp: alt="Paris"<br>
+     * img-3-tokyo.webp: alt="Tokyo"<br>
+3. Check any decorative images or background images:<br>
+   - Verify they have alt="" (empty alt attribute)<br>
+   - Or verify they have aria-hidden="true"<br>
+4. Inspect all &lt;img&gt; tags across all three pages:<br>
+   - Confirm each has an alt attribute (even if empty for decorative)<br>
+   - Verify no missing alt attributes<br>
+5. Use screen reader (NVDA or VoiceOver) to test image announcements:<br>
+   - Navigate to each image<br>
+   - Verify alt text is read appropriately<br>
+   - Verify decorative images are skipped or not announced<br>
+6. Run automated checks:<br>
+   - Chrome Lighthouse accessibility audit<br>
+   - WAVE tool (https://wave.webaim.org/)<br>
+   - Check for missing alt text errors<br>
+7. Verify alt text is descriptive and contextual:<br>
+   - Not generic ("image", "photo")<br>
+   - Describes destination/content<br>
+   - Concise but meaningful<br>
+8. Check that carousel control icons (prev/next arrows) have aria-hidden="true" since they're decorative with text alternatives.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+- All content images have meaningful alt attributes<br>
+- Logo images have descriptive alt text<br>
+- Carousel images have destination-specific alt text:<br>
+  * "Paris - Eiffel Tower", "Tokyo Cityscape", "New York City", "Barcelona", "London"<br>
+- Destination card images have city-specific alt text<br>
+- Decorative images have alt="" or aria-hidden="true"<br>
+- No missing alt attributes on any &lt;img&gt; tags<br>
+- Screen reader announces image alt text appropriately<br>
+- Decorative images skipped by screen reader<br>
+- Lighthouse shows no missing alt text errors<br>
+- WAVE tool shows no alt text errors<br>
+- Alt text is descriptive, not generic<br>
+- Alt text concise but provides sufficient context<br>
+- Carousel control icons properly hidden from screen readers (aria-hidden="true")<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC029</td>
+    <td><strong>Feature:</strong> ARIA Attributes</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that ARIA attributes (such as aria-label, aria-describedby, aria-current, aria-expanded, aria-controls, aria-hidden) are correctly used on interactive or dynamic elements like navigation toggles, carousel controls, form validation, and buttons. Confirm they provide additional context where native HTML elements alone are insufficient.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> ARIA attributes are essential in improving accessibility for users relying on screen readers or other assistive technologies, especially where default semantic elements do not provide enough context. This supports WCAG 2.1 guidelines and enhances usability by reducing confusion and improving navigation for users with cognitive or visual impairments searching for travel destinations.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. <strong>Identify ARIA usage on index.html:</strong><br>
+   - Hamburger menu button: Check for aria-label="Toggle navigation", aria-expanded="false", aria-controls="navbarNav"<br>
+   - Active navigation link: Check for aria-current="page"<br>
+   - Carousel indicators: Check for aria-label="Slide 1", aria-label="Slide 2", etc.<br>
+   - Carousel indicator active state: Check for aria-current="true"<br>
+   - Carousel control icons: Check for aria-hidden="true" (decorative icons with text alternatives)<br>
+2. <strong>Identify ARIA usage on search.html:</strong><br>
+   - Hamburger menu: Same as above<br>
+   - Search button: Check if aria-label provides additional context if needed<br>
+   - Category filter buttons: Check for aria-label if button text alone insufficient<br>
+   - Popular Destinations "Explore" buttons: Verify clear labeling<br>
+3. <strong>Identify ARIA usage on packages.html:</strong><br>
+   - Form inputs: Check if aria-describedby used for additional instructions<br>
+   - Form validation: Check if error messages use aria-live or aria-invalid<br>
+   - Booking buttons: Verify clear purpose (may use aria-label if needed)<br>
+4. Use browser developer tools to inspect elements for ARIA attributes:<br>
+   - Right-click element -> Inspect<br>
+   - Look for aria-* attributes in HTML<br>
+5. Verify ARIA attributes are correct and meaningful:<br>
+   - aria-label provides clear description<br>
+   - aria-expanded reflects actual state (true/false)<br>
+   - aria-controls references correct element ID<br>
+   - aria-current="page" on active navigation link<br>
+   - aria-hidden="true" only on truly decorative elements<br>
+6. Use screen reader (NVDA or VoiceOver) to test ARIA announcements:<br>
+   - Navigate to hamburger menu: Should announce "Toggle navigation button, collapsed" or similar<br>
+   - Click hamburger menu: Should announce "expanded" state<br>
+   - Navigate carousel indicators: Should announce "Slide 1 of 5" or similar<br>
+   - Navigate to active nav link: Should indicate current page<br>
+7. Run automated ARIA checks:<br>
+   - Chrome Lighthouse accessibility audit<br>
+   - axe DevTools extension (install from Chrome Web Store)<br>
+   - WAVE tool<br>
+8. Check for common ARIA errors:<br>
+   - Missing required ARIA attributes<br>
+   - Invalid ARIA attribute values<br>
+   - Redundant ARIA (e.g., aria-label on element with visible label)<br>
+   - Conflicting ARIA attributes<br>
+9. Verify ARIA doesn't override semantic HTML unnecessarily.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+- Hamburger menu has appropriate ARIA attributes:<br>
+  * aria-label="Toggle navigation"<br>
+  * aria-expanded reflects state (false when closed, true when open)<br>
+  * aria-controls="navbarNav" references correct element<br>
+- Active navigation link has aria-current="page"<br>
+- Carousel indicators have aria-label="Slide 1", "Slide 2", etc.<br>
+- Active carousel indicator has aria-current="true"<br>
+- Carousel control icons have aria-hidden="true" (decorative with text alternatives)<br>
+- Form validation uses appropriate ARIA (aria-invalid, aria-describedby if needed)<br>
+- All ARIA attributes syntactically correct<br>
+- ARIA enhances accessibility without redundancy<br>
+- Screen reader announces ARIA-enhanced elements correctly<br>
+- Automated tools show no ARIA errors<br>
+- No conflicting or invalid ARIA attributes<br>
+- ARIA used appropriately where HTML semantics insufficient<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC030</td>
+    <td><strong>Feature:</strong> Skip to Main Content Link</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify the presence and functionality of a "Skip to Content" or "Skip to Main Content" link that allows users using a keyboard or screen reader to bypass repetitive navigation and jump directly to the main content area (&lt;main&gt; tag) on each page.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> This feature significantly improves accessibility for users with visual or motor impairments by reducing the number of keystrokes required to access core content about destinations, search functionality, or booking forms. It aligns with WCAG 2.1 Success Criterion 2.4.1 (Bypass Blocks) and enhances the usability of the site for all users relying on assistive technologies or keyboard navigation.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Load index.html in a browser.<br>
+2. Without clicking anywhere, press the Tab key upon page load.<br>
+3. Observe whether a visible "Skip to Content" or "Skip to Main Content" link appears as the first focusable element.<br>
+4. If link is visually hidden by default, verify it becomes visible when focused (common implementation).<br>
+5. When the skip link is focused, press Enter.<br>
+6. Verify the page scrolls or focus moves directly to the &lt;main&gt; content area (About Us section).<br>
+7. Confirm navigation was bypassed (didn't have to tab through all nav links).<br>
+8. Repeat test on search.html:<br>
+   - Tab to skip link<br>
+   - Press Enter<br>
+   - Verify jump to search section/main content<br>
+9. Repeat test on packages.html:<br>
+   - Tab to skip link<br>
+   - Press Enter<br>
+   - Verify jump to booking form/main content<br>
+10. Test with screen reader (NVDA or VoiceOver):<br>
+    - Verify skip link announced clearly ("Skip to main content link" or similar)<br>
+    - Verify link functions as expected when activated<br>
+11. Inspect implementation in HTML:<br>
+    - Check if skip link exists near top of &lt;body&gt;<br>
+    - Verify href="#main" or similar pointing to main content<br>
+    - Check CSS for visibility approach (e.g., .visually-hidden class that shows on focus)<br>
+12. If skip link not present, document as missing feature requiring implementation.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+<strong>If skip link is implemented:</strong><br>
+- Skip link appears as first focusable element on Tab<br>
+- Link is visually perceivable when focused (even if hidden by default)<br>
+- Pressing Enter on skip link navigates to main content<br>
+- Focus moves to &lt;main&gt; element or first heading in main content<br>
+- Navigation menu bypassed (user doesn't have to tab through all links)<br>
+- Functionality consistent across all three pages<br>
+- Screen reader announces link clearly ("Skip to main content")<br>
+- Link functions correctly with screen reader<br>
+- Implementation follows best practices (href="#main" or similar)<br>
+- Meets WCAG 2.1 SC 2.4.1 (Bypass Blocks)<br>
+<br>
+<strong>If skip link is NOT implemented:</strong><br>
+- Document as accessibility enhancement needed<br>
+- Note that without skip link, keyboard users must tab through all navigation on each page<br>
+- Recommend implementation for WCAG 2.1 Level A compliance<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
