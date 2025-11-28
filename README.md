@@ -3,7 +3,7 @@
 
 ## Links
 - [Link to Live Website](https://rpires71.github.io/milestone2/) 
-- [GitHub Project Repository](https://github.com/rpires71/milestone2)
+- [GitHub Project Repository](https://github.com/rpires71/milestone-2)
 
 ## Table of contents
 
@@ -6099,6 +6099,113 @@ I will, at the end of each test phase:
   </tr>
 </table>
     </details>
+
+---
+
+## Project Setup with GitHub and Visual Studio Code
+[⬆ Back to Table of contents](#table-of-contents)
+
+The following content documents the creation of the `milestone-2` repository on GitHub and how Visual Studio Code (VS Code) was configured for day-to-day development.
+
+### 1. Creation of the `milestone-2` repository on GitHub
+
+- **New repository:** On GitHub, click **New** (green button) -> Repository name: `milestone-2` (public).
+- **Initialise:** Tick **Add a README**.
+- **Add `.gitignore`:** No `.gitignore`.
+- **Add license:** No license.
+- **Create:** Click **Create repository** (green button).
+
+<img width="843" height="842" alt="image" src="https://github.com/user-attachments/assets/29dadbac-81b0-4e07-b767-3f433ec85baa" />
+
+**Result:** GitHub hosted an empty repository with a README on the `main` branch.
+
+<img width="513" height="131" alt="image" src="https://github.com/user-attachments/assets/1c0b9dc9-7273-4978-9c8e-e552c0447dad" />
+
+### 2. Connecting Visual Studio Code to the GitHub Repository (Using the VS Code Integrated Terminal)
+
+- Opened my working folder in VS Code (**File → Open Folder**) and created/opened a `milestone-2` directory.
+
+- Opened **Terminal** (Command Prompt) and initialized Git:
+
+  ```bash
+  git init
+
+- **Added and committed initial content locally:**
+
+  ```bash
+  git add README.md
+  git commit -m "initial commit"
+
+- **Pointed the local repo at the GitHub remote and aligned branch names:**
+
+  ```bash
+  git branch -M main
+  git remote add origin https://github.com/rpires71/milestone-2.git
+  git push -u origin main
+
+- **Verified the repository was connected:** `README.md` appeared in the VS Code Explorer, and pushes went to GitHub.
+
+**Note:** From then on, my task-to-task loop to publish changes was:
+
+```bash
+git add .           # (Note the space: add everything in the folder)
+git commit -m "first commit"
+git push
+```
+### 3. Git identity setup (so commits show my name/email)
+
+```bash
+git config --global user.name "Roberto Pires"
+git config --global user.email "roberto.pires@gmail.com"
+git config --global init.defaultBranch main
+```
+### 4.	Local website verification during development (before deployment)
+
+- Used Live Server in VS Code (right-click index.html -> Open with Live Server), or
+ran a quick local server via Python when needed:
+
+```bash
+ python -m http.server
+```
+- Then I opened http://localhost:8000 in the browser.
+
+<img width="805" height="206" alt="image" src="https://github.com/user-attachments/assets/8f335661-a25f-4a52-b5a7-1b16ae60adcf" />
+
+### 5.	Why I used the terminal
+- **I deliberately used VS Code's integrated terminal (Command Prompt) to show CLI proficiency and keep a simple, reproducible workflow on any Windows machine—no extensions required for Git tasks.**
+
+**Final state after Milestone 2**
+- **A GitHub repo (`milestone-2`) with `main` as the default branch.**
+- **A local VS Code project linked to that repo via `origin`.**
+
+**A repeatable commit/push loop:**
+```bash
+git add .
+git commit -m "message"
+git push
+```
+
+- **A reliable way to preview locally (Live Server or `python -m http.server`) before deploying.**
+- **Clear procedures to diagnose push issues and to fix branch/remote mismatches when they occur.**
+
+### Justification  
+
+To ensure that my workflow was consistent, effective, and aligned with professional standards, as well as to comply with the assignment requirements, GitHub and Visual Studio Code were deliberately selected for use in the **Milestone 2** project.  
+
+Enabling secure storage of my project files and comprehensive visibility of my development history, I established a **centralised version control environment** which commenced with the creation of a remote repository on GitHub. A fundamental industry-standard practice for both collaborative and independent development projects, ensuring that every modification was documented with auditable commit messages, GitHub was initialised locally and connected to the remote.  
+
+To demonstrate proficiency with the Git **command line interface (CLI)**, I opted to use the VS Code integrated terminal instead of graphical extensions. The workflow can be replicated in any professional context with a reduced dependency on plugins, while this approach is also transferable to other environments (*Linux, macOS, Windows*). Furthermore, my technical experience was enhanced by deepening my understanding of the underlying Git commands provided by the CLI.  
+
+To my profile, ensuring all commits were attributed as accurately as possible, which justified the inclusion of identity configuration (`git config`). While potential employers and collaborators can clearly verify authorship on GitHub, accountability and professional branding practices are upheld.  
+
+Ensuring issues could be identified and resolved before deployment, previewing the website locally through **Live Server** and `python -m http.server` was a standard practice. Broken links, layout inconsistencies, or accessibility issues being published were rectified, ensuring the project was safeguarded. Changes are validated in a staging environment before release when testing locally, which also reflects a professional development workflow.  
+
+The obstacles I encountered—such as **mismatched branches** (`master` vs `main`), **missing upstream configurations**, and **divergent histories**—were opportunities to build resilience and problem-solving skills. For example, the *“no upstream branch”* error required me to investigate how local branches are linked to remote tracking branches. By learning to use commands such as:  
+
+```bash
+git push -u origin main
+git branch -M main
+```
 
 ---
 
