@@ -3904,6 +3904,350 @@ I will, at the end of each test phase:
   </tr>
 </table>
 
+### Usability and Typography Testing - Planning
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose:** Ensure typographic support across all devices in terms of legibility, visual structure, and a professional appearance. Confirm that the site offers a user-friendly and intuitive experience that meets the expectations of the target audience.
+
+**Description:** Font application (Montserrat for headings and Lato for body text) is evaluated by this test in terms of clarity, uniformity, and adaptability. Assessment of overall typographic hierarchy, line height, text sizing, and font weight. Testing ensures that navigation, page layout, and interactive elements are intuitive and inclusive for users of varied backgrounds and requirements.
+
+**Justification:** The following tests contribute to a reliable and coherent interface. Also, legible, well-organised typography improves user comprehension and minimises visual fatigue. WCAG 2.1 readability and accessibility standards are fundamentally adhered to. Both course objectives and industry-standard web design practices are supported by effective usability, which also directly impacts user satisfaction and interaction.
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC016</td>
+    <td><strong>Feature:</strong> Visual consistency</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that layout structure, colour palette, typography, spacing, and UI components (e.g. buttons, headings, links) remain uniform across all three pages (index.html, search.html, packages.html).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Consistent design improves user experience by reinforcing brand identity, reducing cognitive load, and supporting navigation familiarity. It meets professional standards of user interface design and contributes to accessibility, usability, and aesthetic quality.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Open all three pages of the website (index.html, search.html, packages.html).<br>
+2. Compare layout alignment, margins, padding, and spacing between components.<br>
+3. Verify consistent use of brand colours across pages:<br>
+   - Ocean Blue (#0077B6) for primary headings and navbar<br>
+   - Sky Blue (#90E0EF) for accents and hover states<br>
+   - Coral Orange (#FF6B35) for CTA buttons and active states<br>
+   - Sand Beige (#FAF3E0) and White Smoke (#F5F5F5) for backgrounds<br>
+   - Charcoal Grey (#2F3E46) for body text<br>
+4. Check that the same heading styles and font families are applied:<br>
+   - Montserrat for all headings (H1, H2, H3, H4, H5)<br>
+   - Lato for all body text and paragraphs<br>
+5. Ensure buttons and interactive elements are styled identically across pages:<br>
+   - Primary buttons (coral orange background)<br>
+   - Action buttons (category filters on search.html)<br>
+   - Hover effects consistent<br>
+6. Verify the same navigation bar appears on all pages with identical styling.<br>
+7. Verify the same footer structure and styling appears on all pages.<br>
+8. Check for consistent icon usage (Bootstrap Icons - bi-*) across pages.<br>
+9. Verify consistent spacing using CSS variables (--spacing-xs through --spacing-xl).<br>
+10. Test on desktop (1920x1080), tablet (768x1024), and mobile (375x667) to ensure consistency remains across breakpoints.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+- All three pages display cohesive, uniform design<br>
+- Brand colour palette (Ocean Blue, Sky Blue, Coral Orange) applied consistently<br>
+- Typography uses Montserrat for headings, Lato for body text throughout<br>
+- Navigation and footer identical across all pages<br>
+- Button styling consistent (primary buttons coral orange, hover states sky blue)<br>
+- Spacing follows design system variables<br>
+- Visual consistency maintained across all device sizes<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC017</td>
+    <td><strong>Feature:</strong> Font Readability</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Evaluate whether the selected fonts (e.g. Montserrat for headings and Lato for body text) are legible and accessible across different devices, screen sizes, and lighting conditions. Verify adequate size, spacing, and contrast.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Readable typography is essential for accessibility, especially for users with dyslexia, low vision, or cognitive impairments. It also enhances usability and aligns with WCAG 2.1 guidelines on minimum text size and contrast. Ensures the content is understandable for all users planning holiday destinations.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. View the website on desktop, tablet, and mobile screens.<br>
+2. Check that the body font size is at least 16px using browser DevTools:<br>
+   - Inspect body text in About Us section (index.html)<br>
+   - Inspect search results descriptions (search.html)<br>
+   - Inspect booking form labels (packages.html)<br>
+3. Verify Lato font (var(--font-body)) is applied to all body text.<br>
+4. Verify Montserrat font (var(--font-heading)) is applied to all headings.<br>
+5. Confirm adequate line spacing (line-height at least 1.5x font size).<br>
+6. Confirm paragraph spacing provides clear separation between text blocks.<br>
+7. Inspect text contrast against backgrounds using WebAIM Contrast Checker:<br>
+   - Charcoal Grey (#2F3E46) text on white/light backgrounds<br>
+   - White text on Ocean Blue (#0077B6) backgrounds<br>
+   - Button text (white) on Coral Orange (#FF6B35) backgrounds<br>
+8. Ensure headings are clearly distinguishable from body text:<br>
+   - By font family (Montserrat vs Lato)<br>
+   - By font weight (bold headings)<br>
+   - By font size (larger headings)<br>
+   - By colour (Ocean Blue or Sky Blue for headings)<br>
+9. Test zooming to 200% and verify text remains legible without breaking layout.<br>
+10. Test readability in different lighting conditions (bright and dim).<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+- Body text minimum 16px across all pages<br>
+- Lato font applied consistently to body text<br>
+- Montserrat font applied consistently to headings<br>
+- Line spacing meets WCAG 2.1 standards (1.5x minimum)<br>
+- Text contrast ratios meet WCAG 2.1 AA standards (4.5:1 minimum for body text, 3:1 for large text)<br>
+- Headings clearly distinguishable by font, weight, size, and colour<br>
+- Text readable at 200% zoom without layout issues<br>
+- Content legible in various lighting conditions<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+ <table>
+  <tr>
+    <td><strong>Test Case:</strong> TC018</td>
+    <td><strong>Feature:</strong> Visual Hierarchy</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Assess whether headings, subheadings, body text, buttons, and key elements are structured and styled to guide the user’s attention logically through each page. Confirm the use of font weights, sizes, spacing, and positioning to indicate importance.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> A clear visual hierarchy helps users quickly understand the structure of content and navigate intuitively—especially important for users searching destinations, comparing options, or completing booking forms. It enhances usability, supports accessibility (WCAG 2.1 Success Criterion 1.3.1), and strengthens the professional tone of the site.
+</td>
+  </tr>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Navigate through each page (index.html, search.html, packages.html).<br>
+2. On index.html, verify hierarchy:<br>
+   - H1: "Discover Your Perfect Holiday Destination" (display-5, fw-bold)<br>
+   - H2: "About Us" (mb-4)<br>
+   - H5: "Key Features:" (mb-3)<br>
+   - Body text: paragraphs with adequate spacing<br>
+   - CTA button: "Start Exploring" visually prominent (btn-primary btn-lg)<br>
+3. On search.html, verify hierarchy:<br>
+   - H2: "Search Destinations" section heading<br>
+   - H2: "Popular Destinations" (display-6 fw-bold)<br>
+   - H4: Destination card titles (NYC, Barcelona, Paris, Tokyo)<br>
+   - Body text: descriptions and results<br>
+   - Action buttons: category filters clearly visible<br>
+4. On packages.html, verify hierarchy:<br>
+   - H1/H2: Main "Holiday Packages" heading<br>
+   - H3/H4: Package type headings<br>
+   - Form labels: clear and associated with inputs<br>
+   - Booking buttons: prominent and actionable<br>
+5. Use browser DevTools to inspect semantic HTML structure:<br>
+   - Verify proper H1 -> H2 -> H3 -> H4 nesting (no skipped levels)<br>
+   - Check only one H1 per page<br>
+3. Confirm that headings are more prominent than body text (by size, weight, or spacing).<br>
+4. Ensure call-to-action buttons and links stand out with contrast or position.<br>
+5. Review alignment and grouping of elements (e.g. form fields, card layouts, sections).<br>
+6. Confirm that headings are more prominent than body text:<br>
+   - Larger font size<br>
+   - Bold font weight (600 or 700)<br>
+   - Montserrat font family vs Lato for body<br>
+   - Ocean Blue or Sky Blue colour vs Charcoal Grey for body<br>
+7. Ensure call-to-action buttons stand out:<br>
+   - Coral Orange background (--coral-orange)<br>
+   - White text with good contrast<br>
+   - Positioned prominently within sections<br>
+8. Review alignment and grouping:<br>
+   - Destination cards aligned in grid (search.html)<br>
+   - Form fields grouped logically (packages.html)<br>
+   - About Us content and carousel side-by-side (index.html)<br>
+9. Test on desktop, tablet, and mobile to verify hierarchy maintained across breakpoints.<br>
+10. Check that no content competes unnecessarily for attention (appropriate use of emphasis).<br>
+</td>
+  </tr>
+  <tr>
+   <td colspan="2"><strong>Expected Result:</strong><br>
+- Semantic heading structure (H1 -> H2 -> H3 -> H4) correctly implemented<br>
+- Single H1 per page<br>
+- Headings visually distinct from body text (Montserrat, larger size, bold, Ocean/Sky Blue)<br>
+- CTA buttons prominent with Coral Orange background<br>
+- Visual flow guides users logically through content<br>
+- Cards and form elements properly grouped and aligned<br>
+- Hierarchy maintained across all device sizes<br>
+- Users can quickly scan and understand page structure<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC019</td>
+    <td><strong>Feature:</strong> Text Spacing</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Evaluate whether spacing between lines, letters, and paragraphs follows accessibility and readability standards across all content. Confirm consistent application throughout all pages using the CSS spacing variables (--spacing-xs through --spacing-xl).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Proper text spacing improves legibility, reduces cognitive load, and supports users with visual or reading difficulties (e.g. dyslexia). It contributes to a cleaner layout, professional tone, and aligns with WCAG 2.1 Success Criterion 1.4.12 (Text Spacing).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Open each page (index.html, search.html, packages.html).<br>
+2. Use browser DevTools to inspect computed CSS values for text spacing.<br>
+3. Check that line spacing (line-height) is at least 1.5 times the font size:<br>
+   - Inspect body paragraphs on all pages<br>
+   - Verify About Us content (index.html)<br>
+   - Verify search results descriptions (search.html)<br>
+   - Verify form labels and instructions (packages.html)<br>
+4. Verify paragraph spacing provides adequate separation:<br>
+   - Check margin-bottom values on &lt;p&gt; elements<br>
+   - Should be at least 2.0 times the line height<br>
+   - Verify consistency using Bootstrap utilities (mb-2, mb-3, mb-4)<br>
+5. Confirm letter spacing (letter-spacing) is not overly tight or wide:<br>
+   - Check headings (Montserrat font)<br>
+   - Check body text (Lato font)<br>
+   - Check button labels<br>
+6. Verify consistent spacing using CSS design system:<br>
+   - --spacing-xs: 0.5rem (8px)<br>
+   - --spacing-sm: 1rem (16px)<br>
+   - --spacing-md: 1.5rem (24px)<br>
+   - --spacing-lg: 2rem (32px)<br>
+   - --spacing-xl: 3rem (48px)<br>
+7. Test increased text spacing using browser accessibility settings:<br>
+   - Increase line height to 2.0<br>
+   - Increase letter spacing to 0.12em<br>
+   - Increase paragraph spacing<br>
+8. Validate that no text overlaps when spacing is increased.<br>
+9. Verify text doesn't get cut off with increased spacing.<br>
+10. Test spacing consistency across all three pages.<br>
+11. Test on desktop, tablet, and mobile viewports.<br>
+</td>
+  </tr>
+  <tr>
+   <td colspan="2"><strong>Expected Result:</strong><br>
+- Line height minimum 1.5x font size across all text<br>
+- Paragraph spacing minimum 2.0x line height<br>
+- Letter spacing appropriate (not too tight or wide)<br>
+- CSS spacing variables (--spacing-*) used consistently<br>
+- Bootstrap spacing utilities applied appropriately (mb-2, mb-3, etc.)<br>
+- Increased spacing doesn't cause text overlap or cut-offs<br>
+- Layout remains intact with user-adjusted spacing<br>
+- Spacing consistent across all pages and devices<br>
+- Site meets WCAG 2.1 Success Criterion 1.4.12<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC020</td>
+    <td><strong>Feature:</strong> Button Styles and States</td>
+  </tr>
+  <tr>
+        <td colspan="2"><strong>Description:</strong> Examine whether all buttons are consistently styled across the website. Check visual clarity, alignment with the overall design theme (ocean/travel theme with coral orange CTAs), responsiveness, and visibility when hovered or focused.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Consistent and accessible button styling ensures intuitive interaction and helps users distinguish interactive elements from static content. Visual states (hover, focus) are vital for usability and accessibility, especially for keyboard users. This supports WCAG 2.1 Success Criterion 2.4.7 (Focus Visible) and enhances the user experience.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Navigate to all pages and identify all button types:<br>
+   - Primary buttons (coral orange): "Start Exploring", "Search Hotels", "Search Flights", etc.<br>
+   - Category filter buttons (search.html): "Attractions", "Restaurants", "Hotels", etc.<br>
+   - Explore destination buttons (search.html): "Explore NYC", "Explore Paris", etc.<br>
+   - Search button: magnifying glass icon with "Search Destination"<br>
+2. Verify primary button (.btn-primary) styling:<br>
+   - Background: Coral Orange (--coral-orange, #FF6B35)<br>
+   - Text: White<br>
+   - Border-radius: Consistent across all buttons<br>
+   - Padding: Consistent (btn-lg for large, standard for normal)<br>
+   - Font: Montserrat (heading font)<br>
+3. Test hover states on all buttons:<br>
+   - Primary buttons: Darker coral orange on hover<br>
+   - Category filter buttons: Background colour change<br>
+   - Active state: Visual indication (e.g., .active class on filters)<br>
+4. Test focus states using Tab key:<br>
+   - All buttons should show visible focus indicator<br>
+   - Focus ring/outline clearly visible<br>
+   - Contrast sufficient for visibility<br>
+5. Verify button text contrast meets WCAG 2.1 AA:<br>
+   - White text on Coral Orange: minimum 4.5:1<br>
+   - Use WebAIM Contrast Checker to verify<br>
+6. Test button responsiveness on different screen sizes:<br>
+   - Desktop (1920x1080): Full-size buttons<br>
+   - Tablet (768x1024): Appropriately sized<br>
+   - Mobile (375x667): Full-width where appropriate (w-100 class)<br>
+7. Verify touch-friendly sizing on mobile:<br>
+   - Minimum 44x44px touch target<br>
+   - Adequate spacing between buttons<br>
+8. Check icon usage in buttons:<br>
+   - Bootstrap Icons (bi-search, etc.) properly aligned<br>
+   - Icons have appropriate margin (me-2 spacing)<br>
+   - Icons enhance button meaning<br>
+9. Test disabled button states if present:<br>
+   - Visually distinct from active buttons<br>
+   - Not clickable<br>
+   - Appropriate opacity or colour change<br>
+10. Verify consistent styling across all three pages:<br>
+    - index.html: "Start Exploring"<br>
+    - search.html: "Search Destination", category filters, "Explore" buttons<br>
+    - packages.html: "Book Hotels", "Book Flights", "Book Package", "Book Activities"<br>
+</td>
+  </tr>
+  <tr>
+   <td colspan="2"><strong>Expected Result:</strong><br>
+- All primary buttons use Coral Orange (#FF6B35) background consistently<br>
+- Button text is white with sufficient contrast (4.5:1 minimum)<br>
+- Hover states provide clear visual feedback<br>
+- Focus indicators visible for keyboard navigation<br>
+- Active states clearly distinguish selected options (filter buttons)<br>
+- Buttons responsive across all device sizes<br>
+- Touch targets minimum 44x44px on mobile<br>
+- Icons properly aligned with consistent spacing<br>
+- Styling uniform across index.html, search.html, and packages.html<br>
+- Disabled states (if present) visually distinct<br>
+- All buttons use Montserrat font for consistency with heading typography<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
 ---
 
 ## References
