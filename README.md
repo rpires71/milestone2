@@ -51,6 +51,7 @@
     - [Accessibility Testing - Planning](#accessibility-testing---planning)
     - [Performance Testing - Planning](#performance-testing---planning)
     - [Regression Testing - Planning](#regression-testing---planning)
+  - [Project Setup with GitHub and Visual Studio Code](#project-setup-with-github-and-visual-studio-code)
 - [References](#references)
  
 # Milestone Project 2
@@ -3099,6 +3100,8 @@ I will, at the end of each test phase:
 
 **Justification** Reliable functionality and accurate content are essential for user trust, successful task completion (finding destinations and booking options), and alignment with professional web standards and course requirements.
 
+<details>
+  <summary><strong>Test Case TC001 - Main Navigation Bar</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC001</td>
@@ -3140,6 +3143,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+<details>
+  <summary><strong>Test Case TC002 - City Search Input and Search Destination Button</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC002</td>
@@ -3182,6 +3188,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+<details>
+  <summary><strong>Test Case TC003 - Action Buttons</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC003</td>
@@ -3224,6 +3233,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+<details>
+  <summary><strong>Test Case TC004 - Results Panel</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC004</td>
@@ -3267,6 +3279,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+<details>
+  <summary><strong>Test Case TC005 - Booking Form Validation</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC005</td>
@@ -3315,6 +3330,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+<details>
+  <summary><strong>Test Case TC006 - External Partner Links</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC006</td>
@@ -3359,6 +3377,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+<details>
+  <summary><strong>Test Case TC007 - Footer Contact Links</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC007</td>
@@ -3400,6 +3421,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+<details>
+  <summary><strong>Test Case TC008 - Content Accuracy</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC008</td>
@@ -3440,6 +3464,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+<details>
+  <summary><strong>Test Case TC009 - Link Descriptions and Titles</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC009</td>
@@ -3479,6 +3506,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+<details>
+  <summary><strong>Test Case TC010 - Start Exploring Button</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC010</td>
@@ -3525,7 +3555,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+<details>
+  <summary><strong>Test Case TC011 - Popular Destinations - Explore Buttons</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC011</td>
@@ -3597,6 +3629,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+<details>
+  <summary><strong>Test Case TC012 - Popular Destinations - Section Navigation</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC012</td>
@@ -3662,6 +3697,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+<details>
+  <summary><strong>Test Case TC013 - Contact Navigation Link - Footer Scrolling</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong>TC013</td>
@@ -3775,7 +3813,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+<details>
+  <summary><strong>Test Case TC014 - Image Carousel/Slider</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC014</td>
@@ -3840,6 +3880,10 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+
+<details>
+  <summary><strong>Test Case TC015 - About Us Content Scrollbar</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC015</td>
@@ -3903,7 +3947,7 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
 ### Usability and Typography Testing - Planning
 [⬆ Back to Table of contents](#table-of-contents)
 
@@ -3913,6 +3957,9 @@ I will, at the end of each test phase:
 
 **Justification:** The following tests contribute to a reliable and coherent interface. Also, legible, well-organised typography improves user comprehension and minimises visual fatigue. WCAG 2.1 readability and accessibility standards are fundamentally adhered to. Both course objectives and industry-standard web design practices are supported by effective usability, which also directly impacts user satisfaction and interaction.
 
+
+<details>
+  <summary><strong>Test Case TC016 - Visual Consistency</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC016</td>
@@ -3968,7 +4015,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+<details>
+  <summary><strong>Test Case TC017 - Font Readability</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC017</td>
@@ -4025,6 +4074,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+  </details>
+<details>
+  <summary><strong>Test Case TC018 - Visual Hierarchy</strong></summary>
  <table>
   <tr>
     <td><strong>Test Case:</strong> TC018</td>
@@ -4101,6 +4153,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+    </details>
+<details>
+  <summary><strong>Test Case TC019 - Text Spacing</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC019</td>
@@ -4167,6 +4222,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+</details>
+  <details>
+  <summary><strong>Test Case TC020 - Button Styles and States</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC020</td>
@@ -4247,6 +4305,7 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+  </details>
 
 ### Responsiveness Testing - Planning
 [⬆ Back to Table of contents](#table-of-contents)
@@ -4257,6 +4316,8 @@ I will, at the end of each test phase:
 
 **Justification:** Essential for user experience and a fundamental principle of modern web development is responsive design. User expectations across devices are met and usability and accessibility are supported when responsiveness is ensured. Industry standards, course learning objectives such as mobile-first design, responsive user interface/user experience principles, and inclusive development are aligned with responsive design. Demonstration of professional attention to detail, reduction of bounce rates, and enhancement of search engine optimisation are achieved by a fully responsive site.
 
+  <details>
+  <summary><strong>Test Case TC021 - Desktop Responsiveness</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC021</td>
@@ -4331,7 +4392,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+  </details>
+  <details>
+  <summary><strong>Test Case TC022 - Tablet Responsiveness</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC022</td>
@@ -4419,7 +4482,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+  <details>
+  <summary><strong>Test Case TC023 - Mobile Responsiveness</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC023</td>
@@ -4540,7 +4605,8 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+  
 ### Accessibility Testing - Planning
 [⬆ Back to Table of contents](#table-of-contents)
 
@@ -4550,6 +4616,9 @@ I will, at the end of each test phase:
 
 **Justification:** In accordance with the UK Equality Act 2010 and WCAG 2.1 guidelines, ensuring accessibility is both an ethical and legal requirement. Accommodating users with visual, auditory, motor, and cognitive impairments, professionally built websites must be universally accessible. Course learning objectives related to usability, inclusiveness, and established standards in contemporary web development are fulfilled by demonstrating accessibility testing.
 
+
+  <details>
+  <summary><strong>Test Case TC024 - Colour Contrast</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC024</td>
@@ -4623,7 +4692,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+  <details>
+  <summary><strong>Test Case TC025 - Keyboard Navigation</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC025</td>
@@ -4693,7 +4764,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+  <details>
+  <summary><strong>Test Case TC026 - Screen Reader Compatibility</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC026</td>
@@ -4780,7 +4853,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+  <details>
+  <summary><strong>Test Case TC027 - Semantic HTML</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC027</td>
@@ -4862,7 +4937,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+  <details>
+  <summary><strong>Test Case TC028 - Alt Text on Images</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC028</td>
@@ -4939,7 +5016,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+  <details>
+  <summary><strong>Test Case TC029 - ARIA Attributes</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC029</td>
@@ -5022,7 +5101,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+  <details>
+  <summary><strong>Test Case TC030 - Skip to Main Content</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC030</td>
@@ -5090,7 +5171,8 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+  
 ### Performance Testing - Planning
 [⬆ Back to Table of contents](#table-of-contents)
 
@@ -5100,6 +5182,8 @@ I will, at the end of each test phase:
 
 **Justification:** User satisfaction, lower bounce rates, and enhanced accessibility for users with slower internet connections can be improved with fast-loading websites. By ensuring that the Holiday Destination Finder is efficient, scalable, and suitable for deployment, performance testing also aligns with best practices in web development and search engine optimisation. For this travel planning application, attention to quality assurance and preparedness for real-world usage scenarios is demonstrated by optimising performance.
 
+  <details>
+  <summary><strong>Test Case TC031 - Page Load Time</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC031</td>
@@ -5227,7 +5311,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+  <details>
+  <summary><strong>Test Case TC032 - Optimised Images</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC032</td>
@@ -5341,7 +5427,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+  <details>
+  <summary><strong>Test Case TC033 - Code Validation</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC033</td>
@@ -5479,7 +5567,8 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
-
+</details>
+ 
 ### Regression Testing - Planning
 [⬆ Back to Table of contents](#table-of-contents)
 
@@ -5489,6 +5578,8 @@ I will, at the end of each test phase:
 
 **Justification:** To maintain the overall reliability and stability of the Holiday Destination Finder, regression testing is essential. It supports quality assurance, ensures user confidence in the travel planning interface, and aligns with professional development practices. For this travel destination website, a refined and reliable user experience will be reinforced, which is essential for users planning holidays and making booking decisions.
 
+  <details>
+  <summary><strong>Test Case TC034 - Cross-Browser Functionality and UI Consistency</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC034</td>
@@ -5674,6 +5765,9 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+    </details>
+  <details>
+  <summary><strong>Test Case TC035 - Regression Testing After Updates or Bug Fixes</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC035</td>
@@ -6004,6 +6098,7 @@ I will, at the end of each test phase:
     <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
+    </details>
 
 ---
 
