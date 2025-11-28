@@ -5480,6 +5480,531 @@ I will, at the end of each test phase:
   </tr>
 </table>
 
+### Regression Testing - Planning
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose:** Ensure that existing website features or functionalities are not adversely affected by recent modifications, updates, or bug resolutions.
+
+**Description:** Ensure retesting occurs after implementing changes such as introducing new content, updating styles, resolving defects, or modifying JavaScript functionality — previously operational components like search functionality, Google Maps integration, carousel, navigation, category filters, forms, and responsive layouts. Verification assists in confirming that existing functionality remains intact and that no faults have been introduced by updates.
+
+**Justification:** To maintain the overall reliability and stability of the Holiday Destination Finder, regression testing is essential. It supports quality assurance, ensures user confidence in the travel planning interface, and aligns with professional development practices. For this travel destination website, a refined and reliable user experience will be reinforced, which is essential for users planning holidays and making booking decisions.
+
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC034</td>
+    <td><strong>Feature:</strong> Cross-Browser Functionality and UI Consistency</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the Holiday Destination Finder displays and functions consistently across all major browsers (Chrome, Firefox, Safari, Edge) on desktop, tablet, and mobile devices. Ensure all interactive elements, layouts, and visual designs render identically without browser-specific issues.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Cross-browser compatibility is essential for reaching the widest possible audience of users planning travel. Different browsers may render HTML, CSS, JavaScript, and external APIs (Google Maps) differently. Testing ensures a consistent, reliable experience regardless of the user's browser choice, supporting professional web development standards and WCAG accessibility compliance.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+<strong>Part 1: Desktop Browser Testing (Chrome, Firefox, Safari, Edge)</strong><br>
+1. <strong>Test index.html across all browsers:</strong><br>
+   - Navigation bar appearance and functionality<br>
+   - Logo display (logo-blue-bg.webp)<br>
+   - Hero section layout (logo + heading)<br>
+   - "Start Exploring" button styling and click behavior<br>
+   - About Us section text rendering<br>
+   - Carousel display and functionality:<br>
+     * All 5 images load correctly<br>
+     * Auto-play works<br>
+     * Previous/Next arrows function<br>
+     * Indicator dots clickable<br>
+   - Footer contact tiles layout (4 columns)<br>
+   - All internal links navigate correctly<br>
+   - Ocean Blue/Sky Blue/Coral Orange colours render consistently<br>
+<br>
+2. <strong>Test search.html across all browsers:</strong><br>
+   - Search input field rendering<br>
+   - "Search" button styling and functionality<br>
+   - Category filter buttons:<br>
+     * All 5 buttons display correctly<br>
+     * Click events work<br>
+     * Active state styling applies<br>
+   - Google Maps integration:<br>
+     * Map loads correctly in all browsers<br>
+     * Map controls (zoom, pan) work<br>
+     * Markers display and are clickable<br>
+     * Info windows open correctly<br>
+   - Popular Destinations section:<br>
+     * 4 cards display in row (desktop)<br>
+     * Images load (img-2-nyc.webp, etc.)<br>
+     * "Explore" buttons styled consistently<br>
+     * onclick events work<br>
+   - Search results display correctly<br>
+<br>
+3. <strong>Test packages.html across all browsers:</strong><br>
+   - Form input fields render correctly<br>
+   - Date pickers open and function:<br>
+     * Chrome date picker<br>
+     * Firefox date picker<br>
+     * Safari date picker<br>
+     * Edge date picker<br>
+   - Guest counter input works<br>
+   - Destination city input functions<br>
+   - Booking buttons styling:<br>
+     * "Book Hotels" button<br>
+     * "Book Flights" button<br>
+     * "Book Package" button<br>
+     * "Book Activities" button<br>
+   - External partner links construct correctly:<br>
+     * Booking.com URL<br>
+     * Google Flights URL<br>
+     * Expedia URL<br>
+     * GetYourGuide URL<br>
+   - Form validation works in all browsers<br>
+<br>
+<strong>Part 2: Typography and Styling Consistency</strong><br>
+4. <strong>Verify fonts render consistently:</strong><br>
+   - Montserrat (headings) displays correctly in all browsers<br>
+   - Lato (body text) displays correctly in all browsers<br>
+   - Font weights (bold, normal) render correctly<br>
+   - Line spacing maintained<br>
+<br>
+5. <strong>Verify colour palette consistency:</strong><br>
+   - Ocean Blue (#0077B6) renders identically<br>
+   - Sky Blue (#90E0EF) renders identically<br>
+   - Coral Orange (#FF6B35) renders identically<br>
+   - Charcoal Grey (#2F3E46) renders identically<br>
+   - Background colours (Sand Beige, White Smoke) consistent<br>
+<br>
+6. <strong>Verify CSS effects work across browsers:</strong><br>
+   - Box shadows display correctly<br>
+   - Border radius on cards and buttons<br>
+   - Hover effects on buttons<br>
+   - Transition animations<br>
+   - Carousel transitions smooth<br>
+<br>
+<strong>Part 3: Mobile Browser Testing (Safari iOS, Chrome Android)</strong><br>
+7. <strong>Test on actual mobile devices or device mode:</strong><br>
+   - iPhone (Safari): Test all 3 pages<br>
+   - Android phone (Chrome): Test all 3 pages<br>
+   - Hamburger menu works on both<br>
+   - Touch gestures work (carousel swipe, map pinch)<br>
+   - Forms accessible and functional<br>
+   - Date pickers mobile-friendly<br>
+<br>
+<strong>Part 4: Known Browser-Specific Issues</strong><br>
+8. <strong>Safari-specific checks:</strong><br>
+   - WebP image format support (Safari 14+)<br>
+   - Flexbox rendering<br>
+   - CSS Grid layout<br>
+   - Date picker styling<br>
+<br>
+9. <strong>Firefox-specific checks:</strong><br>
+   - scrollbar-width CSS property (Firefox-specific)<br>
+   - Form element styling<br>
+   - CSS custom properties (variables)<br>
+<br>
+10. <strong>Edge-specific checks:</strong><br>
+    - Chromium-based Edge compatibility<br>
+    - CSS Grid support<br>
+    - JavaScript API compatibility<br>
+<br>
+<strong>Part 5: JavaScript Functionality Across Browsers</strong><br>
+11. <strong>Test JavaScript features:</strong><br>
+    - Search functionality (search.js)<br>
+    - Google Maps API initialization<br>
+    - Category filter clicks<br>
+    - Popular Destinations onclick events<br>
+    - Form validation (packages.js)<br>
+    - URL parameter construction<br>
+    - Alert messages display<br>
+<br>
+12. <strong>Check console for browser-specific errors:</strong><br>
+    - Open DevTools console in each browser<br>
+    - Perform key actions (search, filter, form submit)<br>
+    - Document any browser-specific errors or warnings<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+<strong>Visual Consistency:</strong><br>
+- All three pages display identically across Chrome, Firefox, Safari, and Edge<br>
+- Layouts match exactly (no browser-specific rendering differences)<br>
+- Colours render consistently (Ocean Blue, Sky Blue, Coral Orange)<br>
+- Fonts display correctly (Montserrat, Lato)<br>
+- Images load in all browsers (WebP support confirmed)<br>
+- Carousel appears and functions identically<br>
+- Google Maps displays correctly in all browsers<br>
+- Forms styled consistently<br>
+<br>
+<strong>Functional Consistency:</strong><br>
+- Navigation works in all browsers<br>
+- Search functionality identical across browsers<br>
+- Category filters behave the same<br>
+- Google Maps interactive in all browsers (zoom, pan, markers)<br>
+- Carousel controls work (auto-play, arrows, indicators)<br>
+- Form validation identical<br>
+- Date pickers functional (browser-specific styling acceptable)<br>
+- External partner links work correctly<br>
+- All onclick events fire correctly<br>
+<br>
+<strong>Mobile Browser Consistency:</strong><br>
+- Safari iOS and Chrome Android render pages identically<br>
+- Touch gestures work (swipe, pinch, tap)<br>
+- Hamburger menu functions on both<br>
+- Forms mobile-friendly on both<br>
+- Maps touch-friendly on both<br>
+<br>
+<strong>JavaScript Compatibility:</strong><br>
+- No browser-specific console errors<br>
+- All JavaScript functionality works identically<br>
+- Google Maps API loads successfully in all browsers<br>
+- Search results display correctly<br>
+- Form validation consistent<br>
+<br>
+<strong>No Critical Issues:</strong><br>
+- No broken layouts in any browser<br>
+- No missing functionality<br>
+- No visual glitches or rendering errors<br>
+- Professional appearance maintained across all browsers<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC035</td>
+    <td><strong>Feature:</strong> Regression Testing After Updates or Bug Fixes</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Conduct a comprehensive walkthrough of all website pages and features after implementing updates (e.g., new destinations added, carousel images updated, search functionality modified, form validation changes, bug fixes, CSS adjustments) to ensure that all previously working elements continue to function correctly and display as intended. Verify that no new defects have been introduced.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Regression testing ensures no existing functionality is broken during development iterations or bug fixes. It supports a stable user experience for travel planning, safeguards accessibility and responsive design compliance, and meets the quality assurance standards outlined in the course brief. This is critical for maintaining user trust when searching destinations and making bookings.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+<strong>Part 1: Navigation and Site Structure</strong><br>
+1. <strong>Navigate through all pages:</strong><br>
+   - index.html (About Us homepage)<br>
+   - search.html (Search Destinations)<br>
+   - packages.html (Holiday Packages)<br>
+<br>
+2. <strong>Test navigation menu on all pages:</strong><br>
+   - Click "About Us" link → Should navigate to index.html<br>
+   - Click "Search" link → Should navigate to search.html<br>
+   - Click "Popular Destinations" link → Should scroll to #popular on search.html<br>
+   - Click "Packages" link → Should navigate to packages.html<br>
+   - Click "Contact" link → Should scroll to footer (#contact) on current page<br>
+   - Verify active link highlighted with aria-current="page"<br>
+<br>
+3. <strong>Test footer links on all pages:</strong><br>
+   - All footer navigation links work<br>
+   - Social media links (if present) open correctly<br>
+   - Footer Contact tiles display correctly<br>
+<br>
+4. <strong>Test mobile navigation:</strong><br>
+   - Hamburger menu appears on mobile (< 768px)<br>
+   - Clicking hamburger opens menu<br>
+   - Clicking link closes menu automatically<br>
+   - All navigation links work from mobile menu<br>
+<br>
+<strong>Part 2: Interactive Elements Testing</strong><br>
+5. <strong>Test carousel functionality (index.html):</strong><br>
+   - All 5 images load correctly:<br>
+     * Paris - Eiffel Tower<br>
+     * Tokyo Cityscape<br>
+     * New York City<br>
+     * Barcelona<br>
+     * London<br>
+   - Auto-play cycles through slides (~5 seconds each)<br>
+   - Previous arrow navigates backward<br>
+   - Next arrow navigates forward<br>
+   - Clicking indicators jumps to specific slide<br>
+   - Captions visible on desktop, hidden on mobile<br>
+   - Swipe gestures work on touch devices<br>
+<br>
+6. <strong>Test "Start Exploring" button (index.html):</strong><br>
+   - Button displays with Coral Orange background<br>
+   - Hover effect works<br>
+   - Click navigates to search.html<br>
+   - Keyboard accessible (Tab + Enter)<br>
+<br>
+7. <strong>Test search functionality (search.html):</strong><br>
+   - City search input accepts text<br>
+   - "Search" button triggers search<br>
+   - Pressing Enter in search field triggers search<br>
+   - Google Maps loads correctly<br>
+   - Map centers on searched city<br>
+   - Place markers appear on map<br>
+   - Info windows open when markers clicked<br>
+   - Search results display in results panel<br>
+<br>
+8. <strong>Test category filters (search.html):</strong><br>
+   - All 5 category buttons display:<br>
+     * Attractions<br>
+     * Restaurants<br>
+     * Hotels<br>
+     * Cafes<br>
+     * Shopping<br>
+   - Clicking each button filters results<br>
+   - Active button shows visual indication<br>
+   - Map markers update to show filtered category<br>
+   - Results panel updates with filtered places<br>
+<br>
+9. <strong>Test Popular Destinations (search.html):</strong><br>
+   - 4 destination cards display:<br>
+     * New York City<br>
+     * Barcelona<br>
+     * Paris<br>
+     * Tokyo<br>
+   - Each card has image, title, description, button<br>
+   - "Explore NYC" button populates search with "New York City"<br>
+   - "Explore Barcelona" button populates search with "Barcelona"<br>
+   - "Explore Paris" button populates search with "Paris"<br>
+   - "Explore Tokyo" button populates search with "Tokyo"<br>
+   - onclick events trigger searchCity() function<br>
+   - Map centers on selected city<br>
+<br>
+10. <strong>Test booking form (packages.html):</strong><br>
+    - Check-in date picker opens and allows date selection<br>
+    - Check-out date picker opens and allows date selection<br>
+    - Guest counter input accepts numbers<br>
+    - Destination city input accepts text<br>
+    - Form validation triggers if required fields empty<br>
+    - Alert messages display for validation errors<br>
+<br>
+11. <strong>Test booking buttons (packages.html):</strong><br>
+    - "Book Hotels" button constructs Booking.com URL with parameters<br>
+    - "Book Flights" button constructs Google Flights URL with parameters<br>
+    - "Book Package" button constructs Expedia URL with parameters<br>
+    - "Book Activities" button constructs GetYourGuide URL with parameters<br>
+    - Links open in new tab/window<br>
+    - URL parameters correctly formatted<br>
+<br>
+<strong>Part 3: Visual and Styling Verification</strong><br>
+12. <strong>Check colour palette consistency:</strong><br>
+    - Ocean Blue (#0077B6) for headings and navbar<br>
+    - Sky Blue (#90E0EF) for accents<br>
+    - Coral Orange (#FF6B35) for CTA buttons<br>
+    - Charcoal Grey (#2F3E46) for body text<br>
+    - Backgrounds (Sand Beige, White Smoke) correct<br>
+<br>
+13. <strong>Check typography rendering:</strong><br>
+    - Montserrat loads and displays for headings<br>
+    - Lato loads and displays for body text<br>
+    - Font sizes appropriate (16px minimum body text)<br>
+    - Line spacing adequate (1.5x minimum)<br>
+    - Heading hierarchy visible (H1 larger than H2, etc.)<br>
+<br>
+14. <strong>Check responsive layouts:</strong><br>
+    - Desktop (1920x1080): About Us + Carousel side-by-side<br>
+    - Desktop (1920x1080): 4 Popular Destinations cards across<br>
+    - Tablet (768x1024): Content stacks, 2 cards per row<br>
+    - Mobile (375x667): Full vertical stacking, 1 card per row<br>
+    - Hamburger menu appears on mobile<br>
+    - No horizontal scrolling on any device<br>
+<br>
+15. <strong>Check image loading:</strong><br>
+    - All carousel images load (5 WebP images)<br>
+    - All destination card images load (4 WebP images)<br>
+    - Logos load (2 WebP images)<br>
+    - Favicons load (3 PNG images)<br>
+    - All images have alt text<br>
+    - Images maintain aspect ratio (no distortion)<br>
+<br>
+<strong>Part 4: Accessibility Re-verification</strong><br>
+16. <strong>Test keyboard navigation:</strong><br>
+    - Tab through all focusable elements on each page<br>
+    - Focus indicators visible<br>
+    - Enter activates buttons and links<br>
+    - Can navigate entire site without mouse<br>
+    - No keyboard traps<br>
+<br>
+17. <strong>Test screen reader compatibility:</strong><br>
+    - Open NVDA (Windows) or VoiceOver (macOS)<br>
+    - Navigate through index.html:<br>
+      * Headings announced correctly<br>
+      * Carousel images have descriptive alt text<br>
+      * "Start Exploring" button clearly described<br>
+    - Navigate through search.html:<br>
+      * Search input labeled correctly<br>
+      * Category buttons announced with purpose<br>
+      * Destination cards read in logical order<br>
+    - Navigate through packages.html:<br>
+      * Form labels associated with inputs<br>
+      * Booking buttons clearly described<br>
+      * Validation messages announced<br>
+<br>
+18. <strong>Verify ARIA attributes still present:</strong><br>
+    - Hamburger menu: aria-label, aria-expanded, aria-controls<br>
+    - Active nav link: aria-current="page"<br>
+    - Carousel indicators: aria-label="Slide 1", etc.<br>
+    - Carousel active indicator: aria-current="true"<br>
+    - Decorative icons: aria-hidden="true"<br>
+<br>
+19. <strong>Re-check colour contrast:</strong><br>
+    - Use WebAIM Contrast Checker or Lighthouse<br>
+    - Verify all text meets 4.5:1 ratio (body text)<br>
+    - Verify large text meets 3:1 ratio<br>
+    - Button text on Coral Orange backgrounds passes<br>
+    - White text on Ocean Blue navbar passes<br>
+<br>
+20. <strong>Verify semantic HTML structure:</strong><br>
+    - &lt;nav&gt; contains navigation on all pages<br>
+    - &lt;main&gt; wraps main content on all pages<br>
+    - &lt;section&gt; tags used appropriately<br>
+    - &lt;footer&gt; contains footer on all pages<br>
+    - Heading hierarchy correct (H1 → H2 → H3, etc.)<br>
+    - Only one H1 per page<br>
+<br>
+<strong>Part 5: Performance Re-verification</strong><br>
+21. <strong>Run Google Lighthouse audits:</strong><br>
+    - Generate report for each page (desktop + mobile)<br>
+    - Document Performance scores<br>
+    - Document Accessibility scores<br>
+    - Document Best Practices scores<br>
+    - Document SEO scores<br>
+    - Verify scores haven't regressed from previous tests<br>
+<br>
+22. <strong>Check page load times:</strong><br>
+    - index.html loads in < 3 seconds (desktop)<br>
+    - search.html loads in < 3.5 seconds (with Maps)<br>
+    - packages.html loads in < 3 seconds<br>
+    - No significant performance degradation<br>
+<br>
+23. <strong>Verify images still optimized:</strong><br>
+    - All images WebP format (except favicons)<br>
+    - No oversized images (each < 300KB recommended)<br>
+    - Total image weight < 1MB per page<br>
+    - Lighthouse shows no image optimization warnings<br>
+<br>
+<strong>Part 6: Code Validation Re-check</strong><br>
+24. <strong>Re-validate HTML:</strong><br>
+    - Run W3C Markup Validator on index.html<br>
+    - Run W3C Markup Validator on search.html<br>
+    - Run W3C Markup Validator on packages.html<br>
+    - Verify 0 errors, 0 warnings (or documented acceptable warnings)<br>
+<br>
+25. <strong>Re-validate CSS:</strong><br>
+    - Run W3C CSS Validator on style.css<br>
+    - Verify 0 errors<br>
+    - Document any acceptable warnings (modern CSS features)<br>
+<br>
+26. <strong>Re-run ESLint (if JavaScript changed):</strong><br>
+    - Verify script.js has 0 errors, 0 warnings<br>
+    - Verify search.js has 0 errors, 0 warnings<br>
+    - Verify packages.js has 0 errors, 0 warnings<br>
+<br>
+27. <strong>Re-run Jest tests (if JavaScript changed):</strong><br>
+    - Verify all 19 tests still pass<br>
+    - Verify code coverage maintained at 93%+<br>
+    - No regressions in existing tests<br>
+<br>
+<strong>Part 7: Cross-Browser Re-verification</strong><br>
+28. <strong>Quick cross-browser check:</strong><br>
+    - Test in Chrome (latest version)<br>
+    - Test in Firefox (latest version)<br>
+    - Test in Safari (latest version if on macOS)<br>
+    - Test in Edge (latest version)<br>
+    - Verify functionality identical across all browsers<br>
+<br>
+<strong>Part 8: Bug Fix Verification</strong><br>
+29. <strong>If updates were bug fixes, verify:</strong><br>
+    - Original bug no longer reproducible<br>
+    - Fix didn't introduce new issues<br>
+    - Related functionality still works<br>
+    - Document bug fix verification in testing log<br>
+<br>
+30. <strong>Final comprehensive check:</strong><br>
+    - All manual test cases (TC001-TC035) still pass<br>
+    - No new failures introduced<br>
+    - All automated tests still pass<br>
+    - Website ready for deployment/submission<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+<strong>All Functionality Intact:</strong><br>
+- Navigation works on all pages<br>
+- Carousel functions correctly (auto-play, controls, swipe)<br>
+- Search functionality works (Google Maps, markers, results)<br>
+- Category filters work (all 5 categories)<br>
+- Popular Destinations buttons work (all 4 cities)<br>
+- Booking forms validate correctly<br>
+- External partner links construct properly<br>
+- All buttons clickable and functional<br>
+- All links navigate correctly<br>
+<br>
+<strong>Visual Consistency Maintained:</strong><br>
+- Colour palette unchanged (Ocean Blue, Sky Blue, Coral Orange)<br>
+- Typography correct (Montserrat headings, Lato body)<br>
+- Layouts responsive across all breakpoints<br>
+- Images load and display correctly<br>
+- No visual glitches or broken layouts<br>
+- Hover effects work on buttons<br>
+- CSS styling applied correctly<br>
+<br>
+<strong>Accessibility Unchanged:</strong><br>
+- Keyboard navigation works<br>
+- Screen reader compatibility maintained<br>
+- ARIA attributes present and correct<br>
+- Colour contrast passes WCAG 2.1 AA<br>
+- Semantic HTML structure intact<br>
+- Alt text on all images<br>
+- Form labels associated with inputs<br>
+<br>
+<strong>Performance Maintained:</strong><br>
+- Page load times within targets<br>
+- Lighthouse scores equal or better than before update<br>
+- Images still optimized (WebP, appropriate sizes)<br>
+- No performance regressions<br>
+- Core Web Vitals still passing (LCP, FID, CLS)<br>
+<br>
+<strong>Code Quality Preserved:</strong><br>
+- HTML validates (W3C)<br>
+- CSS validates (W3C)<br>
+- JavaScript lint-free (ESLint 0 errors)<br>
+- All Jest tests pass (19/19)<br>
+- Code coverage maintained (93%+)<br>
+<br>
+<strong>Cross-Browser Compatibility:</strong><br>
+- Works identically in Chrome, Firefox, Safari, Edge<br>
+- Mobile browsers (Safari iOS, Chrome Android) functional<br>
+- No browser-specific rendering issues<br>
+<br>
+<strong>No New Bugs Introduced:</strong><br>
+- No console errors<br>
+- No broken functionality<br>
+- No visual regressions<br>
+- No accessibility regressions<br>
+- No performance degradation<br>
+<br>
+<strong>Bug Fixes Verified:</strong><br>
+- Original bugs no longer reproducible<br>
+- Fixes effective and stable<br>
+- No side effects from bug fixes<br>
+<br>
+<strong>Overall Site Stability:</strong><br>
+- All 35 manual test cases still pass<br>
+- All 19 automated tests still pass<br>
+- Website fully functional and ready for deployment<br>
+- User experience consistent and reliable<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+
 ---
 
 ## References
