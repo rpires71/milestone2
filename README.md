@@ -52,6 +52,14 @@
     - [Performance Testing - Planning](#performance-testing---planning)
     - [Regression Testing - Planning](#regression-testing---planning)
   - [Project Setup with GitHub and Visual Studio Code](#project-setup-with-github-and-visual-studio-code)
+  - [Website Testing](#website-testing)
+    - [Functionality and Content Accuracy Testing - Results](#functionality-and-content-accuracy-testing---results)
+    - [Usability and Typography Testing - Results](#usability-and-typography-testing---results)
+    - [Responsiveness Testing - Results](#responsiveness-testing---results)
+    - [Accessibility Testing - Results](#accessibility-testing---results)
+    - [Performance Testing - Results](#performance-testing---results)
+    - [Regression Testing - Results](#regression-testing---results)
+    - [Cross-browser / device testing evidence](#cross-browser--device-testing-evidence)
 - [References](#references)
  
 # Milestone Project 2
@@ -6115,15 +6123,17 @@ The following content documents the creation of the `milestone-2` repository on 
 - **Add license:** No license.
 - **Create:** Click **Create repository** (green button).
 
-<img width="843" height="842" alt="image" src="https://github.com/user-attachments/assets/29dadbac-81b0-4e07-b767-3f433ec85baa" />
+<img width="843" height="842" alt="image" src="https://github.com/user-attachments/assets/6883770c-eb87-4cf8-a0bf-e3b5b4314aef" />
 
 **Result:** GitHub hosted an empty repository with a README on the `main` branch.
 
 <img width="513" height="131" alt="image" src="https://github.com/user-attachments/assets/1c0b9dc9-7273-4978-9c8e-e552c0447dad" />
 
+<img width="869" height="505" alt="image" src="https://github.com/user-attachments/assets/15bf1440-beea-4eb1-b12a-fa256f1e17ba" />
+
 ### 2. Connecting Visual Studio Code to the GitHub Repository (Using the VS Code Integrated Terminal)
 
-- Opened my working folder in VS Code (**File → Open Folder**) and created/opened a `milestone-2` directory.
+- Opened my working folder in VS Code (**File -> Open Folder**) and created/opened a `milestone-2` directory.
 
 - Opened **Terminal** (Command Prompt) and initialized Git:
 
@@ -6152,6 +6162,7 @@ git add .           # (Note the space: add everything in the folder)
 git commit -m "first commit"
 git push
 ```
+
 ### 3. Git identity setup (so commits show my name/email)
 
 ```bash
@@ -6161,20 +6172,24 @@ git config --global init.defaultBranch main
 ```
 ### 4.	Local website verification during development (before deployment)
 
-- Used Live Server in VS Code (right-click index.html -> Open with Live Server), or
-ran a quick local server via Python when needed:
+- Used Live Server in VS Code terminal where I ran a quick local server via Python when needed:
 
 ```bash
  python -m http.server
 ```
+
+<img width="925" height="241" alt="image" src="https://github.com/user-attachments/assets/785f1437-9d69-421e-a1e3-096bbfe7c86c" />
+
 - Then I opened http://localhost:8000 in the browser.
 
-<img width="805" height="206" alt="image" src="https://github.com/user-attachments/assets/8f335661-a25f-4a52-b5a7-1b16ae60adcf" />
+<img width="442" height="108" alt="image" src="https://github.com/user-attachments/assets/1907a1c9-7601-44f2-bfb3-8e6ffe0eff83" />
+
 
 ### 5.	Why I used the terminal
 - **I deliberately used VS Code's integrated terminal (Command Prompt) to show CLI proficiency and keep a simple, reproducible workflow on any Windows machine—no extensions required for Git tasks.**
 
 **Final state after Milestone 2**
+
 - **A GitHub repo (`milestone-2`) with `main` as the default branch.**
 - **A local VS Code project linked to that repo via `origin`.**
 
@@ -6200,12 +6215,7 @@ To my profile, ensuring all commits were attributed as accurately as possible, w
 
 Ensuring issues could be identified and resolved before deployment, previewing the website locally through **Live Server** and `python -m http.server` was a standard practice. Broken links, layout inconsistencies, or accessibility issues being published were rectified, ensuring the project was safeguarded. Changes are validated in a staging environment before release when testing locally, which also reflects a professional development workflow.  
 
-The obstacles I encountered—such as **mismatched branches** (`master` vs `main`), **missing upstream configurations**, and **divergent histories**—were opportunities to build resilience and problem-solving skills. For example, the *“no upstream branch”* error required me to investigate how local branches are linked to remote tracking branches. By learning to use commands such as:  
-
-```bash
-git push -u origin main
-git branch -M main
-```
+With this Milestone 2 project, I began to feel increasingly confident using Git through the command line. Compared with earlier stages of learning, only minor obstacles were encountered, and these were resolved quickly using a systematic approach. The most common issues involved occasionally forgetting to pull the latest README.md updates after making commits directly on the GitHub interface, and making periodic corrections to commit names or descriptions to maintain professional version control standards. These experiences strengthened my understanding of synchronising local and remote branches, reinforced best practices for commit quality, and contributed to a more disciplined and reliable workflow.
 
 ---
 
