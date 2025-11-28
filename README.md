@@ -3320,7 +3320,8 @@ I will, at the end of each test phase:
     <td><strong>Test Case:</strong> TC006</td>
     <td><strong>Feature:</strong> External Partner Links (packages.html)</td>
   </tr>
-  <tr>
+  
+ <tr>
     <td colspan="2"><strong>Description:</strong> Verify that booking buttons correctly construct URLs with search parameters and open partner sites (Booking.com, Google Flights, Expedia, GetYourGuide) in new tabs.</td>
   </tr>
   <tr>
@@ -3338,13 +3339,11 @@ I will, at the end of each test phase:
 7. Test "Complete Package" – verify that Expedia opens with "Going to Barcelona", dates 01 Dec – 07 Dec, and Travellers: 2 adults, 1 room.<br>
 8. Test "Book Activities" – verify that GetYourGuide opens with Barcelona as the selected destination.<br>
 9. Confirm all links have target="_blank" and rel="noopener noreferrer".<br>
-10. Attempt a 404 path – verify that the user is redirected back to packages.html.
+10. Attempt a 404 path – verify that the user is redirected back to packages.html.<br>
 </td>
   </tr>
   <tr>
     <td colspan="2"><strong>Expected Result:</strong><br>
-
-<td colspan="2"><strong>Expected Result:</strong><br>
 
 - All booking buttons open the correct partner websites in new tabs<br>
 - URLs include accurate destination, dates, and traveller parameters<br>
