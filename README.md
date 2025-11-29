@@ -6890,6 +6890,68 @@ This approach overrides the browser's default behaviour and ensures that both in
   </tr>
 </table>
 </details>
+<details>
+  <summary><strong>Test Case TC003 - Action Buttons</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC003</td>
+    <td><strong>Feature:</strong> Action buttons (.btn-action) e.g. Attractions, Restaurants, Hotels, Cafes, Shopping</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Confirm that clicking each filter button updates the active state (initializeActionButtons() / filterPlaces()), changes currentSearchType, and refreshes the results accordingly after a search has been made.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Category filtering allows users to refine searches by place type, which is essential for targeted destination research. Incorrect behaviour would harm usability and trust.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. On search.html, search for "Barcelona".<br>
+2. Observe initial results (default: tourist attractions).<br>
+3. Click "Restaurants" button.<br>
+4. Verify button receives 'active' styling (highlighted).<br>
+5. Confirm previous results are cleared.<br>
+6. Verify new restaurant results appear on map and in results panel.<br>
+7. Repeat for each category: Hotels, Cafes, Shopping.<br>
+8. Check that only one button shows active state at a time.<br>
+9. Verify markers on map match the selected category.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Each category button filters results correctly<br>
+- Active button styling updates appropriately<br>
+- Map markers refresh to show filtered places<br>
+- Results panel displays places matching selected category<br>
+- Previous results cleared before new results load<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+1. On search.html, search for "Barcelona".<br>
+2. Observe initial results (default: tourist attractions).<br>
+3. Click "Restaurants" button.<br>
+4. Verify button receives 'active' styling (highlighted).<br>
+5. Confirm previous results are cleared.<br>
+6. Verify new restaurant results appear on map and in results panel.<br>
+7. Repeat for each category: Hotels, Cafes, Shopping.<br>
+8. Check that only one button shows active state at a time.<br>
+9. Verify markers on map match the selected category.<br>
+    
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/37219532-c45c-42f7-9943-36c7a302db70)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/53fb7886-c180-4b6a-868a-66f0186ea15e)
+
+**Observations:** Working as expected. 
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
 
 ---
 
