@@ -3956,6 +3956,7 @@ I will, at the end of each test phase:
   </tr>
 </table>
 </details>
+
 ### Usability and Typography Testing - Planning
 [⬆ Back to Table of contents](#table-of-contents)
 
