@@ -6267,14 +6267,11 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
     <td colspan="2"><strong>Justification:</strong> Clear navigation supports user orientation, reduces cognitive load and ensures all key features (search and booking) are discoverable.</td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Steps:</strong></td>
+    <td colspan="2"><strong>Steps:</strong><br>
 
-1. Open index.html in Chrome, Firefox, Safari, and Edge.
-
-2. Click each navigation link: About Us, Search, Popular Destinations, Packages and Contact.
-
-3. Confirm that each link navigates to the correct page without errors.
-
+1. Open index.html in Chrome, Firefox, Safari, and Edge.<br>
+2. Click each navigation link: About Us, Search, Popular Destinations, Packages and Contact.<br>
+3. Confirm that each link navigates to the correct page without errors.<br>
 
 **Microsoft Edge (1366x1920) - About Us (index.html)** - No errors
 
@@ -6339,6 +6336,7 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 **Mozilla Firefox (1366x1920) - Contact (packages.html#contact)** - No errors
 
 <img width="1858" height="885" alt="image" src="https://github.com/user-attachments/assets/40016a79-a2eb-432b-b627-d9276edb907c" />
+
 
 4. Repeat testing on tablet (768x1024) and mobile (375x667) viewports.<br>
 
@@ -6471,7 +6469,7 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 <img width="1787" height="945" alt="image" src="https://github.com/user-attachments/assets/3d9b96f7-45e8-4870-a926-f1d950b5e351" />
 
 
-5. On mobile, verify the hamburger menu appears and expands/collapses correctly.
+5. On mobile, verify the hamburger menu appears and expands/collapses correctly.<br>
 
 **Microsoft Edge (375x667) - About Us (index.html)** - Expands/collapses correctly
 
@@ -6538,7 +6536,8 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 
 <img width="1251" height="661" alt="image" src="https://github.com/user-attachments/assets/9d120f65-3464-46fb-abfc-530768d7dc0c" />
 
-6. Test keyboard navigation using Tab key to cycle through navigation links.
+
+6. Test keyboard navigation using Tab key to cycle through navigation links.<br>
 
 **Microsoft Edge (375x667)** - Successful navigation using Tab key to cycle through navigation links
 
@@ -6559,7 +6558,6 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/e17a544e-3d45-4a35-90ca-95dd08485628)
 
-
 **Observations:**
 
 - In **Microsoft Edge**, the hover effect appears on all navigation items. When clicked, all page options display visible focus indicators, except for *Contact* or *Popular Destination*. The internal link options do not remain visibly active across all three pages (index.html, search.html, and packages.html).  
@@ -6579,24 +6577,20 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 
 - In **Mozilla Firefox**, When clicked, all page options mobile closes the menu automatically, except for *Contact* or *Popular Destination*. The internal link options do not close the menu automatically all three pages (index.html, search.html, and packages.html).  
 
+</td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Expected Result:</strong></td>
+    <td colspan="2"><strong>Expected Result:</strong><br>
 
-- All links function correctly and navigate to appropriate pages
-
-- Navigation remains consistent across all pages
-
-- Responsive hamburger menu displays correctly on mobile/tablet
-
-- Keyboard users can navigate with visible focus outlines
-
+- All links function correctly and navigate to appropriate pages<br>
+- Navigation remains consistent across all pages<br>
+- Responsive hamburger menu displays correctly on mobile/tablet<br>
+- Keyboard users can navigate with visible focus outlines<br>
 - Mobile menu closes after link selection<br>
-
+</td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Actual Result:</strong> </td>
-Steps 1 to 4 - All links function correctly and navigate to appropriate pages for all devices.
+    <td colspan="2"><strong>Actual Result:</strong>Steps 1 to 4 - All links function correctly and navigate to appropriate pages for all devices.
 
 Step 5. On mobile, verify that the hamburger menu appears and expands/collapses correctly. This behavior only applies to the main links; the internal link options do not automatically collapse the menu on any of the three pages (index.html, search.html, and packages.html).<br>
 
@@ -6613,15 +6607,14 @@ Step 7. Verify visible focus indicators appear on each navigation item:
 - In **Microsoft Edge**, When clicked, all page options mobile closes the menu automatically, except for *Contact* or *Popular Destination*. The internal link options do not close the menu automatically all three pages (index.html, search.html, and packages.html).  
 
 - In **Mozilla Firefox**, When clicked, all page options mobile closes the menu automatically, except for *Contact* or *Popular Destination*. The internal link options do not close the menu automatically all three pages (index.html, search.html, and packages.html).<br>
-
+ </td>
   </tr>
   <tr>
     <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
   </tr>
+  <tr>
 
-<tr>
-
-  <td colspan="2"><strong>Corrections for Javascript errors from steps 1 to 4</strong> </td>
+  <td colspan="2"><strong>Corrections for Javascript errors from steps 1 to 4</strong> 
   
 **Corrections for Javascript errors from steps 1 to 4**
 
@@ -6770,10 +6763,9 @@ This approach overrides the browser's default behaviour and ensures that both in
 [Microsoft Edge evidence file](https://github.com/user-attachments/assets/a6e109b6-ca0a-4f83-b67a-ea12a574bf9a)
 
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/90eaa24f-01f9-4396-b703-f79757216f06)
-
+</td>
 
 </tr>
-  
 </table>
 </details>
 
