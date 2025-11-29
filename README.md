@@ -6267,11 +6267,13 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
     <td colspan="2"><strong>Justification:</strong> Clear navigation supports user orientation, reduces cognitive load and ensures all key features (search and booking) are discoverable.</td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Steps:</strong><br>
+    <td colspan="2"><strong>Steps:</strong></td>
 
-1. Open index.html in Chrome, Firefox, Safari, and Edge.<br>
-2. Click each navigation link: About Us, Search, Popular Destinations, Packages and Contact.<br>
-3. Confirm that each link navigates to the correct page without errors.<br>
+1. Open index.html in Chrome, Firefox, Safari, and Edge.
+
+2. Click each navigation link: About Us, Search, Popular Destinations, Packages and Contact.
+
+3. Confirm that each link navigates to the correct page without errors.
 
 
 **Microsoft Edge (1366x1920) - About Us (index.html)** - No errors
@@ -6469,7 +6471,7 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 <img width="1787" height="945" alt="image" src="https://github.com/user-attachments/assets/3d9b96f7-45e8-4870-a926-f1d950b5e351" />
 
 
-5. On mobile, verify the hamburger menu appears and expands/collapses correctly.<br>
+5. On mobile, verify the hamburger menu appears and expands/collapses correctly.
 
 **Microsoft Edge (375x667) - About Us (index.html)** - Expands/collapses correctly
 
@@ -6536,7 +6538,7 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 
 <img width="1251" height="661" alt="image" src="https://github.com/user-attachments/assets/9d120f65-3464-46fb-abfc-530768d7dc0c" />
 
-6. Test keyboard navigation using Tab key to cycle through navigation links.<br>
+6. Test keyboard navigation using Tab key to cycle through navigation links.
 
 **Microsoft Edge (375x667)** - Successful navigation using Tab key to cycle through navigation links
 
@@ -6546,16 +6548,16 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 
 <img width="1538" height="887" alt="image" src="https://github.com/user-attachments/assets/ac9f3ccc-bb45-4cea-82c2-d1b89d9e5a7e" />
 
-[Microsoft Edge evidence file]([https://github.com/user-attachments/assets/cb3f7fda-f4df-4f4a-8431-e4b00942b137])
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/cb3f7fda-f4df-4f4a-8431-e4b00942b137)
 
-[Mozilla Firefox evidence file]([https://github.com/user-attachments/assets/d686f53e-14a6-4bd1-af0e-33f1fb8d1db3])
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/d686f53e-14a6-4bd1-af0e-33f1fb8d1db3)
 
 
 7. Verify visible focus indicators appear on each navigation item.<br>
 
-[Microsoft Edge evidence file]([https://github.com/user-attachments/assets/f235f31a-96f8-4be6-bf71-22445b2dcee1])
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f235f31a-96f8-4be6-bf71-22445b2dcee1)
 
-[Mozilla Firefox evidence file]([https://github.com/user-attachments/assets/e17a544e-3d45-4a35-90ca-95dd08485628])
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/e17a544e-3d45-4a35-90ca-95dd08485628)
 
 
 **Observations:**
@@ -6566,9 +6568,9 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 
 8. Check that clicking a nav link on mobile closes the menu automatically.<br>
 
-[Microsoft Edge evidence file]([https://github.com/user-attachments/assets/ae97a5d9-bf9f-4f1f-8115-f1c82635866f])
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/ae97a5d9-bf9f-4f1f-8115-f1c82635866f)
 
-[Mozilla Firefox evidence file]([https://github.com/user-attachments/assets/31415b23-aaff-493b-96b9-a4b9a7210fa8])
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/31415b23-aaff-493b-96b9-a4b9a7210fa8)
 
 
 **Observations:**
@@ -6577,21 +6579,24 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 
 - In **Mozilla Firefox**, When clicked, all page options mobile closes the menu automatically, except for *Contact* or *Popular Destination*. The internal link options do not close the menu automatically all three pages (index.html, search.html, and packages.html).  
 
-</td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Expected Result:</strong><br>
+    <td colspan="2"><strong>Expected Result:</strong></td>
 
-- All links function correctly and navigate to appropriate pages<br>
-- Navigation remains consistent across all pages<br>
-- Responsive hamburger menu displays correctly on mobile/tablet<br>
-- Keyboard users can navigate with visible focus outlines<br>
+- All links function correctly and navigate to appropriate pages
+
+- Navigation remains consistent across all pages
+
+- Responsive hamburger menu displays correctly on mobile/tablet
+
+- Keyboard users can navigate with visible focus outlines
+
 - Mobile menu closes after link selection<br>
-</td>
+
   </tr>
   <tr>
     <td colspan="2"><strong>Actual Result:</strong> </td>
-Steps 1 to 4 - All links function correctly and navigate to appropriate pages for all devices.<br>
+Steps 1 to 4 - All links function correctly and navigate to appropriate pages for all devices.
 
 Step 5. On mobile, verify that the hamburger menu appears and expands/collapses correctly. This behavior only applies to the main links; the internal link options do not automatically collapse the menu on any of the three pages (index.html, search.html, and packages.html).<br>
 
@@ -6739,9 +6744,9 @@ Replaced initSmoothScroll function in script.js with the following one:
 
 **Proof**
 
-[Microsoft Edge evidence file]([https://github.com/user-attachments/assets/26d2733d-592f-4fec-9446-5038e5e8ff1a])
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/26d2733d-592f-4fec-9446-5038e5e8ff1a)
 
-[Mozilla Firefox evidence file]([https://github.com/user-attachments/assets/4b2ec1c9-5ace-4dba-bcf3-45fcca251c2e])
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/4b2ec1c9-5ace-4dba-bcf3-45fcca251c2e)
 
 **Corrections for errors from step 7**
 
@@ -6762,9 +6767,9 @@ This approach overrides the browser's default behaviour and ensures that both in
 <img width="764" height="976" alt="image" src="https://github.com/user-attachments/assets/967061bd-7d5c-452d-a72a-d6419d6c9c70" />
 
 
-[Microsoft Edge evidence file]([https://github.com/user-attachments/assets/a6e109b6-ca0a-4f83-b67a-ea12a574bf9a])
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/a6e109b6-ca0a-4f83-b67a-ea12a574bf9a)
 
-[Mozilla Firefox evidence file]([https://github.com/user-attachments/assets/90eaa24f-01f9-4396-b703-f79757216f06])
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/90eaa24f-01f9-4396-b703-f79757216f06)
 
 
 </tr>
