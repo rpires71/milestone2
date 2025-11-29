@@ -6546,27 +6546,17 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 
 <img width="1538" height="887" alt="image" src="https://github.com/user-attachments/assets/ac9f3ccc-bb45-4cea-82c2-d1b89d9e5a7e" />
 
-<video width="640" controls>
-  <source src="https://github.com/user-attachments/assets/cb3f7fda-f4df-4f4a-8431-e4b00942b137" type="video/mp4">
-  Microsoft Edge evidence file.
-</video>
+[Microsoft Edge evidence file]([https://github.com/user-attachments/assets/cb3f7fda-f4df-4f4a-8431-e4b00942b137])
 
-<video width="640" controls>
-  <source src="https://github.com/user-attachments/assets/d686f53e-14a6-4bd1-af0e-33f1fb8d1db3" type="video/mp4">
-  Mozilla Firefox evidence file.
-</video>
+[Mozilla Firefox evidence file]([https://github.com/user-attachments/assets/d686f53e-14a6-4bd1-af0e-33f1fb8d1db3])
+
 
 7. Verify visible focus indicators appear on each navigation item.<br>
 
-<video width="640" controls>
-  <source src="https://github.com/user-attachments/assets/f235f31a-96f8-4be6-bf71-22445b2dcee1" type="video/mp4">
-  Microsoft Edge evidence file.
-</video>
+[Microsoft Edge evidence file]([https://github.com/user-attachments/assets/f235f31a-96f8-4be6-bf71-22445b2dcee1])
 
-<video width="640" controls>
-  <source src="https://github.com/user-attachments/assets/e17a544e-3d45-4a35-90ca-95dd08485628" type="video/mp4">
-  Mozilla Firefox evidence file.
-</video>
+[Mozilla Firefox evidence file]([https://github.com/user-attachments/assets/e17a544e-3d45-4a35-90ca-95dd08485628])
+
 
 **Observations:**
 
@@ -6576,16 +6566,9 @@ This ensures coverage across both major browser engines: Chromium (Edge/Chrome) 
 
 8. Check that clicking a nav link on mobile closes the menu automatically.<br>
 
-<video width="640" controls>
-  <source src="https://github.com/user-attachments/assets/ae97a5d9-bf9f-4f1f-8115-f1c82635866f" type="video/mp4">
-  Microsoft Edge evidence file.
-</video>
+[Microsoft Edge evidence file]([https://github.com/user-attachments/assets/ae97a5d9-bf9f-4f1f-8115-f1c82635866f])
 
-
-<video width="640" controls>
-  <source src="https://github.com/user-attachments/assets/31415b23-aaff-493b-96b9-a4b9a7210fa8" type="video/mp4">
-  Mozilla Firefox evidence file.
-</video>
+[Mozilla Firefox evidence file]([https://github.com/user-attachments/assets/31415b23-aaff-493b-96b9-a4b9a7210fa8])
 
 
 **Observations:**
@@ -6756,15 +6739,9 @@ Replaced initSmoothScroll function in script.js with the following one:
 
 **Proof**
 
-<video width="640" controls>
-  <source src="https://github.com/user-attachments/assets/26d2733d-592f-4fec-9446-5038e5e8ff1a" type="video/mp4">
-  Microsoft Edge evidence file.
-</video>
+[Microsoft Edge evidence file]([https://github.com/user-attachments/assets/26d2733d-592f-4fec-9446-5038e5e8ff1a])
 
-<video width="640" controls>
-  <source src="https://github.com/user-attachments/assets/4b2ec1c9-5ace-4dba-bcf3-45fcca251c2e" type="video/mp4">
-  Mozilla Firefox evidence file.
-</video>
+[Mozilla Firefox evidence file]([https://github.com/user-attachments/assets/4b2ec1c9-5ace-4dba-bcf3-45fcca251c2e])
 
 **Corrections for errors from step 7**
 
@@ -6784,15 +6761,11 @@ This approach overrides the browser's default behaviour and ensures that both in
 
 <img width="764" height="976" alt="image" src="https://github.com/user-attachments/assets/967061bd-7d5c-452d-a72a-d6419d6c9c70" />
 
-<video width="640" controls>
-  <source src="https://github.com/user-attachments/assets/a6e109b6-ca0a-4f83-b67a-ea12a574bf9a" type="video/mp4">
-  Microsoft Edge evidence file.
-</video>
 
-<video width="640" controls>
-  <source src="https://github.com/user-attachments/assets/90eaa24f-01f9-4396-b703-f79757216f06" type="video/mp4">
-  Mozilla Firefox evidence file.
-</video>
+[Microsoft Edge evidence file]([https://github.com/user-attachments/assets/a6e109b6-ca0a-4f83-b67a-ea12a574bf9a])
+
+[Mozilla Firefox evidence file]([https://github.com/user-attachments/assets/90eaa24f-01f9-4396-b703-f79757216f06])
+
 
 </tr>
   
