@@ -3269,7 +3269,7 @@ I will, at the end of each test phase:
   <tr>
     <td colspan="2"><strong>Expected Result:</strong><br>
 
-- Map initializes quickly and centers correctly<br>
+- Map initialises quickly and centers correctly<br>
 - Zoom and pan controls function properly<br>
 - Markers clickable with info windows displaying complete information<br>
 - Only one info window open at a time<br>
@@ -6952,7 +6952,79 @@ This approach overrides the browser's default behaviour and ensures that both in
   </tr>
 </table>
 </details>
+<details>
+  <summary><strong>Test Case TC004 - Results Panel</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC004</td>
+    <td><strong>Feature:</strong> Results panel (.results-panel) and Google Map (#map)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that Google Maps loads correctly, displays place markers, shows info windows on marker click, and provides map controls (zoom, pan). Ensure that clicking a result in the results panel recentres the map on that location and (where implemented).</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Synchronisation between list and map is central to spatial usability and supports users who rely on visual/geographical cues.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
 
+1. Search for "Paris".<br>
+2. Verify map loads within 2-3 seconds.<br>
+3. Confirm map centers on Paris coordinates.<br>
+4. Check zoom level is appropriate (default: 13).<br>
+5. Verify zoom controls (+/-) appear and function.<br>
+6. Test panning/dragging the map.<br>
+7. Click a place marker on the map.<br>
+8. Verify info window opens showing place name, rating, address.<br>
+9. Click another marker - confirm previous info window closes.<br>
+10. Test on mobile - verify touch interactions work (pinch zoom, swipe).<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Map initialises quickly and centers correctly<br>
+- Zoom and pan controls function properly<br>
+- Markers clickable with info windows displaying complete information<br>
+- Only one info window open at a time<br>
+- Touch interactions work on mobile devices<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+1. Search for "Paris".<br>
+2. Verify map loads within 2-3 seconds.<br>
+3. Confirm map centers on Paris coordinates.<br>
+4. Check zoom level is appropriate (default: 13).<br>
+5. Verify zoom controls (+/-) appear and function.<br>
+6. Test panning/dragging the map.<br>
+7. Click a place marker on the map.<br>
+8. Verify info window opens showing place name, rating, address.<br>
+9. Click another marker - confirm previous info window closes.<br>
+
+**Observations:** All working as expected for both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/9b148786-b0ff-482d-91c2-906ce77dc374)
+
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/bb78ad83-e48e-4978-9671-0d642457c07f)
+
+
+10. Test on mobile - verify touch interactions work (pinch zoom, swipe).<br>
+
+**Observations:** All working as expected for both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/d0bd8eff-32d3-433d-a577-2a98ac713bc2)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/c5ea1eb4-eee4-4aa1-a524-73903591aa08)
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
 ---
 
 ## References
