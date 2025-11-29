@@ -13,9 +13,9 @@
    Where It Is Used:
    - packages.html
      - The four main action buttons in the booking form:
-       - "Search Hotels"      -> onclick="bookHotel(event)"
-       - "Search Flights"     -> onclick="bookFlights(event)"
-       - "Complete Package"   -> onclick="bookPackage(event)"
+       - "Book Hotels"      -> onclick="bookHotel(event)"
+       - "Book Flights"     -> onclick="bookFlights(event)"
+       - "Full Package"   -> onclick="bookPackage(event)"
        - "Book Activities"    -> onclick="bookActivities(event)"
      - These buttons sit under the trip details form (city search box,
        check-in, check-out, and guests selector) and use the values from
@@ -146,7 +146,7 @@ function setActiveBookingButton(clickedButton) {
     bookHotel(ev)
    -------------------------------------------------------------------------------------
    - Triggered by:
-     The "Search Hotels" button on packages.html (onclick="bookHotel(event)").
+     The "Book Hotels" button on packages.html (onclick="bookHotel(event)").
    - Purpose:
      Redirects the user to Booking.com with check-in, check-out, guests,
      and city filled into the search URL.
@@ -193,6 +193,12 @@ function bookHotel(ev) {
     return;
   }
 
+  // Validate that check-in date is not after check-out date
+  if (new Date(checkIn) > new Date(checkOut)) {
+    showValidationToast("Check-in date cannot be after check-out date", "error");
+    return;
+  }
+
   // ------------------------------------------------------------------
   // STEP 4: Safely get the destination city name.
   // getCityNameForUrls() ensures:
@@ -233,7 +239,7 @@ function bookHotel(ev) {
         bookFlights(ev)
    ------------------------
    - Triggered by:
-     The "Search Flights" button on packages.html (onclick="bookFlights(event)").
+     The "Book Flights" button on packages.html (onclick="bookFlights(event)").
    - Purpose:
      Opens Google Flights with:
        - Departure: always set to London (all airports, LON)
@@ -262,7 +268,7 @@ function bookFlights(ev) {
 
   // ----------------------------------------------------------
   // STEP 2: Extract travel dates from the form inputs.
-  // Only the CHECK-IN date (departure) is required to search flights.
+  // Only the CHECK-IN date (departure) is required to Book flights.
   // ----------------------------------------------------------
   const checkIn = document.getElementById("checkin").value;
   const checkOut = document.getElementById("checkout").value;
@@ -318,13 +324,13 @@ function bookFlights(ev) {
   window.open(googleFlightsUrl, "_blank");
 }
 
-/** Book complete package - Expedia packages, from London (all airports) */
+/** Book full package - Expedia packages, from London (all airports) */
 
 /* =====================================================================================
     bookPackage(ev)
    -----------------------
    - Triggered by:
-     The "Complete Package" button (onclick="bookPackage(event)") from packages.html.
+     The "Full Package" button (onclick="bookPackage(event)") from packages.html.
    - Purpose:
      Sends the user to Expedia's "Flight + Hotel" package search with:
        - Origin: London (all airports, LON)
@@ -370,6 +376,12 @@ function bookPackage(ev) {
   // ----------------------------------------------------------
   if (!checkIn || !checkOut) {
     showValidationToast("Please select both check-in and check-out dates for a package search.", "warning");
+    return;
+  }
+
+  // Validate that check-in date is not after check-out date
+  if (new Date(checkIn) > new Date(checkOut)) {
+    showValidationToast("Check-in date cannot be after check-out date", "error");
     return;
   }
 
