@@ -32,9 +32,16 @@ let infoWindows = []; // Stores popup info windows for markers.
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Page loaded - initializing...");
 
-  initializeActionButtons(); // Makes category buttons interactive.
-  initializeSearchButton(); // Enables search bar and "Enter" key.
+  // Only initialise if we're on search.html - TC001 Fix
+  const searchBtn = document.getElementById("searchBtn");
+  const mapDiv = document.getElementById("map");
 
+  if (searchBtn && mapDiv) {
+    initializeActionButtons(); // Makes category buttons interactive.
+    initializeSearchButton(); // Enables search bar and "Enter" key.
+  } else {
+    console.log("Search elements not found - skipping search.js initialization");
+  }
   // Note: The Google Map is NOT created here. It is created only when
   // a search is performed, which reduces unnecessary API usage.
 });
@@ -141,6 +148,12 @@ function initializeSearchButton() {
   // Get a reference to the main search button and the text input box
   const searchBtn = document.getElementById("searchBtn");
   const cityInput = document.getElementById("citySearch");
+
+  // Check if elements exist - TC001 Fix
+  if (!searchBtn || !cityInput) {
+    console.log("Search elements not found - skipping");
+    return; // Exit early
+  }
 
   // ------------------------------------------------------------
   // CLICK EVENT: When user clicks on the search button, run search
@@ -274,6 +287,14 @@ function performSearch(cityName) {
 // centered on London until the user searches for another city.
 // =====================================================================
 function initMap() {
+
+  // Guard clause - check if map element exists - TC001 Fix
+  const mapElement = document.getElementById("map");
+  
+  if (!mapElement) {
+    console.log("Map element not found - skipping map initialization");
+    return; // Exit function early
+  }
   // ---------------------------------------------------------------
   // STEP 1: Set a default starting location (London coordinates).
   // This ensures the map has a visible starting point even before
@@ -288,6 +309,7 @@ function initMap() {
   //   - configuration settings (center, zoom, style, etc.)
   // ---------------------------------------------------------------
   map = new google.maps.Map(document.getElementById("map"), {
+    
     center: defaultLocation, // Start zoomed into London
     zoom: 13, // Good balance between detail & overview
 
