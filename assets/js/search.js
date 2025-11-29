@@ -25,6 +25,43 @@ let markers = []; // List of currently displayed map markers.
 let currentSearchType = "tourist_attraction"; // Default filter on page load.
 let infoWindows = []; // Stores popup info windows for markers.
 
+// --- VALIDATION TOAST FUNCTIONS ---------------------------------------
+// Displays a styled notification below the search box.
+// ----------------------------------------------------------------------
+
+function showValidationToast(message, type) {
+  var container = document.getElementById("validationToastContainer");
+  var toastMessage = document.getElementById("toastMessage");
+  var toastEl = document.getElementById("validationToast");
+
+  if (!container || !toastMessage || !toastEl) {
+    alert(message);
+    return;
+  }
+
+  toastMessage.textContent = message;
+
+  if (type === "error") {
+    toastEl.style.backgroundColor = "#c0392b";
+  } else {
+    toastEl.style.backgroundColor = "#1a5276";
+  }
+
+  container.style.display = "block";
+
+  setTimeout(function () {
+    hideValidationToast();
+  }, 4000);
+}
+
+function hideValidationToast() {
+  var container = document.getElementById("validationToastContainer");
+  if (container) {
+    container.style.display = "none";
+  }
+}
+
+
 // --- INITIAL PAGE SETUP -----------------------------------------------
 // When the HTML document finishes loading, these event listeners run to
 // activate the search button and category buttons.
@@ -164,7 +201,8 @@ function initializeSearchButton() {
 
     // If the user hasn't typed anything, show a warning and stop
     if (cityName === "") {
-      alert("Please enter a city name");
+      showValidationToast("Please enter a city name", "warning");
+      cityInput.focus();
       return; // Stop here, do not run performSearch()
     }
 
@@ -273,7 +311,7 @@ function performSearch(cityName) {
       // ERROR HANDLING: If Google cannot find the typed city,
       // warn the user and log details for debugging.
       // -----------------------------------------------------------
-      alert("City not found. Please try another city name.");
+      showValidationToast("City not found. Please try another city name.", "error");
       console.error("Geocode error: " + status);
     }
   });

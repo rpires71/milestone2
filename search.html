@@ -1053,6 +1053,42 @@ resources that describes this webpage. It sits at the top of the HTML document.
         </div>
       </div>
     </footer>
+
+   <!-- Validation Toast - fixed at top of screen -->
+    <div id="validationToastContainer" style="display: none; position: fixed; top: 80px; left: 50%; transform: translateX(-50%); z-index: 9999; width: 90%; max-width: 500px;">
+      <div
+        id="validationToast"
+        style="
+          background-color: #1a5276;
+          color: white;
+          padding: 12px 20px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        "
+      >
+        <span>
+          <i class="bi bi-exclamation-triangle-fill me-2"></i>
+          <span id="toastMessage">Please enter a city name</span>
+        </span>
+        <button
+          type="button"
+          style="
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+          "
+          onclick="hideValidationToast()"
+        >
+          &times;
+        </button>
+      </div>
+    </div>
+
     <!-- 
     Bootstrap JavaScript bundle:
     required for dynamic components such as the navbar collapse and the carousel.
