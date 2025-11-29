@@ -6769,6 +6769,128 @@ This approach overrides the browser's default behaviour and ensures that both in
 </table>
 </details>
 
+<details>
+  <summary><strong>Test Case TC002 - City Search Input and Search Destination Button</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC002</td>
+    <td><strong>Feature:</strong> City search input and Search Destination button</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Validate the search verifies entries, accepts user submissions, fetches results via the Google Places API and presents error notifications when empty.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The primary capability of the application is the **search** function. Locating destination information efficiently is assured with a dependable search function with appropriate validation.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Navigate to search.html.<br>
+2. Leave search input empty and click "Search" button.<br>
+3. Verify alert message appears: "Please enter a city name".<br>
+4. Enter "London" and click Search.<br>
+5. Verify Google Map loads and centers on London.<br>
+6. Confirm place markers appear on map (10-20 markers).<br>
+7. Verify results panel displays place cards with name, rating, address.<br>
+8. Test Enter key triggers search (keyboard accessibility).<br>
+9. Test with various cities: Paris, Tokyo, New York, Barcelona.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Empty input triggers a user-friendly alert.<br>
+- Valid city names call performSearch(cityName) and reveal the results + map area.<br>
+- Enter key functions as alternative to button click<br>
+- Invalid cities handled gracefully with appropriate message<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+    
+    1. Navigate to search.html.<br>
+2. Leave search input empty and click "Search" button.<br>
+3. Verify alert message appears: "Please enter a city name".<br>
+
+**Microsoft Edge** - Working - Evidence below:
+<img width="1443" height="513" alt="image" src="https://github.com/user-attachments/assets/80592393-fdf0-4199-ad05-2420f39ac030" />
+
+**Mozilla Firefox** - Working - Evidence below:
+<img width="1668" height="706" alt="image" src="https://github.com/user-attachments/assets/6fa7e0fa-e39a-4290-8008-b9e3eda156f0" />
+
+4. Enter "London" and click Search.<br>
+5. Verify Google Map loads and centers on London.<br>
+6. Confirm place markers appear on map (10-20 markers).<br>
+7. Verify results panel displays place cards with name, rating, address.<br>
+
+**Microsoft Edge** - Working - Evidence below:
+<img width="1203" height="854" alt="image" src="https://github.com/user-attachments/assets/cb1ea592-6d15-464e-920f-81e2563e0d6a" />
+
+**Mozilla Firefox** - Working - Evidence below:
+<img width="1747" height="876" alt="image" src="https://github.com/user-attachments/assets/4faaa881-334a-4aba-a2a0-8cb800777ebd" />
+
+8. Test Enter key triggers search (keyboard accessibility).<br>
+
+**Microsoft Edge** - Working - Evidence below - Search button turns blue when keyboard used:
+
+<img width="1648" height="858" alt="image" src="https://github.com/user-attachments/assets/0768eb6e-7661-4344-89f6-297f13e18c5d" />
+
+**Mozilla Firefox** - Working - Evidence below - Search button turns blue when keyboard used:
+
+<img width="1731" height="806" alt="image" src="https://github.com/user-attachments/assets/cad4ee22-cf21-4934-b32e-840294ffd21e" />
+
+9. Test with various cities: Paris, Tokyo, New York, Barcelona.<br>
+
+**Microsoft Edge** - Working - Evidence below -Paris:
+
+<img width="1735" height="964" alt="image" src="https://github.com/user-attachments/assets/cb0107e5-ec01-4160-8b4c-1276d67ebaa1" />
+
+**Mozilla Firefox** - Working - Evidence below - Paris:
+
+<img width="1719" height="1009" alt="image" src="https://github.com/user-attachments/assets/67f176fc-a514-454c-a608-41e88d118054" />
+
+**Microsoft Edge** - Working - Evidence below -Tokyo:
+
+<img width="1686" height="893" alt="image" src="https://github.com/user-attachments/assets/6d7dcfcd-e4b9-4e27-b2d7-a71c43b0245d" />
+
+**Mozilla Firefox** - Working - Evidence below - Tokyo:
+
+<img width="1726" height="956" alt="image" src="https://github.com/user-attachments/assets/ee967466-f730-4e0f-b6cb-55a4e07bbdd0" />
+
+**Microsoft Edge** - Working - Evidence below -New York:
+
+<img width="1238" height="672" alt="image" src="https://github.com/user-attachments/assets/3efad039-a776-4884-b493-db0f153a1380" />
+
+**Mozilla Firefox** - Working - Evidence below - New York:
+
+<img width="1707" height="872" alt="image" src="https://github.com/user-attachments/assets/dfc3315f-fb26-46d3-a467-5cb8aaabd8ad" />
+
+**Microsoft Edge** - Working - Evidence below -Barcelona:
+
+<img width="1639" height="858" alt="image" src="https://github.com/user-attachments/assets/0b00b870-1db9-4bdb-81cc-f4dfad563bae" />
+
+**Mozilla Firefox** - Working - Evidence below - Barcelona:
+
+<img width="1628" height="994" alt="image" src="https://github.com/user-attachments/assets/47c2482e-eb6f-4b6b-8bc4-53583c7e6a5c" />
+
+10. Test with invalid input: "XYZ123" - verify graceful handling.<br>
+
+**Microsoft Edge** - Working - Evidence below - XYZ123:
+
+<img width="1498" height="699" alt="image" src="https://github.com/user-attachments/assets/f99077c3-4558-48ae-ae83-3b8e15a58bd8" />
+
+**Mozilla Firefox** - Working - Evidence below - XYZ123:
+
+<img width="1680" height="839" alt="image" src="https://github.com/user-attachments/assets/a897f47c-694c-472a-8a82-23a78fa7a8a5" />
+    
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+
 ---
 
 ## References
