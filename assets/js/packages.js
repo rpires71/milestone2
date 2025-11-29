@@ -22,6 +22,44 @@
        those inputs to build deep links into each partner website. :contentReference[oaicite:1]{index=1}
     ====================================================================== */
 
+    /* =====================================================================================
+    VALIDATION TOAST FUNCTIONS
+   ---------------------------
+   Displays a styled notification instead of the default browser alert.
+======================================================================================== */
+
+function showValidationToast(message, type) {
+  var container = document.getElementById("validationToastContainer");
+  var toastMessage = document.getElementById("toastMessage");
+  var toastEl = document.getElementById("validationToast");
+
+  if (!container || !toastMessage || !toastEl) {
+    alert(message);
+    return;
+  }
+
+  toastMessage.textContent = message;
+
+  if (type === "error") {
+    toastEl.style.backgroundColor = "#c0392b";
+  } else {
+    toastEl.style.backgroundColor = "#1a5276";
+  }
+
+  container.style.display = "block";
+
+  setTimeout(function () {
+    hideValidationToast();
+  }, 4000);
+}
+
+function hideValidationToast() {
+  var container = document.getElementById("validationToastContainer");
+  if (container) {
+    container.style.display = "none";
+  }
+}
+
 /* =====================================================================================
     getCityNameForUrls()
    --------------------
@@ -151,7 +189,7 @@ function bookHotel(ev) {
   // If either date is missing, show an alert and cancel the operation.
   // ------------------------------------------------------------------
   if (!checkIn || !checkOut) {
-    alert("Please select check-in and check-out dates");
+    showValidationToast("Please select check-in and check-out dates", "warning");
     return;
   }
 
@@ -231,7 +269,7 @@ function bookFlights(ev) {
 
   // Validate departure date
   if (!checkIn) {
-    alert("Please select a departure (check-in) date");
+    showValidationToast("Please select a departure (check-in) date", "warning");
     return;
   }
 
@@ -331,9 +369,7 @@ function bookPackage(ev) {
   // A package search requires both arrival and departure dates.
   // ----------------------------------------------------------
   if (!checkIn || !checkOut) {
-    alert(
-      "Please select both check-in and check-out dates for a package search."
-    );
+    showValidationToast("Please select both check-in and check-out dates for a package search.", "warning");
     return;
   }
 
@@ -354,7 +390,7 @@ function bookPackage(ev) {
 
   // If no valid city name is found, warn the user.
   if (!city) {
-    alert("Please enter a destination city.");
+    showValidationToast("Please enter a destination city.", "warning");
     return;
   }
 
