@@ -3109,12 +3109,8 @@ I will, at the end of each test phase:
 **Justification** Reliable functionality and accurate content are essential for user trust, successful task completion (finding destinations and booking options), and alignment with professional web standards and course requirements.
 
 <details>
-  <summary><strong>Test Case TC001 - Main Navigation Bar</strong></summary>
+  <summary><strong>Test Case TC001 -  Main navigation bar (index.html, search.html, packages.html)</strong></summary>
 <table>
-  <tr>
-    <td><strong>Test Case:</strong> TC001</td>
-    <td><strong>Feature:</strong> Main navigation bar (index.html, search.html, packages.html)</td>
-  </tr>
   <tr>
     <td colspan="2"><strong>Description:</strong> Verify the navigation menu operates correctly across all pages and devices, ensuring each link directs to the appropriate page or section.</td>
   </tr>
@@ -6108,7 +6104,7 @@ I will, at the end of each test phase:
   </tr>
 </table>
     </details>
-
+      
 ---
 
 ## Project Setup with GitHub and Visual Studio Code
@@ -6217,6 +6213,591 @@ To my profile, ensuring all commits were attributed as accurately as possible, w
 Ensuring issues could be identified and resolved before deployment, previewing the website locally through **Live Server** and `python -m http.server` was a standard practice. Broken links, layout inconsistencies, or accessibility issues being published were rectified, ensuring the project was safeguarded. Changes are validated in a staging environment before release when testing locally, which also reflects a professional development workflow.  
 
 With this Milestone 2 project, I began to feel increasingly confident using Git through the command line. Compared with earlier stages of learning, only minor obstacles were encountered, and these were resolved quickly using a systematic approach. The most common issues involved occasionally forgetting to pull the latest README.md updates after making commits directly on the GitHub interface, and making periodic corrections to commit names or descriptions to maintain professional version control standards. These experiences strengthened my understanding of synchronising local and remote branches, reinforced best practices for commit quality, and contributed to a more disciplined and reliable workflow.
+
+---
+
+## Website Testing
+[⬆ Back to Table of contents](#table-of-contents)
+
+## Types of Tests Implemented
+
+This project underwent comprehensive testing following a systematic Quality Assurance approach. A total of **57 test procedures** were executed across **8 testing categories** to ensure the Holiday Destination Finder meets professional web development standards, accessibility compliance (WCAG 2.1 Level AA), and user experience best practices.
+
+### Testing Categories Summary
+
+| Testing Category | Test Cases | Description |
+|------------------|-----------|-------------|
+| **Functionality & Content Accuracy** | TC001-TC005 (15 tests) | Verify navigation menu, search functionality with Google Maps API, category filter buttons (5 types), booking form validation, external partner links (Booking.com, Google Flights, Expedia, GetYourGuide), footer links, content accuracy, link descriptions, "Start Exploring" CTA button, Popular Destinations buttons (4 cities), anchor navigation, and Contact link scrolling to footer |
+| **Usability & Typography** | TC016-TC020 (5 tests) | Ensure visual consistency across all pages (Ocean Blue/Sky Blue/Coral Orange palette, Montserrat/Lato fonts), font readability (16px minimum, contrast ratios, line spacing), visual hierarchy (H1->H2->H3 semantic structure), text spacing (WCAG 1.4.12 compliance, CSS variables), and button styling (Coral Orange CTAs, hover/focus states) |
+| **Responsiveness** | TC021-TC023, TC034 (3 tests) | Verify content and layout across desktop (1920x1080), tablet (768x1024), and mobile (375x667) devices. Test carousel responsiveness, Google Maps touch controls, form mobile behavior, hamburger menu functionality, and Popular Destinations card grid stacking (4->2->1 columns) |
+| **Accessibility** | TC024-TC030 (7 tests) | Use Lighthouse, WAVE, WebAIM Contrast Checker, NVDA, and VoiceOver to test colour contrast (4.5:1 body, 3:1 large text), keyboard navigation (Tab, Enter, Arrow keys), screen reader compatibility, semantic HTML structure (&lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;footer&gt;), alt text on images (14 images total), ARIA attributes (carousel, navigation, forms), and skip-to-main-content link. Ensures WCAG 2.1 Level AA compliance |
+| **Performance** | TC031-TC033 (3 tests) | Test page load times (desktop <3s, mobile <5s), Core Web Vitals (LCP, FID, CLS), image optimization (14 images in WebP format with specific size limits: carousel <200KB, cards <150KB, logos <50KB), and code validation using W3C HTML/CSS validators and ESLint for JavaScript |
+| **Regression Testing** | TC034-TC035 (2 tests) | Comprehensive 30-step full walkthrough after updates or bug fixes to ensure existing functionality remains intact. Re-test navigation, interactive elements (carousel, search, filters, forms), visual styling, accessibility features, performance metrics, code validation, and cross-browser compatibility |
+
+## Browser Testing Notice
+
+This project is developed and tested using **Microsoft Edge**.  
+Since both Microsoft Edge and Google Chrome are Chromium-based browsers, they share the same rendering engine (Blink) and JavaScript engine (V8). In practice, this means that front‑end behavior, layout, and script execution are consistent across the two browsers.  
+
+For this reason, and to streamline the development workflow, all testing will be performed exclusively on Microsoft Edge.  
+Developers and users running Google Chrome should expect equivalent results, though minor differences may occur due to browser‑specific features or release cycles.
+
+### Safari
+Safari is not available on Windows OS, so testing will not be performed on that browser in this academic project.  
+In a professional environment, Safari testing would be essential, and I would resort to macOS devices, mac emulators, or specialised online services that simulate Safari rendering and behavior to ensure full cross‑browser compatibility.
+
+### Firefox
+In addition to Microsoft Edge, testing will also be carried out on **Mozilla Firefox**.  
+This ensures coverage across both major browser engines: Chromium (Edge/Chrome) and Gecko (Firefox).
+
+
+### Test Cases
+[⬆ Back to Table of contents](#table-of-contents)
+
+#### Functionality and Content Accuracy Testing - Results
+[⬆ Back to Table of contents](#table-of-contents)
+
+<details>
+  <summary><strong>Test Case TC001 -  Main navigation bar (index.html, search.html, packages.html)</strong></summary>
+<table>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify the navigation menu operates correctly across all pages and devices, ensuring each link directs to the appropriate page or section.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Clear navigation supports user orientation, reduces cognitive load and ensures all key features (search and booking) are discoverable.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Open index.html in Chrome, Firefox, Safari, and Edge.<br>
+2. Click each navigation link: About Us, Search, Popular Destinations, Packages and Contact.<br>
+3. Confirm that each link navigates to the correct page without errors.<br>
+
+
+**Microsoft Edge (1366x1920) - About Us (index.html)** - No errors
+
+<img width="1642" height="637" alt="image" src="https://github.com/user-attachments/assets/ef018e50-45be-4266-8231-56ce873e9b41" />
+
+**Microsoft Edge (1366x1920) - Contact (index.html#contact)** - No errors
+
+<img width="1682" height="887" alt="image" src="https://github.com/user-attachments/assets/4b6c9ae9-a553-4b09-a531-113cfa7da165" />
+
+**Microsoft Edge (1366x1920) - Search (search.html)** - No errors
+
+<img width="1727" height="597" alt="image" src="https://github.com/user-attachments/assets/a6d5564f-b906-4313-bc10-790bc800338b" />
+
+**Microsoft Edge (1366x1920) - Popular Destinations (search.html#popular)** - No errors
+
+<img width="1655" height="451" alt="image" src="https://github.com/user-attachments/assets/74ec4208-b631-4dfc-8da2-52d0314a237a" />
+
+**Microsoft Edge (1366x1920) - Contact (search.html#contact)** - No errors
+
+<img width="1678" height="458" alt="image" src="https://github.com/user-attachments/assets/29fc03e2-d9c7-4df4-b736-7ccca424ee11" />
+
+**Microsoft Edge (1366x1920) - Packages (packages.html)** - 2 errors - Javascript related
+
+<img width="1710" height="522" alt="image" src="https://github.com/user-attachments/assets/9dc0e43b-cd54-4ef9-8c00-e66c2b8bfddf" />
+
+**Microsoft Edge (1366x1920) - Popular Destinations (packages.html#popular)** - 2 errors - Javascript related
+
+<img width="1620" height="396" alt="image" src="https://github.com/user-attachments/assets/686574ad-2cec-4c6c-9665-07aa18175c7d" />
+
+**Microsoft Edge (1366x1920) - Contact (packages.html#contact)** - 2 errors - Javascript related
+
+<img width="1589" height="737" alt="image" src="https://github.com/user-attachments/assets/a1cae4c9-1fd2-462c-9f91-bbcb32b89e99" />
+
+**Mozilla Firefox (1366x1920) - About Us (index.html)** - No errors
+
+<img width="1843" height="498" alt="image" src="https://github.com/user-attachments/assets/ecdf6caa-1b56-430a-8952-ae42d3c6a2e9" />
+
+**Mozilla Firefox (1366x1920) - Contact (index.html#contact)** - No errors
+
+<img width="1796" height="622" alt="image" src="https://github.com/user-attachments/assets/0d1325e0-1d53-4aa7-8300-8ce2a0b2395a" />
+
+**Mozilla Firefox (1366x1920) - Search (search.html)** - No errors
+
+<img width="1896" height="573" alt="image" src="https://github.com/user-attachments/assets/6802e0b5-1c08-4ef3-83c9-975dc11b7f07" />
+
+**Mozilla Firefox (1366x1920) - Popular Destinations (search.html#popular)** - No errors
+
+<img width="1816" height="570" alt="image" src="https://github.com/user-attachments/assets/bead4174-b929-48c0-b824-b655dd6f3318" />
+
+**Mozilla Firefox (1366x1920) - Contact (search.html#contact)** - No errors
+
+<img width="1838" height="618" alt="image" src="https://github.com/user-attachments/assets/3c0b031a-b27b-4644-8478-366816e17945" />
+
+**Mozilla Firefox (1366x1920) - Packages (packages.html)** - No errors
+
+<img width="1800" height="590" alt="image" src="https://github.com/user-attachments/assets/3a22b470-8fa7-43a6-a64e-ad3efb3b30fd" />
+
+**Mozilla Firefox (1366x1920) - Popular Destinations (packages.html#popular)** - No errors
+
+<img width="1821" height="528" alt="image" src="https://github.com/user-attachments/assets/f9eee0c3-c4c5-4871-994e-fcb82bc641a0" />
+
+**Mozilla Firefox (1366x1920) - Contact (packages.html#contact)** - No errors
+
+<img width="1858" height="885" alt="image" src="https://github.com/user-attachments/assets/40016a79-a2eb-432b-b627-d9276edb907c" />
+
+4. Repeat testing on tablet (768x1024) and mobile (375x667) viewports.<br>
+
+**Microsoft Edge (768x1024) - About Us (index.html)** - No errors
+
+<img width="1621" height="676" alt="image" src="https://github.com/user-attachments/assets/4c2586c1-2622-4bbe-8f04-2fb3fad34459" />
+
+**Microsoft Edge (768x1024) - Contact (index.html#contact)** - No errors
+
+<img width="1716" height="447" alt="image" src="https://github.com/user-attachments/assets/4e3ef5b3-ab35-417e-b8de-16ae36ca3f45" />
+
+**Microsoft Edge (768x1024) - Search (search.html)** - No errors
+
+<img width="1617" height="607" alt="image" src="https://github.com/user-attachments/assets/d6810a32-4746-47c7-94f5-11e30c063bdf" />
+
+**Microsoft Edge (768x1024) - Popular Destinations (search.html#popular)** - No errors
+
+<img width="1563" height="775" alt="image" src="https://github.com/user-attachments/assets/7e7c1837-4906-4ed5-9120-02b99556873b" />
+
+**Microsoft Edge (768x1024) - Contact (search.html#contact)** - No errors
+
+<img width="1424" height="762" alt="image" src="https://github.com/user-attachments/assets/e3443ecb-544f-493e-bc34-fd5ae2b735ee" />
+
+**Microsoft Edge (768x1024) - Packages (packages.html)** - 2 errors - Javascript related
+
+<img width="1633" height="579" alt="image" src="https://github.com/user-attachments/assets/a466e017-b5fa-4ec3-a265-aba7a84ee518" />
+
+**Microsoft Edge (768x1024) - Popular Destinations (packages.html#popular)** - 2 errors - Javascript related
+
+<img width="1646" height="839" alt="image" src="https://github.com/user-attachments/assets/ad1f43f2-8c41-4b81-83ab-3814005bd268" />
+
+**Microsoft Edge (768x1024) - Contact (packages.html#contact)** - 2 errors - Javascript related
+
+<img width="1687" height="618" alt="image" src="https://github.com/user-attachments/assets/d4d05409-2599-455c-9ca4-e048d1399c9f" />
+
+**Microsoft Edge (375x667) - About Us (index.html)** - No errors
+
+<img width="1637" height="817" alt="image" src="https://github.com/user-attachments/assets/fe8c2510-497e-4405-adec-66737dd32e83" />
+
+**Microsoft Edge (375x667) - Contact (index.html#contact)** - No errors
+
+<img width="1701" height="780" alt="image" src="https://github.com/user-attachments/assets/b2fab05b-2a62-41cc-897f-15f65a7fd4de" />
+
+**Microsoft Edge (375x667) - Search (search.html)** - No errors
+
+<img width="1633" height="601" alt="image" src="https://github.com/user-attachments/assets/39731ad5-0508-45ba-a079-d72b5b3b37fa" />
+
+**Microsoft Edge (375x667) - Popular Destinations (search.html#popular)** - No errors
+
+<img width="1679" height="823" alt="image" src="https://github.com/user-attachments/assets/171bb9f1-a12a-4453-adcf-5e0ced1fd9a2" />
+
+**Microsoft Edge (375x667) - Contact (search.html#contact)** - No errors
+
+<img width="1723" height="827" alt="image" src="https://github.com/user-attachments/assets/d982dfc5-b731-4b02-b760-431f7646c859" />
+
+**Microsoft Edge (375x667) - Packages (packages.html)** - 2 errors - Javascript related
+
+<img width="1638" height="823" alt="image" src="https://github.com/user-attachments/assets/59f4a8b8-8217-4dd8-8d9c-bb1da59f72fd" />
+
+**Microsoft Edge (375x667) - Popular Destinations (packages.html#popular)** - 2 errors - Javascript related
+
+<img width="1614" height="773" alt="image" src="https://github.com/user-attachments/assets/98e41701-b6c0-4d02-93e8-d1709b74d550" />
+
+**Microsoft Edge (375x667) - Contact (packages.html#contact)** - 2 errors - Javascript related
+
+<img width="1669" height="843" alt="image" src="https://github.com/user-attachments/assets/10e84d45-6d84-45e8-8e63-4ed2140effc5" />
+
+**Mozilla Firefox (768x1024) - About Us (index.html)** - No errors
+
+<img width="1754" height="901" alt="image" src="https://github.com/user-attachments/assets/3bfca479-d1c8-452f-86e2-57ccb61f0c61" />
+
+**Mozilla Firefox (768x1024) - Contact (index.html#contact)** - No errors
+
+<img width="1738" height="897" alt="image" src="https://github.com/user-attachments/assets/157f6f3a-b5cd-4558-bc3f-99d13f87f443" />
+
+**Mozilla Firefox (768x1024) - Search (search.html)** - No errors
+
+<img width="1675" height="931" alt="image" src="https://github.com/user-attachments/assets/63cf7287-6888-4749-a936-8601b1cec2d6" />
+
+**Mozilla Firefox (768x1024) - Popular Destinations (search.html#popular)** - No errors
+
+<img width="1732" height="936" alt="image" src="https://github.com/user-attachments/assets/3d9a3cc0-7a03-45f9-b458-6c27b0d132e6" />
+
+**Mozilla Firefox (768x1024) - Contact (search.html#contact)** - No errors
+
+<img width="1708" height="948" alt="image" src="https://github.com/user-attachments/assets/d6739490-407f-43b9-ae53-9948554b1960" />
+
+**Mozilla Firefox (768x1024) - Packages (packages.html)** - 2 errors - Javascript related
+
+<img width="1726" height="895" alt="image" src="https://github.com/user-attachments/assets/4124e8e9-56c7-4e9c-b106-614fd0bc0669" />
+
+**Mozilla Firefox (768x1024) - Popular Destinations (packages.html#popular)** - 2 errors - Javascript related
+
+<img width="1750" height="935" alt="image" src="https://github.com/user-attachments/assets/557e79d3-dd21-4a30-876c-68cecd859e6b" />
+
+**Mozilla Firefox (768x1024) - Contact (packages.html#contact)** - 2 errors - Javascript related
+
+<img width="1715" height="951" alt="image" src="https://github.com/user-attachments/assets/4759cabf-27fb-444b-8107-10b0068495e0" />
+
+**Mozilla Firefox (375x667) - About Us (index.html)** - No errors
+
+<img width="1718" height="930" alt="image" src="https://github.com/user-attachments/assets/f3435412-d84f-4f90-8901-92123010f9c2" />
+
+**Mozilla Firefox (375x667) - Contact (index.html#contact)** - No errors
+
+<img width="1798" height="955" alt="image" src="https://github.com/user-attachments/assets/ce4c992e-2d19-4415-8772-da54771e9973" />
+
+**Mozilla Firefox (375x667) - Search (search.html)** - No errors
+
+<img width="1765" height="962" alt="image" src="https://github.com/user-attachments/assets/8f35c362-37d2-4931-be5b-f03ae46bfff9" />
+
+**Mozilla Firefox (375x667) - Popular Destinations (search.html#popular)** - No errors
+
+<img width="1842" height="933" alt="image" src="https://github.com/user-attachments/assets/a62e77b0-96ef-445e-b9af-d2377c8c250c" />
+
+**Mozilla Firefox (375x667) - Contact (search.html#contact)** - No errors
+
+<img width="1805" height="923" alt="image" src="https://github.com/user-attachments/assets/0cdff4e6-4bd9-4b8a-9770-5a14dc19c198" />
+
+**Mozilla Firefox (375x667) - Packages (packages.html)** - No errors
+
+<img width="1736" height="939" alt="image" src="https://github.com/user-attachments/assets/bb727180-f963-4ed4-bc8a-2cb08cba5348" />
+
+**Mozilla Firefox (375x667) - Popular Destinations (packages.html#popular)** - No errors
+
+<img width="1829" height="922" alt="image" src="https://github.com/user-attachments/assets/5c179bd5-f140-447f-bf1e-7f17b10d3873" />
+
+**Mozilla Firefox (375x667) - Contact (packages.html#contact)** - No errors
+
+<img width="1787" height="945" alt="image" src="https://github.com/user-attachments/assets/3d9b96f7-45e8-4870-a926-f1d950b5e351" />
+
+
+5. On mobile, verify the hamburger menu appears and expands/collapses correctly.<br>
+
+**Microsoft Edge (375x667) - About Us (index.html)** - Expands/collapses correctly
+
+<img width="1117" height="864" alt="image" src="https://github.com/user-attachments/assets/944c6f96-6a3d-4ad9-b89f-fa49662f94bb" />
+
+**Microsoft Edge (375x667) - Contact (index.html#contact)** - Expands/collapses incorrectly - Once menu option contact clicked it doesn't collapse
+
+<img width="1198" height="455" alt="image" src="https://github.com/user-attachments/assets/69eacf52-8b9c-4814-a6a2-7cadfcc6b94e" />
+
+**Microsoft Edge (375x667) - Search (search.html)** - Expands/collapses correctly
+
+<img width="1085" height="445" alt="image" src="https://github.com/user-attachments/assets/f4141168-3586-4c81-af44-637f6ae028b0" />
+
+**Microsoft Edge (375x667) - Popular Destinations (search.html#popular)** - Expands/collapses incorrectly - Once menu option popular destinations clicked it doesn't collapse
+
+<img width="982" height="671" alt="image" src="https://github.com/user-attachments/assets/bbac0cc0-6683-4c88-b513-ea429327ec6a" />
+
+**Microsoft Edge (375x667) - Contact (search.html#contact)** - Expands/collapses incorrectly - Once menu option contact clicked it doesn't collapse
+
+<img width="1087" height="696" alt="image" src="https://github.com/user-attachments/assets/ce2f44d2-c15f-44a1-a3cc-98669349469a" />
+
+**Microsoft Edge (375x667) - Packages (packages.html)** - Expands/collapses correctly
+
+<img width="1031" height="819" alt="image" src="https://github.com/user-attachments/assets/71662dea-8dfd-415e-85f7-0d500c18cdf5" />
+
+**Microsoft Edge (375x667) - Popular Destinations (packages.html#popular)** - Expands/collapses incorrectly - Once menu option popular destinations clicked it doesn't collapsed
+
+<img width="1112" height="464" alt="image" src="https://github.com/user-attachments/assets/50d6a7d8-3e7a-48af-803b-9e0569835128" />
+
+**Microsoft Edge (375x667) - Contact (packages.html#contact)** - Expands/collapses incorrectly - Once menu option contact clicked it doesn't collapse
+
+<img width="1085" height="585" alt="image" src="https://github.com/user-attachments/assets/0631f384-0afb-44a7-b5e7-dfbb1f928d81" />
+
+**Mozilla Firefox (375x667) - About Us (index.html)** - Expands/collapses correctly
+
+<img width="1289" height="510" alt="image" src="https://github.com/user-attachments/assets/fa1e5c21-26d3-4309-b743-60bc5b85f3f0" />
+
+
+**Mozilla Firefox (375x667) - Contact (index.html#contact)** - Expands/collapses incorrectly - Once menu option contact clicked it doesn't collapse
+
+<img width="1234" height="645" alt="image" src="https://github.com/user-attachments/assets/ea6728c6-bf25-467b-8ce9-ec2fe550bda2" />
+
+**Mozilla Firefox (375x667) - Search (search.html)** - Expands/collapses correctly
+
+<img width="1113" height="574" alt="image" src="https://github.com/user-attachments/assets/fe6d617a-8083-4371-97d5-1a251a696d43" />
+
+**Mozilla Firefox (375x667) - Popular Destinations (search.html#popular)** - Expands/collapses incorrectly - Once menu option popular destinations clicked it doesn't collapsed
+
+<img width="1116" height="639" alt="image" src="https://github.com/user-attachments/assets/4b4875d8-2429-4e83-9aa2-607627a50587" />
+
+**Mozilla Firefox (375x667) - Contact (search.html#contact)** - Expands/collapses incorrectly - Once menu option contact clicked it doesn't collapse
+
+<img width="1060" height="651" alt="image" src="https://github.com/user-attachments/assets/8a6f87f3-ec5b-4a20-9ed3-c6ac15f3e745" />
+
+**Mozilla Firefox (375x667) - Packages (packages.html)** - Expands/collapses correctly
+
+<img width="1127" height="556" alt="image" src="https://github.com/user-attachments/assets/109f2df4-b7e7-42e8-a069-8c09675c5702" />
+
+**Mozilla Firefox (375x667) - Popular Destinations (packages.html#popular)** - Expands/collapses incorrectly - Once menu option popular destinations clicked it doesn't collapsed
+
+<img width="1276" height="662" alt="image" src="https://github.com/user-attachments/assets/503b8b26-55d7-4548-a9ad-f31feb5928a3" />
+
+**Mozilla Firefox (375x667) - Contact (packages.html#contact)** - Expands/collapses incorrectly - Once menu option contact clicked it doesn't collapse
+
+<img width="1251" height="661" alt="image" src="https://github.com/user-attachments/assets/9d120f65-3464-46fb-abfc-530768d7dc0c" />
+
+6. Test keyboard navigation using Tab key to cycle through navigation links.<br>
+
+**Microsoft Edge (375x667)** - Successful navigation using Tab key to cycle through navigation links
+
+<img width="1284" height="821" alt="image" src="https://github.com/user-attachments/assets/d563f24d-fad5-435d-8db7-270fccd6f764" />
+
+**Mozilla Firefox (375x667)** -  Successful navigation using Tab key to cycle through navigation links
+
+<img width="1538" height="887" alt="image" src="https://github.com/user-attachments/assets/ac9f3ccc-bb45-4cea-82c2-d1b89d9e5a7e" />
+
+<video width="640" controls>
+  <source src="https://github.com/user-attachments/assets/cb3f7fda-f4df-4f4a-8431-e4b00942b137" type="video/mp4">
+  Microsoft Edge evidence file.
+</video>
+
+<video width="640" controls>
+  <source src="https://github.com/user-attachments/assets/d686f53e-14a6-4bd1-af0e-33f1fb8d1db3" type="video/mp4">
+  Mozilla Firefox evidence file.
+</video>
+
+7. Verify visible focus indicators appear on each navigation item.<br>
+
+<video width="640" controls>
+  <source src="https://github.com/user-attachments/assets/f235f31a-96f8-4be6-bf71-22445b2dcee1" type="video/mp4">
+  Microsoft Edge evidence file.
+</video>
+
+<video width="640" controls>
+  <source src="https://github.com/user-attachments/assets/e17a544e-3d45-4a35-90ca-95dd08485628" type="video/mp4">
+  Mozilla Firefox evidence file.
+</video>
+
+**Observations:**
+
+- In **Microsoft Edge**, the hover effect appears on all navigation items. When clicked, all page options display visible focus indicators, except for *Contact* or *Popular Destination*. The internal link options do not remain visibly active across all three pages (index.html, search.html, and packages.html).  
+
+- In **Mozilla Firefox**, the hover effect does not appear on all navigation items. When clicked, all page options display visible focus indicators, except for *Contact* or *Popular Destination*. The internal link options do not remain visibly active across all three pages (index.html, search.html, and packages.html).
+
+8. Check that clicking a nav link on mobile closes the menu automatically.<br>
+
+<video width="640" controls>
+  <source src="https://github.com/user-attachments/assets/ae97a5d9-bf9f-4f1f-8115-f1c82635866f" type="video/mp4">
+  Microsoft Edge evidence file.
+</video>
+
+
+<video width="640" controls>
+  <source src="https://github.com/user-attachments/assets/31415b23-aaff-493b-96b9-a4b9a7210fa8" type="video/mp4">
+  Mozilla Firefox evidence file.
+</video>
+
+
+**Observations:**
+
+- In **Microsoft Edge**, When clicked, all page options mobile closes the menu automatically, except for *Contact* or *Popular Destination*. The internal link options do not close the menu automatically all three pages (index.html, search.html, and packages.html).  
+
+- In **Mozilla Firefox**, When clicked, all page options mobile closes the menu automatically, except for *Contact* or *Popular Destination*. The internal link options do not close the menu automatically all three pages (index.html, search.html, and packages.html).  
+
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- All links function correctly and navigate to appropriate pages<br>
+- Navigation remains consistent across all pages<br>
+- Responsive hamburger menu displays correctly on mobile/tablet<br>
+- Keyboard users can navigate with visible focus outlines<br>
+- Mobile menu closes after link selection<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+Steps 1 to 4 - All links function correctly and navigate to appropriate pages for all devices.<br>
+
+Step 5. On mobile, verify that the hamburger menu appears and expands/collapses correctly. This behavior only applies to the main links; the internal link options do not automatically collapse the menu on any of the three pages (index.html, search.html, and packages.html).<br>
+
+Step 6. Test keyboard navigation using Tab key to cycle through navigation links. **This behaviour is working as expected on all browsers.**<br>
+
+Step 7. Verify visible focus indicators appear on each navigation item:
+
+- In **Microsoft Edge**, the hover effect appears on all navigation items. When clicked, all page options display visible focus indicators, except for *Contact* or *Popular Destination*. The internal link options do not remain visibly active across all three pages (index.html, search.html, and packages.html).  
+
+- In **Mozilla Firefox**, the hover effect does not appear on all navigation items. When clicked, all page options display visible focus indicators, except for *Contact* or *Popular Destination*. The internal link options do not remain visibly active across all three pages (index.html, search.html, and packages.html).<br>
+
+8. Check that clicking a nav link on mobile closes the menu automatically:
+
+- In **Microsoft Edge**, When clicked, all page options mobile closes the menu automatically, except for *Contact* or *Popular Destination*. The internal link options do not close the menu automatically all three pages (index.html, search.html, and packages.html).  
+
+- In **Mozilla Firefox**, When clicked, all page options mobile closes the menu automatically, except for *Contact* or *Popular Destination*. The internal link options do not close the menu automatically all three pages (index.html, search.html, and packages.html).<br>
+
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+
+<tr>
+
+  <td colspan="2"><strong>Corrections for Javascript errors from steps 1 to 4</strong> </td>
+  
+**Corrections for Javascript errors from steps 1 to 4**
+
+**Javascript error 1 - :**
+
+<img width="1102" height="260" alt="image" src="https://github.com/user-attachments/assets/d90bc50f-8ab2-4a8c-ae00-5912c01931ad" />
+
+**Javascript error 2 - :**
+
+<img width="1855" height="788" alt="image" src="https://github.com/user-attachments/assets/f8d32321-d551-4278-a924-ad6662c1364e" />
+
+**Root Cause**
+packages.html is loading search.js, but it doesn't have the search and map page elements!
+
+**What's Happening:**
+
+1. packages.html loads search.js
+2. search.js tries to find #searchBtn (line 142)
+3. #searchBtn doesn't exist on packages.html
+4. searchBtn is null
+5. Trying to call searchBtn.addEventListener() on null = ERROR!
+6. packages.html loads Google Maps API with a callback to initMap()
+7. Google Maps API automatically calls initMap() when it loads
+8. initMap() tries to create a map on document.getElementById("map")
+9. packages.html doesn't have a <div id="map"> element
+10. Google Maps receives null instead of an HTML element → ERROR!
+
+**Solution: Add Element Existence Checks**
+
+**Fix 1:** Update DOMContentLoaded (Line 32-40)
+
+**Before:**
+
+<img width="640" height="276" alt="image" src="https://github.com/user-attachments/assets/e9a70f13-c687-48a4-aca2-de708ddd5d4e" />
+
+**After:**
+
+<img width="791" height="587" alt="image" src="https://github.com/user-attachments/assets/2dd50dd9-fbdc-4ecf-804f-3015dec9b547" />
+
+**Fix 2:** Update initializeSearchButton (Line 140-160)
+
+**Before:**
+
+<img width="604" height="471" alt="image" src="https://github.com/user-attachments/assets/a210c0a3-f652-48f9-a514-fdb58fc4c3d4" />
+
+**After:**
+
+<img width="605" height="533" alt="image" src="https://github.com/user-attachments/assets/4c175e6d-b6a1-476f-8eb3-0aa89609e6ff" />
+
+**Fix 3:** In search.js - Update the initMap function (around line 276): BEFORE (Line 276-290)
+
+**Before:**
+
+<img width="658" height="415" alt="image" src="https://github.com/user-attachments/assets/1255401d-e64f-4e07-a35c-03e4ce47fe33" />
+
+**After:**
+
+<img width="631" height="249" alt="image" src="https://github.com/user-attachments/assets/bf254ad9-b43a-4e58-bc01-af548b416886" />
+
+**Second Tests**
+
+(Fixed)**Microsoft Edge (1366x1920) - Packages (packages.html)** - 2 errors - Javascript related 
+
+<img width="1844" height="568" alt="image" src="https://github.com/user-attachments/assets/b1ba2fa1-a416-47a6-8f6e-38028b4f9a3a" />
+
+
+(Fixed)**Microsoft Edge (1366x1920) - Popular Destinations (packages.html#popular)** - 2 errors - Javascript related(Fixed)
+
+<img width="1739" height="512" alt="image" src="https://github.com/user-attachments/assets/009e32cf-0338-4fa6-bff7-db73f8d7a9dd" />
+
+
+(Fixed)**Microsoft Edge (1366x1920) - Contact (packages.html#contact)** - 2 errors - Javascript related (Fixed)
+
+<img width="1793" height="884" alt="image" src="https://github.com/user-attachments/assets/e55a3468-5371-4364-a44a-9c671249d249" />
+
+
+(Fixed)**Microsoft Edge (768x1024) - Packages (packages.html)** - 2 errors - Javascript related (Fixed)
+
+<img width="1669" height="379" alt="image" src="https://github.com/user-attachments/assets/25984aa0-f3c4-4611-ae85-5a71cedcc9c8" />
+
+(Fixed)**Microsoft Edge (768x1024) - Popular Destinations (packages.html#popular)** - 2 errors - Javascript related (Fixed)
+
+<img width="1714" height="465" alt="image" src="https://github.com/user-attachments/assets/5a463216-2a46-4337-91b2-930420a7c77b" />
+
+(Fixed)**Microsoft Edge (768x1024) - Contact (packages.html#contact)** - 2 errors - Javascript related (Fixed)
+
+<img width="1716" height="472" alt="image" src="https://github.com/user-attachments/assets/181caeaa-e51b-413b-beba-472d41c3f942" />
+
+(Fixed)**Microsoft Edge (375x667) - Packages (packages.html)** - 2 errors - Javascript related (Fixed)
+
+<img width="1762" height="565" alt="image" src="https://github.com/user-attachments/assets/572a72a6-28d5-44e0-b101-d1af4fed63cc" />
+
+
+(Fixed)**Microsoft Edge (375x667) - Popular Destinations (packages.html#popular)** - 2 errors - Javascript related (Fixed)
+
+<img width="1722" height="456" alt="image" src="https://github.com/user-attachments/assets/db0d6466-801b-4e95-9a76-8f300b0d1eaf" />
+
+(Fixed)**Microsoft Edge (375x667) - Contact (packages.html#contact)** - 2 errors - Javascript related (Fixed)
+
+<img width="1783" height="530" alt="image" src="https://github.com/user-attachments/assets/6a5cd459-c2cd-4644-9335-406ed43dc8b5" />
+
+**Corrections for errors from steps 5 and 8**
+
+The problem is that search.html and packages.html don't include script.js at all, so the initSmoothScroll() function that handles # links never runs on those pages.
+The fix is simple: include script.js on all three pages and adjust script.js code.
+
+**Fix 1**
+
+Included script.js in search.html
+<img width="445" height="132" alt="image" src="https://github.com/user-attachments/assets/ba453f36-4688-430e-8faf-e5d6090728fb" />
+
+Included script.js in packages.html
+<img width="487" height="138" alt="image" src="https://github.com/user-attachments/assets/7f95a272-8ddd-425f-99bb-d264cd4d2c8e" />
+
+**Fix 2**
+
+Replaced initSmoothScroll function in script.js with the following one:
+
+<img width="620" height="866" alt="image" src="https://github.com/user-attachments/assets/68f642be-7ee3-4d01-99f4-29004d36868b" />
+
+**Proof**
+
+<video width="640" controls>
+  <source src="https://github.com/user-attachments/assets/26d2733d-592f-4fec-9446-5038e5e8ff1a" type="video/mp4">
+  Microsoft Edge evidence file.
+</video>
+
+<video width="640" controls>
+  <source src="https://github.com/user-attachments/assets/4b2ec1c9-5ace-4dba-bcf3-45fcca251c2e" type="video/mp4">
+  Mozilla Firefox evidence file.
+</video>
+
+**Corrections for errors from step 7**
+
+By default, navigation links that point to internal page sections using hash values (e.g., #popular, #contact) do not remain highlighted as active after being clicked. This occurs because browsers automatically move the URL focus to the target section, which removes focus from the navigation item and prevents the .active class from persisting. As a result, the Popular Destinations and Contact links did not stay visibly active across index.html, search.html, and packages.html.
+
+To resolve this, I implemented a JavaScript function (setActiveNavLink()) that checks the current page URL and its hash value (window.location.hash). Whenever the user clicks an internal link, the script:
+
+Detects whether the URL ends with #popular or #contact.
+
+Assigns the .active and aria-current="page" attributes to the correct navigation item.
+
+Ensures the active state remains consistent across all pages, even after smooth scrolling or page navigation.
+
+This approach overrides the browser's default behaviour and ensures that both internal navigation options behave the same as the main page links, improving clarity, accessibility, and user experience throughout the site.
+
+<img width="770" height="820" alt="image" src="https://github.com/user-attachments/assets/3ad1aba5-d067-46c7-9689-a79169129fb9" />
+
+<img width="764" height="976" alt="image" src="https://github.com/user-attachments/assets/967061bd-7d5c-452d-a72a-d6419d6c9c70" />
+
+<video width="640" controls>
+  <source src="https://github.com/user-attachments/assets/a6e109b6-ca0a-4f83-b67a-ea12a574bf9a" type="video/mp4">
+  Microsoft Edge evidence file.
+</video>
+
+<video width="640" controls>
+  <source src="https://github.com/user-attachments/assets/90eaa24f-01f9-4396-b703-f79757216f06" type="video/mp4">
+  Mozilla Firefox evidence file.
+</video>
+
+</tr>
+  
+</table>
+</details>
 
 ---
 
