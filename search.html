@@ -465,12 +465,11 @@ resources that describes this webpage. It sits at the top of the HTML document.
                   <div class="row g-3">
                     <!-- 
                     Each button is wrapped in a column.
-                    class="col-6 col-md-4 col-lg":
-                      - "col-6": On extra-small screens each column takes half width (2 per row).
-                      - "col-md-4": On medium screens each takes 4/12 (3 per row).
-                      - "col-lg": On large screens each column automatically adjusts to fit.
-                  -->
-                    <div class="col-6 col-md-4 col-lg">
+                      class="col-12 col-md":
+                        - "col-12": On small screens each column takes full width (stacked vertically).
+                        - "col-md": On medium screens and above, columns automatically adjust to fit all 5 in one row.
+                    -->
+                    <div class="col-12 col-md">
                       <!-- 
                       Attractions button:
                         class="btn btn-action w-100 active":
@@ -506,7 +505,7 @@ resources that describes this webpage. It sits at the top of the HTML document.
                       </button>
                     </div>
                     <!-- Restaurants button -->
-                    <div class="col-6 col-md-4 col-lg">
+                    <div class="col-12 col-md">
                       <button
                         class="btn btn-action w-100"
                         data-type="restaurant"
@@ -517,7 +516,7 @@ resources that describes this webpage. It sits at the top of the HTML document.
                       </button>
                     </div>
                     <!-- Hotels button -->
-                    <div class="col-6 col-md-4 col-lg">
+                    <div class="col-12 col-md">
                       <button
                         class="btn btn-action w-100"
                         data-type="lodging"
@@ -528,7 +527,7 @@ resources that describes this webpage. It sits at the top of the HTML document.
                       </button>
                     </div>
                     <!-- Cafes button -->
-                    <div class="col-6 col-md-4 col-lg">
+                    <div class="col-12 col-md">
                       <button
                         class="btn btn-action w-100"
                         data-type="cafe"
@@ -539,7 +538,7 @@ resources that describes this webpage. It sits at the top of the HTML document.
                       </button>
                     </div>
                     <!-- Shopping button -->
-                    <div class="col-6 col-md-4 col-lg">
+                    <div class="col-12 col-md">
                       <button
                         class="btn btn-action w-100"
                         data-type="shopping_mall"
@@ -1054,8 +1053,20 @@ resources that describes this webpage. It sits at the top of the HTML document.
       </div>
     </footer>
 
-   <!-- Validation Toast - fixed at top of screen -->
-    <div id="validationToastContainer" style="display: none; position: fixed; top: 80px; left: 50%; transform: translateX(-50%); z-index: 9999; width: 90%; max-width: 500px;">
+    <!-- Validation Toast - fixed at top of screen -->
+    <div
+      id="validationToastContainer"
+      style="
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        width: 90%;
+        max-width: 500px;
+      "
+    >
       <div
         id="validationToast"
         style="

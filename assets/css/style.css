@@ -1390,11 +1390,31 @@ html {
   color: var(--coral-orange) !important;
 }
 
+/* Make all booking action buttons the same height */
+.action-buttons .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.action-buttons .row > div {
+  display: flex;
+}
+
+.action-buttons .btn-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 /* Search Page - Destination Tiles */
 .destination-tile {
   background-color: var(--white-smoke);
   border: 2px solid var(--sky-blue);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .destination-tile:hover {
@@ -1405,10 +1425,18 @@ html {
 
 .destination-tile .destination-content {
   background-color: var(--white-smoke);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.destination-tile .destination-content p {
+  flex-grow: 1;
 }
 
 .destination-tile .btn-primary {
   font-size: 0.95rem;
+  margin-top: auto;
 }
 
 /* Search Container */
@@ -1799,7 +1827,7 @@ html {
 
 .form-floating > label {
   position: absolute;
-  top: 0.6rem;
+  top: 0.01rem;
   left: 0.75rem;
   font-size: 0.7rem;
   color: var(--charcoal-grey);
@@ -1907,6 +1935,40 @@ html {
 .form-floating > label::before,
 .form-floating > label::after {
   display: none !important;
+}
+
+/* ============================================
+   PACKAGE FORM FIELDS ALIGNMENT FIX
+   ============================================ */
+
+/* Ensure form row uses flexbox for equal height columns */
+#package-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* Make all form columns equal height */
+#package-filters > div {
+  display: flex;
+}
+
+/* Ensure form-floating containers fill the column */
+#package-filters .form-floating {
+  width: 100%;
+  height: 100%;
+}
+
+/* Make all inputs and selects the same height */
+#package-filters .form-control,
+#package-filters .form-select {
+  height: 58px;
+}
+
+/* Align the labels consistently */
+#package-filters label {
+  display: flex;
+  align-items: center;
 }
 
 /* ======================================================================
@@ -2126,5 +2188,125 @@ html {
   /* Reduce destination image height so cards stay proportionate */
   .destination-tile .destination-image img {
     height: 150px !important;
+  }
+}
+
+/* ============================================
+   MOBILE NAVBAR FIX - Add to your style.css
+   ============================================
+   Fixes the navbar brand text and toggle button
+   wrapping issue on small screens (375px)
+   ============================================ */
+
+/* Mobile screens - 576px and below */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1rem;
+    max-width: 70%;
+  }
+
+  .logo-text {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .logo-icon {
+    height: 32px;
+    padding: 4px;
+  }
+}
+
+/* Extra small screens - 375px and below */
+@media (max-width: 375px) {
+  .navbar-brand {
+    font-size: 0.9rem;
+    max-width: 65%;
+  }
+
+  .logo-text {
+    font-size: 0.8rem;
+  }
+
+  .logo-icon {
+    height: 28px;
+    padding: 3px;
+  }
+}
+
+/* ============================================
+   SEARCH BUTTON RESPONSIVE FIX
+   ============================================ */
+
+/* Ensure search input and button have same height on all screens */
+.search-container .row .col-md-8,
+.search-container .row .col-md-4 {
+  display: flex;
+  align-items: stretch;
+}
+
+.search-container .form-control-lg,
+.search-container .btn-lg {
+  height: 100%;
+}
+
+/* Tablet screens - shrink button text to fit */
+@media (min-width: 768px) and (max-width: 991px) {
+  .search-container .btn-lg {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .search-container .btn-lg .bi {
+    margin-right: 0.25rem !important;
+  }
+}
+
+/* Small tablet - stack button below search box */
+@media (max-width: 767px) {
+  .search-container .btn-lg {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Tablet screens (768px - 991px) - shrink text to prevent wrapping */
+@media (min-width: 768px) and (max-width: 991px) {
+  .action-buttons .btn-action {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .action-buttons .btn-action .fs-3 {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .action-buttons .btn-action span {
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+/* Tablet screens - ensure consistent sizing */
+@media (min-width: 768px) and (max-width: 991px) {
+  #package-filters .form-floating {
+    font-size: 0.9rem;
+  }
+  
+  #package-filters .form-control,
+  #package-filters .form-select {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile - stack fields with consistent spacing */
+@media (max-width: 767px) {
+  #package-filters > div {
+    width: 100%;
+  }
+  
+  #package-filters .form-floating {
+    margin-bottom: 0;
   }
 }

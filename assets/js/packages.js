@@ -531,6 +531,37 @@ function bookActivities(ev) {
   window.open(getYourGuideUrl, "_blank", "noopener,noreferrer");
 }
 
+/* =====================================================================================
+    searchCity(cityName)
+   -------------------------------------------------------------------------------------
+   - Triggered by:
+     The "Explore" buttons in the Popular Destinations section (e.g., 
+     onclick="searchCity('New York City')").
+   - Purpose:
+     Fills the search input with the selected city name and scrolls smoothly
+     to the booking form so the user can complete their search.
+   - Behaviour:
+     1. Sets the value of the '#citySearch' input to the provided city name.
+     2. Scrolls the page smoothly to the '.search-section' element.
+===================================================================================== */
+
+// eslint-disable-next-line no-unused-vars
+function searchCity(cityName) {
+  // Fill in the search input with the city name
+  const searchInput = document.getElementById('citySearch');
+  if (searchInput) {
+    searchInput.value = cityName;
+  }
+  
+  // Scroll to the search section smoothly
+  const searchSection = document.querySelector('.search-section');
+  if (searchSection) {
+    searchSection.scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  }
+}
+
 // Export functions for testing (Node.js/Jest environment)
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
