@@ -3925,8 +3925,8 @@ I will, at the end of each test phase:
    - Desktop (1920x1080) - scrollbar visible if content exceeds max-height<br>
    - Tablet (768x1024) - verify scrolling still works<br>
    - Mobile (375x667) - check content accessibility<br>
-10. Verify scrollbar styling matches design theme.<br>
-11. Test with screen reader - ensure all content is readable even if scrolled out of view initially.<br>
+10. Test with screen reader - ensure all content is readable even if scrolled out of view initially.<br>
+11. Verify scrollbar styling matches design theme.<br>
 </td>
   </tr>
   <tr>
@@ -8395,11 +8395,161 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
 
 **index.html**
 <img width="770" height="765" alt="image" src="https://github.com/user-attachments/assets/e1c8dd9e-34da-4400-a975-c0839839f926" />
-
     </td>
   </tr>
   <tr>
     <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC015 - About Us Content Scrollbar</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC015</td>
+    <td><strong>Feature:</strong> About Us Content Scrollbar (index.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the About Us content section on index.html displays a vertical scrollbar when content exceeds the container height and that scrolling functions correctly.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The About Us section uses a custom scrollable container (.about-content) to maintain consistent layout heights while allowing access to all content. This must function properly for content accessibility.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Open index.html in browser.<br>
+2. Locate About Us section in main content area (left column, 5/12 width).<br>
+3. Inspect the .about-content container using browser DevTools.<br>
+4. Verify CSS properties applied:<br>
+   - max-height set (check style.css)<br>
+   - overflow-y: auto (enables vertical scrolling)<br>
+5. Check if vertical scrollbar appears on the right side of content.<br>
+6. Test scrolling functionality:<br>
+   - Use mouse wheel to scroll up/down<br>
+   - Click and drag scrollbar thumb<br>
+   - Click scrollbar track (above/below thumb)<br>
+7. Verify all content is accessible via scrolling:<br>
+   - About Us heading<br>
+   - Description paragraphs (3 paragraphs)<br>
+   - Key Features list (4 bullet points)<br>
+8. Test keyboard scrolling:<br>
+   - Click inside About Us area to focus<br>
+   - Use arrow keys (up and down) to scroll<br>
+   - Use Page Up/Page Down keys<br>
+9. Test on different screen sizes:<br>
+   - Desktop (1920x1080) - scrollbar visible if content exceeds max-height<br>
+   - Tablet (768x1024) - verify scrolling still works<br>
+   - Mobile (375x667) - check content accessibility<br>
+10. Test with screen reader - ensure all content is readable even if scrolled out of view initially.<br>
+11. Verify scrollbar styling matches design theme.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Scrollbar appears when content exceeds container max-height<br>
+- Scrollbar visually consistent with site design<br>
+- Mouse wheel scrolling works smoothly<br>
+- Scrollbar thumb draggable<br>
+- All content accessible via scrolling<br>
+- Keyboard navigation (arrow keys, Page Up/Down) functions<br>
+- Scrolling works across all device sizes<br>
+- Screen reader can access all content within scrollable area<br>
+- No horizontal scrollbar appears<br>
+- Content not cut off or hidden<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+      
+1. Open index.html in browser.<br>
+2. Locate About Us section in main content area (left column, 5/12 width).<br>
+3. Inspect the .about-content container using browser DevTools.<br>
+4. Verify CSS properties applied:<br>
+   - max-height set (check style.css)<br>
+   - overflow-y: auto (enables vertical scrolling)<br>
+
+**Observations:** 
+
+**Microsoft Edge - .about-container.**
+<img width="1890" height="983" alt="image" src="https://github.com/user-attachments/assets/98cdce9d-5f33-45ff-aa7b-3ef2ee43b0fa" />
+
+**Mozilla Firefox - CSS Properties.**
+<img width="1905" height="1020" alt="image" src="https://github.com/user-attachments/assets/df861f1e-1036-4b53-89a7-5304181a7131" />
+
+5. Check if vertical scrollbar appears on the right side of content.<br>
+6. Test scrolling functionality:<br>
+   - Use mouse wheel to scroll up/down<br>
+   - Click and drag scrollbar thumb<br>
+   - Click scrollbar track (above/below thumb)<br>
+   
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/10f689fd-8837-4df8-846a-32f8f96173e1)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/d4c51513-b8b6-4b2e-aacc-c63baad8a12e)
+
+7. Verify all content is accessible via scrolling:<br>
+   - About Us heading<br>
+   - Description paragraphs (3 paragraphs)<br>
+   - Key Features list (4 bullet points)<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/10f689fd-8837-4df8-846a-32f8f96173e1)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/d4c51513-b8b6-4b2e-aacc-c63baad8a12e)
+
+8. Test keyboard scrolling:<br>
+   - Click inside About Us area to focus<br>
+   - Use arrow keys (up and down) to scroll<br>
+   - Use Page Up/Page Down keys<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/1444c752-35cd-46f7-ae83-524c16055f21)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/0cf0e8e0-2f57-484a-aca6-4378a9e9a253)
+
+9. Test on different screen sizes:<br>
+   - Desktop (1920x1080) - scrollbar visible if content exceeds max-height<br>
+   - Tablet (768x1024) - verify scrolling still works<br>
+   - Mobile (375x667) - check content accessibility<br>
+
+**Observations: Working as expected.**
+
+**Desktop (1920x1080)**
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f5a333e3-fb46-4a61-ba01-ee22ca9bcd15)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/6a467065-3bc9-4d10-9e7b-65ffb4cf77dc)
+
+**Desktop (768x1024)**
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/7acfb589-9d74-45ca-9bd0-905e63b28093)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/0fc7b28d-d1c9-427c-a8db-9f046486f6b2)
+
+**Desktop (375x667)
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/78630f4f-767b-44e8-9d29-367ae387dec8)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/fa23035d-d927-4c36-8e61-bef9ae2062c4)
+
+10. Test with screen reader - ensure all content is readable even if scrolled out of view initially.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/a2235edb-29ac-4408-9281-f6600cbf9d4c)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/dc299506-210c-4128-9510-ba608490228d)
+
+11. Verify scrollbar styling matches design theme.<br>
+
+**Observations: Matches design.**
+<img width="868" height="841" alt="image" src="https://github.com/user-attachments/assets/6eb8d75a-0fb6-4b2e-a279-3830c44b7a89" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:PASS</strong> </td>
   </tr>
 </table>
 </details>
