@@ -7665,6 +7665,7 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
 [Microsoft Edge evidence file](https://github.com/user-attachments/assets/431e7de2-8e7b-405b-a6a6-0da0817ca95e)
 
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/236d1ad5-0fe4-4537-b2cd-538ce93f1436)
+
     </td>
   </tr>
   <tr>
@@ -7853,11 +7854,175 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
 
 **Mozilla Firefox:**
 <img width="1796" height="884" alt="image" src="https://github.com/user-attachments/assets/c468d411-1c90-4d51-8bac-bfc4507fcf2a" />
-
     </td>
   </tr>
   <tr>
     <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC012 - Popular Destinations - Section Navigation</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC012</td>
+    <td><strong>Feature:</strong> Popular Destinations - Section Navigation (Anchor Link)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Popular Destinations" navigation link in the navbar correctly scrolls to the Popular Destinations section using the #popular anchor.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The navbar provides direct navigation to the Popular Destinations section via an anchor link. This must function correctly to support efficient page navigation and user experience.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Open search.html in browser.<br>
+2. Ensure page is scrolled to top (or any position above Popular Destinations).<br>
+3. Locate "Popular Destinations" link in navigation menu.<br>
+4. Verify link has href="#popular" attribute (inspect with DevTools if needed).<br>
+5. Click "Popular Destinations" navigation link.<br>
+6. Verify page scrolls to Popular Destinations section (id="popular").<br>
+7. Check scroll behavior:<br>
+   - If smooth scrolling implemented (script.js), verify smooth animation<br>
+   - If not, verify instant jump to section<br>
+8. Confirm Popular Destinations heading is visible after scroll.<br>
+9. Test from different scroll positions:<br>
+   - From top of page<br>
+   - From middle of page (search section)<br>
+   - From bottom of page (footer)<br>
+10. Test keyboard accessibility:<br>
+    - Tab to "Popular Destinations" link<br>
+    - Press Enter to navigate<br>
+11. Test on mobile:<br>
+    - Open hamburger menu<br>
+    - Click "Popular Destinations"<br>
+    - Verify scroll occurs and menu closes<br>
+12. Test when opening link from external page:<br>
+    - From index.html, click navbar "Popular Destinations" (href="search.html#popular")<br>
+    - Verify navigation to search.html occurs<br>
+    - Confirm page loads scrolled to Popular Destinations section<br>
+    - From packages.html, click navbar "Popular Destinations" (href="packages.html#popular")<br>
+    - Verify navigation to packages.html occurs<br>
+    - Confirm page loads scrolled to Popular Destinations section<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+      
+- Clicking navbar link scrolls page to Popular Destinations section<br>
+- Smooth scrolling animation if implemented, instant jump if not<br>
+- Section heading clearly visible after navigation<br>
+- Navigation works from any scroll position<br>
+- Keyboard navigation (Tab + Enter) functional<br>
+- Mobile: menu closes after navigation<br>
+- Cross-page navigation (index.html -> search.html#popular) works correctly<br>
+- Cross-page navigation (packages.html -> packages.html#popular) works correctly<br>
+- No console errors during navigation<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+    
+    1. Open search.html in browser.<br>
+2. Ensure page is scrolled to top (or any position above Popular Destinations).<br>
+
+**Observations: Working as expected.**
+
+**Microsoft Edge:**
+<img width="1885" height="677" alt="image" src="https://github.com/user-attachments/assets/f24b333b-4b45-497c-9019-78f1a174f6b7" />
+
+**Mozilla Firefox:**
+<img width="1830" height="792" alt="image" src="https://github.com/user-attachments/assets/d1280f28-55ba-4b0b-b0db-bed0d0bfc6bf" />
+
+3. Locate "Popular Destinations" link in navigation menu.<br>
+
+<img width="1753" height="849" alt="image" src="https://github.com/user-attachments/assets/2e842237-56fb-4309-b71d-cbe494edea4a" />
+
+4. Verify link has href="#popular" attribute (inspect with DevTools if needed).<br>
+
+**Microsoft Edge:**
+<img width="1049" height="695" alt="image" src="https://github.com/user-attachments/assets/1d998fed-281f-4c8f-a31e-91e3b06bb460" />
+
+**Mozilla Firefox:**
+<img width="1744" height="925" alt="image" src="https://github.com/user-attachments/assets/c2cffd9b-cbf5-4ab0-aabc-cdea73cd0867" />
+
+5. Click "Popular Destinations" navigation link.<br>
+6. Verify page scrolls to Popular Destinations section (id="popular").<br>
+
+**Microsoft Edge:**
+<img width="1049" height="695" alt="image" src="https://github.com/user-attachments/assets/1d998fed-281f-4c8f-a31e-91e3b06bb460" />
+
+**Mozilla Firefox:**
+<img width="1744" height="925" alt="image" src="https://github.com/user-attachments/assets/c2cffd9b-cbf5-4ab0-aabc-cdea73cd0867" />
+
+<img width="1009" height="603" alt="image" src="https://github.com/user-attachments/assets/df6fbd30-defe-4fe2-bdb3-2272cf587949" />
+
+7. Check scroll behavior:<br>
+   - If smooth scrolling implemented (script.js), verify smooth animation<br>
+   - If not, verify instant jump to section<br>
+
+<img width="667" height="748" alt="image" src="https://github.com/user-attachments/assets/56665faa-6bd6-46dc-ba98-b34ad4ff1601" />
+
+
+8. Confirm Popular Destinations heading is visible after scroll.<br>
+
+**Microsoft Edge:**
+<img width="1738" height="812" alt="image" src="https://github.com/user-attachments/assets/1a3a8056-8a45-45ac-a6a9-182dc068698b" />
+
+**Mozilla Firefox:**
+<img width="1670" height="892" alt="image" src="https://github.com/user-attachments/assets/7631cb81-5e46-4a84-b77b-8e5be5e5d61e" />
+
+9. Test from different scroll positions:<br>
+   - From top of page<br>
+   - From middle of page (search section)<br>
+   - From bottom of page (footer)<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/96c1f1b7-3b6b-469d-9164-18f1e552cf4d)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/c8fc512d-b4cd-4fb9-b8bc-7b1f48a1cdf5)
+
+10. Test keyboard accessibility:<br>
+    - Tab to "Popular Destinations" link<br>
+    - Press Enter to navigate<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/a3e8ba5b-318d-4737-b1f3-5b0ca9d54b31)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/2609ccb0-1755-48da-ae74-2cbe97648580)
+
+    
+11. Test on mobile:<br>
+    - Open hamburger menu<br>
+    - Click "Popular Destinations"<br>
+    - Verify scroll occurs and menu closes<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/153920b8-7af7-4152-a7b2-6dfb9c29d281)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/2ae821fa-48a6-4851-bd5f-c5f20914b344)
+    
+12. Test when opening link from external page:<br>
+    - From index.html, click navbar "Popular Destinations" (href="search.html#popular")<br>
+    - Verify navigation to search.html occurs<br>
+    - Confirm page loads scrolled to Popular Destinations section<br>
+    - From packages.html, click navbar "Popular Destinations" (href="packages.html#popular")<br>
+    - Verify navigation to packages.html occurs<br>
+    - Confirm page loads scrolled to Popular Destinations section<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/153920b8-7af7-4152-a7b2-6dfb9c29d281)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/2ae821fa-48a6-4851-bd5f-c5f20914b344)
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
 </details>
