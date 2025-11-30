@@ -6794,6 +6794,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 7. Verify results panel displays place cards with name, rating, address.<br>
 8. Test Enter key triggers search (keyboard accessibility).<br>
 9. Test with various cities: Paris, Tokyo, New York, Barcelona.<br>
+
 </td>
   </tr>
   <tr>
@@ -6803,12 +6804,13 @@ This approach overrides the browser's default behaviour and ensures that both in
 - Valid city names call performSearch(cityName) and reveal the results + map area.<br>
 - Enter key functions as alternative to button click<br>
 - Invalid cities handled gracefully with appropriate message<br>
+
 </td>
   </tr>
   <tr>
     <td colspan="2"><strong>Actual Result:</strong> 
     
-    1. Navigate to search.html.<br>
+1. Navigate to search.html.<br>
 2. Leave search input empty and click "Search" button.<br>
 3. Verify alert message appears: "Please enter a city name".<br>
 
@@ -6915,6 +6917,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 7. Repeat for each category: Hotels, Cafes, Shopping.<br>
 8. Check that only one button shows active state at a time.<br>
 9. Verify markers on map match the selected category.<br>
+
 </td>
   </tr>
   <tr>
@@ -6925,6 +6928,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 - Map markers refresh to show filtered places<br>
 - Results panel displays places matching selected category<br>
 - Previous results cleared before new results load<br>
+
 </td>
   </tr>
   <tr>
@@ -6945,6 +6949,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/53fb7886-c180-4b6a-868a-66f0186ea15e)
 
 **Observations:** Working as expected. 
+
     </td>
   </tr>
   <tr>
@@ -6978,6 +6983,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 8. Verify info window opens showing place name, rating, address.<br>
 9. Click another marker - confirm previous info window closes.<br>
 10. Test on mobile - verify touch interactions work (pinch zoom, swipe).<br>
+
 </td>
   </tr>
   <tr>
@@ -6988,6 +6994,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 - Markers clickable with info windows displaying complete information<br>
 - Only one info window open at a time<br>
 - Touch interactions work on mobile devices<br>
+
 </td>
   </tr>
   <tr>
@@ -7055,6 +7062,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 12. Verify new tab opens to Booking.com with correct parameters.<br>
 13. Repeat validation tests for "Search Flights" and "Full Package".<br>
 14. Test keyboard navigation through form fields.<br>
+
 </td>
   </tr>
   <tr>
@@ -7066,10 +7074,12 @@ This approach overrides the browser's default behaviour and ensures that both in
 - Validation messages are clear and user-friendly<br>
 - Form fields accessible via keyboard<br>
 - Successful submissions open partner sites with correct data<br>
+
 </td>
   </tr>
   <tr>
     <td colspan="2"><strong>Actual Result:</strong> 
+      
 1. Navigate to packages.html.<br>
 2. Click "Book Hotels" without entering any data.<br>
 3. Verify alert appears: "Please select check-in and check-out dates".<br>
@@ -7330,6 +7340,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 5. Use the keyboard Tab key to focus on all footer links and verify that they are accessible.<br>
 6. Repeat the above checks on <em>search.html</em> and <em>packages.html</em> to ensure consistency across the site.<br>
 7. Check that the footer displays correctly on mobile devices and smaller screen sizes.<br>
+
 </td>
 </tr>
 <tr>
@@ -7344,10 +7355,44 @@ This approach overrides the browser's default behaviour and ensures that both in
 </td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Actual Result:</strong> </td>
+    <td colspan="2"><strong>Actual Result:</strong> 
+    
+1. Scroll to the footer on <em>index.html</em>.<br>
+2. Click the telephone link in the footer contact tile and verify that the appropriate calling application opens with the number pre-filled.<br>
+3. Click the SMS contact link and verify that the correct messaging application opens with the number pre-filled.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/dd90bf87-a69c-4cf6-b8d8-d272cd0fa7de)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/ed4fd927-7828-4cfb-8311-9aed8403972a)
+
+4. Hover over footer contact links to check visual feedback (arrow cursor changes to pointer cursor).<br>
+5. Use the keyboard Tab key to focus on all footer links and verify that they are accessible.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/12378514-5938-4805-94fc-96b53e7d5d0c)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/55f3be40-823e-4564-a033-b3bbda7c1536)
+
+6. Repeat the above checks on <em>search.html</em> and <em>packages.html</em> to ensure consistency across the site.<br>
+
+**Observations: Working as expected.**
+**Evidence: The footer code in the search.html and packages.html is the same as index.html. Tests were done without being filmed.**
+
+7. Check that the footer displays correctly on mobile devices and smaller screen sizes.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/158c4625-526f-48d0-95fc-35762d8ea051)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/30610270-a541-4354-8422-948d4de4be99)
+
+    </td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
   </tr>
 </table>
 </details>
