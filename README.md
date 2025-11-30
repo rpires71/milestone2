@@ -7210,6 +7210,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 8. Test "Book Activities" – verify that GetYourGuide opens with Barcelona as the selected destination.<br>
 9. Confirm all links have target="_blank" and rel="noopener noreferrer".<br>
 10. Attempt a 404 path – verify that the user is redirected back to packages.html.<br>
+
 </td>
   </tr>
   <tr>
@@ -7220,6 +7221,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 - Security attributes (`rel="noopener noreferrer"`) are present on all external links<br>
 - User remains on the original page after each link opens<br>
 - Attempting an invalid/404 path redirects the user back to <em>packages.html</em><br>
+
 </td>
   </tr>
   <tr>
@@ -7230,7 +7232,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 3. Verify Booking.com opens in new tab.<br>
 4. Check that the URL contains: ss=Barcelona, checkin=2025-12-01, checkout=2025-12-07, group_adults=2.<br>
 
-<p><strong>Observations: Working as expected.</strong></p>
+**Observations: Working as expected.**
 
 [Microsoft Edge evidence file](https://github.com/user-attachments/assets/83d970f7-d2bf-498d-849f-0c65f3c61f5a)
 
@@ -7239,7 +7241,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 5. Return to packages.html and click "Search Flights".<br>
 6. Verify that Google Flights opens with Barcelona as the destination, the departure date is 2025-12-01, and the return date is 2025-12-07.<br>
 
-<p><strong>Observations: Working as expected.</strong></p>
+**Observations: Working as expected.**
 
 [Microsoft Edge evidence file](https://github.com/user-attachments/assets/7de2606e-d48c-435f-a126-55dfdd9d081a)
 
@@ -7247,7 +7249,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 
 7. Test "Complete Package" – verify that Expedia opens with "Going to Barcelona", dates 01 Dec – 07 Dec, and Travellers: 2 adults, 1 room.<br>
 
-<p><strong>Observations: Working as expected.</strong></p>
+**Observations: Working as expected.**
 
 [Microsoft Edge evidence file](https://github.com/user-attachments/assets/f92bd334-1173-4d2c-ae96-4d8514b8144a)
 
@@ -7256,7 +7258,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 
 8. Test "Book Activities" – verify that GetYourGuide opens with Barcelona as the selected destination.<br>
 
-<p><strong>Observations: Working as expected.</strong></p>
+**Observations: Working as expected.**
 
 [Microsoft Edge evidence file](https://github.com/user-attachments/assets/61d2167d-84c7-4251-a22a-19bbe5ab5160)
 
@@ -7265,42 +7267,87 @@ This approach overrides the browser's default behaviour and ensures that both in
 
 9. Confirm all links have target="_blank" and rel="noopener noreferrer".<br>
 
-<p><strong>None of the links have "noopener noreferrer"</strong></p>
+**None of the links have "noopener noreferrer".**
 
-<p><strong>Correction: Booking code before and after</strong></p>
+**Correction: Booking code before and after:**
 
-<img width="720" height="322" alt="image" src="https://github.com/user-attachments/assets/937b939b-1e6d-439e-a3a1-d774c83d764c" />
+<img width="720" height="322" alt="image" src="https://github.com/user-attachments/assets/937b939b-1e6d-439e-a3a1-d774c83d764c"/>
 
-<img width="707" height="301" alt="image" src="https://github.com/user-attachments/assets/6cbec48a-7ca0-40ea-b293-7a4631292783" />
+<img width="707" height="301" alt="image" src="https://github.com/user-attachments/assets/6cbec48a-7ca0-40ea-b293-7a4631292783"/>
 
-<p><strong>Google Flights code before and after</strong></p>
+**Google Flights code before and after:**
 
-<img width="862" height="367" alt="image" src="https://github.com/user-attachments/assets/12e99b91-5b9a-4198-a364-616cadb1bc67" />
+<img width="862" height="367" alt="image" src="https://github.com/user-attachments/assets/12e99b91-5b9a-4198-a364-616cadb1bc67"/>
 
-<img width="692" height="365" alt="image" src="https://github.com/user-attachments/assets/e1449a3f-a589-430e-9dd5-a04075c23e4c" />
+<img width="692" height="365" alt="image" src="https://github.com/user-attachments/assets/e1449a3f-a589-430e-9dd5-a04075c23e4c"/>
 
-<p><strong>Expedia code before and after</strong></p>
+**Expedia code before and after:**
 
-<img width="828" height="451" alt="image" src="https://github.com/user-attachments/assets/cf1c9364-46b6-41c0-8c80-4996b427ecb0" />
+<img width="828" height="451" alt="image" src="https://github.com/user-attachments/assets/cf1c9364-46b6-41c0-8c80-4996b427ecb0"/>
 
-<img width="704" height="389" alt="image" src="https://github.com/user-attachments/assets/a72c4918-4e45-4ea8-a0a0-0ca3069e916d" />
+<img width="704" height="389" alt="image" src="https://github.com/user-attachments/assets/a72c4918-4e45-4ea8-a0a0-0ca3069e916d"/>
 
-<p><strong>GetYourGuide code before and after</strong></p>
+**GetYourGuide code before and after:**
 
-<img width="726" height="273" alt="image" src="https://github.com/user-attachments/assets/f614ca37-f649-46ca-8124-6c698f0626cb" />
+<img width="726" height="273" alt="image" src="https://github.com/user-attachments/assets/f614ca37-f649-46ca-8124-6c698f0626cb"/>
 
-<img width="671" height="457" alt="image" src="https://github.com/user-attachments/assets/5de8bf7e-7ee9-4384-9a4b-151bc08b7655" />
+<img width="671" height="457" alt="image" src="https://github.com/user-attachments/assets/5de8bf7e-7ee9-4384-9a4b-151bc08b7655"/>
 
 10. Attempt a 404 path – verify that the user is redirected back to packages.html.<br>
 
-<p><strong>Observations: File didn't exist but I created the 404.html file will redirect the user back to packages.html - Your 404.html has this code that automatically redirects after 3 seconds:</strong></p>
+**Observations:** File didn't exist but I created the 404.html file will redirect the user back to packages.html - Your 404.html has this code that automatically redirects after 3 seconds:
 
-    <img width="1329" height="801" alt="image" src="https://github.com/user-attachments/assets/8eeb4cd6-8fe8-408b-8e59-ffeba3f916e8" />
+<img width="1329" height="801" alt="image" src="https://github.com/user-attachments/assets/8eeb4cd6-8fe8-408b-8e59-ffeba3f916e8"/>
 
-    </td>
-  </tr>
+</td>
+</tr>
   <tr>
     <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+
+<details>
+  <summary><strong>Test Case TC007 - Footer Contact Links</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC007</td>
+    <td><strong>Feature:</strong> Footer Contact Links (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that email and telephone footer links navigate correctly, external links open in relevant apps.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The footer provides secondary navigation and contact access. Consistent functionality across all pages reinforces user trust and professionalism.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Scroll to the footer on <em>index.html</em>.<br>
+2. Click the telephone link in the footer contact tile and verify that the appropriate calling application opens with the number pre-filled.<br>
+3. Click the SMS contact link and verify that the correct messaging application opens with the number pre-filled.<br>
+4. Hover over footer contact links to check visual feedback (arrow cursor changes to pointer cursor).<br>
+5. Use the keyboard Tab key to focus on all footer links and verify that they are accessible.<br>
+6. Repeat the above checks on <em>search.html</em> and <em>packages.html</em> to ensure consistency across the site.<br>
+7. Check that the footer displays correctly on mobile devices and smaller screen sizes.<br>
+</td>
+</tr>
+<tr>
+<td colspan="2"><strong>Expected Result:</strong><br>
+
+- All internal contact links navigate correctly to the footer section in the active page<br>
+- External links open using the correct associated application and/or in a secure new tab (`rel="noopener noreferrer"`)<br>
+- Hover states provide clear visual feedback using the pointer cursor<br>
+- Footer links are fully keyboard accessible and receive visible focus<br>
+- Footer displays consistently and responsively across all device sizes<br>
+
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
 </details>
