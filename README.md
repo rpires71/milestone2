@@ -8275,6 +8275,134 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
   </tr>
 </table>
 </details>
+<details>
+  <summary><strong>Test Case TC014 - Image Carousel/Slider</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC014</td>
+    <td><strong>Feature:</strong> Image Carousel/Slider (index.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the Bootstrap carousel on index.html displays destination images correctly, transitions smoothly between slides, and provides accessible navigation controls.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The carousel showcases popular destinations visually and is a key engagement element on the homepage. Proper functionality ensures good first impressions and accessibility compliance.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Open index.html in browser.<br>
+2. Locate the carousel in the main section (right column, 7/12 width on large screens).<br>
+3. Verify carousel displays first image (Paris - Eiffel Tower) on page load.<br>
+4. Confirm carousel auto-plays and transitions to next slide after ~5 seconds.<br>
+5. Test manual navigation:<br>
+   - Click left arrow (previous) button<br>
+   - Click right arrow (next) button<br>
+   - Click carousel indicators (dots) at bottom<br>
+6. Verify all 5 images load correctly:<br>
+   - Paris, France<br>
+   - Tokyo, Japan<br>
+   - New York, USA<br>
+   - Barcelona, Spain<br>
+   - London, UK<br>
+7. Check that captions display on desktop (hidden on mobile via d-none d-md-block).<br>
+8. Verify smooth transitions (slide effect) between images.<br>
+9. Test keyboard navigation:<br>
+   - Tab to carousel controls<br>
+   - Press Enter to navigate slides<br>
+10. Test on on tablet (768x1024) and mobile (375x667):<br>
+    - Verify carousel responsive<br>
+    - Test swipe gestures (left/right)<br>
+    - Confirm captions hidden on small screens<br>
+11. Check accessibility:<br>
+    - Verify aria-labels on controls ("Previous", "Next", "Slide 1-5")<br>
+    - Test with screen reader (NVDA/VoiceOver)<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:PASS </strong><br>
+
+- Carousel loads and displays Paris image by default<br>
+- Auto-play functions with smooth transitions (5-second intervals)<br>
+- Manual controls (arrows and indicators) work correctly<br>
+- All 5 images load without errors, maintaining aspect ratio<br>
+- Captions visible on tablet and desktop (≥768px), hidden on mobile<br>
+- Transitions are smooth without visual glitches<br>
+- Keyboard navigation functional<br>
+- Touch swipe gestures work on mobile<br>
+- ARIA labels present and announced by screen readers<br>
+- No console errors related to carousel<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+1. Open index.html in browser.<br>
+2. Locate the carousel in the main section (right column, 7/12 width on large screens).<br>
+3. Verify carousel displays first image (Paris - Eiffel Tower) on page load.<br>
+4. Confirm carousel auto-plays and transitions to next slide after ~5 seconds.<br>
+5. Test manual navigation:<br>
+   - Click left arrow (previous) button<br>
+   - Click right arrow (next) button<br>
+   - Click carousel indicators (dots) at bottom<br>
+6. Verify all 5 images load correctly:<br>
+   - Paris, France<br>
+   - Tokyo, Japan<br>
+   - New York, USA<br>
+   - Barcelona, Spain<br>
+   - London, UK<br>
+7. Check that captions display on desktop (hidden on mobile via d-none d-md-block).<br>
+8. Verify smooth transitions (slide effect) between images.<br>
+9. Test keyboard navigation:<br>
+   - Tab to carousel controls<br>
+   - Press Enter to navigate slides<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/36b845d4-5beb-4444-8cd0-d4f69cfe5741)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/3075a32d-a65b-4b44-8d5f-e48dae3c59c5)
+
+10. Test on on tablet (768x1024) and mobile (375x667):<br>
+    - Verify carousel responsive<br>
+    - Test swipe gestures (left/right)<br>
+    - Confirm captions hidden on small screens<br>
+
+**Observations: (375x667) Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/9efe34c5-6601-4121-b442-e28e8e6d1a2a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/f3f3e080-e056-47ff-8abe-8cb19541c61c)
+
+**Observations: (768x1024) Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/520cc541-d1f7-4a05-bb1b-aa8ad77fe747)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/fa386946-c95b-49bb-af76-90c5c82fb3fd)
+
+11. Check accessibility:<br>
+    - Verify aria-labels on controls ("Previous", "Next", "Slide 1-5")<br>
+    - Test with screen reader (NVDA/VoiceOver)<br>
+    
+**Observations: Working as expected.**
+<img width="1167" height="610" alt="image" src="https://github.com/user-attachments/assets/69999848-241b-467e-a316-d0b754425845" />
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f16e218e-dc36-4b76-868b-52a62cda8e07)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/987c73bd-0cc1-407d-8609-5735fb2ab934)
+
+**Observations: Verification aria-labels on controls ("Previous", "Next", "Slide 1-5")**
+
+**index.html**
+<img width="770" height="765" alt="image" src="https://github.com/user-attachments/assets/e1c8dd9e-34da-4400-a975-c0839839f926" />
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
 
 ---
 
