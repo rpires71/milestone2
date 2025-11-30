@@ -230,8 +230,9 @@ function bookHotel(ev) {
   // ------------------------------------------------------------------
   // STEP 6: Open the constructed Booking page in a new browser tab.
   // "_blank" ensures the user remains on your site.
+  // noreferrer: Prevents passing referrer information to the new page (FIX TC006)
   // ------------------------------------------------------------------
-  window.open(bookingUrl, "_blank");
+  window.open(bookingUrl, "_blank", "noopener,noreferrer");
 }
 
 /** Book flights - always departing from London (all airports - LON) */
@@ -268,14 +269,35 @@ function bookFlights(ev) {
 
   // ----------------------------------------------------------
   // STEP 2: Extract travel dates from the form inputs.
-  // Only the CHECK-IN date (departure) is required to Book flights.
   // ----------------------------------------------------------
+ 
+  // Validate departure date
   const checkIn = document.getElementById("checkin").value;
   const checkOut = document.getElementById("checkout").value;
+  const guests = document.getElementById("guests").value;
+  const dest = getCityNameForUrls().split(",")[0].trim() || "";
 
-  // Validate departure date
-  if (!checkIn) {
-    showValidationToast("Please select a departure (check-in) date", "warning");
+  // Validate all fields are filled
+  if (!checkIn || !checkOut) {
+    showValidationToast("Please select check-in and check-out dates", "warning");
+    return;
+  }
+
+  // Validate that check-in date is not after check-out date
+  if (new Date(checkIn) > new Date(checkOut)) {
+    showValidationToast("Check-in date cannot be after check-out date", "error");
+    return;
+  }
+
+  // Validate destination city
+  if (!dest) {
+    showValidationToast("Please enter a destination city", "warning");
+    return;
+  }
+
+  // Validate guests
+  if (!guests) {
+    showValidationToast("Please select number of guests", "warning");
     return;
   }
 
@@ -293,7 +315,7 @@ function bookFlights(ev) {
   // trim() ensures no extra spaces break the search.
   // If blank, fallback is '' instead of undefined/null.
   // ----------------------------------------------------------
-  const dest = getCityNameForUrls().split(",")[0].trim() || "";
+  
   const departDate = checkIn;
   const returnDate = checkOut || "";
 
@@ -320,8 +342,9 @@ function bookFlights(ev) {
   // ----------------------------------------------------------
   // STEP 6: Open the flights page in a new tab so the user
   // remains on your site and can return easily.
+  // noreferrer: Prevents passing referrer information to the new page (FIX TC006)
   // ----------------------------------------------------------
-  window.open(googleFlightsUrl, "_blank");
+  window.open(googleFlightsUrl, "_blank", "noopener,noreferrer");
 }
 
 /** Book full package - Expedia packages, from London (all airports) */
@@ -445,8 +468,9 @@ function bookPackage(ev) {
   // ----------------------------------------------------------
   // STEP 6: Open Expedia in a new browser tab.
   // "_blank" keeps the user on this website.
+  // noreferrer: Prevents passing referrer information to the new page (FIX TC006)
   // ----------------------------------------------------------
-  window.open(expediaUrl, "_blank");
+  window.open(expediaUrl, "_blank", "noopener,noreferrer");
 }
 
 /** Book activities - redirects to GetYourGuide */
@@ -502,8 +526,9 @@ function bookActivities(ev) {
   // ----------------------------------------------------------
   // STEP 4: Open the activities page in a new browser tab.
   // "_blank" ensures the user stays on your site for further actions.
+  // noreferrer: Prevents passing referrer information to the new page (FIX TC006)
   // ----------------------------------------------------------
-  window.open(getYourGuideUrl, "_blank");
+  window.open(getYourGuideUrl, "_blank", "noopener,noreferrer");
 }
 
 // Export functions for testing (Node.js/Jest environment)
