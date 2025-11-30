@@ -7021,10 +7021,168 @@ This approach overrides the browser's default behaviour and ensures that both in
     </td>
   </tr>
   <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong></td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC005 - Booking Form Validation</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC005</td>
+    <td><strong>Feature:</strong> Booking Form Validation (packages.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the booking form validates required fields (check-in, check-out dates, city), shows alerts for missing data, and only proceeds when valid.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Form validation prevents incomplete bookings and ensures users provide necessary information before being redirected to partner booking sites.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Navigate to packages.html.<br>
+2. Click "Search Hotels" without entering any data.<br>
+3. Verify alert appears: "Please select check-in and check-out dates".<br>
+4. Enter check-in: 2025-12-15, leave check-out empty.<br>
+5. Click "Search Hotels" - verify alert still appears.<br>
+6. Enter check-in: 2025-12-15, leave check-out empty.<br>
+7. Enter check-out: 2025-12-05, guests: 2, city: "Rome".<br>
+8. Click "Search Hotels" – verify that an alert still appears indicating that the check-in date is not valid because it is later than the check-out date.<br>
+9. Enter check-in: 2025-12-15.<br>
+10. Enter check-out: 2025-12-20, guests: 2, city: "Rome".<br>
+11. Click "Search Hotels".<br>
+12. Verify new tab opens to Booking.com with correct parameters.<br>
+13. Repeat validation tests for "Search Flights" and "Full Package".<br>
+14. Test keyboard navigation through form fields.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Missing required fields trigger appropriate alert messages<br>
+- Invalid date ranges for check-in and check-out trigger appropriate alert messages<br>
+- Form only proceeds when all required data provided<br>
+- Validation messages are clear and user-friendly<br>
+- Form fields accessible via keyboard<br>
+- Successful submissions open partner sites with correct data<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+1. Navigate to packages.html.<br>
+2. Click "Book Hotels" without entering any data.<br>
+3. Verify alert appears: "Please select check-in and check-out dates".<br>
+
+**Observations:** Working as expected on both browsers.
+      
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/73128d86-b220-40fd-884f-b8321dae5d33)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/f62d4b5f-ccb2-4120-a994-c78be1df99f2)
+
+4. Enter check-in: 2025-12-15, leave check-out empty.<br>
+5. Click "Book Hotels" - verify alert still appears.<br>
+
+**Observations:** Working as expected on both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/d1186b08-7fa0-4f67-843a-67fbaa4f68da)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/883f0a68-8bae-4d98-9454-c7ffc176f8eb)
+
+6. Enter check-in: 2025-12-15, leave check-out empty.<br>
+7. Enter check-out: 2025-12-05, guests: 2, city: "Rome".<br>
+8. Click "Book Hotels" – verify that an alert still appears indicating that the check-in date is not valid because it is later than the check-out date.<br>
+
+**Observations:** Working as expected on both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/962f0f20-afd4-4141-be05-89de50a9ce85)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/efe1ea64-bafd-4ff2-b095-6859e82dce72)
+
+
+9. Enter check-in: 2025-12-15.<br>
+10. Enter check-out: 2025-12-20, guests: 2, city: "Rome".<br>
+11. Click "Book Hotels".<br>
+12. Verify new tab opens to Booking.com with correct parameters.<br>
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/c56fc062-8f7a-436b-91b6-cd86dad7c0b6)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/ee10e4a0-d75c-4351-8675-94d808cd1af0)
+
+13. Repeat validation tests for "Book Flights" and "Book Package".<br>
+
+**Without entering any data** Working as expected on both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/4fbe508c-b4ec-4a31-8499-d3f95989d9b3)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/cb5a5515-57f9-43eb-95d3-21e60cb000c4)
+
+**Enter check-in date, leave check-out empty** Working as expected for "Book Package" but not for "Book Flight".
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/c2c24bf7-6ef5-4c3b-820a-105d138d9115) 
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/662c7662-2b7f-4ee0-8f83-dccfff36e100)
+
+**Fix - Enter check-in date, leave check-out empty - Booking Flight**
+
+**Before:**
+
+<img width="673" height="248" alt="image" src="https://github.com/user-attachments/assets/e6a10d0b-1302-44f5-874c-b85461a40858" />
+
+**After:**
+
+<img width="643" height="577" alt="image" src="https://github.com/user-attachments/assets/b846d7f4-fbf3-4d80-9a35-550e51cb48f7" />
+
+**Second Test for Book Flight** Work as expected.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/338dad20-0941-4dc1-9b4c-a7a55d84348a) 
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/76643cfc-923e-4c84-8b88-18a6b05263bc)
+
+**Verify that an alert still appears indicating that the check-in date is not valid because it is later than the check-out date.** Working as expected for "Book Package" but not for "Book Flight".
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/fe282cdc-ecb8-4ec1-9770-637b3030ec36) 
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/b2f56551-b7ac-4c9f-a902-b570c78ced0c)
+
+**Fix - Check-in date is not valid because it is later than the check-out date - Booking Flight**
+
+**Before:**
+
+<img width="673" height="248" alt="image" src="https://github.com/user-attachments/assets/e6a10d0b-1302-44f5-874c-b85461a40858" />
+
+**After:**
+
+<img width="643" height="577" alt="image" src="https://github.com/user-attachments/assets/b846d7f4-fbf3-4d80-9a35-550e51cb48f7" />
+
+**Second Test for Book Flight** Work as expected.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/3e5c8356-9bd3-454d-9372-709dce8f74c2) 
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/36114edb-21b9-4c6d-9a0a-31e55b013052)
+
+**Verify new tab opens with correct parameters.** Working as expected on both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/c62c8768-01e1-4076-970b-2eb918e01296) 
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/6237962d-45fc-4424-b263-7a5a3338c58d)
+
+14. Test keyboard navigation through form fields.<br>
+
+**Observations:** Working as expected on both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/4c408f18-f20c-4f4d-a611-c10b07c84875)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/825b4c8b-3c91-4b1e-9e5e-8435094d9cec)
+
+    </td>
+  </tr>
+  <tr>
     <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
   </tr>
 </table>
 </details>
+
 ---
 
 ## References
