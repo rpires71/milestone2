@@ -6808,7 +6808,7 @@ This approach overrides the browser's default behaviour and ensures that both in
   <tr>
     <td colspan="2"><strong>Actual Result:</strong> 
     
-    1. Navigate to search.html.<br>
+1. Navigate to search.html.<br>
 2. Leave search input empty and click "Search" button.<br>
 3. Verify alert message appears: "Please enter a city name".<br>
 
@@ -7069,7 +7069,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 </td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Actual Result:</strong> 
+    <td><strong>Actual Result:</strong> 
 1. Navigate to packages.html.<br>
 2. Click "Book Hotels" without entering any data.<br>
 3. Verify alert appears: "Please select check-in and check-out dates".<br>
@@ -7179,6 +7179,54 @@ This approach overrides the browser's default behaviour and ensures that both in
   </tr>
   <tr>
     <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+
+<details>
+  <summary><strong>Test Case TC006 - External Partner Links</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC006</td>
+    <td><strong>Feature:</strong> External Partner Links (packages.html)</td>
+  </tr>
+  
+ <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that booking buttons correctly construct URLs with search parameters and open partner sites (Booking.com, Google Flights, Expedia, GetYourGuide) in new tabs.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Partner links are monetisation features that must pass correct data to external booking platforms for proper functionality.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Fill in the form: check-in 2025-12-01, check-out 2025-12-07, guests: 2, city: "Barcelona".<br>
+2. Click "Search Hotels".<br>
+3. Verify Booking.com opens in new tab.<br>
+4. Check that the URL contains: ss=Barcelona, checkin=2025-12-01, checkout=2025-12-07, group_adults=2.<br>
+5. Return to packages.html and click "Search Flights".<br>
+6. Verify that Google Flights opens with Barcelona as the destination, the departure date is 2025-12-01, and the return date is 2025-12-07.<br>
+7. Test "Complete Package" – verify that Expedia opens with "Going to Barcelona", dates 01 Dec – 07 Dec, and Travellers: 2 adults, 1 room.<br>
+8. Test "Book Activities" – verify that GetYourGuide opens with Barcelona as the selected destination.<br>
+9. Confirm all links have target="_blank" and rel="noopener noreferrer".<br>
+10. Attempt a 404 path – verify that the user is redirected back to packages.html.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- All booking buttons open the correct partner websites in new tabs<br>
+- URLs include accurate destination, dates, and traveller parameters<br>
+- Security attributes (`rel="noopener noreferrer"`) are present on all external links<br>
+- User remains on the original page after each link opens<br>
+- Attempting an invalid/404 path redirects the user back to <em>packages.html</em><br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
   </tr>
 </table>
 </details>
