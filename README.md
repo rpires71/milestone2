@@ -2,7 +2,7 @@
 <img width="1453" height="826" alt="am-i-responsive" src="https://github.com/user-attachments/assets/f673de24-b44c-431a-a633-aa8bacd21631" />
 
 ## Links
-- [Link to Live Website](https://rpires71.github.io/milestone2/) 
+- [Link to Live Website](https://rpires71.github.io/milestone-2/) 
 - [GitHub Project Repository](https://github.com/rpires71/milestone-2)
 
 ## Table of contents
@@ -8022,7 +8022,256 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
     </td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+
+<details>
+  <summary><strong>Test Case TC013 - Contact Navigation Link - Footer Scrolling</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong>TC013</td>
+    <td><strong>Feature:</strong> Contact Navigation Link - Footer Scrolling (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Contact" link in the navigation menu correctly scrolls to the footer section (id="contact") on each page (index.html, search.html, packages.html).</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The Contact navbar link provides quick access to contact information in the footer. This must function correctly on all pages to support user communication and information discovery. This is a key usability feature mentioned in the HTML comments.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+<strong>Part 1: Test on index.html (Same-Page Anchor)</strong><br>
+
+1. Open index.html in browser.<br>
+2. Ensure page is scrolled to top or middle position.<br>
+3. Locate "Contact" link in navigation menu.<br>
+4. Verify href="#contact" attribute using DevTools if needed.<br>
+5. Click "Contact" navigation link.<br>
+6. Verify page scrolls to footer section (id="contact").<br>
+7. Confirm footer contact information tiles are visible.<br>
+8. Check scroll behavior (smooth if script.js implements it).<br>
+9. Test keyboard navigation:<br>
+   - Tab to Contact link<br>
+   - Press Enter<br>
+   - Verify scroll occurs<br>
+10. Test from different scroll positions (top, middle, bottom).<br>
+11. On mobile, verify hamburger menu closes after clicking Contact.<br>
+<br>
+<strong>Part 2: Test on search.html (Same-Page Anchor)</strong><br>
+
+12. Navigate to search.html.<br>
+13. Locate "Contact" link (href="search.html#contact").<br>
+14. Click Contact link.<br>
+15. Verify scroll to footer (id="contact").<br>
+16. Confirm contact tiles visible.<br>
+17. Test keyboard navigation (Tab + Enter).<br>
+18. On mobile, verify menu closes after navigation.<br>
+<br>
+<strong>Part 3: Test on packages.html (Same-Page Anchor)</strong><br>
+
+19. Navigate to packages.html.<br>
+20. Locate "Contact" link (href="packages.html#contact").<br>
+21. Click Contact link.<br>
+22. Verify scroll to footer (id="contact").<br>
+23. Confirm contact tiles visible.<br>
+24. Test keyboard navigation.<br>
+25. On mobile, verify menu closes.<br>
+<br>
+<strong>Part 4: Cross-Page Navigation Test</strong><br>
+
+26. From index.html, navigate to search.html using navbar.<br>
+27. Click Contact link on search.html.<br>
+28. Verify it scrolls to search.html footer (not index.html).<br>
+29. From search.html, navigate to packages.html.<br>
+30. Click Contact link on packages.html.<br>
+31. Verify correct footer scroll on packages.html.<br>
+<br>
+<strong>Part 5: Footer Contact Content Verification</strong><br>
+
+32. On each page footer, verify contact tiles display:<br>
+    - Address information<br>
+    - Phone number<br>
+    - Email address<br>
+    - Social media links (if present)<br>
+33. Check that footer id="contact" exists on all three pages.<br>
+34. Verify consistent footer styling across pages.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+<strong>On index.html:</strong><br>
+
+- Contact link scrolls to footer on same page<br>
+- Footer contact section (id="contact") becomes visible<br>
+- Smooth scrolling if implemented by script.js<br>
+- Keyboard navigation works (Tab + Enter)<br>
+- Mobile: hamburger menu closes after click<br>
+<br>
+<strong>On search.html:</strong><br>
+
+- Contact link scrolls to search.html footer (not index.html)<br>
+- Footer contact section visible<br>
+- Same smooth scrolling behavior<br>
+- Keyboard accessible<br>
+- Mobile menu closes<br>
+<br>
+<strong>On packages.html:</strong><br>
+
+- Contact link scrolls to packages.html footer<br>
+- Footer contact section visible<br>
+- Consistent scroll behavior<br>
+- Keyboard accessible<br>
+- Mobile menu closes<br>
+<br>
+<strong>All Pages:</strong><br>
+
+- Contact tiles display correctly (Address, Phone, Email, Social)<br>
+- Footer has id="contact" attribute<br>
+- Styling consistent across all pages<br>
+- No console errors during navigation<br>
+- Screen readers announce footer content correctly<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+      
+    <strong>Part 1: Test on index.html (Same-Page Anchor)</strong><br>
+1. Open index.html in browser.<br>
+2. Ensure page is scrolled to top or middle position.<br>
+3. Locate "Contact" link in navigation menu.<br>
+4. Verify href="#contact" attribute using DevTools if needed.<br>
+5. Click "Contact" navigation link.<br>
+6. Verify page scrolls to footer section (id="contact").<br>
+7. Confirm footer contact information tiles are visible.<br>
+8. Check scroll behavior (smooth if script.js implements it).<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f5bd1fc4-2806-472d-b15b-5d1b7650ae4d)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/2b77d0bf-67dc-4aeb-b920-819e799c18ea)
+
+9. Test keyboard navigation:<br>
+   - Tab to Contact link<br>
+   - Press Enter<br>
+   - Verify scroll occurs<br>
+10. Test from different scroll positions (top, middle, bottom).<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/98a1dc93-966b-487b-867e-29ef4c3c8f37)
+
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/fcd34d0d-f58c-4923-8c04-2421ee0a3b82)
+
+
+11. On mobile, verify hamburger menu closes after clicking Contact.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/8ee56d5d-13bd-4ad1-9f8e-194dcd7c9240)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/7b5bb89b-4d5c-4eb3-bf32-c152a23fc2e3)
+
+<br>
+<strong>Part 2: Test on search.html (Same-Page Anchor)</strong><br>
+
+12. Navigate to search.html.<br>
+13. Locate "Contact" link (href="search.html#contact").<br>
+14. Click Contact link.<br>
+15. Verify scroll to footer (id="contact").<br>
+16. Confirm contact tiles visible.<br>
+17. Test keyboard navigation (Tab + Enter).<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/1b20ad00-24df-4eff-90b7-7d58eb3a9a67)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/5a299a12-7053-4b5f-b580-0b9157496fbe)
+
+18. On mobile, verify menu closes after navigation.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/6420ebf3-8c0d-4916-aad5-57be38454bb5)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/f4b1cb4e-3709-4d98-93ec-ba19fb450d83)
+
+<br>
+<strong>Part 3: Test on packages.html (Same-Page Anchor)</strong><br>
+
+19. Navigate to packages.html.<br>
+20. Locate "Contact" link (href="packages.html#contact").<br>
+21. Click Contact link.<br>
+22. Verify scroll to footer (id="contact").<br>
+23. Confirm contact tiles visible.<br>
+24. Test keyboard navigation.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/6a95a1b8-0960-4eef-ba3f-ca6aa736fdc7)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/04c69f5e-bc34-4ef5-b4c4-3c79a3f9e907)
+
+25. On mobile, verify menu closes.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f756710d-5ed1-49d4-b521-ad46a7b66ed2)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/97a12f1f-55c0-4d00-8d4e-ed79cad64f88)
+
+<br>
+<strong>Part 4: Cross-Page Navigation Test</strong><br>
+
+26. From index.html, navigate to search.html using navbar.<br>
+27. Click Contact link on search.html.<br>
+28. Verify it scrolls to search.html footer (not index.html).<br>
+29. From search.html, navigate to packages.html.<br>
+30. Click Contact link on packages.html.<br>
+31. Verify correct footer scroll on packages.html.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/e9212f79-f790-47c8-bdaa-d8f1e14ca89b)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/f71e17e0-3fcc-468f-8aea-619ca729e282)
+
+<br>
+<strong>Part 5: Footer Contact Content Verification</strong><br>
+
+32. On each page footer, verify contact tiles display:<br>
+    - Address information<br>
+    - Phone number<br>
+    - Email address<br>
+    - Social media links (if present)<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/a70c5eb3-a8e2-45ac-a1b1-438d11c04f12)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/9ea47032-e6ca-4b9a-baeb-848a88f035a2)
+
+33. Check that footer id="contact" exists on all three pages.<br>
+34. Verify consistent footer styling across pages.<br>
+
+**Observations: id="contact" present in index,html, search.html, packages.html.**
+
+**index.html**
+<img width="961" height="429" alt="image" src="https://github.com/user-attachments/assets/45e3cd91-b71e-446c-b83b-ecac0cbaf615" />
+
+**search.html**
+<img width="995" height="420" alt="image" src="https://github.com/user-attachments/assets/756b2e8c-e2db-404d-90ed-11975fde7ace" />
+
+**package.html**
+<img width="1058" height="529" alt="image" src="https://github.com/user-attachments/assets/5b7a237c-d25f-4aff-96d1-bfe94edc0aaa" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:PASS</strong> </td>
   </tr>
 </table>
 </details>
