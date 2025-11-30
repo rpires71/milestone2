@@ -7665,11 +7665,10 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
 [Microsoft Edge evidence file](https://github.com/user-attachments/assets/431e7de2-8e7b-405b-a6a6-0da0817ca95e)
 
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/236d1ad5-0fe4-4537-b2cd-538ce93f1436)
-    
     </td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong></td>
   </tr>
 </table>
 </details>
@@ -7722,6 +7721,7 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
    - Confirm buttons are touch-friendly<br>
    - Test touch interactions<br>
 10. Check console for JavaScript errors after clicking buttons.<br>
+
 </td>
   </tr>
   <tr>
@@ -7740,13 +7740,128 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
 </td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Actual Result:</strong> </td>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+1. Open search.html in browser.<br>
+2. Scroll down to "Popular Destinations" section.<br>
+3. Verify 4 destination cards are displayed:<br>
+   - New York City<br>
+   - Barcelona<br>
+   - Paris<br>
+   - Tokyo<br>
+
+**Observations: Working as expected.**
+
+**Microsoft Edge:**
+<img width="1638" height="838" alt="image" src="https://github.com/user-attachments/assets/79cfe7c2-887c-49d2-848f-7a89aaab583c" />
+
+**Mozilla Firefox:**
+<img width="1697" height="925" alt="image" src="https://github.com/user-attachments/assets/ec1458fa-4f44-4fb5-8353-487ea98a6e0e" />
+
+4. For each destination card, verify:<br>
+   - Image loads correctly (200px height, covers container)<br>
+   - Destination name displayed (H4 heading)<br>
+   - Description text present<br>
+   - "Explore [City]" button visible with search icon<br>
+
+**Note: Similar structure for the remainding three cards.**
+<img width="464" height="679" alt="image" src="https://github.com/user-attachments/assets/e224274c-d2f5-478a-b30b-77cb7f2f09ea" />
+
+5. Test "Explore NYC" button:<br>
+   - Click button<br>
+   - Verify city search input populates with "New York City"<br>
+   - Confirm Google Map centers on New York City<br>
+   - Check that place markers appear on map<br>
+   - Verify results panel displays NYC attractions<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/a78f6843-3689-4633-b93a-c8ba442a5602)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/02937305-b2ba-494b-a84b-8e32d79d4024)
+   
+6. Repeat test for each city:<br>
+   - Click "Explore Barcelona" -> search for Barcelona<br>
+
+**Observations: Working as expected.**
+
+**Microsoft Edge:**
+
+<img width="1613" height="854" alt="image" src="https://github.com/user-attachments/assets/6e0ba845-c3b3-4013-86ad-52f500259f81" />
+
+**Mozilla Firefox:**
+
+<img width="1693" height="883" alt="image" src="https://github.com/user-attachments/assets/4c256d83-060b-4dcc-81a2-e86472c6d283" />
+
+   - Click "Explore Paris" -> search for Paris<br>
+   
+**Microsoft Edge:**
+
+<img width="1572" height="996" alt="image" src="https://github.com/user-attachments/assets/a0122d6a-759b-42a0-b052-e8ef7ca976c7" />
+
+**Mozilla Firefox:**
+
+<img width="1607" height="943" alt="image" src="https://github.com/user-attachments/assets/590f898a-6aa3-4764-a6fe-36888e50bfe2" />
+
+   - Click "Explore Tokyo" -> search for Tokyo<br>
+
+**Microsoft Edge:**
+
+<img width="1648" height="939" alt="image" src="https://github.com/user-attachments/assets/e05519eb-6033-4a57-a796-93f8a331a2bd" />
+
+**Mozilla Firefox:**
+
+<img width="1656" height="998" alt="image" src="https://github.com/user-attachments/assets/68b2d0b2-5572-49a1-9906-aa21ee082044" />
+
+6. Verify onclick attribute calls correct function:<br>
+   - Use DevTools to inspect button elements<br>
+   - Confirm onclick="searchCity('[City Name]')"<br>
+
+<img width="367" height="383" alt="image" src="https://github.com/user-attachments/assets/a2eabc04-40eb-4de6-bc64-f8cd47d0b1c4" />
+
+7. Test keyboard accessibility:<br>
+   - Tab to each Explore button<br>
+   - Press Enter to trigger search<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/d2d41f41-bfd3-4ec1-8d08-83df2eb26c01)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/f4ea47b7-290a-4c92-a394-8de7dc5a37a4)
+
+8. Test on tablet (768x1024) and mobile (375x667) viewports:<br>
+   - Verify cards stack vertically (2 per row on tablet, 1 per row on mobile)<br>
+   - Confirm buttons are touch-friendly<br>
+   - Test touch interactions<br>
+
+**Observations: Working as expected.**
+
+**(768x1024)**
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/d89b2231-3363-4c41-b075-e1a9f99c2a31)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/675fb624-619f-4870-b792-718e21a3a0d1)
+
+**(375x667)**
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/2a4c88b2-a04e-44f3-838a-eedc469596e3)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/0b3fe887-4d99-4a72-987e-a05bf9aae757)
+
+9. Check console for JavaScript errors after clicking buttons.<br>
+
+**Microsoft Edge:**
+<img width="1671" height="876" alt="image" src="https://github.com/user-attachments/assets/3df9ec7f-ec94-4791-8db8-cec1a89170f8" />
+
+**Mozilla Firefox:**
+<img width="1796" height="884" alt="image" src="https://github.com/user-attachments/assets/c468d411-1c90-4d51-8bac-bfc4507fcf2a" />
+
+    </td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
   </tr>
 </table>
 </details>
+
 ---
 
 ## References
