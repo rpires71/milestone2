@@ -6794,7 +6794,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 7. Verify results panel displays place cards with name, rating, address.<br>
 8. Test Enter key triggers search (keyboard accessibility).<br>
 9. Test with various cities: Paris, Tokyo, New York, Barcelona.<br>
-
 </td>
   </tr>
   <tr>
@@ -6804,7 +6803,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 - Valid city names call performSearch(cityName) and reveal the results + map area.<br>
 - Enter key functions as alternative to button click<br>
 - Invalid cities handled gracefully with appropriate message<br>
-
 </td>
   </tr>
   <tr>
@@ -6884,7 +6882,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 **Mozilla Firefox** - Working - Evidence below - XYZ123:
 
 <img width="1680" height="839" alt="image" src="https://github.com/user-attachments/assets/a897f47c-694c-472a-8a82-23a78fa7a8a5" />
-    
     </td>
   </tr>
   <tr>
@@ -6917,7 +6914,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 7. Repeat for each category: Hotels, Cafes, Shopping.<br>
 8. Check that only one button shows active state at a time.<br>
 9. Verify markers on map match the selected category.<br>
-
 </td>
   </tr>
   <tr>
@@ -6928,7 +6924,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 - Map markers refresh to show filtered places<br>
 - Results panel displays places matching selected category<br>
 - Previous results cleared before new results load<br>
-
 </td>
   </tr>
   <tr>
@@ -6949,7 +6944,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/53fb7886-c180-4b6a-868a-66f0186ea15e)
 
 **Observations:** Working as expected. 
-
     </td>
   </tr>
   <tr>
@@ -6983,7 +6977,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 8. Verify info window opens showing place name, rating, address.<br>
 9. Click another marker - confirm previous info window closes.<br>
 10. Test on mobile - verify touch interactions work (pinch zoom, swipe).<br>
-
 </td>
   </tr>
   <tr>
@@ -6994,7 +6987,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 - Markers clickable with info windows displaying complete information<br>
 - Only one info window open at a time<br>
 - Touch interactions work on mobile devices<br>
-
 </td>
   </tr>
   <tr>
@@ -7024,7 +7016,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 [Microsoft Edge evidence file](https://github.com/user-attachments/assets/d0bd8eff-32d3-433d-a577-2a98ac713bc2)
 
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/c5ea1eb4-eee4-4aa1-a524-73903591aa08)
-
     </td>
   </tr>
   <tr>
@@ -7062,7 +7053,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 12. Verify new tab opens to Booking.com with correct parameters.<br>
 13. Repeat validation tests for "Search Flights" and "Full Package".<br>
 14. Test keyboard navigation through form fields.<br>
-
 </td>
   </tr>
   <tr>
@@ -7074,7 +7064,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 - Validation messages are clear and user-friendly<br>
 - Form fields accessible via keyboard<br>
 - Successful submissions open partner sites with correct data<br>
-
 </td>
   </tr>
   <tr>
@@ -7184,7 +7173,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 [Microsoft Edge evidence file](https://github.com/user-attachments/assets/4c408f18-f20c-4f4d-a611-c10b07c84875)
 
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/825b4c8b-3c91-4b1e-9e5e-8435094d9cec)
-
     </td>
   </tr>
   <tr>
@@ -7220,7 +7208,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 8. Test "Book Activities" – verify that GetYourGuide opens with Barcelona as the selected destination.<br>
 9. Confirm all links have target="_blank" and rel="noopener noreferrer".<br>
 10. Attempt a 404 path – verify that the user is redirected back to packages.html.<br>
-
 </td>
   </tr>
   <tr>
@@ -7231,7 +7218,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 - Security attributes (`rel="noopener noreferrer"`) are present on all external links<br>
 - User remains on the original page after each link opens<br>
 - Attempting an invalid/404 path redirects the user back to <em>packages.html</em><br>
-
 </td>
   </tr>
   <tr>
@@ -7340,7 +7326,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 5. Use the keyboard Tab key to focus on all footer links and verify that they are accessible.<br>
 6. Repeat the above checks on <em>search.html</em> and <em>packages.html</em> to ensure consistency across the site.<br>
 7. Check that the footer displays correctly on mobile devices and smaller screen sizes.<br>
-
 </td>
 </tr>
 <tr>
@@ -7351,7 +7336,6 @@ This approach overrides the browser's default behaviour and ensures that both in
 - Hover states provide clear visual feedback using the pointer cursor<br>
 - Footer links are fully keyboard accessible and receive visible focus<br>
 - Footer displays consistently and responsively across all device sizes<br>
-
 </td>
   </tr>
   <tr>
@@ -7388,7 +7372,82 @@ This approach overrides the browser's default behaviour and ensures that both in
 [Microsoft Edge evidence file](https://github.com/user-attachments/assets/158c4625-526f-48d0-95fc-35762d8ea051)
 
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/30610270-a541-4354-8422-948d4de4be99)
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
 
+<details>
+  <summary><strong>Test Case TC008 - Content Accuracy</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC008</td>
+    <td><strong>Feature:</strong> Content Accuracy (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that all text content is grammatically correct, free from typos, uses consistent UK English spelling, and maintains professional tone.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Accurate, professionally presented content builds trust and enhances credibility, supporting user comprehension and meeting quality standards.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Read all headings, paragraphs, and button labels on index.html.<br>
+2. Check for grammar, spelling, and punctuation errors.<br>
+3. Verify UK spelling (e.g., "travelling" not "traveling", "colour" not "color").<br>
+4. Confirm consistency in terminology (e.g., "Holiday Packages" not mixed with "Vacation Packages").<br>
+5. Check that instructional text is clear (e.g., "Enter a city name to search").<br>
+6. Repeat for search.html and packages.html.<br>
+7. Use Grammarly or similar tool for final proofreading.<br>
+8. Verify content displays correctly on mobile without text cut-offs.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+    
+- No spelling or grammatical errors present<br>
+- Content uses consistent UK English throughout<br>
+- Terminology remains consistent across all pages<br>
+- All text displays correctly on desktop and mobile<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+      
+1. Read all headings, paragraphs, and button labels on index.html.<br>
+2. Check for grammar, spelling, and punctuation errors.<br>
+3. Verify UK spelling (e.g., "travelling" not "traveling", "colour" not "color").<br>
+4. Confirm consistency in terminology (e.g., "Holiday Packages" not mixed with "Vacation Packages").<br>
+5. Check that instructional text is clear (e.g., "Enter a city name to search").<br>
+6. Repeat for search.html and packages.html.<br>
+7. Use Grammarly or similar tool for final proofreading.<br>
+8. Verify content displays correctly on mobile without text cut-offs.<br>
+
+**Results:**
+**Copilot check with content of index.html**
+<img width="740" height="647" alt="image" src="https://github.com/user-attachments/assets/cc622ce7-3b7d-4a8a-962a-2918109b4ef8" />
+
+**Copilot check with content of search.html**
+<img width="711" height="497" alt="image" src="https://github.com/user-attachments/assets/bf096d73-2306-4503-b9c9-e72927c8f3ae" />
+
+**Copilot check with content of packages.html**
+<img width="574" height="700" alt="image" src="https://github.com/user-attachments/assets/38cb57bc-e271-4f73-8db6-402a46a00e72" />
+
+**Copilot check with content of packages.html**
+<img width="346" height="141" alt="image" src="https://github.com/user-attachments/assets/4751690e-5f0f-4de5-a6d1-2ed9d615740f" />
+
+**Mobile Display Check**
+<img width="575" height="174" alt="image" src="https://github.com/user-attachments/assets/8f718199-1746-4694-bfca-36a0a68e4d9b" />
+
+**Fix - index.html**
+**Before:**
+<img width="708" height="193" alt="image" src="https://github.com/user-attachments/assets/97e05c71-346b-431b-850b-97528f665371" />
+**After:**
+<img width="633" height="185" alt="image" src="https://github.com/user-attachments/assets/c9e47add-0482-4017-9d57-dc57959d9849" />
     </td>
   </tr>
   <tr>
