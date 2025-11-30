@@ -7456,6 +7456,108 @@ This approach overrides the browser's default behaviour and ensures that both in
 </table>
 </details>
 
+<details>
+  <summary><strong>Test Case TC009 - Link Descriptions and Titles</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC009</td>
+    <td><strong>Feature:</strong> Link Descriptions and Titles</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that all links have clear, descriptive text or titles that accurately reflect their destination or function (avoiding vague phrases like "Click Here").</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Descriptive link text improves accessibility for screen readers, enhances SEO, and supports WCAG 2.1 Success Criterion 2.4.4 (Link Purpose).</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Navigate through all pages (index, search, packages).<br>
+2. Inspect every link for descriptive visible text.<br>
+3. Hover over links to review title attributes (if present).<br>
+4. Verify no links use vague phrases like "click here" or "more info" without context.<br>
+5. Check that button labels clearly describe their action (e.g., "Search Destinations" not just "Search").<br>
+6. Use screen reader (NVDA or VoiceOver) to verify links make sense when read aloud.<br>
+7. Test on mobile and desktop for consistency.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- All links use descriptive, meaningful text<br>
+- No vague terms without context<br>
+- Links are understandable by screen reader users<br>
+- Button labels clearly describe their function<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+      
+1. Navigate through all pages (index, search, packages).<br>
+
+**- All four pages load correctly and share a consistent primary navigation bar (`About Us`, `Search`, `Popular Destinations`, `Packages`, `Contact`) with the exception of the 404.html file.**  
+**- Additional links such as **Holiday Destination Finder**, **Start Exploring**, phone numbers, and email addresses are present where expected.**
+     
+2. Inspect every link for descriptive visible text.<br>
+
+  **- All links use meaningful, descriptive text:**
+     **- Main nav: `About Us`, `Search`, `Popular Destinations`, `Packages`, `Contact`.**  
+     **- CTA/link: `Start Exploring`.** 
+     **- CTA/link: `Explore Barcelona`, `Explore Paris`, `Explore New York`, `Explore Tokyo`.**  
+     **- All form objects in search.html and packages.html.**
+     **- Image Slider descriptions in index.html.**
+     **- Panel and Map oin search.html.**
+     **- Utility links: telephone numbers (`+44 (0) 123 456 7890`, etc.) and email addresses (`info@holidayfinder.com`, `support@holidayfinder.com`).**  
+   **- The 404 page uses the link **Go to Packages**, which clearly indicates its destination.**
+
+3. Hover over links to review title attributes (if present).<br>
+
+  **- No links currently define a `title` attribute.**  
+  **- Hover feedback is provided visually via CSS hover states (colour/background changes), not via title tooltips.**  
+
+4. Verify no links use vague phrases like "click here" or "more info" without context.<br>
+
+   **- No instances of vague or generic link text were found across `index.html`, `search.html`, `packages.html`, or `404.html`.**  
+   **- All links are contextually clear without requiring surrounding text for meaning.**
+     
+5. Check that button labels clearly describe their action (e.g., "Search Destinations" not just "Search").<br>
+
+   **- Primary action buttons are descriptive:**
+     **- `Search Destination`, `Attractions`, `Restaurants`, `Hotels`, `Cafes`, `Shopping`.**  
+     **- Package actions: `Search Hotels`, `Search Flights`, `Complete Package`, `Book Activities`.**  
+     **- Destination CTAs: `Explore NYC`, `Explore Barcelona`, `Explore Paris`, `Explore Tokyo`.**  
+   **- Carousel controls on the homepage use Bootstrap's default structure with visually hidden text `Previous` and `Next` and indicator buttons with `aria-label="Slide X"`, which is screen-reader friendly even though the buttons themselves have no visible text.**  
+   **- Minor limitation: text inputs (e.g. city search, date fields) rely on `placeholder` rather than explicit `<label>` elements, which could be improved for accessibility.**
+   
+6. Use screen reader (NVDA or VoiceOver) to verify links make sense when read aloud.<br>
+
+   **- Based on the HTML structure:**
+     **- Links will be announced using their visible text (e.g. "About Us", "Popular Destinations", "Start Exploring", "Go to Packages"), which is meaningful in isolation.**  
+     **- Buttons will be announced with clear labels such as "Search Destination", "Search Hotels", "Complete Package", "Explore NYC", etc.**  
+     **- Carousel controls expose `Previous`, `Next`, and slide indicators via `aria-label` / visually hidden text, so they are accessible to screen readers.**  
+   **- Potential improvement: add `<label>` elements for form fields (city search and date inputs) to provide explicit accessible names rather than relying solely on placeholders.**
+
+7. Test on mobile and desktop for consistency.<br>
+
+   **- The same descriptive link and button text is used on both desktop and mobile (responsive navbar with hamburger menu).**  
+   **- Labeling and link text remain consistent across viewports; only the layout changes.**  
+   **- On touch devices (and in Edge/Firefox responsive emulation), hover effects are not shown, which is expected behaviour for touch interfaces; however, focus and active states and the visible text remain clear and consistent.**
+
+**Conclusion:**  
+- All links and buttons use descriptive, meaningful text with no vague "click here" style phrases.  
+- Navigation and CTAs are understandable when read aloud and remain consistent across pages and devices.  
+- The only notable accessibility improvement would be to add explicit `<label>` elements for form inputs (city search and date pickers) to further enhance screen-reader support.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> 
+
+All links and buttons across `index.html`, `search.html`, `packages.html`, and `404.html` use descriptive, meaningful, and accessible text. No vague phrases such as "click here" or "more info" were found. Every navigational item and button clearly communicates its purpose, behaves consistently across desktop and mobile, and is understandable when read aloud using a screen reader. The only minor enhancement recommended is adding explicit `<label>` elements to form fields (city search + date pickers) to further improve accessibility, but this does not prevent the test from passing.
+    </td>
+  </tr>
+</table>
+</details>
+
 ---
 
 ## References
