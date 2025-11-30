@@ -7665,6 +7665,7 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
 [Microsoft Edge evidence file](https://github.com/user-attachments/assets/431e7de2-8e7b-405b-a6a6-0da0817ca95e)
 
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/236d1ad5-0fe4-4537-b2cd-538ce93f1436)
+    
     </td>
   </tr>
   <tr>
@@ -7672,7 +7673,80 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
   </tr>
 </table>
 </details>
+<details>
+  <summary><strong>Test Case TC011 - Popular Destinations - Explore Buttons</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC011</td>
+    <td><strong>Feature:</strong> Popular Destinations - Explore Buttons (search.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Explore" buttons on each Popular Destination card trigger the searchCity() JavaScript function and populate search results correctly.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> These buttons provide quick-access searches for popular cities, enhancing user experience by eliminating manual typing. They must trigger searches correctly to fulfill this purpose.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
 
+1. Open search.html in browser.<br>
+2. Scroll down to "Popular Destinations" section.<br>
+3. Verify 4 destination cards are displayed:<br>
+   - New York City<br>
+   - Barcelona<br>
+   - Paris<br>
+   - Tokyo<br>
+4. For each destination card, verify:<br>
+   - Image loads correctly (200px height, covers container)<br>
+   - Destination name displayed (H4 heading)<br>
+   - Description text present<br>
+   - "Explore [City]" button visible with search icon<br>
+5. Test "Explore NYC" button:<br>
+   - Click button<br>
+   - Verify city search input populates with "New York City"<br>
+   - Confirm Google Map centers on New York City<br>
+   - Check that place markers appear on map<br>
+   - Verify results panel displays NYC attractions<br>
+6. Repeat test for each city:<br>
+   - Click "Explore Barcelona" -> search for Barcelona<br>
+   - Click "Explore Paris" -> search for Paris<br>
+   - Click "Explore Tokyo" -> search for Tokyo<br>
+7. Verify onclick attribute calls correct function:<br>
+   - Use DevTools to inspect button elements<br>
+   - Confirm onclick="searchCity('[City Name]')"<br>
+8. Test keyboard accessibility:<br>
+   - Tab to each Explore button<br>
+   - Press Enter to trigger search<br>
+9. Test on tablet (768x1024) and mobile (375x667) viewports:<br>
+   - Verify cards stack vertically (2 per row on tablet, 1 per row on mobile)<br>
+   - Confirm buttons are touch-friendly<br>
+   - Test touch interactions<br>
+10. Check console for JavaScript errors after clicking buttons.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- All 4 destination cards display correctly with images, text, and buttons<br>
+- Each button has appropriate label ("Explore NYC", "Explore Barcelona", etc.)<br>
+- Clicking button populates search input with correct city name<br>
+- Map automatically centers on selected city<br>
+- Search results load for the selected destination<br>
+- onclick attributes reference correct city names<br>
+- Buttons accessible via keyboard (Tab + Enter)<br>
+- Cards responsive on mobile (stacking behavior correct)<br>
+- Buttons touch-friendly (minimum 44x44px touch target)<br>
+- No JavaScript errors in console<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+</details>
 ---
 
 ## References
