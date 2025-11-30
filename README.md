@@ -7557,6 +7557,121 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
   </tr>
 </table>
 </details>
+<details>
+  <summary><strong>Test Case TC010 - Start Exploring Button</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC010</td>
+    <td><strong>Feature:</strong> Start Exploring Button (index.html)</td>
+</tr>
+<tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Start Exploring" button in the hero section of <code>index.html</code> correctly navigates to the search page (<code>search.html</code>).</td>
+</tr>
+<tr>
+    <td colspan="2"><strong>Justification:</strong> This button is the primary call-to-action (CTA) on the homepage, directing users to the main functionality of the website. It must operate reliably to support the intended user journey.</td>
+</tr>
+<tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+
+1. Open <code>index.html</code> in a browser.<br>
+2. Locate the "Start Exploring" button in the hero section.<br>
+3. Verify the button displays both the search icon (<code>bi-search</code>) and the text label "Start Exploring".<br>
+4. Confirm the button styling matches the primary theme (coral-orange background).<br>
+5. Hover over the button and verify that a visual change appears (e.g., elevated hover or shadow effect).<br>
+6. Click the "Start Exploring" button.<br>
+7. Confirm that navigation occurs to <code>search.html</code>.<br>
+8. Verify that the page loads correctly, displaying the search input and interactive map.<br>
+9. Test keyboard accessibility: use the <kbd>Tab</kbd> key to focus on the button, then press <kbd>Enter</kbd>.<br>
+10. Test on tablet devices (e.g., 768×1024) and verify the button remains clearly visible and touch-friendly.<br>
+11. Test on mobile devices (e.g., 375×667) and verify the button remains clearly visible and touch-friendly.<br>
+</td>
+</tr>
+<tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+
+- Button clearly visible with both icon and text label<br>
+- Hover state provides noticeable visual feedback<br>
+- Clicking the button navigates to <code>search.html</code> without errors<br>
+- Button fully accessible using keyboard controls (<kbd>Tab</kbd> + <kbd>Enter</kbd>)<br>
+- Button remains touch-friendly and visible on tablet and mobile devices<br>
+</td>
+</tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+      
+1. Open <code>index.html</code> in a browser.<br>
+2. Locate the "Start Exploring" button in the hero section.<br>
+3. Verify the button displays both the search icon (<code>bi-search</code>) and the text label "Start Exploring".<br>
+
+**Observations: Working as expected.**
+
+**Microsoft Edge:**
+<img width="1114" height="353" alt="image" src="https://github.com/user-attachments/assets/4cdacd50-5394-4bf6-a2e5-043a0fac7e72" />
+
+**Mozilla Firefox:**
+<img width="1628" height="508" alt="image" src="https://github.com/user-attachments/assets/03b5ff89-ff75-405b-b54e-fef8e09f3ac9" />
+
+4. Confirm the button styling matches the primary theme (coral-orange background).<br>
+
+**Observations: Working as expected.**
+
+<img width="663" height="343" alt="image" src="https://github.com/user-attachments/assets/18a3a733-f001-4106-91ce-e60ba6660850" />
+
+5. Hover over the button and verify that a visual change appears (e.g., elevated hover or shadow effect).<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/ef84c409-ba23-4281-b747-350fc084ef1d)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/d835ea3f-1973-4957-91dc-3ea330622b55)
+
+6. Click the "Start Exploring" button.<br>
+7. Confirm that navigation occurs to <code>search.html</code>.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/28956f46-afab-4755-bb03-a993c0d10669)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/0cc8f717-d115-46d3-aba5-3ed3d3417c4c)
+
+8. Verify that the page loads correctly, displaying the search input and interactive map.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/1a33c29f-3716-4133-a34a-f7014a0d4181)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/be3d64ff-fda1-4c40-8d18-0250423d908f)
+
+9. Test keyboard accessibility: use the <kbd>Tab</kbd> key to focus on the button, then press <kbd>Enter</kbd>.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/e61cee15-bf81-45ca-a2e5-1fb83b8b5da7)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/40e2759d-2ef4-42a5-99a2-4870fb9630b9)
+
+10. Test on tablet devices (e.g., 768×1024) and verify the button remains clearly visible and touch-friendly.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/bffdbe02-2e94-4408-85d9-3fd1057fe0cd)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/bc951c11-ac98-42d5-a47d-20737bdbc40c)
+
+11. Test on mobile devices (e.g., 375×667) and verify the button remains clearly visible and touch-friendly.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/431e7de2-8e7b-405b-a6a6-0da0817ca95e)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/236d1ad5-0fe4-4537-b2cd-538ce93f1436)
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
 
 ---
 
