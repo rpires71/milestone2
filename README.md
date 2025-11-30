@@ -3998,8 +3998,8 @@ I will, at the end of each test phase:
 6. Verify the same navigation bar appears on all pages with identical styling.<br>
 7. Verify the same footer structure and styling appears on all pages.<br>
 8. Check for consistent icon usage (Bootstrap Icons - bi-*) across pages.<br>
-9. Verify consistent spacing using CSS variables (--spacing-xs through --spacing-xl).<br>
-10. Test on desktop (1920x1080), tablet (768x1024), and mobile (375x667) to ensure consistency remains across breakpoints.<br>
+9. Test on desktop (1920x1080), tablet (768x1024), and mobile (375x667) to ensure consistency remains across breakpoints.<br>
+10. Verify consistent spacing using CSS variables (--spacing-xs through --spacing-xl).<br>
 </td>
   </tr>
   <tr>
@@ -8553,6 +8553,194 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
   </tr>
 </table>
 </details>
+
+#### Usability and Typography Testing - Results
+[⬆ Back to Table of contents](#table-of-contents)
+
+<details>
+  <summary><strong>Test Case TC016 - Visual Consistency</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC016</td>
+    <td><strong>Feature:</strong> Visual consistency</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that layout structure, colour palette, typography, spacing, and UI components (e.g. buttons, headings, links) remain uniform across all three pages (index.html, search.html, packages.html).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Consistent design improves user experience by reinforcing brand identity, reducing cognitive load, and supporting navigation familiarity. It meets professional standards of user interface design and contributes to accessibility, usability, and aesthetic quality.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Open all three pages of the website (index.html, search.html, packages.html).<br>
+2. Compare layout alignment, margins, padding, and spacing between components.<br>
+3. Verify consistent use of brand colours across pages:<br>
+   - Ocean Blue (#0077B6) for primary headings and navbar<br>
+   - Sky Blue (#90E0EF) for accents and hover states<br>
+   - Coral Orange (#FF6B35) for CTA buttons and active states<br>
+   - Sand Beige (#FAF3E0) and White Smoke (#F5F5F5) for backgrounds<br>
+   - Charcoal Grey (#2F3E46) for body text<br>
+4. Check that the same heading styles and font families are applied:<br>
+   - Montserrat for all headings (H1, H2, H3, H4, H5)<br>
+   - Lato for all body text and paragraphs<br>
+5. Ensure buttons and interactive elements are styled identically across pages:<br>
+   - Primary buttons (coral orange background)<br>
+   - Action buttons (category filters on search.html)<br>
+   - Hover effects consistent<br>
+6. Verify the same navigation bar appears on all pages with identical styling.<br>
+7. Verify the same footer structure and styling appears on all pages.<br>
+8. Check for consistent icon usage (Bootstrap Icons - bi-*) across pages.<br>
+9. Test on desktop (1920x1080), tablet (768x1024), and mobile (375x667) to ensure consistency remains across breakpoints.<br>
+10. Verify consistent spacing using CSS variables (--spacing-xs through --spacing-xl).<br>
+
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+- All three pages display cohesive, uniform design<br>
+- Brand colour palette (Ocean Blue, Sky Blue, Coral Orange) applied consistently<br>
+- Typography uses Montserrat for headings, Lato for body text throughout<br>
+- Navigation and footer identical across all pages<br>
+- Button styling consistent (primary buttons coral orange, hover states sky blue)<br>
+- Spacing follows design system variables<br>
+- Visual consistency maintained across all device sizes<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+
+  
+1. All three pages exist and load
+
+**Result: PASS**
+
+index.html, search.html, and packages.html all exist with full HTML5 structure (<!DOCTYPE html>, <html lang="en">, <head>, <body>).
+
+2. Layout alignment, margins, padding, spacing
+
+**Result: PASS**
+
+All three pages use the same layout pattern:
+
+Header hero + main content wrapper:
+index.html, search.html, packages.html each use
+<header class="header-hero py-5"> followed by
+<main class="main-section py-5"> inside a .container.
+
+Bootstrap grid and gutters for internal layout:
+
+About / hero sections and main content use .container, .row, .col-*, .g-4, .g-3, mb-4, mb-5 consistently.
+
+Card-like content (search containers, packages panel, about content) use consistent padding and shadow:
+.search-container p-4 bg-white rounded-4 shadow-md appears in search.html and packages.html.
+.about-content with padding, radius and shadow is used for the About panel on index.html.
+
+**Video Evidence Results for Steps 1 and 2**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/3bfa48f9-6392-45bc-992b-272fab517a2d)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/e6eaeedb-54e7-4125-b5ff-7918b71318f3)
+
+
+3. Verify consistent use of brand colours across pages: **Result: PASS**<br> 
+   - Ocean Blue (#0077B6) for primary headings and navbar<br>
+   - Sky Blue (#90E0EF) for accents and hover states<br>
+   - Coral Orange (#FF6B35) for CTA buttons and active states<br>
+   - Sand Beige (#FAF3E0) and White Smoke (#F5F5F5) for backgrounds<br>
+   - Charcoal Grey (#2F3E46) for body text<br>
+
+**Image evidence for Step 3**
+<img width="788" height="515" alt="image" src="https://github.com/user-attachments/assets/1b92afcd-7944-4e11-807a-0e75d4ee90d1" />
+<img width="612" height="494" alt="image" src="https://github.com/user-attachments/assets/93c24ae0-afec-47c9-9cb5-07509a3d9bdb" />
+
+
+4. Check that the same heading styles and font families are applied: **Result: PASS**<br>
+   - Montserrat for all headings (H1, H2, H3, H4, H5)<br>
+   - Lato for all body text and paragraphs<br>
+
+**Image evidence for Step 4**
+
+<img width="540" height="263" alt="image" src="https://github.com/user-attachments/assets/72d95fe1-582b-44e3-936c-30d673c9d823" />
+<img width="654" height="507" alt="image" src="https://github.com/user-attachments/assets/07d593a4-c884-47ab-b526-8bc1310f58e8" />
+
+**All pages load the same Google Fonts and shared style.css:**
+
+<link ... href="...Montserrat...Lato..."> and <link rel="stylesheet" href="assets/css/style.css" /> appear in the <head> of index.html, search.html, and packages.html.
+
+**So every heading uses Montserrat, all body text uses Lato across all three pages.**
+
+5. Ensure buttons and interactive elements are styled identically across pages: **Result: PASS**<br>
+   - Primary buttons (coral orange background)<br>
+   - Action buttons (category filters on search.html)<br>
+   - Hover effects consistent<br>
+
+**index.html**
+**Primary CTAs use .btn btn-primary consistently:**
+
+**Hero CTA on index.html:
+<a href="search.html" class="btn btn-primary btn-lg mt-3">** 
+
+**search.html**
+**Search button on search.html: inside the search panel:**
+**<button class="btn btn-primary btn-lg w-100" ...> (inside .search-container).** 
+
+**packages**
+**Packages booking/search buttons on packages.html: actions in the booking UI also rely on .btn btn-primary for consistency.**
+**Action buttons (filters etc.) are styled with consistent classes from the same CSS file (e.g. .btn-action / Bootstrap button utilities) within the search actions section of search.html and packages actions in packages.html.**
+
+**Hover effects are globally defined for .btn / .btn-primary and .nav-link in style.css, so any button or nav link across all pages shares the same hover behaviour.** 
+
+
+6. Verify the same navigation bar appears on all pages with identical styling. **Result: PASS**<br>
+
+**All three HTML files share the same navbar structure. The only difference is which link has .active to show the current page, which is intentional. You can see the same pattern in all three:**
+<img width="692" height="438" alt="image" src="https://github.com/user-attachments/assets/6f9650ca-fc21-48ef-b334-2805c9814ad6" />
+
+7. Verify the same footer structure and styling appears on all pages. **Result: PASS**<br>
+
+**index.html, search.html, and packages.html each end with the same footer layout:**
+**A <footer> containing .footer-main and .footer-bottom sections, with a .container, .row, and three columns (About / Quick Links / Contact), plus icons and copyright text.**
+**Styling is centralised in style.css for .footer-main, .footer-bottom, and the typography/colours used inside the footer, so all pages share the same look.** 
+
+8. Check for consistent icon usage (Bootstrap Icons - bi-*) across pages. **Result: PASS**<br>
+
+**All pages load Bootstrap Icons via the same CDN link in <head>:**
+<img width="788" height="117" alt="image" src="https://github.com/user-attachments/assets/3e569a24-b468-4013-af39-70961b694440" />
+
+**Icons used in a consistent way:**
+**Hero CTA on index.html: <i class="bi bi-search me-2"></i>** 
+**Contact section & footer: phone / envelope / geo icons using bi-telephone, bi-envelope, etc., appear across pages inside footer/contact blocks.**
+**Packages/search UIs also use bi- icons for small decorative and action indicators.**
+Because they're all wired to the same icon CDN and used via bi-* classes, icon style is consistent everywhere.
+
+09. Test on desktop (1920x1080), tablet (768x1024), and mobile (375x667) to ensure consistency remains across breakpoints.**Result: PASS**<br>
+
+**Video Evidence Results for Steps 1 and 2**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/601e9d4f-1d53-48e6-a196-1b1a9b12d38a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/7ec5a73b-9522-4e66-aaba-8488f5da9e1c)
+
+10. Verify consistent spacing using CSS variables (--spacing-xs through --spacing-xl). Result: **PASS**<br>
+
+<img width="238" height="219" alt="image" src="https://github.com/user-attachments/assets/c714c465-6d35-46cc-9b70-ad3ead30bd5c" />
+
+- These tokens are used in custom components (`.main-section`, `.about-content`, cards, etc.) combined with Bootstrap utilities:
+
+  - `.main-section` uses vertical padding (`padding: 3rem 0`) to standardise main content spacing across *all* pages.   
+  - Repeated use of `mb-4`, `mb-5`, `py-5`, `g-3`, `g-4`, etc., is consistent in search panels and packages panels, giving uniform vertical and horizontal spacing across layouts.   
+
+**So the spacing system is shared and applied in the same way everywhere.**
+    </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<details>
 
 ---
 
