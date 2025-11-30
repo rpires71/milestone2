@@ -8723,6 +8723,8 @@ Because they're all wired to the same icon CDN and used via bi-* classes, icon s
 
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/7ec5a73b-9522-4e66-aaba-8488f5da9e1c)
 
+<img width="886" height="228" alt="image" src="https://github.com/user-attachments/assets/2fbcd64a-c692-4cd6-b339-5c27b86f4a31" />
+
 10. Verify consistent spacing using CSS variables (--spacing-xs through --spacing-xl). Result: **PASS**<br>
 
 <img width="238" height="219" alt="image" src="https://github.com/user-attachments/assets/c714c465-6d35-46cc-9b70-ad3ead30bd5c" />
@@ -8741,6 +8743,192 @@ Because they're all wired to the same icon CDN and used via bi-* classes, icon s
 </table>
 </details>
 <details>
+  <summary><strong>Test Case TC017 - Font Readability</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC017</td>
+    <td><strong>Feature:</strong> Font Readability</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Evaluate whether the selected fonts (e.g. Montserrat for headings and Lato for body text) are legible and accessible across different devices, screen sizes, and lighting conditions. Verify adequate size, spacing, and contrast.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Readable typography is essential for accessibility, especially for users with dyslexia, low vision, or cognitive impairments. It also enhances usability and aligns with WCAG 2.1 guidelines on minimum text size and contrast. Ensures the content is understandable for all users planning holiday destinations.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+      
+1. View the website on desktop, tablet, and mobile screens.<br>
+2. Check that the body font size is at least 16px using browser DevTools:<br>
+   - Inspect body text in About Us section (index.html)<br>
+   - Inspect search results descriptions (search.html)<br>
+   - Inspect booking form labels (packages.html)<br>
+3. Verify Lato font (var(--font-body)) is applied to all body text.<br>
+4. Verify Montserrat font (var(--font-heading)) is applied to all headings.<br>
+5. Confirm adequate line spacing (line-height at least 1.5x font size).<br>
+6. Confirm paragraph spacing provides clear separation between text blocks.<br>
+7. Inspect text contrast against backgrounds using WebAIM Contrast Checker:<br>
+   - Charcoal Grey (#2F3E46) text on white/light backgrounds<br>
+   - White text on Ocean Blue (#0077B6) backgrounds<br>
+   - Button text (white) on Coral Orange (#FF6B35) backgrounds<br>
+8. Ensure headings are clearly distinguishable from body text:<br>
+   - By font family (Montserrat vs Lato)<br>
+   - By font weight (bold headings)<br>
+   - By font size (larger headings)<br>
+   - By colour (Ocean Blue or Sky Blue for headings)<br>
+9. Test zooming to 200% and verify text remains legible without breaking layout.<br>
+10. Test readability in different lighting conditions (bright and dim).<br>
+
+
+
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+      
+1. View the website on desktop, tablet, and mobile screens:PASS<br>
+
+**Video Evidence Results for Steps 1**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/601e9d4f-1d53-48e6-a196-1b1a9b12d38a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/7ec5a73b-9522-4e66-aaba-8488f5da9e1c)
+
+2. Check that the body font size is at least 16px using browser DevTools:PASS<br>
+   - Inspect body text in About Us section (index.html)<br>
+   - Inspect search results descriptions (search.html)<br>
+   - Inspect booking form labels (packages.html)<br>
+
+**Microsoft Edge**
+**Image evidence index.html**
+<img width="1772" height="987" alt="image" src="https://github.com/user-attachments/assets/ae898cb0-be51-431e-97a0-d7e2758d4edd" />
+
+**Image evidence search.html**
+<img width="1817" height="965" alt="image" src="https://github.com/user-attachments/assets/f022c05f-10aa-402f-8905-3cdabe36fec9" />
+
+**Image evidence packages.html**
+<img width="1876" height="996" alt="image" src="https://github.com/user-attachments/assets/75adfefd-5f70-43cf-83e5-11003ab023ee" />
+
+**Mozilla Firefox**
+**Image evidence index.html**
+<img width="1527" height="996" alt="image" src="https://github.com/user-attachments/assets/b6c4cc12-fe06-4377-97e8-7ac5d548e645" />
+
+**Image evidence search.html**
+<img width="1535" height="1002" alt="image" src="https://github.com/user-attachments/assets/f4d70077-f71c-4089-b77c-01db4682401a" />
+
+**Image evidence packages.html**
+<img width="1748" height="997" alt="image" src="https://github.com/user-attachments/assets/e3b8328f-ef7b-43d2-8382-34cd327f9020" />
+
+3. Verify Lato font (var(--font-body)) is applied to all body text. PASS<br>
+
+**Microsoft Edge**
+**Image evidence index.html**
+<img width="1802" height="977" alt="image" src="https://github.com/user-attachments/assets/733b6170-651d-442c-a1a0-e4ea45f33785" />
+
+**Image evidence search.html**
+<img width="1803" height="951" alt="image" src="https://github.com/user-attachments/assets/dda0e1af-9614-4670-a7cc-8cb1107e2631" />
+
+**Image evidence packages.html**
+<img width="1834" height="962" alt="image" src="https://github.com/user-attachments/assets/3a92fcac-88ea-4420-9066-80f322fb4aa3" />
+
+**Mozilla Firefox**
+**Image evidence index.html**
+<img width="1524" height="951" alt="image" src="https://github.com/user-attachments/assets/ebd8060f-85d4-485f-a5b1-daa64b5d8f66" />
+
+**Image evidence search.html**
+<img width="1462" height="1000" alt="image" src="https://github.com/user-attachments/assets/6ea9b6d3-b752-47b6-affc-0b8f0471b8d5" />
+
+**Image evidence packages.html**
+<img width="1532" height="978" alt="image" src="https://github.com/user-attachments/assets/13bf2c70-eb19-4960-ad17-3e6593687a6a" />
+
+4. Verify Montserrat font (var(--font-heading)) is applied to all headings. PASS<br>
+
+**Video Evidence Results for Steps 1**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f87ece31-7bfc-4ab0-9caf-456b51b52ba2)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/0468d82f-6cbe-468d-8662-e3b0387701e7)
+
+5. Confirm adequate line spacing (line-height at least 1.5x font size).<br>
+
+**Code evidence:**
+<img width="524" height="266" alt="image" src="https://github.com/user-attachments/assets/a7113d45-f6c8-4f49-888d-dd292a580859" />
+
+6. Confirm paragraph spacing provides clear separation between text blocks.<br>
+
+**Code evidence:**
+<img width="715" height="403" alt="image" src="https://github.com/user-attachments/assets/668eb2b9-25b4-4e92-acec-954166fcaceb" />
+
+7. Inspect text contrast against backgrounds using WebAIM Contrast Checker:<br>
+
+   - Charcoal Grey (#2F3E46) text on white/light backgrounds - PASS<br>
+   <img width="709" height="356" alt="image" src="https://github.com/user-attachments/assets/75da1ec4-af61-4bd7-96d7-3dd865a8fefd" />
+   
+   - White text on Ocean Blue (#0077B6) background - PASS due to being used for large text.<br>
+   <img width="844" height="248" alt="image" src="https://github.com/user-attachments/assets/5e8ff318-e938-428e-83d5-5a8136ca5501" />
+
+   - Button text (white) on Coral Orange (#FF6B35) backgrounds - FAIL<br>
+   <img width="836" height="234" alt="image" src="https://github.com/user-attachments/assets/9e5eda8a-9622-454f-886a-403760b674d5" />
+    **Improvement to be made - Either darken the button background (deeper coral) or use a darker text colour (e.g. var(--charcoal-grey) or a very dark brown) on the coral background.**
+
+8. Ensure headings are clearly distinguishable from body text: PASS<br>
+   - By font family (Montserrat vs Lato)<br>
+   - By font weight (bold headings)<br>
+   - By font size (larger headings)<br>
+   - By colour (Ocean Blue or Sky Blue for headings)<br>
+
+    **Evidence:**
+   <img width="323" height="202" alt="image" src="https://github.com/user-attachments/assets/7bee88e4-26d0-4c69-b651-a181912f30a2" />
+    Font weight: headings explicitly font-weight: 600, body text uses normal (400).
+    Font size: headings use larger sizes via Bootstrap headings and utilities:
+    index.html: <h1 class="display-5 fw-bold mb-3">
+    search.html: <h1 class="mb-3">Search Destinations</h1>
+    packages.html: <h1 class="mb-3">Holiday Packages</h1>
+    Colour: many headings or key headings are styled with accent colours or rely on the hero gradient; you also use .text-ocean-blue / .text-primary in places like cards and CTA headings to distinguish them further.
+    Result: headings are visually and semantically distinct from body text.
+   
+9. Test zooming to 200% and verify text remains legible without breaking layout. PASS<br>
+
+  **Evidence:**
+  <img width="829" height="420" alt="image" src="https://github.com/user-attachments/assets/0392bba6-1420-4319-a554-e8ec7937b379" />
+
+
+10. Test readability in different lighting conditions (bright and dim). PASS<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+- Body text minimum 16px across all pages<br>
+- Lato font applied consistently to body text<br>
+- Montserrat font applied consistently to headings<br>
+- Line spacing meets WCAG 2.1 standards (1.5x minimum)<br>
+- Text contrast ratios meet WCAG 2.1 AA standards (4.5:1 minimum for body text, 3:1 for large text)<br>
+- Headings clearly distinguishable by font, weight, size, and colour<br>
+- Text readable at 200% zoom without layout issues<br>
+- Content legible in various lighting conditions<br>
+
+**Evidence:**
+<img width="255" height="231" alt="image" src="https://github.com/user-attachments/assets/e3736922-4c34-4cc0-b538-aa0575af5e80" />
+Charcoal on sand beige / white-smoke gives very strong contrast -> good in bright light.
+White on ocean blue also has good contrast -> good in dim light.
+Background is a soft sand beige, reducing glare compared to pure white.
+
+**Improvement:**
+**Only buttons need contrast adjustment (see point 7). Once those are fixed, text should remain readable in both bright and dim conditions.**      
+    </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> 
+    
+**Conclusion:**
+
+Base body text is set to 16px using Lato with generous line-height (1.6–1.8), and headings use Montserrat with increased weight and size for clear hierarchy. Across index.html, search.html, and packages.html, paragraphs, search result descriptions, and most labels meet or exceed the 16px guideline, with consistent spacing and layout at multiple breakpoints. Colour contrast is strong for charcoal text on light backgrounds and white text on ocean blue; however, button text on coral orange requires adjustment to meet WCAG contrast thresholds.
+    </td>
+  </tr>
+</table>
+  </details>
 
 ---
 
