@@ -7069,7 +7069,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 </td>
   </tr>
   <tr>
-    <td><strong>Actual Result:</strong> 
+    <td colspan="2"><strong>Actual Result:</strong> 
 1. Navigate to packages.html.<br>
 2. Click "Book Hotels" without entering any data.<br>
 3. Verify alert appears: "Please select check-in and check-out dates".<br>
@@ -7223,10 +7223,84 @@ This approach overrides the browser's default behaviour and ensures that both in
 </td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Actual Result:</strong> </td>
+    <td colspan="2"><strong>Actual Result:</strong> 
+    
+1. Fill in the form: check-in 2025-12-01, check-out 2025-12-07, guests: 2, city: "Barcelona".<br>
+2. Click "Search Hotels".<br>
+3. Verify Booking.com opens in new tab.<br>
+4. Check that the URL contains: ss=Barcelona, checkin=2025-12-01, checkout=2025-12-07, group_adults=2.<br>
+
+<p><strong>Observations: Working as expected.</strong></p>
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/83d970f7-d2bf-498d-849f-0c65f3c61f5a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/746cd5aa-a9f8-46ea-88df-824ced960727)
+
+5. Return to packages.html and click "Search Flights".<br>
+6. Verify that Google Flights opens with Barcelona as the destination, the departure date is 2025-12-01, and the return date is 2025-12-07.<br>
+
+<p><strong>Observations: Working as expected.</strong></p>
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/7de2606e-d48c-435f-a126-55dfdd9d081a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/e6dbb0dc-16d8-49b2-af1d-6b7e6e7a84ae)
+
+7. Test "Complete Package" – verify that Expedia opens with "Going to Barcelona", dates 01 Dec – 07 Dec, and Travellers: 2 adults, 1 room.<br>
+
+<p><strong>Observations: Working as expected.</strong></p>
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f92bd334-1173-4d2c-ae96-4d8514b8144a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/6b34d755-ec58-4840-92ac-ab2afe110089)
+
+
+8. Test "Book Activities" – verify that GetYourGuide opens with Barcelona as the selected destination.<br>
+
+<p><strong>Observations: Working as expected.</strong></p>
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/61d2167d-84c7-4251-a22a-19bbe5ab5160)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/16419209-9d5c-41ed-bc94-6d2db3ae6c60)
+
+
+9. Confirm all links have target="_blank" and rel="noopener noreferrer".<br>
+
+<p><strong>None of the links have "noopener noreferrer"</strong></p>
+
+<p><strong>Correction: Booking code before and after</strong></p>
+
+<img width="720" height="322" alt="image" src="https://github.com/user-attachments/assets/937b939b-1e6d-439e-a3a1-d774c83d764c" />
+
+<img width="707" height="301" alt="image" src="https://github.com/user-attachments/assets/6cbec48a-7ca0-40ea-b293-7a4631292783" />
+
+<p><strong>Google Flights code before and after</strong></p>
+
+<img width="862" height="367" alt="image" src="https://github.com/user-attachments/assets/12e99b91-5b9a-4198-a364-616cadb1bc67" />
+
+<img width="692" height="365" alt="image" src="https://github.com/user-attachments/assets/e1449a3f-a589-430e-9dd5-a04075c23e4c" />
+
+<p><strong>Expedia code before and after</strong></p>
+
+<img width="828" height="451" alt="image" src="https://github.com/user-attachments/assets/cf1c9364-46b6-41c0-8c80-4996b427ecb0" />
+
+<img width="704" height="389" alt="image" src="https://github.com/user-attachments/assets/a72c4918-4e45-4ea8-a0a0-0ca3069e916d" />
+
+<p><strong>GetYourGuide code before and after</strong></p>
+
+<img width="726" height="273" alt="image" src="https://github.com/user-attachments/assets/f614ca37-f649-46ca-8124-6c698f0626cb" />
+
+<img width="671" height="457" alt="image" src="https://github.com/user-attachments/assets/5de8bf7e-7ee9-4384-9a4b-151bc08b7655" />
+
+10. Attempt a 404 path – verify that the user is redirected back to packages.html.<br>
+
+<p><strong>Observations: File didn't exist but I created the 404.html file will redirect the user back to packages.html - Your 404.html has this code that automatically redirects after 3 seconds:</strong></p>
+
+    <img width="1329" height="801" alt="image" src="https://github.com/user-attachments/assets/8eeb4cd6-8fe8-408b-8e59-ffeba3f916e8" />
+
+    </td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
   </tr>
 </table>
 </details>
