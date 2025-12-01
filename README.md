@@ -10827,6 +10827,322 @@ The current design is lightweight enough that both tools should show decent imag
 </table>
 </details>
 
+<details>
+  <summary><strong>Test Case TC033 - Code Validation</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC033</td>
+    <td><strong>Feature:</strong> Code Validation (HTML & CSS)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Validate the HTML and CSS code used across all three pages of the website (index.html, search.html, packages.html, and style.css) using tools such as the W3C Markup Validation Service and CSS Validation Service to check for syntax errors, deprecated tags, semantic accuracy, and standards compliance.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Clean, valid code enhances cross-browser compatibility, improves accessibility, and supports SEO for the Holiday Destination Finder. It also reduces the likelihood of rendering issues or broken functionality across different browsers and devices, and aligns with professional standards in modern web development. Valid code is particularly important for travel websites that must work reliably across diverse user devices and browsers.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+<strong>Part 1: HTML Validation</strong><br>
+1. Open W3C Markup Validation Service (https://validator.w3.org/).<br>
+2. <strong>Validate index.html:</strong><br>
+   - Choose "Validate by Direct Input" or "Validate by File Upload"<br>
+   - Paste HTML code or upload index.html<br>
+   - Click "Check"<br>
+   - Review results for errors and warnings<br>
+3. <strong>Validate search.html:</strong><br>
+   - Repeat validation process<br>
+   - Pay special attention to Google Maps integration code<br>
+   - Check for any inline JavaScript warnings<br>
+4. <strong>Validate packages.html:</strong><br>
+   - Repeat validation process<br>
+   - Check form elements for proper structure<br>
+   - Verify input types and attributes<br>
+5. <strong>Document all errors found:</strong><br>
+   - Record line numbers<br>
+   - Note error descriptions<br>
+   - Categorize by severity (error vs warning)<br>
+6. <strong>Check for common HTML issues:</strong><br>
+   - Unclosed tags<br>
+   - Duplicate IDs<br>
+   - Deprecated attributes<br>
+   - Missing required attributes (e.g., alt on images)<br>
+   - Invalid nesting of elements<br>
+   - Incorrect use of semantic elements<br>
+<br>
+<strong>Part 2: CSS Validation</strong><br>
+7. Open W3C CSS Validation Service (https://jigsaw.w3.org/css-validator/).<br>
+8. <strong>Validate style.css:</strong><br>
+   - Choose "By direct input" or "By file upload"<br>
+   - Paste CSS code or upload style.css<br>
+   - Select "CSS level 3 + SVG" profile<br>
+   - Click "Check"<br>
+   - Review results for errors and warnings<br>
+9. <strong>Review CSS warnings:</strong><br>
+   - Vendor prefixes warnings (acceptable if intentional)<br>
+   - Unknown properties (check if modern CSS features)<br>
+   - Property value warnings<br>
+10. <strong>Check for known acceptable warnings:</strong><br>
+    - backdrop-filter (modern CSS, may show warning)<br>
+    - scrollbar-width (Firefox-specific, may show warning)<br>
+    - Modern CSS Grid/Flexbox properties<br>
+    - CSS variables (should be fully supported now)<br>
+11. <strong>Verify !important flag usage:</strong><br>
+    - Check if !important flags are intentional (e.g., Bootstrap overrides)<br>
+    - Ensure !important is not overused<br>
+    - Document justified uses in style.css comments<br>
+<br>
+<strong>Part 3: Fix and Re-test</strong><br>
+12. <strong>Address critical errors:</strong><br>
+    - Fix any HTML syntax errors<br>
+    - Correct invalid tag usage<br>
+    - Fix CSS syntax errors<br>
+13. <strong>Re-validate after fixes:</strong><br>
+    - Run validators again on all pages<br>
+    - Verify errors reduced or eliminated<br>
+    - Document remaining warnings with justification<br>
+14. <strong>Test in browsers after fixes:</strong><br>
+    - Ensure fixes didn't break functionality<br>
+    - Verify visual appearance unchanged<br>
+    - Test interactive elements still work<br>
+<br>
+<strong>Part 4: Additional Code Quality Checks</strong><br>
+15. <strong>Run ESLint (if applicable for JavaScript):</strong><br>
+    - Already completed: 0 errors, 0 warnings ✓<br>
+    - Documented in testing suite<br>
+16. <strong>Check HTML structure with DevTools:</strong><br>
+    - Verify proper semantic HTML hierarchy<br>
+    - Check for accessibility tree structure<br>
+17. <strong>Review code formatting consistency:</strong><br>
+    - Indentation consistent<br>
+    - Naming conventions followed<br>
+    - Comments present and helpful<br>
+</td>
+  </tr>
+  <tr>
+   <td colspan="2"><strong>Expected Result:</strong><br>
+<strong>HTML Validation Results:</strong><br>
+- index.html: 0 errors, 0 warnings (or documented acceptable warnings)<br>
+- search.html: 0 errors, 0 warnings (or documented acceptable warnings)<br>
+- packages.html: 0 errors, 0 warnings (or documented acceptable warnings)<br>
+- No critical errors that affect functionality<br>
+- No deprecated HTML elements used<br>
+- All images have alt attributes<br>
+- All forms properly structured with labels<br>
+- Semantic HTML used appropriately (&lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;footer&gt;)<br>
+- No duplicate IDs<br>
+- All tags properly closed<br>
+<br>
+<strong>CSS Validation Results:</strong><br>
+- style.css: 0 errors<br>
+- Acceptable warnings for modern CSS features:<br>
+  * backdrop-filter (progressive enhancement)<br>
+  * scrollbar-width (browser-specific enhancement)<br>
+  * Vendor prefixes (intentional for compatibility)<br>
+- !important flags documented and justified (e.g., Bootstrap overrides)<br>
+- No syntax errors<br>
+- No invalid property values<br>
+- CSS variables properly declared in :root<br>
+<br>
+<strong>Code Quality:</strong><br>
+- Codebase clean and well-structured<br>
+- Semantic HTML reflects best practices<br>
+- Cross-browser compatibility maintained<br>
+- No rendering issues in tested browsers<br>
+- Functionality remains intact after validation fixes<br>
+- Code follows professional web development standards<br>
+<br>
+<strong>JavaScript Validation (Already Completed):</strong><br>
+- ESLint: 0 errors, 0 warnings ✓<br>
+- 19 Jest unit tests: All passing ✓<br>
+- 93% code coverage ✓<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+      
+<strong>Part 1: HTML Validation</strong><br>
+
+1. Open W3C Markup Validation Service (https://validator.w3.org/).<br>
+2. <strong>Validate index.html:</strong><br>
+   - Choose "Validate by Direct Input" or "Validate by File Upload"<br>
+   - Paste HTML code or upload index.html<br>
+   - Click "Check"<br>
+   - Review results for errors and warnings<br>
+
+**index.html**
+
+**Before:**
+<img width="1230" height="685" alt="image" src="https://github.com/user-attachments/assets/9cecb36e-f009-455e-8162-74655d39f61e" />
+
+**After corrections:**
+<img width="1035" height="580" alt="image" src="https://github.com/user-attachments/assets/69396ec6-2d7b-4078-8805-23537faf354b" />
+
+
+3. <strong>Validate search.html:</strong><br>
+   - Repeat validation process<br>
+   - Pay special attention to Google Maps integration code<br>
+   - Check for any inline JavaScript warnings<br>
+
+**search.html**
+
+**Before:**
+
+<img width="1205" height="629" alt="image" src="https://github.com/user-attachments/assets/9a022258-fc08-4af2-993d-c9f268bc76ad" />
+
+**After corrections:**
+
+<img width="1111" height="695" alt="image" src="https://github.com/user-attachments/assets/d16b82a3-10d5-452a-bfc1-b76dcbf17e5f" />
+
+4. <strong>Validate packages.html and 404.html:</strong><br>
+   - Repeat validation process<br>
+   - Check form elements for proper structure<br>
+   - Verify input types and attributes<br>
+
+5. <strong>Document all errors found:</strong><br>
+   - Record line numbers<br>
+   - Note error descriptions<br>
+   - Categorize by severity (error vs warning)<br>
+   
+6. <strong>Check for common HTML issues:</strong><br>
+   - Unclosed tags<br>
+   - Duplicate IDs<br>
+   - Deprecated attributes<br>
+   - Missing required attributes (e.g., alt on images)<br>
+   - Invalid nesting of elements<br>
+   - Incorrect use of semantic elements<br>
+
+**packages.html**
+
+**Before:**
+
+<img width="1508" height="765" alt="image" src="https://github.com/user-attachments/assets/1aed92b6-4811-4b16-a70f-86ac0850c12d" />
+
+**Debugged code:**
+
+<img width="1512" height="160" alt="image" src="https://github.com/user-attachments/assets/6ac7aab0-b25a-4c7e-a74f-3d81a6ec6ade" />
+
+**Before:**
+
+<img width="357" height="128" alt="image" src="https://github.com/user-attachments/assets/b44f2c04-8353-4306-bd03-8c90b5362056" />
+
+
+**After:**
+
+Simply delete the placeholder attribute:
+The floating label will still work correctly because the label floats when the field has focus or content.
+
+<img width="369" height="86" alt="image" src="https://github.com/user-attachments/assets/52f75bf8-9663-49a3-aad6-fcd1a49598f4" />
+
+
+**Debugged code:**
+
+<img width="1742" height="221" alt="image" src="https://github.com/user-attachments/assets/a9cb6da2-2aea-43e1-9220-61046da5dd17" />
+
+**Before:**
+
+<img width="196" height="111" alt="image" src="https://github.com/user-attachments/assets/dbbc9c12-401d-472c-936b-3582b355cc59" />
+
+**After:**
+
+Simply delete the placeholder attribute:
+The floating label will still work correctly because the label floats when the field has focus or content.
+
+<img width="358" height="113" alt="image" src="https://github.com/user-attachments/assets/eacda039-9bce-489f-9691-87dad2480c63" />
+
+**After corrections:**
+
+<img width="1116" height="590" alt="image" src="https://github.com/user-attachments/assets/89bcac54-682f-47a8-9349-0a7c90aceac3" />
+
+**404.html**
+
+**Before:**
+
+<img width="1482" height="676" alt="image" src="https://github.com/user-attachments/assets/3b8a9ec6-870b-4408-9128-1cc9940c62bd" />
+
+**Debugged code:**
+
+<img width="1430" height="139" alt="image" src="https://github.com/user-attachments/assets/ed19cc89-cbe9-4189-bfa3-7e3ef9c0e289" />
+
+**Before:**
+
+<img width="437" height="50" alt="image" src="https://github.com/user-attachments/assets/b182ccbf-9066-4263-b9f2-cb5fe22e4438" />
+
+
+**After:**
+
+The validator expects a space after the semicolon:
+
+<img width="432" height="44" alt="image" src="https://github.com/user-attachments/assets/4dd1acd7-cf3f-4708-b82b-b040ca84764b" />
+
+**After corrections:**
+
+<img width="1072" height="579" alt="image" src="https://github.com/user-attachments/assets/92aea6d4-e82c-47b7-a085-4bb45c1741db" />
+
+<br>
+<strong>Part 2: CSS Validation</strong><br>
+7. Open W3C CSS Validation Service (https://jigsaw.w3.org/css-validator/).<br>
+8. <strong>Validate style.css:</strong><br>
+   - Choose "By direct input" or "By file upload"<br>
+   - Paste CSS code or upload style.css<br>
+   - Select "CSS level 3 + SVG" profile<br>
+   - Click "Check"<br>
+   - Review results for errors and warnings<br>
+9. <strong>Review CSS warnings:</strong><br>
+   - Vendor prefixes warnings (acceptable if intentional)<br>
+   - Unknown properties (check if modern CSS features)<br>
+   - Property value warnings<br>
+10. <strong>Check for known acceptable warnings:</strong><br>
+    - backdrop-filter (modern CSS, may show warning)<br>
+    - scrollbar-width (Firefox-specific, may show warning)<br>
+    - Modern CSS Grid/Flexbox properties<br>
+    - CSS variables (should be fully supported now)<br>
+11. <strong>Verify !important flag usage:</strong><br>
+    - Check if !important flags are intentional (e.g., Bootstrap overrides)<br>
+    - Ensure !important is not overused<br>
+    - Document justified uses in style.css comments<br>
+
+**Evidence:**
+
+<img width="1768" height="859" alt="image" src="https://github.com/user-attachments/assets/28597921-b21f-414f-97bb-3ccdc3d4f5f4" />
+
+<br>
+<strong>Part 3: Fix and Re-test</strong><br>
+12. <strong>Address critical errors:</strong><br>
+    - Fix any HTML syntax errors<br>
+    - Correct invalid tag usage<br>
+    - Fix CSS syntax errors<br>
+13. <strong>Re-validate after fixes:</strong><br>
+    - Run validators again on all pages<br>
+    - Verify errors reduced or eliminated<br>
+    - Document remaining warnings with justification<br>
+14. <strong>Test in browsers after fixes:</strong><br>
+    - Ensure fixes didn't break functionality<br>
+    - Verify visual appearance unchanged<br>
+    - Test interactive elements still work<br>
+<br>
+<strong>Part 4: Additional Code Quality Checks</strong><br>
+15. <strong>Run ESLint (if applicable for JavaScript):</strong><br>
+    - Already completed: 0 errors, 0 warnings ✓<br>
+    - Documented in testing suite<br>
+16. <strong>Check HTML structure with DevTools:</strong><br>
+    - Verify proper semantic HTML hierarchy<br>
+    - Check for accessibility tree structure<br>
+17. <strong>Review code formatting consistency:</strong><br>
+    - Indentation consistent<br>
+    - Naming conventions followed<br>
+    - Comments present and helpful<br>
+
+**Evidence: All code debugged and reviewed in previous steps.**
+    </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+
 ---
 
 ## References
