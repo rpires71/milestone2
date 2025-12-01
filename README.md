@@ -60,6 +60,7 @@
     - [Performance Testing - Results](#performance-testing---results)
     - [Regression Testing - Results](#regression-testing---results)
     - [Cross-browser / device testing evidence](#cross-browser--device-testing-evidence)
+  - [Reflection](#reflection)
 - [References](#references)
  
 # Milestone Project 2
@@ -11157,8 +11158,8 @@ The validator expects a space after the semicolon:
 | TC002     |City Search Input and Search Destination Button| Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |        |      |Evidenced in README - Taste Case TC002 Testing.  |
 | TC003     |Action Buttons | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |        |      |Evidenced in README - Taste Case TC003 Testing.  |
 | TC004     |Results Panel | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |        |      |Evidenced in README - Taste Case TC004 Testing.  |
-| TC005     |Booking Form Validation | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (2nd attempt) after debugging.  | Fail (1st attempt)        |      |Verified that an alert still appears indicating that the check-in date is not valid because it is later than the check-out date. Working as expected for "Book Package" but not for "Book Flight". Evidenced in README - Taste Case TC005 Testing.  |
-| TC006     |External Partner Links | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (2nd attempt) after debugging.  | Fail (1st attempt)        |      |Verified that None of the links have "noopener noreferrer". File didn't exist but I created the 404.html file to redirect the user back to packages.html - The 404.html has this code that automatically redirects after 3 seconds: Evidenced in README - Taste Case TC006 Testing.  |
+| TC005     |Booking Form Validation | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (2nd attempt) after debugging.  |       | Fail (1st attempt)       |Verified that an alert still appears indicating that the check-in date is not valid because it is later than the check-out date. Working as expected for "Book Package" but not for "Book Flight". Evidenced in README - Taste Case TC005 Testing.  |
+| TC006     |External Partner Links | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (2nd attempt) after debugging.  |       | Fail (1st attempt)       |Verified that None of the links have "noopener noreferrer". File didn't exist but I created the 404.html file to redirect the user back to packages.html - The 404.html has this code that automatically redirects after 3 seconds: Evidenced in README - Taste Case TC006 Testing.  |
 | TC007     |Footer Contact Links | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Evidenced in README - Taste Case TC007 Testing.  |
 | TC008     |Content Accuracy | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Evidenced in README - Taste Case TC008 Testing.  |
 | TC009     |Content Accuracy | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | All links and buttons across index.html, search.html, packages.html, and 404.html use descriptive, meaningful, and accessible text. No vague phrases such as "click here" or "more info" were found. Every navigational item and button clearly communicates its purpose, behaves consistently across desktop and mobile, and is understandable when read aloud using a screen reader. The only minor enhancement recommended is adding explicit <label> elements to form fields (city search + date pickers) to further improve accessibility, but this does not prevent the test from passing. Evidenced in README - Taste Case TC009 Testing.  |
@@ -11183,6 +11184,170 @@ The only optional refinement, is to tidy up heading levels like h5 -> h3 ("Key F
 
 ---
 
+## Reflection
+[⬆ Back to Table of contents](#table-of-contents)
+
+### Summary
+
+**Milestone 2** delivered a feature-rich Holiday Destination Finder web application built with HTML5, Bootstrap 5, custom CSS (design system), Javascript and Google Maps Places API. The site integrates with external APIs (Google Maps/Places) and partner booking services (Booking.com, Google Flights, Expedia, GetYourGuide). The project includes a destination search engine, interactive map with markers, category filters, responsive destination cards, a multi-option packages page, and a consistent design system built around CSS variables for colour, spacing, and typography. Testing focused on cross‑browser compatibility (Chrome, Edge, Firefox), image performance benchmarking (Lighthouse vs PageSpeed Insights), and validation of semantic HTML. It features three main pages (index.html, search.html, packages.html) with consistent branding, responsive layouts, and accessible navigation.
+
+The site provides a structured user flow:
+
+- index.html -> Informational landing page
+- search.html -> Search engine with live API results, map, filters, and popular destinations
+- packages.html -> Package booking interface with floating-label forms and action buttons
+
+The UI remains consistent across all pages, with a shared nav, footer, and button styles, plus accessible keyboard focus states and fully responsive behaviour.
+
+### What worked well
+
+- **Multi‑page structure:** Clear separation of concerns (home, search, packages, error page) improved navigation and testing scope.
+- **Bootstrap integration:** Grid, form controls, and responsive utilities provided consistent layouts across devices.
+- **Accessibility baseline:** Semantic headings, descriptive alt text, and corrected void element syntax improved W3C validation.
+- **Performance testing:** Comparative analysis between Lighthouse (lab data) and PageSpeed Insights (field data) highlighted image bottlenecks and mobile LCP issues.
+- **Documentation & QA:** Evidence tables, commit history corrections, and GitHub Pages deployment logs provided transparency and reproducibility.
+
+#### Design System & Consistency
+
+- A centralised **CSS variable design system** ensured consistent colours (Ocean Blue, Coral Orange, Sky Blue, sand-beige), typography (Montserrat + Lato) via :root variables ensured consistent branding across all pages, spacing tokens, border-radius values, and shadows.
+- Shared components — buttons, active navbar states, filters, cards — behaved consistently across all three pages.
+
+#### Interactive Search & Maps
+
+- The **Google Places API integration** worked smoothly: search input validation, centre-on-city, automatic marker drop, rating/address extraction, and dynamic results list.
+- Category filters (.btn-action) handled **active state**, hover effects, mobile layout, and touch-friendly interactions well.
+
+#### Layout & Responsiveness
+
+- Bootstrap's grid system ensured clean breakpoints from desktop -> tablet -> mobile.
+- Forms using **floating labels** created a clean, modern input UI without placeholders (also solved HTML validation rules).
+- Cards, map area, filters, and booking grids aligned predictably across viewports.
+
+#### Accessibility Baseline
+
+- Keyboard navigation verified across **Chrome, Edge, Firefox**.
+- Visible focus indicators across buttons, links, and form controls.
+- Structural heading hierarchy improved readability for assistive tech.
+- Sufficient spacing (line-height 1.6–1.8, paragraph spacing via Bootstrap utilities).
+- Icon labels and button text tested for clarity and meaning.
+
+#### Modular JavaScript 
+
+- Separated concerns with dedicated script files (script.js, search.js, packages.js) each handling specific functionality—smooth scrolling, Places API integration, and partner booking links respectively.
+
+#### External API integration 
+
+- Successfully connected Google Maps/Places API for location search and category filtering (Attractions, Restaurants, Hotels, Cafes, Shops), with dynamic marker creation and info windows.
+
+#### Partner booking deep links: 
+
+- Implemented URL builders for Booking.com, Google Flights, Expedia, and GetYourGuide that pass user-selected city, dates, and guest counts directly to partner search pages.
+
+#### Performance & Validation
+
+- Code passed **W3C HTML and CSS validation** after iterative fixes (placeholders removed from date fields, corrected meta refresh syntax, valid void elements).
+- Lightweight CSS and limited external resources kept performance strong.
+- Cross-browser discrepancies (e.g., hover and active states in Firefox/Edge, anchor scrolling) were resolved with targeted JS improvements.
+
+#### Responsive design
+
+- Media queries handling breakpoints from mobile (375px) through tablet (768px) to desktop (1400px+), with specific fixes for problematic ranges like 768-991px.
+
+#### Documentation & Testing
+
+- The README includes:
+  - Feature breakdown
+  - Testing evidence with screenshots (Edge + Firefox)
+  - Clear accessibility, navigation, and UI behaviour test cases
+- A structured test plan validated forms, search queries, edge cases, responsiveness, keyboard use, and map rendering.
+
+### Challenges (and how I resolved them)
+
+- **Commit history corrections** (TC003 -> TC033) Required interactive rebase over multiple commits. Encountered stuck rebase state (.git/rebase-merge corruption). Fixed by manually deleting the directory and re‑running git rebase -i.
+- **Image performance discrepancies** Lighthouse flagged carousel and card images as heavy; PageSpeed confirmed mobile LCP impact. Documented pass/fail verdicts per page (index/search fail, packages pass).
+- **Lighthouse vs PageSpeed performance differences**
+  - PSI mobile scores slightly lower due to network throttling.
+  - Image performance was generally strong due to minimal imagery, but PSI warned about potential LCP risk if future images aren't compressed.
+- **GitHub Pages deployment stuck in** deployment_queued Workflow completed build but failed to publish. Investigated workflow permissions and publish_dir; retriggered deployment after cleanup.
+- **Git challenges (commit rewriting)**
+  - Needed to rename the last 4 commits.
+  - Used git rebase -i HEAD~4 and --force-with-lease.
+  - Fixed a stuck rebase state caused by Windows file-locking.
+- **Cross‑browser testing clarity** Verified versions of Chrome, Edge, and Firefox explicitly to ensure reproducible QA evidence.
+- **Navbar active link behaviour across pages**
+  - Some links (Popular Destinations, Contact) did not remain "active" after navigation.
+  - Resolved using a **URL-based active state script** that synchronises the nav class depending on the current page.
+- **Hover and focus behaviour inconsistencies in Firefox vs Edge**
+  - Firefox suppressed certain hover transitions on touch-simulated responsive mode.
+  - Confirmed this was a browser limitation, not CSS failure, and validated on real devices.
+- **Internal anchor scrolling not working on Firefox**
+  - Firefox required scroll-margin-top or explicit JS scroll behaviour.
+  - Fixed by adding smooth-scroll logic and adjusting anchor offsets.
+- **Placeholder attributes invalid on date inputs:**
+  - W3C flagged placeholder usage as invalid for type="date".
+  - Removed placeholders and relied solely on **Bootstrap floating labels**.
+-**Active search button error ("handleSearch is not defined")**
+  - Resolved by ensuring script import order was correct and functions were globally scoped.
+- **Floating-label overlap on packages.html**
+  - Dates and guests labels overlapped the input text.
+  - Reset floating-label padding and input heights to ensure consistent behaviour.
+- **Form label overlap on booking fields (Check-in, Check-out, Guests)**
+  - Labels were positioned with top: 0.01rem but still overlapping placeholder text. Resolved by adjusting the floating label positioning and ensuring adequate padding-top on form controls.
+- **Search input width mismatch at 768-991px breakpoint**
+  - The search input (col-md-10) didn't align with booking fields below (col-md-4 × 3). Fixed by adding a targeted media query to set the search input to 100% width in that range.
+- **Inconsistent destination card heights due to varying text lengths**
+  - Cards with longer descriptions pushed buttons to different positions. Resolved with flexbox: display: flex; flex-direction: column on tiles, flex-grow: 1 on paragraph text, and margin-top: auto on buttons.
+- **"Explore Barcelona" button text truncation**
+  - Longer button text was being cut off at certain widths. Fixed by adding white-space: nowrap and hiding the search icon (display: none on .btn-primary i) below 1400px to preserve full text visibility.
+- **Popular Destinations buttons not scrolling to search form**
+  - The searchCity() function was missing from packages.js. Added the function to fill the city input and smoothly scroll to the search section.
+- **Windows line endings causing CSS edit failures**
+  - File operations were failing due to CRLF line endings. Resolved by converting files with sed -i 's/\r$//' before making string replacements.
+- **ESLint "declared but never used" warning for searchCity**
+  - Function is called from HTML onclick attributes, not within JS. Can be resolved by adding // eslint-disable-next-line no-unused-vars comment above the function declaration.
+
+### What I would improve next
+
+- **Image optimisation pipeline:** Automate compression (WebP/AVIF) and lazy‑loading for carousel and card thumbnails.
+- **Form handling:** Switch booking form from GET to POST to prevent personal data exposure in URLs.
+- **Continuous integration:** Add GitHub Actions for HTML/CSS validation, Lighthouse CI, and link checking.
+- **Deployment reliability:** Refine Pages workflow with correct permissions and publish directory to avoid queued/cancelled deployments.
+- **Accessibility polish:** Add skip links, review keyboard focus states, and ensure consistent heading hierarchy across all pages.
+- **Enhanced accessibility:**
+  - Add explicit .btn:focus-visible outlines to match the clarity of form focus states.
+  - Add ARIA roles for map region, filter groups, and result cards.
+- **Error handling for API failures:** Implement graceful fallbacks when Google Maps/Places API is unavailable or returns errors, with user-friendly messaging.
+- **Unit test coverage:** Expand Jest tests to cover edge cases in booking URL generation and form validation logic.
+
+### Key lessons learned
+
+- **Validation rules matter:** Attributes like placeholder are restricted by input type; ignoring spec causes errors.
+- **Rebasing requires clean state:** Corrupted metadata can block progress; manual cleanup restores control.
+- **Lab vs field data:** Lighthouse highlights potential issues, but PageSpeed Insights confirms real‑world mobile impact.
+- **Deployment transparency:** GitHub Pages logs are essential for diagnosing workflow failures.
+- **Evidence strengthens QA:** Documenting browser versions, test matrices, and pass/fail analysis makes assessments verifiable.
+- **Browser differences matter:** Mobile-responsive simulation tools don't always match real-device behaviour (especially for hover, focus, and scrolling).
+- **Semantic HTML improves maintainability:** Correct heading levels, descriptive buttons, and properly nested sections make testing clearer.
+- **Validation rules catch subtle issues:** Placeholder restrictions on date fields, meta refresh syntax, and void element closures all affected code quality.
+- **Performance tools vary:** Lighthouse and PageSpeed both test performance, but PSI mobile tests are harsher due to throttling and field-data modelling.
+- **Flexbox solves card alignment:** Using flex-direction: column with flex-grow on content and margin-top: auto on buttons ensures consistent card layouts regardless of content length.
+- **Media query specificity matters:** Targeting specific breakpoint ranges (e.g., min-width: 768px and max-width: 991px) prevents styles from bleeding into unintended viewport sizes.
+- **Test across the full responsive range:** Issues often appear at specific widths (768px, 976px, 1366px) that fall between common breakpoints—systematic testing catches these edge cases.
+- **Separate concerns in JavaScript:** Dedicated script files for different pages/features makes debugging easier and prevents function conflicts.
+- **Screen reader testing validates accessibility:** Tools like NVDA and VoiceOver reveal whether aria-labels and semantic structure actually work as intended.
+
+### Evidence pointers
+
+- **Validation:** W3C HTML/CSS checks pass after fixes (placeholder removal, void element syntax corrected).
+- **Testing:** Cross-browser compatibility table covering Firefox, Edge (Tests 1-20), and Chrome/Lighthouse (Tests 23-26, 31-33).
+- **Performance:** Lighthouse vs PageSpeed Insights comparison with pass/fail verdicts for image optimisation.
+- **Deployment:** GitHub Actions logs showing build artefacts and Pages deployment status.
+- **Navigation:** Verified hover, focus visible, and active link behaviour for all nav items across all pages.
+- **API function:** Screenshots of London, Paris, Tokyo, New York, Barcelona searches validating markers, address/rating results, and keyboard-triggered search.
+- **Accessibility:** NVDA/VoiceOver testing confirming carousel controls announce correctly ("Slide 1", "Previous", "Next").
+- **Lighthouse**: Performance, accessibility, best practices, and SEO audits for all three pages.
+
+---
 
 ## References
 [⬆ Back to Table of contents](#table-of-contents)
