@@ -225,6 +225,43 @@ function initializeSearchButton() {
 }
 
 // ========================================================================
+// handleSearch()
+// Purpose:
+// This function performs the SAME task as clicking the main search button,
+// but is specifically used when the HTML uses an inline onclick handler,
+// such as: <button onclick="handleSearch()">
+//
+// This ensures the search feature still works even if JavaScript loads
+// slower than the page or a cached version of the script is temporarily
+// out of sync with event listeners.
+// ========================================================================
+
+/* eslint-disable no-unused-vars */
+function handleSearch() {
+  // Console message helps developers confirm this function was triggered.
+  console.log("handleSearch called");
+
+  // Get the city input field from the page.
+  const cityInput = document.getElementById("citySearch");
+
+  // Read the user’s typed city and remove unwanted spaces.
+  const cityName = cityInput.value.trim();
+
+  // Log the cleaned city name (useful for debugging invalid inputs).
+  console.log("City name:", cityName);
+
+  // If the trimmed value is empty, warn the user and stop here.
+  if (cityName === "") {
+    alert("Please enter a city name");
+    return; // Prevents performSearch() from running with empty data.
+  }
+
+  // If the name is valid, run the main search function.
+  // This triggers Google’s Geocoding and Places API activity.
+  performSearch(cityName);
+}
+
+// ========================================================================
 // performSearch(cityName)
 // Purpose:
 // This is the MAIN search function of the application. It:

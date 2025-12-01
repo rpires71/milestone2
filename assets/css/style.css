@@ -1437,6 +1437,9 @@ html {
 .destination-tile .btn-primary {
   font-size: 0.95rem;
   margin-top: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Search Container */
@@ -2310,3 +2313,4 @@ html {
     margin-bottom: 0;
   }
 }
+
