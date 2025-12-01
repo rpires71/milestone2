@@ -11558,6 +11558,8 @@ The UI remains consistent across all pages, with a shared nav, footer, and butto
   - File operations were failing due to CRLF line endings. Resolved by converting files with sed -i 's/\r$//' before making string replacements.
 - **ESLint "declared but never used" warning for searchCity**
   - Function is called from HTML onclick attributes, not within JS. Can be resolved by adding // eslint-disable-next-line no-unused-vars comment above the function declaration.
+- **Playwright**
+  - An attempt was made to test the website in Safari by installing Playwright within Visual Studio Code. Evidence of this is provided by the presence of a dedicated tests folder in the project's root directory. Owing to time constraints, this approach could not be pursued further. Nonetheless, the exercise proved valuable in demonstrating that website functionality can be tested across multiple browsers using well‑structured JavaScript code tests.
 
 ### What I would improve next
 
@@ -11605,9 +11607,11 @@ The UI remains consistent across all pages, with a shared nav, footer, and butto
 
 ### People
 
-Mentor Brian Macharia for advising and guiding throughout two thirds of the project lifecycle.
-Can Sücüllü for advising and guiding throughout the final third of the project lifecycle.
-Professor Raghav Kovvuri for advising and guiding throughout the project lifecycle.
+#### Mentor Brian Macharia for advising and guiding throughout two thirds of the project lifecycle.
+
+#### Can Sücüllü for advising and guiding throughout the final third of the project lifecycle.
+
+#### Professor Raghav Kovvuri for advising and guiding throughout the project lifecycle.
 
 ---
 
