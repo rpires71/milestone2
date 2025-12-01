@@ -9658,7 +9658,6 @@ This ensures:
     - packages.html: "Book Hotels", "Book Flights", "Book Package", "Book Activities"<br>
 
 **Pass – Deomnstrated in previous video. Index, Search, and Packages pages all use the same design tokens (--coral-orange, Montserrat font, border-radius variables). Buttons are visually consistent and aligned with the travel/ocean theme.**
-
     </td>
   </tr>
 <tr>
@@ -9674,6 +9673,162 @@ This ensures:
 </table>
   </details>
 
+#### Responsiveness Testing - Results
+[⬆ Back to Table of contents](#table-of-contents)
+
+ <details>
+  <summary><strong>Test Case TC021 - Desktop Responsiveness</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC021</td>
+    <td><strong>Feature:</strong> Desktop (Chrome, Firefox, Edge). Desktop (1920x1080)
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Ensure that the website layout, typography, images, Google Maps, carousel, and navigation display correctly and consistently on desktop browsers at full HD resolution (1920x1080), without distortion, overflow, or visual inconsistency across all three pages (index.html, search.html, packages.html).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Full HD displays remain standard for many desktop and laptop users. Verifying responsive behaviour at this resolution ensures the site delivers a polished and professional user experience, regardless of browser choice. It also demonstrates compliance with cross-browser and responsive design requirements for travel/destination websites.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+      
+1. Open index.html in Chrome at 1920x1080 resolution.<br>
+2. Verify desktop layout structure:<br>
+   - Header hero section with logo (col-lg-3) and main heading (col-lg-9)<br>
+   - About Us content (col-lg-5) and Carousel (col-lg-7) side-by-side<br>
+   - Footer with 4 contact tiles in single row (col-lg-3 each)<br>
+3. Check carousel displays correctly:<br>
+   - Images at appropriate size without distortion<br>
+   - Navigation arrows visible and functional<br>
+   - Auto-play working smoothly<br>
+4. Navigate to search.html and verify:<br>
+   - Search input and category filter buttons properly aligned<br>
+   - Google Maps displays at appropriate size (fills container)<br>
+   - Popular Destinations cards display 4 across (col-lg-3 each)<br>
+   - Results panel layout correct<br>
+5. Navigate to packages.html and verify:<br>
+   - Booking form layout with inputs side-by-side where appropriate<br>
+   - Booking buttons (Hotels, Flights, Package, Activities) properly spaced<br>
+   - Form tiles aligned correctly<br>
+6. Repeat entire test in Firefox, Safari, and Microsoft Edge at 1920x1080.<br>
+7. Check across all browsers:<br>
+   - Layout consistency<br>
+   - Image scaling (carousel, destination cards, hero images)<br>
+   - Button placement and sizing<br>
+   - Font rendering (Montserrat headings, Lato body text)<br>
+   - Interactive elements (maps, filters, forms)<br>
+   - Ocean Blue/Coral Orange colour rendering<br>
+8. Confirm no horizontal scrollbars appear on any page.<br>
+9. Ensure all elements are legible and spaced appropriately using CSS variables (--spacing-*).<br>
+10. Test Google Maps zoom and pan functionality.<br>
+11. Test carousel manual controls (left/right arrows, indicators).<br>
+12. Resize window slightly (e.g., 1800x1000) to test fluid responsiveness.<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+- All three pages display correctly at 1920x1080 resolution<br>
+- Layout uses Bootstrap grid correctly (col-lg-* classes working)<br>
+- Carousel displays at appropriate size with functional controls<br>
+- Google Maps loads and displays correctly in container<br>
+- Popular Destinations shows 4 cards across in single row<br>
+- About Us (5/12 width) and Carousel (7/12 width) side-by-side<br>
+- Footer contact tiles display in single row (4 columns)<br>
+- Form inputs sized appropriately on packages.html<br>
+- No horizontal scrolling required<br>
+- All text legible with proper font rendering<br>
+- Colours (Ocean Blue, Sky Blue, Coral Orange) display correctly<br>
+- Buttons maintain consistent styling across browsers<br>
+- Site displays consistently across Chrome, Firefox, Safari, and Edge<br>
+- Fluid responsiveness works when window resized slightly<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+1. Open index.html in Chrome at 1920x1080 resolution.<br>
+2. Verify desktop layout structure:<br>
+   - Header hero section with logo (col-lg-3) and main heading (col-lg-9)<br>
+   - About Us content (col-lg-5) and Carousel (col-lg-7) side-by-side<br>
+   - Footer with 4 contact tiles in single row (col-lg-3 each)<br>
+
+**Google Chrome Evidence (1920x1080)**
+[Google Chrome evidence file](https://github.com/user-attachments/assets/04bf6ff9-e7bd-44da-9861-ba7e97e29c5e)
+
+3. Check carousel displays correctly:<br>
+   - Images at appropriate size without distortion<br>
+   - Navigation arrows visible and functional<br>
+   - Auto-play working smoothly<br>
+
+**Google Chrome Evidence (1920x1080)**
+[Google Chrome evidence file](https://github.com/user-attachments/assets/3072e724-4b26-4d00-815e-bed27e846550)
+
+4. Navigate to search.html and verify:<br>
+   - Search input and category filter buttons properly aligned<br>
+   - Google Maps displays at appropriate size (fills container)<br>
+   - Popular Destinations cards display 4 across (col-lg-3 each)<br>
+   - Results panel layout correct<br>
+   
+**Google Chrome Evidence (1920x1080)**
+[Google Chrome evidence file](https://github.com/user-attachments/assets/243c81ef-bd91-4179-ab29-4688555e91b6)
+   
+5. Navigate to packages.html and verify:<br>
+   - Booking form layout with inputs side-by-side where appropriate<br>
+   - Booking buttons (Hotels, Flights, Package, Activities) properly spaced<br>
+   - Form tiles aligned correctly<br>
+
+**Google Chrome Evidence (1920x1080)**
+[Google Chrome evidence file](https://github.com/user-attachments/assets/5746b432-fcab-4717-94d0-c05b34ef14a5)
+
+6. Repeat entire test in Firefox, Safari, and Microsoft Edge at 1920x1080.<br>
+
+**Evidence:** Already demonstrated in previous tests.
+
+7. Check across all browsers:<br>
+   - Layout consistency<br>
+   - Image scaling (carousel, destination cards, hero images)<br>
+   - Button placement and sizing<br>
+   - Font rendering (Montserrat headings, Lato body text)<br>
+   - Interactive elements (maps, filters, forms)<br>
+   - Ocean Blue/Coral Orange colour rendering<br>
+
+**Evidence:** Already demonstrated in previous tests.
+
+8. Confirm no horizontal scrollbars appear on any page.<br>
+
+**Evidence:** Already demonstrated in previous tests. Only on the search.html file exists a internal vertical scrollbar for the About Us section.  
+
+9. Ensure all elements are legible and spaced appropriately using CSS variables (--spacing-*).<br>
+
+**Evidence:** Already demonstrated in previous tests.
+
+10. Test Google Maps zoom and pan functionality.<br>
+
+**Google Chrome Evidence (1920x1080)**
+[Google Chrome evidence file](https://github.com/user-attachments/assets/5b49fe9f-0963-4bfc-9ba9-f914e5b55ee4)
+
+11. Test carousel manual controls (left/right arrows, indicators).<br>
+
+**Evidence:** Already demonstrated in previous tests.
+
+12. Resize window slightly (e.g., 1800x1000) to test fluid responsiveness.<br>
+
+**Google Chrome Evidence (1920x1080 to 1800x1000)**
+[Google Chrome evidence file](https://github.com/user-attachments/assets/70794c8f-8904-493d-8e1d-97804b6eea67)
+
+**Evidence conclusion:** 
+
+The test execution across index.html, search.html, and packages.html at desktop resolution (1920×1080) and repeated in Chrome, Firefox, Safari, and Edge confirms that the website's layout, responsiveness, and interactive elements meet the expected design and accessibility standards.
+    </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail:PASS</strong> </td>
+  </tr>
+</table>
+  </details>
 
 ---
 
