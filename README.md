@@ -11151,9 +11151,9 @@ The validator expects a space after the semicolon:
 > **Test Facility:** My laptop for Microsoft Edge, Mozilla Firefox and Google Chrome.
 
 
-| Test case | Browser(s)                           | Version(s)                               | Test Facility                                                                 | Pass | Partial | Fail | Comments |
-|-----------|--------------------------------------|------------------------------------------|-------------------------------------------------------------------------------|:----:|:-------:|:----:|----------------------------|
-| TC001     | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass   |         |      |  |
+| Test case | Designation | Browser(s)                           | Version(s)                               | Test Facility                                                                 | Pass | Partial | Fail | Comments |
+|-----------|-------------------------|--------------------------------------|------------------------------------------|-------------------------------------------------------------------------------|:----:|:-------:|:----:|----------------------------|
+| TC001     | | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass   |         |      |  |
 
 
 
