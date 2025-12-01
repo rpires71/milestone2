@@ -10816,15 +10816,12 @@ Improvement opportunities mainly involve image optimisation and third‑party sc
     </td>
   </tr>
 <tr>
-    <td colspan="2"><strong>Pass/Fail: FAIL</strong>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong>
 
-<img width="890" height="536" alt="image" src="https://github.com/user-attachments/assets/0ff6e45b-3d34-42ae-89af-4d76857845a0" />
+<img width="1197" height="369" alt="image" src="https://github.com/user-attachments/assets/ecd757a1-8986-40ae-b63e-e4f85e93255c" />
 
-**index.html -> Fail: Carousel images are too large; both Lighthouse and PageSpeed recommend optimisation.**
-
-**search.html -> Fail: Destination card images add weight, particularly on mobile; improvements required.**
-
-**packages.html -> Pass: Image usage is minimal and efficient; no optimisation necessary.**
+**Conclusion:**
+The current design is lightweight enough that both tools should show decent image performance. But as soon as the website starts including more media (photos, hero images, cards, destination galleries), I'll need to proactively optimise images to keep both lab and field scores strong.
  </td>
   </tr>
 </table>
