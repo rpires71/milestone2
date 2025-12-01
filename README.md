@@ -9030,30 +9030,27 @@ So the hierarchy tests below are based on:
    <h1 class="display-5 fw-bold mb-3">
   Discover Your Perfect Holiday Destination
 </h1>
-``` :contentReference[oaicite:3]{index=3}  
+
 
 This H1 is styled further in `.header-hero h1` to be large and ocean-blue. :contentReference[oaicite:4]{index=4}  
 
 **H2: “About Us” (mb-4)**  
 
-```html
 <section id="about" class="py-5">
   <div class="container">
     <h2 class="mb-4">About Us</h2>
     ...
-``` :contentReference[oaicite:5]{index=5}  
+
 
 **H5: “Key Features:” (mb-3)**  
 
-```html
 <h5 class="mb-3">Key Features:</h5>
-``` :contentReference[oaicite:6]{index=6}  
 
-**Body text with spacing** – the About section has standard `<p>` tags with Bootstrap margin utilities (e.g. `mb-3`) giving clear visual separation. :contentReference[oaicite:7]{index=7}  
+**Body text with spacing** – the About section has standard `<p>` tags with Bootstrap margin utilities (e.g. `mb-3`) giving clear visual separation.
 
 **CTA button: “Start Exploring” (btn-primary btn-lg)**  
 
-```html
+
 <a href="search.html" class="btn btn-primary btn-lg mt-3">
   Start Exploring
 </a>
@@ -9076,6 +9073,7 @@ This H1 is styled further in `.header-hero h1` to be large and ocean-blue. :cont
       Popular Destinations
     </h2>
     ...
+    
   So I have a clear H2 for this section, visually enhanced by display-6 fw-bold text-ocean-blue.
 
   H4: destination card titles (NYC, Barcelona, Paris, Tokyo)
@@ -9102,6 +9100,7 @@ This H1 is styled further in `.header-hero h1` to be large and ocean-blue. :cont
 
 
 4. On packages.html, verify hierarchy:<br>
+
    - H1/H2: Main "Holiday Packages" heading<br>
     This acts as the main Holiday Packages page heading.
 
@@ -9115,13 +9114,15 @@ This H1 is styled further in `.header-hero h1` to be large and ocean-blue. :cont
    - Booking buttons: prominent and actionable<br>
     Booking actions (Search Hotels, Search Flights, Complete Package) use .btn-action with icons, bold heading font, strong hover/active styles and consistent layout through .action-buttons .row.
 
-    Packages hierarchy: met
+    **Packages hierarchy: met**
 
 5. Use browser DevTools to inspect semantic HTML structure:<br>
+
    - Verify proper H1 -> H2 -> H3 -> H4 nesting (no skipped levels)<br>
    - Check only one H1 per page<br>
 
     From the three pages:
+   
     -  One H1 per page – hero H1 in index (Discover Your Perfect Holiday Destination), search (search hero title), and packages (Book Your Holiday Package).
     -  Lower-level headings use H2 for major sections (About Us, Popular Destinations, main sections on search/packages).
     -  Then H4/H5 are used inside sections for sub-titles like "Key Features:" and card names.
@@ -9131,13 +9132,13 @@ This H1 is styled further in `.header-hero h1` to be large and ocean-blue. :cont
     Change the destination card titles from h4 to h3 under the Popular Destinations H2. 
     But this is an enhancement, not a blocker.
 
-6. Confirm that headings are more prominent than body text:<br>
+7. Confirm that headings are more prominent than body text:<br>
    - Larger font size<br>
    - Bold font weight (600 or 700)<br>
    - Montserrat font family vs Lato for body<br>
    - Ocean Blue or Sky Blue colour vs Charcoal Grey for body<br>
 
-  Observations:
+  **Observations:**
   
   Global typography: headings use var(--font-heading) Montserrat, body uses var(--font-body) Lato.
   Headings have font-weight: 600 vs body at regular weight. 
@@ -9163,14 +9164,14 @@ This H1 is styled further in `.header-hero h1` to be large and ocean-blue. :cont
   -  Search "Search Destination" button.
   -  Package CTAs inside destination tiles.
 
-  CTAs: clearly highlighted and consistent.
+  **CTAs: clearly highlighted and consistent.**
   
 8. Review alignment and grouping:<br>
    - Destination cards aligned in grid (search.html)<br>
    - Form fields grouped logically (packages.html)<br>
    - About Us content and carousel side-by-side (index.html)<br>
 
-  Observations:
+  **Observations:**
 
   From the HTML:
   -  Destination cards (search.html): row + col-md-6 col-lg-3 gives a neat grid; .destination-tile ensures consistent card behaviour.
@@ -9182,7 +9183,7 @@ This H1 is styled further in `.header-hero h1` to be large and ocean-blue. :cont
 9. Test on desktop, tablet, and mobile to verify hierarchy maintained across breakpoints.<br>
 10. Check that no content competes unnecessarily for attention (appropriate use of emphasis).<br>
 
-Observations:
+**Observations:**
 
 The media queries in style.css explicitly adjust heading sizes and hero heights for different widths:
 
@@ -9192,7 +9193,7 @@ The media queries in style.css explicitly adjust heading sizes and hero heights 
   }
   ...
 }
-``` :contentReference[oaicite:38]{index=38}  
+
 
 Combined with Bootstrap’s responsive grid on all key sections (hero columns, cards, search and booking layout), the hierarchy (big hero -> section headings -> card titles → body text) is preserved on desktop, tablet, and mobile.   
 
@@ -9207,7 +9208,7 @@ Hierarchy is maintained at different sizes and nothing is shouting over the main
 
 
 
-Conclusion:
+**Conclusion:**
 
 - "Pass" on this whole set of tests.  
 - The only optional refinement, is to tidy up heading levels like `h5` → `h3` ("Key Features") and possibly `h4` → `h3` for destination cards to avoid any perceived "skipped" heading levels.
@@ -9217,7 +9218,296 @@ Conclusion:
     <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
   </tr>
 </table>
-    </details>
+</details>
+
+<details>
+  <summary><strong>Test Case TC019 - Text Spacing</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC019</td>
+    <td><strong>Feature:</strong> Text Spacing</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Evaluate whether spacing between lines, letters, and paragraphs follows accessibility and readability standards across all content. Confirm consistent application throughout all pages using the CSS spacing variables (--spacing-xs through --spacing-xl).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Proper text spacing improves legibility, reduces cognitive load, and supports users with visual or reading difficulties (e.g. dyslexia). It contributes to a cleaner layout, professional tone, and aligns with WCAG 2.1 Success Criterion 1.4.12 (Text Spacing).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+      
+1. Open each page (index.html, search.html, packages.html).<br>
+2. Use browser DevTools to inspect computed CSS values for text spacing.<br>
+3. Check that line spacing (line-height) is at least 1.5 times the font size:<br>
+   - Inspect body paragraphs on all pages<br>
+   - Verify About Us content (index.html)<br>
+   - Verify search results descriptions (search.html)<br>
+   - Verify form labels and instructions (packages.html)<br>
+4. Verify paragraph spacing provides adequate separation:<br>
+   - Check margin-bottom values on &lt;p&gt; elements<br>
+   - Should be at least 2.0 times the line height<br>
+   - Verify consistency using Bootstrap utilities (mb-2, mb-3, mb-4)<br>
+5. Confirm letter spacing (letter-spacing) is not overly tight or wide:<br>
+   - Check headings (Montserrat font)<br>
+   - Check body text (Lato font)<br>
+   - Check button labels<br>
+6. Verify consistent spacing using CSS design system:<br>
+   - --spacing-xs: 0.5rem (8px)<br>
+   - --spacing-sm: 1rem (16px)<br>
+   - --spacing-md: 1.5rem (24px)<br>
+   - --spacing-lg: 2rem (32px)<br>
+   - --spacing-xl: 3rem (48px)<br>
+7. Test increased text spacing using browser accessibility settings:<br>
+   - Increase line height to 2.0<br>
+   - Increase letter spacing to 0.12em<br>
+   - Increase paragraph spacing<br>
+8. Validate that no text overlaps when spacing is increased.<br>
+9. Verify text doesn't get cut off with increased spacing.<br>
+10. Test spacing consistency across all three pages.<br>
+11. Test on desktop, tablet, and mobile viewports.<br>
+</td>
+  </tr>
+  <tr>
+   <td colspan="2"><strong>Expected Result:</strong><br>
+- Line height minimum 1.5x font size across all text<br>
+- Paragraph spacing minimum 2.0x line height<br>
+- Letter spacing appropriate (not too tight or wide)<br>
+- CSS spacing variables (--spacing-*) used consistently<br>
+- Bootstrap spacing utilities applied appropriately (mb-2, mb-3, etc.)<br>
+- Increased spacing doesn't cause text overlap or cut-offs<br>
+- Layout remains intact with user-adjusted spacing<br>
+- Spacing consistent across all pages and devices<br>
+- Site meets WCAG 2.1 Success Criterion 1.4.12<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+      
+1. Open each page (index.html, search.html, packages.html).<br>
+2. Use browser DevTools to inspect computed CSS values for text spacing.<br>
+3. Check that line spacing (line-height) is at least 1.5 times the font size:<br>
+   - Inspect body paragraphs on all pages<br>
+   - Verify About Us content (index.html)<br>
+   - Verify search results descriptions (search.html)<br>
+   - Verify form labels and instructions (packages.html)<br>
+
+
+**Global base text**
+**In style.css:**
+<img width="352" height="199" alt="image" src="https://github.com/user-attachments/assets/9116247c-bc90-42a2-8dbd-28a6e485df79" />
+
+So for any body text that doesn't override line-height, I have:
+- font-size: 16px
+- line-height: 1.6 × 16px ≈ 25.6px
+
+**Evidence: ≥ 1.5× font size**
+
+<img width="282" height="115" alt="image" src="https://github.com/user-attachments/assets/353be473-8e42-4128-a847-efa0869584cf" />
+
+So for paragraphs:
+- font-size: 16px (inherited)
+- line-height: 1.8 x 16px = 28.8px
+
+**Evidence: well above 1.5x**
+
+**About Us content (index.html)**
+About Us paragraphs:
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">About Us</h2>
+    <p class="mb-3">...</p>
+    <p class="mb-3">...</p>
+  </div>
+</section>
+
+**Evidence: These <p> elements use the global p rule: line-height 1.8 on 16px -> = 28.8px. - Pass.**
+
+**Search results descriptions (search.html)**
+Search results cards are built as paragraphs:
+
+<div id="resultsList" class="results-list">
+  <!-- JS inserts: -->
+  <!-- <h5>Place Name</h5> -->
+  <!-- <p>Address</p> -->
+  <!-- <p class="rating">Rating stars</p> -->
+</div>
+
+I don't define any special line-height for these, so they use:
+- body -> line-height: 1.6
+- p -> line-height: 1.8
+
+**Evidence: So again ≥ 1.5x. Pass.**
+
+**Form labels and instructions (packages.html)**
+
+There are two types here:
+-  Paragraph-like instructions – usually <p> or small <span> text under headings, which inherit line-height: 1.8 or 1.6. Thoee are fine.
+-  Floating labels for the booking form:
+    <div class="form-floating">
+      <input type="date" class="form-control" id="checkin" ... />
+      <label for="checkin" class="text-muted">Check-in</label>
+    </div>
+    
+In style.css:
+
+.form-floating > label {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.75rem;
+  font-size: 0.7rem;
+  color: var(--charcoal-grey);
+  opacity: 0.6;
+  font-weight: 500;
+  padding: 0;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+
+-  font-size: 0.7rem ->0.7 x 16px = 11.2px
+-  No explicit line-height (so browser default "normal", typically 1.2)
+
+That means for labels: line-height = 1.2 x 11.2px = 13.4px, which is still ≥ 1.5x font? Actually 1.2 is less than 1.5, so:
+If I strictly require all text (including labels) to have line-height ≥ 1.5x, the floating labels don’t meet this.
+
+**Evidence: For normal body text and paragraphs, though, the code meets the 1.5x rule.**
+
+4. Verify paragraph spacing provides adequate separation:<br>
+   - Check margin-bottom values on &lt;p&gt; elements<br>
+   - Should be at least 2.0 times the line height<br>
+   - Verify consistency using Bootstrap utilities (mb-2, mb-3, mb-4)<br>
+
+The site relies mostly on Bootstrap spacing classes for vertical separation, e.g.:
+
+**index.html – About Us:**
+
+<p class="mb-3">...</p>
+<p class="mb-3">...</p>
+
+**search.html** – descriptive paragraphs often use mb-3 or mb-4.
+
+**packages.html** – content uses mb-3, mb-4, mb-5 for sections and text.
+
+**Bootstrap’s spacing:**
+
+- mb-2 = 0.5rem (8px)
+- mb-3 = 1rem (16px)
+- mb-4 = 1.5rem (24px)
+
+The paragraph line-height is 1.8 x 16px = 28.8px.
+
+The test says:
+
+margin-bottom should be at least 2.0 times the line height
+
+2 x 28.8px = 57.6px – this is a significant gap, and the margins (16–24px) are nowhere near this number.
+
+**Evidence: - The site does not have margin-bottom >= 2x line height.**
+            -**But the site does have, consistent separation via mb-3/mb-4, which is perfectly reasonable for real-world design.**
+
+**Suggested Improvements:** To align with the strict rule, something like mb-5 (3rem = 48px) or larger for paragraphs would be needed, but it will look very spaced-out.
+
+
+5. Confirm letter spacing (letter-spacing) is not overly tight or wide:<br>
+   - Check headings (Montserrat font)<br>
+   - Check body text (Lato font)<br>
+   - Check button labels<br>
+
+**Observation:** Letter-spacing is not defined in style.css.
+
+**Headings:**
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--charcoal-grey);
+}
+
+
+No letter-spacing.
+Body text (body, p), and buttons (.btn-primary) also have no letter-spacing.
+
+This means:
+
+Headings (Montserrat), body text (Lato), and button labels all use the browser's default letter-spacing ("normal").
+Default letter-spacing for these fonts is neither overly tight nor wide.
+
+**Evidence: PASS (nothing wrong with default letter-spacing).**
+
+6. Verify consistent spacing using CSS design system:<br>
+   - --spacing-xs: 0.5rem (8px)<br>
+   - --spacing-sm: 1rem (16px)<br>
+   - --spacing-md: 1.5rem (24px)<br>
+   - --spacing-lg: 2rem (32px)<br>
+   - --spacing-xl: 3rem (48px)<br>
+
+Values match the spec:
+- xs: 0.5rem (8px)
+- sm: 1rem (16px)
+- md: 1.5rem (24px)
+- lg: 2rem (32px)
+- xl: 3rem (48px)
+
+The site mostly relies on Bootstrap's spacing utilities (mb-*, py-*) rather than explicitly using var(--spacing-*) in many rules, but the system itself is correctly defined and available.
+
+7. Test increased text spacing using browser accessibility settings:<br>
+   - Increase line height to 2.0<br>
+   - Increase letter spacing to 0.12em<br>
+   - Increase paragraph spacing<br>
+8. Validate that no text overlaps when spacing is increased.<br>
+9. Verify text doesn't get cut off with increased spacing.<br>
+
+**All your major text containers are flexible:**
+
+-  .about-content, .search-container, .results-list, package cards, etc., do not have fixed heights. They rely on padding and margins, not height: xxxpx.
+-  The use of Bootstrap's grid and standard block elements (<p>, <h*>, etc.), which naturally expand as line-height and letter-spacing grow.
+
+**Because of this:**
+
+-  Increasing line-height to 2.0 and letter-spacing to 0.12em will make blocks taller, but not cause overlap or clipping in normal paragraphs and headings.
+-  Paragraphs and headings inside flexible containers will push surrounding content down.
+
+
+**No evidence in the code that text will overlap or be cut off under increased spacing for normal content.**
+
+**Floating labels are the tightest, but still reasonably robust.**
+
+10. Test spacing consistency across all three pages.<br>
+11. Test on desktop, tablet, and mobile viewports.<br>
+
+**Consistency comes from:**
+-  One shared style.css for all pages.
+-  All three pages using .main-section py-5 and .container for main content:
+
+<main class="main-section py-5">
+  <div class="container">
+    ...
+  </div>
+</main>
+
+
+Bootstrap's grid on all pages:
+-  index.html: .row align-items-center g-4
+-  search.html: .row g-4 for search + map, .row g-4 for popular cards
+-  packages.html: .row g-3 g-md-4, .row g-4 for package cards
+
+
+This ensures:
+-  Horizontal spacing via g-* (gutters) is consistent.
+-  Vertical spacing via py-5, mb-4, mb-5 is consistent.
+-  On desktop: content sits side by side (hero + about, search panel + map, filters + cards).
+-  On tablet/mobile: columns stack (thanks to .col-lg-* and .col-md-*), preserving all line-height, letter-spacing and margins.
+
+**Evidence conclusion:** Spacing behaviour is consistent across the three pages and across breakpoints.
+    </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+  </tr>
+</table>
+</details>
 
 ---
 
