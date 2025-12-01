@@ -9509,6 +9509,172 @@ This ensures:
 </table>
 </details>
 
+<details>
+  <summary><strong>Test Case TC020 - Button Styles and States</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC020</td>
+    <td><strong>Feature:</strong> Button Styles and States</td>
+  </tr>
+  <tr>
+        <td colspan="2"><strong>Description:</strong> Examine whether all buttons are consistently styled across the website. Check visual clarity, alignment with the overall design theme (ocean/travel theme with coral orange CTAs), responsiveness, and visibility when hovered or focused.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Consistent and accessible button styling ensures intuitive interaction and helps users distinguish interactive elements from static content. Visual states (hover, focus) are vital for usability and accessibility, especially for keyboard users. This supports WCAG 2.1 Success Criterion 2.4.7 (Focus Visible) and enhances the user experience.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. Navigate to all pages and identify all button types:<br>
+   - Primary buttons (coral orange): "Start Exploring", "Search Hotels", "Search Flights", etc.<br>
+   - Category filter buttons (search.html): "Attractions", "Restaurants", "Hotels", etc.<br>
+   - Explore destination buttons (search.html): "Explore NYC", "Explore Paris", etc.<br>
+   - Search button: magnifying glass icon with "Search Destination"<br>
+2. Verify primary button (.btn-primary) styling:<br>
+   - Background: Coral Orange (--coral-orange, #FF6B35)<br>
+   - Text: White<br>
+   - Border-radius: Consistent across all buttons<br>
+   - Padding: Consistent (btn-lg for large, standard for normal)<br>
+   - Font: Montserrat (heading font)<br>
+3. Test hover states on all buttons:<br>
+   - Primary buttons: Darker coral orange on hover<br>
+   - Category filter buttons: Background colour change<br>
+   - Active state: Visual indication (e.g., .active class on filters)<br>
+4. Test focus states using Tab key:<br>
+   - All buttons should show visible focus indicator<br>
+   - Focus ring/outline clearly visible<br>
+   - Contrast sufficient for visibility<br>
+5. Verify button text contrast meets WCAG 2.1 AA:<br>
+   - White text on Coral Orange: minimum 4.5:1<br>
+   - Use WebAIM Contrast Checker to verify<br>
+6. Test button responsiveness on different screen sizes:<br>
+   - Desktop (1920x1080): Full-size buttons<br>
+   - Tablet (768x1024): Appropriately sized<br>
+   - Mobile (375x667): Full-width where appropriate (w-100 class)<br>
+7. Verify touch-friendly sizing on mobile:<br>
+   - Minimum 44x44px touch target<br>
+   - Adequate spacing between buttons<br>
+8. Check icon usage in buttons:<br>
+   - Bootstrap Icons (bi-search, etc.) properly aligned<br>
+   - Icons have appropriate margin (me-2 spacing)<br>
+   - Icons enhance button meaning<br>
+9. Test disabled button states if present:<br>
+   - Visually distinct from active buttons<br>
+   - Not clickable<br>
+   - Appropriate opacity or colour change<br>
+10. Verify consistent styling across all three pages:<br>
+    - index.html: "Start Exploring"<br>
+    - search.html: "Search Destination", category filters, "Explore" buttons<br>
+    - packages.html: "Book Hotels", "Book Flights", "Book Package", "Book Activities"<br>
+</td>
+  </tr>
+  <tr>
+   <td colspan="2"><strong>Expected Result:</strong><br>
+     
+- All primary buttons use Coral Orange (#FF6B35) background consistently<br>
+- Button text is white with sufficient contrast (4.5:1 minimum)<br>
+- Hover states provide clear visual feedback<br>
+- Focus indicators visible for keyboard navigation<br>
+- Active states clearly distinguish selected options (filter buttons)<br>
+- Buttons responsive across all device sizes<br>
+- Touch targets minimum 44x44px on mobile<br>
+- Icons properly aligned with consistent spacing<br>
+- Styling uniform across index.html, search.html, and packages.html<br>
+- Disabled states (if present) visually distinct<br>
+- All buttons use Montserrat font for consistency with heading typography<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+1. Navigate to all pages and identify all button types:<br>
+   - Primary buttons (coral orange): "Start Exploring", "Search Hotels", "Search Flights", etc.<br>
+   - Category filter buttons (search.html): "Attractions", "Restaurants", "Hotels", etc.<br>
+   - Explore destination buttons (search.html): "Explore NYC", "Explore Paris", etc.<br>
+   - Search button: magnifying glass icon with "Search Destination"<br>
+   
+**Pass – Demonstrated in previous videos. All pages contain clearly defined buttons (.btn-primary for CTAs, .btn-action for filters and booking). Each button is semantically correct (<button> or <a class="btn">) and consistently styled.**
+
+2. Verify primary button (.btn-primary) styling:<br>
+   - Background: Coral Orange (--coral-orange, #FF6B35)<br>
+   - Text: White<br>
+   - Border-radius: Consistent across all buttons<br>
+   - Padding: Consistent (btn-lg for large, standard for normal)<br>
+   - Font: Montserrat (heading font)<br>
+
+**Pass – Demonstrated in previous videos. .btn-primary in style.css sets coral orange background (#FF6B35), white text, Montserrat font, consistent padding and border-radius, ensuring visual clarity and alignment with the ocean/travel theme.**
+
+3. Test hover states on all buttons:<br>
+   - Primary buttons: Darker coral orange on hover<br>
+   - Category filter buttons: Background colour change<br>
+   - Active state: Visual indication (e.g., .active class on filters)<br>
+
+**Pass – Demonstrated in previous videos. Hover styles are defined: .btn-primary:hover adds lift and shadow, .nav-link:hover changes background colour, and .active states are visually distinct, confirming interactive feedback.**
+
+4. Test focus states using Tab key:<br>
+   - All buttons should show visible focus indicator<br>
+   - Focus ring/outline clearly visible<br>
+   - Contrast sufficient for visibility<br>
+   
+**Pass – Demonstrated in previous videos. Buttons use semantic <button> elements, so browser defaults provide visible focus rings. This ensures compliance with WCAG 2.1 focus visibility requirements.**
+
+5. Verify button text contrast meets WCAG 2.1 AA:<br>
+   - White text on Coral Orange: minimum 4.5:1<br>
+   - Use WebAIM Contrast Checker to verify<br>
+
+**Fail – White text on coral orange background comes close to achieving a contrast ratio above 4.5:1 (WebAIM check).**
+
+6. Test button responsiveness on different screen sizes:<br>
+   - Desktop (1920x1080): Full-size buttons<br>
+   - Tablet (768x1024): Appropriately sized<br>
+   - Mobile (375x667): Full-width where appropriate (w-100 class)<br>
+
+**Pass – Demonstrated in previous videos and adjusted in previous commit - Button, Tiles and Form Object adjustments - Buttons use Bootstrap utilities (w-100, col-*, btn-lg) to adapt across desktop, tablet, and mobile. Layout ensures full-width buttons on small screens and appropriate sizing on larger screens.**
+
+7. Verify touch-friendly sizing on mobile:<br>
+   - Minimum 44x44px touch target<br>
+   - Adequate spacing between buttons<br>
+
+**Pass – Padding (0.75rem 2rem) and grid spacing (g-3, mb-4) ensure buttons meet the minimum 44×44px touch target and maintain adequate spacing for mobile usability.**
+
+8. Check icon usage in buttons:<br>
+   - Bootstrap Icons (bi-search, etc.) properly aligned<br>
+   - Icons have appropriate margin (me-2 spacing)<br>
+   - Icons enhance button meaning<br>
+
+**Pass – Bootstrap Icons (bi-search, bi-house-door, etc.) are correctly integrated with spacing utilities (me-2, mb-2). Icons enhance meaning without clutter.**
+
+9. Test disabled button states if present:<br>
+   - Visually distinct from active buttons<br>
+   - Not clickable<br>
+   - Appropriate opacity or colour change<br>
+
+**Pass – No disabled buttons are present, but Bootstrap's default styling would apply opacity and non-clickable behaviour if used. Current implementation avoids confusion by not including inactive CTAs.**
+
+10. Verify consistent styling across all three pages:<br>
+    - index.html: "Start Exploring"<br>
+    - search.html: "Search Destination", category filters, "Explore" buttons<br>
+    - packages.html: "Book Hotels", "Book Flights", "Book Package", "Book Activities"<br>
+
+**Pass – Deomnstrated in previous video. Index, Search, and Packages pages all use the same design tokens (--coral-orange, Montserrat font, border-radius variables). Buttons are visually consistent and aligned with the travel/ocean theme.**
+
+    </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> 
+    
+**Summary for TC020**
+
+**Pass:** button types identified; primary and action button styles are consistent; strong hover and active states; keyboard focus visible (via Bootstrap); responsive sizes; icons correctly used; consistent design tokens across all pages.
+**Fail (WCAG AA contrast):** white/off-white text on #FF6B35 coral does not reach 4.5:1 contrast for normal-sized text. This is the main accessibility gap for this test case.
+**N/A:** disabled button states aren't implemented in the current UI.    
+    </td>
+  </tr>
+</table>
+  </details>
+
+
 ---
 
 ## References
