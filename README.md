@@ -6609,9 +6609,7 @@ Step 7. Verify visible focus indicators appear on each navigation item:
 - In **Mozilla Firefox**, When clicked, all page options mobile closes the menu automatically, except for *Contact* or *Popular Destination*. The internal link options do not close the menu automatically all three pages (index.html, search.html, and packages.html).<br>
  </td>
   </tr>
-  <tr>
-    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
-  </tr>
+  
   <tr>
 
   <td colspan="2"><strong>Corrections for Javascript errors from steps 1 to 4</strong> 
@@ -6764,7 +6762,9 @@ This approach overrides the browser's default behaviour and ensures that both in
 
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/90eaa24f-01f9-4396-b703-f79757216f06)
 </td>
-
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
 </tr>
 </table>
 </details>
@@ -9504,7 +9504,7 @@ This ensures:
     </td>
   </tr>
 <tr>
-    <td colspan="2"><strong>Pass/Fail:</strong> </td>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
   </tr>
 </table>
 </details>
@@ -9681,8 +9681,7 @@ This ensures:
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC021</td>
-    <td><strong>Feature:</strong> Desktop (Chrome, Firefox, Edge). Desktop (1920x1080)
-</td>
+    <td><strong>Feature:</strong> Desktop (Chrome, Firefox, Edge). Desktop (1920x1080)</td>
   </tr>
   <tr>
     <td colspan="2"><strong>Description:</strong> Ensure that the website layout, typography, images, Google Maps, carousel, and navigation display correctly and consistently on desktop browsers at full HD resolution (1920x1080), without distortion, overflow, or visual inconsistency across all three pages (index.html, search.html, packages.html).
@@ -9756,6 +9755,7 @@ This ensures:
    - Footer with 4 contact tiles in single row (col-lg-3 each)<br>
 
 **Google Chrome Evidence (1920x1080)**
+
 [Google Chrome evidence file](https://github.com/user-attachments/assets/04bf6ff9-e7bd-44da-9861-ba7e97e29c5e)
 
 3. Check carousel displays correctly:<br>
@@ -9764,6 +9764,7 @@ This ensures:
    - Auto-play working smoothly<br>
 
 **Google Chrome Evidence (1920x1080)**
+
 [Google Chrome evidence file](https://github.com/user-attachments/assets/3072e724-4b26-4d00-815e-bed27e846550)
 
 4. Navigate to search.html and verify:<br>
@@ -9773,6 +9774,7 @@ This ensures:
    - Results panel layout correct<br>
    
 **Google Chrome Evidence (1920x1080)**
+
 [Google Chrome evidence file](https://github.com/user-attachments/assets/243c81ef-bd91-4179-ab29-4688555e91b6)
    
 5. Navigate to packages.html and verify:<br>
@@ -9781,6 +9783,7 @@ This ensures:
    - Form tiles aligned correctly<br>
 
 **Google Chrome Evidence (1920x1080)**
+
 [Google Chrome evidence file](https://github.com/user-attachments/assets/5746b432-fcab-4717-94d0-c05b34ef14a5)
 
 6. Repeat entire test in Firefox, Safari, and Microsoft Edge at 1920x1080.<br>
@@ -9808,6 +9811,7 @@ This ensures:
 10. Test Google Maps zoom and pan functionality.<br>
 
 **Google Chrome Evidence (1920x1080)**
+
 [Google Chrome evidence file](https://github.com/user-attachments/assets/5b49fe9f-0963-4bfc-9ba9-f914e5b55ee4)
 
 11. Test carousel manual controls (left/right arrows, indicators).<br>
@@ -9817,6 +9821,7 @@ This ensures:
 12. Resize window slightly (e.g., 1800x1000) to test fluid responsiveness.<br>
 
 **Google Chrome Evidence (1920x1080 to 1800x1000)**
+
 [Google Chrome evidence file](https://github.com/user-attachments/assets/70794c8f-8904-493d-8e1d-97804b6eea67)
 
 **Evidence conclusion:** 
@@ -9924,6 +9929,7 @@ The test execution across index.html, search.html, and packages.html at desktop 
    - Carousel: Check images scale correctly, controls remain functional<br>
    
 **Google Chrome Evidence (768x1024)**
+
 [Google Chrome evidence file](https://github.com/user-attachments/assets/553c1598-4c12-4b4f-876f-1e73e9f26558)
 
 4. Test search.html layout:<br>
@@ -9934,6 +9940,7 @@ The test execution across index.html, search.html, and packages.html at desktop 
    - Results panel maintains readability<br>
 
 **Google Chrome Evidence (768x1024)**
+
 [Google Chrome evidence file](https://github.com/user-attachments/assets/00b498e7-633f-4b7c-9244-f2e9a7514844)
 
 5. Test packages.html layout:<br>
@@ -9950,6 +9957,7 @@ The test execution across index.html, search.html, and packages.html at desktop 
    - All navigation links accessible<br>
 
 **Google Chrome Evidence (768x1024)**
+
 [Google Chrome evidence file](https://github.com/user-attachments/assets/d27cb36b-926d-4a19-bf37-a2906d8841d5)
 
 7. Test touch interactions:<br>
@@ -9960,6 +9968,7 @@ The test execution across index.html, search.html, and packages.html at desktop 
    - Category filter buttons easily tappable<br>
    
 **Google Chrome Evidence (768x1024)**
+
 [Google Chrome evidence file](https://github.com/user-attachments/assets/85c38a9f-0eed-46c3-8591-2fadcb00d583)
    
 8. Verify text legibility:<br>
@@ -9993,10 +10002,283 @@ The test execution across index.html, search.html, and packages.html at desktop 
     </td>
   </tr>
 <tr>
-    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> 
+
+  **Evidence conclusion:**
+  
+  The tablet layout tests across index.html, search.html, and packages.html at 768×1024 portrait resolution confirm that the site adapts correctly to medium‑sized screens, maintaining usability, readability, and accessibility.
+    </td>
   </tr>
 </table>
 </details>
+
+ <details>
+  <summary><strong>Test Case TC023 - Mobile Responsiveness</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC023</td>
+    <td><strong>Feature:</strong>  Mobile (iOS, Android)Mobile (375x667)
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Evaluate how the website adapts to smaller mobile screens, particularly the 375x667 viewport size (iPhone SE, iPhone 6/7/8). This includes checking layout reflow, visibility of content, touch-target sizing, functionality of navigation menus, Google Maps interaction, carousel usability, and all interactive elements on the Holiday Destination Finder.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> A significant portion of users search for travel destinations via smartphones. Testing at this resolution ensures optimal readability, functionality, and usability on mobile. This supports WCAG 2.1 accessibility standards and aligns with mobile-first design principles expected at a professional level for travel websites.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+      
+1. Open the website using Chrome DevTools or responsive testing tool at 375x667.<br>
+2. Alternatively, test on actual iPhone SE or similar Android device.<br>
+3. Test index.html mobile layout:<br>
+   - Header hero: Logo and heading stack vertically, both centered<br>
+   - "Start Exploring" button full width or appropriately sized<br>
+   - About Us section full width<br>
+   - Carousel full width, images maintain aspect ratio<br>
+   - Carousel captions hidden (d-none d-md-block working)<br>
+   - Footer contact tiles stack vertically (1 per row)<br>
+4. Test search.html mobile layout:<br>
+   - Search input full width<br>
+   - "Search" button appropriately sized<br>
+   - Category filter buttons stack or wrap appropriately<br>
+   - Google Maps displays at appropriate mobile height<br>
+   - Popular Destinations cards stack vertically (1 per row)<br>
+   - Each card maintains proper structure (image, title, description, button)<br>
+   - Results panel readable and scrollable<br>
+5. Test packages.html mobile layout:<br>
+   - All form inputs full width<br>
+   - Date pickers accessible on mobile<br>
+   - Booking buttons full width (w-100 class)<br>
+   - Form sections clearly separated<br>
+6. Test navigation on mobile:<br>
+   - Hamburger menu icon visible (navbar-toggler-icon)<br>
+   - Tapping hamburger opens navigation menu<br>
+   - Menu expands smoothly<br>
+   - All navigation links visible and tappable<br>
+   - Clicking a link closes the menu automatically<br>
+   - Navbar doesn't overlap content<br>
+7. Test touch interactions:<br>
+   - All buttons minimum 44x44px touch target<br>
+   - Adequate spacing between interactive elements<br>
+   - Carousel swipe left/right works<br>
+   - Google Maps pinch-to-zoom works<br>
+   - Category filter buttons easily tappable<br>
+   - Form inputs easy to select and type in<br>
+   - Date pickers open correctly on mobile<br>
+8. Test text readability:<br>
+   - All text legible without zoom<br>
+   - Headings clearly visible<br>
+   - Body text minimum 16px<br>
+   - Line spacing adequate for mobile reading<br>
+   - No text cut off or overlapping<br>
+9. Test images and media:<br>
+   - Carousel images scale to mobile width<br>
+   - Destination card images maintain 200px height<br>
+   - No horizontal image overflow<br>
+   - Images load appropriately (not oversized files)<br>
+10. Verify no horizontal scrolling on any page.<br>
+11. Test form functionality:<br>
+    - Virtual keyboard doesn't hide submit buttons<br>
+    - Form validation messages visible<br>
+    - Input fields don't get obscured when typing<br>
+12. Test Google Maps mobile behavior:<br>
+    - Map height appropriate for mobile<br>
+    - Touch controls (pan, zoom) work smoothly<br>
+    - Markers clickable with adequate touch targets<br>
+    - Info windows readable on small screen<br>
+13. Test Popular Destinations cards:<br>
+    - Cards stack vertically (full width)<br>
+    - Images load correctly<br>
+    - "Explore" buttons clearly visible and tappable<br>
+    - Card spacing appropriate<br>
+14. Verify About Us scrollbar behavior on mobile.<br>
+15. Test across both portrait (375x667) and landscape orientations.<br>
+</td>
+  </tr>
+  <tr>
+     <td colspan="2"><strong>Expected Result:</strong><br>
+       
+- Website fully functional on mobile (375x667)<br>
+- All content stacks vertically in single column<br>
+- Hamburger menu appears and functions correctly<br>
+- Menu closes automatically after navigation<br>
+- "Start Exploring" button appropriately sized for mobile<br>
+- About Us content full width and readable<br>
+- Carousel full width with working swipe gestures<br>
+- Carousel captions hidden on mobile (visible only on tablet/desktop)<br>
+- Footer contact tiles stack vertically (1 column)<br>
+- Search input and buttons full width or appropriately sized<br>
+- Category filter buttons accessible and tappable<br>
+- Google Maps displays with appropriate mobile height<br>
+- Map touch controls (pinch, pan) work smoothly<br>
+- Popular Destinations cards stack vertically (1 per row)<br>
+- All booking buttons full width (w-100)<br>
+- Form inputs full width and easy to interact with<br>
+- Date pickers work on mobile devices<br>
+- Virtual keyboard doesn't hide important UI elements<br>
+- All touch targets minimum 44x44px<br>
+- Text legible without zoom (minimum 16px)<br>
+- Images scale correctly without distortion<br>
+- No horizontal scrolling required<br>
+- Navigation smooth and intuitive<br>
+- Content clearly visible and readable<br>
+- Interactive elements work as expected with touch input<br>
+- Works in both portrait and landscape orientations<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+      
+1. Open the website using Chrome DevTools or responsive testing tool at 375x667.<br>
+2. Alternatively, test on actual iPhone SE or similar Android device.<br>
+3. Test index.html mobile layout:<br>
+   - Header hero: Logo and heading stack vertically, both centered<br>
+   - "Start Exploring" button full width or appropriately sized<br>
+   - About Us section full width<br>
+   - Carousel full width, images maintain aspect ratio<br>
+   - Carousel captions hidden (d-none d-md-block working)<br>
+   - Footer contact tiles stack vertically (1 per row)<br>
+
+**Google Chrome Evidence (375x667)**
+
+[Google Chrome evidence file](https://github.com/user-attachments/assets/f81ecda8-0518-4ee0-bcb1-93716070c49b)
+
+4. Test search.html mobile layout:<br>
+   - Search input full width<br>
+   - "Search" button appropriately sized<br>
+   - Category filter buttons stack or wrap appropriately<br>
+   - Google Maps displays at appropriate mobile height<br>
+   - Popular Destinations cards stack vertically (1 per row)<br>
+   - Each card maintains proper structure (image, title, description, button)<br>
+   - Results panel readable and scrollable<br>
+
+**Google Chrome Evidence (375x667)**
+
+[Google Chrome evidence file](https://github.com/user-attachments/assets/ea8dd017-5ed1-4918-bd26-2fa5bdd50ad3)
+
+5. Test packages.html mobile layout:<br>
+   - All form inputs full width<br>
+   - Date pickers accessible on mobile<br>
+   - Booking buttons full width (w-100 class)<br>
+   - Form sections clearly separated<br>
+   
+**Google Chrome Evidence (375x667)**
+
+[Google Chrome evidence file](https://github.com/user-attachments/assets/b943f675-9859-4767-bf94-d7aa59b10085)
+
+6. Test navigation on mobile:<br>
+   - Hamburger menu icon visible (navbar-toggler-icon)<br>
+   - Tapping hamburger opens navigation menu<br>
+   - Menu expands smoothly<br>
+   - All navigation links visible and tappable<br>
+   - Clicking a link closes the menu automatically<br>
+   - Navbar doesn't overlap content<br>
+
+**Google Chrome Evidence (375x667)**
+
+[Google Chrome evidence file](https://github.com/user-attachments/assets/744edccb-1613-49dd-a321-369791df2071)
+
+
+7. Test touch interactions:<br>
+   - All buttons minimum 44x44px touch target<br>
+   - Adequate spacing between interactive elements<br>
+   - Carousel swipe left/right works<br>
+   - Google Maps pinch-to-zoom works<br>
+   - Category filter buttons easily tappable<br>
+   - Form inputs easy to select and type in<br>
+   - Date pickers open correctly on mobile<br>
+
+**Evidence:** Already demonstrated in previous tests.
+
+8. Test text readability:<br>
+   - All text legible without zoom<br>
+   - Headings clearly visible<br>
+   - Body text minimum 16px<br>
+   - Line spacing adequate for mobile reading<br>
+   - No text cut off or overlapping<br>
+
+**Evidence:** Already demonstrated in previous tests.
+
+9. Test images and media:<br>
+
+   - Carousel images scale to mobile width<br>
+   - Destination card images maintain 200px height<br>
+   - No horizontal image overflow<br>
+   - Images load appropriately (not oversized files)<br>
+
+**Evidence:** Already demonstrated in previous tests.
+
+10. Verify no horizontal scrolling on any page.<br>
+
+**Evidence:** Already demonstrated in previous tests.
+
+11. Test form functionality:<br>
+    - Virtual keyboard doesn't hide submit buttons<br>
+    - Form validation messages visible<br>
+    - Input fields don't get obscured when typing<br>
+
+**Google Chrome Evidence (375x667)**
+
+[Google Chrome evidence file](https://github.com/user-attachments/assets/f78080cd-3c1e-4666-b27b-ccbaaf29fca2)
+
+12. Test Google Maps mobile behavior:<br>
+    - Map height appropriate for mobile<br>
+    - Touch controls (pan, zoom) work smoothly<br>
+    - Markers clickable with adequate touch targets<br>
+    - Info windows readable on small screen<br>
+
+**Google Chrome Evidence (375x667)**
+
+[Google Chrome evidence file](https://github.com/user-attachments/assets/26e1847e-1bcd-4424-b189-cbccc07e3d83)
+    
+13. Test Popular Destinations cards:<br>
+    - Cards stack vertically (full width)<br>
+    - Images load correctly<br>
+    - "Explore" buttons clearly visible and tappable<br>
+    - Card spacing appropriate<br>
+
+**Google Chrome Evidence (375x667)**
+
+[Google Chrome evidence file](https://github.com/user-attachments/assets/0ea724d5-8702-429e-ab31-aec374f95612)
+
+14. Verify About Us scrollbar behavior on mobile.<br>
+
+**Google Chrome Evidence (375x667)**
+
+[Google Chrome evidence file](https://github.com/user-attachments/assets/3156690a-7330-48e1-9024-752b92a81e92)
+
+15. Test across both portrait (375x667) and landscape orientations.<br>
+
+**Google Chrome Evidence (375x667)**
+
+[Google Chrome evidence file](https://github.com/user-attachments/assets/ff5a4a1d-d245-4a2c-ae83-5bf3669ec358)
+
+    </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> 
+    
+  **Evidence conclusion:**
+  
+  The mobile layout and interaction tests across index.html, search.html, and packages.html confirm that the site adapts correctly to small‑screen devices, maintaining usability, readability, and accessibility.
+    </td>
+  </tr>
+</table>
+</details>
+  
+### Accessibility Testing - Planning
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose:** Fulfilling acknowledged accessibility criteria to ensure the website is usable by all users, including individuals with disabilities.
+
+**Description:** Conformance with WCAG 2.1 standards, which emphasises features such as keyboard operability, screen reader support, adequate colour contrast, meaningful HTML semantics, ARIA properties, descriptive alternative text, and inclusive form controls is validated through accessibility testing.
+
+**Justification:** In accordance with the UK Equality Act 2010 and WCAG 2.1 guidelines, ensuring accessibility is both an ethical and legal requirement. Accommodating users with visual, auditory, motor, and cognitive impairments, professionally built websites must be universally accessible. Course learning objectives related to usability, inclusiveness, and established standards in contemporary web development are fulfilled by demonstrating accessibility testing.
+
+
 ---
 
 ## References
