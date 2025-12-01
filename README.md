@@ -58,8 +58,17 @@
     - [Responsiveness Testing - Results](#responsiveness-testing---results)
     - [Accessibility Testing - Results](#accessibility-testing---results)
     - [Performance Testing - Results](#performance-testing---results)
-    - [Regression Testing - Results](#regression-testing---results)
     - [Cross-browser / device testing evidence](#cross-browser--device-testing-evidence)
+  - [Website Information Architecture: Page Purpose & Structure](#website-information-architecture-page-purpose--structure)
+    - [Homepage (index.html) — purpose & structure](#homepage-indexhtml--purpose--structure)
+    - [Search Page (search.html) — purpose & structure](#search-page-searchhtml--purpose--structure)
+    - [Packages Page (packages.html) — purpose & structure](#packages-page-packageshtml--purpose--structure)
+    - [404 Error Page (404.html) — purpose & structure](#404-error-page-404html--purpose--structure)
+    - [Stylesheet (assets/css/style.css) — technical approach, purpose & structure](#stylesheet-assetscssstylecss--technical-approach-purpose--structure)
+    - [JavaScript Files — technical approach, purpose & structure](#javascript-files--technical-approach-purpose--structure)
+      - [script.js — purpose & structure](#scriptjs--purpose--structure)
+      - [search.js — purpose & structure](#searchjs--purpose--structure)
+      - [packages.js — purpose & structure](#packagesjs--purpose--structure)
   - [Reflection](#reflection)
 - [References](#references)
  
@@ -11181,6 +11190,249 @@ The only optional refinement, is to tidy up heading levels like h5 -> h3 ("Key F
 | TC031    |Page Load Time| Chrome (Lighthouse)       | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Partial Pass (1st attempt)  |         |      | All three pages passed the performance tests across desktop, mobile, Lighthouse, and PageSpeed Insights. Index.html and Packages.html consistently met thresholds with strong scores. Search.html passed but showed performance overhead from Google Maps API, especially on mobile and under throttled networks. Improvement opportunities mainly involve image optimisation and third‑party script management. Evidenced in README - Taste Case TC031 Testing.|
 | TC032    |Optimised Images| Chrome (Lighthouse)         | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | The current design is lightweight enough that both tools should show decent image performance. But as soon as the website starts including more media (photos, hero images, cards, destination galleries), I'll need to proactively optimise images to keep both lab and field scores strong. Evidenced in README - Taste Case TC032 Testing.|
 | TC033    |Code Validation| Chrome (Lighthouse)        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (2nd attempt)  |         |Fail (1st attempt)      | Some minor warnings adjusted. Two errors were identified and debugged. Evidenced in README - Taste Case TC033 Testing.|
+
+---
+
+# Website Information Architecture: Page Purpose & Structure.
+[⬆ Back to Table of contents](#table-of-contents)
+
+## Homepage (index.html) — purpose & structure
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose.**  
+The About Us homepage introduces the Holiday Destination Finder brand, showcases popular travel destinations through an interactive carousel, provides information about the service, and routes visitors to the main functionality pages (Search, Packages) as well as contact information.
+
+**Structure.**  
+1) **Global navigation & sticky navbar.** A responsive Bootstrap navbar with links to About Us, Search, Popular Destinations (anchor), Packages, and Contact (footer anchor). Collapses to hamburger menu on mobile with `aria-label="Toggle navigation"`.  
+2) **Header/hero band.** Prominent main logo alongside site title and tagline introducing the travel discovery concept with welcoming intro text.  
+3) **About section.** Text content explaining what the service offers and how users can benefit from the destination finder tools.  
+4) **Destination carousel.** A 5-slide Bootstrap carousel showcasing popular destinations (New York, Barcelona, Paris, Tokyo, and London) with previous/next controls, slide indicators, and descriptive captions. Keyboard-accessible with proper aria-labels ("Slide 1-5", "Previous", "Next").  
+5) **Contacts footer.** A dark-themed footer section with contact tiles displaying address, phone numbers, SMS, and email in a responsive grid layout (1 -> 2 -> 4 columns), plus copyright information.
+
+**Notable accessibility touches.**  
+- Semantic headings (`<h1>` through `<h5>`) maintain logical document structure.  
+- Carousel controls expose clear "Previous/Next" labels via `visually-hidden` text for screen readers.  
+- Slide indicators have `aria-label="Slide 1"` through `aria-label="Slide 5"`.  
+- Decorative carousel icons use `aria-hidden="true"`.  
+- Smooth scrolling for in-page anchor links (#popular, #contact).
+
+### Link to About Us Homepage
+- [Link to Live Website](https://rpires71.github.io/milestone-2/index.html)
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/828a8724-395a-45d4-bce5-5aa18290f0c4" />
+
+## Search Page (search.html) — purpose & structure
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose.**  
+Enable users to search for any city worldwide and discover nearby places of interest filtered by category. The page integrates with Google Maps and the Places API to provide real-time location data, interactive map markers, and a scrollable results panel.
+
+**Structure.**  
+1) **Global navigation & sticky navbar.** Consistent navbar matching other pages with links to About Us, Search (active), Popular Destinations, Packages, and Contact.  
+2) **Header/hero band.** Main logo with page title "Search Your Next Destination" and introductory text explaining the search functionality.  
+3) **Search container.** A styled search box with floating label ("Enter a city name e.g. Paris, New York City, Tokyo") and a prominent "Search Destination" button that triggers the Places API lookup.  
+4) **Category filter buttons.** Five action buttons (Attractions, Restaurants, Hotels, Cafes, Shopping) allowing users to filter results by place type. Each button has a `data-type` attribute and visual active state.  
+5) **Results panel & map.** A two-column layout (stacking on mobile) with:  
+   - **Results panel:** Scrollable list of up to 20 places with name, address, and rating; clickable items highlight on the map.  
+   - **Google Map:** Interactive map centred on the searched city with numbered markers corresponding to results; info windows display place details on click.  
+6) **Popular Destinations section.** Four destination tiles (New York City, Barcelona, Paris, Tokyo) with images, descriptions, and "Explore" buttons that auto-fill the search and trigger a lookup via `searchCity()`.  
+7) **Contacts footer.** Same dark-themed footer as other pages with contact grid and copyright.
+
+**Notable accessibility touches.**  
+- Form inputs have associated `<label>` elements with `for` attributes.  
+- Category buttons are keyboard-focusable with visible focus states.  
+- Results panel has custom scrollbar styling and supports keyboard navigation.  
+- Map markers include title attributes for tooltip information.
+
+**JavaScript functionality (search.js).**  
+- `initializeSearchButton()`: Enables search via button click or Enter key.  
+- `initializeActionButtons()`: Handles category filter selection and auto-refresh.  
+- `performSearch()`: Geocodes city and triggers Places API nearby search.  
+- `searchCity()`: Populates search input and performs search for Popular Destinations buttons.  
+- `clearMarkers()`: Removes previous markers before new search.  
+- `createMarkerNew()`: Creates numbered map markers with styled info windows.
+
+### Link to Search Page
+- [Link to Live Website](https://rpires71.github.io/milestone-2/search.html)
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/c4337373-41a5-40d6-ac3e-1b852ce4390b" />
+
+
+## Packages Page (packages.html) — purpose & structure
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose.**  
+Provide a centralised booking hub where users can search for a destination and connect directly with trusted travel partners (Booking.com, Google Flights, Expedia, GetYourGuide) to book hotels, flights, holiday packages, and activities.
+
+**Structure.**  
+1) **Global navigation & sticky navbar.** Consistent navbar with Packages link marked as active (`aria-current="page"`).  
+2) **Header/hero band.** Main logo with page title "Book directly with our trusted partners" and subtitle explaining the booking integration.  
+3) **Search container.** Comprehensive booking form including:  
+   - **City search input:** Floating label text field for destination entry.  
+   - **Trip details form:** Check-in date, check-out date, and guests dropdown (1-6) with floating labels and consistent styling.  
+   - **Action buttons:** Four booking buttons (Book Hotels, Book Flights, Full Package, Book Activities) each triggering partner deep links with user-selected parameters.  
+4) **Partner logos section.** Visual display of trusted booking partners (Booking.com, Google Flights, Expedia, GetYourGuide) with responsive logo sizing.  
+5) **Popular Destinations section.** Same four destination tiles as search.html (NYC, Barcelona, Paris, Tokyo) with "Explore" buttons that scroll to the search form and populate the city input via `searchCity()`.  
+6) **Validation toast.** A styled notification component that appears for validation messages (e.g., "Please select both check-in and check-out dates") instead of default browser alerts.  
+7) **Contacts footer.** Consistent footer with contact tiles and copyright.
+
+**Notable accessibility touches.**  
+- All form inputs have properly associated labels with `for` attributes.  
+- Date inputs use `type="date"` for native browser date picker support.  
+- Select dropdown includes a disabled placeholder option for clear initial state.  
+- Floating labels provide persistent context without relying solely on placeholders.  
+- Toast notifications are positioned prominently and auto-dismiss after 4 seconds.
+
+**JavaScript functionality (packages.js).**  
+- `getCityNameForUrls()`: Retrieves destination from global variable or input field.  
+- `setActiveBookingButton()`: Provides visual feedback for selected booking type.  
+- `bookHotel()`: Builds and opens Booking.com URL with city, dates, and guests.  
+- `bookFlights()`: Builds and opens Google Flights URL with origin (London), destination, and dates.  
+- `bookPackage()`: Builds and opens Expedia package URL with full trip details.  
+- `bookActivities()`: Builds and opens GetYourGuide URL with destination city.  
+- `searchCity()`: Scrolls to search section and fills city input for Popular Destinations buttons.  
+- `showValidationToast()` / `hideValidationToast()`: Displays styled validation messages.
+
+### Link to Packages Page
+- [Link to Live Website](https://rpires71.github.io/milestone-2/packages.html)
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/079cc8e6-631c-4b5d-9678-cccaadad844b" />
+
+
+## 404 Error Page (404.html) — purpose & structure
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose.**  
+Provide a user-friendly error page when visitors navigate to a non-existent URL, maintaining brand consistency while automatically redirecting them to the Packages page after a brief countdown.
+
+**Structure.**  
+1) **Error container.** Full-viewport centred layout with gradient background (ocean-blue theme) containing:  
+   - **Warning icon:** Bootstrap icon (`bi-exclamation-triangle-fill`) for visual indication.  
+   - **Error code:** Large "404" display heading.  
+   - **Error title:** "Oops! Page not found" message.  
+   - **Error description:** Brief explanation that the page doesn't exist or has been moved.  
+   - **Action button:** "Go to Packages" button with house icon for immediate navigation.  
+   - **Redirect notice:** Countdown timer showing seconds until automatic redirect.  
+2) **Auto-redirect.** Meta refresh tag and JavaScript countdown that redirects to packages.html after 3 seconds.
+
+**Notable accessibility touches.**  
+- Clear, descriptive error messaging that doesn't rely solely on the "404" code.  
+- Manual navigation option (button) for users who don't want to wait for redirect.  
+- Countdown provides feedback about the automatic redirect timing.  
+- Consistent brand fonts (Montserrat, Lato) and colour scheme.
+
+### Link to 404 Page
+- [Link to Live Website]()
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/03395c9e-65bf-45f0-86ae-c404ff5918e8" />
+
+## Stylesheet (`assets/css/style.css`) — technical approach, purpose & structure
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose.**  
+Provide a single, consistent source of truth for the travel-themed colour palette, typography, components (tiles, header/hero, navbar, footer, carousel, forms, booking buttons), accessibility states, and responsive behaviour across all pages. The file centralises design tokens via CSS variables and applies them to semantic, reusable classes.
+
+**Technical approach.**  
+- **Design tokens via CSS Variables.** Palette (ocean-blue, sky-blue, coral-orange, sand-beige, charcoal-grey, white-smoke), typefaces (Montserrat headings, Lato body), shadows, border radii, and spacing values live in `:root` for easy theming.  
+- **Bootstrap 5 foundation.** Leverages Bootstrap's grid, utilities, and components while overriding defaults to match the travel brand aesthetic.  
+- **Progressive enhancement.** Smooth in-page scrolling via `scroll-behavior: smooth`; responsive images; mobile-first breakpoints.  
+- **Accessibility baked in.** Global focus styles, `.visually-hidden` utility for screen reader text, consistent colour contrast, and keyboard-navigable interactive elements.  
+- **Responsive strategy.** Media queries at Bootstrap-aligned breakpoints (576px, 768px, 992px, 1400px) with specific fixes for problematic ranges (768-991px).
+
+**Structure (what lives where).**  
+1) **Root variables & global reset.** `:root` colour palette, typography tokens, spacing scale, border-radius values, and shadow definitions. Universal `box-sizing: border-box` reset.  
+2) **Body & typography.** Base font (Lato), font size (16px), line height (1.6), body background (sand-beige), and heading font family (Montserrat).  
+3) **Navbar.** Sticky positioning, ocean-blue background, sky-blue link colours, hover/active states with colour inversion, and responsive hamburger menu styling.  
+4) **Header/hero.** Gradient background, flex centring, responsive logo sizing, display heading scales, and intro text styling.  
+5) **Search components.** Search container styling, floating label implementation for form controls, input focus states with branded box-shadow, and category filter button styles (`.btn-action`).  
+6) **Booking form.** Form-floating overrides for date inputs and select dropdowns, consistent height alignment, and label positioning fixes.  
+7) **Action/booking buttons.** Styled button group with icon + text layout, hover effects, and active state indication.  
+8) **Results panel & map.** Scrollable results list with custom scrollbar, result item hover states, and map container sizing.  
+9) **Destination tiles.** Flexbox card layout with `flex-direction: column`, image container styling, content area with `flex-grow`, and button alignment via `margin-top: auto`. Hover effects with transform and shadow.  
+10) **Partner logos.** Responsive image sizing with max-height constraints.  
+11) **Footer.** Dark theme (bg-dark), contact tile grid (1 -> 2 -> 4 columns), hover effects on contact tiles, and copyright styling.  
+12) **Validation toast.** Fixed positioning, branded colours, flex layout for message and close button.  
+13) **Responsive media queries.** Breakpoint-specific adjustments for carousel height, heading sizes, logo scaling, button sizing, form field layout, results panel height, map dimensions, and destination tile image heights. Special fix for 768-991px search input width alignment.  
+14) **Accessibility utilities.** Focus-visible outlines, reduced-motion support where applicable, and screen-reader-only helpers.
+
+**Key patterns & rationale.**  
+- **CSS Variables for theming:** Changing `--ocean-blue` or `--coral-orange` in `:root` updates the entire site consistently.  
+- **Flexbox for card alignment:** Destination tiles use `display: flex; flex-direction: column` with `flex-grow: 1` on content and `margin-top: auto` on buttons to ensure consistent button positioning regardless of text length.  
+- **Floating labels:** Bootstrap's `.form-floating` pattern provides persistent labels that don't disappear when users type, improving usability and accessibility.  
+- **Responsive icon handling:** Search icons in destination buttons hidden below 1400px to preserve full button text visibility ("Explore Barcelona").  
+- **Component isolation:** Styles scoped to specific components (e.g., `.destination-tile .btn-primary`) prevent unintended cascade effects.
+
+## JavaScript Files — technical approach, purpose & structure
+[⬆ Back to Table of contents](#table-of-contents)
+
+### script.js — purpose & structure
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose.**  
+Provide shared functionality across all pages, primarily handling smooth scrolling for in-page anchor links and managing active navigation states based on the current page or hash.
+
+**Key functions.**  
+- `setActiveNavLink()`: Determines which navbar link should have the `.active` class based on `window.location.pathname` and `window.location.hash`. Handles highlighting for both page links (index.html, search.html, packages.html) and anchor links (#popular, #contact).  
+- `initSmoothScroll()`: Enhances anchor links (`href="#..."`) with smooth scrolling behaviour, updates the URL hash without page jump, refreshes the active nav state, and closes the mobile navbar if open.
+
+**Event listeners.**  
+- `DOMContentLoaded`: Initialises smooth scroll and sets active nav link on page load.  
+- `hashchange`: Updates active nav link when the URL hash changes.
+
+### search.js — purpose & structure
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose.**  
+Power the Search page (search.html) functionality, enabling users to search for cities worldwide and discover nearby places of interest using the Google Maps and Places APIs.
+
+**Global variables.**  
+- `map`: Stores the Google Map instance.  
+- `markers`: Array of currently displayed map markers.  
+- `currentSearchType`: Tracks the selected category filter (default: `"tourist_attraction"`).  
+- `infoWindows`: Stores popup info windows for markers.
+
+**Key functions.**  
+- `showValidationToast()` / `hideValidationToast()`: Display styled notification messages instead of browser alerts.  
+- `initializeActionButtons()`: Makes category buttons (Attractions, Restaurants, Hotels, Cafes, Shops) interactive with visual highlighting and auto-refresh on selection.  
+- `filterPlaces(placeType, button)`: Handles inline `onclick` category filtering, updates `currentSearchType`, and re-runs search if a city is already entered.  
+- `initializeSearchButton()`: Enables search via button click or Enter key press.  
+- `performSearch(cityName)`: Geocodes the city, centres the map, and triggers Places API nearby search for the selected category.  
+- `searchNearbyPlacesNew()`: Queries the Google Places API for places matching the current search type and location.  
+- `displayResultsNew()`: Renders the results list in the scrollable panel with place name, address, and rating.  
+- `createMarkerNew(place, index)`: Creates numbered map markers with branded styling (ocean-blue fill, coral-orange border) and info windows showing place details.  
+- `clearMarkers()`: Removes all markers and closes info windows before a new search.  
+- `searchCity(cityName)`: Populates the search input and triggers `performSearch()` for Popular Destinations buttons.
+
+**API integration.**  
+- Google Maps JavaScript API for map rendering and marker management.  
+- Google Places API (New) for nearby place searches with category filtering.
+
+### packages.js — purpose & structure
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Purpose.**  
+Power the Packages page (packages.html) booking functionality, connecting user-selected trip details (city, dates, guests) with external partner booking services via deep links.
+
+**Key functions.**  
+- `showValidationToast()` / `hideValidationToast()`: Display styled validation messages for form errors (e.g., missing dates, missing city).  
+- `getCityNameForUrls()`: Safely retrieves the destination city from either a global `currentCityName` variable or the `#citySearch` input field.  
+- `setActiveBookingButton(clickedButton)`: Provides visual feedback by highlighting the selected booking button and removing highlight from others.  
+- `bookHotel(ev)`: Validates form inputs and opens Booking.com with pre-filled search parameters (city, check-in, check-out, guests, rooms).  
+- `bookFlights(ev)`: Validates form inputs and opens Google Flights with origin (London), destination, and travel dates.  
+- `bookPackage(ev)`: Validates form inputs and opens Expedia package search with flight + hotel parameters.  
+- `bookActivities(ev)`: Opens GetYourGuide with the destination city for tours and activities browsing.  
+- `searchCity(cityName)`: Fills the city search input and smoothly scrolls to the search section for Popular Destinations buttons.
+
+**Partner integrations.**  
+- **Booking.com**: Hotel search with `ss`, `checkin`, `checkout`, `group_adults`, `no_rooms` parameters.  
+- **Google Flights**: Flight search with origin, destination, and date parameters.  
+- **Expedia**: Package (flight + hotel) search with `FromAirport`, `Destination`, `NumRoom`, `NumAdult` parameters.  
+- **GetYourGuide**: Activity search with `q` (query) parameter.
+
+**Validation logic.**  
+- Checks for required fields (city, check-in, check-out dates).  
+- Validates that check-in date is not after check-out date.  
+- Displays user-friendly toast messages instead of browser alerts.
 
 ---
 
