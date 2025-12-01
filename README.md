@@ -11322,7 +11322,7 @@ Provide a user-friendly error page when visitors navigate to a non-existent URL,
 - Consistent brand fonts (Montserrat, Lato) and colour scheme.
 
 ### Link to 404 Page
-- [Link to Live Website]()
+- [Link to Live Website](https://rpires71.github.io/milestone-2/404.html)
 
 <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/03395c9e-65bf-45f0-86ae-c404ff5918e8" />
 
@@ -11871,8 +11871,62 @@ The UI remains consistent across all pages, with a shared nav, footer, and butto
   Available at: https://wave.webaim.org/ 
   (Accessed: 26 November 2025).
 
+### Code, Comments & Media Attribution
 
+This project was developed as part of my Milestone 2 Interactive Frontend Development Milestone Project assignment for the Holiday Destination Finder web application.
+All HTML, CSS and JavaScript functionality was written and customised by me. Some design ideas and explanations were informed by research, previous work, and learning tools.
 
+#### Code Sources & Influence
 
+**Adapted from My Own Previous Work**
 
+Portions of the structure and styling were reused and improved from my Milestone 1 Project, including:
 
+- Shared colour palette variables and typography choices
+- Reusable components such as .navbar-brand, .btn-primary, .main-section
+- Card layouts, footer styles, and section containers
+
+All reused areas were refactored, restructured, and expanded for this project.
+
+#### Online Documentation
+
+- **W3Schools** was used as reference for HTML semantics, Bootstrap classes, form styling, and responsive techniques.
+- Specific elements referenced: responsive navigation, carousels, form styling, icon usage, and grid behaviour.
+
+#### AI Assistance — Code, Comments & Media
+
+I used **ChatGPT**, **Copilot**, and **Claude AI** strictly as assistive learning tools to:
+- Explain how certain Bootstrap utility classes and semantic tags operate
+- Suggest improvements for accessibility (ARIA, colour contrast, keyboard focus)
+- Debug hyperlink/query issues for external booking links
+- Help produce pedagogical comments to explain my code clearly and professionally
+
+#### Important Clarification
+- All comments created using ChatGPT were reviewed, edited, and rewritten by me to accurately explain my own implementation.
+
+#### Images, Logos & Media Attribution
+
+This project includes a mixture of **AI-generated, manually edited**, and **licensed platform branding** assets:
+
+- **Destination illustrations and icons** were generated using ChatGPT image tools (DALL·E) and edited using GIMP (GNU Image Manipulation Program) to resize, crop, adjust colours, and export web-optimised formats.
+- **Partner logos** (Booking.com, Google Flights, Expedia, GetYourGuide) are used only for educational/demonstration purposes.
+These are copyright of their respective companies and not used for commercial distribution.
+- Website UI icons were sourced from Bootstrap Icons under the MIT open-source license.
+
+Some components and references were informed by:
+
+- **W3Schools. (n.d.).** *HTML/CSS/JavaScript Tutorials.*
+  https://www.w3schools.com
+  
+- **Bootstrap Icons (MIT License).**
+  https://icons.getbootstrap.com/
+
+- **OpenAI ChatGPT & DALL·E.** *Used for code explanation, comments and image generation.*
+  
+- **GitHub Copilot & Claude AI.** *Used only as coding assistants and debugging aids.*
+
+- **GNU Image Manipulation Program (GIMP)** *Used for image editing.*
+  https://www.gimp.org/
+  
+- **Pires, R. (2025).** *Reused and adapted components from Milestone 1 Portfolio Project.*
+  
