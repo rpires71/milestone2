@@ -10553,7 +10553,279 @@ Index.html and Packages.html consistently met thresholds with strong scores.
 Search.html passed but showed performance overhead from Google Maps API, especially on mobile and under throttled networks.
 
 Improvement opportunities mainly involve image optimisation and third‑party script management.
+
+<img width="884" height="199" alt="image" src="https://github.com/user-attachments/assets/969c3350-b38d-4ea6-a1e3-e4229a21d7b0" />
+
     </td>
+  </tr>
+</table>
+</details>
+
+<details>
+  <summary><strong>Test Case TC032 - Optimised Images</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC032</td>
+    <td><strong>Feature:</strong> Optimised images
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that all images across the website are appropriately compressed and sized for fast loading without sacrificing visual quality. Confirm that WebP format is used for carousel images, destination cards, and logos, with proper dimensions and compression levels.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Optimised images reduce page load time and bandwidth usage, contributing to better performance scores and an improved user experience—especially for users researching travel destinations on slower connections or mobile devices. It also supports accessibility and SEO best practices for travel websites.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+1. <strong>Open Chrome DevTools -> Network tab.</strong><br>
+2. <strong>Filter by "Img" to show only image requests.</strong><br>
+3. <strong>Load index.html and inspect carousel images:</strong><br>
+   - img-paris.webp: Check file size and dimensions<br>
+   - img-tokyo.webp: Check file size and dimensions<br>
+   - img-nyc.webp: Check file size and dimensions<br>
+   - img-barcelona.webp: Check file size and dimensions<br>
+   - img-london.webp: Check file size and dimensions<br>
+   - logo-main.webp: Check file size<br>
+   - logo-blue-bg.webp (navbar): Check file size<br>
+4. <strong>Verify image dimensions match usage:</strong><br>
+   - Check if images are scaled down from much larger originals<br>
+   - Use DevTools to compare intrinsic size vs displayed size<br>
+   - Identify any images loaded at 2000px but displayed at 500px<br>
+5. <strong>Load search.html and inspect destination card images:</strong><br>
+   - img-2-nyc.webp: Should be sized for 200px height display<br>
+   - img-2-barcelona.webp: Check appropriate sizing<br>
+   - img-3-paris.webp: Check appropriate sizing<br>
+   - img-3-tokyo.webp: Check appropriate sizing<br>
+6. <strong>Check favicon images (PNG format is acceptable):</strong><br>
+   - apple-touch-icon.png: 180x180px<br>
+   - favicon-32x32.png: 32x32px<br>
+   - favicon-16x16.png: 16x16px<br>
+7. <strong>Run Google Lighthouse audit:</strong><br>
+   - Check "Properly size images" diagnostic<br>
+   - Check "Serve images in next-gen formats" diagnostic<br>
+   - Review "Opportunities" for image optimization<br>
+8. <strong>Run PageSpeed Insights:</strong><br>
+   - Check for "Efficiently encode images" suggestion<br>
+   - Check for "Serve images in modern formats" suggestion<br>
+   - Note any specific image optimization recommendations<br>
+9. <strong>Verify image compression quality:</strong><br>
+   - View images at full size on high-resolution display<br>
+   - Check for compression artifacts or blurriness<br>
+   - Ensure images maintain visual quality<br>
+10. <strong>Test image loading on slow connection:</strong><br>
+    - Enable "Slow 3G" throttling in DevTools<br>
+    - Verify images load progressively<br>
+    - Check that page remains usable while images load<br>
+11. <strong>Check total image weight:</strong><br>
+    - Sum file sizes of all images on each page<br>
+    - index.html: Total image weight should be < 1MB<br>
+    - search.html: Total image weight should be < 800KB<br>
+12. <strong>Verify WebP format usage:</strong><br>
+    - Confirm all major images use .webp extension<br>
+    - Verify browser support fallbacks if needed<br>
+</td>
+  </tr>
+  
+  <tr>
+   <td colspan="2"><strong>Expected Result:</strong><br>
+<strong>File Size Limits:</strong><br>
+- Individual carousel images: < 200KB each (5 images total)<br>
+- Individual destination card images: < 150KB each (4 images total)<br>
+- Logo images: < 50KB each<br>
+- No single image exceeds 300KB<br>
+<br>
+<strong>Format and Compression:</strong><br>
+- All carousel images use WebP format<br>
+- All destination card images use WebP format<br>
+- Logo images use WebP format<br>
+- Favicons use PNG format (standard practice)<br>
+- Images compressed with quality 75-85% (minimal visible quality loss)<br>
+<br>
+<strong>Dimensions:</strong><br>
+- Images not significantly oversized for display use<br>
+- Carousel images max 1920px width (match desktop max viewport)<br>
+- Destination cards max 400px width (match card container)<br>
+- No images loaded at 3000px but displayed at 300px<br>
+<br>
+<strong>Performance Impact:</strong><br>
+- Total image weight on index.html: < 1MB<br>
+- Total image weight on search.html: < 800KB<br>
+- Lighthouse shows no "Properly size images" warnings<br>
+- PageSpeed Insights shows no "Efficiently encode images" warnings<br>
+- All images use next-gen formats (WebP)<br>
+<br>
+<strong>Visual Quality:</strong><br>
+- Images appear sharp at full size<br>
+- No visible compression artifacts<br>
+- No blurriness or pixelation<br>
+- Carousel images display clearly on 1920px displays<br>
+- Destination card images display clearly at 200px height<br>
+<br>
+<strong>Loading Behavior:</strong><br>
+- Images load progressively (visible placeholder → full image)<br>
+- Page remains usable while images load<br>
+- No layout shift when images load (CLS < 0.1)<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+      
+1. <strong>Open Chrome DevTools -> Network tab.</strong><br>
+2. <strong>Filter by "Img" to show only image requests.</strong><br>
+3. <strong>Load index.html and inspect carousel images:</strong><br>
+   - img-paris.webp: Check file size and dimensions<br>
+   - img-tokyo.webp: Check file size and dimensions<br>
+   - img-nyc.webp: Check file size and dimensions<br>
+   - img-barcelona.webp: Check file size and dimensions<br>
+   - img-london.webp: Check file size and dimensions<br>
+   - logo-main.webp: Check file size<br>
+   - logo-blue-bg.webp (navbar): Check file size<br>
+4. <strong>Verify image dimensions match usage:</strong><br>
+   - Check if images are scaled down from much larger originals<br>
+   - Use DevTools to compare intrinsic size vs displayed size<br>
+   - Identify any images loaded at 2000px but displayed at 500px<br>
+
+**index.html**
+
+<img width="622" height="357" alt="image" src="https://github.com/user-attachments/assets/23ce3132-62f4-4cb2-94f1-c88f3b6cb468" />
+
+5. <strong>Load bothe search.html, packages.html and inspect destination card images:</strong><br>
+   - img-2-nyc.webp: Should be sized for 200px height display<br>
+   - img-2-barcelona.webp: Check appropriate sizing<br>
+   - img-3-paris.webp: Check appropriate sizing<br>
+   - img-3-tokyo.webp: Check appropriate sizing<br>
+
+**search.html**
+
+<img width="614" height="295" alt="image" src="https://github.com/user-attachments/assets/f1dbb640-0e1f-4595-b5e2-9f64e3cfcb2d" />
+
+
+**packages.html**
+
+<img width="612" height="405" alt="image" src="https://github.com/user-attachments/assets/72717a74-e04a-4438-b525-7865cd38cfa0" />
+
+
+6. <strong>Check favicon images (PNG format is acceptable):</strong><br>
+   - apple-touch-icon.png: 180x180px<br>
+   - favicon-32x32.png: 32x32px<br>
+   - favicon-16x16.png: 16x16px<br>
+
+**Favicon images used for all pages.**
+
+<img width="616" height="222" alt="image" src="https://github.com/user-attachments/assets/f9dd4bce-2231-453d-aa0b-392bc0653978" />
+
+
+7. <strong>Run Google Lighthouse audit:</strong><br>
+   - Check "Properly size images" diagnostic<br>
+   - Check "Serve images in next-gen formats" diagnostic<br>
+   - Review "Opportunities" for image optimisation<br>
+
+**index.html**
+
+<img width="610" height="545" alt="image" src="https://github.com/user-attachments/assets/96e28166-1327-486f-910b-73ba8a7a4a50" />
+
+**search.html**
+
+<img width="567" height="617" alt="image" src="https://github.com/user-attachments/assets/f35bf137-f406-45bf-ba08-6826706fe502" />
+
+**packages.html**
+
+<img width="464" height="732" alt="image" src="https://github.com/user-attachments/assets/1fda811a-51a2-4dcc-8f36-4c20a34fb228" />
+
+
+8. <strong>Run PageSpeed Insights:</strong><br>
+   - Check for "Efficiently encode images" suggestion<br>
+   - Check for "Serve images in modern formats" suggestion<br>
+   - Note any specific image optimization recommendations<br>
+
+9. <strong>Verify image compression quality:</strong><br>
+   - View images at full size on high-resolution display<br>
+   - Check for compression artifacts or blurriness<br>
+   - Ensure images maintain visual quality<br>
+
+**index.html**
+
+<img width="768" height="664" alt="image" src="https://github.com/user-attachments/assets/e0b69c02-adad-44ee-bd00-692fd91dc6f7" />
+
+**search.html**
+
+<img width="477" height="797" alt="image" src="https://github.com/user-attachments/assets/d6b8e2d9-488f-401a-a1aa-fb7cedfeded0" />
+
+**packages.html**
+
+<img width="713" height="800" alt="image" src="https://github.com/user-attachments/assets/e8baab38-5836-4bb1-8656-0440b2f8aa44" />
+
+<img width="746" height="817" alt="image" src="https://github.com/user-attachments/assets/5a376c98-ce67-4b10-809d-41c675b24b80" />
+
+<img width="711" height="512" alt="image" src="https://github.com/user-attachments/assets/18b26190-a903-485b-a361-4ca4af1ee9e5" />
+
+10. <strong>Test image loading on slow connection:</strong><br>
+    - Enable "Slow 3G" throttling in DevTools<br>
+    - Verify images load progressively<br>
+    - Check that page remains usable while images load<br>
+
+**index.html**
+
+<img width="532" height="296" alt="image" src="https://github.com/user-attachments/assets/c6f24be7-e688-48eb-b89e-0c6f0b0546ee" />
+
+**search.html**
+
+<img width="528" height="619" alt="image" src="https://github.com/user-attachments/assets/80e1a9f8-8ac1-4c9a-94fc-3c2ce5d51171" />
+
+**packages.html**
+
+<img width="467" height="759" alt="image" src="https://github.com/user-attachments/assets/d3fa1c06-aae5-438e-910e-b0e138b156a3" />
+
+
+11. <strong>Check total image weight:</strong><br>
+    - Sum file sizes of all images on each page<br>
+    - index.html: Total image weight should be < 1MB<br>
+    - search.html: Total image weight should be < 800KB<br>
+    - packages.html: Total image weight should be < 800KB<br>
+
+**index.html**
+
+<img width="634" height="50" alt="image" src="https://github.com/user-attachments/assets/015685a1-960c-41e4-872d-4feca22910df" />
+
+**search.html**
+
+<img width="611" height="32" alt="image" src="https://github.com/user-attachments/assets/0e02f353-d17a-4bec-861a-0dd56173a86e" />
+
+**packages.html**
+
+<img width="632" height="54" alt="image" src="https://github.com/user-attachments/assets/3200f588-8cbd-447e-8282-0e581f5286cd" />
+
+
+12. <strong>Verify WebP format usage:</strong><br>
+    - Confirm all major images use .webp extension<br>
+    - Verify browser support fallbacks if needed<br>
+
+**index.html**
+
+<img width="501" height="192" alt="image" src="https://github.com/user-attachments/assets/e498270f-a24d-41be-8a49-3e7b79614800" />
+
+**search.html**
+
+<img width="513" height="235" alt="image" src="https://github.com/user-attachments/assets/ca7a9e7a-c2d4-4273-8945-ac2b662090a1" />
+
+**packages.html**
+
+<img width="513" height="318" alt="image" src="https://github.com/user-attachments/assets/bd592568-fb70-4e39-ab72-36cd7ba0cb63" />
+    </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: FAIL</strong>
+
+<img width="890" height="536" alt="image" src="https://github.com/user-attachments/assets/0ff6e45b-3d34-42ae-89af-4d76857845a0" />
+
+**index.html -> Fail: Carousel images are too large; both Lighthouse and PageSpeed recommend optimisation.**
+
+**search.html -> Fail: Destination card images add weight, particularly on mobile; improvements required.**
+
+**packages.html -> Pass: Image usage is minimal and efficient; no optimisation necessary.**
+ </td>
   </tr>
 </table>
 </details>
