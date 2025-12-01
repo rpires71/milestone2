@@ -5248,26 +5248,6 @@ I will, at the end of each test phase:
 23. Enter deployed website URL (if available) or test locally.<br>
 24. Analyse both Mobile and Desktop results.<br>
 25. Compare with Lighthouse results.<br>
-26. Document Core Web Vitals:<br>
-    - LCP (Largest Contentful Paint): Target < 2.5s<br>
-    - FID (First Input Delay): Target < 100ms<br>
-    - CLS (Cumulative Layout Shift): Target < 0.1<br>
-<br>
-<strong>Part 5: Identify Performance Issues</strong><br>
-27. Check for render-blocking resources:<br>
-    - Bootstrap CSS loading<br>
-    - Google Fonts loading<br>
-    - Custom CSS (style.css)<br>
-28. Check for JavaScript blocking:<br>
-    - Bootstrap JS<br>
-    - Google Maps API<br>
-    - Custom scripts (script.js, search.js, packages.js)<br>
-29. Identify largest resources by size in Network tab.<br>
-30. Document any:<br>
-    - Oversized images<br>
-    - Uncompressed files<br>
-    - Excessive HTTP requests<br>
-    - Unused CSS/JavaScript<br>
 </td>
   </tr>
   <tr>
@@ -6227,7 +6207,7 @@ This project underwent comprehensive testing following a systematic Quality Assu
 
 | Testing Category | Test Cases | Description |
 |------------------|-----------|-------------|
-| **Functionality & Content Accuracy** | TC001-TC005 (15 tests) | Verify navigation menu, search functionality with Google Maps API, category filter buttons (5 types), booking form validation, external partner links (Booking.com, Google Flights, Expedia, GetYourGuide), footer links, content accuracy, link descriptions, "Start Exploring" CTA button, Popular Destinations buttons (4 cities), anchor navigation, and Contact link scrolling to footer |
+| **Functionality & Content Accuracy** | TC001-TC015 (15 tests) | Verify navigation menu, search functionality with Google Maps API, category filter buttons (5 types), booking form validation, external partner links (Booking.com, Google Flights, Expedia, GetYourGuide), footer links, content accuracy, link descriptions, "Start Exploring" CTA button, Popular Destinations buttons (4 cities), anchor navigation, and Contact link scrolling to footer |
 | **Usability & Typography** | TC016-TC020 (5 tests) | Ensure visual consistency across all pages (Ocean Blue/Sky Blue/Coral Orange palette, Montserrat/Lato fonts), font readability (16px minimum, contrast ratios, line spacing), visual hierarchy (H1->H2->H3 semantic structure), text spacing (WCAG 1.4.12 compliance, CSS variables), and button styling (Coral Orange CTAs, hover/focus states) |
 | **Responsiveness** | TC021-TC023, TC034 (3 tests) | Verify content and layout across desktop (1920x1080), tablet (768x1024), and mobile (375x667) devices. Test carousel responsiveness, Google Maps touch controls, form mobile behavior, hamburger menu functionality, and Popular Destinations card grid stacking (4->2->1 columns) |
 | **Accessibility** | TC024-TC030 (7 tests) | Use Lighthouse, WAVE, WebAIM Contrast Checker, NVDA, and VoiceOver to test colour contrast (4.5:1 body, 3:1 large text), keyboard navigation (Tab, Enter, Arrow keys), screen reader compatibility, semantic HTML structure (&lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;footer&gt;), alt text on images (14 images total), ARIA attributes (carousel, navigation, forms), and skip-to-main-content link. Ensures WCAG 2.1 Level AA compliance |
@@ -8780,9 +8760,6 @@ Because they're all wired to the same icon CDN and used via bi-* classes, icon s
    - By colour (Ocean Blue or Sky Blue for headings)<br>
 9. Test zooming to 200% and verify text remains legible without breaking layout.<br>
 10. Test readability in different lighting conditions (bright and dim).<br>
-
-
-
 </td>
   </tr>
   <tr>
@@ -10254,30 +10231,332 @@ The test execution across index.html, search.html, and packages.html at desktop 
 
 **Google Chrome Evidence (375x667)**
 
-[Google Chrome evidence file](https://github.com/user-attachments/assets/ff5a4a1d-d245-4a2c-ae83-5bf3669ec358)
+[Google Chrome evidence file](https://github.com/user-attachments/assets/ff5a4a1d-d245-4a2c-ae83-5bf3669ec358)**Evidence conclusion:**
+  
+  The mobile layout and interaction tests across index.html, search.html, and packages.html confirm that the site adapts correctly to small‑screen devices, maintaining usability, readability, and accessibility.
+    </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong></td>
+  </tr>
+</table>
+</details>
+  
+### Accessibility Testing - Results
+[⬆ Back to Table of contents](#table-of-contents)
+
+
+### Performance Testing - Results
+[⬆ Back to Table of contents](#table-of-contents)
+
+<details>
+  <summary><strong>Test Case TC031 - Page Load Time</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC031</td>
+    <td><strong>Feature:</strong> Page Load Time (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Measure the time taken for index.html, search.html, and packages.html to fully load, including all visible content, interactive elements, media (carousel images, destination cards), Google Maps API, and external resources (fonts, Bootstrap).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Fast load times enhance user satisfaction and reduce bounce rates for users searching travel destinations. Ensuring these key pages load within 2–3 seconds on desktop and 3–4 seconds on mobile aligns with performance best practices and supports a smooth user experience on all devices and network conditions.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Steps:</strong><br>
+<strong>Part 1: Desktop Performance Testing</strong><br>
+      
+1. Open Chrome browser in Incognito mode (to avoid cache interference).<br>
+2. Open Chrome DevTools (F12) -> Network tab.<br>
+3. Ensure "Disable cache" is checked in Network tab.<br>
+4. Load index.html and observe:<br>
+   - DOMContentLoaded time (when HTML parsed)<br>
+   - Load time (when all resources loaded)<br>
+   - Number of requests<br>
+   - Total page size<br>
+5. Document specific timings:<br>
+   - Time to First Contentful Paint (FCP)<br>
+   - Time to Largest Contentful Paint (LCP)<br>
+   - Time to Interactive (TTI)<br>
+6. Repeat for search.html (note Google Maps API load time).<br>
+7. Repeat for packages.html (note form rendering time).<br>
+<br>
+<strong>Part 2: Mobile Performance Testing</strong><br>
+8. In Chrome DevTools, enable Device Mode (Ctrl+Shift+M).<br>
+9. Select "Moto G Power" or "iPhone 12 Pro" device profile.<br>
+10. Enable throttling: "Fast 3G" or "Slow 4G" from Network dropdown.<br>
+11. Repeat load time measurements for all three pages.<br>
+12. Document mobile-specific metrics.<br>
+<br>
+<strong>Part 3: Google Lighthouse Testing</strong><br>
+13. Open Chrome DevTools -> Lighthouse tab.<br>
+14. Select "Performance" category.<br>
+15. Choose "Desktop" device.<br>
+16. Click "Generate report" for index.html.<br>
+17. Record Performance score (0-100).<br>
+18. Note specific metrics:<br>
+    - First Contentful Paint<br>
+    - Largest Contentful Paint<br>
+    - Total Blocking Time<br>
+    - Cumulative Layout Shift<br>
+    - Speed Index<br>
+19. Review "Opportunities" section for improvement suggestions.<br>
+20. Repeat Lighthouse test for search.html and packages.html.<br>
+21. Generate "Mobile" report for all pages.<br>
+<br>
+<strong>Part 4: PageSpeed Insights Testing</strong><br>
+22. Visit https://pagespeed.web.dev/<br>
+23. Enter deployed website URL (if available) or test locally.<br>
+24. Analyse both Mobile and Desktop results.<br>
+25. Compare with Lighthouse results.<br>
+
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Expected Result:</strong><br>
+<strong>Desktop Performance (1920x1080, broadband):</strong><br>
+- index.html: Full load < 2.5 seconds<br>
+- search.html: Full load < 3 seconds (includes Google Maps API)<br>
+- packages.html: Full load < 2.5 seconds<br>
+- First Contentful Paint: < 1.5 seconds<br>
+- Largest Contentful Paint: < 2.5 seconds<br>
+- Time to Interactive: < 3 seconds<br>
+- Google Lighthouse Performance score: > 85<br>
+<br>
+<strong>Mobile Performance (Fast 3G/4G):</strong><br>
+- index.html: Full load < 4 seconds<br>
+- search.html: Full load < 5 seconds (includes Maps)<br>
+- packages.html: Full load < 4 seconds<br>
+- Largest Contentful Paint: < 4 seconds<br>
+- Google Lighthouse Mobile score: > 70<br>
+<br>
+<strong>Core Web Vitals:</strong><br>
+- LCP: < 2.5 seconds (Good)<br>
+- FID: < 100ms (Good)<br>
+- CLS: < 0.1 (Good)<br>
+<br>
+<strong>Resource Optimization:</strong><br>
+- No render-blocking CSS/JS warnings<br>
+- All images WebP format, properly sized<br>
+- Total page size < 2MB for index.html<br>
+- Total page size < 3MB for search.html (with Maps)<br>
+- Minimal unused CSS/JavaScript<br>
+- HTTP requests < 30 per page<br>
+<br>
+<strong>Visual Rendering:</strong><br>
+- All elements render without delay<br>
+- No layout shift during load (CLS < 0.1)<br>
+- Carousel images load progressively<br>
+- Google Maps loads asynchronously without blocking<br>
+- No visual glitches or flashing content<br>
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+1. Open Google Chrome browser in Incognito mode (to avoid cache interference).<br>
+2. Open Chrome DevTools (F12) -> Network tab.<br>
+3. Ensure "Disable cache" is checked in Network tab.<br>
+4. Load index.html and observe:<br>
+   - DOMContentLoaded time (when HTML parsed)<br>
+   - Load time (when all resources loaded)<br>
+   - Number of requests<br>
+   - Total page size<br>
+
+<img width="655" height="245" alt="image" src="https://github.com/user-attachments/assets/f5aaa386-9a20-4371-a1cf-33e19858a1c7" />
+
+5. Document specific timings:<br>
+   - Time to First Contentful Paint (FCP)<br>
+   - Time to Largest Contentful Paint (LCP)<br>
+   - Time to Interactive (TTI)<br>
+
+
+<img width="590" height="589" alt="image" src="https://github.com/user-attachments/assets/24ccae52-1a30-4943-af81-e6e45b05c032" />
+
+
+<img width="1725" height="899" alt="image" src="https://github.com/user-attachments/assets/ede5df1b-0027-4250-85b9-d3309563eb12" />
+
+
+6. Repeat for search.html (note Google Maps API load time).<br>
+
+<img width="321" height="474" alt="image" src="https://github.com/user-attachments/assets/707b1b20-fa20-46aa-a369-64956a48ede8" />
+
+
+<img width="1466" height="886" alt="image" src="https://github.com/user-attachments/assets/c6210be6-b746-45b2-9606-852122ddb78a" />
+
+
+
+7. Repeat for packages.html (note form rendering time).<br>
+
+<img width="311" height="493" alt="image" src="https://github.com/user-attachments/assets/be58307e-c03a-4629-9eac-e92c4e69cfb3" />
+
+<img width="1654" height="874" alt="image" src="https://github.com/user-attachments/assets/1caac7a4-2e1d-4b5c-b006-53b241116663" />
+
+<br>
+<strong>Part 2: Mobile Performance Testing</strong><br>
+8. In Chrome DevTools, enable Device Mode (Ctrl+Shift+M).<br>
+9. Select "Moto G Power" or "iPhone 12 Pro" device profile.<br>
+10. Enable throttling: "Fast 3G" or "Slow 4G" from Network dropdown.<br>
+11. Repeat load time measurements for all three pages.<br>
+
+**index.html**
+
+<img width="1357" height="861" alt="image" src="https://github.com/user-attachments/assets/00b649ff-6516-4956-9754-a114e013914c" />
+
+**search.html**
+
+<img width="1477" height="862" alt="image" src="https://github.com/user-attachments/assets/d955bc3b-af5d-4cc5-bb75-83ae84586586" />
+
+**packages.html**
+
+<img width="1441" height="866" alt="image" src="https://github.com/user-attachments/assets/11b6fc21-1c6e-406a-af19-095f8aa2f0c6" />
+
+12. Document mobile-specific metrics.<br>
+<br>
+<strong>Part 3: Google Lighthouse Testing</strong><br>
+13. Open Chrome DevTools -> Lighthouse tab.<br>
+14. Select "Performance" category.<br>
+15. Choose "Desktop" device.<br>
+16. Click "Generate report" for index.html.<br>
+17. Record Performance score (0-100).<br>
+18. Note specific metrics:<br>
+    - First Contentful Paint<br>
+    - Largest Contentful Paint<br>
+    - Total Blocking Time<br>
+    - Cumulative Layout Shift<br>
+    - Speed Index<br>
+
+**index.html**
+
+<img width="1419" height="755" alt="image" src="https://github.com/user-attachments/assets/b45d0aa7-f6a9-4c51-bbe0-2c95a858144b" />
+
+19. Review "Opportunities" section for improvement suggestions.<br>
+
+<img width="600" height="465" alt="image" src="https://github.com/user-attachments/assets/cab787a8-4433-4b00-bf88-08774843e9e6" />
+
+<img width="594" height="165" alt="image" src="https://github.com/user-attachments/assets/c99212c9-d362-4711-9bd7-02552dd83d89" />
+
+
+20. Repeat Lighthouse test for search.html and packages.html.<br>
+
+**search.html**
+
+<img width="1471" height="802" alt="image" src="https://github.com/user-attachments/assets/f8a8e83c-a85a-4915-9e1a-5072eea4d4a5" />
+
+<img width="594" height="455" alt="image" src="https://github.com/user-attachments/assets/e8def16b-7436-4e0e-b8c8-1db53f17448c" />
+
+<img width="595" height="257" alt="image" src="https://github.com/user-attachments/assets/579f0fdc-524f-4530-b940-1ef6361215cf" />
+
+
+**packages.html**
+
+<img width="1369" height="749" alt="image" src="https://github.com/user-attachments/assets/6447dffe-49c2-4c04-aaf9-b5741006be52" />
+
+<img width="595" height="426" alt="image" src="https://github.com/user-attachments/assets/66196b3e-e797-458a-88f6-255d88f58c41" />
+
+<img width="588" height="242" alt="image" src="https://github.com/user-attachments/assets/69937b04-0cd7-44aa-be9f-7e460c441984" />
+
+
+21. Generate "Mobile" report for all pages.<br>
+<br>
+
+
+**index.html**
+
+<img width="1406" height="768" alt="image" src="https://github.com/user-attachments/assets/0a0377ee-35ff-4156-bc30-12c6fc0fae9e" />
+
+<img width="590" height="410" alt="image" src="https://github.com/user-attachments/assets/38229ca5-ae2a-44e6-94d4-b325cc3bf444" />
+
+<img width="591" height="201" alt="image" src="https://github.com/user-attachments/assets/46d19e01-8e3d-4cc3-92ce-0949c155f560" />
+
+
+**search.html**
+
+<img width="1365" height="740" alt="image" src="https://github.com/user-attachments/assets/a653e21c-f894-4637-83fc-9c41d32103ad" />
+
+<img width="597" height="416" alt="image" src="https://github.com/user-attachments/assets/09768661-4353-4e11-ab5b-0ff7d643080f" />
+
+<img width="598" height="298" alt="image" src="https://github.com/user-attachments/assets/66ba623c-a518-4b24-92c2-896482dbb8db" />
+
+
+**packages.html**
+
+<img width="1548" height="741" alt="image" src="https://github.com/user-attachments/assets/b647199a-8173-4355-baff-3204b3344ba0" />
+
+<img width="589" height="457" alt="image" src="https://github.com/user-attachments/assets/2093879c-b22c-48a5-9a07-f32b54844142" />
+
+<img width="596" height="293" alt="image" src="https://github.com/user-attachments/assets/09b2032b-5fdc-40f7-a263-0262ae5ea1af" />
+
+
+
+<strong>Part 4: PageSpeed Insights Testing</strong><br>
+22. Visit https://pagespeed.web.dev/<br>
+23. Enter deployed website URL (if available) or test locally.<br>
+24. Analyse both Mobile and Desktop results.<br>
+
+**PageSpeed Insights - index.html - Desktop**
+
+<img width="1413" height="997" alt="image" src="https://github.com/user-attachments/assets/b1822a4a-5e37-4c6c-a69b-2251bce95a55" />
+
+**PageSpeed Insights - index.html - Mobile**
+
+<img width="1406" height="998" alt="image" src="https://github.com/user-attachments/assets/2a88c53f-e646-41af-a9b0-84a6744cdea0" />
+
+
+**PageSpeed Insights - search.html - Desktop**
+
+<img width="1427" height="984" alt="image" src="https://github.com/user-attachments/assets/b0ec36c0-f2b9-414a-897c-162449f4b341" />
+
+**PageSpeed Insights - search.html - Mobile**
+
+<img width="1450" height="999" alt="image" src="https://github.com/user-attachments/assets/94d75631-4f81-4154-93d5-bbb4d2ca9145" />
+
+**PageSpeed Insights - packages.html - Desktop**
+
+<img width="1410" height="981" alt="image" src="https://github.com/user-attachments/assets/841fbe44-6701-4557-9ee8-89d47ded570a" />
+
+**PageSpeed Insights - packages.html - Mobile**
+
+<img width="1438" height="994" alt="image" src="https://github.com/user-attachments/assets/82fd25f9-e828-48bb-b6c5-1da4d4a9d20c" />
+
+
+25. Compare with Lighthouse results.<br>
+
+
+Both **Chrome Lighthouse (run locally in DevTools)** and **PageSpeed Insights (pagespeed.web.dev)** use the same underlying audit engine, but PageSpeed adds **CrUX (Chrome User Experience Report) field data** from real users. This means Lighthouse gives you a controlled lab test, while PageSpeed combines that with real‑world metrics. For your three pages (`index.html`, `search.html`, `packages.html`), the Lighthouse scores and PageSpeed scores will be broadly similar, but PageSpeed may show slightly different values due to network conditions, device profiles, and CrUX data.
+
+#### Comparative Analysis
+
+#### **index.html**
+
+- **Conclusion**: Lab and field scores align.
+
+#### **search.html**
+ 
+- **Conclusion**: PageSpeed scores may be lower than Lighthouse due to Maps integration, but both highlight the same bottleneck.
+
+#### **packages.html**
+
+- **Conclusion**: Lighthouse shows strong lab performance, PageSpeed adds nuance about mobile interactivity.
 
     </td>
   </tr>
 <tr>
     <td colspan="2"><strong>Pass/Fail: PASS</strong> 
-    
-  **Evidence conclusion:**
-  
-  The mobile layout and interaction tests across index.html, search.html, and packages.html confirm that the site adapts correctly to small‑screen devices, maintaining usability, readability, and accessibility.
+
+All three pages passed the performance tests across desktop, mobile, Lighthouse, and PageSpeed Insights.
+
+Index.html and Packages.html consistently met thresholds with strong scores.
+
+Search.html passed but showed performance overhead from Google Maps API, especially on mobile and under throttled networks.
+
+Improvement opportunities mainly involve image optimisation and third‑party script management.
     </td>
   </tr>
 </table>
 </details>
-  
-### Accessibility Testing - Planning
-[⬆ Back to Table of contents](#table-of-contents)
-
-**Purpose:** Fulfilling acknowledged accessibility criteria to ensure the website is usable by all users, including individuals with disabilities.
-
-**Description:** Conformance with WCAG 2.1 standards, which emphasises features such as keyboard operability, screen reader support, adequate colour contrast, meaningful HTML semantics, ARIA properties, descriptive alternative text, and inclusive form controls is validated through accessibility testing.
-
-**Justification:** In accordance with the UK Equality Act 2010 and WCAG 2.1 guidelines, ensuring accessibility is both an ethical and legal requirement. Accommodating users with visual, auditory, motor, and cognitive impairments, professionally built websites must be universally accessible. Course learning objectives related to usability, inclusiveness, and established standards in contemporary web development are fulfilled by demonstrating accessibility testing.
-
 
 ---
 
