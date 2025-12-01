@@ -7271,7 +7271,7 @@ This approach overrides the browser's default behaviour and ensures that both in
 
 10. Attempt a 404 path – verify that the user is redirected back to packages.html.<br>
 
-**Observations:** File didn't exist but I created the 404.html file will redirect the user back to packages.html - Your 404.html has this code that automatically redirects after 3 seconds:
+**Observations:** File didn't exist but I created the 404.html file will redirect the user back to packages.html - The 404.html has this code that automatically redirects after 3 seconds:
 
 <img width="1329" height="801" alt="image" src="https://github.com/user-attachments/assets/8eeb4cd6-8fe8-408b-8e59-ffeba3f916e8"/>
 
@@ -7646,6 +7646,7 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
 
 [Mozilla Firefox evidence file](https://github.com/user-attachments/assets/236d1ad5-0fe4-4537-b2cd-538ce93f1436)
 
+**PASS**
     </td>
   </tr>
   <tr>
@@ -9188,7 +9189,7 @@ Hierarchy is maintained at different sizes and nothing is shouting over the main
 **Conclusion:**
 
 - "Pass" on this whole set of tests.  
-- The only optional refinement, is to tidy up heading levels like `h5` → `h3` ("Key Features") and possibly `h4` → `h3` for destination cards to avoid any perceived "skipped" heading levels.
+- The only optional refinement, is to tidy up heading levels like `h5` -> `h3` ("Key Features") and possibly `h4` → `h3` for destination cards to avoid any perceived "skipped" heading levels.
     </td>
   </tr>
 <tr>
@@ -9642,7 +9643,7 @@ This ensures:
     
 **Summary for TC020**
 
-**Pass:** button types identified; primary and action button styles are consistent; strong hover and active states; keyboard focus visible (via Bootstrap); responsive sizes; icons correctly used; consistent design tokens across all pages.
+**Pass:** Button types identified; primary and action button styles are consistent; strong hover and active states; keyboard focus visible (via Bootstrap); responsive sizes; icons correctly used; consistent design tokens across all pages.
 **Fail (WCAG AA contrast):** white/off-white text on #FF6B35 coral does not reach 4.5:1 contrast for normal-sized text. This is the main accessibility gap for this test case.
 **N/A:** disabled button states aren't implemented in the current UI.    
     </td>
@@ -10555,7 +10556,6 @@ Search.html passed but showed performance overhead from Google Maps API, especia
 Improvement opportunities mainly involve image optimisation and third‑party script management.
 
 <img width="884" height="199" alt="image" src="https://github.com/user-attachments/assets/969c3350-b38d-4ea6-a1e3-e4229a21d7b0" />
-
     </td>
   </tr>
 </table>
@@ -11153,11 +11153,33 @@ The validator expects a space after the semicolon:
 
 | Test case | Designation | Browser(s)                           | Version(s)                               | Test Facility                                                                 | Pass | Partial | Fail | Comments |
 |-----------|-------------------------|--------------------------------------|------------------------------------------|-------------------------------------------------------------------------------|:----:|:-------:|:----:|----------------------------|
-| TC001     | | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass   |         |      |  |
-
-
-
-
+| TC001     |Main navigation bar (index.html, search.html, packages.html) | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (2nd attempt) after debugging.   |        | Fail (1st attempt)      |Some JavaScript was showing errors. Debugged and comments can be found in README - Test Case TC001 Testing. |
+| TC002     |City Search Input and Search Destination Button| Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |        |      |Evidenced in README - Taste Case TC002 Testing.  |
+| TC003     |Action Buttons | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |        |      |Evidenced in README - Taste Case TC003 Testing.  |
+| TC004     |Results Panel | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |        |      |Evidenced in README - Taste Case TC004 Testing.  |
+| TC005     |Booking Form Validation | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (2nd attempt) after debugging.  | Fail (1st attempt)        |      |Verified that an alert still appears indicating that the check-in date is not valid because it is later than the check-out date. Working as expected for "Book Package" but not for "Book Flight". Evidenced in README - Taste Case TC005 Testing.  |
+| TC006     |External Partner Links | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (2nd attempt) after debugging.  | Fail (1st attempt)        |      |Verified that None of the links have "noopener noreferrer". File didn't exist but I created the 404.html file to redirect the user back to packages.html - The 404.html has this code that automatically redirects after 3 seconds: Evidenced in README - Taste Case TC006 Testing.  |
+| TC007     |Footer Contact Links | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Evidenced in README - Taste Case TC007 Testing.  |
+| TC008     |Content Accuracy | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Evidenced in README - Taste Case TC008 Testing.  |
+| TC009     |Content Accuracy | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | All links and buttons across index.html, search.html, packages.html, and 404.html use descriptive, meaningful, and accessible text. No vague phrases such as "click here" or "more info" were found. Every navigational item and button clearly communicates its purpose, behaves consistently across desktop and mobile, and is understandable when read aloud using a screen reader. The only minor enhancement recommended is adding explicit <label> elements to form fields (city search + date pickers) to further improve accessibility, but this does not prevent the test from passing. Evidenced in README - Taste Case TC009 Testing.  |
+| TC010     |Start Exploring Button | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Evidenced in README - Taste Case TC010 Testing.|
+| TC011     |Popular Destinations - Explore Buttons | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Evidenced in README - Taste Case TC011 Testing.|
+| TC012     |Popular Destinations - Section Navigation | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Evidenced in README - Taste Case TC012 Testing.|
+| TC013     |Contact Navigation Link - Footer Scrolling | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Evidenced in README - Taste Case TC013 Testing.|
+| TC014     |Image Carousel/Slider| Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Evidenced in README - Taste Case TC014 Testing.|
+| TC015     |About Us Content Scrollbarr| Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Evidenced in README - Taste Case TC015 Testing.|
+| TC016     |Visual Consistency| Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Evidenced in README - Taste Case TC016 Testing.|
+| TC017     |Font Readability| Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Base body text is set to 16px using Lato with generous line-height (1.6–1.8), and headings use Montserrat with increased weight and size for clear hierarchy. Across index.html, search.html, and packages.html, paragraphs, search result descriptions, and most labels meet or exceed the 16px guideline, with consistent spacing and layout at multiple breakpoints. Colour contrast is strong for charcoal text on light backgrounds and white text on ocean blue; however, button text on coral orange requires adjustment to meet WCAG contrast thresholds. Evidenced in README - Taste Case TC017 Testing.|
+| TC018     |Visual Hierarchy| Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Pass on this whole set of TC018 tests.
+The only optional refinement, is to tidy up heading levels like h5 -> h3 ("Key Features") and possibly h4 -> h3 for destination cards to avoid any perceived "skipped" heading levels.Evidenced in README - Taste Case TC018 Testing.|
+| TC019     |Text Spacing| Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Spacing behaviour is consistent across the three pages and across breakpoints. Evidenced in README - Taste Case TC019 Testing.|
+| TC020     |Button Styles and States | Edge and Firefox        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Button types identified; primary and action Button styles are consistent; strong hover and active states; keyboard focus visible (via Bootstrap); responsive sizes; icons correctly used; consistent design tokens across all pages. Fail (WCAG AA contrast): white/off-white text on #FF6B35 coral does not reach 4.5:1 contrast for normal-sized text (Not enough the fail collective tests used in this test). This is the main accessibility gap for this test case. N/A: disabled button states aren't implemented in the current UI. Evidenced in README - Taste Case TC020 Testing.|
+| TC021    |Desktop Responsiveness| Chrome       | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Previous code adjustments completed in commit Button, Tiles and Form Object adjustments fb52e62. The tablet layout tests across index.html, search.html, and packages.html at 768×1024 portrait resolution confirm that the site adapts correctly to medium‑sized screens, maintaining usability, readability, and accessibility.  The test execution across index.html, search.html, and packages.html at desktop resolution (1920×1080) and repeated in Chrome, Firefox, and Edge confirms that the website's layout, responsiveness, and interactive elements meet the expected design and accessibility standards.Evidenced in README - Taste Case TC021 Testing (and previous test cases 1 to 15).|
+| TC022     |Tablet Responsiveness| Chrome       | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Previous code adjustments completed in commit Button, Tiles and Form Object adjustments fb52e62. The tablet layout tests across index.html, search.html, and packages.html at 768×1024 portrait resolution confirm that the site adapts correctly to medium‑sized screens, maintaining usability, readability, and accessibility. Evidenced in README - Taste Case TC022 Testing.|
+| TC023     |Mobile Responsiveness| Chrome        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | Previous code adjustments completed in commit Button, Tiles and Form Object adjustments fb52e62. The tablet layout tests across index.html, search.html, and packages.html at 768×1024 portrait resolution confirm that the site adapts correctly to medium‑sized screens, maintaining usability, readability, and accessibility. Evidenced in README - Taste Case TC023 Testing.|
+| TC031    |Page Load Time| Chrome (Lighthouse)       | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Partial Pass (1st attempt)  |         |      | All three pages passed the performance tests across desktop, mobile, Lighthouse, and PageSpeed Insights. Index.html and Packages.html consistently met thresholds with strong scores. Search.html passed but showed performance overhead from Google Maps API, especially on mobile and under throttled networks. Improvement opportunities mainly involve image optimisation and third‑party script management. Evidenced in README - Taste Case TC031 Testing.|
+| TC032    |Optimised Images| Chrome (Lighthouse)         | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (1st attempt)  |         |      | The current design is lightweight enough that both tools should show decent image performance. But as soon as the website starts including more media (photos, hero images, cards, destination galleries), I'll need to proactively optimise images to keep both lab and field scores strong. Evidenced in README - Taste Case TC032 Testing.|
+| TC033    |Code Validation| Chrome (Lighthouse)        | Chrome 142.0.7444.176 8 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080)| Pass (2nd attempt)  |         |Fail (1st attempt)      | Some minor warnings adjusted. Two errors were identified and debugged. Evidenced in README - Taste Case TC033 Testing.|
 
 ---
 
