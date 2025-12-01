@@ -70,6 +70,7 @@
       - [search.js — purpose & structure](#searchjs--purpose--structure)
       - [packages.js — purpose & structure](#packagesjs--purpose--structure)
   - [Reflection](#reflection)
+- [Credits](#credits)
 - [References](#references)
  
 # Milestone Project 2
@@ -11598,6 +11599,15 @@ The UI remains consistent across all pages, with a shared nav, footer, and butto
 - **API function:** Screenshots of London, Paris, Tokyo, New York, Barcelona searches validating markers, address/rating results, and keyboard-triggered search.
 - **Accessibility:** NVDA/VoiceOver testing confirming carousel controls announce correctly ("Slide 1", "Previous", "Next").
 - **Lighthouse**: Performance, accessibility, best practices, and SEO audits for all three pages.
+
+## Credits
+[⬆ Back to Table of contents](#table-of-contents)
+
+### People
+
+Mentor Brian Macharia for advising and guiding throughout two thirds of the project lifecycle.
+Can Sücüllü for advising and guiding throughout the final third of the project lifecycle.
+Professor Raghav Kovvuri for advising and guiding throughout the project lifecycle.
 
 ---
 
