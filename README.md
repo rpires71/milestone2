@@ -7608,3 +7608,597 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
   </tr>
 </table>
 </details>
+<details>
+  <summary><strong>Test Case TC011 - Popular Destinations - Explore Buttons</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC011</td>
+    <td><strong>Feature:</strong> Popular Destinations - Explore Buttons (search.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Explore" buttons on each Popular Destination card trigger the searchCity() JavaScript function and populate search results correctly.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> These buttons provide quick-access searches for popular cities, enhancing user experience by eliminating manual typing. They must trigger searches correctly to fulfill this purpose.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+
+1. Open search.html in browser.<br>
+2. Scroll down to "Popular Destinations" section.<br>
+3. Verify 4 destination cards are displayed:<br>
+   - New York City<br>
+   - Barcelona<br>
+   - Paris<br>
+   - Tokyo<br>
+
+**Observations: Working as expected.**
+
+**Microsoft Edge:**
+<img width="1638" height="838" alt="image" src="https://github.com/user-attachments/assets/79cfe7c2-887c-49d2-848f-7a89aaab583c" />
+
+**Mozilla Firefox:**
+<img width="1697" height="925" alt="image" src="https://github.com/user-attachments/assets/ec1458fa-4f44-4fb5-8353-487ea98a6e0e" />
+
+4. For each destination card, verify:<br>
+   - Image loads correctly (200px height, covers container)<br>
+   - Destination name displayed (H4 heading)<br>
+   - Description text present<br>
+   - "Explore [City]" button visible with search icon<br>
+
+**Note: Similar structure for the remainding three cards.**
+<img width="464" height="679" alt="image" src="https://github.com/user-attachments/assets/e224274c-d2f5-478a-b30b-77cb7f2f09ea" />
+
+5. Test "Explore NYC" button:<br>
+   - Click button<br>
+   - Verify city search input populates with "New York City"<br>
+   - Confirm Google Map centers on New York City<br>
+   - Check that place markers appear on map<br>
+   - Verify results panel displays NYC attractions<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/a78f6843-3689-4633-b93a-c8ba442a5602)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/02937305-b2ba-494b-a84b-8e32d79d4024)
+
+6. Repeat test for each city:<br>
+   - Click "Explore Barcelona" -> search for Barcelona<br>
+
+**Observations: Working as expected.**
+
+**Microsoft Edge:**
+
+<img width="1613" height="854" alt="image" src="https://github.com/user-attachments/assets/6e0ba845-c3b3-4013-86ad-52f500259f81" />
+
+**Mozilla Firefox:**
+
+<img width="1693" height="883" alt="image" src="https://github.com/user-attachments/assets/4c256d83-060b-4dcc-81a2-e86472c6d283" />
+
+- Click "Explore Paris" -> search for Paris<br>
+
+**Microsoft Edge:**
+
+<img width="1572" height="996" alt="image" src="https://github.com/user-attachments/assets/a0122d6a-759b-42a0-b052-e8ef7ca976c7" />
+
+**Mozilla Firefox:**
+
+<img width="1607" height="943" alt="image" src="https://github.com/user-attachments/assets/590f898a-6aa3-4764-a6fe-36888e50bfe2" />
+
+- Click "Explore Tokyo" -> search for Tokyo<br>
+
+**Microsoft Edge:**
+
+<img width="1648" height="939" alt="image" src="https://github.com/user-attachments/assets/e05519eb-6033-4a57-a796-93f8a331a2bd" />
+
+**Mozilla Firefox:**
+
+<img width="1656" height="998" alt="image" src="https://github.com/user-attachments/assets/68b2d0b2-5572-49a1-9906-aa21ee082044" />
+
+6. Verify onclick attribute calls correct function:<br>
+   - Use DevTools to inspect button elements<br>
+   - Confirm onclick="searchCity('[City Name]')"<br>
+
+<img width="367" height="383" alt="image" src="https://github.com/user-attachments/assets/a2eabc04-40eb-4de6-bc64-f8cd47d0b1c4" />
+
+7. Test keyboard accessibility:<br>
+   - Tab to each Explore button<br>
+   - Press Enter to trigger search<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/d2d41f41-bfd3-4ec1-8d08-83df2eb26c01)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/f4ea47b7-290a-4c92-a394-8de7dc5a37a4)
+
+8. Test on tablet (768x1024) and mobile (375x667) viewports:<br>
+   - Verify cards stack vertically (2 per row on tablet, 1 per row on mobile)<br>
+   - Confirm buttons are touch-friendly<br>
+   - Test touch interactions<br>
+
+**Observations: Working as expected.**
+
+**(768x1024)**
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/d89b2231-3363-4c41-b075-e1a9f99c2a31)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/675fb624-619f-4870-b792-718e21a3a0d1)
+
+**(375x667)**
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/2a4c88b2-a04e-44f3-838a-eedc469596e3)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/0b3fe887-4d99-4a72-987e-a05bf9aae757)
+
+9. Check console for JavaScript errors after clicking buttons.<br>
+
+**Microsoft Edge:**
+<img width="1671" height="876" alt="image" src="https://github.com/user-attachments/assets/3df9ec7f-ec94-4791-8db8-cec1a89170f8" />
+
+**Mozilla Firefox:**
+<img width="1796" height="884" alt="image" src="https://github.com/user-attachments/assets/c468d411-1c90-4d51-8bac-bfc4507fcf2a" />
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<details>
+<summary><strong>Test Case TC012 - Popular Destinations - Section Navigation</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC012</td>
+    <td><strong>Feature:</strong> Popular Destinations - Section Navigation (Anchor Link)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Popular Destinations" navigation link in the navbar correctly scrolls to the Popular Destinations section using the #popular anchor.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The navbar provides direct navigation to the Popular Destinations section via an anchor link. This must function correctly to support efficient page navigation and user experience.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+    
+    1. Open search.html in browser.<br>
+
+2. Ensure page is scrolled to top (or any position above Popular Destinations).<br>
+
+**Observations: Working as expected.**
+
+**Microsoft Edge:**
+<img width="1885" height="677" alt="image" src="https://github.com/user-attachments/assets/f24b333b-4b45-497c-9019-78f1a174f6b7" />
+
+**Mozilla Firefox:**
+<img width="1830" height="792" alt="image" src="https://github.com/user-attachments/assets/d1280f28-55ba-4b0b-b0db-bed0d0bfc6bf" />
+
+3. Locate "Popular Destinations" link in navigation menu.<br>
+
+<img width="1753" height="849" alt="image" src="https://github.com/user-attachments/assets/2e842237-56fb-4309-b71d-cbe494edea4a" />
+
+4. Verify link has href="#popular" attribute (inspect with DevTools if needed).<br>
+
+**Microsoft Edge:**
+<img width="1049" height="695" alt="image" src="https://github.com/user-attachments/assets/1d998fed-281f-4c8f-a31e-91e3b06bb460" />
+
+**Mozilla Firefox:**
+<img width="1744" height="925" alt="image" src="https://github.com/user-attachments/assets/c2cffd9b-cbf5-4ab0-aabc-cdea73cd0867" />
+
+5. Click "Popular Destinations" navigation link.<br>
+6. Verify page scrolls to Popular Destinations section (id="popular").<br>
+
+**Microsoft Edge:**
+<img width="1049" height="695" alt="image" src="https://github.com/user-attachments/assets/1d998fed-281f-4c8f-a31e-91e3b06bb460" />
+
+**Mozilla Firefox:**
+<img width="1744" height="925" alt="image" src="https://github.com/user-attachments/assets/c2cffd9b-cbf5-4ab0-aabc-cdea73cd0867" />
+
+<img width="1009" height="603" alt="image" src="https://github.com/user-attachments/assets/df6fbd30-defe-4fe2-bdb3-2272cf587949" />
+
+7. Check scroll behavior:<br>
+   - If smooth scrolling implemented (script.js), verify smooth animation<br>
+   - If not, verify instant jump to section<br>
+
+<img width="667" height="748" alt="image" src="https://github.com/user-attachments/assets/56665faa-6bd6-46dc-ba98-b34ad4ff1601" />
+
+8. Confirm Popular Destinations heading is visible after scroll.<br>
+
+**Microsoft Edge:**
+<img width="1738" height="812" alt="image" src="https://github.com/user-attachments/assets/1a3a8056-8a45-45ac-a6a9-182dc068698b" />
+
+**Mozilla Firefox:**
+<img width="1670" height="892" alt="image" src="https://github.com/user-attachments/assets/7631cb81-5e46-4a84-b77b-8e5be5e5d61e" />
+
+9. Test from different scroll positions:<br>
+   - From top of page<br>
+   - From middle of page (search section)<br>
+   - From bottom of page (footer)<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/96c1f1b7-3b6b-469d-9164-18f1e552cf4d)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/c8fc512d-b4cd-4fb9-b8bc-7b1f48a1cdf5)
+
+10. Test keyboard accessibility:<br>
+    - Tab to "Popular Destinations" link<br>
+    - Press Enter to navigate<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/a3e8ba5b-318d-4737-b1f3-5b0ca9d54b31)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/2609ccb0-1755-48da-ae74-2cbe97648580)
+
+11. Test on mobile:<br>
+    - Open hamburger menu<br>
+    - Click "Popular Destinations"<br>
+    - Verify scroll occurs and menu closes<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/153920b8-7af7-4152-a7b2-6dfb9c29d281)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/2ae821fa-48a6-4851-bd5f-c5f20914b344)
+
+12. Test when opening link from external page:<br>
+    - From index.html, click navbar "Popular Destinations" (href="search.html#popular")<br>
+    - Verify navigation to search.html occurs<br>
+    - Confirm page loads scrolled to Popular Destinations section<br>
+    - From packages.html, click navbar "Popular Destinations" (href="packages.html#popular")<br>
+    - Verify navigation to packages.html occurs<br>
+    - Confirm page loads scrolled to Popular Destinations section<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/153920b8-7af7-4152-a7b2-6dfb9c29d281)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/2ae821fa-48a6-4851-bd5f-c5f20914b344)
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC013 - Contact Navigation Link - Footer Scrolling</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong>TC013</td>
+    <td><strong>Feature:</strong> Contact Navigation Link - Footer Scrolling (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Contact" link in the navigation menu correctly scrolls to the footer section (id="contact") on each page (index.html, search.html, packages.html).</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The Contact navbar link provides quick access to contact information in the footer. This must function correctly on all pages to support user communication and information discovery. This is a key usability feature mentioned in the HTML comments.</td>
+  </tr>
+  
+ 
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+      
+    <strong>Part 1: Test on index.html (Same-Page Anchor)</strong><br>
+
+1. Open index.html in browser.<br>
+2. Ensure page is scrolled to top or middle position.<br>
+3. Locate "Contact" link in navigation menu.<br>
+4. Verify href="#contact" attribute using DevTools if needed.<br>
+5. Click "Contact" navigation link.<br>
+6. Verify page scrolls to footer section (id="contact").<br>
+7. Confirm footer contact information tiles are visible.<br>
+8. Check scroll behavior (smooth if script.js implements it).<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f5bd1fc4-2806-472d-b15b-5d1b7650ae4d)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/2b77d0bf-67dc-4aeb-b920-819e799c18ea)
+
+9. Test keyboard navigation:<br>
+   - Tab to Contact link<br>
+   - Press Enter<br>
+   - Verify scroll occurs<br>
+10. Test from different scroll positions (top, middle, bottom).<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/98a1dc93-966b-487b-867e-29ef4c3c8f37)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/fcd34d0d-f58c-4923-8c04-2421ee0a3b82)
+
+11. On mobile, verify hamburger menu closes after clicking Contact.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/8ee56d5d-13bd-4ad1-9f8e-194dcd7c9240)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/7b5bb89b-4d5c-4eb3-bf32-c152a23fc2e3)
+
+<br>
+<strong>Part 2: Test on search.html (Same-Page Anchor)</strong><br>
+
+12. Navigate to search.html.<br>
+13. Locate "Contact" link (href="search.html#contact").<br>
+14. Click Contact link.<br>
+15. Verify scroll to footer (id="contact").<br>
+16. Confirm contact tiles visible.<br>
+17. Test keyboard navigation (Tab + Enter).<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/1b20ad00-24df-4eff-90b7-7d58eb3a9a67)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/5a299a12-7053-4b5f-b580-0b9157496fbe)
+
+18. On mobile, verify menu closes after navigation.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/6420ebf3-8c0d-4916-aad5-57be38454bb5)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/f4b1cb4e-3709-4d98-93ec-ba19fb450d83)
+
+<br>
+<strong>Part 3: Test on packages.html (Same-Page Anchor)</strong><br>
+
+19. Navigate to packages.html.<br>
+20. Locate "Contact" link (href="packages.html#contact").<br>
+21. Click Contact link.<br>
+22. Verify scroll to footer (id="contact").<br>
+23. Confirm contact tiles visible.<br>
+24. Test keyboard navigation.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/6a95a1b8-0960-4eef-ba3f-ca6aa736fdc7)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/04c69f5e-bc34-4ef5-b4c4-3c79a3f9e907)
+
+25. On mobile, verify menu closes.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f756710d-5ed1-49d4-b521-ad46a7b66ed2)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/97a12f1f-55c0-4d00-8d4e-ed79cad64f88)
+
+<br>
+<strong>Part 4: Cross-Page Navigation Test</strong><br>
+
+26. From index.html, navigate to search.html using navbar.<br>
+27. Click Contact link on search.html.<br>
+28. Verify it scrolls to search.html footer (not index.html).<br>
+29. From search.html, navigate to packages.html.<br>
+30. Click Contact link on packages.html.<br>
+31. Verify correct footer scroll on packages.html.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/e9212f79-f790-47c8-bdaa-d8f1e14ca89b)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/f71e17e0-3fcc-468f-8aea-619ca729e282)
+
+<br>
+<strong>Part 5: Footer Contact Content Verification</strong><br>
+
+32. On each page footer, verify contact tiles display:<br>
+    - Address information<br>
+    - Phone number<br>
+    - Email address<br>
+    - Social media links (if present)<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/a70c5eb3-a8e2-45ac-a1b1-438d11c04f12)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/9ea47032-e6ca-4b9a-baeb-848a88f035a2)
+
+33. Check that footer id="contact" exists on all three pages.<br>
+34. Verify consistent footer styling across pages.<br>
+
+**Observations: id="contact" present in index,html, search.html, packages.html.**
+
+**index.html**
+<img width="961" height="429" alt="image" src="https://github.com/user-attachments/assets/45e3cd91-b71e-446c-b83b-ecac0cbaf615" />
+
+**search.html**
+<img width="995" height="420" alt="image" src="https://github.com/user-attachments/assets/756b2e8c-e2db-404d-90ed-11975fde7ace" />
+
+**package.html**
+<img width="1058" height="529" alt="image" src="https://github.com/user-attachments/assets/5b7a237c-d25f-4aff-96d1-bfe94edc0aaa" />
+</td>
+
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC014 - Image Carousel/Slider</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC014</td>
+    <td><strong>Feature:</strong> Image Carousel/Slider (index.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the Bootstrap carousel on index.html displays destination images correctly, transitions smoothly between slides, and provides accessible navigation controls.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The carousel showcases popular destinations visually and is a key engagement element on the homepage. Proper functionality ensures good first impressions and accessibility compliance.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+
+1. Open index.html in browser.<br>
+2. Locate the carousel in the main section (right column, 7/12 width on large screens).<br>
+3. Verify carousel displays first image (Paris - Eiffel Tower) on page load.<br>
+4. Confirm carousel auto-plays and transitions to next slide after ~5 seconds.<br>
+5. Test manual navigation:<br>
+   - Click left arrow (previous) button<br>
+   - Click right arrow (next) button<br>
+   - Click carousel indicators (dots) at bottom<br>
+6. Verify all 5 images load correctly:<br>
+   - Paris, France<br>
+   - Tokyo, Japan<br>
+   - New York, USA<br>
+   - Barcelona, Spain<br>
+   - London, UK<br>
+7. Check that captions display on desktop (hidden on mobile via d-none d-md-block).<br>
+8. Verify smooth transitions (slide effect) between images.<br>
+9. Test keyboard navigation:<br>
+   - Tab to carousel controls<br>
+   - Press Enter to navigate slides<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/36b845d4-5beb-4444-8cd0-d4f69cfe5741)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/3075a32d-a65b-4b44-8d5f-e48dae3c59c5)
+
+10. Test on on tablet (768x1024) and mobile (375x667):<br>
+    - Verify carousel responsive<br>
+    - Test swipe gestures (left/right)<br>
+    - Confirm captions hidden on small screens<br>
+
+**Observations: (375x667) Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/9efe34c5-6601-4121-b442-e28e8e6d1a2a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/f3f3e080-e056-47ff-8abe-8cb19541c61c)
+
+**Observations: (768x1024) Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/520cc541-d1f7-4a05-bb1b-aa8ad77fe747)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/fa386946-c95b-49bb-af76-90c5c82fb3fd)
+
+11. Check accessibility:<br>
+    - Verify aria-labels on controls ("Previous", "Next", "Slide 1-5")<br>
+    - Test with screen reader (NVDA/VoiceOver)<br>
+
+**Observations: Working as expected.**
+<img width="1167" height="610" alt="image" src="https://github.com/user-attachments/assets/69999848-241b-467e-a316-d0b754425845" />
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f16e218e-dc36-4b76-868b-52a62cda8e07)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/987c73bd-0cc1-407d-8609-5735fb2ab934)
+
+**Observations: Verification aria-labels on controls ("Previous", "Next", "Slide 1-5")**
+
+**index.html**
+<img width="770" height="765" alt="image" src="https://github.com/user-attachments/assets/e1c8dd9e-34da-4400-a975-c0839839f926" />
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC015 - About Us Content Scrollbar</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC015</td>
+    <td><strong>Feature:</strong> About Us Content Scrollbar (index.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the About Us content section on index.html displays a vertical scrollbar when content exceeds the container height and that scrolling functions correctly.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The About Us section uses a custom scrollable container (.about-content) to maintain consistent layout heights while allowing access to all content. This must function properly for content accessibility.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+
+1. Open index.html in browser.<br>
+2. Locate About Us section in main content area (left column, 5/12 width).<br>
+3. Inspect the .about-content container using browser DevTools.<br>
+4. Verify CSS properties applied:<br>
+   - max-height set (check style.css)<br>
+   - overflow-y: auto (enables vertical scrolling)<br>
+
+**Observations:**
+
+**Microsoft Edge - .about-container.**
+<img width="1890" height="983" alt="image" src="https://github.com/user-attachments/assets/98cdce9d-5f33-45ff-aa7b-3ef2ee43b0fa" />
+
+**Mozilla Firefox - CSS Properties.**
+<img width="1905" height="1020" alt="image" src="https://github.com/user-attachments/assets/df861f1e-1036-4b53-89a7-5304181a7131" />
+
+5. Check if vertical scrollbar appears on the right side of content.<br>
+6. Test scrolling functionality:<br>
+   - Use mouse wheel to scroll up/down<br>
+   - Click and drag scrollbar thumb<br>
+   - Click scrollbar track (above/below thumb)<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/10f689fd-8837-4df8-846a-32f8f96173e1)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/d4c51513-b8b6-4b2e-aacc-c63baad8a12e)
+
+7. Verify all content is accessible via scrolling:<br>
+   - About Us heading<br>
+   - Description paragraphs (3 paragraphs)<br>
+   - Key Features list (4 bullet points)<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/10f689fd-8837-4df8-846a-32f8f96173e1)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/d4c51513-b8b6-4b2e-aacc-c63baad8a12e)
+
+8. Test keyboard scrolling:<br>
+   - Click inside About Us area to focus<br>
+   - Use arrow keys (up and down) to scroll<br>
+   - Use Page Up/Page Down keys<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/1444c752-35cd-46f7-ae83-524c16055f21)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/0cf0e8e0-2f57-484a-aca6-4378a9e9a253)
+
+9. Test on different screen sizes:<br>
+   - Desktop (1920x1080) - scrollbar visible if content exceeds max-height<br>
+   - Tablet (768x1024) - verify scrolling still works<br>
+   - Mobile (375x667) - check content accessibility<br>
+
+**Observations: Working as expected.**
+
+**Desktop (1920x1080)**
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f5a333e3-fb46-4a61-ba01-ee22ca9bcd15)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/6a467065-3bc9-4d10-9e7b-65ffb4cf77dc)
+
+**Desktop (768x1024)**
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/7acfb589-9d74-45ca-9bd0-905e63b28093)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/0fc7b28d-d1c9-427c-a8db-9f046486f6b2)
+
+\*\*Desktop (375x667)
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/78630f4f-767b-44e8-9d29-367ae387dec8)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/fa23035d-d927-4c36-8e61-bef9ae2062c4)
+
+10. Test with screen reader - ensure all content is readable even if scrolled out of view initially.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/a2235edb-29ac-4408-9281-f6600cbf9d4c)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/dc299506-210c-4128-9510-ba608490228d)
+
+11. Verify scrollbar styling matches design theme.<br>
+
+**Observations: Matches design.**
+<img width="868" height="841" alt="image" src="https://github.com/user-attachments/assets/6eb8d75a-0fb6-4b2e-a279-3830c44b7a89" />
+</td>
+
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail:PASS</strong> </td>
+  </tr>
+</table>
+</details>
