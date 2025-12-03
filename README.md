@@ -7381,3 +7381,230 @@ This approach overrides the browser's default behaviour and ensures that both in
   </tr>
 </table>
 </details>
+<details>
+  <summary><strong>Test Case TC008 - Content Accuracy</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC008</td>
+    <td><strong>Feature:</strong> Content Accuracy (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that all text content is grammatically correct, free from typos, uses consistent UK English spelling, and maintains professional tone.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Accurate, professionally presented content builds trust and enhances credibility, supporting user comprehension and meeting quality standards.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+
+1. Read all headings, paragraphs, and button labels on index.html.<br>
+2. Check for grammar, spelling, and punctuation errors.<br>
+3. Verify UK spelling (e.g., "travelling" not "traveling", "colour" not "color").<br>
+4. Confirm consistency in terminology (e.g., "Holiday Packages" not mixed with "Vacation Packages").<br>
+5. Check that instructional text is clear (e.g., "Enter a city name to search").<br>
+6. Repeat for search.html and packages.html.<br>
+7. Use Grammarly or similar tool for final proofreading.<br>
+8. Verify content displays correctly on mobile without text cut-offs.<br>
+
+**Results:**
+**Copilot check with content of index.html**
+<img width="740" height="647" alt="image" src="https://github.com/user-attachments/assets/cc622ce7-3b7d-4a8a-962a-2918109b4ef8" />
+
+**Copilot check with content of search.html**
+<img width="711" height="497" alt="image" src="https://github.com/user-attachments/assets/bf096d73-2306-4503-b9c9-e72927c8f3ae" />
+
+**Copilot check with content of packages.html**
+<img width="574" height="700" alt="image" src="https://github.com/user-attachments/assets/38cb57bc-e271-4f73-8db6-402a46a00e72" />
+
+**Copilot check with content of packages.html**
+<img width="346" height="141" alt="image" src="https://github.com/user-attachments/assets/4751690e-5f0f-4de5-a6d1-2ed9d615740f" />
+
+**Mobile Display Check**
+<img width="575" height="174" alt="image" src="https://github.com/user-attachments/assets/8f718199-1746-4694-bfca-36a0a68e4d9b" />
+
+**Fix - index.html**
+**Before:**
+<img width="708" height="193" alt="image" src="https://github.com/user-attachments/assets/97e05c71-346b-431b-850b-97528f665371" />
+**After:**
+<img width="633" height="185" alt="image" src="https://github.com/user-attachments/assets/c9e47add-0482-4017-9d57-dc57959d9849" />
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC009 - Link Descriptions and Titles</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC009</td>
+    <td><strong>Feature:</strong> Link Descriptions and Titles</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that all links have clear, descriptive text or titles that accurately reflect their destination or function (avoiding vague phrases like "Click Here").</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Descriptive link text improves accessibility for screen readers, enhances SEO, and supports WCAG 2.1 Success Criterion 2.4.4 (Link Purpose).</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+1. Navigate through all pages (index, search, packages).<br>
+
+**- All four pages load correctly and share a consistent primary navigation bar (`About Us`, `Search`, `Popular Destinations`, `Packages`, `Contact`) with the exception of the 404.html file.**  
+**- Additional links such as **Holiday Destination Finder**, **Start Exploring**, phone numbers, and email addresses are present where expected.**
+
+2. Inspect every link for descriptive visible text.<br>
+
+   **- All links use meaningful, descriptive text:**
+   **- Main nav: `About Us`, `Search`, `Popular Destinations`, `Packages`, `Contact`.**  
+    **- CTA/link: `Start Exploring`.**
+   **- CTA/link: `Explore Barcelona`, `Explore Paris`, `Explore New York`, `Explore Tokyo`.**  
+    **- All form objects in search.html and packages.html.**
+   **- Image Slider descriptions in index.html.**
+   **- Panel and Map oin search.html.**
+   **- Utility links: telephone numbers (`+44 (0) 123 456 7890`, etc.) and email addresses (`info@holidayfinder.com`, `support@holidayfinder.com`).**  
+    **- The 404 page uses the link **Go to Packages**, which clearly indicates its destination.**
+
+3. Hover over links to review title attributes (if present).<br>
+
+   **- No links currently define a `title` attribute.**  
+   **- Hover feedback is provided visually via CSS hover states (colour/background changes), not via title tooltips.**
+
+4. Verify no links use vague phrases like "click here" or "more info" without context.<br>
+
+   **- No instances of vague or generic link text were found across `index.html`, `search.html`, `packages.html`, or `404.html`.**  
+   **- All links are contextually clear without requiring surrounding text for meaning.**
+
+5. Check that button labels clearly describe their action (e.g., "Search Destinations" not just "Search").<br>
+
+   **- Primary action buttons are descriptive:**
+   **- `Search Destination`, `Attractions`, `Restaurants`, `Hotels`, `Cafes`, `Shopping`.**  
+    **- Package actions: `Search Hotels`, `Search Flights`, `Complete Package`, `Book Activities`.**  
+    **- Destination CTAs: `Explore NYC`, `Explore Barcelona`, `Explore Paris`, `Explore Tokyo`.**  
+   **- Carousel controls on the homepage use Bootstrap's default structure with visually hidden text `Previous` and `Next` and indicator buttons with `aria-label="Slide X"`, which is screen-reader friendly even though the buttons themselves have no visible text.**  
+   **- Minor limitation: text inputs (e.g. city search, date fields) rely on `placeholder` rather than explicit `<label>` elements, which could be improved for accessibility.**
+
+6. Use screen reader (NVDA or VoiceOver) to verify links make sense when read aloud.<br>
+
+   **- Based on the HTML structure:**
+   **- Links will be announced using their visible text (e.g. "About Us", "Popular Destinations", "Start Exploring", "Go to Packages"), which is meaningful in isolation.**  
+    **- Buttons will be announced with clear labels such as "Search Destination", "Search Hotels", "Complete Package", "Explore NYC", etc.**  
+    **- Carousel controls expose `Previous`, `Next`, and slide indicators via `aria-label` / visually hidden text, so they are accessible to screen readers.**  
+   **- Potential improvement: add `<label>` elements for form fields (city search and date inputs) to provide explicit accessible names rather than relying solely on placeholders.**
+
+7. Test on mobile and desktop for consistency.<br>
+
+   **- The same descriptive link and button text is used on both desktop and mobile (responsive navbar with hamburger menu).**  
+   **- Labeling and link text remain consistent across viewports; only the layout changes.**  
+   **- On touch devices (and in Edge/Firefox responsive emulation), hover effects are not shown, which is expected behaviour for touch interfaces; however, focus and active states and the visible text remain clear and consistent.**
+
+**Conclusion:**
+
+- All links and buttons use descriptive, meaningful text with no vague "click here" style phrases.
+- Navigation and CTAs are understandable when read aloud and remain consistent across pages and devices.
+- The only notable accessibility improvement would be to add explicit `<label>` elements for form inputs (city search and date pickers) to further enhance screen-reader support.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong>
+
+All links and buttons across `index.html`, `search.html`, `packages.html`, and `404.html` use descriptive, meaningful, and accessible text. No vague phrases such as "click here" or "more info" were found. Every navigational item and button clearly communicates its purpose, behaves consistently across desktop and mobile, and is understandable when read aloud using a screen reader. The only minor enhancement recommended is adding explicit `<label>` elements to form fields (city search + date pickers) to further improve accessibility, but this does not prevent the test from passing.
+</td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC010 - Start Exploring Button</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC010</td>
+    <td><strong>Feature:</strong> Start Exploring Button (index.html)</td>
+</tr>
+<tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the "Start Exploring" button in the hero section of <code>index.html</code> correctly navigates to the search page (<code>search.html</code>).</td>
+</tr>
+<tr>
+    <td colspan="2"><strong>Justification:</strong> This button is the primary call-to-action (CTA) on the homepage, directing users to the main functionality of the website. It must operate reliably to support the intended user journey.</td>
+</tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+
+
+1. Open <code>index.html</code> in a browser.<br>
+2. Locate the "Start Exploring" button in the hero section.<br>
+3. Verify the button displays both the search icon (<code>bi-search</code>) and the text label "Start Exploring".<br>
+
+**Observations: Working as expected.**
+
+**Microsoft Edge:**
+<img width="1114" height="353" alt="image" src="https://github.com/user-attachments/assets/4cdacd50-5394-4bf6-a2e5-043a0fac7e72" />
+
+**Mozilla Firefox:**
+<img width="1628" height="508" alt="image" src="https://github.com/user-attachments/assets/03b5ff89-ff75-405b-b54e-fef8e09f3ac9" />
+
+4. Confirm the button styling matches the primary theme (coral-orange background).<br>
+
+**Observations: Working as expected.**
+
+<img width="663" height="343" alt="image" src="https://github.com/user-attachments/assets/18a3a733-f001-4106-91ce-e60ba6660850" />
+
+5. Hover over the button and verify that a visual change appears (e.g., elevated hover or shadow effect).<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/ef84c409-ba23-4281-b747-350fc084ef1d)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/d835ea3f-1973-4957-91dc-3ea330622b55)
+
+6. Click the "Start Exploring" button.<br>
+7. Confirm that navigation occurs to <code>search.html</code>.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/28956f46-afab-4755-bb03-a993c0d10669)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/0cc8f717-d115-46d3-aba5-3ed3d3417c4c)
+
+8. Verify that the page loads correctly, displaying the search input and interactive map.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/1a33c29f-3716-4133-a34a-f7014a0d4181)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/be3d64ff-fda1-4c40-8d18-0250423d908f)
+
+9. Test keyboard accessibility: use the <kbd>Tab</kbd> key to focus on the button, then press <kbd>Enter</kbd>.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/e61cee15-bf81-45ca-a2e5-1fb83b8b5da7)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/40e2759d-2ef4-42a5-99a2-4870fb9630b9)
+
+10. Test on tablet devices (e.g., 768×1024) and verify the button remains clearly visible and touch-friendly.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/bffdbe02-2e94-4408-85d9-3fd1057fe0cd)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/bc951c11-ac98-42d5-a47d-20737bdbc40c)
+
+11. Test on mobile devices (e.g., 375×667) and verify the button remains clearly visible and touch-friendly.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/431e7de2-8e7b-405b-a6a6-0da0817ca95e)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/236d1ad5-0fe4-4537-b2cd-538ce93f1436)
+
+**PASS**
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong></td>
+  </tr>
+</table>
+</details>
