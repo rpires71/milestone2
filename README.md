@@ -6919,3 +6919,186 @@ This approach overrides the browser's default behaviour and ensures that both in
 </tr>
 </table>
 </details>
+<details>
+  <summary><strong>Test Case TC002 - City Search Input and Search Destination Button</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC002</td>
+    <td><strong>Feature:</strong> City search input and Search Destination button</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Validate the search verifies entries, accepts user submissions, fetches results via the Google Places API and presents error notifications when empty.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The primary capability of the application is the **search** function. Locating destination information efficiently is assured with a dependable search function with appropriate validation.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+
+1. Navigate to search.html.<br>
+2. Leave search input empty and click "Search" button.<br>
+3. Verify alert message appears: "Please enter a city name".<br>
+
+**Microsoft Edge** - Working - Evidence below:
+<img width="1443" height="513" alt="image" src="https://github.com/user-attachments/assets/80592393-fdf0-4199-ad05-2420f39ac030" />
+
+**Mozilla Firefox** - Working - Evidence below:
+<img width="1668" height="706" alt="image" src="https://github.com/user-attachments/assets/6fa7e0fa-e39a-4290-8008-b9e3eda156f0" />
+
+4. Enter "London" and click Search.<br>
+5. Verify Google Map loads and centers on London.<br>
+6. Confirm place markers appear on map (10-20 markers).<br>
+7. Verify results panel displays place cards with name, rating, address.<br>
+
+**Microsoft Edge** - Working - Evidence below:
+<img width="1203" height="854" alt="image" src="https://github.com/user-attachments/assets/cb1ea592-6d15-464e-920f-81e2563e0d6a" />
+
+**Mozilla Firefox** - Working - Evidence below:
+<img width="1747" height="876" alt="image" src="https://github.com/user-attachments/assets/4faaa881-334a-4aba-a2a0-8cb800777ebd" />
+
+8. Test Enter key triggers search (keyboard accessibility).<br>
+
+**Microsoft Edge** - Working - Evidence below - Search button turns blue when keyboard used:
+
+<img width="1648" height="858" alt="image" src="https://github.com/user-attachments/assets/0768eb6e-7661-4344-89f6-297f13e18c5d" />
+
+**Mozilla Firefox** - Working - Evidence below - Search button turns blue when keyboard used:
+
+<img width="1731" height="806" alt="image" src="https://github.com/user-attachments/assets/cad4ee22-cf21-4934-b32e-840294ffd21e" />
+
+9. Test with various cities: Paris, Tokyo, New York, Barcelona.<br>
+
+**Microsoft Edge** - Working - Evidence below -Paris:
+
+<img width="1735" height="964" alt="image" src="https://github.com/user-attachments/assets/cb0107e5-ec01-4160-8b4c-1276d67ebaa1" />
+
+**Mozilla Firefox** - Working - Evidence below - Paris:
+
+<img width="1719" height="1009" alt="image" src="https://github.com/user-attachments/assets/67f176fc-a514-454c-a608-41e88d118054" />
+
+**Microsoft Edge** - Working - Evidence below -Tokyo:
+
+<img width="1686" height="893" alt="image" src="https://github.com/user-attachments/assets/6d7dcfcd-e4b9-4e27-b2d7-a71c43b0245d" />
+
+**Mozilla Firefox** - Working - Evidence below - Tokyo:
+
+<img width="1726" height="956" alt="image" src="https://github.com/user-attachments/assets/ee967466-f730-4e0f-b6cb-55a4e07bbdd0" />
+
+**Microsoft Edge** - Working - Evidence below -New York:
+
+<img width="1238" height="672" alt="image" src="https://github.com/user-attachments/assets/3efad039-a776-4884-b493-db0f153a1380" />
+
+**Mozilla Firefox** - Working - Evidence below - New York:
+
+<img width="1707" height="872" alt="image" src="https://github.com/user-attachments/assets/dfc3315f-fb26-46d3-a467-5cb8aaabd8ad" />
+
+**Microsoft Edge** - Working - Evidence below -Barcelona:
+
+<img width="1639" height="858" alt="image" src="https://github.com/user-attachments/assets/0b00b870-1db9-4bdb-81cc-f4dfad563bae" />
+
+**Mozilla Firefox** - Working - Evidence below - Barcelona:
+
+<img width="1628" height="994" alt="image" src="https://github.com/user-attachments/assets/47c2482e-eb6f-4b6b-8bc4-53583c7e6a5c" />
+
+10. Test with invalid input: "XYZ123" - verify graceful handling.<br>
+
+**Microsoft Edge** - Working - Evidence below - XYZ123:
+
+<img width="1498" height="699" alt="image" src="https://github.com/user-attachments/assets/f99077c3-4558-48ae-ae83-3b8e15a58bd8" />
+
+**Mozilla Firefox** - Working - Evidence below - XYZ123:
+
+<img width="1680" height="839" alt="image" src="https://github.com/user-attachments/assets/a897f47c-694c-472a-8a82-23a78fa7a8a5" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC003 - Action Buttons</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC003</td>
+    <td><strong>Feature:</strong> Action buttons (.btn-action) e.g. Attractions, Restaurants, Hotels, Cafes, Shopping</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Confirm that clicking each filter button updates the active state (initializeActionButtons() / filterPlaces()), changes currentSearchType, and refreshes the results accordingly after a search has been made.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Category filtering allows users to refine searches by place type, which is essential for targeted destination research. Incorrect behaviour would harm usability and trust.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+
+1. On search.html, search for "Barcelona".<br>
+2. Observe initial results (default: tourist attractions).<br>
+3. Click "Restaurants" button.<br>
+4. Verify button receives 'active' styling (highlighted).<br>
+5. Confirm previous results are cleared.<br>
+6. Verify new restaurant results appear on map and in results panel.<br>
+7. Repeat for each category: Hotels, Cafes, Shopping.<br>
+8. Check that only one button shows active state at a time.<br>
+9. Verify markers on map match the selected category.<br>
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/37219532-c45c-42f7-9943-36c7a302db70)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/53fb7886-c180-4b6a-868a-66f0186ea15e)
+
+**Observations:** Working as expected.
+</td>
+
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC004 - Results Panel</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC004</td>
+    <td><strong>Feature:</strong> Results panel (.results-panel) and Google Map (#map)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that Google Maps loads correctly, displays place markers, shows info windows on marker click, and provides map controls (zoom, pan). Ensure that clicking a result in the results panel recentres the map on that location and (where implemented).</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Synchronisation between list and map is central to spatial usability and supports users who rely on visual/geographical cues.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+
+1. Search for "Paris".<br>
+2. Verify map loads within 2-3 seconds.<br>
+3. Confirm map centers on Paris coordinates.<br>
+4. Check zoom level is appropriate (default: 13).<br>
+5. Verify zoom controls (+/-) appear and function.<br>
+6. Test panning/dragging the map.<br>
+7. Click a place marker on the map.<br>
+8. Verify info window opens showing place name, rating, address.<br>
+9. Click another marker - confirm previous info window closes.<br>
+
+**Observations:** All working as expected for both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/9b148786-b0ff-482d-91c2-906ce77dc374)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/bb78ad83-e48e-4978-9671-0d642457c07f)
+
+10. Test on mobile - verify touch interactions work (pinch zoom, swipe).<br>
+
+**Observations:** All working as expected for both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/d0bd8eff-32d3-433d-a577-2a98ac713bc2)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/c5ea1eb4-eee4-4aa1-a524-73903591aa08)
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong></td>
+  </tr>
+</table>
+</details>
