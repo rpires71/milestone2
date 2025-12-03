@@ -8202,3 +8202,523 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
   </tr>
 </table>
 </details>
+#### Usability and Typography Testing - Results
+
+[⬆ Back to Table of contents](#table-of-contents)
+
+<details>
+  <summary><strong>Test Case TC016 - Visual Consistency</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC016</td>
+    <td><strong>Feature:</strong> Visual consistency</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that layout structure, colour palette, typography, spacing, and UI components (e.g. buttons, headings, links) remain uniform across all three pages (index.html, search.html, packages.html).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Consistent design improves user experience by reinforcing brand identity, reducing cognitive load, and supporting navigation familiarity. It meets professional standards of user interface design and contributes to accessibility, usability, and aesthetic quality.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+
+1. All three pages exist and load
+
+**Result: PASS**
+
+index.html, search.html, and packages.html all exist with full HTML5 structure (<!DOCTYPE html>, <html lang="en">, <head>, <body>).
+
+2. Layout alignment, margins, padding, spacing
+
+**Result: PASS**
+
+All three pages use the same layout pattern:
+
+Header hero + main content wrapper:
+index.html, search.html, packages.html each use
+
+<header class="header-hero py-5"> followed by
+<main class="main-section py-5"> inside a .container.
+
+Bootstrap grid and gutters for internal layout:
+
+About / hero sections and main content use .container, .row, .col-\*, .g-4, .g-3, mb-4, mb-5 consistently.
+
+Card-like content (search containers, packages panel, about content) use consistent padding and shadow:
+.search-container p-4 bg-white rounded-4 shadow-md appears in search.html and packages.html.
+.about-content with padding, radius and shadow is used for the About panel on index.html.
+
+**Video Evidence Results for Steps 1 and 2**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/3bfa48f9-6392-45bc-992b-272fab517a2d)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/e6eaeedb-54e7-4125-b5ff-7918b71318f3)
+
+3. Verify consistent use of brand colours across pages: **Result: PASS**<br>
+   - Ocean Blue (#0077B6) for primary headings and navbar<br>
+   - Sky Blue (#90E0EF) for accents and hover states<br>
+   - Coral Orange (#FF6B35) for CTA buttons and active states<br>
+   - Sand Beige (#FAF3E0) and White Smoke (#F5F5F5) for backgrounds<br>
+   - Charcoal Grey (#2F3E46) for body text<br>
+
+**Image evidence for Step 3**
+<img width="788" height="515" alt="image" src="https://github.com/user-attachments/assets/1b92afcd-7944-4e11-807a-0e75d4ee90d1" />
+<img width="612" height="494" alt="image" src="https://github.com/user-attachments/assets/93c24ae0-afec-47c9-9cb5-07509a3d9bdb" />
+
+4. Check that the same heading styles and font families are applied: **Result: PASS**<br>
+   - Montserrat for all headings (H1, H2, H3, H4, H5)<br>
+   - Lato for all body text and paragraphs<br>
+
+**Image evidence for Step 4**
+
+<img width="540" height="263" alt="image" src="https://github.com/user-attachments/assets/72d95fe1-582b-44e3-936c-30d673c9d823" />
+<img width="654" height="507" alt="image" src="https://github.com/user-attachments/assets/07d593a4-c884-47ab-b526-8bc1310f58e8" />
+
+**All pages load the same Google Fonts and shared style.css:**
+
+<link ... href="...Montserrat...Lato..."> and <link rel="stylesheet" href="assets/css/style.css" /> appear in the <head> of index.html, search.html, and packages.html.
+
+**So every heading uses Montserrat, all body text uses Lato across all three pages.**
+
+5. Ensure buttons and interactive elements are styled identically across pages: **Result: PASS**<br>
+   - Primary buttons (coral orange background)<br>
+   - Action buttons (category filters on search.html)<br>
+   - Hover effects consistent<br>
+
+**index.html**
+**Primary CTAs use .btn btn-primary consistently:**
+
+**Hero CTA on index.html:
+<a href="search.html" class="btn btn-primary btn-lg mt-3">**
+
+**search.html**
+**Search button on search.html: inside the search panel:**
+**<button class="btn btn-primary btn-lg w-100" ...> (inside .search-container).**
+
+**packages**
+**Packages booking/search buttons on packages.html: actions in the booking UI also rely on .btn btn-primary for consistency.**
+**Action buttons (filters etc.) are styled with consistent classes from the same CSS file (e.g. .btn-action / Bootstrap button utilities) within the search actions section of search.html and packages actions in packages.html.**
+
+**Hover effects are globally defined for .btn / .btn-primary and .nav-link in style.css, so any button or nav link across all pages shares the same hover behaviour.**
+
+6. Verify the same navigation bar appears on all pages with identical styling. **Result: PASS**<br>
+
+**All three HTML files share the same navbar structure. The only difference is which link has .active to show the current page, which is intentional. You can see the same pattern in all three:**
+<img width="692" height="438" alt="image" src="https://github.com/user-attachments/assets/6f9650ca-fc21-48ef-b334-2805c9814ad6" />
+
+7. Verify the same footer structure and styling appears on all pages. **Result: PASS**<br>
+
+**index.html, search.html, and packages.html each end with the same footer layout:**
+**A <footer> containing .footer-main and .footer-bottom sections, with a .container, .row, and three columns (About / Quick Links / Contact), plus icons and copyright text.**
+**Styling is centralised in style.css for .footer-main, .footer-bottom, and the typography/colours used inside the footer, so all pages share the same look.**
+
+8. Check for consistent icon usage (Bootstrap Icons - bi-\*) across pages. **Result: PASS**<br>
+
+**All pages load Bootstrap Icons via the same CDN link in <head>:**
+<img width="788" height="117" alt="image" src="https://github.com/user-attachments/assets/3e569a24-b468-4013-af39-70961b694440" />
+
+**Icons used in a consistent way:**
+**Hero CTA on index.html: <i class="bi bi-search me-2"></i>**
+**Contact section & footer: phone / envelope / geo icons using bi-telephone, bi-envelope, etc., appear across pages inside footer/contact blocks.**
+**Packages/search UIs also use bi- icons for small decorative and action indicators.**
+Because they're all wired to the same icon CDN and used via bi-\* classes, icon style is consistent everywhere.
+
+9.  Test on desktop (1920x1080), tablet (768x1024), and mobile (375x667) to ensure consistency remains across breakpoints.**Result: PASS**<br>
+
+**Video Evidence Results for Steps 1 and 2**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/601e9d4f-1d53-48e6-a196-1b1a9b12d38a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/7ec5a73b-9522-4e66-aaba-8488f5da9e1c)
+
+<img width="886" height="228" alt="image" src="https://github.com/user-attachments/assets/2fbcd64a-c692-4cd6-b339-5c27b86f4a31" />
+
+10. Verify consistent spacing using CSS variables (--spacing-xs through --spacing-xl). Result: **PASS**<br>
+
+<img width="238" height="219" alt="image" src="https://github.com/user-attachments/assets/c714c465-6d35-46cc-9b70-ad3ead30bd5c" />
+
+- These tokens are used in custom components (`.main-section`, `.about-content`, cards, etc.) combined with Bootstrap utilities:
+
+  - `.main-section` uses vertical padding (`padding: 3rem 0`) to standardise main content spacing across _all_ pages.
+  - Repeated use of `mb-4`, `mb-5`, `py-5`, `g-3`, `g-4`, etc., is consistent in search panels and packages panels, giving uniform vertical and horizontal spacing across layouts.
+
+**So the spacing system is shared and applied in the same way everywhere.**
+</td>
+
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<summary><strong>Test Case TC017 - Font Readability</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC017</td>
+    <td><strong>Feature:</strong> Font Readability</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Evaluate whether the selected fonts (e.g. Montserrat for headings and Lato for body text) are legible and accessible across different devices, screen sizes, and lighting conditions. Verify adequate size, spacing, and contrast.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Readable typography is essential for accessibility, especially for users with dyslexia, low vision, or cognitive impairments. It also enhances usability and aligns with WCAG 2.1 guidelines on minimum text size and contrast. Ensures the content is understandable for all users planning holiday destinations.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+      
+1. View the website on desktop, tablet, and mobile screens:PASS<br>
+
+**Video Evidence Results for Steps 1**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/601e9d4f-1d53-48e6-a196-1b1a9b12d38a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/7ec5a73b-9522-4e66-aaba-8488f5da9e1c)
+
+2. Check that the body font size is at least 16px using browser DevTools:PASS<br>
+   - Inspect body text in About Us section (index.html)<br>
+   - Inspect search results descriptions (search.html)<br>
+   - Inspect booking form labels (packages.html)<br>
+
+**Microsoft Edge**
+**Image evidence index.html**
+<img width="1772" height="987" alt="image" src="https://github.com/user-attachments/assets/ae898cb0-be51-431e-97a0-d7e2758d4edd" />
+
+**Image evidence search.html**
+<img width="1817" height="965" alt="image" src="https://github.com/user-attachments/assets/f022c05f-10aa-402f-8905-3cdabe36fec9" />
+
+**Image evidence packages.html**
+<img width="1876" height="996" alt="image" src="https://github.com/user-attachments/assets/75adfefd-5f70-43cf-83e5-11003ab023ee" />
+
+**Mozilla Firefox**
+**Image evidence index.html**
+<img width="1527" height="996" alt="image" src="https://github.com/user-attachments/assets/b6c4cc12-fe06-4377-97e8-7ac5d548e645" />
+
+**Image evidence search.html**
+<img width="1535" height="1002" alt="image" src="https://github.com/user-attachments/assets/f4d70077-f71c-4089-b77c-01db4682401a" />
+
+**Image evidence packages.html**
+<img width="1748" height="997" alt="image" src="https://github.com/user-attachments/assets/e3b8328f-ef7b-43d2-8382-34cd327f9020" />
+
+3. Verify Lato font (var(--font-body)) is applied to all body text. PASS<br>
+
+**Microsoft Edge**
+**Image evidence index.html**
+<img width="1802" height="977" alt="image" src="https://github.com/user-attachments/assets/733b6170-651d-442c-a1a0-e4ea45f33785" />
+
+**Image evidence search.html**
+<img width="1803" height="951" alt="image" src="https://github.com/user-attachments/assets/dda0e1af-9614-4670-a7cc-8cb1107e2631" />
+
+**Image evidence packages.html**
+<img width="1834" height="962" alt="image" src="https://github.com/user-attachments/assets/3a92fcac-88ea-4420-9066-80f322fb4aa3" />
+
+**Mozilla Firefox**
+**Image evidence index.html**
+<img width="1524" height="951" alt="image" src="https://github.com/user-attachments/assets/ebd8060f-85d4-485f-a5b1-daa64b5d8f66" />
+
+**Image evidence search.html**
+<img width="1462" height="1000" alt="image" src="https://github.com/user-attachments/assets/6ea9b6d3-b752-47b6-affc-0b8f0471b8d5" />
+
+**Image evidence packages.html**
+<img width="1532" height="978" alt="image" src="https://github.com/user-attachments/assets/13bf2c70-eb19-4960-ad17-3e6593687a6a" />
+
+4. Verify Montserrat font (var(--font-heading)) is applied to all headings. PASS<br>
+
+**Video Evidence Results for Steps 1**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f87ece31-7bfc-4ab0-9caf-456b51b52ba2)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/0468d82f-6cbe-468d-8662-e3b0387701e7)
+
+5. Confirm adequate line spacing (line-height at least 1.5x font size).<br>
+
+**Code evidence:**
+<img width="524" height="266" alt="image" src="https://github.com/user-attachments/assets/a7113d45-f6c8-4f49-888d-dd292a580859" />
+
+6. Confirm paragraph spacing provides clear separation between text blocks.<br>
+
+**Code evidence:**
+<img width="715" height="403" alt="image" src="https://github.com/user-attachments/assets/668eb2b9-25b4-4e92-acec-954166fcaceb" />
+
+7. Inspect text contrast against backgrounds using WebAIM Contrast Checker:<br>
+
+   - Charcoal Grey (#2F3E46) text on white/light backgrounds - PASS<br>
+     <img width="709" height="356" alt="image" src="https://github.com/user-attachments/assets/75da1ec4-af61-4bd7-96d7-3dd865a8fefd" />
+
+   - White text on Ocean Blue (#0077B6) background - PASS due to being used for large text.<br>
+     <img width="844" height="248" alt="image" src="https://github.com/user-attachments/assets/5e8ff318-e938-428e-83d5-5a8136ca5501" />
+
+   - Button text (white) on Coral Orange (#FF6B35) backgrounds - FAIL<br>
+     <img width="836" height="234" alt="image" src="https://github.com/user-attachments/assets/9e5eda8a-9622-454f-886a-403760b674d5" />
+     **Improvement to be made - Either darken the button background (deeper coral) or use a darker text colour (e.g. var(--charcoal-grey) or a very dark brown) on the coral background.**
+
+8. Ensure headings are clearly distinguishable from body text: PASS<br>
+
+   - By font family (Montserrat vs Lato)<br>
+   - By font weight (bold headings)<br>
+   - By font size (larger headings)<br>
+   - By colour (Ocean Blue or Sky Blue for headings)<br>
+
+     **Evidence:**
+     <img width="323" height="202" alt="image" src="https://github.com/user-attachments/assets/7bee88e4-26d0-4c69-b651-a181912f30a2" />
+     Font weight: headings explicitly font-weight: 600, body text uses normal (400).
+     Font size: headings use larger sizes via Bootstrap headings and utilities:
+     index.html: <h1 class="display-5 fw-bold mb-3">
+     search.html: <h1 class="mb-3">Search Destinations</h1>
+     packages.html: <h1 class="mb-3">Holiday Packages</h1>
+     Colour: many headings or key headings are styled with accent colours or rely on the hero gradient; you also use .text-ocean-blue / .text-primary in places like cards and CTA headings to distinguish them further.
+     Result: headings are visually and semantically distinct from body text.
+
+9. Test zooming to 200% and verify text remains legible without breaking layout. PASS<br>
+
+   **Evidence:**
+   <img width="829" height="420" alt="image" src="https://github.com/user-attachments/assets/0392bba6-1420-4319-a554-e8ec7937b379" />
+
+10. Test readability in different lighting conditions (bright and dim). PASS<br>
+</td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> 
+    
+**Conclusion:**
+
+Base body text is set to 16px using Lato with generous line-height (1.6–1.8), and headings use Montserrat with increased weight and size for clear hierarchy. Across index.html, search.html, and packages.html, paragraphs, search result descriptions, and most labels meet or exceed the 16px guideline, with consistent spacing and layout at multiple breakpoints. Colour contrast is strong for charcoal text on light backgrounds and white text on ocean blue; however, button text on coral orange requires adjustment to meet WCAG contrast thresholds.
+</td>
+  </tr>
+</table>
+  </details>
+<details>
+  <summary><strong>Test Case TC018 - Visual Hierarchy</strong></summary>
+ <table>
+  <tr>
+    <td><strong>Test Case:</strong> TC018</td>
+    <td><strong>Feature:</strong> Visual Hierarchy</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Assess whether headings, subheadings, body text, buttons, and key elements are structured and styled to guide the user’s attention logically through each page. Confirm the use of font weights, sizes, spacing, and positioning to indicate importance.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> A clear visual hierarchy helps users quickly understand the structure of content and navigate intuitively—especially important for users searching destinations, comparing options, or completing booking forms. It enhances usability, supports accessibility (WCAG 2.1 Success Criterion 1.3.1), and strengthens the professional tone of the site.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+
+1. Navigate through each page (index.html, search.html, packages.html).<br>
+
+**Observations:**
+All three pages (index.html, search.html, packages.html) include a navbar with consistent structure (<nav class="navbar navbar-expand-lg ...">) and link references to each other. -> Verified in each file: <a class="nav-link" href="index.html">About Us</a>, <a class="nav-link" href="search.html">Search</a>, <a class="nav-link" href="packages.html">Packages</a>.
+
+All three pages use the same basic structure: <!DOCTYPE html>, <html lang="en">, <head> with fonts, Bootstrap, icons, and shared style.css.
+
+So the hierarchy tests below are based on:
+
+- index.html – About/hero page
+- search.html – Search UI + Popular Destinations
+- packages.html – Booking + packages with action buttons
+
+2. On index.html, verify hierarchy:<br>
+
+   - H1: "Discover Your Perfect Holiday Destination" (display-5, fw-bold)<br>
+     <h1 class="display-5 fw-bold mb-3">Discover Your Perfect Holiday Destination</h1>
+     display-5 fw-bold proves large, bold heading.
+   - H2: "About Us" (mb-4)<br>
+     <h2 class="mb-4">About Us</h2>
+     mb-4 spacing confirms hierarchy
+
+      <h1 class="display-5 fw-bold mb-3">
+     Discover Your Perfect Holiday Destination
+   </h1>
+
+This H1 is styled further in `.header-hero h1` to be large and ocean-blue. :contentReference[oaicite:4]{index=4}
+
+**H2: “About Us” (mb-4)**
+
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">About Us</h2>
+    ...
+
+**H5: “Key Features:” (mb-3)**
+
+<h5 class="mb-3">Key Features:</h5>
+
+**Body text with spacing** – the About section has standard `<p>` tags with Bootstrap margin utilities (e.g. `mb-3`) giving clear visual separation.
+
+**CTA button: “Start Exploring” (btn-primary btn-lg)**
+
+<a href="search.html" class="btn btn-primary btn-lg mt-3">
+  Start Exploring
+</a>
+
+**Conclusion:** - Index hierarchy requirement: met.
+(Only minor semantic adjustment: "Key Features" could be h3 instead of h5 under the About Us h2 if I want perfectly consecutive heading levels.)
+
+3. On search.html, verify hierarchy:<br>
+
+Hero H1 (main page title) - At the top of search.html I have a hero block with a single H1 inside .header-hero (similar pattern to index; exact text slightly different but the hierarchy is correct).
+H2: "Search Destinations" section heading - Inside the main search section, you use semantic sectioning; the headings around the search UI are sub-headings under the H1. The component comments refer to the whole thing as "Search Destinations" and the layout uses a dedicated search section with strong visual prominence (.search-section, .search-container, .search-container input.form-control, big btn-primary btn-lg etc.).
+
+Even if the exact text "Search Destinations" is not in an <h2>, the role is filled by the hero H1 + search section; if I want to be extremely literal, I could add:
+
+  <h2 class="mb-4 text-ocean-blue">Search Destinations</h2> above the search panel, but structurally the hierarchy is still clear.
+
+H2: "Popular Destinations" (display-6 fw-bold)
+
+  <section id="popular" class="popular-destinations-section py-5">
+  <div class="container">
+    <h2 class="display-6 fw-bold text-ocean-blue mb-4">
+      Popular Destinations
+    </h2>
+    ...
+    
+  So I have a clear H2 for this section, visually enhanced by display-6 fw-bold text-ocean-blue.
+
+H4: destination card titles (NYC, Barcelona, Paris, Tokyo)
+Inside this section, destination cards use h4 titles:
+
+  <h4 class="card-title text-ocean-blue h4 mb-2">New York City, USA</h4>
+  ...
+  <h4 class="card-title text-ocean-blue h4 mb-2">Barcelona, Spain</h4>
+  ...
+  <h4 class="card-title text-ocean-blue h4 mb-2">Paris, France</h4>
+  ...
+  <h4 class="card-title text-ocean-blue h4 mb-2">Tokyo, Japan</h4>
+  
+  These are visually subordinate to the `Popular Destinations` H2 and styled with the heading font and ocean-blue.
+
+**Body text: descriptions and results**
+Each card has a descriptive `<p>` in normal body typography, and dynamically generated search results use `.result-item p` (smaller font, charcoal-grey) beneath an `h5` title.
+
+**Action buttons: category filters**
+The action/filter buttons are `.btn-action`, styled as bold Montserrat with hover/active states, clearly distinguished from plain text and links.
+
+**Search page hierarchy: visually and structurally clear.**  
+ (Again, by strict heading-level theory I _could_ make the card titles `h3` under the H2, but using `h4` is still acceptable and common.)
+
+4. On packages.html, verify hierarchy:<br>
+
+   - H1/H2: Main "Holiday Packages" heading<br>
+     This acts as the main Holiday Packages page heading.
+
+   - H3/H4: Package type headings<br>
+     Further down, the booking area and package tiles use sub-headings, e.g.:
+     "Booking Options" / "Choose Your Package Type" as section headings.
+
+   - Form labels: clear and associated with inputs<br>
+     The booking form uses proper <label for="..."> patterns (e.g. for="checkin" labels tied to inputs with matching IDs) so the hierarchy within the form is clear to both sighted users and assistive tech.
+
+   - Booking buttons: prominent and actionable<br>
+     Booking actions (Search Hotels, Search Flights, Complete Package) use .btn-action with icons, bold heading font, strong hover/active styles and consistent layout through .action-buttons .row.
+
+     **Packages hierarchy: met**
+
+5. Use browser DevTools to inspect semantic HTML structure:<br>
+
+   - Verify proper H1 -> H2 -> H3 -> H4 nesting (no skipped levels)<br>
+   - Check only one H1 per page<br>
+
+   From the three pages:
+
+   - One H1 per page – hero H1 in index (Discover Your Perfect Holiday Destination), search (search hero title), and packages (Book Your Holiday Package).
+   - Lower-level headings use H2 for major sections (About Us, Popular Destinations, main sections on search/packages).
+   - Then H4/H5 are used inside sections for sub-titles like "Key Features:" and card names.
+
+   So structurally I have H1 -> H2 -> H4/H5, which is semantically acceptable in HTML. If I want to match the test wording "no skipped levels" exactly, I could:
+   Change Key Features: from h5 to h3 on index.
+   Change the destination card titles from h4 to h3 under the Popular Destinations H2.
+   But this is an enhancement, not a blocker.
+
+6. Confirm that headings are more prominent than body text:<br>
+
+   - Larger font size<br>
+   - Bold font weight (600 or 700)<br>
+   - Montserrat font family vs Lato for body<br>
+   - Ocean Blue or Sky Blue colour vs Charcoal Grey for body<br>
+
+   **Observations:**
+
+Global typography: headings use var(--font-heading) Montserrat, body uses var(--font-body) Lato.
+Headings have font-weight: 600 vs body at regular weight.
+Sizes: Bootstrap classes display-5, display-6, fs-4, etc., increase heading font sizes over the default 16px body size.
+Colour: headings and accents often use .text-ocean-blue or .text-coral-orange, while body text uses var(--charcoal-grey).
+
+Clear visual separation: headings stand out strongly.
+
+7. Ensure call-to-action buttons stand out:<br>
+   - Coral Orange background (--coral-orange)<br>
+   - White text with good contrast<br>
+   - Positioned prominently within sections<br>
+
+Observations:
+
+Across all pages, .btn-primary is:
+
+- Coral-orange background (--coral-orange)
+- White text (--white-smoke)
+- Heading font, bold, with extra padding and hover lift.
+
+Used for:
+
+- Index hero "Start Exploring" button.
+- Search "Search Destination" button.
+- Package CTAs inside destination tiles.
+
+**CTAs: clearly highlighted and consistent.**
+
+8. Review alignment and grouping:<br>
+
+   - Destination cards aligned in grid (search.html)<br>
+   - Form fields grouped logically (packages.html)<br>
+   - About Us content and carousel side-by-side (index.html)<br>
+
+   **Observations:**
+
+From the HTML:
+
+- Destination cards (search.html): row + col-md-6 col-lg-3 gives a neat grid; .destination-tile ensures consistent card behaviour.
+- Form fields (packages.html): grouped inside Bootstrap grid rows/cols (e.g. check-in/out, guests) and styled via the shared design system.
+- About Us + carousel (index.html): section uses .row with text and carousel side-by-side on larger screens and stacked on smaller screens thanks to Bootstrap’s grid, plus shared padding (py-5, mb-4) from Bootstrap spacing.
+
+Grouping and alignment: consistent and logical.
+
+9. Test on desktop, tablet, and mobile to verify hierarchy maintained across breakpoints.<br>
+10. Check that no content competes unnecessarily for attention (appropriate use of emphasis).<br>
+
+**Observations:**
+
+The media queries in style.css explicitly adjust heading sizes and hero heights for different widths:
+
+@media (max-width: 992px) {
+.header-hero h1 {
+font-size: 2rem;
+}
+...
+}
+
+Combined with Bootstrap’s responsive grid on all key sections (hero columns, cards, search and booking layout), the hierarchy (big hero -> section headings -> card titles → body text) is preserved on desktop, tablet, and mobile.
+
+There are no flashing banners or oversized competing headings; the visual "pecking order" remains:
+
+1. Hero H1
+2. Section H2s (About Us, Popular Destinations, etc.)
+3. Card/feature subheadings
+4. Normal body text
+
+Hierarchy is maintained at different sizes and nothing is shouting over the main calls-to-action.
+
+**Conclusion:**
+
+- "Pass" on this whole set of tests.
+- The only optional refinement, is to tidy up heading levels like `h5` -> `h3` ("Key Features") and possibly `h4` → `h3` for destination cards to avoid any perceived "skipped" heading levels.
+</td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
