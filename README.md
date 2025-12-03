@@ -6250,5 +6250,161 @@ I will, at the end of each test phase:
       
 ---
 
+## Project Setup with GitHub and Visual Studio Code
 
+[⬆ Back to Table of contents](#table-of-contents)
 
+The following content documents the creation of the `milestone-2` repository on GitHub and how Visual Studio Code (VS Code) was configured for day-to-day development.
+
+### 1. Creation of the `milestone-2` repository on GitHub
+
+- **New repository:** On GitHub, click **New** (green button) -> Repository name: `milestone-2` (public).
+- **Initialise:** Tick **Add a README**.
+- **Add `.gitignore`:** No `.gitignore`.
+- **Add license:** No license.
+- **Create:** Click **Create repository** (green button).
+
+<img width="843" height="842" alt="image" src="https://github.com/user-attachments/assets/6883770c-eb87-4cf8-a0bf-e3b5b4314aef" />
+
+**Result:** GitHub hosted an empty repository with a README on the `main` branch.
+
+<img width="513" height="131" alt="image" src="https://github.com/user-attachments/assets/1c0b9dc9-7273-4978-9c8e-e552c0447dad" />
+
+<img width="869" height="505" alt="image" src="https://github.com/user-attachments/assets/15bf1440-beea-4eb1-b12a-fa256f1e17ba" />
+
+### 2. Connecting Visual Studio Code to the GitHub Repository (Using the VS Code Integrated Terminal)
+
+- Opened my working folder in VS Code (**File -> Open Folder**) and created/opened a `milestone-2` directory.
+
+- Opened **Terminal** (Command Prompt) and initialized Git:
+
+  ```bash
+  git init
+
+  ```
+
+- **Added and committed initial content locally:**
+
+  ```bash
+  git add README.md
+  git commit -m "initial commit"
+
+  ```
+
+- **Pointed the local repo at the GitHub remote and aligned branch names:**
+
+  ```bash
+  git branch -M main
+  git remote add origin https://github.com/rpires71/milestone-2.git
+  git push -u origin main
+
+  ```
+
+- **Verified the repository was connected:** `README.md` appeared in the VS Code Explorer, and pushes went to GitHub.
+
+**Note:** From then on, my task-to-task loop to publish changes was:
+
+```bash
+git add .           # (Note the space: add everything in the folder)
+git commit -m "first commit"
+git push
+```
+
+### 3. Git identity setup (so commits show my name/email)
+
+```bash
+git config --global user.name "Roberto Pires"
+git config --global user.email "roberto.pires@gmail.com"
+git config --global init.defaultBranch main
+```
+
+### 4. Local website verification during development (before deployment)
+
+- Used Live Server in VS Code terminal where I ran a quick local server via Python when needed:
+
+```bash
+ python -m http.server
+```
+
+<img width="925" height="241" alt="image" src="https://github.com/user-attachments/assets/785f1437-9d69-421e-a1e3-096bbfe7c86c" />
+
+- Then I opened http://localhost:8000 in the browser.
+
+<img width="442" height="108" alt="image" src="https://github.com/user-attachments/assets/1907a1c9-7601-44f2-bfb3-8e6ffe0eff83" />
+
+### 5. Why I used the terminal
+
+- **I deliberately used VS Code's integrated terminal (Command Prompt) to show CLI proficiency and keep a simple, reproducible workflow on any Windows machine—no extensions required for Git tasks.**
+
+**Final state after Milestone 2**
+
+- **A GitHub repo (`milestone-2`) with `main` as the default branch.**
+- **A local VS Code project linked to that repo via `origin`.**
+
+**A repeatable commit/push loop:**
+
+```bash
+git add .
+git commit -m "message"
+git push
+```
+
+- **A reliable way to preview locally (Live Server or `python -m http.server`) before deploying.**
+- **Clear procedures to diagnose push issues and to fix branch/remote mismatches when they occur.**
+
+### Justification
+
+To ensure that my workflow was consistent, effective, and aligned with professional standards, as well as to comply with the assignment requirements, GitHub and Visual Studio Code were deliberately selected for use in the **Milestone 2** project.
+
+Enabling secure storage of my project files and comprehensive visibility of my development history, I established a **centralised version control environment** which commenced with the creation of a remote repository on GitHub. A fundamental industry-standard practice for both collaborative and independent development projects, ensuring that every modification was documented with auditable commit messages, GitHub was initialised locally and connected to the remote.
+
+To demonstrate proficiency with the Git **command line interface (CLI)**, I opted to use the VS Code integrated terminal instead of graphical extensions. The workflow can be replicated in any professional context with a reduced dependency on plugins, while this approach is also transferable to other environments (_Linux, macOS, Windows_). Furthermore, my technical experience was enhanced by deepening my understanding of the underlying Git commands provided by the CLI.
+
+To my profile, ensuring all commits were attributed as accurately as possible, which justified the inclusion of identity configuration (`git config`). While potential employers and collaborators can clearly verify authorship on GitHub, accountability and professional branding practices are upheld.
+
+Ensuring issues could be identified and resolved before deployment, previewing the website locally through **Live Server** and `python -m http.server` was a standard practice. Broken links, layout inconsistencies, or accessibility issues being published were rectified, ensuring the project was safeguarded. Changes are validated in a staging environment before release when testing locally, which also reflects a professional development workflow.
+
+With this Milestone 2 project, I began to feel increasingly confident using Git through the command line. Compared with earlier stages of learning, only minor obstacles were encountered, and these were resolved quickly using a systematic approach. The most common issues involved occasionally forgetting to pull the latest README.md updates after making commits directly on the GitHub interface, and making periodic corrections to commit names or descriptions to maintain professional version control standards. These experiences strengthened my understanding of synchronising local and remote branches, reinforced best practices for commit quality, and contributed to a more disciplined and reliable workflow.
+
+---
+
+## Website Testing
+
+[⬆ Back to Table of contents](#table-of-contents)
+
+## Types of Tests Implemented
+
+This project underwent comprehensive testing following a systematic Quality Assurance approach. A total of **57 test procedures** were executed across **8 testing categories** to ensure the Holiday Destination Finder meets professional web development standards, accessibility compliance (WCAG 2.1 Level AA), and user experience best practices.
+
+### Testing Categories Summary
+
+| Testing Category                     | Test Cases                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Functionality & Content Accuracy** | TC001-TC015 (15 tests)       | Verify navigation menu, search functionality with Google Maps API, category filter buttons (5 types), booking form validation, external partner links (Booking.com, Google Flights, Expedia, GetYourGuide), footer links, content accuracy, link descriptions, "Start Exploring" CTA button, Popular Destinations buttons (4 cities), anchor navigation, and Contact link scrolling to footer                                                      |
+| **Usability & Typography**           | TC016-TC020 (5 tests)        | Ensure visual consistency across all pages (Ocean Blue/Sky Blue/Coral Orange palette, Montserrat/Lato fonts), font readability (16px minimum, contrast ratios, line spacing), visual hierarchy (H1->H2->H3 semantic structure), text spacing (WCAG 1.4.12 compliance, CSS variables), and button styling (Coral Orange CTAs, hover/focus states)                                                                                                   |
+| **Responsiveness**                   | TC021-TC023, TC034 (3 tests) | Verify content and layout across desktop (1920x1080), tablet (768x1024), and mobile (375x667) devices. Test carousel responsiveness, Google Maps touch controls, form mobile behavior, hamburger menu functionality, and Popular Destinations card grid stacking (4->2->1 columns)                                                                                                                                                                 |
+| **Accessibility**                    | TC024-TC030 (7 tests)        | Use Lighthouse, WAVE, WebAIM Contrast Checker, NVDA, and VoiceOver to test colour contrast (4.5:1 body, 3:1 large text), keyboard navigation (Tab, Enter, Arrow keys), screen reader compatibility, semantic HTML structure (&lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;footer&gt;), alt text on images (14 images total), ARIA attributes (carousel, navigation, forms), and skip-to-main-content link. Ensures WCAG 2.1 Level AA compliance |
+| **Performance**                      | TC031-TC033 (3 tests)        | Test page load times (desktop <3s, mobile <5s), Core Web Vitals (LCP, FID, CLS), image optimization (14 images in WebP format with specific size limits: carousel <200KB, cards <150KB, logos <50KB), and code validation using W3C HTML/CSS validators and ESLint for JavaScript                                                                                                                                                                  |
+| **Regression Testing**               | TC034-TC035 (2 tests)        | Comprehensive 30-step full walkthrough after updates or bug fixes to ensure existing functionality remains intact. Re-test navigation, interactive elements (carousel, search, filters, forms), visual styling, accessibility features, performance metrics, code validation, and cross-browser compatibility                                                                                                                                      |
+
+## Browser Testing Notice
+
+This project is developed and tested using **Microsoft Edge**.  
+Since both Microsoft Edge and Google Chrome are Chromium-based browsers, they share the same rendering engine (Blink) and JavaScript engine (V8). In practice, this means that front-end **behaviour**, layout, and script execution are consistent across the two browsers.
+
+For this reason, and to streamline the development workflow, Tests 001 to 023 will be performed on Microsoft Edge, and the Performance Tests will be performed on Google Chrome.  
+Developers and users running Google Chrome should expect equivalent results, though minor differences may occur due to browser-specific features or release cycles.
+
+---
+
+### Safari
+
+Safari is not available on Windows OS, so testing will not be performed on that browser in this academic project.  
+In a professional environment, Safari testing would be essential, and I would resort to **macOS devices**, **macOS emulators**, or **specialised** online services that simulate Safari rendering and behaviour to ensure full cross-browser compatibility.
+
+---
+
+### Firefox
+
+In addition to Microsoft Edge, testing will also be carried out on **Mozilla Firefox** for Tests 001 to 023.  
+This ensures coverage across both major browser engines: Chromium (Edge/Chrome) and Gecko (Firefox).
