@@ -7102,3 +7102,282 @@ This approach overrides the browser's default behaviour and ensures that both in
   </tr>
 </table>
 </details>
+<details>
+  <summary><strong>Test Case TC005 - Booking Form Validation</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC005</td>
+    <td><strong>Feature:</strong> Booking Form Validation (packages.html)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that the booking form validates required fields (check-in, check-out dates, city), shows alerts for missing data, and only proceeds when valid.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Form validation prevents incomplete bookings and ensures users provide necessary information before being redirected to partner booking sites.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+
+1. Navigate to packages.html.<br>
+2. Click "Book Hotels" without entering any data.<br>
+3. Verify alert appears: "Please select check-in and check-out dates".<br>
+
+**Observations:** Working as expected on both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/73128d86-b220-40fd-884f-b8321dae5d33)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/f62d4b5f-ccb2-4120-a994-c78be1df99f2)
+
+4. Enter check-in: 2025-12-15, leave check-out empty.<br>
+5. Click "Book Hotels" - verify alert still appears.<br>
+
+**Observations:** Working as expected on both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/d1186b08-7fa0-4f67-843a-67fbaa4f68da)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/883f0a68-8bae-4d98-9454-c7ffc176f8eb)
+
+6. Enter check-in: 2025-12-15, leave check-out empty.<br>
+7. Enter check-out: 2025-12-05, guests: 2, city: "Rome".<br>
+8. Click "Book Hotels" – verify that an alert still appears indicating that the check-in date is not valid because it is later than the check-out date.<br>
+
+**Observations:** Working as expected on both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/962f0f20-afd4-4141-be05-89de50a9ce85)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/efe1ea64-bafd-4ff2-b095-6859e82dce72)
+
+9. Enter check-in: 2025-12-15.<br>
+10. Enter check-out: 2025-12-20, guests: 2, city: "Rome".<br>
+11. Click "Book Hotels".<br>
+12. Verify new tab opens to Booking.com with correct parameters.<br>
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/c56fc062-8f7a-436b-91b6-cd86dad7c0b6)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/ee10e4a0-d75c-4351-8675-94d808cd1af0)
+
+13. Repeat validation tests for "Book Flights" and "Book Package".<br>
+
+**Without entering any data** Working as expected on both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/4fbe508c-b4ec-4a31-8499-d3f95989d9b3)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/cb5a5515-57f9-43eb-95d3-21e60cb000c4)
+
+**Enter check-in date, leave check-out empty** Working as expected for "Book Package" but not for "Book Flight".
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/c2c24bf7-6ef5-4c3b-820a-105d138d9115)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/662c7662-2b7f-4ee0-8f83-dccfff36e100)
+
+**Fix - Enter check-in date, leave check-out empty - Booking Flight**
+
+**Before:**
+
+<img width="673" height="248" alt="image" src="https://github.com/user-attachments/assets/e6a10d0b-1302-44f5-874c-b85461a40858" />
+
+**After:**
+
+<img width="643" height="577" alt="image" src="https://github.com/user-attachments/assets/b846d7f4-fbf3-4d80-9a35-550e51cb48f7" />
+
+**Second Test for Book Flight** Work as expected.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/338dad20-0941-4dc1-9b4c-a7a55d84348a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/76643cfc-923e-4c84-8b88-18a6b05263bc)
+
+**Verify that an alert still appears indicating that the check-in date is not valid because it is later than the check-out date.** Working as expected for "Book Package" but not for "Book Flight".
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/fe282cdc-ecb8-4ec1-9770-637b3030ec36)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/b2f56551-b7ac-4c9f-a902-b570c78ced0c)
+
+**Fix - Check-in date is not valid because it is later than the check-out date - Booking Flight**
+
+**Before:**
+
+<img width="673" height="248" alt="image" src="https://github.com/user-attachments/assets/e6a10d0b-1302-44f5-874c-b85461a40858" />
+
+**After:**
+
+<img width="643" height="577" alt="image" src="https://github.com/user-attachments/assets/b846d7f4-fbf3-4d80-9a35-550e51cb48f7" />
+
+**Second Test for Book Flight** Work as expected.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/3e5c8356-9bd3-454d-9372-709dce8f74c2)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/36114edb-21b9-4c6d-9a0a-31e55b013052)
+
+**Verify new tab opens with correct parameters.** Working as expected on both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/c62c8768-01e1-4076-970b-2eb918e01296)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/6237962d-45fc-4424-b263-7a5a3338c58d)
+
+14. Test keyboard navigation through form fields.<br>
+
+**Observations:** Working as expected on both browsers.
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/4c408f18-f20c-4f4d-a611-c10b07c84875)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/825b4c8b-3c91-4b1e-9e5e-8435094d9cec)
+</td>
+
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+
+<details>
+  <summary><strong>Test Case TC006 - External Partner Links</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC006</td>
+    <td><strong>Feature:</strong> External Partner Links (packages.html)</td>
+  </tr>
+  
+ <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that booking buttons correctly construct URLs with search parameters and open partner sites (Booking.com, Google Flights, Expedia, GetYourGuide) in new tabs.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Partner links are monetisation features that must pass correct data to external booking platforms for proper functionality.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+
+1. Fill in the form: check-in 2025-12-01, check-out 2025-12-07, guests: 2, city: "Barcelona".<br>
+2. Click "Search Hotels".<br>
+3. Verify Booking.com opens in new tab.<br>
+4. Check that the URL contains: ss=Barcelona, checkin=2025-12-01, checkout=2025-12-07, group_adults=2.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/83d970f7-d2bf-498d-849f-0c65f3c61f5a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/746cd5aa-a9f8-46ea-88df-824ced960727)
+
+5. Return to packages.html and click "Search Flights".<br>
+6. Verify that Google Flights opens with Barcelona as the destination, the departure date is 2025-12-01, and the return date is 2025-12-07.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/7de2606e-d48c-435f-a126-55dfdd9d081a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/e6dbb0dc-16d8-49b2-af1d-6b7e6e7a84ae)
+
+7. Test "Complete Package" – verify that Expedia opens with "Going to Barcelona", dates 01 Dec – 07 Dec, and Travellers: 2 adults, 1 room.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/f92bd334-1173-4d2c-ae96-4d8514b8144a)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/6b34d755-ec58-4840-92ac-ab2afe110089)
+
+8. Test "Book Activities" – verify that GetYourGuide opens with Barcelona as the selected destination.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/61d2167d-84c7-4251-a22a-19bbe5ab5160)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/16419209-9d5c-41ed-bc94-6d2db3ae6c60)
+
+9. Confirm all links have target="\_blank" and rel="noopener noreferrer".<br>
+
+**None of the links have "noopener noreferrer".**
+
+**Correction: Booking code before and after:**
+
+<img width="720" height="322" alt="image" src="https://github.com/user-attachments/assets/937b939b-1e6d-439e-a3a1-d774c83d764c"/>
+
+<img width="707" height="301" alt="image" src="https://github.com/user-attachments/assets/6cbec48a-7ca0-40ea-b293-7a4631292783"/>
+
+**Google Flights code before and after:**
+
+<img width="862" height="367" alt="image" src="https://github.com/user-attachments/assets/12e99b91-5b9a-4198-a364-616cadb1bc67"/>
+
+<img width="692" height="365" alt="image" src="https://github.com/user-attachments/assets/e1449a3f-a589-430e-9dd5-a04075c23e4c"/>
+
+**Expedia code before and after:**
+
+<img width="828" height="451" alt="image" src="https://github.com/user-attachments/assets/cf1c9364-46b6-41c0-8c80-4996b427ecb0"/>
+
+<img width="704" height="389" alt="image" src="https://github.com/user-attachments/assets/a72c4918-4e45-4ea8-a0a0-0ca3069e916d"/>
+
+**GetYourGuide code before and after:**
+
+<img width="726" height="273" alt="image" src="https://github.com/user-attachments/assets/f614ca37-f649-46ca-8124-6c698f0626cb"/>
+
+<img width="671" height="457" alt="image" src="https://github.com/user-attachments/assets/5de8bf7e-7ee9-4384-9a4b-151bc08b7655"/>
+
+10. Attempt a 404 path – verify that the user is redirected back to packages.html.<br>
+
+**Observations:** File didn't exist but I created the 404.html file will redirect the user back to packages.html - The 404.html has this code that automatically redirects after 3 seconds:
+
+<img width="1329" height="801" alt="image" src="https://github.com/user-attachments/assets/8eeb4cd6-8fe8-408b-8e59-ffeba3f916e8"/>
+
+</td>
+</tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+
+<details>
+  <summary><strong>Test Case TC007 - Footer Contact Links</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC007</td>
+    <td><strong>Feature:</strong> Footer Contact Links (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that email and telephone footer links navigate correctly, external links open in relevant apps.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> The footer provides secondary navigation and contact access. Consistent functionality across all pages reinforces user trust and professionalism.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+
+1. Scroll to the footer on <em>index.html</em>.<br>
+2. Click the telephone link in the footer contact tile and verify that the appropriate calling application opens with the number pre-filled.<br>
+3. Click the SMS contact link and verify that the correct messaging application opens with the number pre-filled.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/dd90bf87-a69c-4cf6-b8d8-d272cd0fa7de)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/ed4fd927-7828-4cfb-8311-9aed8403972a)
+
+4. Hover over footer contact links to check visual feedback (arrow cursor changes to pointer cursor).<br>
+5. Use the keyboard Tab key to focus on all footer links and verify that they are accessible.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/12378514-5938-4805-94fc-96b53e7d5d0c)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/55f3be40-823e-4564-a033-b3bbda7c1536)
+
+6. Repeat the above checks on <em>search.html</em> and <em>packages.html</em> to ensure consistency across the site.<br>
+
+**Observations: Working as expected.**
+**Evidence: The footer code in the search.html and packages.html is the same as index.html. Tests were done without being filmed.**
+
+7. Check that the footer displays correctly on mobile devices and smaller screen sizes.<br>
+
+**Observations: Working as expected.**
+
+[Microsoft Edge evidence file](https://github.com/user-attachments/assets/158c4625-526f-48d0-95fc-35762d8ea051)
+
+[Mozilla Firefox evidence file](https://github.com/user-attachments/assets/30610270-a541-4354-8422-948d4de4be99)
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
