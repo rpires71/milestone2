@@ -8202,6 +8202,7 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
   </tr>
 </table>
 </details>
+
 #### Usability and Typography Testing - Results
 
 [⬆ Back to Table of contents](#table-of-contents)
@@ -8214,14 +8215,12 @@ All links and buttons across `index.html`, `search.html`, `packages.html`, and `
     <td><strong>Feature:</strong> Visual consistency</td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Description:</strong> Verify that layout structure, colour palette, typography, spacing, and UI components (e.g. buttons, headings, links) remain uniform across all three pages (index.html, search.html, packages.html).
-</td>
+    <td colspan="2"><strong>Description:</strong> Verify that layout structure, colour palette, typography, spacing, and UI components (e.g. buttons, headings, links) remain uniform across all three pages (index.html, search.html, packages.html).</td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Justification:</strong> Consistent design improves user experience by reinforcing brand identity, reducing cognitive load, and supporting navigation familiarity. It meets professional standards of user interface design and contributes to accessibility, usability, and aesthetic quality.
-</td>
+    <td colspan="2"><strong>Justification:</strong> Consistent design improves user experience by reinforcing brand identity, reducing cognitive load, and supporting navigation familiarity. It meets professional standards of user interface design and contributes to accessibility, usability, and aesthetic quality.</td>
   </tr>
-  <tr>
+   <tr>
     <td colspan="2"><strong>Actual Result:</strong>
 
 1. All three pages exist and load
@@ -8353,19 +8352,18 @@ Because they're all wired to the same icon CDN and used via bi-\* classes, icon 
   </tr>
 </table>
 </details>
-<summary><strong>Test Case TC017 - Font Readability</strong></summary>
+<details>
+  <summary><strong>Test Case TC017 - Font Readability</strong></summary>
 <table>
   <tr>
     <td><strong>Test Case:</strong> TC017</td>
     <td><strong>Feature:</strong> Font Readability</td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Description:</strong> Evaluate whether the selected fonts (e.g. Montserrat for headings and Lato for body text) are legible and accessible across different devices, screen sizes, and lighting conditions. Verify adequate size, spacing, and contrast.
-</td>
+    <td colspan="2"><strong>Description:</strong> Evaluate whether the selected fonts (e.g. Montserrat for headings and Lato for body text) are legible and accessible across different devices, screen sizes, and lighting conditions. Verify adequate size, spacing, and contrast.</td>
   </tr>
   <tr>
-    <td colspan="2"><strong>Justification:</strong> Readable typography is essential for accessibility, especially for users with dyslexia, low vision, or cognitive impairments. It also enhances usability and aligns with WCAG 2.1 guidelines on minimum text size and contrast. Ensures the content is understandable for all users planning holiday destinations.
-</td>
+    <td colspan="2"><strong>Justification:</strong> Readable typography is essential for accessibility, especially for users with dyslexia, low vision, or cognitive impairments. It also enhances usability and aligns with WCAG 2.1 guidelines on minimum text size and contrast. Ensures the content is understandable for all users planning holiday destinations.</td>
   </tr>
   <tr>
     <td colspan="2"><strong>Actual Result:</strong>
@@ -8478,6 +8476,15 @@ Because they're all wired to the same icon CDN and used via bi-\* classes, icon 
    <img width="829" height="420" alt="image" src="https://github.com/user-attachments/assets/0392bba6-1420-4319-a554-e8ec7937b379" />
 
 10. Test readability in different lighting conditions (bright and dim). PASS<br>
+
+**Evidence:**
+<img width="255" height="231" alt="image" src="https://github.com/user-attachments/assets/e3736922-4c34-4cc0-b538-aa0575af5e80" />
+Charcoal on sand beige / white-smoke gives very strong contrast -> good in bright light.
+White on ocean blue also has good contrast -> good in dim light.
+Background is a soft sand beige, reducing glare compared to pure white.
+
+**Improvement:**
+**Only buttons need contrast adjustment (see point 7). Once those are fixed, text should remain readable in both bright and dim conditions.**  
 </td>
   </tr>
 <tr>
@@ -8490,7 +8497,7 @@ Base body text is set to 16px using Lato with generous line-height (1.6–1.8), 
   </tr>
 </table>
   </details>
-<details>
+  <details>
   <summary><strong>Test Case TC018 - Visual Hierarchy</strong></summary>
  <table>
   <tr>
