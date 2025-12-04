@@ -10023,6 +10023,7 @@ The validator expects a space after the semicolon:
   </tr>
 </table>
 </details>
+
 ## Cross-browser / device testing evidence
 
 [⬆ Back to Table of contents](#table-of-contents)
