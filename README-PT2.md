@@ -14,7 +14,7 @@
   - [Project Overview](README.md#project-overview)
   - [Project Goals](README.md#project-goals)
   - [Purpose of the Website](README.md#purpose-of-the-website)
-  - [Target Audiences](#target-audiences)
+  - [Target Audiences](README.md#target-audiences)
   - [Key Features and Skills Demonstrated ](README.md#key-features-and-skills-demonstrated)
   - [UX Strategy](README.md#ux-strategy)
     - [Research and Planning](README.md#research-and-planning)
