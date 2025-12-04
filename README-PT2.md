@@ -33,7 +33,7 @@
   - [User Stories for Newsletter Page](README.md#user-stories-for-newsletter-page)
   - [Colour Palette Justification for Holiday Destination Finder Website](README.md#colour-palette-justification-for-holiday-destination-finder-website)
   - [Typography Justification for Holiday Destination Finder Website](README.md#typography-justification-for-holiday-destination-finder-website)
-  - [Accessibility Implementation, User Flow and Navigation Strategies]README.md#accessibility-implementation-user-flow-and-navigation-strategies)
+  - [Accessibility Implementation, User Flow and Navigation Strategies](README.md#accessibility-implementation-user-flow-and-navigation-strategies)
   - [Testing Javascript with JEST](README.md#testing-javascript-with-jest)
     - [Test Suite 1: script.js - Smooth Scrolling](README.md#test-suite-1-scriptjs---smooth-scrolling)
     - [Test Suite 2: search.js - Search Functionality](README.md#test-suite-2-searchjs---search-functionality)
