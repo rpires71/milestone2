@@ -4543,7 +4543,7 @@ The navigation functionality in **script.js** was developed using guidance from 
 
 #### search.js - Development References
 
-The navigation functionality in **script.js** was developed using guidance from the following resources:
+The navigation functionality in **search.js** was developed using guidance from the following resources:
 
 - **Google Maps Integration:** [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/), [Places API (New)](https://developers.google.com/maps/documentation/javascript/place)
 - **DOM Manipulation:** [MDN - addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener), [MDN - querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
