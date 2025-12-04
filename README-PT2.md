@@ -56,7 +56,7 @@
   - [Project Setup with GitHub and Visual Studio Code](README.md#project-setup-with-github-and-visual-studio-code)
   - [Website Testing](README-PT2.md#website-testing)
     - [Cross-browser / device testing evidence](README-PT2.md#cross-browser--device-testing-evidence) 
-    - [Functionality and Content Accuracy Testing - Results]README-PT2.md#functionality-and-content-accuracy-testing---results)
+    - [Functionality and Content Accuracy Testing - Results](README-PT2.md#functionality-and-content-accuracy-testing---results)
     - [Usability and Typography Testing - Results](README-PT2.md#usability-and-typography-testing---results)
     - [Responsiveness Testing - Results](README-PT2.md#responsiveness-testing---results)
     - [Accessibility Testing - Results](README-PT2.md#accessibility-testing---results)
