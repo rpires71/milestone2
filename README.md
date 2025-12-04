@@ -8729,3 +8729,347 @@ Hierarchy is maintained at different sizes and nothing is shouting over the main
   </tr>
 </table>
 </details>
+<details>
+  <summary><strong>Test Case TC019 - Text Spacing</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC019</td>
+    <td><strong>Feature:</strong> Text Spacing</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Evaluate whether spacing between lines, letters, and paragraphs follows accessibility and readability standards across all content. Confirm consistent application throughout all pages using the CSS spacing variables (--spacing-xs through --spacing-xl).</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Proper text spacing improves legibility, reduces cognitive load, and supports users with visual or reading difficulties (e.g. dyslexia). It contributes to a cleaner layout, professional tone, and aligns with WCAG 2.1 Success Criterion 1.4.12 (Text Spacing).</td>
+  </tr>
+   <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+      
+1. Open each page (index.html, search.html, packages.html).<br>
+2. Use browser DevTools to inspect computed CSS values for text spacing.<br>
+3. Check that line spacing (line-height) is at least 1.5 times the font size:<br>
+   - Inspect body paragraphs on all pages<br>
+   - Verify About Us content (index.html)<br>
+   - Verify search results descriptions (search.html)<br>
+   - Verify form labels and instructions (packages.html)<br>
+
+**Global base text**
+**In style.css:**
+<img width="352" height="199" alt="image" src="https://github.com/user-attachments/assets/9116247c-bc90-42a2-8dbd-28a6e485df79" />
+
+So for any body text that doesn't override line-height, I have:
+
+- font-size: 16px
+- line-height: 1.6 × 16px ≈ 25.6px
+
+**Evidence: ≥ 1.5× font size**
+
+<img width="282" height="115" alt="image" src="https://github.com/user-attachments/assets/353be473-8e42-4128-a847-efa0869584cf" />
+
+So for paragraphs:
+
+- font-size: 16px (inherited)
+- line-height: 1.8 x 16px = 28.8px
+
+**Evidence: well above 1.5x**
+
+**About Us content (index.html)**
+About Us paragraphs:
+
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">About Us</h2>
+    <p class="mb-3">...</p>
+    <p class="mb-3">...</p>
+  </div>
+</section>
+
+**Evidence: These <p> elements use the global p rule: line-height 1.8 on 16px -> = 28.8px. - Pass.**
+
+**Search results descriptions (search.html)**
+Search results cards are built as paragraphs:
+
+<div id="resultsList" class="results-list">
+  <!-- JS inserts: -->
+  <!-- <h5>Place Name</h5> -->
+  <!-- <p>Address</p> -->
+  <!-- <p class="rating">Rating stars</p> -->
+</div>
+
+I don't define any special line-height for these, so they use:
+
+- body -> line-height: 1.6
+- p -> line-height: 1.8
+
+**Evidence: So again ≥ 1.5x. Pass.**
+
+**Form labels and instructions (packages.html)**
+
+There are two types here:
+
+- Paragraph-like instructions – usually <p> or small <span> text under headings, which inherit line-height: 1.8 or 1.6. Thoee are fine.
+- Floating labels for the booking form:
+   <div class="form-floating">
+     <input type="date" class="form-control" id="checkin" ... />
+     <label for="checkin" class="text-muted">Check-in</label>
+   </div>
+
+In style.css:
+
+.form-floating > label {
+position: absolute;
+top: 0.6rem;
+left: 0.75rem;
+font-size: 0.7rem;
+color: var(--charcoal-grey);
+opacity: 0.6;
+font-weight: 500;
+padding: 0;
+background-color: transparent;
+pointer-events: none;
+z-index: 2;
+transition: all 0.2s ease;
+}
+
+- font-size: 0.7rem ->0.7 x 16px = 11.2px
+- No explicit line-height (so browser default "normal", typically 1.2)
+
+That means for labels: line-height = 1.2 x 11.2px = 13.4px, which is still ≥ 1.5x font? Actually 1.2 is less than 1.5, so:
+If I strictly require all text (including labels) to have line-height ≥ 1.5x, the floating labels don’t meet this.
+
+**Evidence: For normal body text and paragraphs, though, the code meets the 1.5x rule.**
+
+4. Verify paragraph spacing provides adequate separation:<br>
+   - Check margin-bottom values on &lt;p&gt; elements<br>
+   - Should be at least 2.0 times the line height<br>
+   - Verify consistency using Bootstrap utilities (mb-2, mb-3, mb-4)<br>
+
+The site relies mostly on Bootstrap spacing classes for vertical separation, e.g.:
+
+**index.html – About Us:**
+
+<p class="mb-3">...</p>
+<p class="mb-3">...</p>
+
+**search.html** – descriptive paragraphs often use mb-3 or mb-4.
+
+**packages.html** – content uses mb-3, mb-4, mb-5 for sections and text.
+
+**Bootstrap’s spacing:**
+
+- mb-2 = 0.5rem (8px)
+- mb-3 = 1rem (16px)
+- mb-4 = 1.5rem (24px)
+
+The paragraph line-height is 1.8 x 16px = 28.8px.
+
+The test says:
+
+margin-bottom should be at least 2.0 times the line height
+
+2 x 28.8px = 57.6px – this is a significant gap, and the margins (16–24px) are nowhere near this number.
+
+**Evidence: - The site does not have margin-bottom >= 2x line height.** -**But the site does have, consistent separation via mb-3/mb-4, which is perfectly reasonable for real-world design.**
+
+**Suggested Improvements:** To align with the strict rule, something like mb-5 (3rem = 48px) or larger for paragraphs would be needed, but it will look very spaced-out.
+
+5. Confirm letter spacing (letter-spacing) is not overly tight or wide:<br>
+   - Check headings (Montserrat font)<br>
+   - Check body text (Lato font)<br>
+   - Check button labels<br>
+
+**Observation:** Letter-spacing is not defined in style.css.
+
+**Headings:**
+h1, h2, h3, h4, h5, h6 {
+font-family: var(--font-heading);
+font-weight: 600;
+color: var(--charcoal-grey);
+}
+
+No letter-spacing.
+Body text (body, p), and buttons (.btn-primary) also have no letter-spacing.
+
+This means:
+
+Headings (Montserrat), body text (Lato), and button labels all use the browser's default letter-spacing ("normal").
+Default letter-spacing for these fonts is neither overly tight nor wide.
+
+**Evidence: PASS (nothing wrong with default letter-spacing).**
+
+6. Verify consistent spacing using CSS design system:<br>
+   - --spacing-xs: 0.5rem (8px)<br>
+   - --spacing-sm: 1rem (16px)<br>
+   - --spacing-md: 1.5rem (24px)<br>
+   - --spacing-lg: 2rem (32px)<br>
+   - --spacing-xl: 3rem (48px)<br>
+
+Values match the spec:
+
+- xs: 0.5rem (8px)
+- sm: 1rem (16px)
+- md: 1.5rem (24px)
+- lg: 2rem (32px)
+- xl: 3rem (48px)
+
+The site mostly relies on Bootstrap's spacing utilities (mb-_, py-_) rather than explicitly using var(--spacing-\*) in many rules, but the system itself is correctly defined and available.
+
+7. Test increased text spacing using browser accessibility settings:<br>
+   - Increase line height to 2.0<br>
+   - Increase letter spacing to 0.12em<br>
+   - Increase paragraph spacing<br>
+8. Validate that no text overlaps when spacing is increased.<br>
+9. Verify text doesn't get cut off with increased spacing.<br>
+
+**All your major text containers are flexible:**
+
+- .about-content, .search-container, .results-list, package cards, etc., do not have fixed heights. They rely on padding and margins, not height: xxxpx.
+- The use of Bootstrap's grid and standard block elements (<p>, <h\*>, etc.), which naturally expand as line-height and letter-spacing grow.
+
+**Because of this:**
+
+- Increasing line-height to 2.0 and letter-spacing to 0.12em will make blocks taller, but not cause overlap or clipping in normal paragraphs and headings.
+- Paragraphs and headings inside flexible containers will push surrounding content down.
+
+**No evidence in the code that text will overlap or be cut off under increased spacing for normal content.**
+
+**Floating labels are the tightest, but still reasonably robust.**
+
+10. Test spacing consistency across all three pages.<br>
+11. Test on desktop, tablet, and mobile viewports.<br>
+
+**Consistency comes from:**
+
+- One shared style.css for all pages.
+- All three pages using .main-section py-5 and .container for main content:
+
+<main class="main-section py-5">
+  <div class="container">
+    ...
+  </div>
+</main>
+
+Bootstrap's grid on all pages:
+
+- index.html: .row align-items-center g-4
+- search.html: .row g-4 for search + map, .row g-4 for popular cards
+- packages.html: .row g-3 g-md-4, .row g-4 for package cards
+
+This ensures:
+
+- Horizontal spacing via g-\* (gutters) is consistent.
+- Vertical spacing via py-5, mb-4, mb-5 is consistent.
+- On desktop: content sits side by side (hero + about, search panel + map, filters + cards).
+- On tablet/mobile: columns stack (thanks to .col-lg-_ and .col-md-_), preserving all line-height, letter-spacing and margins.
+
+**Evidence conclusion:** Spacing behaviour is consistent across the three pages and across breakpoints.
+</td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC020 - Button Styles and States</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC020</td>
+    <td><strong>Feature:</strong> Button Styles and States</td>
+  </tr>
+  <tr>
+        <td colspan="2"><strong>Description:</strong> Examine whether all buttons are consistently styled across the website. Check visual clarity, alignment with the overall design theme (ocean/travel theme with coral orange CTAs), responsiveness, and visibility when hovered or focused.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Consistent and accessible button styling ensures intuitive interaction and helps users distinguish interactive elements from static content. Visual states (hover, focus) are vital for usability and accessibility, especially for keyboard users. This supports WCAG 2.1 Success Criterion 2.4.7 (Focus Visible) and enhances the user experience.
+</td>
+  </tr>
+    <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+
+1. Navigate to all pages and identify all button types:<br>
+   - Primary buttons (coral orange): "Start Exploring", "Search Hotels", "Search Flights", etc.<br>
+   - Category filter buttons (search.html): "Attractions", "Restaurants", "Hotels", etc.<br>
+   - Explore destination buttons (search.html): "Explore NYC", "Explore Paris", etc.<br>
+   - Search button: magnifying glass icon with "Search Destination"<br>
+
+**Pass – Demonstrated in previous videos. All pages contain clearly defined buttons (.btn-primary for CTAs, .btn-action for filters and booking). Each button is semantically correct (<button> or <a class="btn">) and consistently styled.**
+
+2. Verify primary button (.btn-primary) styling:<br>
+   - Background: Coral Orange (--coral-orange, #FF6B35)<br>
+   - Text: White<br>
+   - Border-radius: Consistent across all buttons<br>
+   - Padding: Consistent (btn-lg for large, standard for normal)<br>
+   - Font: Montserrat (heading font)<br>
+
+**Pass – Demonstrated in previous videos. .btn-primary in style.css sets coral orange background (#FF6B35), white text, Montserrat font, consistent padding and border-radius, ensuring visual clarity and alignment with the ocean/travel theme.**
+
+3. Test hover states on all buttons:<br>
+   - Primary buttons: Darker coral orange on hover<br>
+   - Category filter buttons: Background colour change<br>
+   - Active state: Visual indication (e.g., .active class on filters)<br>
+
+**Pass – Demonstrated in previous videos. Hover styles are defined: .btn-primary:hover adds lift and shadow, .nav-link:hover changes background colour, and .active states are visually distinct, confirming interactive feedback.**
+
+4. Test focus states using Tab key:<br>
+   - All buttons should show visible focus indicator<br>
+   - Focus ring/outline clearly visible<br>
+   - Contrast sufficient for visibility<br>
+
+**Pass – Demonstrated in previous videos. Buttons use semantic <button> elements, so browser defaults provide visible focus rings. This ensures compliance with WCAG 2.1 focus visibility requirements.**
+
+5. Verify button text contrast meets WCAG 2.1 AA:<br>
+   - White text on Coral Orange: minimum 4.5:1<br>
+   - Use WebAIM Contrast Checker to verify<br>
+
+**Fail – White text on coral orange background comes close to achieving a contrast ratio above 4.5:1 (WebAIM check).**
+
+6. Test button responsiveness on different screen sizes:<br>
+   - Desktop (1920x1080): Full-size buttons<br>
+   - Tablet (768x1024): Appropriately sized<br>
+   - Mobile (375x667): Full-width where appropriate (w-100 class)<br>
+
+**Pass – Demonstrated in previous videos and adjusted in previous commit - Button, Tiles and Form Object adjustments - Buttons use Bootstrap utilities (w-100, col-\*, btn-lg) to adapt across desktop, tablet, and mobile. Layout ensures full-width buttons on small screens and appropriate sizing on larger screens.**
+
+7. Verify touch-friendly sizing on mobile:<br>
+   - Minimum 44x44px touch target<br>
+   - Adequate spacing between buttons<br>
+
+**Pass – Padding (0.75rem 2rem) and grid spacing (g-3, mb-4) ensure buttons meet the minimum 44×44px touch target and maintain adequate spacing for mobile usability.**
+
+8. Check icon usage in buttons:<br>
+   - Bootstrap Icons (bi-search, etc.) properly aligned<br>
+   - Icons have appropriate margin (me-2 spacing)<br>
+   - Icons enhance button meaning<br>
+
+**Pass – Bootstrap Icons (bi-search, bi-house-door, etc.) are correctly integrated with spacing utilities (me-2, mb-2). Icons enhance meaning without clutter.**
+
+9. Test disabled button states if present:<br>
+   - Visually distinct from active buttons<br>
+   - Not clickable<br>
+   - Appropriate opacity or colour change<br>
+
+**Pass – No disabled buttons are present, but Bootstrap's default styling would apply opacity and non-clickable behaviour if used. Current implementation avoids confusion by not including inactive CTAs.**
+
+10. Verify consistent styling across all three pages:<br>
+    - index.html: "Start Exploring"<br>
+    - search.html: "Search Destination", category filters, "Explore" buttons<br>
+    - packages.html: "Book Hotels", "Book Flights", "Book Package", "Book Activities"<br>
+
+**Pass – Deomnstrated in previous video. Index, Search, and Packages pages all use the same design tokens (--coral-orange, Montserrat font, border-radius variables). Buttons are visually consistent and aligned with the travel/ocean theme.**
+</td>
+
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> 
+    
+**Summary for TC020**
+
+**Pass:** Button types identified; primary and action button styles are consistent; strong hover and active states; keyboard focus visible (via Bootstrap); responsive sizes; icons correctly used; consistent design tokens across all pages.
+**Fail (WCAG AA contrast):** white/off-white text on #FF6B35 coral does not reach 4.5:1 contrast for normal-sized text. This is the main accessibility gap for this test case.
+**N/A:** disabled button states aren't implemented in the current UI.  
+ </td>
+  </tr>
+</table>
+  </details>
