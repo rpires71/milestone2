@@ -55,12 +55,13 @@
     - [Regression Testing - Planning](#regression-testing---planning)
   - [Project Setup with GitHub and Visual Studio Code](#project-setup-with-github-and-visual-studio-code)
   - [Website Testing](#website-testing)
+    - [Cross-browser / device testing evidence](#cross-browser--device-testing-evidence) 
     - [Functionality and Content Accuracy Testing - Results](#functionality-and-content-accuracy-testing---results)
     - [Usability and Typography Testing - Results](#usability-and-typography-testing---results)
     - [Responsiveness Testing - Results](#responsiveness-testing---results)
     - [Accessibility Testing - Results](#accessibility-testing---results)
     - [Performance Testing - Results](#performance-testing---results)
-    - [Cross-browser / device testing evidence](#cross-browser--device-testing-evidence)
+    
   - [Website Information Architecture: Page Purpose & Structure](#website-information-architecture-page-purpose--structure)
     - [Homepage (index.html) — purpose & structure](#homepage-indexhtml--purpose--structure)
     - [Search Page (search.html) — purpose & structure](#search-page-searchhtml--purpose--structure)
@@ -6387,6 +6388,42 @@ This project underwent comprehensive testing following a systematic Quality Assu
 | **Performance**                      | TC031-TC033 (3 tests)        | Test page load times (desktop <3s, mobile <5s), Core Web Vitals (LCP, FID, CLS), image optimization (14 images in WebP format with specific size limits: carousel <200KB, cards <150KB, logos <50KB), and code validation using W3C HTML/CSS validators and ESLint for JavaScript                                                                                                                                                                  |
 | **Regression Testing**               | TC034-TC035 (2 tests)        | Comprehensive 30-step full walkthrough after updates or bug fixes to ensure existing functionality remains intact. Re-test navigation, interactive elements (carousel, search, filters, forms), visual styling, accessibility features, performance metrics, code validation, and cross-browser compatibility                                                                                                                                      |
 
+## Cross-browser / device testing evidence
+
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Outcome key:** Pass · Partial · Fail
+
+> **Test Facility:** My laptop for Microsoft Edge, Mozilla Firefox and Google Chrome.
+
+| Test case | Designation | Browser(s) | Version(s) | Test Facility | Pass | Partial | Fail | Comments |
+| --------- | ----------- | ---------- | ---------- | ------------- | :--: | :-----: | :--: | -------- |
+| TC001 | Main navigation bar (index.html, search.html, packages.html) | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080) | Pass (2nd attempt) | | Fail (1st attempt) | Some JavaScript errors were debugged. See README – Test Case TC001 Testing. |
+| TC002 | City Search Input and Search Destination Button | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC002 Testing. |
+| TC003 | Action Buttons | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC003 Testing. |
+| TC004 | Results Panel | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC004 Testing. |
+| TC005 | Booking Form Validation | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (2nd attempt) | | Fail (1st attempt) | Alert correctly appears when check-in date is later than check-out. Works for “Book Package” but not “Book Flight”. See README – Test Case TC005 Testing. |
+| TC006 | External Partner Links | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (2nd attempt) | | Fail (1st attempt) | Links lacked `noopener noreferrer`. Added 404.html redirect after 3 seconds. See README – Test Case TC006 Testing. |
+| TC007 | Footer Contact Links | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC007 Testing. |
+| TC008 | Content Accuracy | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC008 Testing. |
+| TC009 | Content Accuracy | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | All links/buttons use descriptive text. Minor enhancement: add `<label>` elements for form fields. See README – Test Case TC009 Testing. |
+| TC010 | Start Exploring Button | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC010 Testing. |
+| TC011 | Popular Destinations – Explore Buttons | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC011 Testing. |
+| TC012 | Popular Destinations – Section Navigation | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC012 Testing. |
+| TC013 | Contact Navigation Link – Footer Scrolling | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC013 Testing. |
+| TC014 | Image Carousel/Slider | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC014 Testing. |
+| TC015 | About Us Content Scrollbar | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC015 Testing. |
+| TC016 | Visual Consistency | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC016 Testing. |
+| TC017 | Font Readability | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Body text 16px Lato, headings Montserrat. Strong contrast except coral orange buttons (fails WCAG AA). See README – Test Case TC017 Testing. |
+| TC018 | Visual Hierarchy | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | All TC018 tests passed. Optional refinement: tidy heading levels (h5 → h3 for “Key Features”, h4 → h3 for destination cards). See README – Test Case TC018 Testing. |
+| TC019 | Text Spacing | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Spacing consistent across pages and breakpoints. See README – Test Case TC019 Testing. |
+| TC020 | Button Styles and States | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | Fail (contrast) | Buttons consistent with hover/focus states. Fail: white text on #FF6B35 coral does not meet WCAG AA contrast. Disabled states not implemented. See README – Test Case TC020 Testing. |
+| TC021 | Desktop Responsiveness | Chrome | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Commit fb52e62 adjustments confirmed responsiveness at 1920×1080. Evidenced in README – Test Case TC021 Testing. |
+| TC022 | Tablet Responsiveness | Chrome | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Commit fb52e62 adjustments confirmed responsiveness at 768×1024. Evidenced in README – Test Case TC022 Testing. |
+| TC023 | Mobile Responsiveness | Chrome | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Commit fb52e62 adjustments confirmed responsiveness at 375×667. Evidenced in README – Test Case TC023 Testing. |
+
+---
+
 ## Browser Testing Notice
 
 This project is developed and tested using **Microsoft Edge**.  
@@ -10023,40 +10060,6 @@ The validator expects a space after the semicolon:
   </tr>
 </table>
 </details>
-
-## Cross-browser / device testing evidence
-
-[⬆ Back to Table of contents](#table-of-contents)
-
-**Outcome key:** Pass · Partial · Fail
-
-> **Test Facility:** My laptop for Microsoft Edge, Mozilla Firefox and Google Chrome.
-
-| Test case | Designation | Browser(s) | Version(s) | Test Facility | Pass | Partial | Fail | Comments |
-| --------- | ----------- | ---------- | ---------- | ------------- | :--: | :-----: | :--: | -------- |
-| TC001 | Main navigation bar (index.html, search.html, packages.html) | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile (375x667)/Tablet (768x1024)/Desktop (1366x1080) | Pass (2nd attempt) | | Fail (1st attempt) | Some JavaScript errors were debugged. See README – Test Case TC001 Testing. |
-| TC002 | City Search Input and Search Destination Button | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC002 Testing. |
-| TC003 | Action Buttons | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC003 Testing. |
-| TC004 | Results Panel | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC004 Testing. |
-| TC005 | Booking Form Validation | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (2nd attempt) | | Fail (1st attempt) | Alert correctly appears when check-in date is later than check-out. Works for “Book Package” but not “Book Flight”. See README – Test Case TC005 Testing. |
-| TC006 | External Partner Links | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (2nd attempt) | | Fail (1st attempt) | Links lacked `noopener noreferrer`. Added 404.html redirect after 3 seconds. See README – Test Case TC006 Testing. |
-| TC007 | Footer Contact Links | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC007 Testing. |
-| TC008 | Content Accuracy | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC008 Testing. |
-| TC009 | Content Accuracy | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | All links/buttons use descriptive text. Minor enhancement: add `<label>` elements for form fields. See README – Test Case TC009 Testing. |
-| TC010 | Start Exploring Button | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC010 Testing. |
-| TC011 | Popular Destinations – Explore Buttons | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC011 Testing. |
-| TC012 | Popular Destinations – Section Navigation | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC012 Testing. |
-| TC013 | Contact Navigation Link – Footer Scrolling | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC013 Testing. |
-| TC014 | Image Carousel/Slider | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC014 Testing. |
-| TC015 | About Us Content Scrollbar | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC015 Testing. |
-| TC016 | Visual Consistency | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Evidenced in README – Test Case TC016 Testing. |
-| TC017 | Font Readability | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Body text 16px Lato, headings Montserrat. Strong contrast except coral orange buttons (fails WCAG AA). See README – Test Case TC017 Testing. |
-| TC018 | Visual Hierarchy | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | All TC018 tests passed. Optional refinement: tidy heading levels (h5 → h3 for “Key Features”, h4 → h3 for destination cards). See README – Test Case TC018 Testing. |
-| TC019 | Text Spacing | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Spacing consistent across pages and breakpoints. See README – Test Case TC019 Testing. |
-| TC020 | Button Styles and States | Edge and Firefox | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | Fail (contrast) | Buttons consistent with hover/focus states. Fail: white text on #FF6B35 coral does not meet WCAG AA contrast. Disabled states not implemented. See README – Test Case TC020 Testing. |
-| TC021 | Desktop Responsiveness | Chrome | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Commit fb52e62 adjustments confirmed responsiveness at 1920×1080. Evidenced in README – Test Case TC021 Testing. |
-| TC022 | Tablet Responsiveness | Chrome | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Commit fb52e62 adjustments confirmed responsiveness at 768×1024. Evidenced in README – Test Case TC022 Testing. |
-| TC023 | Mobile Responsiveness | Chrome | Chrome 142.0.7444.176 · Edge 142.0.3595.94 · FF 145.0.2 | Mobile/Tablet/Desktop | Pass (1st attempt) | | | Commit fb52e62 adjustments confirmed responsiveness at 375×667. Evidenced in README – Test Case TC023 Testing. |
 
 ---
 
