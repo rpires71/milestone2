@@ -9073,6 +9073,7 @@ This ensures:
   </tr>
 </table>
   </details>
+  
 #### Responsiveness Testing - Results
 
 [⬆ Back to Table of contents](#table-of-contents)
@@ -9439,6 +9440,586 @@ The mobile layout and interaction tests across index.html, search.html, and pack
   </tr>
 <tr>
     <td colspan="2"><strong>Pass/Fail: PASS</strong></td>
+  </tr>
+</table>
+</details>
+
+### Accessibility Testing - Results
+[⬆ Back to Table of contents](#table-of-contents)
+
+**Note on Outstanding Accessibility Test Cases (TC024–TC030)**
+
+Due to time constraints at the final stage of the project, the accessibility test cases numbered **TC024 to TC030** were not fully completed. This was a conscious prioritisation decision rather than an omission. Earlier rounds of testing consistently demonstrated that key accessibility measures—particularly those relating to **keyboard navigation, focus visibility, ARIA labelling**, and **screen-reader compatibility**—were already functioning reliably across the website.
+
+Many accessibility considerations had also been validated indirectly through previous test categories, such as usability, responsiveness, and functional behaviour. These earlier tests confirmed that the site incorporated a substantial number of accessibility-supportive features, including appropriate semantic HTML, meaningful alternative text, consistent heading structures, and strong colour-contrast compliance.
+
+It is also important to highlight that in my previous **Milestone 1 project (User-Centric Frontend Development)**, accessibility was thoroughly addressed and evidenced throughout the testing process. Much of this foundational practice has carried over into Milestone 2, informing the design and implementation decisions made for this project.
+
+If additional development time were available, completing the remaining accessibility tests would be a priority for future enhancement. This would enable a more exhaustive validation of the site's inclusive design principles and ensure full coverage of all accessibility criteria outlined in the test plan.
+
+### Performance Testing - Results
+
+[⬆ Back to Table of contents](#table-of-contents)
+
+<details>
+  <summary><strong>Test Case TC031 - Page Load Time</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC031</td>
+    <td><strong>Feature:</strong> Page Load Time (All Pages)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Measure the time taken for index.html, search.html, and packages.html to fully load, including all visible content, interactive elements, media (carousel images, destination cards), Google Maps API, and external resources (fonts, Bootstrap).
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Fast load times enhance user satisfaction and reduce bounce rates for users searching travel destinations. Ensuring these key pages load within 2–3 seconds on desktop and 3–4 seconds on mobile aligns with performance best practices and supports a smooth user experience on all devices and network conditions.
+</td>
+  </tr>
+    <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+
+1. Open Google Chrome browser in Incognito mode (to avoid cache interference).<br>
+2. Open Chrome DevTools (F12) -> Network tab.<br>
+3. Ensure "Disable cache" is checked in Network tab.<br>
+4. Load index.html and observe:<br>
+   - DOMContentLoaded time (when HTML parsed)<br>
+   - Load time (when all resources loaded)<br>
+   - Number of requests<br>
+   - Total page size<br>
+
+<img width="655" height="245" alt="image" src="https://github.com/user-attachments/assets/f5aaa386-9a20-4371-a1cf-33e19858a1c7" />
+
+5. Document specific timings:<br>
+   - Time to First Contentful Paint (FCP)<br>
+   - Time to Largest Contentful Paint (LCP)<br>
+   - Time to Interactive (TTI)<br>
+
+<img width="590" height="589" alt="image" src="https://github.com/user-attachments/assets/24ccae52-1a30-4943-af81-e6e45b05c032" />
+
+<img width="1725" height="899" alt="image" src="https://github.com/user-attachments/assets/ede5df1b-0027-4250-85b9-d3309563eb12" />
+
+6. Repeat for search.html (note Google Maps API load time).<br>
+
+<img width="321" height="474" alt="image" src="https://github.com/user-attachments/assets/707b1b20-fa20-46aa-a369-64956a48ede8" />
+
+<img width="1466" height="886" alt="image" src="https://github.com/user-attachments/assets/c6210be6-b746-45b2-9606-852122ddb78a" />
+
+7. Repeat for packages.html (note form rendering time).<br>
+
+<img width="311" height="493" alt="image" src="https://github.com/user-attachments/assets/be58307e-c03a-4629-9eac-e92c4e69cfb3" />
+
+<img width="1654" height="874" alt="image" src="https://github.com/user-attachments/assets/1caac7a4-2e1d-4b5c-b006-53b241116663" />
+
+<br>
+<strong>Part 2: Mobile Performance Testing</strong><br>
+8. In Chrome DevTools, enable Device Mode (Ctrl+Shift+M).<br>
+9. Select "Moto G Power" or "iPhone 12 Pro" device profile.<br>
+10. Enable throttling: "Fast 3G" or "Slow 4G" from Network dropdown.<br>
+11. Repeat load time measurements for all three pages.<br>
+
+**index.html**
+
+<img width="1357" height="861" alt="image" src="https://github.com/user-attachments/assets/00b649ff-6516-4956-9754-a114e013914c" />
+
+**search.html**
+
+<img width="1477" height="862" alt="image" src="https://github.com/user-attachments/assets/d955bc3b-af5d-4cc5-bb75-83ae84586586" />
+
+**packages.html**
+
+<img width="1441" height="866" alt="image" src="https://github.com/user-attachments/assets/11b6fc21-1c6e-406a-af19-095f8aa2f0c6" />
+
+12. Document mobile-specific metrics.<br>
+    <br>
+    <strong>Part 3: Google Lighthouse Testing</strong><br>
+13. Open Chrome DevTools -> Lighthouse tab.<br>
+14. Select "Performance" category.<br>
+15. Choose "Desktop" device.<br>
+16. Click "Generate report" for index.html.<br>
+17. Record Performance score (0-100).<br>
+18. Note specific metrics:<br>
+    - First Contentful Paint<br>
+    - Largest Contentful Paint<br>
+    - Total Blocking Time<br>
+    - Cumulative Layout Shift<br>
+    - Speed Index<br>
+
+**index.html**
+
+<img width="1419" height="755" alt="image" src="https://github.com/user-attachments/assets/b45d0aa7-f6a9-4c51-bbe0-2c95a858144b" />
+
+19. Review "Opportunities" section for improvement suggestions.<br>
+
+<img width="600" height="465" alt="image" src="https://github.com/user-attachments/assets/cab787a8-4433-4b00-bf88-08774843e9e6" />
+
+<img width="594" height="165" alt="image" src="https://github.com/user-attachments/assets/c99212c9-d362-4711-9bd7-02552dd83d89" />
+
+20. Repeat Lighthouse test for search.html and packages.html.<br>
+
+**search.html**
+
+<img width="1471" height="802" alt="image" src="https://github.com/user-attachments/assets/f8a8e83c-a85a-4915-9e1a-5072eea4d4a5" />
+
+<img width="594" height="455" alt="image" src="https://github.com/user-attachments/assets/e8def16b-7436-4e0e-b8c8-1db53f17448c" />
+
+<img width="595" height="257" alt="image" src="https://github.com/user-attachments/assets/579f0fdc-524f-4530-b940-1ef6361215cf" />
+
+**packages.html**
+
+<img width="1369" height="749" alt="image" src="https://github.com/user-attachments/assets/6447dffe-49c2-4c04-aaf9-b5741006be52" />
+
+<img width="595" height="426" alt="image" src="https://github.com/user-attachments/assets/66196b3e-e797-458a-88f6-255d88f58c41" />
+
+<img width="588" height="242" alt="image" src="https://github.com/user-attachments/assets/69937b04-0cd7-44aa-be9f-7e460c441984" />
+
+21. Generate "Mobile" report for all pages.<br>
+    <br>
+
+**index.html**
+
+<img width="1406" height="768" alt="image" src="https://github.com/user-attachments/assets/0a0377ee-35ff-4156-bc30-12c6fc0fae9e" />
+
+<img width="590" height="410" alt="image" src="https://github.com/user-attachments/assets/38229ca5-ae2a-44e6-94d4-b325cc3bf444" />
+
+<img width="591" height="201" alt="image" src="https://github.com/user-attachments/assets/46d19e01-8e3d-4cc3-92ce-0949c155f560" />
+
+**search.html**
+
+<img width="1365" height="740" alt="image" src="https://github.com/user-attachments/assets/a653e21c-f894-4637-83fc-9c41d32103ad" />
+
+<img width="597" height="416" alt="image" src="https://github.com/user-attachments/assets/09768661-4353-4e11-ab5b-0ff7d643080f" />
+
+<img width="598" height="298" alt="image" src="https://github.com/user-attachments/assets/66ba623c-a518-4b24-92c2-896482dbb8db" />
+
+**packages.html**
+
+<img width="1548" height="741" alt="image" src="https://github.com/user-attachments/assets/b647199a-8173-4355-baff-3204b3344ba0" />
+
+<img width="589" height="457" alt="image" src="https://github.com/user-attachments/assets/2093879c-b22c-48a5-9a07-f32b54844142" />
+
+<img width="596" height="293" alt="image" src="https://github.com/user-attachments/assets/09b2032b-5fdc-40f7-a263-0262ae5ea1af" />
+
+<strong>Part 4: PageSpeed Insights Testing</strong><br> 22. Visit https://pagespeed.web.dev/<br> 23. Enter deployed website URL (if available) or test locally.<br> 24. Analyse both Mobile and Desktop results.<br>
+
+**PageSpeed Insights - index.html - Desktop**
+
+<img width="1413" height="997" alt="image" src="https://github.com/user-attachments/assets/b1822a4a-5e37-4c6c-a69b-2251bce95a55" />
+
+**PageSpeed Insights - index.html - Mobile**
+
+<img width="1406" height="998" alt="image" src="https://github.com/user-attachments/assets/2a88c53f-e646-41af-a9b0-84a6744cdea0" />
+
+**PageSpeed Insights - search.html - Desktop**
+
+<img width="1427" height="984" alt="image" src="https://github.com/user-attachments/assets/b0ec36c0-f2b9-414a-897c-162449f4b341" />
+
+**PageSpeed Insights - search.html - Mobile**
+
+<img width="1450" height="999" alt="image" src="https://github.com/user-attachments/assets/94d75631-4f81-4154-93d5-bbb4d2ca9145" />
+
+**PageSpeed Insights - packages.html - Desktop**
+
+<img width="1410" height="981" alt="image" src="https://github.com/user-attachments/assets/841fbe44-6701-4557-9ee8-89d47ded570a" />
+
+**PageSpeed Insights - packages.html - Mobile**
+
+<img width="1438" height="994" alt="image" src="https://github.com/user-attachments/assets/82fd25f9-e828-48bb-b6c5-1da4d4a9d20c" />
+
+25. Compare with Lighthouse results.<br>
+
+Both **Chrome Lighthouse (run locally in DevTools)** and **PageSpeed Insights (pagespeed.web.dev)** use the same underlying audit engine, but PageSpeed adds **CrUX (Chrome User Experience Report) field data** from real users. This means Lighthouse gives you a controlled lab test, while PageSpeed combines that with real‑world metrics. For your three pages (`index.html`, `search.html`, `packages.html`), the Lighthouse scores and PageSpeed scores will be broadly similar, but PageSpeed may show slightly different values due to network conditions, device profiles, and CrUX data.
+
+#### Comparative Analysis
+
+#### **index.html**
+
+- **Conclusion**: Lab and field scores align.
+
+#### **search.html**
+
+- **Conclusion**: PageSpeed scores may be lower than Lighthouse due to Maps integration, but both highlight the same bottleneck.
+
+#### **packages.html**
+
+- **Conclusion**: Lighthouse shows strong lab performance, PageSpeed adds nuance about mobile interactivity.
+
+      </td>
+    </tr>
+  <tr>
+      <td colspan="2"><strong>Pass/Fail: PASS</strong>
+
+All three pages passed the performance tests across desktop, mobile, Lighthouse, and PageSpeed Insights.
+
+Index.html and Packages.html consistently met thresholds with strong scores.
+
+Search.html passed but showed performance overhead from Google Maps API, especially on mobile and under throttled networks.
+
+Improvement opportunities mainly involve image optimisation and third‑party script management.
+
+<img width="884" height="199" alt="image" src="https://github.com/user-attachments/assets/969c3350-b38d-4ea6-a1e3-e4229a21d7b0" />
+    </td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC032 - Optimised Images</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC032</td>
+    <td><strong>Feature:</strong> Optimised images
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Verify that all images across the website are appropriately compressed and sized for fast loading without sacrificing visual quality. Confirm that WebP format is used for carousel images, destination cards, and logos, with proper dimensions and compression levels.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Optimised images reduce page load time and bandwidth usage, contributing to better performance scores and an improved user experience—especially for users researching travel destinations on slower connections or mobile devices. It also supports accessibility and SEO best practices for travel websites.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong>
+      
+1. <strong>Open Chrome DevTools -> Network tab.</strong><br>
+2. <strong>Filter by "Img" to show only image requests.</strong><br>
+3. <strong>Load index.html and inspect carousel images:</strong><br>
+   - img-paris.webp: Check file size and dimensions<br>
+   - img-tokyo.webp: Check file size and dimensions<br>
+   - img-nyc.webp: Check file size and dimensions<br>
+   - img-barcelona.webp: Check file size and dimensions<br>
+   - img-london.webp: Check file size and dimensions<br>
+   - logo-main.webp: Check file size<br>
+   - logo-blue-bg.webp (navbar): Check file size<br>
+4. <strong>Verify image dimensions match usage:</strong><br>
+   - Check if images are scaled down from much larger originals<br>
+   - Use DevTools to compare intrinsic size vs displayed size<br>
+   - Identify any images loaded at 2000px but displayed at 500px<br>
+
+**index.html**
+
+<img width="622" height="357" alt="image" src="https://github.com/user-attachments/assets/23ce3132-62f4-4cb2-94f1-c88f3b6cb468" />
+
+5. <strong>Load bothe search.html, packages.html and inspect destination card images:</strong><br>
+   - img-2-nyc.webp: Should be sized for 200px height display<br>
+   - img-2-barcelona.webp: Check appropriate sizing<br>
+   - img-3-paris.webp: Check appropriate sizing<br>
+   - img-3-tokyo.webp: Check appropriate sizing<br>
+
+**search.html**
+
+<img width="614" height="295" alt="image" src="https://github.com/user-attachments/assets/f1dbb640-0e1f-4595-b5e2-9f64e3cfcb2d" />
+
+**packages.html**
+
+<img width="612" height="405" alt="image" src="https://github.com/user-attachments/assets/72717a74-e04a-4438-b525-7865cd38cfa0" />
+
+6. <strong>Check favicon images (PNG format is acceptable):</strong><br>
+   - apple-touch-icon.png: 180x180px<br>
+   - favicon-32x32.png: 32x32px<br>
+   - favicon-16x16.png: 16x16px<br>
+
+**Favicon images used for all pages.**
+
+<img width="616" height="222" alt="image" src="https://github.com/user-attachments/assets/f9dd4bce-2231-453d-aa0b-392bc0653978" />
+
+7. <strong>Run Google Lighthouse audit:</strong><br>
+   - Check "Properly size images" diagnostic<br>
+   - Check "Serve images in next-gen formats" diagnostic<br>
+   - Review "Opportunities" for image optimisation<br>
+
+**index.html**
+
+<img width="610" height="545" alt="image" src="https://github.com/user-attachments/assets/96e28166-1327-486f-910b-73ba8a7a4a50" />
+
+**search.html**
+
+<img width="567" height="617" alt="image" src="https://github.com/user-attachments/assets/f35bf137-f406-45bf-ba08-6826706fe502" />
+
+**packages.html**
+
+<img width="464" height="732" alt="image" src="https://github.com/user-attachments/assets/1fda811a-51a2-4dcc-8f36-4c20a34fb228" />
+
+8. <strong>Run PageSpeed Insights:</strong><br>
+
+   - Check for "Efficiently encode images" suggestion<br>
+   - Check for "Serve images in modern formats" suggestion<br>
+   - Note any specific image optimization recommendations<br>
+
+9. <strong>Verify image compression quality:</strong><br>
+   - View images at full size on high-resolution display<br>
+   - Check for compression artifacts or blurriness<br>
+   - Ensure images maintain visual quality<br>
+
+**index.html**
+
+<img width="768" height="664" alt="image" src="https://github.com/user-attachments/assets/e0b69c02-adad-44ee-bd00-692fd91dc6f7" />
+
+**search.html**
+
+<img width="477" height="797" alt="image" src="https://github.com/user-attachments/assets/d6b8e2d9-488f-401a-a1aa-fb7cedfeded0" />
+
+**packages.html**
+
+<img width="713" height="800" alt="image" src="https://github.com/user-attachments/assets/e8baab38-5836-4bb1-8656-0440b2f8aa44" />
+
+<img width="746" height="817" alt="image" src="https://github.com/user-attachments/assets/5a376c98-ce67-4b10-809d-41c675b24b80" />
+
+<img width="711" height="512" alt="image" src="https://github.com/user-attachments/assets/18b26190-a903-485b-a361-4ca4af1ee9e5" />
+
+10. <strong>Test image loading on slow connection:</strong><br>
+    - Enable "Slow 3G" throttling in DevTools<br>
+    - Verify images load progressively<br>
+    - Check that page remains usable while images load<br>
+
+**index.html**
+
+<img width="532" height="296" alt="image" src="https://github.com/user-attachments/assets/c6f24be7-e688-48eb-b89e-0c6f0b0546ee" />
+
+**search.html**
+
+<img width="528" height="619" alt="image" src="https://github.com/user-attachments/assets/80e1a9f8-8ac1-4c9a-94fc-3c2ce5d51171" />
+
+**packages.html**
+
+<img width="467" height="759" alt="image" src="https://github.com/user-attachments/assets/d3fa1c06-aae5-438e-910e-b0e138b156a3" />
+
+11. <strong>Check total image weight:</strong><br>
+    - Sum file sizes of all images on each page<br>
+    - index.html: Total image weight should be < 1MB<br>
+    - search.html: Total image weight should be < 800KB<br>
+    - packages.html: Total image weight should be < 800KB<br>
+
+**index.html**
+
+<img width="634" height="50" alt="image" src="https://github.com/user-attachments/assets/015685a1-960c-41e4-872d-4feca22910df" />
+
+**search.html**
+
+<img width="611" height="32" alt="image" src="https://github.com/user-attachments/assets/0e02f353-d17a-4bec-861a-0dd56173a86e" />
+
+**packages.html**
+
+<img width="632" height="54" alt="image" src="https://github.com/user-attachments/assets/3200f588-8cbd-447e-8282-0e581f5286cd" />
+
+12. <strong>Verify WebP format usage:</strong><br>
+    - Confirm all major images use .webp extension<br>
+    - Verify browser support fallbacks if needed<br>
+
+**index.html**
+
+<img width="501" height="192" alt="image" src="https://github.com/user-attachments/assets/e498270f-a24d-41be-8a49-3e7b79614800" />
+
+**search.html**
+
+<img width="513" height="235" alt="image" src="https://github.com/user-attachments/assets/ca7a9e7a-c2d4-4273-8945-ac2b662090a1" />
+
+**packages.html**
+
+<img width="513" height="318" alt="image" src="https://github.com/user-attachments/assets/bd592568-fb70-4e39-ab72-36cd7ba0cb63" />
+    </td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong>
+
+<img width="1197" height="369" alt="image" src="https://github.com/user-attachments/assets/ecd757a1-8986-40ae-b63e-e4f85e93255c" />
+
+**Conclusion:**
+The current design is lightweight enough that both tools should show decent image performance. But as soon as the website starts including more media (photos, hero images, cards, destination galleries), I'll need to proactively optimise images to keep both lab and field scores strong.
+ </td>
+  </tr>
+</table>
+</details>
+<details>
+  <summary><strong>Test Case TC033 - Code Validation</strong></summary>
+<table>
+  <tr>
+    <td><strong>Test Case:</strong> TC033</td>
+    <td><strong>Feature:</strong> Code Validation (HTML & CSS)</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Description:</strong> Validate the HTML and CSS code used across all three pages of the website (index.html, search.html, packages.html, and style.css) using tools such as the W3C Markup Validation Service and CSS Validation Service to check for syntax errors, deprecated tags, semantic accuracy, and standards compliance.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Justification:</strong> Clean, valid code enhances cross-browser compatibility, improves accessibility, and supports SEO for the Holiday Destination Finder. It also reduces the likelihood of rendering issues or broken functionality across different browsers and devices, and aligns with professional standards in modern web development. Valid code is particularly important for travel websites that must work reliably across diverse user devices and browsers.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Actual Result:</strong> 
+      
+<strong>Part 1: HTML Validation</strong><br>
+
+1. Open W3C Markup Validation Service (https://validator.w3.org/).<br>
+2. <strong>Validate index.html:</strong><br>
+   - Choose "Validate by Direct Input" or "Validate by File Upload"<br>
+   - Paste HTML code or upload index.html<br>
+   - Click "Check"<br>
+   - Review results for errors and warnings<br>
+
+**index.html**
+
+**Before:**
+<img width="1230" height="685" alt="image" src="https://github.com/user-attachments/assets/9cecb36e-f009-455e-8162-74655d39f61e" />
+
+**After corrections:**
+<img width="1035" height="580" alt="image" src="https://github.com/user-attachments/assets/69396ec6-2d7b-4078-8805-23537faf354b" />
+
+3. <strong>Validate search.html:</strong><br>
+   - Repeat validation process<br>
+   - Pay special attention to Google Maps integration code<br>
+   - Check for any inline JavaScript warnings<br>
+
+**search.html**
+
+**Before:**
+
+<img width="1205" height="629" alt="image" src="https://github.com/user-attachments/assets/9a022258-fc08-4af2-993d-c9f268bc76ad" />
+
+**After corrections:**
+
+<img width="1111" height="695" alt="image" src="https://github.com/user-attachments/assets/d16b82a3-10d5-452a-bfc1-b76dcbf17e5f" />
+
+4. <strong>Validate packages.html and 404.html:</strong><br>
+
+   - Repeat validation process<br>
+   - Check form elements for proper structure<br>
+   - Verify input types and attributes<br>
+
+5. <strong>Document all errors found:</strong><br>
+   - Record line numbers<br>
+   - Note error descriptions<br>
+   - Categorize by severity (error vs warning)<br>
+6. <strong>Check for common HTML issues:</strong><br>
+   - Unclosed tags<br>
+   - Duplicate IDs<br>
+   - Deprecated attributes<br>
+   - Missing required attributes (e.g., alt on images)<br>
+   - Invalid nesting of elements<br>
+   - Incorrect use of semantic elements<br>
+
+**packages.html**
+
+**Before:**
+
+<img width="1508" height="765" alt="image" src="https://github.com/user-attachments/assets/1aed92b6-4811-4b16-a70f-86ac0850c12d" />
+
+**Debugged code:**
+
+<img width="1512" height="160" alt="image" src="https://github.com/user-attachments/assets/6ac7aab0-b25a-4c7e-a74f-3d81a6ec6ade" />
+
+**Before:**
+
+<img width="357" height="128" alt="image" src="https://github.com/user-attachments/assets/b44f2c04-8353-4306-bd03-8c90b5362056" />
+
+**After:**
+
+Simply delete the placeholder attribute:
+The floating label will still work correctly because the label floats when the field has focus or content.
+
+<img width="369" height="86" alt="image" src="https://github.com/user-attachments/assets/52f75bf8-9663-49a3-aad6-fcd1a49598f4" />
+
+**Debugged code:**
+
+<img width="1742" height="221" alt="image" src="https://github.com/user-attachments/assets/a9cb6da2-2aea-43e1-9220-61046da5dd17" />
+
+**Before:**
+
+<img width="196" height="111" alt="image" src="https://github.com/user-attachments/assets/dbbc9c12-401d-472c-936b-3582b355cc59" />
+
+**After:**
+
+Simply delete the placeholder attribute:
+The floating label will still work correctly because the label floats when the field has focus or content.
+
+<img width="358" height="113" alt="image" src="https://github.com/user-attachments/assets/eacda039-9bce-489f-9691-87dad2480c63" />
+
+**After corrections:**
+
+<img width="1116" height="590" alt="image" src="https://github.com/user-attachments/assets/89bcac54-682f-47a8-9349-0a7c90aceac3" />
+
+**404.html**
+
+**Before:**
+
+<img width="1482" height="676" alt="image" src="https://github.com/user-attachments/assets/3b8a9ec6-870b-4408-9128-1cc9940c62bd" />
+
+**Debugged code:**
+
+<img width="1430" height="139" alt="image" src="https://github.com/user-attachments/assets/ed19cc89-cbe9-4189-bfa3-7e3ef9c0e289" />
+
+**Before:**
+
+<img width="437" height="50" alt="image" src="https://github.com/user-attachments/assets/b182ccbf-9066-4263-b9f2-cb5fe22e4438" />
+
+**After:**
+
+The validator expects a space after the semicolon:
+
+<img width="432" height="44" alt="image" src="https://github.com/user-attachments/assets/4dd1acd7-cf3f-4708-b82b-b040ca84764b" />
+
+**After corrections:**
+
+<img width="1072" height="579" alt="image" src="https://github.com/user-attachments/assets/92aea6d4-e82c-47b7-a085-4bb45c1741db" />
+
+<br>
+<strong>Part 2: CSS Validation</strong><br>
+7. Open W3C CSS Validation Service (https://jigsaw.w3.org/css-validator/).<br>
+8. <strong>Validate style.css:</strong><br>
+   - Choose "By direct input" or "By file upload"<br>
+   - Paste CSS code or upload style.css<br>
+   - Select "CSS level 3 + SVG" profile<br>
+   - Click "Check"<br>
+   - Review results for errors and warnings<br>
+9. <strong>Review CSS warnings:</strong><br>
+   - Vendor prefixes warnings (acceptable if intentional)<br>
+   - Unknown properties (check if modern CSS features)<br>
+   - Property value warnings<br>
+10. <strong>Check for known acceptable warnings:</strong><br>
+    - backdrop-filter (modern CSS, may show warning)<br>
+    - scrollbar-width (Firefox-specific, may show warning)<br>
+    - Modern CSS Grid/Flexbox properties<br>
+    - CSS variables (should be fully supported now)<br>
+11. <strong>Verify !important flag usage:</strong><br>
+    - Check if !important flags are intentional (e.g., Bootstrap overrides)<br>
+    - Ensure !important is not overused<br>
+    - Document justified uses in style.css comments<br>
+
+**Evidence:**
+
+<img width="1768" height="859" alt="image" src="https://github.com/user-attachments/assets/28597921-b21f-414f-97bb-3ccdc3d4f5f4" />
+<br>
+<strong>Part 3: Fix and Re-test</strong><br>
+12. <strong>Address critical errors:</strong><br>
+    - Fix any HTML syntax errors<br>
+    - Correct invalid tag usage<br>
+    - Fix CSS syntax errors<br>
+13. <strong>Re-validate after fixes:</strong><br>
+    - Run validators again on all pages<br>
+    - Verify errors reduced or eliminated<br>
+    - Document remaining warnings with justification<br>
+14. <strong>Test in browsers after fixes:</strong><br>
+    - Ensure fixes didn't break functionality<br>
+    - Verify visual appearance unchanged<br>
+    - Test interactive elements still work<br>
+<br>
+<strong>Part 4: Additional Code Quality Checks</strong><br>
+15. <strong>Run ESLint (if applicable for JavaScript):</strong><br>
+    - Already completed: 0 errors, 0 warnings ✓<br>
+    - Documented in testing suite<br>
+16. <strong>Check HTML structure with DevTools:</strong><br>
+    - Verify proper semantic HTML hierarchy<br>
+    - Check for accessibility tree structure<br>
+17. <strong>Review code formatting consistency:</strong><br>
+    - Indentation consistent<br>
+    - Naming conventions followed<br>
+    - Comments present and helpful<br>
+
+**Evidence: All code debugged and reviewed in previous steps.**
+</td>
+  </tr>
+<tr>
+    <td colspan="2"><strong>Pass/Fail: PASS</strong> </td>
   </tr>
 </table>
 </details>
