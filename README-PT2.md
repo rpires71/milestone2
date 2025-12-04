@@ -38,7 +38,7 @@
     - [Test Suite 1: script.js - Smooth Scrolling](README.md#test-suite-1-scriptjs---smooth-scrolling)
     - [Test Suite 2: search.js - Search Functionality](README.md#test-suite-2-searchjs---search-functionality)
     - [Test Suite 3: packages.js - Booking Integration](README.md#test-suite-3-packagesjs---booking-integration)
-    - [JEST Test Coverage Analysis](#README.md#jest-test-coverage-analysis)
+    - [JEST Test Coverage Analysis](README.md#jest-test-coverage-analysis)
     - [JEST Edge Cases Tested](README.md#jest-edge-cases-tested)
     - [JEST Testing Limitations and Future Improvements](README.md#jest-testing-limitations-and-future-improvements)
     - [Conclusion](README.md#conclusion)
