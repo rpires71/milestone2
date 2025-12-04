@@ -4553,6 +4553,17 @@ The navigation functionality in **search.js** was developed using guidance from 
 
 #### packages.js - Development References
 
+The code in **packages.js** was developed by analysing best practices from official documentation and community resources.
+
+##### Partner Integration Approach
+
+The booking functionality uses **deep linking** to external partner websites rather than direct API integration. URL construction follows patterns documented in [MDN - encodeURIComponent()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) and [MDN - Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). Partner URLs were analysed from:
+- Booking.com public search interface
+- Google Flights natural language query structure
+- Expedia search result patterns
+- GetYourGuide destination search format
+
+This approach provides seamless user experience without requiring API keys or partnership agreements.
 The navigation functionality in **packages.js** was developed using guidance from the following resources:
 
 - **URL Construction & Deep Linking:** [MDN - encodeURIComponent](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent), [MDN - Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
