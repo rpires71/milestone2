@@ -4594,3 +4594,4 @@ This project includes a mixture of **AI-generated, manually edited**, and **lice
   https://www.gimp.org/
 - **Pires, R. (2025).** _Reused and adapted components from Milestone 1 Portfolio Project._
 
+[⬆ Back to Table of contents](#table-of-contents)
